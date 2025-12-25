@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Palestinian Arabic – Local LMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="top-nav__inner">
+            <div class="top-nav__brand">
+                <span class="logo-circle">PA</span>
+                <span class="logo-text">Palestinian Arabic Lab</span>
+            </div>
+            <nav class="top-nav__links">
+                <button class="top-nav__link" data-nav="home-screen">Home</button>
+                <button class="top-nav__link" data-nav="students-screen">Profiles</button>
+                <button class="top-nav__link" data-nav="teacher-dashboard-screen">Teacher</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============== HOME SCREEN ============== -->
+        <section id="home-screen" class="screen screen--active screen--full-hero">
+            <div class="hero hero--full">
+                <div class="hero__overlay"></div>
+                <div class="hero__content hero__content--center">
+                    <h1 class="hero__title">Learn Palestinian Arabic Naturally</h1>
+
+                    <div class="hero__actions hero__actions--center">
+                        <button id="btnHeroStudent" class="btn btn--primary btn--lg">
+                            😊 I'm a Student
+                        </button>
+                        <button id="btnHeroTeacher" class="btn btn--outline btn--lg">
+                            👩‍🏫 I'm a Teacher
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== STUDENT SELECTION SCREEN ============== -->
+        <section id="students-screen" class="screen">
+            <div class="section-header">
+                <h2>Select your Profile</h2>
+                <p class="section-header__subtitle">
+                    Choose a student or create a new profile. Progress is saved locally on this device.
+                </p>
+            </div>
+
+            <div id="noStudentsMessage" class="empty-state">
+                <p>No students yet. Add your first student below!</p>
+            </div>
+
+            <div id="studentsGrid" class="students-grid"></div>
+
+            <div class="section-split">
+                <div class="section-split__col">
+                    <h3>Create Profile</h3>
+                    <p class="section-header__subtitle">
+                        Set a learning goal and starting level for your student.
+                    </p>
+                    <form id="addStudentForm" class="card form-card">
+                        <div class="form-field">
+                            <label for="studentName">Student Name</label>
+                            <input id="studentName" type="text" placeholder="e.g. Sara" required />
+                        </div>
+
+                        <div class="form-field">
+                            <span class="form-field__label">Learning Goals</span>
+                            <div class="goal-options">
+                                <label class="goal-chip">
+                                    <input type="checkbox" name="goalOption" value="Travel" />
+                                    <span>✈️ Travel</span>
+                                </label>
+                                <label class="goal-chip">
+                                    <input type="checkbox" name="goalOption" value="Study" />
+                                    <span>🎓 Study</span>
+                                </label>
+                                <label class="goal-chip">
+                                    <input type="checkbox" name="goalOption" value="Family" />
+                                    <span>👨‍👩‍👧 Family</span>
+                                </label>
+                                <label class="goal-chip">
+                                    <input type="checkbox" name="goalOption" value="VisitPalestine" />
+                                    <span>🕌 Visit Palestine</span>
+                                </label>
+                                <label class="goal-chip">
+                                    <input type="checkbox" name="goalOption" value="Work" />
+                                    <span>💼 Work</span>
+                                </label>
+                                <label class="goal-chip">
+                                    <input type="checkbox" name="goalOption" value="Fun" />
+                                    <span>😊 For Fun</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="studentLevel">Initial Level</label>
+                            <select id="studentLevel">
+                                <option value="Beginner">Beginner</option>
+                                <option value="Pre-Intermediate">Pre-Intermediate</option>
+                                <option value="Intermediate">Intermediate</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">Create Profile</button>
+                    </form>
+                </div>
+                <div class="section-split__col section-split__col--hint">
+                    <h4>Tip for teachers</h4>
+                    <p>
+                        Use one device in class and let students re-use their profile every session.
+                        You can check their homework notes and progress per section.
+                    </p>
+                    <p style="margin-top: 6px;">
+                        Need to adjust lessons or add new ones?
+                        Go to the <strong>Teacher Dashboard</strong> from the top bar.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== LEVEL & UNIT SCREEN ============== -->
+        <section id="levels-screen" class="screen">
+            <div class="section-header section-header--with-actions">
+                <div>
+                    <h2>Choose Level &amp; Unit</h2>
+                    <p class="section-header__subtitle">
+                        Current student: <span id="currentStudentNameLevels" class="tag"></span>
+                    </p>
+                </div>
+                <div class="section-header__actions">
+                    <button id="btnSwitchProfile" class="btn btn--ghost">Switch Profile</button>
+                    <button id="btnGoTeacherDashboard" class="btn btn--outline">Teacher Dashboard</button>
+                </div>
+            </div>
+
+            <div id="levelsContainer" class="levels-grid"></div>
+
+
+        </section>
+
+        <!-- ============== LESSON VIEW SCREEN ============== -->
+        <section id="lesson-screen" class="screen">
+            <div class="lesson-topbar">
+                <div>
+                    <p class="lesson-topbar__label">Student</p>
+                    <p class="lesson-topbar__value" id="lessonStudentName">–</p>
+                </div>
+                <div class="lesson-topbar__center">
+                    <p class="lesson-topbar__label">Lesson</p>
+                    <p class="lesson-topbar__value" id="lessonMeta">Beginner – Greetings – Lesson 1</p>
+                </div>
+                <div class="lesson-topbar__right">
+                    <div class="font-controls">
+                        <button id="btnFontSmaller" class="btn btn--ghost btn--icon">A−</button>
+                        <button id="btnFontLarger" class="btn btn--ghost btn--icon">A+</button>
+                    </div>
+                    <label class="toggle">
+                        <input type="checkbox" id="teacherModeToggle" />
+                        <span class="toggle__fake"></span>
+                        <span class="toggle__label">Teacher Mode</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="lesson-secondary-bar">
+                <div class="progress">
+                    <div id="lessonProgressFill" class="progress__fill"></div>
+                </div>
+                <div class="lesson-secondary-bar__buttons">
+                    <button id="btnBackToLevels" class="btn btn--ghost btn--sm">Back to Units</button>
+                    <button id="btnBackToStudents" class="btn btn--ghost btn--sm">Back to Profiles</button>
+                </div>
+            </div>
+
+            <div class="lesson-tabs">
+                <button class="lesson-tab lesson-tab--active" data-tab="overview">Overview</button>
+                <button class="lesson-tab" data-tab="vocabulary">Vocabulary</button>
+                <button class="lesson-tab" data-tab="dialogue">Dialogue</button>
+                <button class="lesson-tab" data-tab="grammar">Grammar</button>
+                <button class="lesson-tab" data-tab="practice">Practice</button>
+                <button class="lesson-tab" data-tab="homework">Homework</button>
+                <button class="lesson-tab" data-tab="review">Quick Review</button>
+                <button class="lesson-tab lesson-tab--teacher-only" data-tab="teacher-notes">
+                    Teacher Notes
+                </button>
+            </div>
+
+            <div id="lessonTabContent" class="lesson-content">
+                <!-- Filled by JS -->
+            </div>
+        </section>
+
+        <!-- ============== TEACHER DASHBOARD SCREEN ============== -->
+        <section id="teacher-dashboard-screen" class="screen">
+            <div class="section-header section-header--with-actions">
+                <div>
+                    <h2>Teacher Dashboard</h2>
+                    <p class="section-header__subtitle">
+                        Manage lessons and custom content. Changes are stored locally on this device.
+                    </p>
+                </div>
+                <div class="section-header__actions">
+                    <button id="btnTDBackStudents" class="btn btn--ghost">Back to Profiles</button>
+                    <button id="btnTDBackLevels" class="btn btn--ghost">Back to Units</button>
+                    <button id="btnTDAddLesson" class="btn btn--primary btn--sm">
+                        + Add New Lesson Template
+                    </button>
+                </div>
+            </div>
+
+            <div id="teacherLessonList" class="card-list">
+                <!-- Filled by JS -->
+            </div>
+
+            <!-- 🔧 هنا يتم رندر الفورم الخاص بتعديل الدرس -->
+            <div id="teacherEditor" class="lesson-content" style="margin-top: 14px; display: none;">
+                <!-- Filled by JS -->
+            </div>
+            <div id="addUnitCard" class="card add-unit-card">
+                <h3>Add New Unit</h3>
+                <p class="section-header__subtitle">
+                    Create custom units for any level. If you later create a lesson template with the same
+                    Level &amp; Unit name, it will be linked automatically.
+                </p>
+                <form id="addUnitForm" class="add-unit-form">
+                    <div class="form-field form-field--inline">
+                        <label for="addUnitLevel">Level</label>
+                        <select id="addUnitLevel">
+                            <option value="Beginner">Beginner</option>
+                            <option value="Pre-Intermediate">Pre-Intermediate</option>
+                            <option value="Intermediate">Intermediate</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="addUnitName">Unit Name</label>
+                        <input id="addUnitName" type="text" placeholder="e.g. Transportation" />
+                    </div>
+                    <button type="submit" class="btn btn--outline btn--sm">Add Unit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- =================== VOCAB MODAL =================== -->
+    <div id="vocabModal" class="modal">
+        <div class="modal__backdrop" data-close-modal></div>
+        <div class="modal__body">
+            <button class="modal__close" data-close-modal>&times;</button>
+            <h3 id="vocabModalWord" class="modal__word"></h3>
+            <p id="vocabModalMeaning" class="modal__meaning"></p>
+            <p id="vocabModalHint" class="modal__hint"></p>
+            <div class="modal__examples">
+                <p id="vocabModalExampleAr" class="modal__example--ar"></p>
+                <p id="vocabModalExampleEn" class="modal__example--en"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
