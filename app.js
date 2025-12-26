@@ -7753,13 +7753,19 @@ function showScreen(id) {
 }
 
 function goToHome() {
+    // ندخل وضع الصفحة الرئيسية فقط
+    document.body.classList.add("home-only");
+
+    // نخلي بس الهوم screen هي الظاهرة
     showScreen("home-screen");
 }
 function goToStudents() {
+    document.body.classList.remove("home-only");
     showScreen("students-screen");
     renderStudents();
 }
 function goToLevels() {
+    document.body.classList.remove("home-only");
     if (!getCurrentStudent()) {
         goToStudents();
         return;
@@ -7769,6 +7775,7 @@ function goToLevels() {
     renderLevels();
 }
 function goToLessonView(opts = {}) {
+    document.body.classList.remove("home-only");
     const { teacherMode = null } = opts;
     if (!getCurrentStudent()) {
         goToStudents();
@@ -7784,10 +7791,13 @@ function goToLessonView(opts = {}) {
     updateProgressBar();
     setActiveTab(appState.currentTab || "overview");
 }
+
 function goToTeacherDashboard() {
+    document.body.classList.remove("home-only");
     showScreen("teacher-dashboard-screen");
     renderTeacherLessonList();
 }
+
 
 // ========================= STUDENTS =========================
 function renderStudents() {
@@ -8818,8 +8828,9 @@ function renderTeacherLessonList() {
         btnEdit.textContent = "Edit Lesson Content";
         btnEdit.addEventListener("click", () => {
             appState.currentLessonId = id;
-            renderTeacherEditor(id);
+            renderTeacherEditor(id, card); // ⭐ مررنا الكارد
         });
+
 
         const btnOpen = document.createElement("button");
         btnOpen.className = "btn btn--outline btn--sm";
@@ -8899,14 +8910,36 @@ function createNewLessonTemplate() {
     renderTeacherEditor(newId);
 }
 
-function renderTeacherEditor(lessonId) {
+
+function renderTeacherEditor(lessonId, anchorCard) {
     const lesson = lessons[lessonId];
     const editor = $("#teacherEditor");
     if (!lesson || !editor) return;
 
+    // ⭐ قبل ما نعرضه، نتأكد إنه مش محتوى قديم
+    editor.innerHTML = "";
+
+    // ⭐ لو مرّرنا كارد، نحط الفورم تحته مباشرة
+    if (anchorCard) {
+        anchorCard.insertAdjacentElement("afterend", editor);
+    } else {
+        // فallback قديم لو ما مرّرنا كارد (مش ضروري بس احتياط)
+        const list = $("#teacherLessonList");
+        if (list) {
+            list.insertAdjacentElement("afterend", editor);
+        }
+    }
+
     editor.style.display = "block";
 
     editor.innerHTML = `
+      <div class="teacher-editor__section">
+     
+      <div class="td-editor-buttons">
+        
+        <button id="tdCloseEditor" class="btn btn--ghost btn--sm">Close Editor</button>
+      </div>
+    </div>
     <h3>Editing: ${lesson.meta.level} – ${lesson.meta.unit} – ${lesson.meta.lessonTitle}</h3>
     <p class="teacher-edit-note">
       All changes here are saved locally and will apply to all students for this lesson.

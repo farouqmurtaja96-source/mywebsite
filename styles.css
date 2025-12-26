@@ -33,9 +33,9 @@ body {
 
 /* Top Nav */
 .top-nav {
-    position: sticky;
+    position: static;
     top: 0;
-    z-index: 20;
+    z-index: 10;
     backdrop-filter: blur(14px);
     background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(240, 249, 255, 0.92));
     border-bottom: 1px solid rgba(209, 213, 219, 0.8);
@@ -129,6 +129,37 @@ main {
     }
 }
 
+
+/* حالة الصفحة الرئيسية فقط */
+body.home-only {
+    overflow: hidden;
+    /* ممنوع سكروول */
+}
+
+/* لما نكون في home-only نخفي الناف و الـ main */
+body.home-only .top-nav,
+body.home-only main {
+    display: none;
+}
+
+
+/* 🟦 الهيرو خلفية فل عرض + ارتفاع شاشة */
+.hero.hero--full {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+
 /* Hero */
 .hero {
     position: relative;
@@ -146,8 +177,7 @@ main {
             rgba(15, 23, 42, 0.65)),
         url("https://fastly.picsum.photos/id/137/1920/1080.jpg?hmac=r842vhykaoJaV9BTbXcFa2V_sk1atvlAnt5rUbAxTSY");
     box-shadow: var(--shadow-soft);
-    margin-top: 16px;
-    overflow: hidden;
+
 }
 
 .hero__overlay {
@@ -1134,12 +1164,14 @@ select:focus {
 /* Card list */
 .card-list {
     margin-top: 10px;
+
 }
 
 .card--lesson {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    margin-top: 10px;
 }
 
 .card__meta {
