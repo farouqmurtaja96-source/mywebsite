@@ -8916,24 +8916,18 @@ function renderTeacherEditor(lessonId, anchorCard) {
     const editor = $("#teacherEditor");
     if (!lesson || !editor) return;
 
-    // ⭐ قبل ما نعرضه، نتأكد إنه مش محتوى قديم
+    // نحرك الفورم تحت الكارد اللي انضغط (Teacher Dashboard)
     editor.innerHTML = "";
-
-    // ⭐ لو مرّرنا كارد، نحط الفورم تحته مباشرة
     if (anchorCard) {
         anchorCard.insertAdjacentElement("afterend", editor);
     } else {
-        // فallback قديم لو ما مرّرنا كارد (مش ضروري بس احتياط)
         const list = $("#teacherLessonList");
-        if (list) {
-            list.insertAdjacentElement("afterend", editor);
-        }
+        if (list) list.insertAdjacentElement("afterend", editor);
     }
-
     editor.style.display = "block";
 
     editor.innerHTML = `
-      <div class="teacher-editor__section">
+     <div class="teacher-editor__section">
      
       <div class="td-editor-buttons">
         
@@ -8986,6 +8980,28 @@ function renderTeacherEditor(lessonId, anchorCard) {
           <button id="tdAddGoal" class="btn btn--outline btn--sm">Add Goal</button>
           <button id="tdSaveGoals" class="btn btn--primary btn--sm">Save Goals</button>
         </div>
+      </div>
+    </div>
+
+    <!-- 🆕 Vocab Section -->
+    <div class="teacher-editor__section">
+      <h4>Vocabulary</h4>
+      <p class="teacher-edit-note">
+        Edit core and extra vocabulary for this lesson. These words تظهر في تبويب Vocabulary و Quick Review.
+      </p>
+
+      <h5>Core Vocabulary</h5>
+      <div id="tdVocabCoreList"></div>
+      <div class="td-editor-buttons">
+        <button id="tdAddVocabCore" class="btn btn--outline btn--sm">Add Core Word</button>
+        <button id="tdSaveVocabCore" class="btn btn--primary btn--sm">Save Core</button>
+      </div>
+
+      <h5 style="margin-top: 10px;">Extra Vocabulary</h5>
+      <div id="tdVocabExtraList"></div>
+      <div class="td-editor-buttons">
+        <button id="tdAddVocabExtra" class="btn btn--outline btn--sm">Add Extra Word</button>
+        <button id="tdSaveVocabExtra" class="btn btn--primary btn--sm">Save Extra</button>
       </div>
     </div>
 
@@ -9048,7 +9064,7 @@ function renderTeacherEditor(lessonId, anchorCard) {
     </div>
   `;
 
-    // Meta
+    // ========== Meta ==========
     $("#tdMetaLevel").value = lesson.meta.level;
     $("#tdMetaUnit").value = lesson.meta.unit;
     $("#tdMetaTitle").value = lesson.meta.lessonTitle;
@@ -9063,7 +9079,7 @@ function renderTeacherEditor(lessonId, anchorCard) {
         alert("Lesson meta saved.");
     });
 
-    // Overview
+    // ========== Overview ==========
     $("#tdOverviewTitle").value = lesson.overview.title || "";
     $("#tdOverviewDesc").value = lesson.overview.description || "";
 
@@ -9119,7 +9135,93 @@ function renderTeacherEditor(lessonId, anchorCard) {
         alert("Overview saved.");
     });
 
-    // Dialogue
+    // ========== 🆕 Vocabulary ==========
+
+    const vocabCoreList = $("#tdVocabCoreList");
+    const vocabExtraList = $("#tdVocabExtraList");
+
+    function createVocabRow(item = {}, isCore = true) {
+        const row = document.createElement("div");
+        row.className = "td-quiz-row";
+        row.dataset.itemId = item.id || "";
+
+        row.innerHTML = `
+          <div class="td-label">Arabic (with vowels)</div>
+          <input class="td-input td-input--ar td-vocab-ar" value="${item.ar || ""}" />
+
+          <div class="td-label">English meaning</div>
+          <input class="td-input td-vocab-en" value="${item.en || ""}" />
+
+          <div class="td-label">Hint (optional)</div>
+          <input class="td-input td-vocab-hint" value="${item.hint || ""}" />
+
+          <div class="td-label">Arabic example (optional)</div>
+          <textarea class="td-input td-input--ar td-vocab-ex-ar" rows="2">${item.exampleAr || ""}</textarea>
+
+          <div class="td-label">English example (optional)</div>
+          <textarea class="td-input td-vocab-ex-en" rows="2">${item.exampleEn || ""}</textarea>
+        `;
+
+        const delBtn = document.createElement("button");
+        delBtn.type = "button";
+        delBtn.className = "btn btn--ghost btn--sm";
+        delBtn.textContent = "Delete";
+        delBtn.addEventListener("click", () => row.remove());
+        row.appendChild(delBtn);
+
+        return row;
+    }
+
+    function renderVocabGroup(listEl, items) {
+        listEl.innerHTML = "";
+        (items || []).forEach((item) => {
+            listEl.appendChild(createVocabRow(item));
+        });
+    }
+
+    renderVocabGroup(vocabCoreList, lesson.vocabulary.core || []);
+    renderVocabGroup(vocabExtraList, lesson.vocabulary.extra || []);
+
+    $("#tdAddVocabCore").addEventListener("click", () => {
+        vocabCoreList.appendChild(createVocabRow({}, true));
+    });
+
+    $("#tdAddVocabExtra").addEventListener("click", () => {
+        vocabExtraList.appendChild(createVocabRow({}, false));
+    });
+
+    function collectVocabFrom(listEl, isCore) {
+        const rows = listEl.querySelectorAll(".td-quiz-row");
+        const result = [];
+        rows.forEach((row) => {
+            const ar = row.querySelector(".td-vocab-ar").value.trim();
+            const en = row.querySelector(".td-vocab-en").value.trim();
+            const hint = row.querySelector(".td-vocab-hint").value.trim();
+            const exampleAr = row.querySelector(".td-vocab-ex-ar").value.trim();
+            const exampleEn = row.querySelector(".td-vocab-ex-en").value.trim();
+            if (!ar || !en) return;
+            let id = row.dataset.itemId;
+            if (!id) {
+                id = (isCore ? "core_" : "extra_") + Date.now() + "_" + Math.random().toString(16).slice(2);
+            }
+            result.push({ id, ar, en, hint, exampleAr, exampleEn });
+        });
+        return result;
+    }
+
+    $("#tdSaveVocabCore").addEventListener("click", () => {
+        lesson.vocabulary.core = collectVocabFrom(vocabCoreList, true);
+        saveLessonToLS(lessonId);
+        alert("Core vocabulary saved.");
+    });
+
+    $("#tdSaveVocabExtra").addEventListener("click", () => {
+        lesson.vocabulary.extra = collectVocabFrom(vocabExtraList, false);
+        saveLessonToLS(lessonId);
+        alert("Extra vocabulary saved.");
+    });
+
+    // ========== Dialogue ==========
     const dlgList = $("#tdDialogueList");
     dlgList.innerHTML = "";
     lesson.dialogue.lines.forEach((line) => {
@@ -9162,7 +9264,7 @@ function renderTeacherEditor(lessonId, anchorCard) {
         alert("Dialogue saved.");
     });
 
-    // Grammar
+    // ========== Grammar ==========
     const grammarList = $("#tdGrammarList");
     function renderGrammarRows() {
         grammarList.innerHTML = "";
@@ -9217,7 +9319,7 @@ function renderTeacherEditor(lessonId, anchorCard) {
         alert("Grammar saved.");
     });
 
-    // Quiz
+    // ========== Quiz ==========
     const quizList = $("#tdQuizList");
     quizList.innerHTML = "";
     lesson.practice.quiz.forEach((q) => {
@@ -9373,7 +9475,7 @@ function renderTeacherEditor(lessonId, anchorCard) {
         alert("MCQ saved.");
     });
 
-    // Role-play
+    // ========== Role-play ==========
     const roleList = $("#tdRoleList");
     roleList.innerHTML = "";
     lesson.practice.rolePlays.forEach((rp) => {
@@ -9420,7 +9522,7 @@ function renderTeacherEditor(lessonId, anchorCard) {
         alert("Role-play prompts saved.");
     });
 
-    // Homework
+    // ========== Homework ==========
     $("#tdHomeworkText").value = lesson.homework.instructions || "";
     $("#tdSaveHomework").addEventListener("click", () => {
         lesson.homework.instructions = $("#tdHomeworkText").value.trim();
@@ -9428,7 +9530,7 @@ function renderTeacherEditor(lessonId, anchorCard) {
         alert("Homework instructions saved.");
     });
 
-    // Teacher notes (template)
+    // ========== Teacher Notes ==========
     $("#tdTeacherNotes").value = lesson.teacherNotes.myNotes || "";
     $("#tdSaveTeacherNotes").addEventListener("click", () => {
         lesson.teacherNotes.myNotes = $("#tdTeacherNotes").value.trim();
