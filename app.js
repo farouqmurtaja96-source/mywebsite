@@ -7631,7 +7631,11 @@ const appState = {
     lessonFontSize: 1,
     vocabCoreVisited: {},
 };
-
+const exportContext = {
+    lessonId: null,
+    studentName: "",
+    source: "", // "lesson-view" أو "teacher-dashboard"
+};
 let customUnits = {
     Beginner: [],
     "Pre-Intermediate": [],
@@ -7641,6 +7645,19 @@ let customUnits = {
 // ========================= HELPERS =========================
 const $ = (s) => document.querySelector(s);
 const $all = (s) => Array.from(document.querySelectorAll(s));
+function openExportModal(source, lessonId, studentName = "") {
+    exportContext.lessonId = lessonId;
+    exportContext.studentName = studentName;
+    exportContext.source = source;
+
+    const modal = document.getElementById("exportModal");
+    if (modal) modal.classList.add("modal--open");
+}
+
+function closeExportModal() {
+    const modal = document.getElementById("exportModal");
+    if (modal) modal.classList.remove("modal--open");
+}
 
 function saveStudentsToLS() {
     localStorage.setItem(LS_STUDENTS_KEY, JSON.stringify(appState.students));
@@ -7790,6 +7807,316 @@ function goToLessonView(opts = {}) {
     updateLessonTopBar();
     updateProgressBar();
     setActiveTab(appState.currentTab || "overview");
+}
+function buildLessonExportHtml(lesson, options) {
+    const {
+        includeVocab,
+        includeDialogue,
+        includeGrammar,
+        includeHomework,
+        includeTeacherNotes,
+        version,
+        studentName,
+    } = options;
+
+    const escapeHtml = (str) =>
+        String(str || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+
+    // ========== Vocabulary ==========
+    let vocabRows = "";
+    if (includeVocab && lesson.vocabulary) {
+        const allVocab = [
+            ...(lesson.vocabulary.core || []),
+            ...(lesson.vocabulary.extra || []),
+        ];
+        allVocab.forEach((w) => {
+            vocabRows += `
+            <tr>
+                <td class="ar">${escapeHtml(w.ar)}</td>
+                <td class="en">${escapeHtml(w.en)}</td>
+                <td class="en">${escapeHtml(w.hint || "")}</td>
+                <td class="en">
+                    ${escapeHtml(w.exampleAr || "")}
+                    ${w.exampleAr || w.exampleEn ? " — " : ""}
+                    ${escapeHtml(w.exampleEn || "")}
+                </td>
+            </tr>`;
+        });
+    }
+
+    // ========== Dialogue ==========
+    let dialogueHtml = "";
+    if (includeDialogue && lesson.dialogue && lesson.dialogue.lines) {
+        dialogueHtml = lesson.dialogue.lines
+            .map(
+                (line) => `
+                <div class="dialogue-line">
+                    <span class="speaker">${escapeHtml(line.speaker)}:</span>
+                    <span class="dialogue-ar">${escapeHtml(line.ar)}</span>
+                    ${line.en
+                        ? `<span class="dialogue-en">${escapeHtml(line.en)}</span>`
+                        : ""
+                    }
+                </div>
+            `
+            )
+            .join("");
+    }
+
+    // ========== Grammar ==========
+    let grammarHtml = "";
+    if (includeGrammar && lesson.grammar && lesson.grammar.length) {
+        grammarHtml = lesson.grammar
+            .map(
+                (g) =>
+                    `<div class="grammar-item">
+                        <h4>${escapeHtml(g.title)}</h4>
+                        <p>${escapeHtml(g.description)}</p>
+                    </div>`
+            )
+            .join("");
+    }
+
+    // ========== Homework ==========
+    let homeworkHtml = "";
+    if (includeHomework && lesson.homework && lesson.homework.instructions) {
+        homeworkHtml = `<p>${escapeHtml(lesson.homework.instructions)}</p>`;
+    }
+
+    // ========== Teacher Notes ==========
+    let teacherNotesHtml = "";
+    const notes = lesson.teacherNotes && lesson.teacherNotes.myNotes;
+    if (includeTeacherNotes && version === "teacher" && notes) {
+        teacherNotesHtml = `<p>${escapeHtml(notes)}</p>`;
+    }
+
+    return `
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>Lesson Export – ${escapeHtml(lesson.meta.lessonTitle)}</title>
+<style>
+    body {
+        font-family:
+            "Amiri",
+            "Scheherazade New",
+            "IBM Plex Sans Arabic",
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            sans-serif;
+        margin: 20px;
+        color: #111827;
+        
+      
+    }
+        .headtext{
+         direction: center;
+          text-align: center;
+        }
+    h1, h2, h3, h4 {
+        margin: 0 0 6px;
+        color: #0f172a;
+    }
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        
+    }
+    .meta {
+        font-size: 12px;
+        margin-bottom: 14px;
+         direction: ltr;
+    }
+    .meta div {
+        margin-bottom: 2px;
+    }
+    .section {
+    
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px solid #e5e7eb;
+        /* 🔴 مهم: شلنا page-break-inside: avoid; عشان ما يطير القسم كله لصفحة جديدة ويترك الهيدر لحاله */
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 11px;
+        direction: rtl; /* الجدول نفسه RTL */
+    }
+    th, td {
+        border: 1px solid #e5e7eb;
+        padding: 4px 6px;
+        vertical-align: top;
+    }
+    th {
+        background: #e0f2fe;
+    }
+    .ar {
+        direction: rtl;
+        text-align: right;
+        font-family: "Amiri", "Scheherazade New", "IBM Plex Sans Arabic", system-ui, sans-serif;
+        font-size: 20px;
+    }
+    .en {
+        direction: ltr;
+        text-align: left;
+        font-size: 20px;
+    }
+    .small-note {
+        font-size: 12px;
+        color: #6b7280;
+        margin-top: 4px;
+        direction: ltr;
+    }
+    .grammar-item {
+        margin-bottom: 8px;
+        font-size: 18px;
+        direction: ltr;
+    }
+    .grammar-item h4 {
+        font-size: 18px;
+        margin-bottom: 2px;
+        direction: ltr;
+    }
+    .section-title {
+        display:flex;
+        justify-content:space-between;
+        align-items:baseline;
+        
+    }
+    .badge {
+        font-size:10px;
+        padding:2px 6px;
+        border-radius:999px;
+        background:#e5f9f5;
+        color:#047857;
+    }
+
+    /* 🗨️ المحادثة RTL مع الإنجليزي تحت */
+    .dialogue-line {
+        margin-bottom: 6px;
+        direction: rtl;
+        text-align: right;
+        font-size: 24px;
+    }
+    .speaker {
+        font-weight: 700;
+        margin-left: 4px;
+    }
+    .dialogue-ar {
+        font-family: "Amiri", "Scheherazade New", "IBM Plex Sans Arabic", system-ui, sans-serif;
+    }
+    .dialogue-en {
+        display: block;
+       
+        font-size: 20px;
+        color: #4b5563;
+        margin-right: 2em; /* شوي مسافة عن اسم المتحدث */
+    }
+
+    @media print {
+        body { margin: 10mm; }
+        .small-note { display:none; }
+    }
+</style>
+</head>
+<body>
+    <h1 class="headtext">Palestinian Arabic – ${escapeHtml(lesson.meta.lessonTitle)}</h1>
+    <div class="meta" >
+        <div><strong>Level:</strong> ${escapeHtml(lesson.meta.level)}</div>
+        <div><strong>Unit:</strong> ${escapeHtml(lesson.meta.unit)}</div>
+        ${studentName
+            ? `<div><strong>Student:</strong> ${escapeHtml(studentName)}</div>`
+            : ""
+        }
+        <div><strong>Version:</strong> ${version === "teacher" ? "Teacher" : "Student"
+        }</div>
+    </div>
+
+    ${vocabRows
+            ? `<div class="section">
+                <div class="section-title">
+                    <h2>المفردات – Vocabulary</h2>
+                    <span class="badge">Core & Extra</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>العربي</th>
+                            <th>English</th>
+                            <th>Hint</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${vocabRows}
+                    </tbody>
+                </table>
+            </div>`
+            : ""
+        }
+
+    ${dialogueHtml
+            ? `<div class="section">
+                <h2>المحادثة – Dialogue</h2>
+                ${dialogueHtml}
+            </div>`
+            : ""
+        }
+
+    ${grammarHtml
+            ? `<div class="section">
+                <h2>القواعد – Grammar</h2>
+                ${grammarHtml}
+            </div>`
+            : ""
+        }
+
+    ${homeworkHtml
+            ? `<div class="section">
+                <h2>الواجب – Homework</h2>
+                ${homeworkHtml}
+            </div>`
+            : ""
+        }
+
+    ${teacherNotesHtml
+            ? `<div class="section">
+                <h2>ملاحظات المعلم – Teacher Notes</h2>
+                ${teacherNotesHtml}
+            </div>`
+            : ""
+        }
+
+    <p class="small-note">
+        Generated from Palestinian Arabic Local LMS – you can print or save as PDF from your browser.
+    </p>
+</body>
+</html>
+    `;
+}
+
+
+function openPrintWindow(html) {
+    const win = window.open("", "_blank");
+    if (!win) {
+        alert("Popup blocked – please allow popups to export PDF.");
+        return;
+    }
+    win.document.open();
+    win.document.write(html);
+    win.document.close();
+    // نعطيه وقت بسيط يرنّدر قبل الطباعة
+    win.focus();
+    setTimeout(() => {
+        win.print();
+    }, 300);
 }
 
 function goToTeacherDashboard() {
@@ -9590,6 +9917,69 @@ document.addEventListener("DOMContentLoaded", () => {
         $("#studentLevel").value = "Beginner";
         renderStudents();
     });
+    const btnExportLesson = document.getElementById("btnExportLessonPdf");
+    if (btnExportLesson) {
+        btnExportLesson.addEventListener("click", () => {
+            const student = getCurrentStudent();
+            const studentName = student ? student.name : "";
+            const lessonId = appState.currentLessonId;
+            if (!lessonId) {
+                alert("No lesson selected.");
+                return;
+            }
+            openExportModal("lesson-view", lessonId, studentName);
+        });
+    }
+    const exportForm = document.getElementById("exportOptionsForm");
+    if (exportForm) {
+        exportForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const modal = document.getElementById("exportModal");
+            const lessonId = exportContext.lessonId;
+            const lesson = lessons[lessonId];
+            if (!lesson) {
+                alert("Lesson not found.");
+                return;
+            }
+
+            const includeVocab = document.getElementById("expIncludeVocab").checked;
+            const includeDialogue = document.getElementById("expIncludeDialogue").checked;
+            const includeGrammar = document.getElementById("expIncludeGrammar").checked;
+            const includeHomework = document.getElementById("expIncludeHomework").checked;
+            let includeTeacherNotes =
+                document.getElementById("expIncludeTeacherNotes").checked;
+
+            const versionInput = exportForm.querySelector(
+                'input[name="expVersion"]:checked'
+            );
+            const version = versionInput ? versionInput.value : "student";
+
+            if (version === "student") {
+                // مهما كان checkbox تبع Teacher Notes، نخفيه في Student version
+                includeTeacherNotes = false;
+            }
+
+            const html = buildLessonExportHtml(lesson, {
+                includeVocab,
+                includeDialogue,
+                includeGrammar,
+                includeHomework,
+                includeTeacherNotes,
+                version,
+                studentName: exportContext.studentName,
+            });
+
+            closeExportModal();
+            openPrintWindow(html);
+        });
+    }
+
+    // أزرار إغلاق المودال
+    document
+        .querySelectorAll("[data-close-export-modal], #exportCancelBtn")
+        .forEach((el) => {
+            el.addEventListener("click", () => closeExportModal());
+        });
 
     // level & teacher buttons
     $("#btnSwitchProfile").addEventListener("click", () => {

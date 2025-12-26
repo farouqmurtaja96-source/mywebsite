@@ -178,6 +178,9 @@
                 <div class="lesson-secondary-bar__buttons">
                     <button id="btnBackToLevels" class="btn btn--ghost btn--sm">Back to Units</button>
                     <button id="btnBackToStudents" class="btn btn--ghost btn--sm">Back to Profiles</button>
+                    <button id="btnExportLessonPdf" class="btn btn--outline btn--sm">
+                        📄 Export Lesson PDF
+                    </button>
                 </div>
             </div>
 
@@ -264,8 +267,69 @@
             </div>
         </div>
     </div>
+    <!-- =================== EXPORT PDF OPTIONS MODAL =================== -->
+    <div id="exportModal" class="modal">
+        <div class="modal__backdrop" data-close-export-modal></div>
+        <div class="modal__body1">
+            <button class="modal__close" data-close-export-modal>&times;</button>
+            <h3 class="modal__word" style="margin-bottom: 8px; font-size: 1.2rem;">
+                Export Lesson as PDF
+            </h3>
+            <p class="modal__hint" style="margin-bottom: 8px;">
+                Choose what you want to include in the exported PDF.
+            </p>
+
+            <form id="exportOptionsForm" style="font-size: 0.9rem;">
+                <div style="margin-bottom: 6px;">
+                    <strong>Include sections:</strong>
+                </div>
+                <label style="display:block; margin-bottom:4px;">
+                    <input type="checkbox" id="expIncludeVocab" checked />
+                    Vocabulary (core + extra)
+                </label>
+                <label style="display:block; margin-bottom:4px;">
+                    <input type="checkbox" id="expIncludeDialogue" checked />
+                    Dialogue
+                </label>
+                <label style="display:block; margin-bottom:4px;">
+                    <input type="checkbox" id="expIncludeGrammar" checked />
+                    Grammar
+                </label>
+                <label style="display:block; margin-bottom:4px;">
+                    <input type="checkbox" id="expIncludeHomework" />
+                    Homework
+                </label>
+                <label style="display:block; margin-bottom:4px;">
+                    <input type="checkbox" id="expIncludeTeacherNotes" />
+                    Teacher Notes
+                </label>
+
+                <div style="margin:10px 0 6px;">
+                    <strong>Version:</strong>
+                </div>
+                <label style="display:block; margin-bottom:4px;">
+                    <input type="radio" name="expVersion" value="student" checked />
+                    Student version (hides Teacher Notes even if checked)
+                </label>
+                <label style="display:block; margin-bottom:8px;">
+                    <input type="radio" name="expVersion" value="teacher" />
+                    Teacher version
+                </label>
+
+                <div style="display:flex; gap:8px; margin-top:10px; justify-content:flex-end;">
+                    <button type="button" id="exportCancelBtn" class="btn btn--ghost btn--sm">
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn btn--primary btn--sm">
+                        Generate PDF
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="app.js"></script>
+
 </body>
 
 </html>
