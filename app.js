@@ -3,6 +3,7 @@ const LS_STUDENTS_KEY = "pal_arabic_students";
 const LS_LESSON_PREFIX = "pal_arabic_lesson_";
 const LS_FONT_SIZE_KEY = "pal_arabic_font_size";
 const LS_CUSTOM_UNITS_KEY = "pal_arabic_custom_units";
+const LS_BACKUP_SETTINGS_KEY = "pal_arabic_backup_settings";
 
 const LESSON_ID_GREETING = "Beginner-Greetings-L1";
 const LESSON_ID_DAILY_ROUTINE = "Beginner-DailyRoutine-L1";
@@ -7631,6 +7632,11 @@ const appState = {
     lessonFontSize: 1,
     vocabCoreVisited: {},
 };
+let backupSettings = {
+    frequency: "off",      // "off" | "daily" | "2d" | "weekly"
+    lastBackupAt: null,    // ISO string
+};
+
 const exportContext = {
     lessonId: null,
     studentName: "",
@@ -7643,6 +7649,215 @@ let customUnits = {
 };
 
 // ========================= HELPERS =========================
+
+// ========================= BACKUP SETTINGS =========================
+function loadBackupSettings() {
+    try {
+        const raw = localStorage.getItem(LS_BACKUP_SETTINGS_KEY);
+        if (!raw) {
+            backupSettings = { frequency: "off", lastBackupAt: null };
+            return;
+        }
+        const parsed = JSON.parse(raw);
+        backupSettings = {
+            frequency: parsed.frequency || "off",
+            lastBackupAt: parsed.lastBackupAt || null,
+        };
+    } catch {
+        backupSettings = { frequency: "off", lastBackupAt: null };
+    }
+}
+
+function saveBackupSettings() {
+    localStorage.setItem(LS_BACKUP_SETTINGS_KEY, JSON.stringify(backupSettings));
+}
+
+function backupFrequencyToDays(freq) {
+    switch (freq) {
+        case "daily":
+            return 1;
+        case "2d":
+            return 2;
+        case "weekly":
+            return 7;
+        default:
+            return null; // off
+    }
+}
+
+function checkBackupReminder() {
+    const banner = document.getElementById("backupReminderBanner");
+    const info = document.getElementById("backupLastInfo");
+    if (!banner || !info) return;
+
+    const daysLimit = backupFrequencyToDays(backupSettings.frequency);
+    if (!daysLimit) {
+        banner.classList.add("hidden");
+        return;
+    }
+
+    if (!backupSettings.lastBackupAt) {
+        // ما في ولا backup لسه
+        banner.textContent =
+            "You haven't created any backup yet. It's a good time to export your data now.";
+        banner.classList.remove("hidden");
+        info.textContent = "";
+        return;
+    }
+
+    const last = new Date(backupSettings.lastBackupAt);
+    const diffMs = Date.now() - last.getTime();
+    const diffDays = diffMs / (1000 * 60 * 60 * 24);
+
+    if (diffDays >= daysLimit) {
+        banner.textContent =
+            `It has been about ${Math.round(diffDays)} day(s) since your last backup. ` +
+            `Please export your data so you don't lose student progress.`;
+        banner.classList.remove("hidden");
+    } else {
+        banner.classList.add("hidden");
+    }
+
+    info.textContent =
+        "Last backup: " +
+        last.toLocaleString() +
+        "  |  Frequency: " +
+        backupSettings.frequency;
+}
+// ========================= BACKUP EXPORT / IMPORT =========================
+function buildBackupSnapshot() {
+    return {
+        version: 1,
+        createdAt: new Date().toISOString(),
+        students: appState.students || [],
+        lessons: lessons || {},
+        customUnits: customUnits || {},
+        settings: {
+            lessonFontSize: appState.lessonFontSize,
+        },
+    };
+}
+
+function downloadBackupFile(snapshot) {
+    const json = JSON.stringify(snapshot, null, 2);
+    const blob = new Blob([json], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+
+    const date = new Date();
+    const stamp =
+        date.getFullYear().toString() +
+        String(date.getMonth() + 1).padStart(2, "0") +
+        String(date.getDate()).padStart(2, "0") +
+        "_" +
+        String(date.getHours()).padStart(2, "0") +
+        String(date.getMinutes()).padStart(2, "0");
+
+    a.href = url;
+    a.download = `pal_arabic_backup_${stamp}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function handleExportBackup() {
+    const snapshot = buildBackupSnapshot();
+    downloadBackupFile(snapshot);
+
+    // حدّث وقت آخر backup
+    backupSettings.lastBackupAt = new Date().toISOString();
+    saveBackupSettings();
+    checkBackupReminder();
+    alert("Backup exported successfully. Keep the JSON file in a safe place.");
+}
+
+function applyBackupSnapshot(snapshot) {
+    if (!snapshot || typeof snapshot !== "object") {
+        alert("Invalid backup file.");
+        return;
+    }
+
+    // students
+    if (Array.isArray(snapshot.students)) {
+        appState.students = snapshot.students;
+        saveStudentsToLS();
+    }
+
+    // lessons (نمحي القديم ونحط الجديد)
+    if (snapshot.lessons && typeof snapshot.lessons === "object") {
+        // clear current lessons
+        Object.keys(lessons).forEach((id) => {
+            delete lessons[id];
+        });
+
+        // clear old lesson entries from localStorage
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && key.startsWith(LS_LESSON_PREFIX)) {
+                localStorage.removeItem(key);
+                i--; // لأن length تغير
+            }
+        }
+
+        Object.keys(snapshot.lessons).forEach((id) => {
+            lessons[id] = snapshot.lessons[id];
+            saveLessonToLS(id);
+        });
+    }
+
+    // custom units
+    if (snapshot.customUnits && typeof snapshot.customUnits === "object") {
+        customUnits = {
+            Beginner: snapshot.customUnits.Beginner || [],
+            "Pre-Intermediate": snapshot.customUnits["Pre-Intermediate"] || [],
+            Intermediate: snapshot.customUnits.Intermediate || [],
+        };
+        saveCustomUnits();
+    }
+
+    // settings (زي حجم الخط)
+    if (snapshot.settings) {
+        if (typeof snapshot.settings.lessonFontSize === "number") {
+            appState.lessonFontSize = snapshot.settings.lessonFontSize;
+            applyFontSize();
+            saveFontSize();
+        }
+    }
+
+    // إعادة رسم الواجهات الرئيسية
+    renderStudents();
+    renderTeacherLessonList();
+    if (getCurrentStudent()) {
+        renderLevels();
+    }
+
+    alert("Backup imported successfully.");
+}
+
+function handleImportBackupFile(file) {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        try {
+            const json = e.target.result;
+            const snapshot = JSON.parse(json);
+            if (
+                !confirm(
+                    "Importing this backup will replace current students, lessons and units.\nAre you sure?"
+                )
+            ) {
+                return;
+            }
+            applyBackupSnapshot(snapshot);
+        } catch (err) {
+            console.error(err);
+            alert("Could not read backup file.");
+        }
+    };
+    reader.readAsText(file);
+}
+
 const $ = (s) => document.querySelector(s);
 const $all = (s) => Array.from(document.querySelectorAll(s));
 function openExportModal(source, lessonId, studentName = "") {
@@ -9877,6 +10092,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadCustomUnits();
     loadFontSize();
     appState.students = loadStudentsFromLS();
+    loadBackupSettings();
 
     // top nav
     $all(".top-nav__link").forEach((btn) => {
@@ -9973,6 +10189,53 @@ document.addEventListener("DOMContentLoaded", () => {
             openPrintWindow(html);
         });
     }
+    // Backup buttons in Teacher Dashboard
+    const btnExportBackup = document.getElementById("btnExportBackup");
+    const btnImportBackup = document.getElementById("btnImportBackup");
+    const backupFileInput = document.getElementById("backupFileInput");
+    const backupFrequencySelect = document.getElementById("backupFrequencySelect");
+    const backupLastInfo = document.getElementById("backupLastInfo");
+
+    if (backupFrequencySelect) {
+        backupFrequencySelect.value = backupSettings.frequency || "off";
+        backupFrequencySelect.addEventListener("change", () => {
+            backupSettings.frequency = backupFrequencySelect.value;
+            saveBackupSettings();
+            checkBackupReminder();
+        });
+    }
+
+    if (backupLastInfo && backupSettings.lastBackupAt) {
+        const last = new Date(backupSettings.lastBackupAt);
+        backupLastInfo.textContent =
+            "Last backup: " +
+            last.toLocaleString() +
+            "  |  Frequency: " +
+            backupSettings.frequency;
+    }
+
+    if (btnExportBackup) {
+        btnExportBackup.addEventListener("click", () => {
+            handleExportBackup();
+        });
+    }
+
+    if (btnImportBackup && backupFileInput) {
+        btnImportBackup.addEventListener("click", () => {
+            backupFileInput.click();
+        });
+
+        backupFileInput.addEventListener("change", () => {
+            const file = backupFileInput.files[0];
+            if (file) {
+                handleImportBackupFile(file);
+                backupFileInput.value = "";
+            }
+        });
+    }
+
+    // تشيك التذكير بعد ما نحمّل الإعدادات
+    checkBackupReminder();
 
     // أزرار إغلاق المودال
     document

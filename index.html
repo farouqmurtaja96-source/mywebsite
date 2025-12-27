@@ -210,13 +210,47 @@
                     <p class="section-header__subtitle">
                         Manage lessons and custom content. Changes are stored locally on this device.
                     </p>
+
                 </div>
+                <section class="teacher-editor__section">
+                    <h3>Backup & Data Safety</h3>
+
+
+                    <div class="form-field form-field--inline">
+                        <label for="backupFrequencySelect">Backup reminder</label>
+                        <select id="backupFrequencySelect">
+                            <option value="off">No reminder</option>
+                            <option value="daily">Every day</option>
+                            <option value="2d">Every 2 days</option>
+                            <option value="weekly">Every week</option>
+                        </select>
+                    </div>
+
+                    <div class="td-editor-buttons">
+                        <button id="btnExportBackup" class="btn btn--primary btn--sm">
+                            💾 Export Backup (JSON)
+                        </button>
+                        <button id="btnImportBackup" class="btn btn--outline btn--sm">
+                            📂 Import Backup
+                        </button>
+                        <!-- input مخفي لاختيار ملف الـ backup -->
+                        <input type="file" id="backupFileInput" accept="application/json" style="display:none" />
+                    </div>
+
+                    <p id="backupLastInfo" class="teacher-edit-note"></p>
+
+                    <div id="backupReminderBanner" class="backup-reminder hidden">
+                        <strong>Reminder:</strong> It’s time to create a new backup of your data.
+                    </div>
+                </section>
                 <div class="section-header__actions">
                     <button id="btnTDBackStudents" class="btn btn--ghost">Back to Profiles</button>
                     <button id="btnTDBackLevels" class="btn btn--ghost">Back to Units</button>
                     <button id="btnTDAddLesson" class="btn btn--primary btn--sm">
                         + Add New Lesson Template
                     </button>
+
+
                 </div>
             </div>
 
