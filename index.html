@@ -178,6 +178,9 @@
                 <div class="lesson-secondary-bar__buttons">
                     <button id="btnBackToLevels" class="btn btn--ghost btn--sm">Back to Units</button>
                     <button id="btnBackToStudents" class="btn btn--ghost btn--sm">Back to Profiles</button>
+                    <button id="btnToggleWhiteboard" class="btn btn--ghost btn--sm">
+                        ✏️ Whiteboard
+                    </button>
                     <button id="btnExportLessonPdf" class="btn btn--outline btn--sm">
                         📄 Export Lesson PDF
                     </button>
@@ -200,6 +203,46 @@
             <div id="lessonTabContent" class="lesson-content">
                 <!-- Filled by JS -->
             </div>
+            <!-- Whiteboard panel (hidden by default) -->
+            <section id="whiteboardPanel" class="whiteboard-panel hidden">
+                <div class="whiteboard-header">
+                    <h3>Lesson Whiteboard</h3>
+                    <span class="whiteboard-subtitle">
+                        Use the pen to write / draw explanations. Each lesson has its own board.
+                    </span>
+                </div>
+
+                <div class="whiteboard-toolbar">
+                    <label>
+                        Color:
+                        <input type="color" id="whiteboardColor" value="#111827">
+                    </label>
+
+                    <label>
+                        Size:
+                        <input type="range" id="whiteboardSize" min="1" max="12" value="3">
+                        <span id="whiteboardSizeVal">3px</span>
+                    </label>
+
+                    <button id="whiteboardClear" class="btn btn--outline btn--sm">
+                        Clear
+                    </button>
+
+                    <button id="whiteboardDownload" class="btn btn--primary btn--sm">
+                        Download PNG
+                    </button>
+                </div>
+
+                <div class="whiteboard-canvas-wrap">
+                    <canvas id="whiteboardCanvas" width="900" height="480"></canvas>
+                </div>
+
+                <p class="whiteboard-note">
+                    This whiteboard is saved locally per lesson. You can reopen the lesson later and continue from the
+                    same board.
+                </p>
+            </section>
+
         </section>
 
         <!-- ============== TEACHER DASHBOARD SCREEN ============== -->

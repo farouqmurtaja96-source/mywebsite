@@ -4,6 +4,7 @@ const LS_LESSON_PREFIX = "pal_arabic_lesson_";
 const LS_FONT_SIZE_KEY = "pal_arabic_font_size";
 const LS_CUSTOM_UNITS_KEY = "pal_arabic_custom_units";
 const LS_BACKUP_SETTINGS_KEY = "pal_arabic_backup_settings";
+const LS_WHITEBOARD_PREFIX = "pal_arabic_whiteboard_";
 
 const LESSON_ID_GREETING = "Beginner-Greetings-L1";
 const LESSON_ID_DAILY_ROUTINE = "Beginner-DailyRoutine-L1";
@@ -7649,6 +7650,118 @@ let customUnits = {
 };
 
 // ========================= HELPERS =========================
+// ========================= WHITEBOARD =========================
+const whiteboardState = {
+    isDrawing: false,
+    lastX: 0,
+    lastY: 0,
+    ctx: null,
+    color: "#111827",
+    size: 3,
+};
+
+function getWhiteboardKeyForCurrentLesson() {
+    return LS_WHITEBOARD_PREFIX + (appState.currentLessonId || "no_lesson");
+}
+
+function saveWhiteboardToLS() {
+    const canvas = document.getElementById("whiteboardCanvas");
+    if (!canvas) return;
+    try {
+        const dataUrl = canvas.toDataURL("image/png");
+        localStorage.setItem(getWhiteboardKeyForCurrentLesson(), dataUrl);
+    } catch {
+        // ignore
+    }
+}
+
+function loadWhiteboardFromLS() {
+    const canvas = document.getElementById("whiteboardCanvas");
+    if (!canvas) return;
+    const dataUrl = localStorage.getItem(getWhiteboardKeyForCurrentLesson());
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (!dataUrl) return;
+    const img = new Image();
+    img.onload = () => {
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    };
+    img.src = dataUrl;
+}
+
+function initWhiteboardCanvas() {
+    const canvas = document.getElementById("whiteboardCanvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    whiteboardState.ctx = ctx;
+
+    // إعدادات الرسم
+    ctx.lineJoin = "round";
+    ctx.lineCap = "round";
+
+    // تحميل أي رسم محفوظ
+    loadWhiteboardFromLS();
+
+    function getCanvasPos(evt) {
+        const rect = canvas.getBoundingClientRect();
+        let clientX, clientY;
+
+        if (evt.touches && evt.touches.length > 0) {
+            clientX = evt.touches[0].clientX;
+            clientY = evt.touches[0].clientY;
+        } else {
+            clientX = evt.clientX;
+            clientY = evt.clientY;
+        }
+
+        return {
+            x: ((clientX - rect.left) / rect.width) * canvas.width,
+            y: ((clientY - rect.top) / rect.height) * canvas.height,
+        };
+    }
+
+    function startDrawing(evt) {
+        evt.preventDefault();
+        whiteboardState.isDrawing = true;
+        const pos = getCanvasPos(evt);
+        whiteboardState.lastX = pos.x;
+        whiteboardState.lastY = pos.y;
+    }
+
+    function draw(evt) {
+        if (!whiteboardState.isDrawing) return;
+        evt.preventDefault();
+        const pos = getCanvasPos(evt);
+        ctx.strokeStyle = whiteboardState.color;
+        ctx.lineWidth = whiteboardState.size;
+
+        ctx.beginPath();
+        ctx.moveTo(whiteboardState.lastX, whiteboardState.lastY);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+
+        whiteboardState.lastX = pos.x;
+        whiteboardState.lastY = pos.y;
+    }
+
+    function stopDrawing(evt) {
+        if (!whiteboardState.isDrawing) return;
+        whiteboardState.isDrawing = false;
+        saveWhiteboardToLS();
+    }
+
+    // Mouse events
+    canvas.addEventListener("mousedown", startDrawing);
+    canvas.addEventListener("mousemove", draw);
+    canvas.addEventListener("mouseup", stopDrawing);
+    canvas.addEventListener("mouseleave", stopDrawing);
+
+    // Touch events
+    canvas.addEventListener("touchstart", startDrawing, { passive: false });
+    canvas.addEventListener("touchmove", draw, { passive: false });
+    canvas.addEventListener("touchend", stopDrawing);
+    canvas.addEventListener("touchcancel", stopDrawing);
+}
 
 // ========================= BACKUP SETTINGS =========================
 function loadBackupSettings() {
@@ -8007,7 +8120,6 @@ function goToLevels() {
     renderLevels();
 }
 function goToLessonView(opts = {}) {
-    document.body.classList.remove("home-only");
     const { teacherMode = null } = opts;
     if (!getCurrentStudent()) {
         goToStudents();
@@ -8022,7 +8134,14 @@ function goToLessonView(opts = {}) {
     updateLessonTopBar();
     updateProgressBar();
     setActiveTab(appState.currentTab || "overview");
+
+    // حاول يحمّل whiteboard حق هذا الدرس لو اللوحة مفتوحة
+    const whiteboardPanel = document.getElementById("whiteboardPanel");
+    if (whiteboardPanel && !whiteboardPanel.classList.contains("hidden")) {
+        initWhiteboardCanvas();
+    }
 }
+
 function buildLessonExportHtml(lesson, options) {
     const {
         includeVocab,
@@ -10133,6 +10252,68 @@ document.addEventListener("DOMContentLoaded", () => {
         $("#studentLevel").value = "Beginner";
         renderStudents();
     });
+    // ================= WHITEBOARD UI =================
+    const whiteboardPanel = document.getElementById("whiteboardPanel");
+    const btnToggleWhiteboard = document.getElementById("btnToggleWhiteboard");
+    const wbColorInput = document.getElementById("whiteboardColor");
+    const wbSizeInput = document.getElementById("whiteboardSize");
+    const wbSizeVal = document.getElementById("whiteboardSizeVal");
+    const wbClearBtn = document.getElementById("whiteboardClear");
+    const wbDownloadBtn = document.getElementById("whiteboardDownload");
+
+    if (btnToggleWhiteboard && whiteboardPanel) {
+        btnToggleWhiteboard.addEventListener("click", () => {
+            const isHidden = whiteboardPanel.classList.contains("hidden");
+            if (isHidden) {
+                whiteboardPanel.classList.remove("hidden");
+                // لما أفتح اللوحة، أهيّئ الكانفاس وأحمّل الرسمة
+                initWhiteboardCanvas();
+            } else {
+                whiteboardPanel.classList.add("hidden");
+            }
+        });
+    }
+
+    if (wbColorInput) {
+        wbColorInput.addEventListener("input", () => {
+            whiteboardState.color = wbColorInput.value;
+        });
+    }
+
+    if (wbSizeInput && wbSizeVal) {
+        wbSizeInput.addEventListener("input", () => {
+            const v = Number(wbSizeInput.value) || 3;
+            whiteboardState.size = v;
+            wbSizeVal.textContent = v + "px";
+        });
+        // قيمة ابتدائية
+        whiteboardState.size = Number(wbSizeInput.value) || 3;
+        wbSizeVal.textContent = whiteboardState.size + "px";
+    }
+
+    if (wbClearBtn) {
+        wbClearBtn.addEventListener("click", () => {
+            const canvas = document.getElementById("whiteboardCanvas");
+            if (!canvas || !whiteboardState.ctx) return;
+            if (!confirm("Clear this whiteboard for the current lesson?")) return;
+            whiteboardState.ctx.clearRect(0, 0, canvas.width, canvas.height);
+            saveWhiteboardToLS();
+        });
+    }
+
+    if (wbDownloadBtn) {
+        wbDownloadBtn.addEventListener("click", () => {
+            const canvas = document.getElementById("whiteboardCanvas");
+            if (!canvas) return;
+            const link = document.createElement("a");
+            const lesson = lessons[appState.currentLessonId];
+            const title = lesson ? lesson.meta.lessonTitle || "lesson" : "lesson";
+            link.download = `whiteboard_${title.replace(/\s+/g, "_")}.png`;
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+        });
+    }
+
     const btnExportLesson = document.getElementById("btnExportLessonPdf");
     if (btnExportLesson) {
         btnExportLesson.addEventListener("click", () => {

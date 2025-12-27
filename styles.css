@@ -673,6 +673,80 @@ select:focus {
     transform: translateX(14px);
 }
 
+/*whiteboard*/
+
+.hidden {
+    display: none !important;
+}
+
+.whiteboard-panel {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-subtle);
+}
+
+.whiteboard-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.whiteboard-header h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.whiteboard-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.whiteboard-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.whiteboard-toolbar label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.whiteboard-canvas-wrap {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+}
+
+#whiteboardCanvas {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    background: #ffffff;
+    cursor: crosshair;
+}
+
+.whiteboard-note {
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* خلي الخط العربي واضح لو كتبت عربي */
+.whiteboard-panel {
+    direction: ltr;
+    /* الرسم نفسه مش محتاج RTL */
+}
+
 /* Progress */
 .lesson-secondary-bar {
     margin-top: 8px;
