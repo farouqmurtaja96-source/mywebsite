@@ -67,6 +67,7 @@ const defaultLessons = {
                     id: "marhaba",
                     ar: "مَرْحَبَا",
                     en: "Hi / Hello",
+                    enArabeezy: "marhaba",
                     hint:
                         "Very common, friendly greeting. You can use it any time of day with friends, classmates, or even teachers in a relaxed setting. Works for one person or a group (add يا جَمَاعَة).",
                     exampleAr: "مَرْحَبَا يَا جَمَاعَة، أَهْلًا فِيكُم فِي الدَّرْس.",
@@ -76,6 +77,7 @@ const defaultLessons = {
                     id: "ahlan",
                     ar: "أَهْلًا",
                     en: "Hi / Hey",
+                    enArabeezy: "ahlan",
                     hint:
                         "Short, warm reply to مَرْحَبَا or to call someone’s attention. Often used with a name: أَهْلًا يَا لِين.",
                     exampleAr: "مَرْحَبَا لِين. ـ أَهْلًا أُسْتَاذ.",
@@ -85,6 +87,7 @@ const defaultLessons = {
                     id: "ahlan_wa_sahlan",
                     ar: "أَهْلًا وَسَهْلًا",
                     en: "Welcome",
+                    enArabeezy: "ahlan_wa_sahlan",
                     hint:
                         "Very warm welcome for guests or new students. You can combine with فِيك / فِيكِي / فِيكُم to say ‘welcome to you’.",
                     exampleAr: "أَهْلًا وَسَهْلًا فِيكُم فِي كُورْس اللُّغَة الْعَرَبِيَّة.",
@@ -94,6 +97,7 @@ const defaultLessons = {
                     id: "salam",
                     ar: "السَّلَامُ عَلَيْكُمْ",
                     en: "Peace be upon you",
+                    enArabeezy: "assalamu_3alaykum",
                     hint:
                         "More formal / religious greeting. Very common in Muslim contexts, in mosques, families, and respectful situations. Can be to one person or many.",
                     exampleAr: "السَّلَامُ عَلَيْكُمْ يَا شَبَاب.",
@@ -103,6 +107,7 @@ const defaultLessons = {
                     id: "salam_reply",
                     ar: "وَعَلَيْكُم السَّلَام",
                     en: "And peace be upon you",
+                    enArabeezy: "wa_3alaykum_assalam",
                     hint:
                         "The standard reply to السَّلَامُ عَلَيْكُمْ. You must use it to answer that greeting politely.",
                     exampleAr: "السَّلَامُ عَلَيْكُمْ. ـ وَعَلَيْكُم السَّلَام.",
@@ -112,6 +117,7 @@ const defaultLessons = {
                     id: "sabah_el_kheir",
                     ar: "صَبَاح الْخِير",
                     en: "Good morning",
+                    enArabeezy: "sabah_el_kheir",
                     hint:
                         "Used in the morning. Typical reply is صَبَاح النُّور. Often used with teachers, coworkers, or in class.",
                     exampleAr: "صَبَاح الْخِير يَا أُسْتَاذ.",
@@ -121,6 +127,7 @@ const defaultLessons = {
                     id: "sabah_el_noor",
                     ar: "صَبَاح النُّور",
                     en: "Good morning (reply)",
+                    enArabeezy: "sabah_el_noor",
                     hint:
                         "Standard reply to صَبَاح الْخِير. Literally ‘morning of light’.",
                     exampleAr: "صَبَاح الْخِير. ـ صَبَاح النُّور.",
@@ -130,6 +137,7 @@ const defaultLessons = {
                     id: "masa_el_kheir",
                     ar: "مَسَا الْخِير",
                     en: "Good evening",
+                    enArabeezy: "masa_el_kheir",
                     hint:
                         "Used in the evening or at night. Typical reply: مَسَا النُّور. Can be formal or casual.",
                     exampleAr: "مَسَا الْخِير يَا جِيرَان.",
@@ -139,6 +147,7 @@ const defaultLessons = {
                     id: "masa_el_noor",
                     ar: "مَسَا النُّور",
                     en: "Good evening (reply)",
+                    enArabeezy: "masa_el_noor",
                     hint:
                         "Standard reply to مَسَا الْخِير.",
                     exampleAr: "مَسَا الْخِير. ـ مَسَا النُّور.",
@@ -150,6 +159,7 @@ const defaultLessons = {
                     id: "kif_halak",
                     ar: "كِيف حَالَك؟",
                     en: "How are you?",
+                    enArabeezy: "keef_halak / keef_halik",
                     hint:
                         "Base question ‘How are you?’. Forms: masc كِيف حَالَك؟ (kīf ḥalak), fem كِيف حَالِك؟ (kīf ḥalik), plural كِيف حَالْكُم؟ (kīf ḥalkum). Use after greeting to open small talk.",
                     exampleAr: "مَرْحَبَا، كِيف حَالَك الْيَوْم؟",
@@ -159,6 +169,7 @@ const defaultLessons = {
                     id: "mnee7",
                     ar: "مْنِيح",
                     en: "good / fine",
+                    enArabeezy: "mnee7 / mnee7a",
                     hint:
                         "Very common positive answer. Forms: masc مْنِيح, fem مْنِيحَة, plural مْنَاح. Often followed by شُكْرًا.",
                     exampleAr: "أَنَا مْنِيحَة، شُكْرًا. وَإِنْتَ كِيف حَالَك؟",
@@ -168,6 +179,7 @@ const defaultLessons = {
                     id: "maashi",
                     ar: "مَاشِي",
                     en: "okay / going along",
+                    enArabeezy: "maashi",
                     hint:
                         "Neutral answer, literally ‘going’. Means ‘I’m okay / so-so’. Used when things are not perfect but fine.",
                     exampleAr: "الصِّدْقِي مَاشِي الْحَال، مَوْ مُمْتَاز بَسّ مِش سَيِّئ.",
@@ -177,6 +189,7 @@ const defaultLessons = {
                     id: "ta3ban",
                     ar: "تَعْبَان",
                     en: "tired / exhausted",
+                    enArabeezy: "ta3ban / ta3baneh",
                     hint:
                         "Feeling word. Forms: masc تَعْبَان, fem تَعْبَانَة. Can be physical or mental tiredness.",
                     exampleAr: "الْيَوْم أَنَا تَعْبَان شْوَيّ مِن الدِّرَاسَة.",
@@ -186,6 +199,7 @@ const defaultLessons = {
                     id: "mabsut",
                     ar: "مَبْسُوط",
                     en: "happy / pleased",
+                    enArabeezy: "mabsut / mabsuta / mabsuTeen",
                     hint:
                         "Positive feeling. Forms: masc مَبْسُوط, fem مَبْسُوطَة, plural مَبْسُوطِين.",
                     exampleAr: "إِحْنَا مَبْسُوطِين إِنَّك مَعْنَا فِي الْكُورْس.",
@@ -197,6 +211,7 @@ const defaultLessons = {
                     id: "shu_ismak",
                     ar: "شُو اِسْمَك؟",
                     en: "What’s your name?",
+                    enArabeezy: "shu_ismak / shu_ismik",
                     hint:
                         "Basic identity question. Forms: masc شُو اِسْمَك؟ (shu ismak), fem شُو اِسْمِك؟ (shu ismik). Use it right after greeting.",
                     exampleAr: "مَرْحَبَا، شُو اِسْمَك إِنْتَ؟",
@@ -206,6 +221,7 @@ const defaultLessons = {
                     id: "ana_ismi",
                     ar: "أَنَا اِسْمِي...",
                     en: "My name is…",
+                    enArabeezy: "ana_ismi",
                     hint:
                         "Standard way to introduce your name. You can add your country or job after.",
                     exampleAr: "أَنَا اِسْمِي رُوبَا، أَنَا طَالْبَة عَرَبِي.",
@@ -215,6 +231,7 @@ const defaultLessons = {
                     id: "min_wen",
                     ar: "مِنْ وِين؟",
                     en: "Where are you from?",
+                    enArabeezy: "min_wayn / min_wen",
                     hint:
                         "Origin question. With pronoun: مِنْ وِين إِنْتَ؟ / مِنْ وِين إِنْتِ؟. Used for country or city.",
                     exampleAr: "مِنْ وِين إِنْتِ أَصْلًا؟",
@@ -224,6 +241,7 @@ const defaultLessons = {
                     id: "ana_min",
                     ar: "أَنَا مِنْ...",
                     en: "I am from…",
+                    enArabeezy: "ana_min",
                     hint:
                         "Use with country or city: أَنَا مِنْ غَزَّة، أَنَا مِنْ أَلْمَانْيَا….",
                     exampleAr: "أَنَا مِنْ هُولَنْدَا، بَسّ بِحِبّ فِلَسْطِين.",
@@ -233,6 +251,7 @@ const defaultLessons = {
                     id: "wen_saken",
                     ar: "وِين سَاكِن؟",
                     en: "Where do you live?",
+                    enArabeezy: "weyn_saken / weyn_sakneh",
                     hint:
                         "Talking about where you live now. Forms: masc وِين سَاكِن؟, fem وِين سَاكْنَة؟, plural وِين سَاكْنِين؟.",
                     exampleAr: "هَلَّقْ إِنْتِ وِين سَاكْنَة؟",
@@ -242,6 +261,7 @@ const defaultLessons = {
                     id: "ana_saken_fi",
                     ar: "أَنَا سَاكِن فِي...",
                     en: "I live in…",
+                    enArabeezy: "ana_saken_fi / ana_sakneh_fi",
                     hint:
                         "Fem: أَنَا سَاكْنَة فِي…. Often combined with origin: أَنَا مِنْ… بَسّ أَنَا سَاكْن فِي….",
                     exampleAr: "أَنَا مِنْ كَنَدَا، بَسّ أَنَا سَاكْنَة فِي رَام اللّٰه.",
@@ -253,6 +273,7 @@ const defaultLessons = {
                     id: "talib",
                     ar: "طَالِب / طَالْبَة",
                     en: "student",
+                    enArabeezy: "taleb / talbeh",
                     hint:
                         "Masc طَالِب, fem طَالْبَة. Used for school or university students.",
                     exampleAr: "أَنَا طَالْبَة عَرَبِي فِي الْجَامْعَة.",
@@ -262,6 +283,7 @@ const defaultLessons = {
                     id: "ustaz",
                     ar: "أُسْتَاذ / أُسْتَاذَة",
                     en: "teacher",
+                    enArabeezy: "ostaz / ostaze",
                     hint:
                         "Masc أُسْتَاذ, fem أُسْتَاذَة. You can call your teacher ‘أُسْتَاذ + name’.",
                     exampleAr: "مَرْحَبَا أُسْتَاذ، كِيف حَالَك الْيَوْم؟",
@@ -271,6 +293,7 @@ const defaultLessons = {
                     id: "dars",
                     ar: "دَرْس",
                     en: "lesson / class",
+                    enArabeezy: "dars",
                     hint:
                         "Used for a single lesson: دَرْس الْيَوْم = today’s lesson.",
                     exampleAr: "هَادَا أَوَّل دَرْس إِلْنَا فِي اللُّغَة الْعَرَبِيَّة.",
@@ -280,6 +303,7 @@ const defaultLessons = {
                     id: "lugha_arabi",
                     ar: "اللُّغَة الْعَرَبِيَّة",
                     en: "Arabic (language)",
+                    enArabeezy: "ellugha_el3arabeyyeh",
                     hint:
                         "You can also say: عَرَبِي بس. Example: بَدْرُس عَرَبِي.",
                     exampleAr: "أَنَا بَدْرُس اللُّغَة الْعَرَبِيَّة أُونْلَايْن.",
@@ -291,6 +315,7 @@ const defaultLessons = {
                     id: "shukran",
                     ar: "شُكْرًا",
                     en: "thank you",
+                    enArabeezy: "shukran",
                     hint:
                         "Very common thanks. Stronger: شُكْرًا كْتِير = thank you very much.",
                     exampleAr: "شُكْرًا كْتِير عَلَى الدَّرْس الْيَوْم.",
@@ -300,6 +325,7 @@ const defaultLessons = {
                     id: "afwan",
                     ar: "عَفْوًا",
                     en: "you’re welcome",
+                    enArabeezy: "3afwan",
                     hint:
                         "Standard reply to شُكْرًا. Can also lightly mean ‘excuse me’.",
                     exampleAr: "شُكْرًا أُسْتَاذ. ـ عَفْوًا، تِشَرَّفْنَا.",
@@ -309,6 +335,7 @@ const defaultLessons = {
                     id: "law_samaHt",
                     ar: "لَوْ سَمَحْت",
                     en: "please / excuse me",
+                    enArabeezy: "law_sama7t / law_sama7ti",
                     hint:
                         "Polite way to ask for something: ‘please’. Fem لَوْ سَمَحْتِي, plural لَوْ سَمَحْتُوا.",
                     exampleAr: "لَوْ سَمَحْت، مُمْكِن تِحْكِي بُطِّيء شْوَيّ؟",
@@ -318,6 +345,7 @@ const defaultLessons = {
                     id: "ana_mesh_fahem",
                     ar: "أَنَا مِش فَاهِم",
                     en: "I don’t understand",
+                    enArabeezy: "ana_mesh_fahem / ana_mesh_fahmeh",
                     hint:
                         "Masc أَنَا مِش فَاهِم, fem أَنَا مِش فَاهْمَة. Very useful in class and real life!",
                     exampleAr: "أَنَا مِش فَاهْمَة الْكَلِمَة، مُمْكِن تِشْرَح كَمَان مَرَّة؟",
@@ -327,6 +355,7 @@ const defaultLessons = {
                     id: "ma3_salaameh",
                     ar: "مَع السَّلَامَة",
                     en: "goodbye",
+                    enArabeezy: "ma3_salaameh",
                     hint:
                         "Polite goodbye. Often used at the end of a call, visit, or lesson.",
                     exampleAr: "مَع السَّلَامَة، بَشُوفْك بُكْرَا.",
@@ -336,6 +365,7 @@ const defaultLessons = {
                     id: "alla_ma3ak",
                     ar: "الله مَعَك",
                     en: "God be with you",
+                    enArabeezy: "allah_ma3ak / allah_ma3ek",
                     hint:
                         "Common closing phrase. Fem: الله مَعِك, plural: الله مَعْكُم.",
                     exampleAr: "مَع السَّلَامَة، الله مَعِك.",
@@ -345,6 +375,7 @@ const defaultLessons = {
                     id: "yalla",
                     ar: "يَلَّا",
                     en: "come on / let’s go",
+                    enArabeezy: "yalla",
                     hint:
                         "Very frequent word to start or finish something: ‘okay, let’s…’.",
                     exampleAr: "يَلَّا، نِبْدَا الدَّرْس الْأَوَّل.",
@@ -352,26 +383,6 @@ const defaultLessons = {
                 },
             ],
 
-            extra: [
-                {
-                    id: "ahlan_fiik",
-                    ar: "أَهْلًا فِيك",
-                    en: "welcome (to you)",
-                    hint:
-                        "Fem: أَهْلًا فِيكِي, plural: أَهْلًا فِيكُم. Reply when someone says ‘thank you’ for a welcome or invitation.",
-                    exampleAr: "مَرْحَبَا فِي غَزَّة. ـ أَهْلًا فِيك فِي غَزَّة!",
-                    exampleEn: "Welcome to Gaza. — Welcome to you in Gaza!",
-                },
-                {
-                    id: "enbseT",
-                    ar: "اِنْبِسِط",
-                    en: "enjoy / have fun",
-                    hint:
-                        "Fem: اِنْبِسِطِي, plural: اِنْبِسِطُوا. Often used at the end of a lesson or meeting.",
-                    exampleAr: "مَع السَّلَامَة، اِنْبِسِطُوا بِيَوْمْكُم الْيَوْم.",
-                    exampleEn: "Goodbye, enjoy your day today.",
-                },
-            ],
         },
 
         // ====================================
@@ -677,11 +688,6 @@ const defaultLessons = {
         },
     },
 
-
-    // DEFAULT LESSON DATA DEFINITION ENDS HERE
-    // ===============================
-    // BEGINNER – UNIT 2: DAILY ROUTINE – LESSON 1
-    // ===============================
     [LESSON_ID_DAILY_ROUTINE]: {
         meta: {
             level: "Beginner",
@@ -705,427 +711,471 @@ const defaultLessons = {
         // ====================================
         // VOCABULARY
         // ====================================
-        vocabulary: {
-            core: [
-                // ===== TIME OF DAY =====
+        "vocabulary": {
+            "core": [
                 {
-                    id: "es_sobeh",
-                    ar: "الصُّبِح",
-                    en: "the morning",
-                    hint:
-                        "Used for early part of the day. You can say: بَصْحَى الصُّبِح = I wake up in the morning.",
-                    exampleAr: "كُلّ يَوْم الصُّبِح بَصْحَى السَّاعَة سَبْعَة.",
-                    exampleEn: "Every day in the morning I wake up at seven o’clock.",
+                    "id": "baS7a",
+                    "ar": "بَصْحَى",
+                    "en": "I wake up",
+                    "enArabeezy": "baS7a",
+                    "hint": "Simple present with b- prefix for a habit.",
+                    "exampleAr": "كُل يَوْم بَصْحَى السَّاعَة سِتِّة.",
+                    "exampleEn": "Every day I wake up at six o’clock."
                 },
                 {
-                    id: "ba3d_eDDohr",
-                    ar: "بَعْد الضُّهُر",
-                    en: "afternoon",
-                    hint:
-                        "Literally ‘after noon’. Common for early afternoon time.",
-                    exampleAr: "بَعْد الضُّهُر بِرُوح عَلَى الْجَامْعَة.",
-                    exampleEn: "In the afternoon I go to university.",
+                    "id": "batghassal",
+                    "ar": "بَغَسَّل",
+                    "en": "I wash (my face / hands)",
+                    "enArabeezy": "baghassal",
+                    "hint": "Daily action after waking up.",
+                    "exampleAr": "أَوَّل إِشِي بَغَسَّل وَجْهِي.",
+                    "exampleEn": "The first thing I do is wash my face."
                 },
                 {
-                    id: "bil_3asheh",
-                    ar: "بِالْعَشِي",
-                    en: "evening",
-                    hint:
-                        "Spoken word for evening time. Similar to ‘at night’ but not too late.",
-                    exampleAr: "بِالْعَشِي بَقْعُد مَع الْعِيلَة.",
-                    exampleEn: "In the evening I sit with my family.",
+                    "id": "bat7ammam",
+                    "ar": "بَتْحَمَّم",
+                    "en": "I take a shower",
+                    "enArabeezy": "bat7ammam",
+                    "hint": "Common verb for showering.",
+                    "exampleAr": "بَتْحَمَّم قَبِل مَا أَطْلَع.",
+                    "exampleEn": "I shower before I go out."
                 },
                 {
-                    id: "bil_leil",
-                    ar: "بِاللِّيل",
-                    en: "at night",
-                    hint:
-                        "Night time, usually later than الْعَشِي. Used with verbs like بَنَام.",
-                    exampleAr: "بِاللِّيل بَنَام مِتْأَخِّر شْوَيّ.",
-                    exampleEn: "At night I sleep a bit late.",
+                    "id": "bafTar",
+                    "ar": "بَفْطَر",
+                    "en": "I have breakfast",
+                    "enArabeezy": "bafTar",
+                    "hint": "",
+                    "exampleAr": "بَعْد مَا بَصْحَى بَفْطَر.",
+                    "exampleEn": "After I wake up, I have breakfast."
                 },
                 {
-                    id: "alyoom",
-                    ar: "الْيَوْم",
-                    en: "today",
-                    hint:
-                        "Basic time word. Often used with routine to contrast with usual: الْيَوْم مَو زَيّ كُلّ يَوْم.",
-                    exampleAr: "الْيَوْم عِنْدِي دَرْس عَرَبِي.",
-                    exampleEn: "Today I have an Arabic lesson.",
+                    "id": "baakul",
+                    "ar": "بَاكُل",
+                    "en": "I eat",
+                    "enArabeezy": "baakul",
+                    "hint": "General verb for eating (lunch, dinner, etc.).",
+                    "exampleAr": "بَاكُل الْغَدَا مَع أَهْلِي.",
+                    "exampleEn": "I eat lunch with my family."
                 },
                 {
-                    id: "kull_yoom",
-                    ar: "كُلّ يَوْم",
-                    en: "every day",
-                    hint:
-                        "Adverb of frequency. Put it at the beginning or end of the sentence.",
-                    exampleAr: "كُلّ يَوْم بَشْرَب قَهْوَة الصُّبِح.",
-                    exampleEn: "Every day I drink coffee in the morning.",
+                    "id": "bashrab_ahwe",
+                    "ar": "بَشْرَب قَهْوَة",
+                    "en": "I drink coffee",
+                    "enArabeezy": "bashrab_ahwe",
+                    "hint": "Can change قَهْوَة to شَاي.",
+                    "exampleAr": "كُل صَبَاح بَشْرَب قَهْوَة.",
+                    "exampleEn": "Every morning I drink coffee."
                 },
                 {
-                    id: "3aadatan",
-                    ar: "عَادَةً",
-                    en: "usually",
-                    hint:
-                        "Nice adverb to make sentences more natural. Often comes at the beginning: عَادَةً بِسْتَيْقِظ مَبَكِّر.",
-                    exampleAr: "عَادَةً بَصْحَى بَكِّير، بَسّ الْيَوْم تَأَخَّرِت.",
-                    exampleEn: "Usually I wake up early, but today I was late.",
+                    "id": "baruu7_alshoghl",
+                    "ar": "بَرُوح عَلَى الشُّغُل",
+                    "en": "I go to work",
+                    "enArabeezy": "baroo7_3al_shoghol",
+                    "hint": "Use with شُغُل (work).",
+                    "exampleAr": "بَرُوح عَلَى الشُّغُل السَّاعَة تَمَانْيَة.",
+                    "exampleEn": "I go to work at eight o’clock."
                 },
                 {
-                    id: "sa3a",
-                    ar: "السَّاعَة",
-                    en: "o’clock / the hour",
-                    hint:
-                        "To say the time, you say: السَّاعَة سَبْعَة = seven o’clock; السَّاعَة تَمْنْيَة = eight o’clock.",
-                    exampleAr: "دَرْس الْعَرَبِي بِيِبْدَا السَّاعَة تِسْعَة.",
-                    exampleEn: "The Arabic lesson starts at nine o’clock.",
+                    "id": "baruu7_al_dars",
+                    "ar": "بَرُوح عَلَى الدَّرْس",
+                    "en": "I go to class / lesson",
+                    "enArabeezy": "baroo7_3al_dars",
+                    "hint": "Use with درس = lesson/class.",
+                    "exampleAr": "بَرُوح عَلَى الدَّرْس بَعْد الضُّهُر.",
+                    "exampleEn": "I go to class in the afternoon."
                 },
                 {
-                    id: "meta",
-                    ar: "إِمْتَى؟",
-                    en: "when?",
-                    hint:
-                        "Question word for time. Often at the beginning: إِمْتَى بْتَصْحَى؟",
-                    exampleAr: "إِمْتَى بْتِرْجَع عَلَى الْبَيْت؟",
-                    exampleEn: "When do you come back home?",
-                },
-
-                // ===== CORE ROUTINE VERBS =====
-                {
-                    id: "bsa7a",
-                    ar: "بَصْحَى",
-                    en: "I wake up",
-                    hint:
-                        "Present tense with b- prefix. Root: صَحَى = to wake up. For ‘you (m) wake up’: بْتِصْحَى، for ‘she’: بْتِصْحَى (context).",
-                    exampleAr: "عَادَةً بَصْحَى الصُّبِح السَّاعَة سِتَّة وَنُصّ.",
-                    exampleEn: "Usually I wake up in the morning at six thirty.",
+                    "id": "badros",
+                    "ar": "بَدْرُس",
+                    "en": "I study",
+                    "enArabeezy": "badros",
+                    "hint": "Habit: study Arabic, English, etc.",
+                    "exampleAr": "بَدْرُس عَرَبِي كُل لَيْلَة.",
+                    "exampleEn": "I study Arabic every night."
                 },
                 {
-                    id: "bgasil_wajhi",
-                    ar: "بَغْسِل وَجْهِي",
-                    en: "I wash my face",
-                    hint:
-                        "Literally: ‘I wash my face’. Very common part of morning routine.",
-                    exampleAr: "أَوَّل مَا بَصْحَى بَغْسِل وَجْهِي.",
-                    exampleEn: "The first thing I do when I wake up is wash my face.",
+                    "id": "bashtaghel",
+                    "ar": "بَشْتِغِل",
+                    "en": "I work",
+                    "enArabeezy": "bashteghil",
+                    "hint": "General verb for working.",
+                    "exampleAr": "بَشْتِغِل فِي مَكْتَب.",
+                    "exampleEn": "I work in an office."
                 },
                 {
-                    id: "bat7ammam",
-                    ar: "بَتْحَمَّم",
-                    en: "I take a shower",
-                    hint:
-                        "From تَحَمَّم = to shower. can be morning or evening.",
-                    exampleAr: "بَتْحَمَّم بَعْد مَا بَرْجَع مِن الشُّغُل.",
-                    exampleEn: "I take a shower after I come back from work.",
+                    "id": "barja3",
+                    "ar": "بَرْجَع",
+                    "en": "I come back / I return",
+                    "enArabeezy": "barja3",
+                    "hint": "Used for returning home/work/etc.",
+                    "exampleAr": "بَرْجَع عَلَى الْبَيْت السَّاعَة خَمْسَة.",
+                    "exampleEn": "I come back home at five."
                 },
                 {
-                    id: "bfTir",
-                    ar: "بِفْطَر",
-                    en: "I have breakfast",
-                    hint:
-                        "From فُطُور = breakfast. For lunch: غَدَا، for dinner: عَشَا.",
-                    exampleAr: "بِفْطَر خُبِز وَجُبْنَة وَشَاي الصُّبِح.",
-                    exampleEn: "I have bread, cheese, and tea for breakfast in the morning.",
+                    "id": "bartaa7",
+                    "ar": "بَرْتَاح",
+                    "en": "I rest / I relax",
+                    "enArabeezy": "barta7",
+                    "hint": "Rest after work or study.",
+                    "exampleAr": "بَرْتَاح شَوَيّ بَعْد الشُّغُل.",
+                    "exampleEn": "I rest a bit after work."
                 },
                 {
-                    id: "brooH",
-                    ar: "بَرُوح",
-                    en: "I go",
-                    hint:
-                        "High-frequency verb. You add the place after it: بَرُوح عَلَى الشُّغُل / عَلَى الْجَامْعَة.",
-                    exampleAr: "بَرُوح عَلَى الْجَامْعَة بَعْد الضُّهُر.",
-                    exampleEn: "I go to university in the afternoon.",
+                    "id": "batfarraj",
+                    "ar": "بَتْفَرَّج عَلَى...",
+                    "en": "I watch (TV, series, etc.)",
+                    "enArabeezy": "batfarraj_3ala",
+                    "hint": "Use with TV, series, movies.",
+                    "exampleAr": "بِالْمَسَا بَتْفَرَّج عَلَى مُسَلْسَل.",
+                    "exampleEn": "In the evening I watch a series."
                 },
                 {
-                    id: "brja3",
-                    ar: "بَرْجَع",
-                    en: "I come back / I return",
-                    hint:
-                        "Use it with مِن and عَلَى: بَرْجَع مِن الشُّغُل عَلَى الْبَيْت.",
-                    exampleAr: "بَرْجَع عَلَى الْبَيْت السَّاعَة خَمْسَة.",
-                    exampleEn: "I come back home at five o’clock.",
+                    "id": "baqra",
+                    "ar": "بَقْرَا",
+                    "en": "I read",
+                    "enArabeezy": "baqra",
+                    "hint": "Books, articles, etc.",
+                    "exampleAr": "أَحْيَانًا بَقْرَا كْتَاب قَبِل النَّوْم.",
+                    "exampleEn": "Sometimes I read a book before sleeping."
                 },
                 {
-                    id: "bakol",
-                    ar: "بَاكُل",
-                    en: "I eat",
-                    hint:
-                        "From أَكَل = to eat. You can add the meal: بَاكُل غَدَا / عَشَا.",
-                    exampleAr: "بَاكُل الْغَدَا مَع أَهْلِي كُلّ يَوْم.",
-                    exampleEn: "I eat lunch with my family every day.",
+                    "id": "banaam",
+                    "ar": "بَنَام",
+                    "en": "I sleep",
+                    "enArabeezy": "banaam",
+                    "hint": "Daily routine, end of the day.",
+                    "exampleAr": "بَنَام مِتْأَخَّر فِي الْوِيكْإِنْد.",
+                    "exampleEn": "I sleep late on the weekend."
                 },
                 {
-                    id: "bashrab",
-                    ar: "بَشْرَب",
-                    en: "I drink",
-                    hint:
-                        "From شِرْب = drinking. High-frequency. بَشْرَب قَهْوَة / شَاي / مَيّ.",
-                    exampleAr: "بَشْرَب قَهْوَة وَأَنَا بَتْفَرَّج عَلَى الْخَبَر.",
-                    exampleEn: "I drink coffee while I watch the news.",
+                    "id": "banzel",
+                    "ar": "بَنْزِل",
+                    "en": "I go out / I leave (home)",
+                    "enArabeezy": "banzel",
+                    "hint": "Leave the house or go outside.",
+                    "exampleAr": "بَنْزِل مِن الْبَيْت السَّاعَة تَمَانْيَة إِلَّا رُبِع.",
+                    "exampleEn": "I leave the house at quarter to eight."
                 },
                 {
-                    id: "badros",
-                    ar: "بَدْرُس",
-                    en: "I study",
-                    hint:
-                        "You saw this verb before, now it’s central in routine. بَدْرُس عَرَبِي / هَنْدَسَة / طِبّ.",
-                    exampleAr: "بَدْرُس عَرَبِي سَاعَتَيْن كُلّ يَوْم.",
-                    exampleEn: "I study Arabic for two hours every day.",
+                    "id": "bajli",
+                    "ar": "بَجْلِي الصُّحُون",
+                    "en": "I wash the dishes",
+                    "enArabeezy": "bajli_esSu7oon",
+                    "hint": "Household chore.",
+                    "exampleAr": "بَعْد الْغَدَا بَجْلِي الصُّحُون.",
+                    "exampleEn": "After lunch I wash the dishes."
                 },
                 {
-                    id: "bashteghil",
-                    ar: "بَشْتِغِل",
-                    en: "I work",
-                    hint:
-                        "Common spoken verb for ‘work’. You can add place or job: بَشْتِغِل أُونْلَايْن / فِي مَكْتَب.",
-                    exampleAr: "بَشْتِغِل أُونْلَايْن بَعْد الضُّهُر.",
-                    exampleEn: "I work online in the afternoon.",
+                    "id": "banaddaf",
+                    "ar": "بَنَضَّف",
+                    "en": "I clean",
+                    "enArabeezy": "banaddaf",
+                    "hint": "Can be house, room, etc.",
+                    "exampleAr": "يَوْم الْجُمْعَة بَنَضَّف الْبَيْت.",
+                    "exampleEn": "On Friday I clean the house."
                 },
                 {
-                    id: "bal3ab",
-                    ar: "بَلْعَب",
-                    en: "I play",
-                    hint:
-                        "For sports or games. بَلْعَب كُرَة قَدَم / بَلْعَب بْلَيْ سْتَيْشِن.",
-                    exampleAr: "بَلْعَب رِيَاضَة مَرَّتَيْن بِالْأُسْبُوع.",
-                    exampleEn: "I do sports twice a week.",
+                    "id": "baSalli",
+                    "ar": "بَصَلِّي",
+                    "en": "I pray",
+                    "enArabeezy": "baSalli",
+                    "hint": "Daily prayers in the routine.",
+                    "exampleAr": "بَصَلِّي قَبِل مَا أَطْلَع.",
+                    "exampleEn": "I pray before I go out."
                 },
                 {
-                    id: "batfarraj",
-                    ar: "بَتْفَرَّج",
-                    en: "I watch",
-                    hint:
-                        "Literally ‘I watch / I look (at)’. Often with عَلَى: بَتْفَرَّج عَلَى أَفْلَام / مُسَلْسَلَات.",
-                    exampleAr: "بَتْفَرَّج عَلَى مُسَلْسَل فِلَسْطِينِي بِاللِّيل.",
-                    exampleEn: "I watch a Palestinian series at night.",
+                    "id": "fi_elsob7",
+                    "ar": "فِي الصُّبْح",
+                    "en": "In the morning",
+                    "enArabeezy": "fi_esSob7",
+                    "hint": "Time expression.",
+                    "exampleAr": "فِي الصُّبْح بَصْحَى وَبَفْطَر.",
+                    "exampleEn": "In the morning I wake up and have breakfast."
                 },
                 {
-                    id: "baqra",
-                    ar: "بَقْرَا",
-                    en: "I read",
-                    hint:
-                        "From قَرَأ = to read. يمكن كتاب، مَقَال، كُرْآن…",
-                    exampleAr: "بَقْرَا كِتَاب عَرَبِي نُصّ سَاعَة كُلّ يَوْم.",
-                    exampleEn: "I read an Arabic book for half an hour every day.",
+                    "id": "ba3d_elDohr",
+                    "ar": "بَعْد الضُّهُر",
+                    "en": "In the afternoon",
+                    "enArabeezy": "ba3d_eDDohr",
+                    "hint": "Time of day.",
+                    "exampleAr": "بَعْد الضُّهُر بَرُوح عَلَى الدَّرْس.",
+                    "exampleEn": "In the afternoon I go to class."
                 },
                 {
-                    id: "bnam",
-                    ar: "بَنَام",
-                    en: "I sleep",
-                    hint:
-                        "From نَام = sleep. You can add time: بَنَام بَدْرِي / مِتْأَخِّر.",
-                    exampleAr: "بَنَام مِتْأَخِّر لَمَّا عِنْدِي وَاجِب كْتِير.",
-                    exampleEn: "I sleep late when I have a lot of homework.",
-                },
-
-                // ===== KEY PLACES =====
-                {
-                    id: "bait",
-                    ar: "بَيْت",
-                    en: "house / home",
-                    hint:
-                        "بَيْت = house, but often used as ‘home’. الْبَيْت = the house.",
-                    exampleAr: "بِرْجَع عَلَى الْبَيْت بَعْد الضُّهُر.",
-                    exampleEn: "I come back home in the afternoon.",
+                    "id": "belmasa",
+                    "ar": "بِالْمَسَا",
+                    "en": "In the evening",
+                    "enArabeezy": "belmasa",
+                    "hint": "Evening time.",
+                    "exampleAr": "بِالْمَسَا بَرْتَاح وَبَتْفَرَّج عَلَى تِلِفِزْيُون.",
+                    "exampleEn": "In the evening I relax and watch TV."
                 },
                 {
-                    id: "madraseh",
-                    ar: "مَدْرَسَة",
-                    en: "school",
-                    hint:
-                        "For kids or high school. ‘my school’ = مَدْرَسْتِي.",
-                    exampleAr: "أَخُوي الصِّغِير بِرُوح عَلَى الْمَدْرَسَة الصُّبِح.",
-                    exampleEn: "My younger brother goes to school in the morning.",
+                    "id": "kull_yom",
+                    "ar": "كُل يَوْم",
+                    "en": "Every day",
+                    "enArabeezy": "kull_yom",
+                    "hint": "Frequency adverb.",
+                    "exampleAr": "كُل يَوْم بَصْحَى السَّاعَة سِتِّة.",
+                    "exampleEn": "Every day I wake up at six."
                 },
                 {
-                    id: "jam3a",
-                    ar: "جَامْعَة",
-                    en: "university",
-                    hint:
-                        "‘my university’ = جَامْعْتِي. Can be combined with an adjective: جَامْعَة كْبِيرَة.",
-                    exampleAr: "أَنَا بَرُوح عَلَى الْجَامْعَة بَعْد الضُّهُر.",
-                    exampleEn: "I go to university in the afternoon.",
+                    "id": "ahyanan",
+                    "ar": "أَحْيَانًا",
+                    "en": "Sometimes",
+                    "enArabeezy": "a7yanan",
+                    "hint": "Frequency adverb.",
+                    "exampleAr": "أَحْيَانًا بَقْرَا قَبِل مَا أَنَام.",
+                    "exampleEn": "Sometimes I read before I sleep."
                 },
                 {
-                    id: "shoghol",
-                    ar: "شُغُل",
-                    en: "work (job)",
-                    hint:
-                        "Can mean ‘work’ in general or ‘job’. بَرُوح عَلَى الشُّغُل / عِنْدِي شُغُل.",
-                    exampleAr: "بَرُوح عَلَى الشُّغُل كُلّ يَوْم مَا عَدَا الْجُمُعَة.",
-                    exampleEn: "I go to work every day except Friday.",
+                    "id": "ghaleban",
+                    "ar": "غَالِبًا",
+                    "en": "Usually",
+                    "enArabeezy": "ghaleban",
+                    "hint": "Similar to ‘most of the time’.",
+                    "exampleAr": "غَالِبًا بَشْرَب قَهْوَة بَعْد الْفْطُور.",
+                    "exampleEn": "Usually I drink coffee after breakfast."
                 },
+                {
+                    "id": "abl_ma",
+                    "ar": "قَبِل مَا...",
+                    "en": "Before (doing something)",
+                    "enArabeezy": "abl_ma",
+                    "hint": "Used before a verb.",
+                    "exampleAr": "قَبِل مَا بَنْزِل بَفْطَر.",
+                    "exampleEn": "Before I go out, I have breakfast."
+                },
+                {
+                    "id": "ba3d_ma",
+                    "ar": "بَعْد مَا...",
+                    "en": "After (doing something)",
+                    "enArabeezy": "ba3d_ma",
+                    "hint": "Used before a verb.",
+                    "exampleAr": "بَعْد مَا بَرْجَع بَرْتَاح شَوَيّ.",
+                    "exampleEn": "After I come back, I rest a bit."
+                },
+                {
+                    "id": "b3deen",
+                    "ar": "بَعْدِين / بَعْدَيْن",
+                    "en": "Then / after that",
+                    "enArabeezy": "ba3deen",
+                    "hint": "Used to link actions in a sequence.",
+                    "exampleAr": "بَصْحَى، بَتْغَسَّل، بَعْدَيْن بَفْطَر.",
+                    "exampleEn": "I wake up, wash, then have breakfast."
+                },
+                {
+                    "id": "bakir",
+                    "ar": "بَكِير",
+                    "en": "Early",
+                    "enArabeezy": "bakir",
+                    "hint": "Opposite: مِتْأَخَّر (late).",
+                    "exampleAr": "بَصْحَى بَكِير فِي أَيَّام الشُّغُل.",
+                    "exampleEn": "I wake up early on work days."
+                },
+                {
+                    "id": "mita2kher",
+                    "ar": "مِتْأَخَّر",
+                    "en": "Late",
+                    "enArabeezy": "mita2kher",
+                    "hint": "Sleeping late, arriving late.",
+                    "exampleAr": "بَنَام مِتْأَخَّر فِي الْوِيكْإِنْد.",
+                    "exampleEn": "I sleep late on the weekend."
+                },
+                {
+                    "id": "binam_badri",
+                    "ar": "بَنَام بَدْرِي",
+                    "en": "I sleep early",
+                    "enArabeezy": "banaam_badri",
+                    "hint": "Useful contrast with مِتْأَخَّر.",
+                    "exampleAr": "يَوْم الْإِمْتِحَان بَنَام بَدْرِي.",
+                    "exampleEn": "On exam day I sleep early."
+                }
             ],
-
-            extra: [
+            "extra": [
                 {
-                    id: "marra_marratein",
-                    ar: "مَرَّة / مَرَّتَيْن",
-                    en: "once / twice",
-                    hint:
-                        "Useful with routine: مَرَّة بِالْيَوْم، مَرَّتَيْن بِالْأُسْبُوع.",
-                    exampleAr: "بَلْعَب رِيَاضَة مَرَّتَيْن بِالْأُسْبُوع.",
-                    exampleEn: "I do sports twice a week.",
+                    "id": "btabbikh",
+                    "ar": "بَطَبِّخ",
+                    "en": "I cook",
+                    "enArabeezy": "batabbekh",
+                    "hint": "Home routine when cooking.",
+                    "exampleAr": "مَرَّة فِي الْأُسْبُوع بَطَبِّخ أَكْل فِلَسْطِينِي.",
+                    "exampleEn": "Once a week I cook Palestinian food."
                 },
                 {
-                    id: "ba3deen",
-                    ar: "بَعْدِين",
-                    en: "then / after that",
-                    hint:
-                        "Connects actions in a story: أَوَّل إِشِي… بَعْدِين…",
-                    exampleAr: "بَصْحَى، بِفْطَر، بَعْدِين بَرُوح عَلَى الشُّغُل.",
-                    exampleEn: "I wake up, have breakfast, then I go to work.",
+                    "id": "bansa2",
+                    "ar": "برتب الْغُرْفَة",
+                    "en": "I tidy the room",
+                    "enArabeezy": "bartattib_elghurfeh",
+                    "hint": "Organize / straighten the room.",
+                    "exampleAr": "قَبِل مَا أَطْلَع برتب الْغُرْفَة.",
+                    "exampleEn": "Before I go out, I tidy the room."
                 },
-            ],
+                {
+                    "id": "bistarih_shway",
+                    "ar": "بِسْتَرِيح شَوَيّ",
+                    "en": "I take a little rest",
+                    "enArabeezy": "bistariy7_shway",
+                    "hint": "Alternative to بَرْتَاح شَوَيّ.",
+                    "exampleAr": "بَعْد الشُّغُل بِسْتَرِيح شَوَيّ.",
+                    "exampleEn": "After work I take a little rest."
+                }
+            ]
         },
+
 
         // ====================================
         // DIALOGUE (multi-scene day in lives)
         // ====================================
         dialogue: {
-            lines: [
-                // Scene 1 – Morning routine (Roba)
+            "lines": [
                 {
-                    speaker: "Teacher",
-                    ar: "الْيَوْم بَدْنَا نِسْمَع عَنْ يَوْم كَامِل فِي حَيَاة كُلّ وَاحَد. رُوبَا، تْقَدْرِي تِبْلِشِي؟",
-                    en: "Today we want to hear about a full day in each person’s life. Roba, can you start?",
+                    "speaker": "Lynn",
+                    "ar": "صَبَاح الْخِير يَا كَرِيم.",
+                    "en": "Good morning, Karim."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "أَكِيد. عَادَةً بَصْحَى الصُّبِح السَّاعَة سَبْعَة إِلَّا رُبِعْ.",
-                    en: "Sure. Usually I wake up in the morning at a quarter to seven.",
+                    "speaker": "Karim",
+                    "ar": "صَبَاح النُّور يَا لِينْ، كِيفَك الْيَوْم؟",
+                    "en": "Good morning, Lynn, how are you today?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "أَوَّل إِشِي بَغْسِل وَجْهِي وَبَشْرَب مَيّ، بَعْدِين بِفْطَر مَع الْعِيلَة.",
-                    en: "First I wash my face and drink water, then I have breakfast with my family.",
+                    "speaker": "Lynn",
+                    "ar": "أَنَا مْنِيحَة، بَسّ شَوَيّ تَعْبَانَة.",
+                    "en": "I’m good, just a bit tired."
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "شُو بِتْفْطَرِي عَادَةً؟",
-                    en: "What do you usually have for breakfast?",
+                    "speaker": "Karim",
+                    "ar": "لِيش تَعْبَانَة؟ كَانَ عِنْدِك شُغُل كْتِير؟",
+                    "en": "Why are you tired? Did you have a lot of work?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "بِفْطَر خُبِز، لَبَن، وَشَاي، أَحْيَانًا قَهْوَة.",
-                    en: "I have bread, yogurt, and tea, sometimes coffee.",
-                },
-
-                // Scene 2 – Going to university / work
-                {
-                    speaker: "Teacher",
-                    ar: "وَبَعْد الْفُطُور، شُو بِتِسَوِّي؟",
-                    en: "And after breakfast, what do you do?",
+                    "speaker": "Lynn",
+                    "ar": "لَا، بَسّ بَنَام مِتْأَخَّر كْتِير هَالْأَيَّام.",
+                    "en": "No, but I sleep very late these days."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "بَعْد الضُّهُر بَرُوح عَلَى الْجَامْعَة، عِنْدِي مُحَاضَرَات.",
-                    en: "In the afternoon I go to university, I have lectures.",
+                    "speaker": "Karim",
+                    "ar": "أَنَا بِالْعَكْس، بَنَام بَدْرِي وَبَصْحَى بَكِير.",
+                    "en": "I’m the opposite, I sleep early and wake up early."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "أَحْيَانًا بَشْتِغِل أُونْلَايْن شْوَيّ قَبْل مَا أَرُوح.",
-                    en: "Sometimes I work online a bit before I go.",
+                    "speaker": "Lynn",
+                    "ar": "كُل يَوْم بَتصْحَى السَّاعَة كَم؟",
+                    "en": "Every day, what time do you wake up?"
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا مُخْتِلِف شْوَيّ. أَنَا بَصْحَى مِتْأَخِّر، السَّاعَة تَمْنْيَة أَو تِسْعَة.",
-                    en: "I’m a bit different. I wake up late, at eight or nine o’clock.",
+                    "speaker": "Karim",
+                    "ar": "بَصْحَى السَّاعَة سِتِّة، بَتْغَسَّل، بَعْدَيْن بَفْطَر وَبَشْرَب قَهْوَة.",
+                    "en": "I wake up at six, wash, then have breakfast and drink coffee."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "بَتْحَمَّم، بِفْطَر سْرِيع، وَبَرُوح عَلَى الشُّغُل.",
-                    en: "I take a shower, have a quick breakfast, and go to work.",
-                },
-
-                // Scene 3 – Afternoon & study time
-                {
-                    speaker: "Teacher",
-                    ar: "إِمْتَى بَدْرُسُوا عَرَبِي؟ الصُّبِح، بَعْد الضُّهُر، وَلَّا بِاللِّيل؟",
-                    en: "When do you study Arabic? In the morning, afternoon, or at night?",
+                    "speaker": "Lynn",
+                    "ar": "بَعْد مَا تِفْطَر شُو بِتْعْمِل؟",
+                    "en": "After you have breakfast, what do you do?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "أَنَا بَدْرُس عَرَبِي بَعْد الضُّهُر، قَبْل مَا أَرْوِح عَلَى الْجَامْعَة.",
-                    en: "I study Arabic in the afternoon, before I go to university.",
+                    "speaker": "Karim",
+                    "ar": "بَنْزِل مِن الْبَيْت السَّاعَة تَمَانْيَة إِلَّا رُبِع.",
+                    "en": "I leave the house at quarter to eight."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا بَدْرُس عَرَبِي بِاللِّيل بَعْد الشُّغُل، لَمَّا يَكُون الْبَيْت هَادِي.",
-                    en: "I study Arabic at night after work, when the house is quiet.",
+                    "speaker": "Karim",
+                    "ar": "بَرُوح عَلَى الشُّغُل بِالْبَاص.",
+                    "en": "I go to work by bus."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "أَنَا بَدْرُس عَرَبِي الصُّبِح بَكِّير، بَعْد مَا بَشْرَب قَهْوَة.",
-                    en: "I study Arabic early in the morning, after I drink coffee.",
-                },
-
-                // Scene 4 – Evening: rest & hobbies
-                {
-                    speaker: "Teacher",
-                    ar: "طَيِّب، بِالْعَشِي شُو بِتْسَوُّوا؟ تِلْفِزْيُون، رِيَاضَة، نَوْم؟",
-                    en: "Okay, what do you do in the evening? TV, sports, sleep?",
+                    "speaker": "Lynn",
+                    "ar": "أَنَا بَرُوح عَلَى الدَّرْس بَعْد الضُّهُر.",
+                    "en": "I go to class in the afternoon."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "بِالْعَشِي بَقْعُد مَع الْعِيلَة، بَاكُل عَشَا، بَعْدِين بَتْفَرَّج عَلَى مُسَلْسَل.",
-                    en: "In the evening I sit with my family, eat dinner, then watch a series.",
+                    "speaker": "Lynn",
+                    "ar": "فِي الصُّبْح بَدْرُس شَوَيّ فِي الْبَيْت.",
+                    "en": "In the morning, I study a bit at home."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا أَحْيَانًا بَلْعَب رِيَاضَة مَع أَصْحَابِي، أَحْيَانًا بَقْرَا كِتَاب.",
-                    en: "Sometimes I do sports with my friends, sometimes I read a book.",
+                    "speaker": "Karim",
+                    "ar": "كُل يَوْم بَدْرُسِي؟",
+                    "en": "Do you study every day?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "لَمَّا يَكُون عِنْدِي وَقْت، بَتْفَرَّج عَلَى فِيدْيُوهَات عَرَبِي عَلَى يُوتْيُوب.",
-                    en: "When I have time, I watch Arabic videos on YouTube.",
-                },
-
-                // Scene 5 – Bedtime
-                {
-                    speaker: "Teacher",
-                    ar: "إِمْتَى عَادَةً بَتْنَامُوا؟ السَّاعَة كَم؟",
-                    en: "When do you usually sleep? What time?",
+                    "speaker": "Lynn",
+                    "ar": "أَحْيَانًا بَدْرُس، أَحْيَانًا بَتْفَرَّج عَلَى مُسَلْسَل.",
+                    "en": "Sometimes I study, sometimes I watch a series."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "عَادَةً بَنَام السَّاعَة حْدَاش بَاللِّيل.",
-                    en: "Usually I sleep at eleven at night.",
+                    "speaker": "Karim",
+                    "ar": "بَعْد الشُّغُل أَنَا بَرْجَع عَلَى الْبَيْت السَّاعَة خَمْسَة.",
+                    "en": "After work I come back home at five."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا مِتْأَخِّر شْوَيّ، مُمْكِن السَّاعَة وَاحْدَة أَو اِثْنَيْن.",
-                    en: "I’m a bit late, maybe at one or two o’clock.",
+                    "speaker": "Karim",
+                    "ar": "بَرْتَاح شَوَيّ، بَعْدَيْن بتغدى مَع أَهْلِي.",
+                    "en": "I rest a bit, then eat lunch with my family."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "أَنَا بَحَاوِل أَنَام بَدْرِي، حَوَالِي السَّاعَة عَشَرَة.",
-                    en: "I try to sleep early, around ten o’clock.",
-                },
-
-                // Scene 6 – Wrap-up
-                {
-                    speaker: "Teacher",
-                    ar: "مُمْتَاز، هَلَّقْ كُلّ وَاحَد مِنَّكُم عِنْدُه قِصَّة يَوْم كَامِل بِاللَّهْجَة الْفِلَسْطِينِيَّة.",
-                    en: "Excellent, now each of you has a full day story in Palestinian Arabic.",
+                    "speaker": "Lynn",
+                    "ar": "أَنَا بتغدى بَعْد الضُّهُر بَرْضُه.",
+                    "en": "I also eat lunch in the afternoon."
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "لِلْوَاجِب، كْتُبُوا يَوْمكُمْ بِالتَّفْصِيل: مِن الصُّبِح لَحَدّ مَا تِنَامُوا.",
-                    en: "For homework, write your day in detail: from morning until you sleep.",
+                    "speaker": "Lynn",
+                    "ar": "بِالْمَسَا بَتْفَرَّج عَلَى فِيلِم أَوْ مُسَلْسَل.",
+                    "en": "In the evening I watch a movie or a series."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "شُكْرًا أُسْتَاذ، الْوَحْدَة كْتِير مُفِيدَة لِلْحَيَاة الْحَقِيقِيَّة.",
-                    en: "Thank you, teacher, this unit is very useful for real life.",
+                    "speaker": "Karim",
+                    "ar": "أَنَا أَحْيَانًا بَقْرَا كْتَاب قَبِل مَا أَنَام.",
+                    "en": "Sometimes I read a book before I sleep."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "مَع السَّلَامَة جَمِيعًا، يَلَّا، كُلّ وَاحَد عَلَى رُوتِينُه.",
-                    en: "Goodbye everyone, yalla, each one back to their routine.",
+                    "speaker": "Lynn",
+                    "ar": "بتلعب رِيَاضَة فِي نِهَايَة الْيَوْم؟",
+                    "en": "Do you exercise at the end of the day?"
                 },
-            ],
+                {
+                    "speaker": "Karim",
+                    "ar": "ثَلَاث مَرَّات فِي الْأُسْبُوع بتلعب رِيَاضَة بَعْد الشُّغُل.",
+                    "en": "Three times a week I exercise after work."
+                },
+                {
+                    "speaker": "Karim",
+                    "ar": "يَوْم الْجُمْعَة بَنَضَّف الْبَيْت برتب الْغُرْفَة.",
+                    "en": "On Friday I clean the house and tidy the room."
+                },
+                {
+                    "speaker": "Lynn",
+                    "ar": "مِثْلِي! يَوْم الْعُطْلَة بَنْضِّف وَبَجْلِي الصُّحُون.",
+                    "en": "Same as me! On the day off I clean and wash the dishes."
+                },
+                {
+                    "speaker": "Karim",
+                    "ar": "طَيِّب، هَلَّقْ رح اشْتِغِل شَوَيّ قَبِل مَا أَطْلَع.",
+                    "en": "Okay, now I’ll work a bit before I go out."
+                },
+                {
+                    "speaker": "Lynn",
+                    "ar": "حلو، بَتَمَنَّى لَك يَوْم مَوَفَّق.",
+                    "en": "Nice, I wish you a successful day."
+                },
+                {
+                    "speaker": "Karim",
+                    "ar": "شُكْرًا، إِنْبِسِطِي بِيَوْمِك كَمَان.",
+                    "en": "Thanks, enjoy your day too."
+                },
+                {
+                    "speaker": "Lynn",
+                    "ar": "مَع السَّلَامَة",
+                    "en": "Goodbye"
+                },
+                {
+                    "speaker": "Karim",
+                    "ar": "مَع السَّلَامَة!",
+                    "en": "Goodbye!"
+                }
+            ]
         },
 
         // ====================================
@@ -1264,9 +1314,9 @@ const defaultLessons = {
             ],
 
             rolePlays: [
-                "Role-play 1: Student A asks Student B about their morning. Use questions like: ‘When do you wake up?’, ‘What do you eat for breakfast?’, ‘When do you go to work or university?’. Student B answers using «بَصْحَى»، «بِفْطَر»، «بَرُوح». Then switch roles.",
+
                 "Role-play 2: Student describes a ‘perfect day’ in Palestine: wake up time, breakfast, going out, meeting friends, evening activities. Try to use time words (الصُّبِح، بَعْد الضُّهُر، بِالْعَشِي، بِاللِّيل) and at least five routine verbs.",
-                "Role-play 3: Two friends compare their routines: one ‘early bird’ and one ‘night owl’. Each one explains what time they wake up, study, exercise, watch something, and sleep. They react to each other with surprise or comments in Arabic.",
+
             ],
         },
 
@@ -1310,8 +1360,6 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
-    // ===============================
     // BEGINNER – UNIT 3: FOOD & DRINK – LESSON 1
     // ===============================
     [LESSON_ID_FOOD_DRINK]: {
@@ -1344,8 +1392,9 @@ const defaultLessons = {
                     id: "fuToor",
                     ar: "فُطُور",
                     en: "breakfast",
-                    hint:
-                        "فُطُور = breakfast. At home you can say: فُطُور الْبَيْت. Verb from same root: بِفْطَر = I have breakfast.",
+                    enArabeezy: "fuToor",
+                    hint: '',
+
                     exampleAr: "فُطُورِي عَادَةً بَسِيط: خُبِز، لَبَن، وَشَاي.",
                     exampleEn: "My breakfast is usually simple: bread, yogurt, and tea.",
                 },
@@ -1353,6 +1402,7 @@ const defaultLessons = {
                     id: "ghada",
                     ar: "غَدَا",
                     en: "lunch",
+                    enArabeezy: "ghada",
                     hint:
                         "Main meal in many Palestinian families. Verb: بِتْغَدَّى = I have lunch.",
                     exampleAr: "أَهَمّ أَكْلَة فِي الْبَيْت هِيَّ الْغَدَا.",
@@ -1361,7 +1411,8 @@ const defaultLessons = {
                 {
                     id: "3asha",
                     ar: "عَشَا",
-                    en: "dinner",
+                    en: "dinner / evening meal",
+                    enArabeezy: "3asha",
                     hint:
                         "Evening meal. Verb: بِتْعَشَّى = I have dinner. Sometimes dinner is light (like tea and cheese).",
                     exampleAr: "بِالْعَشِي بِنِتْعَشَّى مَع بَعْض قُدَّام التِّلْفِزْيُون.",
@@ -1373,8 +1424,9 @@ const defaultLessons = {
                     id: "khobez",
                     ar: "خُبِز",
                     en: "bread",
+                    enArabeezy: "khobez",
                     hint:
-                        "Very common. Singular as a mass: خُبِز. You can also hear: رُغِيف خُبِز = a loaf of bread.",
+                        "Very common. Singular as a mass: خُبِز. You can also hear: رغِيف خُبِز = a loaf of bread.",
                     exampleAr: "مَا فِيش فُطُور بِلَا خُبِز فِي كْتِير بُيُوت.",
                     exampleEn: "In many homes there is no breakfast without bread.",
                 },
@@ -1382,8 +1434,9 @@ const defaultLessons = {
                     id: "jibneh",
                     ar: "جُبْنَة",
                     en: "cheese",
+                    enArabeezy: "jibneh",
                     hint:
-                        "جُبْنَة = cheese (sg/mass). Plural جُبَن ممكن لعدة أنواع. Used a lot at breakfast.",
+                        "",
                     exampleAr: "بِحِبّ جُبْنَة بَيْضَا مَع خُبِز سُخْن.",
                     exampleEn: "I like white cheese with warm bread.",
                 },
@@ -1391,8 +1444,9 @@ const defaultLessons = {
                     id: "zaytoon",
                     ar: "زَيْتُون",
                     en: "olives",
+                    enArabeezy: "zaytoon",
                     hint:
-                        "زَيْتُون can be sing/plural depending on context, usually ‘olives’ as a group. زَيْتُون أَخْضَر / أَسْوَد.",
+                        "",
                     exampleAr: "فِلَسْطِين مَشْهُورَة بِالزَّيْتُون وَزَيْت الزَّيْتُون.",
                     exampleEn: "Palestine is famous for olives and olive oil.",
                 },
@@ -1400,15 +1454,27 @@ const defaultLessons = {
                     id: "zeit_zaytoon",
                     ar: "زَيْت زَيْتُون",
                     en: "olive oil",
+                    enArabeezy: "zeit_zaytoon",
                     hint:
                         "Very basic ingredient in Palestinian food. Often eaten with bread and zaatar.",
                     exampleAr: "خُبِز مَع زَيْت زَيْتُون وَزَعْتَر فُطُور فِلَسْطِينِي كْتِير مَشْهُور.",
                     exampleEn: "Bread with olive oil and zaatar is a very famous Palestinian breakfast.",
                 },
                 {
+                    id: "zeit_zaatar",
+                    ar: "زَيْت وَزَعْتَر",
+                    en: "olive oil & zaatar",
+                    enArabeezy: "zeit_zaatar",
+                    hint:
+                        "Typical Palestinian breakfast item: bread dipped in olive oil and zaatar.",
+                    exampleAr: "زَيْت وَزَعْتَر شَيْء مَشْهُور فِي فِلَسْطِين.",
+                    exampleEn: "Olive oil and zaatar is famous in Palestine.",
+                },
+                {
                     id: "za3tar",
                     ar: "زَعْتَر",
                     en: "zaatar (thyme mix)",
+                    enArabeezy: "za3tar",
                     hint:
                         "Herb mix (thyme, sesame, etc.). Usually eaten with bread and olive oil or on manaqeesh.",
                     exampleAr: "مَنَاقِيش زَعْتَر مَع شَاي مِن أَحْلَى الْأَشْيَاء.",
@@ -1418,6 +1484,7 @@ const defaultLessons = {
                     id: "hummus",
                     ar: "حُمُّص",
                     en: "hummus (chickpea dip)",
+                    enArabeezy: "hummus",
                     hint:
                         "Very famous Middle Eastern food. Also means ‘chickpeas’ as beans.",
                     exampleAr: "حُمُّص مَع طَحِينَة أَكْلَة مَشْهُورَة فِي فِلَسْطِين.",
@@ -1427,6 +1494,7 @@ const defaultLessons = {
                     id: "falafel",
                     ar: "فَلَافِل",
                     en: "falafel",
+                    enArabeezy: "falafel",
                     hint:
                         "Deep-fried chickpea balls. Often eaten in a sandwich for breakfast or dinner.",
                     exampleAr: "كْتِير نَّاس بِفْطَرُوا سَنْدْوِيش فَلَافِل.",
@@ -1436,6 +1504,7 @@ const defaultLessons = {
                     id: "maqlubeh",
                     ar: "مَقْلُوبِة",
                     en: "maqlubeh (upside-down rice dish)",
+                    enArabeezy: "maqlubeh",
                     hint:
                         "Traditional Palestinian dish with rice, vegetables, and meat, flipped upside down.",
                     exampleAr: "مَقْلُوبِة جَاج مِن أَشْهَر أَكَلَات فِلَسْطِين.",
@@ -1445,26 +1514,29 @@ const defaultLessons = {
                     id: "musakhan",
                     ar: "مُسَخَّن",
                     en: "musakhan (sumac chicken on bread)",
+                    enArabeezy: "musakhan",
                     hint:
                         "Traditional Palestinian dish: bread, onion, sumac, and roasted chicken.",
-                    exampleAr: "فِي الْمَوَاسِم بِيِسَوُّوا مُسَخَّن لِلْعِيلَة كُلَّهَا.",
+                    exampleAr: "فِي الْمَوَاسِم بيعملوا مُسَخَّن لِلْعِيلَة كُلَّهَا.",
                     exampleEn: "During special seasons they make musakhan for the whole family.",
                 },
                 {
                     id: "salata",
                     ar: "سَلَطَة",
                     en: "salad",
+                    enArabeezy: "salata",
                     hint:
                         "General word for salad. Plural سَلَطَات = types of salad.",
-                    exampleAr: "بِحِبّ سَلَطَة خُضَار جَنْب الْأَكْل.",
-                    exampleEn: "I like a vegetable salad beside the food.",
+                    exampleAr: "مَع الْغَدَا دَائِمًا فِيه سَلَطَة.",
+                    exampleEn: "There is always salad with lunch.",
                 },
                 {
                     id: "khodar",
                     ar: "خْضَار",
                     en: "vegetables",
+                    enArabeezy: "khodar",
                     hint:
-                        "Collective plural ‘vegetables’. For one type: خُضَارَة or the specific name (طَمَاطِم، خِيَار…).",
+                        "",
                     exampleAr: "إِمِّي دَايْمًا بِتِسَوِّي خْضَار طَازَة مَع الْغَدَا.",
                     exampleEn: "My mom always prepares fresh vegetables with lunch.",
                 },
@@ -1472,6 +1544,7 @@ const defaultLessons = {
                     id: "fawakeh",
                     ar: "فَوَاكِه",
                     en: "fruits",
+                    enArabeezy: "fawakeh",
                     hint:
                         "Plural. Singular type would be like تُفَّاحَة (apple), مَوْزَة (banana).",
                     exampleAr: "بَاكُل فَوَاكِه بَعْد الْغَدَا.",
@@ -1481,8 +1554,9 @@ const defaultLessons = {
                     id: "tuffaHa",
                     ar: "تُفَّاحَة",
                     en: "an apple",
+                    enArabeezy: "tuffa7a",
                     hint:
-                        "Plural: تُفَّاح. For ‘apples’ as a group: تُفَّاح. Collective: تُفَّاح بَحْمَر / أَخْضَر.",
+                        "Plural: تُفَّاح. For ‘apples’ as a group: تُفَّاح.",
                     exampleAr: "بَحِبّ آكُل تُفَّاحَة الصُّبِح.",
                     exampleEn: "I like to eat an apple in the morning.",
                 },
@@ -1490,17 +1564,19 @@ const defaultLessons = {
                     id: "mozeh",
                     ar: "مَوْزَة",
                     en: "a banana",
+                    enArabeezy: "mozeh",
                     hint:
                         "Plural: مَوْز. For many bananas: مَوْز كْتِير.",
                     exampleAr: "مَوْزَة صْغِيرَة أَحْسَن مِن حْلُو بَعْد الْأَكْل.",
                     exampleEn: "A small banana is better than dessert after food.",
                 },
                 {
-                    id: "lahem",
-                    ar: "لَحِم",
+                    id: "la7me",
+                    ar: "لَحِم / لَحْمِة",
                     en: "meat",
+                    enArabeezy: "la7me",
                     hint:
-                        "Generic word for meat. You can say: لَحِم جَاج (chicken meat), لَحِم بَقَرِي (beef).",
+                        "Generic word for meat. You can say: لَحِم or لَحْمِة. Example: لَحِم جَاج (chicken), لَحِم بَقَرِي (beef).",
                     exampleAr: "مَا بَاكُل لَحِم كْتِير، أَكْثَر إِشِي دَجَاج.",
                     exampleEn: "I don’t eat a lot of meat, mostly chicken.",
                 },
@@ -1508,6 +1584,7 @@ const defaultLessons = {
                     id: "dajaj",
                     ar: "دَجَاج",
                     en: "chicken",
+                    enArabeezy: "dajaj",
                     hint:
                         "دَجَاج = chicken (meat). For a whole chicken you can hear جَاجَة.",
                     exampleAr: "مَقْلُوبِة دَجَاج أَكْلَة مَفْضُولَة عِنْد نَّاس كْتِير.",
@@ -1517,10 +1594,31 @@ const defaultLessons = {
                     id: "samak",
                     ar: "سَمَك",
                     en: "fish",
+                    enArabeezy: "samak",
                     hint:
-                        "Generic word. Plural: سَمَكَات for individual fish, but often just سَمَك.",
+                        "",
                     exampleAr: "فِي غَزَّة السَّمَك طَازَة وِكْتِير طَيِّب.",
                     exampleEn: "In Gaza, the fish is fresh and very tasty.",
+                },
+                {
+                    id: "ruz",
+                    ar: "رُزّ",
+                    en: "rice",
+                    enArabeezy: "rozz",
+                    hint:
+                        "Typically eaten with meat or chicken.",
+                    exampleAr: "بَاكُل رُزّ مَع خُضَار.",
+                    exampleEn: "I eat rice with vegetables.",
+                },
+                {
+                    id: "batata",
+                    ar: "بَطَاطَا",
+                    en: "potatoes",
+                    enArabeezy: "batata",
+                    hint:
+                        "Can be fried, baked, etc.",
+                    exampleAr: "بَحِبّ بَطَاطَا مَقْلِيِّة.",
+                    exampleEn: "I like fried potatoes.",
                 },
 
                 // ===== DRINKS =====
@@ -1528,8 +1626,9 @@ const defaultLessons = {
                     id: "mayy",
                     ar: "مَيّ",
                     en: "water",
+                    enArabeezy: "mayy",
                     hint:
-                        "Very frequent. ‘I drink water’: بَشْرَب مَيّ. Plural not usually used in daily speech (mass noun).",
+                        "Very frequent. ‘I drink water’: بَشْرَب مَيّ.",
                     exampleAr: "لَازِم تِشْرَب مَيّ كْتِير خِلَال النَّهَار.",
                     exampleEn: "You need to drink a lot of water during the day.",
                 },
@@ -1537,8 +1636,9 @@ const defaultLessons = {
                     id: "ahweh",
                     ar: "قَهْوَة",
                     en: "coffee",
+                    enArabeezy: "ahweh",
                     hint:
-                        "قَهْوَة = coffee. Plural (types): قَهْوَات. You can say: قَهْوَة سَادَة (no sugar), قَهْوَة حْلُوَة.",
+                        "",
                     exampleAr: "بَشْرَب قَهْوَة سَادَة الصُّبِح.",
                     exampleEn: "I drink black coffee in the morning.",
                 },
@@ -1546,6 +1646,7 @@ const defaultLessons = {
                     id: "shay",
                     ar: "شَاي",
                     en: "tea",
+                    enArabeezy: "shay",
                     hint:
                         "Very common drink. شَاي أَخْضَر / أَسْوَد / مَع نَعْنَاع.",
                     exampleAr: "جَدَّتِي بِتِحِبّ شَاي مَع نَعْنَاع.",
@@ -1555,15 +1656,19 @@ const defaultLessons = {
                     id: "3asir",
                     ar: "عَصِير",
                     en: "juice",
+                    enArabeezy: "3aSeer",
                     hint:
                         "Plural: عَصَايِر = juices (different kinds).",
                     exampleAr: "بِفَضَّل عَصِير بُرْتُقَال عَنْ كُولا.",
                     exampleEn: "I prefer orange juice over cola.",
                 },
+
+                // ===== SWEETS & DESSERTS =====
                 {
                     id: "halaweeyat",
                     ar: "حَلَوِيَّات",
                     en: "sweets / desserts",
+                    enArabeezy: "7alaweyyat",
                     hint:
                         "Plural noun. Singular general form: حَلْوِيّة. Includes cakes, Arabic sweets, etc.",
                     exampleAr: "بِحِبّ حَلَوِيَّات عَرَبِيَّة زَيّ كُنَافَة.",
@@ -1573,62 +1678,75 @@ const defaultLessons = {
                     id: "kunafeh",
                     ar: "كُنَافَة",
                     en: "kunafa (cheese pastry dessert)",
+                    enArabeezy: "kunafeh",
                     hint:
                         "Traditional Middle Eastern dessert, very famous in Palestine.",
                     exampleAr: "كُنَافَة نَابُلْسِيَّة مَعْرُوفَة فِي كُلّ الدُّنْيَا.",
                     exampleEn: "Nabulsi kunafa is famous all over the world.",
                 },
 
-                // ===== VERBS FROM VERB BOOK (LIKES / PREFER / COOK / ORDER / TRY) =====
+                // ===== GENERAL FOOD WORDS =====
                 {
-                    id: "ba7ebb",
-                    ar: "بَحِبّ",
-                    en: "I like / I love",
-                    hint:
-                        "From حَبّ = to love/like. Used for food, people, activities. For he/she: بِيِحِبّ / بِتِحِبّ.",
-                    exampleAr: "بَحِبّ الأَكْل الْفِلَسْطِينِي كْتِير.",
-                    exampleEn: "I really like Palestinian food.",
+                    id: "akel",
+                    ar: "أَكِل",
+                    en: "food",
+                    enArabeezy: "akel",
+                    hint: "General word for ‘food’.",
+                    exampleAr: "الْأَكِل الْفِلَسْطِينِي طَيِّب كْتِير.",
+                    exampleEn: "Palestinian food is very tasty.",
                 },
                 {
-                    id: "bifaDDil",
-                    ar: "بِفَضَّل",
-                    en: "I prefer",
-                    hint:
-                        "More specific than بَحِبّ. ‘I prefer X over Y’: بِفَضَّل … عَنْ …. ",
-                    exampleAr: "بِفَضَّل السَّمَك عَنْ اللَّحِم.",
-                    exampleEn: "I prefer fish over meat.",
+                    id: "t3am",
+                    ar: "طَعِم",
+                    en: "taste (flavour)",
+                    enArabeezy: "ta3am",
+                    hint: "Used to talk about taste of food.",
+                    exampleAr: "طَعِم الْأَكِل هُنَا مُمْتَاز.",
+                    exampleEn: "The taste of the food here is excellent.",
+                },
+
+                // ===== FEELINGS & TASTE =====
+                {
+                    id: "j3an",
+                    ar: "جُوعَان",
+                    en: "hungry",
+                    enArabeezy: "joo3an",
+                    hint: "Masc: جُوعَان, fem: جُوعَانَة.",
+                    exampleAr: "أَنَا جُوعَان، بَدِّي آكُل.",
+                    exampleEn: "I’m hungry, I want to eat.",
                 },
                 {
-                    id: "baTbokh",
-                    ar: "بَطْبُخ",
-                    en: "I cook",
-                    hint:
-                        "From طَبَخ = to cook. For she cooks: بْتُطْبُخ، for he: بِيِطْبُخ.",
-                    exampleAr: "أَحْيَانًا بَطْبُخ أَنَا، مَو دَايْمًا إِمِّي.",
-                    exampleEn: "Sometimes I cook, not always my mom.",
+                    id: "3atshan",
+                    ar: "عَطْشَان",
+                    en: "thirsty",
+                    enArabeezy: "3atshan",
+                    hint: "Masc: عَطْشَان, fem: عَطْشَانَة.",
+                    exampleAr: "أَنَا عَطْشَان، بَدِّي مَيِّة.",
+                    exampleEn: "I’m thirsty, I want water.",
                 },
                 {
-                    id: "ba2mor",
-                    ar: "بَطْلُب",
-                    en: "I order (food/drink)",
-                    hint:
-                        "Spoken form for ‘I order’ (in café / restaurant): بَطْلُب قَهْوَة، بَطْلُب سَنْدْوِيش.",
-                    exampleAr: "فِي الْمَقْهَى بَطْلُب قَهْوَة وَعَصِير.",
-                    exampleEn: "At the café I order coffee and juice.",
+                    id: "zaki",
+                    ar: "زَكِي",
+                    en: "tasty / delicious",
+                    enArabeezy: "zaki",
+                    hint: "Masc: زَكِي, fem: زَكِيِّة.",
+                    exampleAr: "الْأَكِل هُونَا زَكِي كْتِير.",
+                    exampleEn: "The food here is very tasty.",
                 },
                 {
-                    id: "bajarrib",
-                    ar: "بَجَرِّب",
-                    en: "I try (food / something new)",
-                    hint:
-                        "From جَرَّب = to try. Used a lot with new dishes: بَجَرِّب أَكْلَة جْدِيدَة.",
-                    exampleAr: "لَمَّا أَسَافِر بَجَرِّب أَكْلَات مَحَلِّيَّة.",
-                    exampleEn: "When I travel I try local dishes.",
+                    id: "msh_zaki",
+                    ar: "مِش زَكِي",
+                    en: "not tasty",
+                    enArabeezy: "mish_zaki",
+                    hint: "Simple way to say you don’t like the taste.",
+                    exampleAr: "صِرْصِير الْأَكِل الْيَوْم مِش زَكِي.",
+                    exampleEn: "Honestly, today the food is not tasty.",
                 },
                 {
                     id: "bisho3or_juu3",
                     ar: "بِجُوع",
                     en: "I get hungry",
+                    enArabeezy: "bijoo3",
                     hint:
                         "From جُوع = hunger. You can say كْتِير بِجُوع بَسُّرْعَة = I get hungry very fast.",
                     exampleAr: "بِجُوع بَعْد الْمُحَاضَرَة الطَّوِيلَة.",
@@ -1638,10 +1756,119 @@ const defaultLessons = {
                     id: "bisho3or 3aTash",
                     ar: "بِعْطَش",
                     en: "I get thirsty",
+                    enArabeezy: "bi3tash",
                     hint:
                         "From عَطَش = thirst. Opposite of بَشْرَب مَيّ.",
                     exampleAr: "فِي الصَّيْف بِعْطَش كْتِير، فَبَشْرَب مَيّ أَكْثَر.",
                     exampleEn: "In summer I get very thirsty, so I drink more water.",
+                },
+
+                // ===== VERBS ABOUT FOOD =====
+                {
+                    id: "ba7ebb",
+                    ar: "بَحِبّ",
+                    en: "I like / I love",
+                    enArabeezy: "ba7ebb",
+                    hint:
+                        "From حَبّ = to love/like. Used for food, people, activities. For he/she: بِيِحِبّ / بِتِحِبّ.",
+                    exampleAr: "بَحِبّ الأَكْل الْفِلَسْطِينِي كْتِير.",
+                    exampleEn: "I really like Palestinian food.",
+                },
+                {
+                    id: "ma_ba7ebb",
+                    ar: "مَا بَحِبّ",
+                    en: "I don’t like",
+                    enArabeezy: "ma_ba7ebb",
+                    hint: "Simple negation for ‘I don’t like’.",
+                    exampleAr: "مَا بَحِبّ قَهْوَة قَوِيِّة.",
+                    exampleEn: "I don’t like strong coffee.",
+                },
+                {
+                    id: "ba7ebb_aktar",
+                    ar: "بَحِبّ ... أَكْثَر",
+                    en: "I like … more",
+                    enArabeezy: "ba7ebb_aktar",
+                    hint: "For preferences: comparing things.",
+                    exampleAr: "بَحِبّ شَاي أَكْثَر مِن قَهْوَة.",
+                    exampleEn: "I like tea more than coffee.",
+                },
+                {
+                    id: "bifaDDil",
+                    ar: "بِفَضَّل",
+                    en: "I prefer",
+                    enArabeezy: "bifaDDel",
+                    hint:
+                        "More specific than بَحِبّ. ‘I prefer X over Y’: بِفَضَّل … عَنْ …. ",
+                    exampleAr: "بِفَضَّل السَّمَك عَنْ اللَّحِم.",
+                    exampleEn: "I prefer fish over meat.",
+                },
+                {
+                    id: "baTbokh",
+                    ar: "بَطْبُخ",
+                    en: "I cook",
+                    enArabeezy: "baTbokh",
+                    hint:
+                        "From طَبَخ = to cook. For she cooks: بْتُطْبُخ، for he: بِيِطْبُخ.",
+                    exampleAr: "أَحْيَانًا بَطْبُخ أَنَا، مَو دَايْمًا إِمِّي.",
+                    exampleEn: "Sometimes I cook, not always my mom.",
+                },
+                {
+                    id: "ba2mor",
+                    ar: "بَطْلُب",
+                    en: "I order (food/drink)",
+                    enArabeezy: "baTlob",
+                    hint:
+                        "Spoken form for ‘I order’ (in café / restaurant): بَطْلُب قَهْوَة، بَطْلُب سَنْدْوِيش.",
+                    exampleAr: "فِي الْمَقْهَى بَطْلُب قَهْوَة وَعَصِير.",
+                    exampleEn: "At the café I order coffee and juice.",
+                },
+                {
+                    id: "bajarrib",
+                    ar: "بَجَرِّب",
+                    en: "I try (food / something new)",
+                    enArabeezy: "bajarrib",
+                    hint:
+                        "From جَرَّب = to try. Used a lot with new dishes: بَجَرِّب أَكْلَة جْدِيدَة.",
+                    exampleAr: "لَمَّا أَسَافِر بَجَرِّب أَكْلَات مَحَلِّيَّة.",
+                    exampleEn: "When I travel I try local dishes.",
+                },
+                {
+                    id: "baddi",
+                    ar: "بَدِّي",
+                    en: "I want",
+                    enArabeezy: "baddi",
+                    hint: "Use with food/drink to order.",
+                    exampleAr: "بَدِّي فَلَافِل وَعَصِير.",
+                    exampleEn: "I want falafel and juice.",
+                },
+                {
+                    id: "sho_bte7ebb",
+                    ar: "شُو بْتِحِبّ تَاكُل؟",
+                    en: "What do you like to eat?",
+                    enArabeezy: "shu_bte7ebb_takol",
+                    hint: "Used to ask about food preferences.",
+                    exampleAr: "شُو بْتِحِبّ تَاكُل عَلَى الْغَدَا؟",
+                    exampleEn: "What do you like to eat for lunch?",
+                },
+
+                // ===== CONTEXT EXPRESSIONS =====
+                {
+                    id: "fi_maT3am",
+                    ar: "فِي مَطْعَم",
+                    en: "in a restaurant",
+                    enArabeezy: "fi_maT3am",
+                    hint: "Place context for food.",
+                    exampleAr: "بِنْقَعُد فِي مَطْعَم صَغِير قُرْب الْبَحَر.",
+                    exampleEn: "We sit in a small restaurant near the sea.",
+                },
+                {
+                    id: "3ala_el_bayt",
+                    ar: "فِي الْبَيْت",
+                    en: "at home",
+                    enArabeezy: "fi_el_beit",
+                    hint: "Home context.",
+                    exampleAr: "غَالِبًا بَنَاكُل فِي الْبَيْت.",
+                    exampleEn: "We usually eat at home.",
                 },
             ],
 
@@ -1650,6 +1877,7 @@ const defaultLessons = {
                     id: "ma7alli",
                     ar: "مَحَلّ",
                     en: "shop / place",
+                    enArabeezy: "ma7all",
                     hint:
                         "Food context: مَحَلّ فَلَافِل، مَحَلّ فَوَاكِه…",
                     exampleAr: "فِي مَحَلّ فَلَافِل قَرِيب مِن بَيْتْنَا.",
@@ -1659,6 +1887,7 @@ const defaultLessons = {
                     id: "mat3am",
                     ar: "مَطْعَم",
                     en: "restaurant",
+                    enArabeezy: "maT3am",
                     hint:
                         "Plural: مَطَاعِم. A bit more formal than مَحَلّ.",
                     exampleAr: "رُحْنَا عَلَى مَطْعَم فِلَسْطِينِي فِي الْمَدِينَة.",
@@ -1668,6 +1897,7 @@ const defaultLessons = {
                     id: "ma2le",
                     ar: "مَقْلِي",
                     en: "fried",
+                    enArabeezy: "ma2li",
                     hint:
                         "Adjective: مُقْرَمِش مَقْلِي = crispy fried.",
                     exampleAr: "فَلَافِل أَكْثَرُه أَكْلَة مَقْلِيَّة.",
@@ -1677,192 +1907,210 @@ const defaultLessons = {
                     id: "maTbukh",
                     ar: "مَطْبُوخ",
                     en: "cooked",
+                    enArabeezy: "maTbukh",
                     hint:
                         "Opposite of raw. خْضَار مَطْبُوخَة = cooked vegetables.",
                     exampleAr: "بِفَضَّل خْضَار مَطْبُوخَة عَنْ المَقْلِيَّة.",
                     exampleEn: "I prefer cooked vegetables over fried ones.",
                 },
+                {
+                    id: "7ilo",
+                    ar: "حِلُو",
+                    en: "sweet (taste)",
+                    enArabeezy: "7ilo",
+                    hint: "Also means ‘beautiful’, but here for taste.",
+                    exampleAr: "الْحَلَا حِلُو بَسّ ثَقِيل شَوَيّ.",
+                    exampleEn: "The dessert is sweet but a bit heavy.",
+                },
+                {
+                    id: "m7ar",
+                    ar: "حَارّ  ",
+                    en: "spicy / hot (food)",
+                    enArabeezy: "7arr",
+                    hint: "Used for spicy food.",
+                    exampleAr: "بَحِبّ الاكل الحارّ.",
+                    exampleEn: "I like spicy food.",
+                },
+                {
+                    id: "mal7",
+                    ar: "مِلِح",
+                    en: "salty",
+                    enArabeezy: "melle7",
+                    hint: "From مِلِح = salt.",
+                    exampleAr: "هَادَا الطَّبَق مِلِح كْتِير.",
+                    exampleEn: "This dish is too salty.",
+                },
+                {
+                    id: "S7i",
+                    ar: "صِحِّي",
+                    en: "healthy",
+                    enArabeezy: "Se77i",
+                    hint: "Used for healthy food.",
+                    exampleAr: "بِحَاوِل آكُل أَكِل صِحِّي.",
+                    exampleEn: "I try to eat healthy food.",
+                },
             ],
         },
+
 
         // ====================================
         // DIALOGUE (long café + home + culture)
         // ====================================
-        dialogue: {
-            lines: [
-                // Scene 1 – At home: what do you eat?
+        "dialogue": {
+            "lines": [
                 {
-                    speaker: "Teacher",
-                    ar: "الْيَوْم رَحْ نِحْكِي عَنِ الأَكْل وَالشُّرْب. رُوبَا، شُو فُطُورِك العَادِي فِي غَزَّة؟",
-                    en: "Today we will talk about food and drink. Roba, what is your usual breakfast in Gaza?",
+                    "speaker": "رامي",
+                    "ar": "مَرْحَبَا مَرْيَم، شُو أَكَلْتِي الْيَوْم عَلَى الْفْطُور؟",
+                    "en": "Hi Maryam, what did you eat today for breakfast?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "عَادَةً فُطُورِي بَسِيط: خُبِز، زَيْت زَيْتُون، زَعْتَر، وَشَاي.",
-                    en: "Usually my breakfast is simple: bread, olive oil, zaatar, and tea.",
+                    "speaker": "مَرْيَم",
+                    "ar": "صَبَاح الْخِير، أَكَلْت خُبِز مَع جِبْنِة وَزَيْت وَزَعْتَر.",
+                    "en": "Good morning, I ate bread with cheese and olive oil with zaatar."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "أَحْيَانًا فَلَافِل أَو حُمُّص إِذَا كُنَّا مِسْتَعْجِلِين.",
-                    en: "Sometimes falafel or hummus if we are in a hurry.",
+                    "speaker": "رامي",
+                    "ar": "وَكَمَان قَهْوَة وَلَّا شَاي؟",
+                    "en": "And also coffee or tea?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "مَارْك، وَإِنْتَ؟ شُو بَتِفْطَر فِي بَلَدَك؟",
-                    en: "Mark, and you? What do you have for breakfast in your country?",
+                    "speaker": "مَرْيَم",
+                    "ar": "بَشْرَب فِي الصُّبْح شَاي، مِش قَهْوَة.",
+                    "en": "In the morning I drink tea, not coffee."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "فِي أَمْرِيكَا عَادَةً بَسْتَعْجِل، بَشْرَب قَهْوَة وَبَاكُل تُفَّاحَة أَو مَوْزَة.",
-                    en: "In the US I’m usually in a hurry; I drink coffee and eat an apple or a banana.",
-                },
-
-                // Scene 2 – Likes and preferences
-                {
-                    speaker: "Teacher",
-                    ar: "طَيِّب، شُو أَكْثَر أَكْلَة فِلَسْطِينِيَّة بَتْحِبُّوهَا؟",
-                    en: "Okay, what is your favorite Palestinian dish?",
+                    "speaker": "رامي",
+                    "ar": "أَنَا بِالْعَكْس، بَشْرَب قَهْوَة كُل يَوْم.",
+                    "en": "I’m the opposite, I drink coffee every day."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "أَنَا بَحِبّ مَقْلُوبِة كْتِير، خُصُوصًا لَمَّا أَبُوي بَطْبُخْهَا.",
-                    en: "I really like maqlubeh, especially when my father cooks it.",
+                    "speaker": "مَرْيَم",
+                    "ar": "أَحْيَانًا بَشْرَب عَصِير بُرْتُقَال بَرْضُه.",
+                    "en": "Sometimes I drink orange juice too."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا بِفَضَّل مُسَخَّن. بَجَرِّب كُلّ مَرَّة مَطْعَم جْدِيد.",
-                    en: "I prefer musakhan. I try a new restaurant every time.",
+                    "speaker": "رامي",
+                    "ar": "شُو بْتِحِبّ تَاكُل عَلَى الْغَدَا؟",
+                    "en": "What do you like to eat for lunch?"
                 },
                 {
-                    speaker: "Yara",
-                    ar: "أَنَا بَحِبّ مَنَاقِيش زَعْتَر مَع شَاي الصُّبِح.",
-                    en: "I like zaatar manaqeesh with tea in the morning.",
-                },
-
-                // Scene 3 – At a small café in Gaza
-                {
-                    speaker: "Teacher",
-                    ar: "تَخَيَّلُوا إِنُّه حَالِيًّا إِحْنَا فِي مَقْهَى صْغِير فِي غَزَّة. الْوَلْد الَّي بِشْتِغِل هُنَاك إِسْمُه عُمَر.",
-                    en: "Imagine that right now we are in a small café in Gaza. The boy who works there is named Omar.",
+                    "speaker": "مَرْيَم",
+                    "ar": "بَحِبّ غَدَا فِيه دْجَاج وَرُزّ وَسَلَطَة.",
+                    "en": "I like lunch with chicken, rice, and salad."
                 },
                 {
-                    speaker: "Omar",
-                    ar: "أَهْلًا وَسَهْلًا فِيكُم، شُو بْتِحِبُّوا تِشْرَبُوا؟",
-                    en: "Welcome, what would you like to drink?",
+                    "speaker": "رامي",
+                    "ar": "وَالْلَحْمِة؟",
+                    "en": "And meat?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "أَنَا بَحِبّ قَهْوَة سَادَة لَوْ سَمَحْت.",
-                    en: "I’d like black coffee please.",
+                    "speaker": "مَرْيَم",
+                    "ar": "بَحِبّ لَحْمِة بَسّ مِش كْتِير، أَكْثَر شِي بَحِبّ خُضَار وَفَوَاكِه.",
+                    "en": "I like meat but not a lot; I like vegetables and fruit the most."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا بَطْلُب عَصِير بُرْتُقَال بَارِد.",
-                    en: "I’ll order cold orange juice.",
+                    "speaker": "رامي",
+                    "ar": "فَوَاكِه أَيّ وَاحْدَة أَكْثَر شِي؟",
+                    "en": "Which fruit do you like the most?"
                 },
                 {
-                    speaker: "Yara",
-                    ar: "وَأَنَا بِفَضَّل شَاي مَع نَعْنَاع.",
-                    en: "And I prefer tea with mint.",
+                    "speaker": "مَرْيَم",
+                    "ar": "بَحِبّ تُفَّاح وَمَوِز، بَسّ مَا بَحِبّ بُرْتُقَال كْتِير.",
+                    "en": "I like apples and bananas, but I don’t like oranges very much."
                 },
                 {
-                    speaker: "Omar",
-                    ar: "طَيِّب، قَهْوَة سَادَة، عَصِير بُرْتُقَال، وَشَاي نَعْنَاع. شُو بِتْحِبُّوا تَاكُلُوا؟",
-                    en: "Okay, one black coffee, orange juice, and mint tea. What would you like to eat?",
+                    "speaker": "رامي",
+                    "ar": "يَلَّا نُقْعُد فِي مَطْعَم صَغِير هُون.",
+                    "en": "Come on, let’s sit in a small restaurant here."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "هَلَّق مَا بِجُوع، بَسّ مُمْكِن مَقْبِلَات صْغِيرَة.",
-                    en: "Right now I’m not very hungry, but maybe some small starters.",
+                    "speaker": "مَرْيَم",
+                    "ar": "مُنَاسِب، أَنَا جُوعَانَة كْتِير.",
+                    "en": "Sounds good, I’m very hungry."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا بَجُوع بَسُّرْعَة، فَبَطْلُب سَنْدْوِيش فَلَافِل.",
-                    en: "I get hungry quickly, so I’ll order a falafel sandwich.",
+                    "speaker": "سَامِي",
+                    "ar": "أَهْلًا وَسَهْلًا، شُو بْتِحِبُّوا تَاكْلُوا؟",
+                    "en": "Welcome, what would you like to eat?"
                 },
                 {
-                    speaker: "Yara",
-                    ar: "بِتْقَدِّمُوا حُمُّص مَع خُبِز وَخْضَار؟",
-                    en: "Do you serve hummus with bread and vegetables?",
+                    "speaker": "رامي",
+                    "ar": "بَدِّي صَحْن فَلَافِل وَحُمُّص، مِن فَضْلَك.",
+                    "en": "I want a plate of falafel and hummus, please."
                 },
                 {
-                    speaker: "Omar",
-                    ar: "إِيه طَبْعًا، عِنْدْنَا حُمُّص بْبَيْت وَسَلَطَات بِلَابِل.",
-                    en: "Yes of course, we have homemade hummus and mixed salads.",
+                    "speaker": "مَرْيَم",
+                    "ar": "وَأَنَا بَدِّي سَلَطَة وَدْجَاج مَع رُزّ.",
+                    "en": "And I want salad and chicken with rice."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "طَيِّب بَجَرِّب صَحْن حُمُّص مَع سَلَطَة.",
-                    en: "Okay, I’ll try a plate of hummus with salad.",
-                },
-
-                // Scene 4 – Talking about healthy food
-                {
-                    speaker: "Teacher",
-                    ar: "إِنْتُوا بْتِفَكِّرُوا الأَكْل الْفِلَسْطِينِي صِحِّي وَلَّا ثَقِيل؟",
-                    en: "Do you think Palestinian food is healthy or heavy?",
+                    "speaker": "سَامِي",
+                    "ar": "طَيِّب، وَشُو بْتِحِبُّوا تِشْرَبُوا؟",
+                    "en": "Okay, and what would you like to drink?"
                 },
                 {
-                    speaker: "Mark",
-                    ar: "فِيهُو إِشِي وَإِشِي. فِي أَكْلَات مَقْلِيَّة ثَقِيلَة، وَفِي خْضَار وَفَوَاكِه كْتِير.",
-                    en: "It depends. There are heavy fried dishes, and there are lots of vegetables and fruits.",
+                    "speaker": "رامي",
+                    "ar": "أَنَا بَحِبّ قَهْوَة بَعْد الْأَكِل، هَلَّقْ بَدِّي مَيِّة.",
+                    "en": "I like coffee after food; now I want water."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "صَحّ، لَمَّا نَاكُل خْضَار وَسَلَطَة وَفَوَاكِه بِيِكُون الأَكْل أَخَفّ.",
-                    en: "True, when we eat vegetables, salad, and fruits, the food is lighter.",
+                    "speaker": "مَرْيَم",
+                    "ar": "أَنَا عَطْشَانَة، بَدِّي عَصِير بُرْتُقَال.",
+                    "en": "I’m thirsty, I want orange juice."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "أَنَا بِفَضَّل مَطْبُوخ عَنْ مَقْلِي، مِثْل كُوسَا مَحْشِي أَو مَرَقَة خْضَار.",
-                    en: "I prefer cooked food over fried food, like stuffed zucchini or vegetable stew.",
-                },
-
-                // Scene 5 – Desserts and coffee
-                {
-                    speaker: "Teacher",
-                    ar: "وَبِالنِّسْبَة لِلْحَلَوِيَّات؟ شُو أَكْثَر شِي بَتْحِبُّوه؟",
-                    en: "And what about desserts? What do you like most?",
+                    "speaker": "سَامِي",
+                    "ar": "زَيْ مَا بْتِحِبُّوا، صَحَّة وَعَافِيَة.",
+                    "en": "As you like, bon appétit / enjoy."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "صَرَاحَةً، بَحِبّ كُنَافَة نَابُلْسِيَّة.",
-                    en: "Honestly, I love Nablusi kunafa.",
+                    "speaker": "رامي",
+                    "ar": "الْفَلَافِل هُونَا زَكِي كْتِير.",
+                    "en": "The falafel here is very tasty."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا بَفْضَل أَشْرَب قَهْوَة بَعْد الْأَكْل وَبَسّ حَلَوِيَّة صْغِيرَة.",
-                    en: "I prefer to drink coffee after food and just a small sweet.",
+                    "speaker": "مَرْيَم",
+                    "ar": "صَحّ، بَسّ السَّلَطَة مِلِح شَوَيّ.",
+                    "en": "True, but the salad is a bit salty."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "أَحْيَانًا بَاكُل فَوَاكِه بَسّ، مَو دَايْمًا حَلَوِيَّات.",
-                    en: "Sometimes I only eat fruits, not always desserts.",
-                },
-
-                // Scene 6 – Wrap-up
-                {
-                    speaker: "Teacher",
-                    ar: "مُمْتَاز، هَلَّقْ تْقْدَرُوا تِطْلُبُوا أَكْل وَشُرْب وَتِحْكُوا عَنْ أَكْثَر أَكْلَة مُفَضَّلَة عِنْكُم.",
-                    en: "Excellent, now you can order food and drinks and talk about your favorite dish.",
+                    "speaker": "رامي",
+                    "ar": "مَع هَيْك، الْغَدَا صِحِّي أَكْثَر مِن مَطَاعِم ثَانِيِة.",
+                    "en": "Even so, this lunch is healthier than other restaurants."
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "لِلْوَاجِب، كْتُبُوا مِين بَطْبُخ أَكْثَر إِشِي فِي الْبَيْت عِنْكُمْ وَشُو أَحْلَى أَكْلَة عِنْد الْعِيلَة.",
-                    en: "For homework, write who cooks most at your home and what is the best family dish.",
+                    "speaker": "مَرْيَم",
+                    "ar": "مُنِيح إِنُّه فِيه خُضَار وَفَوَاكِه عَلَى الْجَانِب.",
+                    "en": "It’s good that there are vegetables and fruits on the side."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "شُكْرًا أُسْتَاذ، الْيَوْم جُعْنَا بَسّ تَعَلَّمْنَا كْتِير كَلِمَات.",
-                    en: "Thank you, teacher, today we got hungry but we learned many words.",
+                    "speaker": "رامي",
+                    "ar": "شُكْرًا كْتِير، الْأَكِل كَان زَكِي.",
+                    "en": "Thank you very much, the food was delicious."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "مَع السَّلَامَة جَمِيعًا، يَلَّا عَلَى الْغَدَا!",
-                    en: "Goodbye everyone, yalla, time for lunch!",
+                    "speaker": "سَامِي",
+                    "ar": "عَفْوَاً، تْشَرَّفْنَا فِيكُم.",
+                    "en": "You’re welcome, pleased to have you."
                 },
-            ],
+                {
+                    "speaker": "مَرْيَم",
+                    "ar": "مَع السَّلَامَة، رَاح نِرْجَع مَرَّة ثَانِيِة.",
+                    "en": "Goodbye, we’ll come back another time."
+                },
+                {
+                    "speaker": "رامي",
+                    "ar": "يَلَّا، اِنْبِسِطِي بِبَاقِي الْيَوْم.",
+                    "en": "Come on, enjoy the rest of the day."
+                },
+                {
+                    "speaker": "مَرْيَم",
+                    "ar": "وَإِنْتَ كَمَان، بَشُوفَك بُكْرَا فِي الدَّرْس.",
+                    "en": "You too, see you tomorrow in class."
+                }
+            ]
         },
+
 
         // ====================================
         // GRAMMAR
@@ -1998,8 +2246,6 @@ const defaultLessons = {
 
             rolePlays: [
                 "Role-play 1: Café scene. Student A is the waiter (like Omar), Student B is the customer. A asks what B wants to drink and eat using Palestinian Arabic. B answers using «بَحِبّ»، «بِفَضَّل»، «بَطْلُب». Then switch roles.",
-                "Role-play 2: Two friends talk about healthy vs heavy food. One prefers fried food (مَقْلِي) and sweets (حَلَوِيَّات), the other prefers cooked vegetables (مَطْبُوخ) and salad. They use «بِفَضَّل»، «مَو صِحِّي»، «صِحِّي أَكْثَر».",
-                "Role-play 3: Student describes a big family lunch on Friday in Palestine. Include at least three dishes (مَقْلُوبِة، مُسَخَّن، سَلَطَة، حَلَوِيَّات) and who cooks them. Other students ask questions about what they like or prefer.",
             ],
         },
 
@@ -2048,8 +2294,6 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
-
     // Inside your defaultLessons literal:
     [LESSON_ID_FAMILY]: {
         meta: {
@@ -2076,10 +2320,12 @@ const defaultLessons = {
         // ====================================
         vocabulary: {
             core: [
+                // ===== FAMILY & HOUSEHOLD =====
                 {
                     id: "3eileh",
                     ar: "عِيلَة",
                     en: "family",
+                    enArabeezy: "3eileh",
                     hint:
                         "Common word for ‘family’. عِيلْتِي = my family. Often used for close family living together.",
                     exampleAr: "عِيلْتِي مَو كْبِيرَة، بَسّ كْتِير قَرِيبِين مِن بَعْض.",
@@ -2089,15 +2335,28 @@ const defaultLessons = {
                     id: "ahl",
                     ar: "أَهْل",
                     en: "family / parents (household)",
+                    enArabeezy: "ahl",
                     hint:
-                        "أَهْل can mean ‘family’ or specifically ‘parents’ depending on context. أَهْلِي = my family / my parents.",
+                        "أَهْل can mean ‘family’ or specifically ‘parents’. أَهْلِي = my family / my parents.",
                     exampleAr: "أَهْلِي سَاكْنِين فِي غَزَّة.",
                     exampleEn: "My family lives in Gaza.",
                 },
                 {
+                    id: "ahli",
+                    ar: "أَهلي",
+                    en: "my parents / my family",
+                    enArabeezy: "ahli",
+                    hint: "Possessive form from أَهْل. Can mean my parents or my household family.",
+                    exampleAr: "ساكِن مَع أَهلي بِغَزّة.",
+                    exampleEn: "I live with my family in Gaza.",
+                },
+
+                // ===== PARENTS =====
+                {
                     id: "abuy",
                     ar: "أَبُوي",
                     en: "my father",
+                    enArabeezy: "abuy",
                     hint:
                         "From أَب (father). أَبُوي = my father. For ‘his father’ you can hear أَبُوه، for ‘her father’ أَبُوهَا.",
                     exampleAr: "أَبُوي بِيِشْتِغِل مُهَنْدِس.",
@@ -2105,35 +2364,59 @@ const defaultLessons = {
                 },
                 {
                     id: "immi",
-                    ar: "إِمِّي",
+                    ar: "إِمّي",
                     en: "my mother",
+                    enArabeezy: "immi",
                     hint:
                         "From أُمّ (mother). إِمِّي = my mother. You may also hear يَمَّا (mom) in spoken language.",
-                    exampleAr: "إِمِّي كْتِير شَاطْرَة بِالطَّبْخ.",
-                    exampleEn: "My mom is very good at cooking.",
+                    exampleAr: "إِمّي شَغّالة مُعَلِّمِة.",
+                    exampleEn: "My mother works as a teacher.",
                 },
+
+                // ===== SIBLINGS & CHILDREN =====
                 {
                     id: "akh",
                     ar: "أَخ",
                     en: "brother",
+                    enArabeezy: "akh",
                     hint:
-                        "أَخ = brother. أَخُوي = my brother. To talk about more than one: إِخْوَة = siblings/brothers.",
-                    exampleAr: "عِنْدِي أَخ أَكْبَر مِنِّي وَأَخ أَصْغَر مِنِّي.",
-                    exampleEn: "I have one brother older than me and one younger than me.",
+                        "أَخ = brother. أَخُوي = my brother. Plural: إِخْوَة = siblings/brothers.",
+                    exampleAr: "عِنْدي أَخ أَكبَر مِنّي بِسِنِين.",
+                    exampleEn: "I have a brother older than me by a few years.",
                 },
                 {
                     id: "okht",
                     ar: "أُخْت",
                     en: "sister",
+                    enArabeezy: "okht",
                     hint:
-                        "أُخْت = sister. أُخْتِي = my sister. For more than one: أَخَوَات = sisters.",
-                    exampleAr: "أُخْتِي أَصْغَر مِنِّي بِثْلَاث سِنِين.",
-                    exampleEn: "My sister is three years younger than me.",
+                        "أُخْت = sister. أُخْتِي = my sister. Plural: أَخَوَات = sisters.",
+                    exampleAr: "أُختي تِدرُس جَامْعَة.",
+                    exampleEn: "My sister studies at university.",
+                },
+                {
+                    id: "walad",
+                    ar: "وَلَد",
+                    en: "boy / son",
+                    enArabeezy: "walad",
+                    hint: "Can mean boy or son depending on context.",
+                    exampleAr: "إِلهم وَلَد واحِد وَبِنْتَيْن.",
+                    exampleEn: "They have one son and two daughters.",
+                },
+                {
+                    id: "bint",
+                    ar: "بِنْت",
+                    en: "girl / daughter",
+                    enArabeezy: "bint",
+                    hint: "بِنْت = girl; can also mean ‘daughter’.",
+                    exampleAr: "عِنْدُه بِنْت صْغيرَة كْتير.",
+                    exampleEn: "He has a very young daughter.",
                 },
                 {
                     id: "walad_bint",
                     ar: "وَلَد / بِنْت",
                     en: "boy / girl (and son / daughter)",
+                    enArabeezy: "walad_bint",
                     hint:
                         "وَلَد = boy or son (by context). بِنْت = girl or daughter. بِنْتِي = my daughter.",
                     exampleAr: "عِنْدُن وَلَد صْغِير وَبِنْت كْبِيرَة شْوَيّ.",
@@ -2143,96 +2426,162 @@ const defaultLessons = {
                     id: "tifl_atfal",
                     ar: "طِفِل / أَطْفَال",
                     en: "child / children",
+                    enArabeezy: "tifl/atfal",
                     hint:
-                        "طِفِل = child (singular). أَطْفَال = children. Used more like a neutral word than وَلَد / بِنْت.",
+                        "طِفِل = child (singular). أَطْفَال = children. More neutral than وَلَد / بِنْت.",
                     exampleAr: "الْأَطْفَال بِيِلْعَبُوا بَرَّا الْبَيْت.",
                     exampleEn: "The children are playing outside the house.",
+                },
+
+                // ===== GRANDPARENTS =====
+                {
+                    id: "jaddi",
+                    ar: "جَدّي",
+                    en: "my grandfather",
+                    enArabeezy: "jaddi",
+                    hint: "Colloquial word for ‘my grandfather’.",
+                    exampleAr: "جَدّي بِحِبّ يِقْعُد عَالبَحِر.",
+                    exampleEn: "My grandfather likes to sit by the sea.",
                 },
                 {
                     id: "sidi",
                     ar: "سِيدِي",
                     en: "my grandfather",
-                    hint:
-                        "Common word for ‘grandfather’. From سِيد = master/lord. سِيدِي = my grandpa.",
+                    enArabeezy: "sidi",
+                    hint: "Another common word for ‘my grandfather’ in Palestinian Arabic.",
                     exampleAr: "سِيدِي لِسَّا عَايِش فِي الْقَرْيَة.",
                     exampleEn: "My grandfather still lives in the village.",
                 },
                 {
                     id: "sitti",
-                    ar: "سِتِّي",
+                    ar: "سِتّي",
                     en: "my grandmother",
-                    hint:
-                        "Common word for ‘grandmother’. سِتِّي = my grandma. Very affectionate.",
-                    exampleAr: "سِتِّي كْتِير مَبْسُوطَة لَمَّا أَزُورْهَا.",
-                    exampleEn: "My grandma is very happy when I visit her.",
+                    enArabeezy: "sitti",
+                    hint: "Colloquial and affectionate word for ‘my grandmother’.",
+                    exampleAr: "سِتّي تِسْكُن قَريب مِنّا.",
+                    exampleEn: "My grandmother lives near us.",
                 },
+
+                // ===== UNCLES, AUNTS & COUSINS =====
                 {
                     id: "3ammo",
                     ar: "عَمّ",
-                    en: "uncle (father’s brother)",
-                    hint:
-                        "عَمّ = father’s brother. عَمِّي = my uncle (from my father’s side).",
-                    exampleAr: "عَمِّي سَاكِن قَرِيب مِنَّا فِي نَفْس الْمَدِينَة.",
-                    exampleEn: "My uncle lives near us in the same city.",
+                    en: "paternal uncle (father’s brother)",
+                    enArabeezy: "3ammo",
+                    hint: "عَمّ = father’s brother. عَمّي = my uncle (father’s side).",
+                    exampleAr: "عَمّي عَندُه أَرْبَع وْلاد.",
+                    exampleEn: "My paternal uncle has four children.",
                 },
                 {
                     id: "3ammeh",
                     ar: "عَمِّة",
-                    en: "aunt (father’s sister)",
-                    hint:
-                        "عَمِّة = father’s sister. عَمْتِي = my aunt (from my father’s side).",
+                    en: "paternal aunt (father’s sister)",
+                    enArabeezy: "3ammeh",
+                    hint: "عَمِّة = father’s sister. عَمْتِي = my aunt (father’s side).",
                     exampleAr: "عَمْتِي زَارَتْنَا فِي غَزَّة أُسْبُوع.",
                     exampleEn: "My aunt visited us in Gaza for a week.",
                 },
                 {
                     id: "khal",
                     ar: "خَال",
-                    en: "uncle (mother’s brother)",
-                    hint:
-                        "خَال = mother’s brother. خَالِي = my uncle from my mother’s side.",
-                    exampleAr: "خَالِي عَايِش فِي الْأُرْدُن.",
-                    exampleEn: "My uncle lives in Jordan.",
+                    en: "maternal uncle (mother’s brother)",
+                    enArabeezy: "khal",
+                    hint: "خَال = mother’s brother. خَالِي = my maternal uncle.",
+                    exampleAr: "خَالِي ساكِن بِرامَ الله.",
+                    exampleEn: "My maternal uncle lives in Ramallah.",
                 },
                 {
                     id: "khalah",
                     ar: "خَالَة",
-                    en: "aunt (mother’s sister)",
-                    hint:
-                        "خَالَة = mother’s sister. خَالْتِي = my aunt from my mother’s side.",
+                    en: "maternal aunt (mother’s sister)",
+                    enArabeezy: "khalah",
+                    hint: "خَالَة = mother’s sister. خَالْتِي = my maternal aunt.",
                     exampleAr: "خَالْتِي مِثْل إِمِّي تَقْرِيبًا.",
                     exampleEn: "My aunt is almost like my mother.",
                 },
                 {
+                    id: "walad_3ammi",
+                    ar: "وَلاد عَمّي",
+                    en: "my cousins (paternal, males/mixed)",
+                    enArabeezy: "walad_3ammi",
+                    hint: "Male/mixed cousins on father’s side.",
+                    exampleAr: "وَلاد عَمّي كْمان بِدْرِسوا هُون.",
+                    exampleEn: "My cousins on my dad’s side also study here.",
+                },
+                {
+                    id: "walad_khali",
+                    ar: "وَلاد خالي",
+                    en: "my cousins (maternal, males/mixed)",
+                    enArabeezy: "walad_khali",
+                    hint: "Male/mixed cousins on mother’s side.",
+                    exampleAr: "وَلاد خالي يِسْكُنوا بَبَرِّة البَلَد.",
+                    exampleEn: "My maternal cousins live outside the town.",
+                },
+
+                // ===== RELATIVES & PEOPLE =====
+                {
                     id: "qarayeb",
                     ar: "قَرَايِب",
                     en: "relatives",
+                    enArabeezy: "qarayeb",
                     hint:
-                        "قَرَايِب = relatives (plural). Often used with إِلْنَا / إِلِّي to say ‘we have relatives’.",
+                        "قَرَايِب = relatives (plural). Often used with إِلْنَا / إِلِّي: ‘we have relatives’.",
                     exampleAr: "إِلْنَا قَرَايِب فِي غَزَّة وَقَرَايِب فِي بَرَّا.",
                     exampleEn: "We have relatives in Gaza and relatives abroad.",
                 },
                 {
-                    id: "3indi",
-                    ar: "عِنْدِي",
-                    en: "I have",
-                    hint:
-                        "Use to talk about what you have: family, things, time. For ‘you have’: عِنْدَك (m), عِنْدِك (f). For ‘he has’: عِنْدُه.",
-                    exampleAr: "عِنْدِي أَخَيْن وَأُخْت وَاحْدَة.",
-                    exampleEn: "I have two brothers and one sister.",
+                    id: "3areeb",
+                    ar: "قَريب / قَريبة",
+                    en: "relative (m/f)",
+                    enArabeezy: "qarib/qaribeh",
+                    hint: "Generic word for one relative (male/female).",
+                    exampleAr: "عِنْدنا قَرايِب كْثير بْبَرّا.",
+                    exampleEn: "We have many relatives abroad.",
                 },
                 {
-                    id: "ma_3indi",
-                    ar: "مَا عِنْدِي",
-                    en: "I don’t have",
+                    id: "nas",
+                    ar: "نَاس",
+                    en: "people",
+                    enArabeezy: "nas",
+                    hint: "General word for ‘people’.",
+                    exampleAr: "النَّاس هَان طَيِّبِين وَبِيِحِبُّوا الضُّيُوف.",
+                    exampleEn: "People here are kind and love guests.",
+                },
+                {
+                    id: "jar_jiran",
+                    ar: "جَار / جِيرَان",
+                    en: "neighbor / neighbors",
+                    enArabeezy: "jar/jiran",
                     hint:
-                        "Negation of عِنْدِي. مَا عِنْدِي أَخَوَات = I don’t have sisters.",
-                    exampleAr: "مَا عِنْدِي أَطْفَال، بَسّ عِنْدِي قِطَّة.",
-                    exampleEn: "I don’t have children, but I have a cat.",
+                        "جَار = neighbor (singular). جِيرَان = neighbors (plural). Often used socially: neighbors like family.",
+                    exampleAr: "جِيرَانَّا مِثْل الْعِيلَة، كُلّ يَوْم مَع بَعْض.",
+                    exampleEn: "Our neighbors are like family; we’re together every day.",
+                },
+
+                // ===== AGE & COMPARISONS =====
+                {
+                    id: "akbar",
+                    ar: "أَكبَر",
+                    en: "older / biggest",
+                    enArabeezy: "akbar",
+                    hint: "Comparative: older / bigger. Often used with مِن.",
+                    exampleAr: "هُوَّ أَكبَر وَلَد بِالعيلِة.",
+                    exampleEn: "He is the oldest boy in the family.",
+                },
+                {
+                    id: "asghar",
+                    ar: "أَصغَر",
+                    en: "younger / smallest",
+                    enArabeezy: "asghar",
+                    hint: "Comparative: younger / smaller.",
+                    exampleAr: "أَنا أَصغَر واحِد بَيْن إِخْواني.",
+                    exampleEn: "I’m the youngest among my siblings.",
                 },
                 {
                     id: "akbar_asghar",
                     ar: "أَكْبَر / أَصْغَر",
                     en: "older / younger",
+                    enArabeezy: "akbar/asghar",
                     hint:
                         "Use with مِنِّي (than me) or مِنُّه / مِنَّهَا (than him/her). أَكْبَر مِنِّي = older than me. أَصْغَر مِنِّي = younger than me.",
                     exampleAr: "أُخْتِي أَكْبَر مِنِّي، وَأَخُوي أَصْغَر مِنِّي.",
@@ -2242,65 +2591,145 @@ const defaultLessons = {
                     id: "kbeer_sgheer",
                     ar: "كْبِير / صْغِير",
                     en: "big / small (also old / young)",
+                    enArabeezy: "kbir/sghir",
                     hint:
-                        "For age or size. أَبُوي كْبِير بِالْعُمْر = my father is old. اِبْنِي صْغِير = my son is young/small.",
+                        "For age or size. أَبُوي كْبِير بِالْعُمْر = my father is old. اِبْنِي صْغِير = my son is young.",
                     exampleAr: "سِتِّي كْبِيرَة بِالْعُمْر، بَسّ قَلْبْهَا صْغِير.",
                     exampleEn: "My grandma is old in age, but her heart is young.",
                 },
                 {
+                    id: "2addi",
+                    ar: "قَدّي",
+                    en: "same age as me",
+                    enArabeezy: "2addi",
+                    hint: "Used for same age comparison.",
+                    exampleAr: "أُختي تَقْريبًا قَدّي.",
+                    exampleEn: "My sister is almost the same age as me.",
+                },
+
+                // ===== MARITAL STATUS =====
+                {
                     id: "mutazawwij",
-                    ar: "مُتْزَوِّج",
-                    en: "married",
-                    hint:
-                        "Masc مُتْزَوِّج, fem مُتْزَوِّجَة. Used for marital status.",
-                    exampleAr: "أَخُوي الْكْبِير مُتْزَوِّج وَعِنْدُه طِفْلَيْن.",
-                    exampleEn: "My older brother is married and has two children.",
+                    ar: "مِتجَوِّز / مِتجَوِّزة",
+                    en: "married (m/f)",
+                    enArabeezy: "mitjawwez/mitjawwzeh",
+                    hint: "Marital status: married man/woman.",
+                    exampleAr: "أُختي مِتجَوِّزة جْديد.",
+                    exampleEn: "My sister recently got married.",
                 },
                 {
                     id: "3azzab",
-                    ar: "عَزَّاب",
-                    en: "single / not married",
-                    hint:
-                        "Used a lot for men: هُوَّ عَزَّاب = he is single. For women many people just say مُش مُتْزَوِّجَة.",
-                    exampleAr: "أُخْتِي لِسَّا مُش مُتْزَوِّجَة، أَخُوي عَزَّاب كَمَان.",
-                    exampleEn: "My sister is not married yet, and my brother is also single.",
+                    ar: "عَزابي / عَزابيّة",
+                    en: "single (unmarried, m/f)",
+                    enArabeezy: "3azabi/3azabiyeh",
+                    hint: "Not married.",
+                    exampleAr: "أنا لِسّه عَزابي.",
+                    exampleEn: "I’m still single.",
+                },
+                {
+                    id: "makhtub",
+                    ar: "خاطِب / مَخطوبة",
+                    en: "engaged (m/f)",
+                    enArabeezy: "khatib/makhtubeh",
+                    hint: "Engaged to be married.",
+                    exampleAr: "أُخوي خاطِب بِنْت مِن غَزّة.",
+                    exampleEn: "My brother is engaged to a girl from Gaza.",
                 },
                 {
                     id: "maktub_ktabo",
                     ar: "مَكْتُوب كِتَابُه",
                     en: "engaged (Islamic contract)",
-                    hint:
-                        "Expression for religious engagement/marriage contract. Fem: مَكْتُوب كِتَابْهَا.",
+                    enArabeezy: "maktub_ktabo",
+                    hint: "Expression for religious engagement/marriage contract. Fem: مَكْتُوب كِتَابْهَا.",
                     exampleAr: "بِنْت خَالْتِي مَكْتُوب كِتَابْهَا مِنْ سَنَة.",
                     exampleEn: "My aunt’s daughter has been engaged for a year.",
                 },
+
+                // ===== HAVE & LIVE WITH =====
                 {
-                    id: "jar_jiran",
-                    ar: "جَار / جِيرَان",
-                    en: "neighbor / neighbors",
-                    hint:
-                        "جَار = neighbor (singular). جِيرَان = neighbors (plural). Very common social word.",
-                    exampleAr: "جِيرَانَّا مِثْل الْعِيلَة، كُلّ يَوْم مَع بَعْض.",
-                    exampleEn: "Our neighbors are like family; we’re together every day.",
+                    id: "3indi",
+                    ar: "عِنْدي ...",
+                    en: "I have ...",
+                    enArabeezy: "3indi",
+                    hint: "Used to say you have family members or things.",
+                    exampleAr: "عِنْدي أُخ وَأُختَيْن.",
+                    exampleEn: "I have one brother and two sisters.",
                 },
                 {
-                    id: "nas",
-                    ar: "نَاس",
-                    en: "people",
-                    hint:
-                        "General word for ‘people’. Can be used to talk about family culture or community.",
-                    exampleAr: "النَّاس هَان طَيِّبِين وَبِيِحِبُّوا الضُّيُوف.",
-                    exampleEn: "People here are kind and love guests.",
+                    id: "ma_3indi",
+                    ar: "مَا عِنْدي",
+                    en: "I don’t have",
+                    enArabeezy: "ma_3indi",
+                    hint: "Negation of عِنْدي.",
+                    exampleAr: "مَا عِنْدي أَطْفَال، بَسّ عِنْدي قِطَّة.",
+                    exampleEn: "I don’t have children, but I have a cat.",
+                },
+                {
+                    id: "saken_ma3",
+                    ar: "ساكِن / ساكْنة مَع ...",
+                    en: "living with (m/f) ...",
+                    enArabeezy: "saken/sakneh_ma3",
+                    hint: "Talking about who you live with.",
+                    exampleAr: "أنا ساكْنة مَع أَهلي.",
+                    exampleEn: "I live with my family.",
                 },
             ],
 
             extra: [
+                // ===== MORE STATUS & RELATIONS =====
+                {
+                    id: "mutallaq",
+                    ar: "مَطَلَّق / مَطَلَّقَة",
+                    en: "divorced (m/f)",
+                    enArabeezy: "mutallaq/mutallaqa",
+                    hint: "Marital status: divorced.",
+                    exampleAr: "خالتي مَطَلَّقَة مِن سَنِين.",
+                    exampleEn: "My aunt has been divorced for years.",
+                },
+                {
+                    id: "armal",
+                    ar: "أَرْمَل / أَرْمَلَة",
+                    en: "widower / widow",
+                    enArabeezy: "armal/armaleh",
+                    hint: "Marital status.",
+                    exampleAr: "جارتنا أَرْمَلَة.",
+                    exampleEn: "Our neighbor is a widow.",
+                },
+                {
+                    id: "7amay",
+                    ar: "حَماي / حَمايِة",
+                    en: "father-in-law / mother-in-law",
+                    enArabeezy: "7amay/7amayeh",
+                    hint: "Parents of a spouse.",
+                    exampleAr: "حَماي وَحَمايِة بيسْكُنوا بِنَفْس البِنَايِة.",
+                    exampleEn: "My in-laws live in the same building.",
+                },
+                {
+                    id: "ta2riban",
+                    ar: "تَقريبًا",
+                    en: "approximately / almost",
+                    enArabeezy: "ta2riban",
+                    hint: "Useful with ages or numbers of siblings.",
+                    exampleAr: "عيلِتْهُم تَقريبًا عَشَرَة نَفَر.",
+                    exampleEn: "Their family is about ten people.",
+                },
+                {
+                    id: "mutza3leen",
+                    ar: "مُتْزاعْلين",
+                    en: "not on good terms, upset with each other",
+                    enArabeezy: "mitza3leen",
+                    hint: "Talking about family problems.",
+                    exampleAr: "هُمَّ مُتْزاعْلين مَع أَخُوهم.",
+                    exampleEn: "They are not on good terms with their brother.",
+                },
+
+                // ===== FAMILY FEEL & TOGETHERNESS =====
                 {
                     id: "ahl_ba3d",
                     ar: "أَهْل بَعْض",
                     en: "relatives / each other’s people",
-                    hint:
-                        "Informal expression that means ‘we are relatives / close like family’.",
+                    enArabeezy: "ahl_ba3d",
+                    hint: "Informal expression that means ‘we are relatives / close like family’.",
                     exampleAr: "مَو غُرْب، إِحْنَا أَهْل بَعْض.",
                     exampleEn: "We’re not strangers, we’re like relatives.",
                 },
@@ -2308,6 +2737,7 @@ const defaultLessons = {
                     id: "kulna_sawa",
                     ar: "كُلْنَا سَوَى",
                     en: "all of us together",
+                    enArabeezy: "kulna_sawa",
                     hint:
                         "Nice expression when talking about family living or doing things together.",
                     exampleAr: "إِيَّام الْعِيد كُلْنَا سَوَى فِي بَيْت سِتِّي.",
@@ -2316,169 +2746,135 @@ const defaultLessons = {
             ],
         },
 
+
         // ====================================
         // DIALOGUE (long, with real names)
         // ====================================
-        dialogue: {
-            lines: [
-                // Scene 1 – Teacher opens topic
+        "dialogue": {
+            "lines": [
                 {
-                    speaker: "Teacher",
-                    ar: "مَرْحَبَا جَمِيعًا، الْيَوْم بَدْنَا نِسَوِّي جَوّ عِيلَة فِي الصَّفّ.",
-                    en: "Hi everyone, today we want to create a family atmosphere in the class.",
+                    "speaker": "Samer",
+                    "ar": "مَسّا الخير يا ليلى، كِيفِك اليوم؟",
+                    "en": "Good evening, Layla, how are you today?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "رُوبَا، تْقَدْرِي تِبْلِشِي إِنْتِ، اِحْكِينَا شْوَيّ عَنْ عِيلْتِك.",
-                    en: "Roba, you can start; tell us a bit about your family.",
-                },
-
-                // Scene 2 – Roba describes her family
-                {
-                    speaker: "Roba",
-                    ar: "أَكِيد. عِنْدِي عِيلَة مَتْوَسِّطَة، أَهْلِي سَاكْنِين فِي غَزَّة.",
-                    en: "Of course. I have a medium-sized family; my family lives in Gaza.",
+                    "speaker": "Layla",
+                    "ar": "مَسّا النّور يا سامِر، الحَمْدِلله. وإِنْتَ كِيفَك؟",
+                    "en": "Good evening, Samer, alhamdulillah. And how are you?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "فِي الْبَيْت فِي أَبُوي وَإِمِّي، وَعِنْدِي أَخ أَكْبَر مِنِّي وَأُخْت أَصْغَر مِنِّي.",
-                    en: "At home there is my father and my mother, and I have an older brother and a younger sister.",
+                    "speaker": "Samer",
+                    "ar": "تمام، شُكْرًا. اليوم الأُسْتاذة حَكَت عَن العيلِة، حَبيت أَسْأَلِك عَن عيلْتِك.",
+                    "en": "I’m good, thanks. Today the teacher talked about family, I wanted to ask you about your family."
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "حِلُو. أَخُوك الْكْبِير مُتْزَوِّج وَلَّا عَزَّاب؟",
-                    en: "Nice. Is your older brother married or single?",
+                    "speaker": "Layla",
+                    "ar": "أَهلي ساكْنين هون بِغَزّة، وعيلِتْنا كْبيرَة.",
+                    "en": "My family lives here in Gaza, and our family is big."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "لِسَّا عَزَّاب، بِفَكِّر بِالدِّرَاسَة أَكْثَر مِنِ الزَّوَاج.",
-                    en: "He’s still single; he’s thinking more about his studies than marriage.",
+                    "speaker": "Samer",
+                    "ar": "عِنْدِك إِخْوان وَإِخْوات كْثير؟",
+                    "en": "Do you have many brothers and sisters?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "وَأُخْتِك الْأَصْغَر؟ كْبِيرَة وَلَّا لِسَّا طِفْلَة؟",
-                    en: "And your younger sister? Is she grown up or still a child?",
+                    "speaker": "Layla",
+                    "ar": "إي، عِنْدي أُخ أَكبَر مِنّي وَأُخت أَصغَر.",
+                    "en": "Yes, I have an older brother and a younger sister."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "هِيَّ مَو طِفْلَة، بَسّ لِسَّا صْغِيرَة. أُخْتِي صْغِيرَة بَسّ عَقْلْهَا كْبِير.",
-                    en: "She’s not a little child, but she’s still young. My sister is young but her mind is big.",
-                },
-
-                // Scene 3 – Mark’s big family
-                {
-                    speaker: "Teacher",
-                    ar: "طَيِّب مَارْك، إِحْكِلْنَا عَنْ عِيلْتَك إِنْتَ.",
-                    en: "Okay Mark, tell us about your family.",
+                    "speaker": "Samer",
+                    "ar": "أَخوك أَكبَر بِقَدّيش؟",
+                    "en": "How much older is your brother?"
                 },
                 {
-                    speaker: "Mark",
-                    ar: "عِيلْتِي أَكْبَر شْوَيّ. عِنْدِي تَلَات إِخْوَة وَاِتْنْتَيْن أَخَوَات.",
-                    en: "My family is a bit bigger. I have three brothers and two sisters.",
+                    "speaker": "Layla",
+                    "ar": "هُوَّ أَكبَر مِنّي تَقريبًا أَرْبَع سِنِين.",
+                    "en": "He’s about four years older than me."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَبُوي وَإِمِّي سَاكْنِين فِي أَمْرِيكَا، بَسّ سِتِّي وَسِيدِي سَاكْنِين فِي قَرْيَة صْغِيرَة.",
-                    en: "My father and mother live in the US, but my grandma and grandpa live in a small village.",
+                    "speaker": "Samer",
+                    "ar": "وأُختِك قَدّك ولا أَصغَر كْمان؟",
+                    "en": "And is your sister your age or younger too?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "مَا شَاءَ الله. عِنْدَك قَرَايِب هَان فِي فِلَسْطِين؟",
-                    en: "MashaAllah. Do you have relatives here in Palestine?",
+                    "speaker": "Layla",
+                    "ar": "هيَّ أَصغَر، لِسّه بِالتّانَوِيّة.",
+                    "en": "She’s younger, she’s still in high school."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "إِيه، إِلْنَا قَرَايِب فِي خَان يُونِس، عَمِّي وَعَمْتِي وَشْوَيّ جِيرَان مِثْل الْقَرَايِب.",
-                    en: "Yes, we have relatives in Khan Younis: my uncle, my aunt, and some neighbors who are like relatives.",
-                },
-
-                // Scene 4 – Yara joins and talks about marital status
-                {
-                    speaker: "Yara",
-                    ar: "مَعْلِش أُسْتَاذ، فِيني أِحْكِي أَنَا كَمَان؟",
-                    en: "Excuse me, teacher, can I also speak?",
+                    "speaker": "Samer",
+                    "ar": "تِسْكُنوا كِلْكُم مَع بَعْض؟",
+                    "en": "Do you all live together?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "طَبْعًا يَارَا، تْفَضَّلِي. كِيف عِيلْتِك؟ كْبِيرَة وَلَّا صْغِيرَة؟",
-                    en: "Of course, Yara, go ahead. How is your family? Big or small?",
+                    "speaker": "Layla",
+                    "ar": "أَه، أنا ساكْنة مَع أَهلي: إِمّي، أَبوي، أُخوي، وَأُختي.",
+                    "en": "Yes, I live with my family: my mother, father, brother and sister."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "عِنْدِي عِيلَة كْبِيرَة. أَبُوي وَإِمِّي، أَرْبَع أَخَوَات، وَأَخ وَاحِد.",
-                    en: "I have a big family. My father and mother, four sisters, and one brother.",
+                    "speaker": "Samer",
+                    "ar": "وجَدِّك وَسِتِّك ساكْنين قَريب مَنْكُم؟",
+                    "en": "And do your grandfather and grandmother live near you?"
                 },
                 {
-                    speaker: "Yara",
-                    ar: "أُخْتَيْن مِنْهُم مُتْزَوِّجَات، وَوَاحِدَة مَكْتُوب كِتَابْهَا، وَأَنَا لِسَّا مُش مُتْزَوِّجَة.",
-                    en: "Two of them are married, one is engaged, and I’m not married yet.",
+                    "speaker": "Layla",
+                    "ar": "إي، جَدّي وَسِتّي ساكْنين فِي الحارَة الجَنْبنا.",
+                    "en": "Yes, my grandfather and grandmother live in the neighborhood next to us."
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "وَأَخُوك؟ مُتْزَوِّج وَلَّا عَزَّاب؟",
-                    en: "And your brother? Is he married or single?",
+                    "speaker": "Samer",
+                    "ar": "حَلُو كْثير. أَنا عيلْتِي أَصْغَر، عِنْدي بَسّ أُخ واحِد.",
+                    "en": "That’s really nice. My family is smaller, I only have one brother."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "هُوَّ عَزَّاب، بِيِحْكِي لِسَّا بَدُّه وَقْت قَبْل الزَّوَاج.",
-                    en: "He is single; he says he still needs time before marriage.",
-                },
-
-                // Scene 5 – Omar talks about living with grandparents
-                {
-                    speaker: "Teacher",
-                    ar: "طَيِّب، عُمَر، إِنْتَ مَع مِين سَاكِن هَلَّقْ؟",
-                    en: "Okay Omar, who are you living with now?",
+                    "speaker": "Layla",
+                    "ar": "هُوَّ أَكبَر مِنَّك وَلّا أَصغَر؟",
+                    "en": "Is he older than you or younger?"
                 },
                 {
-                    speaker: "Omar",
-                    ar: "هَلَّقْ أَنَا سَاكِن مَع سِتِّي وَسِيدِي، كُلْنَا سَوَى فِي نَفْس الْبَيْت.",
-                    en: "Right now I live with my grandma and grandpa, all of us together in the same house.",
+                    "speaker": "Samer",
+                    "ar": "هُوَّ تَقريبًا قَدّي، بِنْدَرُس نَفْس السَّنَة بِالجَامْعَة.",
+                    "en": "He’s almost my age, we study the same year at the university."
                 },
                 {
-                    speaker: "Omar",
-                    ar: "أَبُوي وَإِمِّي بِشْتِغْلُوا بَرَّا، بَجُو عَ الْوِيك أَنْد.",
-                    en: "My father and mother work outside, they come on the weekend.",
+                    "speaker": "Layla",
+                    "ar": "أَهْلَك مِتجَوِّزين مِن زَمَان؟",
+                    "en": "Have your parents been married for a long time?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "بِتِحِسّ إِنُّه جِيرَانَّكُمْ مِثْل عِيلْتْكُمْ؟",
-                    en: "Do you feel that your neighbors are like your family?",
+                    "speaker": "Samer",
+                    "ar": "إي، أَبوي وَإِمّي مِتجَوِّزين مِن أَكْتَر مِن عِشْرين سَنِة.",
+                    "en": "Yes, my dad and mom have been married for more than twenty years."
                 },
                 {
-                    speaker: "Omar",
-                    ar: "إِيه، جِيرَانَّا مِثْل أَهْل بَعْض، كْل يَوْم فِي حَدَا بِيِسْأَل عَنَّا.",
-                    en: "Yes, our neighbors are like relatives; every day someone checks on us.",
-                },
-
-                // Scene 6 – Closing
-                {
-                    speaker: "Teacher",
-                    ar: "مُمْتَاز يَا جَمَاعَة، الْيَوْم تَعَلَّمْنَا نِحْكِي عَنِ الْعِيلَة بِطَرِيقَة طَبِيعِيَّة.",
-                    en: "Excellent everyone, today we learned how to talk about family in a natural way.",
+                    "speaker": "Layla",
+                    "ar": "إخْوالِك وَعَمامِك ساكْنين هُون وَلّا بْبَرّا؟",
+                    "en": "Do your maternal and paternal uncles live here or abroad?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "لِلْوَاجِب، كُلّ وَاحَد بَدُّه يِكْتُب قِصَّة قَصِيرَة عَنْ عِيلْتُه وَنِقْرَاهَا مَرَّة جَاي.",
-                    en: "For homework, each of you must write a short story about your family and we will read it next time.",
+                    "speaker": "Samer",
+                    "ar": "عِنْدي خال ساكِن هون، وَعَمّي ساكِن بْبَرّا البَلَد.",
+                    "en": "I have an uncle on my mom’s side who lives here, and an uncle on my dad’s side who lives abroad."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "شُكْرًا أُسْتَاذ، اِلْيَوْم حَسِّيت حَالِي جُوَّا عِيلَة جْدِيدَة.",
-                    en: "Thank you, teacher, today I felt like I was inside a new family.",
+                    "speaker": "Layla",
+                    "ar": "شُو أَكْتَر حَدا قَريب عَلَيْك بِالعيلِة؟",
+                    "en": "Who are you closest to in your family?"
                 },
                 {
-                    speaker: "Mark",
-                    ar: "مَع السَّلَامَة جَمِيعًا، اِنْبِسِطُوا مَع عِيلْتْكُمْ الْيَوْم.",
-                    en: "Goodbye everyone, enjoy your time with your families today.",
+                    "speaker": "Samer",
+                    "ar": "صِراحَةً، أَقْرَب حَدا عَلَيَّ أُختي، بَنِحْكِي كْثير مَع بَعْض.",
+                    "en": "Honestly, I’m closest to my sister, we talk a lot with each other."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "مَع السَّلَامَة، الله مَعْكُم.",
-                    en: "Goodbye, God be with you.",
-                },
-            ],
+                    "speaker": "Layla",
+                    "ar": "حَلُو! إنْ شاءَ الله تِضَلّوا مِتْفاهْمين دَايْمًا.",
+                    "en": "Nice! Inshallah you always stay in good understanding."
+                }
+            ]
         },
+
 
         // ====================================
         // GRAMMAR
@@ -2613,8 +3009,6 @@ const defaultLessons = {
             ],
 
             rolePlays: [
-                "Role-play 1: Student A interviews Student B about their family. Ask: How many siblings do you have? Who is older/younger? Do you have grandparents living with you? Use «عِنْدِي…»، «أَكْبَر مِنِّي»، «أَصْغَر مِنِّي». Then switch roles.",
-                "Role-play 2: Two friends (in Arabic) talk about who is married in their family. Use words like مُتْزَوِّج، مُش مُتْزَوِّجَة، عَزَّاب، مَكْتُوب كِتَابُه. Try to make it sound like real gossip but still respectful.",
                 "Role-play 3: One student describes a big family gathering at grandma’s house (سِتِّي). Other students listen and then ask follow-up questions: «مَع مِين سَاكِن؟»، «مِنْ وِين قَرَايِبْكُمْ؟»، «النَّاس كْبِيرِين وَلَّا صْغَار؟».",
             ],
         },
@@ -2659,7 +3053,6 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
     // Inside your defaultLessons literal:
     [LESSON_ID_TRANSPORT]: {
         meta: {
@@ -2686,78 +3079,145 @@ const defaultLessons = {
         // ====================================
         vocabulary: {
             core: [
+                // ===== GENERAL TRANSPORT =====
+                {
+                    id: "muwaSalat",
+                    ar: "مُوَاصَلات",
+                    en: "transportation, public transport",
+                    enArabeezy: "muwaSalat",
+                    hint: "General word for transportation / public transport.",
+                    exampleAr: "اليوم المُوَاصَلات زَحْمَة كْتير.",
+                    exampleEn: "Today the transportation is very crowded.",
+                },
+
                 // ===== TYPES OF TRANSPORT =====
                 {
                     id: "sayyara",
                     ar: "سَيَّارَة",
                     en: "car",
+                    enArabeezy: "sayyara",
                     hint:
-                        "Plural: سَيَّارَات (cars). For ‘my car’: سَيَّارْتِي. Used for private cars and sometimes taxis.",
-                    exampleAr: "سَيَّارَات فِي غَزَّة كْتِير بِالشَّارِع.",
-                    exampleEn: "There are many cars in the streets of Gaza.",
+                        "Plural: سَيَّارَات (cars). For ‘my car’: سَيَّارْتِي. Used for private cars and sometimes company cars.",
+                    exampleAr: "أَخوي بِسوق سَيّارة الشُّرْكَة.",
+                    exampleEn: "My brother drives the company car.",
                 },
                 {
                     id: "taxi",
-                    ar: "تَكْسِي",
+                    ar: "تَكْسِي / تاكسي",
                     en: "taxi",
+                    enArabeezy: "taxi",
                     hint:
-                        "Very common word. Plural: تَكَاسِي. Often yellow or white, used inside the city.",
-                    exampleAr: "لَمَّا أِسْتَعْجِل بَخُد تَكْسِي.",
-                    exampleEn: "When I’m in a hurry, I take a taxi.",
+                        "Very common word. Both spellings تَكْسِي / تاكسي are used. Plural: تَكَاسِي. Often yellow or white, used inside the city.",
+                    exampleAr: "أَحْيانًا باخُد تاكسي لَمّا أكون مُسْتَعْجِل.",
+                    exampleEn: "Sometimes I take a taxi when I’m in a hurry.",
                 },
                 {
                     id: "servis",
                     ar: "سِرْفِيس",
                     en: "service (shared taxi)",
+                    enArabeezy: "servis",
                     hint:
-                        "Shared taxi on a fixed route with a fixed price. Plural: سَرَافِيس.",
+                        "Shared taxi on a fixed route with a fixed price. Plural: سَرَافِيس. Close to the idea of سَيّارة أُجْرَة.",
                     exampleAr: "سِرْفِيس أَرْخَص مِن التَّكْسِي الْخَاصّ.",
                     exampleEn: "A service is cheaper than a private taxi.",
                 },
                 {
                     id: "buss",
-                    ar: "بُصّ",
+                    ar: "بُصّ / باص",
                     en: "bus",
+                    enArabeezy: "buss/bas",
                     hint:
-                        "Spoken Palestinian pronunciation for ‘bus’. Plural: بُصَّات.",
+                        "Spoken Palestinian pronunciation for ‘bus’. You may hear بُصّ or باص. Plural: بُصَّات.",
                     exampleAr: "فِي بُصّ بِيِرُوح مِن غَزَّة عَلَى رَام اللّٰه.",
                     exampleEn: "There is a bus that goes from Gaza to Ramallah.",
                 },
                 {
+                    id: "baskaleet",
+                    ar: "بَسكَلِيت",
+                    en: "bicycle",
+                    enArabeezy: "baskaleet",
+                    hint: "Bike / bicycle, sometimes also درّاجة.",
+                    exampleAr: "هوَّ بِحِبّ يِروح عَالجامعة بالبَسكَلِيت.",
+                    exampleEn: "He likes to go to the university by bike.",
+                },
+                {
+                    id: "qitar",
+                    ar: "قِطار",
+                    en: "train",
+                    enArabeezy: "qitar",
+                    hint: "Train. Used more for travel in countries that have trains.",
+                    exampleAr: "رِكِبنا القِطار لَمّا كُنّا بِالأُرْدُن.",
+                    exampleEn: "We took the train when we were in Jordan.",
+                },
+                {
+                    id: "metro",
+                    ar: "مِتْرو",
+                    en: "metro / subway",
+                    enArabeezy: "metro",
+                    hint: "Underground / metro. Not in every city.",
+                    exampleAr: "في مِدِن ثانِيَة في مِتْرو، مِش عَنا.",
+                    exampleEn: "In other cities there is a metro, not here.",
+                },
+
+                // ===== PLACES & ROADS =====
+                {
                     id: "ma7aTTa",
                     ar: "مَحَطَّة",
                     en: "station / stop",
+                    enArabeezy: "ma7aTTa",
                     hint:
-                        "مَحَطَّة بُصّ = bus station; مَحَطَّة سِرْفِيس = service station.",
+                        "General ‘station’: مَحَطَّة بُصّ = bus station; مَحَطَّة سِرْفِيس = service station.",
                     exampleAr: "بِنِسْتَنَّى فِي مَحَطَّة السِّرْفِيس.",
                     exampleEn: "We wait at the service station.",
+                },
+                {
+                    id: "mawqif_basat",
+                    ar: "مَوقِف باصات",
+                    en: "bus stop",
+                    enArabeezy: "mawqif_basat",
+                    hint: "Place where buses stop to pick up passengers.",
+                    exampleAr: "مَوقِف الباصات قُدّام الجامْعَة.",
+                    exampleEn: "The bus stop is in front of the university.",
                 },
                 {
                     id: "shari3",
                     ar: "شَارِع",
                     en: "street / road",
+                    enArabeezy: "shari3",
                     hint:
                         "Plural: شَوَارِع. شَارِع رَئِيسِي = main street; شَارِع ضَيِّق = narrow street.",
                     exampleAr: "الشَّوَارِع الْيَوْم مَلْيَانَة سَيَّارَات.",
                     exampleEn: "The streets today are full of cars.",
                 },
                 {
-                    id: "z7meh",
-                    ar: "زَحْمَة",
-                    en: "traffic / crowd",
-                    hint:
-                        "Used a lot for traffic jam: فِي زَحْمَة فِي الشَّارِع.",
-                    exampleAr: "تَأَخَّرْت عَ الدَّرْس عَشَان فِي زَحْمَة.",
-                    exampleEn: "I was late to the lesson because there was traffic.",
+                    id: "kameen_benzin",
+                    ar: "كَمين بْنَزين",
+                    en: "gas station",
+                    enArabeezy: "kameen_benzin",
+                    hint: "Place to get fuel for cars and buses.",
+                    exampleAr: "السَيّارة وَقَفَت قُدّام كَمين البْنَزين.",
+                    exampleEn: "The car stopped in front of the gas station.",
                 },
                 {
                     id: "ishara",
                     ar: "إِشَارَة",
                     en: "traffic light (short form)",
+                    enArabeezy: "ishara",
                     hint:
                         "إِشَارَة ضَوْ = traffic light. People just say: عِنْد الإِشَارَة.",
                     exampleAr: "التَّكْسِي وَقَف عِنْد الإِشَارَة الْحَمْرَا.",
                     exampleEn: "The taxi stopped at the red light.",
+                },
+
+                // ===== TRAFFIC & CROWD =====
+                {
+                    id: "z7meh",
+                    ar: "زَحْمَة",
+                    en: "traffic / crowd / traffic jam",
+                    enArabeezy: "za7meh",
+                    hint: "Used a lot for traffic jam: فِي زَحْمَة فِي الشَّارِع.",
+                    exampleAr: "تَأَخَّرْت عَ الدَّرْس عَشَان فِي زَحْمَة.",
+                    exampleEn: "I was late to the lesson because there was traffic.",
                 },
 
                 // ===== MOVEMENT VERBS / CHUNKS =====
@@ -2765,42 +3225,100 @@ const defaultLessons = {
                     id: "barkab",
                     ar: "بَرْكَب",
                     en: "I ride / I get on (bus, car, taxi)",
+                    enArabeezy: "barkab",
                     hint:
                         "From رِكِب = to ride. بَرْكَب تَكْسِي / بَرْكَب بُصّ / بَرْكَب سِرْفِيس.",
                     exampleAr: "كُلّ يَوْم بَرْكَب بُصّ عَلَى الْجَامْعَة.",
                     exampleEn: "Every day I take a bus to university.",
                 },
                 {
+                    id: "rikib_yirkab",
+                    ar: "رِكِب، يِركَب",
+                    en: "to ride, get on (bus, taxi, etc.)",
+                    enArabeezy: "rikib/yirkab",
+                    hint: "Dictionary form of the verb ‘to ride / get on’.",
+                    exampleAr: "يَلا نِركَب الباص، حَيِمْشي هَلَّق.",
+                    exampleEn: "Let’s get on the bus, it’s about to leave now.",
+                },
+                {
                     id: "banzel",
                     ar: "بَنْزِل",
                     en: "I get off / I go down",
+                    enArabeezy: "banzel",
                     hint:
-                        "Used for getting off a bus/taxi or going down from somewhere: بَنْزِل مِن التَّكْسِي.",
+                        "Used for getting off a bus/taxi or going down: بَنْزِل مِن التَّكْسِي.",
                     exampleAr: "بَنْزِل قُدَّام مَدْخَل الْجَامْعَة.",
                     exampleEn: "I get off in front of the university entrance.",
+                },
+                {
+                    id: "nizil_yinzil",
+                    ar: "نِزِل، يِنْزِل",
+                    en: "to get off, get out (of a vehicle)",
+                    enArabeezy: "nizil/yinzil",
+                    hint: "Opposite of يركب ‘to get on’.",
+                    exampleAr: "بِنْزِل قُدّام الجامْعَة، لَو سَمَحْت.",
+                    exampleEn: "I get off in front of the university, please.",
                 },
                 {
                     id: "bsoog",
                     ar: "بَسُوق",
                     en: "I drive",
-                    hint:
-                        "From سَاق = to drive. بَسُوق سَيَّارَة / بَسُوق بُصّ.",
+                    enArabeezy: "basooq",
+                    hint: "From سَاق = to drive. بَسُوق سَيَّارَة / بَسُوق بُصّ.",
                     exampleAr: "أَبُوي بَسُوق سَيَّارَة صْغِيرَة.",
                     exampleEn: "My father drives a small car.",
+                },
+                {
+                    id: "wasal_yowsal",
+                    ar: "وِصِل، يوصَل",
+                    en: "to arrive, reach",
+                    enArabeezy: "wisel/yowsal",
+                    hint: "Verb ‘to arrive’ at a place.",
+                    exampleAr: "إِمْتَى وِصِل الباص عَالبلَد؟",
+                    exampleEn: "When did the bus arrive in town?",
                 },
                 {
                     id: "bawsal",
                     ar: "بَوْصَل",
                     en: "I arrive / I reach",
+                    enArabeezy: "bowsal",
                     hint:
-                        "Common spoken form from وَصَل. بَوْصَل عَلَى الْبَيْت السَّاعَة تَمْنْيَة.",
+                        "Common spoken form from وَصَل. بَوْصَل عَلَى الْبَيْت السَّاعَة تَمْنْيْة.",
                     exampleAr: "بَوْصَل عَلَى الشُّغُل بَعْد نُصّ سَاعَة.",
                     exampleEn: "I arrive at work after half an hour.",
+                },
+                {
+                    id: "ra7_yiroo7",
+                    ar: "راح، يِروح",
+                    en: "to go",
+                    enArabeezy: "ra7/yiroo7",
+                    hint: "General verb ‘to go’ to a place.",
+                    exampleAr: "كل يوم بِروح عَالجامْعَة عَالسّاعَة تْمانْيِة.",
+                    exampleEn: "Every day I go to the university at eight o’clock.",
+                },
+                {
+                    id: "tla3_yitla3",
+                    ar: "طِلِع، يِطْلَع",
+                    en: "to leave / depart (bus/taxi) or go up",
+                    enArabeezy: "tli3/yitla3",
+                    hint: "Also used like ‘the bus left / departed’.",
+                    exampleAr: "الباص طِلِع، لَحِقْناه بِصُعوبَة.",
+                    exampleEn: "The bus left; we caught it with difficulty.",
+                },
+                {
+                    id: "yifoot_3a",
+                    ar: "يِفوت عَـ...",
+                    en: "to enter / go into ...",
+                    enArabeezy: "yifoot_3a",
+                    hint: "Used with places: bus or car going into a street.",
+                    exampleAr: "الباص بِفوت عَشارِع ضَيِّق.",
+                    exampleEn: "The bus goes into a narrow street.",
                 },
                 {
                     id: "bEta2akhar",
                     ar: "بِتْأَخَّر",
                     en: "I am late / I get late",
+                    enArabeezy: "bita2akhar",
                     hint:
                         "From تَأَخَّر = to be late. مَا بِدِّي أِتْأَخَّر = I don’t want to be late.",
                     exampleAr: "لَمَّا فِي زَحْمَة بِنِتْأَخَّر كْتِير.",
@@ -2810,8 +3328,9 @@ const defaultLessons = {
                     id: "bastanna",
                     ar: "بَسْتَنَّى",
                     en: "I wait",
+                    enArabeezy: "bastanna",
                     hint:
-                        "From اِسْتَنَّى = to wait. You can say: بَسْتَنَّى السِّرْفِيس / بَسْتَنَّى صَاحْبِي.",
+                        "From اِسْتَنَّى = to wait. بَسْتَنَّى السِّرْفِيس / بَسْتَنَّى صَاحْبِي.",
                     exampleAr: "بَسْتَنَّى البُصّ مِن نُصّ سَاعَة.",
                     exampleEn: "I’ve been waiting for the bus for half an hour.",
                 },
@@ -2819,8 +3338,8 @@ const defaultLessons = {
                     id: "bna2el",
                     ar: "بَنْقِل",
                     en: "I move / I transport",
-                    hint:
-                        "Used for moving people or things: سَيَّارَة بْتِنْقِل رُكَّاب.",
+                    enArabeezy: "bna2el",
+                    hint: "Used for moving people or things: سَيَّارَة بْتِنْقِل رُكَّاب.",
                     exampleAr: "السِّرْفِيس بْيِنْقِل نَّاس مِن مِنْطَقَة لِمِنْطَقَة.",
                     exampleEn: "The service transports people from one area to another.",
                 },
@@ -2828,8 +3347,8 @@ const defaultLessons = {
                     id: "bamshi",
                     ar: "بَمْشِي",
                     en: "I walk",
-                    hint:
-                        "From مِشِي = walking. For ‘on foot’: بَمْشِي عَلَى رِجْلَيّ.",
+                    enArabeezy: "bamshi",
+                    hint: "From مِشِي = walking. ‘On foot’: بَمْشِي عَلَى رِجْلَيّ.",
                     exampleAr: "لَمَّا الْمَسَافَة قَرِيبَة بَمْشِي مَا بَرْكَب.",
                     exampleEn: "When the distance is close, I walk and don’t take a vehicle.",
                 },
@@ -2837,10 +3356,49 @@ const defaultLessons = {
                     id: "bdaTTi3",
                     ar: "بَقَطِّع الشَّارِع",
                     en: "I cross the street",
+                    enArabeezy: "ba2aTTi3_eshshari3",
                     hint:
-                        "Chunk: بَقَطِّع الشَّارِع = I cross the street. Used a lot with traffic.",
+                        "Chunk: بَقَطِّع الشَّارِع = I cross the street. Used a lot with traffic lights.",
                     exampleAr: "بَقَطِّع الشَّارِع لَمَّا الإِشَارَة خَضْرَا.",
                     exampleEn: "I cross the street when the light is green.",
+                },
+
+                // ===== DIRECTIONS =====
+                {
+                    id: "shmal",
+                    ar: "شْمال",
+                    en: "left",
+                    enArabeezy: "shmal",
+                    hint: "Direction: left.",
+                    exampleAr: "خُد شْمال عَأوَّل لَفَّة.",
+                    exampleEn: "Take a left at the first turn.",
+                },
+                {
+                    id: "yameen",
+                    ar: "يَمين",
+                    en: "right",
+                    enArabeezy: "yameen",
+                    hint: "Direction: right.",
+                    exampleAr: "بَعْدين خُد يَمين عَشارِع الكورنيش.",
+                    exampleEn: "Then take a right onto the corniche street.",
+                },
+                {
+                    id: "doghri",
+                    ar: "دُغري",
+                    en: "straight",
+                    enArabeezy: "doghri",
+                    hint: "Straight ahead.",
+                    exampleAr: "ضَلّك مَاشي دُغري قُدّامَك.",
+                    exampleEn: "Keep going straight ahead.",
+                },
+                {
+                    id: "2uddamak",
+                    ar: "قُدّامَك",
+                    en: "in front of you / straight ahead",
+                    enArabeezy: "2uddamak",
+                    hint: "Used with directions and landmarks.",
+                    exampleAr: "المَحَطّة قُدّامَك عَلْيامين.",
+                    exampleEn: "The station is in front of you on the right.",
                 },
 
                 // ===== QUESTIONS & USEFUL CHUNKS =====
@@ -2848,24 +3406,44 @@ const defaultLessons = {
                     id: "keef_arooh",
                     ar: "كِيف بَقْدَر أَرُوح عَلَى...؟",
                     en: "How can I go to…?",
+                    enArabeezy: "keef_ba2dar_aroo7_3ala",
                     hint:
                         "Chunk for asking directions: كِيف بَقْدَر أَرُوح عَلَى الْجَامْعَة؟",
                     exampleAr: "كِيف بَقْدَر أَرُوح عَلَى مَحَطَّة البُصّ؟",
                     exampleEn: "How can I go to the bus station?",
                 },
                 {
+                    id: "keef_bowsal_3a",
+                    ar: "كيف بوْصَل عَـ...؟",
+                    en: "How do I get to ...?",
+                    enArabeezy: "keef_bowsal_3a",
+                    hint: "Key phrase for asking directions.",
+                    exampleAr: "كيف بوْصَل عَالمَحَطّة مِن هون؟",
+                    exampleEn: "How do I get to the station from here?",
+                },
+                {
                     id: "b_kam",
                     ar: "بِكَم التَّكْسِي؟",
                     en: "How much is the taxi?",
-                    hint:
-                        "Chunk for price. You can change: بِكَم السِّرْفِيس؟",
+                    enArabeezy: "bikam_it_taxi",
+                    hint: "Chunk for price. You can change: بِكَم السِّرْفِيس؟",
                     exampleAr: "لَازِم تِسْأَل: بِكَم التَّكْسِي قَبْل مَا تَرْكَب.",
                     exampleEn: "You should ask ‘How much is the taxi?’ before you get in.",
+                },
+                {
+                    id: "2addesh_el2ijra",
+                    ar: "قَدّيش الأُجْرَة؟",
+                    en: "How much is the fare?",
+                    enArabeezy: "2addesh_el2ijreh",
+                    hint: "Phrase for asking the price (fare) of bus/taxi/etc.",
+                    exampleAr: "لَمّا تِرْكَب تاكسي، إسْأَل السَّوّاق: قَدّيش الأُجْرَة؟",
+                    exampleEn: "When you take a taxi, ask the driver: How much is the fare?",
                 },
                 {
                     id: "adeysh_wa2t",
                     ar: "قَدِّيش بِيِأَخُد وَقْت؟",
                     en: "How long does it take?",
+                    enArabeezy: "2addesh_bya5od_wa2t",
                     hint:
                         "Used for duration: قَدِّيش بِيِأَخُد وَقْت مِن غَزَّة لَرَام اللّٰه؟",
                     exampleAr: "قَدِّيش بِيِأَخُد وَقْت مِن الْبَيْت عَلَى الشُّغُل؟",
@@ -2875,8 +3453,8 @@ const defaultLessons = {
                     id: "fi_mobashar",
                     ar: "فِي خَطّ مُبَاشِر؟",
                     en: "Is there a direct line?",
-                    hint:
-                        "خَطّ = route / line. مُبَاشِر = direct (no change).",
+                    enArabeezy: "fi_5aTT_mobasher",
+                    hint: "خَطّ = route / line. مُبَاشِر = direct (no change).",
                     exampleAr: "فِي خَطّ مُبَاشِر مِن هُون عَلَى الْجَامْعَة؟",
                     exampleEn: "Is there a direct line from here to the university?",
                 },
@@ -2884,6 +3462,7 @@ const defaultLessons = {
                     id: "bighayyir",
                     ar: "بِغَيِّر خَطّ",
                     en: "I change line / transfer",
+                    enArabeezy: "bghayyir_5aTT",
                     hint:
                         "Chunk: بَغَيِّر خَطّ فِي الْمَحَطَّة. Useful when you change buses or services.",
                     exampleAr: "بَرْكَب سِرْفِيس وَبِغَيِّر خَطّ فِي الْوَسَط.",
@@ -2896,8 +3475,8 @@ const defaultLessons = {
                     id: "rukkaab",
                     ar: "رُكَّاب",
                     en: "passengers",
-                    hint:
-                        "Plural only in practice. رَاكِب = passenger (sg).",
+                    enArabeezy: "rukkaab",
+                    hint: "Plural only in practice. رَاكِب = passenger (singular).",
                     exampleAr: "السِّرْفِيس مَمْلِي رُكَّاب.",
                     exampleEn: "The service is full of passengers.",
                 },
@@ -2905,8 +3484,8 @@ const defaultLessons = {
                     id: "sawa2",
                     ar: "سَوَّاق",
                     en: "driver",
-                    hint:
-                        "From سَاق. سَوَّاق التَّكْسِي = taxi driver.",
+                    enArabeezy: "sawwa2",
+                    hint: "From سَاق. سَوَّاق التَّكْسِي = taxi driver.",
                     exampleAr: "سَوَّاق التَّكْسِي كَان لَطِيف.",
                     exampleEn: "The taxi driver was kind.",
                 },
@@ -2914,17 +3493,54 @@ const defaultLessons = {
                     id: "maw2af",
                     ar: "مَوْقَف",
                     en: "parking / stop",
+                    enArabeezy: "maw2af",
                     hint:
-                        "مَوْقَف السَّيَّارَات = parking; مَوْقَف البُصّ = bus stop.",
+                        "مَوْقَف السَّيَّارَات = parking; مَوْقَف البُصّ = bus stop / stand.",
                     exampleAr: "بِسْتَنُّوا فِي مَوْقَف السَّيَّارَات.",
                     exampleEn: "They wait in the car park.",
+                },
+                {
+                    id: "tafri3a",
+                    ar: "تَفْرِيعَة",
+                    en: "side street / turn-off",
+                    enArabeezy: "tafri3a",
+                    hint: "Useful word in giving directions.",
+                    exampleAr: "خُد أَوَّل تَفْرِيعَة عَالشْمال.",
+                    exampleEn: "Take the first side street on the left.",
+                },
+                {
+                    id: "juwwa_barra",
+                    ar: "جُوَّا / بَرّا",
+                    en: "inside / outside",
+                    enArabeezy: "juwwa/barra",
+                    hint: "Location words often used with stations and vehicles.",
+                    exampleAr: "إسْتَنّاني بَرّا مَحَطّة الباص.",
+                    exampleEn: "Wait for me outside the bus station.",
+                },
+                {
+                    id: "muta2akher",
+                    ar: "مُتَأَخِّر",
+                    en: "late (for transport / time)",
+                    enArabeezy: "muta2akher",
+                    hint: "Used for buses and people being late.",
+                    exampleAr: "الباص كان مُتَأَخِّر نُصّ ساعَة.",
+                    exampleEn: "The bus was half an hour late.",
+                },
+                {
+                    id: "biwa22ef_hon",
+                    ar: "بِوَقّف هون؟",
+                    en: "Does it stop here?",
+                    enArabeezy: "biwa22ef_hon",
+                    hint: "Ask if a bus / service stops at this place.",
+                    exampleAr: "إسْأَل حَدا: الباص لَلبَلَد بِوَقّف هون؟",
+                    exampleEn: "Ask someone: Does the bus to town stop here?",
                 },
                 {
                     id: "3ala_l_za7meh",
                     ar: "عَلَى الزَّحْمَة",
                     en: "with the traffic / in heavy traffic",
-                    hint:
-                        "Chunk: يَوْم الْخَمِيس كُلّ الإِشِي عَلَى الزَّحْمَة.",
+                    enArabeezy: "3ala_iz_za7meh",
+                    hint: "Chunk e.g. يَوْم الْخَمِيس كُلّ الإِشِي عَلَى الزَّحْمَة.",
                     exampleAr: "بَوْصَل بَعْد نُصّ سَاعَة، أَكِيد عَلَى الزَّحْمَة.",
                     exampleEn: "I arrive after half an hour, of course with traffic.",
                 },
@@ -2934,161 +3550,176 @@ const defaultLessons = {
         // ====================================
         // DIALOGUE (multi-scene – from home to class)
         // ====================================
-        dialogue: {
-            lines: [
-                // Scene 1 – Planning the trip
+        "dialogue": {
+            "lines": [
                 {
-                    speaker: "Teacher",
-                    ar: "بُكْرَا عِنْدْنَا دَرْس فِي مَكَان ثَانِي فِي الْمَدِينَة. خَلِّينَا نِشُوف كِيف بَدَّنَا نِرُوح.",
-                    en: "Tomorrow we have a lesson in another place in the city. Let’s see how we will go.",
+                    "speaker": "Malek",
+                    "ar": "لَو سَمَحْتي، كيف بوْصَل عَالجامْعَة مِن هان؟",
+                    "en": "Excuse me, how do I get to the university from here?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "رُوبَا، مِن بَيْتِك لَهْنَاك، كِيف عَادَةً بَتْرُوحِي؟",
-                    en: "Roba, from your house to there, how do you usually go?",
+                    "speaker": "Rasha",
+                    "ar": "أكيد! إنت جديد بالمنطقة؟",
+                    "en": "Of course! Are you new in the area?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "عَادَةً بَرْكَب سِرْفِيس مِن الْحَارَة لِلْوَسَط، بَعْدِين بِغَيِّر خَطّ.",
-                    en: "Usually I take a service from my neighborhood to the city center, then I change line.",
+                    "speaker": "Malek",
+                    "ar": "ايو، أوّل يوم إلي هان.",
+                    "en": "Yes, it’s my first day here."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "لَمَّا أَتْأَخَّر بَخُد تَكْسِي مُبَاشِر.",
-                    en: "When I’m late I take a taxi directly.",
-                },
-
-                // Scene 2 – Asking about time and traffic
-                {
-                    speaker: "Mark",
-                    ar: "قَدِّيش بِيِأَخُد وَقْت مِن مَحَطَّة السِّرْفِيس لَهْنَاك؟",
-                    en: "How long does it take from the service station to there?",
+                    "speaker": "Rasha",
+                    "ar": "ولا يهمّك. بتِرْكَب باص رَقم تْمانْيِة مِن مَوقِف الباصات.",
+                    "en": "No worries. You take bus number 8 from the bus stop."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "إِذَا مَا فِيش زَحْمَة، حَوَالِي رُبِع سَاعَة. بَسّ عَلَى الزَّحْمَة بِيِصِير نُصّ سَاعَة.",
-                    en: "If there is no traffic, about a quarter of an hour. But with traffic it becomes half an hour.",
+                    "speaker": "Malek",
+                    "ar": "وين بَلاقي مَوقِف الباص بالْزَّبْط؟",
+                    "en": "Where exactly can I find the bus stop?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "إِحْنَا مَا بِنْحِبّ نِتْأَخَّر، فَأَحْسَن نِطْلَع بَكِّير شْوَيّ.",
-                    en: "We don’t like to be late, so it’s better if we leave a bit early.",
-                },
-
-                // Scene 3 – At the service station
-                {
-                    speaker: "Narrator",
-                    ar: "بُكْرَا الصُّبِح، رُوبَا وَمَارْك وَيَارَا رَاحُوا عَلَى مَحَطَّة السِّرْفِيس.",
-                    en: "The next morning, Roba, Mark, and Yara went to the service station.",
+                    "speaker": "Rasha",
+                    "ar": "إمشِي دُغري قُدّامَك تقريبًا دَقِيقْتين، بَعْدين خُد يَمين.",
+                    "en": "Walk straight ahead for about two minutes, then turn right."
                 },
                 {
-                    speaker: "Omar",
-                    ar: "صَبَاح الْخِير، وَيْن رَايْحِين؟",
-                    en: "Good morning, where are you going?",
+                    "speaker": "Rasha",
+                    "ar": "المَوقِف قُدّام مَحل الخُضرة، ما بِتِضِيع.",
+                    "en": "The stop is in front of the vegetable store, you can’t miss it."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "صَبَاح النُّور. بَدَّنَا سِرْفِيس عَلَى مَنْطِقَة الْجَامْعَة الْجْدِيدَة.",
-                    en: "Good morning. We need a service to the new university area.",
+                    "speaker": "Malek",
+                    "ar": "تمام. ولَمّا أركَب الباص، بِنْزِل قُدّام الجامْعَة؟",
+                    "en": "Okay. And when I get on the bus, do I get off in front of the university?"
                 },
                 {
-                    speaker: "Omar",
-                    ar: "فِي خَطّ مُبَاشِر، بَسّ مُكَن مَلَان. اِسْتَنُّوا شْوَيّ لَحَدّ مَا يِفْضَى مَحَلّ.",
-                    en: "There is a direct line, but the car is full. Wait a bit until a place is free.",
+                    "speaker": "Rasha",
+                    "ar": "ايو، واحْكي لِلسَّوّاق: بدي انزل قُدّام الجامْعَة لو سَمَحْت.",
+                    "en": "Yes, and tell the driver: I get off in front of the university, please."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "قَدِّيش بِيِأَخُد وَقْت لَهْنَاك؟",
-                    en: "How long does it take to get there?",
+                    "speaker": "Malek",
+                    "ar": "قَدّيش بِيخُد وقت لما أوصَل؟",
+                    "en": "How long does it take to get there?"
                 },
                 {
-                    speaker: "Omar",
-                    ar: "حَوَالِي عِشْر دَقَايِق إِذَا مَا فِيش زَحْمَة.",
-                    en: "About ten minutes if there is no traffic.",
+                    "speaker": "Rasha",
+                    "ar": "إِذا ما في زَحْمَة، تقريبًا رُبُع ساعَة.",
+                    "en": "If there’s no traffic, about fifteen minutes."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "وَبِكَم السِّرْفِيس لِلشَّخْص؟",
-                    en: "And how much is the service per person?",
+                    "speaker": "Malek",
+                    "ar": "وبِالنِّسْبَة لِوقْت الرَّجْعَة؟ نَفْس الباص؟",
+                    "en": "And for coming back? The same bus?"
                 },
                 {
-                    speaker: "Omar",
-                    ar: "خَمْس شَوَاكِل لِلرَّاكِب.",
-                    en: "Five shekels per passenger.",
-                },
-
-                // Scene 4 – Inside the service
-                {
-                    speaker: "Narrator",
-                    ar: "بَعْد شْوَيّ، رُوبَا وَأَصْحَابْهَا رَكْبُوا السِّرْفِيس.",
-                    en: "After a bit, Roba and her friends got on the service.",
+                    "speaker": "Rasha",
+                    "ar": "إي، في مَوقِف صْغير قُدّام الجامْعَة، بتركب مِن هُناك.",
+                    "en": "Yes, there’s a small stop in front of the university, you get on from there."
                 },
                 {
-                    speaker: "Driver",
-                    ar: "تْفَضَّلُوا، فِيه مَحَلّ وَرَا.",
-                    en: "Go ahead, there is space at the back.",
+                    "speaker": "Malek",
+                    "ar": "لو حَبّيت آخُد تاكسي؟",
+                    "en": "What if I want to take a taxi?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "لَوْ سَمَحْت، بَنْزِل قُدَّام مَدْخَل الْجَامْعَة.",
-                    en: "Please, I’ll get off in front of the university entrance.",
+                    "speaker": "Rasha",
+                    "ar": "بِزَبُط، بس التاكسي أَغْلى. إسأل السَّوّاق: قَدّيش بياخد لَلجامْعَة؟",
+                    "en": "You can, but the taxi is more expensive. Ask the driver: How much is the fare to the university?"
                 },
                 {
-                    speaker: "Driver",
-                    ar: "مَا شِي، بَس لَمَّا نُوصَل نَادِينِي.",
-                    en: "Okay, just call me when we arrive.",
+                    "speaker": "Malek",
+                    "ar": "في بَاصات غير رَقم تْمانْيِة؟",
+                    "en": "Are there any other buses besides number 8?"
                 },
                 {
-                    speaker: "Mark",
-                    ar: "الصُّبِح كُلّ الشَّوَارِع زَحْمَة، صَحّ؟",
-                    en: "In the morning all the streets are full of traffic, right?",
+                    "speaker": "Rasha",
+                    "ar": "في رَقم عَشْرَة بيمُرّ قُدّام الجامْعَة كمان، بس بِيأخُد وقت أكْتَر.",
+                    "en": "Bus number 10 also passes by the university, but it takes longer."
                 },
                 {
-                    speaker: "Driver",
-                    ar: "أَه، خُصُوصًا يَوْم الأَحَد. كُلّ النَّاس رَايْحَة عَلَى الشُّغُل وَالْمَدَارِس.",
-                    en: "Yes, especially on Sunday. Everyone is going to work and schools.",
-                },
-
-                // Scene 5 – Crossing the street & walking
-                {
-                    speaker: "Narrator",
-                    ar: "بَعْد عِشْر دَقَايِق، وِصْلُوا قُدَّام مَدْخَل الْجَامْعَة وَنَزِلُوا.",
-                    en: "After ten minutes, they arrived in front of the university entrance and got off.",
+                    "speaker": "Malek",
+                    "ar": "طيب لو ضِعت؟ في مكان معروف قريب مِن الجامْعَة؟",
+                    "en": "Okay if I get lost? Is there a famous landmark near the university?"
                 },
                 {
-                    speaker: "Yara",
-                    ar: "هَلَّقْ بَنَقَطِّع الشَّارِع، بَعْدِين بَنِمْشِي شْوَيّ لَحَدّ الْقَاعَة.",
-                    en: "Now we’ll cross the street, then walk a bit until the classroom.",
+                    "speaker": "Rasha",
+                    "ar": "إي، في مَكتَبَة كْبيرة قُدّام الباب الرَّئيسي، إسأل عَنها.",
+                    "en": "Yes, there’s a big library in front of the main gate, ask about it."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا بَحِبّ أَمْشِي لَمَّا الْجَوّ حِلُو، مَو دَايْمًا أَرْكَب.",
-                    en: "I like to walk when the weather is nice; I don’t always ride.",
+                    "speaker": "Malek",
+                    "ar": "وبالنِّسْبَة للباص… وين أَدْفَع الأُجْرَة؟",
+                    "en": "And for the bus… where do I pay the fare?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "بِهَيْك رِحْلَة صْغِيرَة حَسِّيت إِنِّي سَافَرْت مَعْكُم.",
-                    en: "With this small trip I felt like I traveled with you.",
-                },
-
-                // Scene 6 – Wrap-up in class
-                {
-                    speaker: "Teacher",
-                    ar: "مُمْتَاز، هَيْك اِسْتَخْدَمْنَا كَلِمَات الْمُوَاصَلَات فِي مَوْقِف حَقِيقِي.",
-                    en: "Excellent, this way we used transportation words in a real situation.",
+                    "speaker": "Rasha",
+                    "ar": "لِلسَّوّاق مُباشَرَةً. بَتِحكيلو وين بدّك تنزِل.",
+                    "en": "To the driver directly. You just tell him where you want to get off."
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "هَلَّق كُلّ وَاحَد بَدُّه يِشْرَح كِيف بِيِرُوح مِن بَيْتُه عَلَى أَقْرَب مَكَان مُهِمّ.",
-                    en: "Now each of you must explain how you go from your house to the nearest important place.",
+                    "speaker": "Malek",
+                    "ar": "قدّيش تقريبا الأجرة؟",
+                    "en": "How much is the fare approximately?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "شُكْرًا أُسْتَاذ، الْوَحْدَة خَلَّتْنَا نِتْخَيَّل الْمَدِينَة وَاحْنَا جُوَّا السِّرْفِيس.",
-                    en: "Thank you, teacher, the unit made us imagine the city while we were inside the service.",
+                    "speaker": "Rasha",
+                    "ar": "شي ٣ شيكِل أو ٤ حسب الطَّريق.",
+                    "en": "Around 3 or 4 shekels depending on the route."
                 },
-            ],
-        },
+                {
+                    "speaker": "Malek",
+                    "ar": "لو ما كان معي فِكَّة؟",
+                    "en": "What if I don’t have change?"
+                },
+                {
+                    "speaker": "Rasha",
+                    "ar": "السّوّاق بِصَرْف، بس أَحْسَن تْكُون جاهِز.",
+                    "en": "The driver can give change, but it’s better to be prepared."
+                },
+                {
+                    "speaker": "Malek",
+                    "ar": "في مواعيد مُعَيَّنة لِلوَصول والرَّواح؟",
+                    "en": "Are there specific timings for going and returning?"
+                },
+                {
+                    "speaker": "Rasha",
+                    "ar": "الباصات بِتِمشي كُلّ رُبع ساعَة تقريبًا، خُصوصًا الصُّبح.",
+                    "en": "Buses run about every 15 minutes, especially in the morning."
+                },
+                {
+                    "speaker": "Malek",
+                    "ar": "مُمْكِن أتأخّر لو طُلع مَليان؟",
+                    "en": "Can I get delayed if the bus is full?"
+                },
+                {
+                    "speaker": "Rasha",
+                    "ar": "إي، بِصير كتير. أحيانًا لازم تِسْتَنّى اللي بعدُه.",
+                    "en": "Yes, often. Sometimes you have to wait for the next one."
+                },
+                {
+                    "speaker": "Malek",
+                    "ar": "تمام فهمت عليكي.",
+                    "en": "Okay, I understand."
+                },
+                {
+                    "speaker": "Rasha",
+                    "ar": "إذا بِدّك، أنا كمان بروح عالجامْعَة، بقدَر أخُدَك معي اليوم.",
+                    "en": "If you want, I also go to the university, I can take you with me today."
+                },
+                {
+                    "speaker": "Malek",
+                    "ar": "والله تِسْلَمي! عنجد ساعدتيني.",
+                    "en": "Wow thank you! You really helped me."
+                },
+                {
+                    "speaker": "Rasha",
+                    "ar": "وَلا يِهِمّك، وَصَلْنا! خلّينا نروح سَوّاً.",
+                    "en": "You’re welcome, come on! Let’s go together."
+                }
+            ]
+        }
+        ,
 
         // ====================================
         // GRAMMAR
@@ -3256,7 +3887,6 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
     // Inside your defaultLessons literal:
     [LESSON_ID_WORK_STUDY]: {
         meta: {
@@ -3283,22 +3913,34 @@ const defaultLessons = {
         // ====================================
         vocabulary: {
             core: [
-                // ===== PLACES & PEOPLE =====
+                // ===== STUDENTS, PEOPLE & PLACES =====
+                {
+                    id: "taleb",
+                    ar: "طالِب / طالْبِة",
+                    en: "student (m/f)",
+                    enArabeezy: "Taleb / Talbe",
+                    hint: "Person who studies at school or university.",
+                    exampleAr: "أنا طالْبَة جامْعِيّة.",
+                    exampleEn: "I am a university student.",
+                },
                 {
                     id: "madraseh",
                     ar: "مَدْرَسَة",
                     en: "school",
+                    enArabeezy: "madraseh",
                     hint:
-                        "Plural: مَدَارِس (schools). ‘My school’ = مَدْرَسْتِي. Used for primary / secondary school.",
-                    exampleAr: "أَخُوي لِسَّا فِي الْمَدْرَسَة، بْيِدْرُس صَفّ تَّاسِع.",
+                        "Plural: مَدَارِس. ‘My school’ = مَدْرَسْتِي. Used for primary / secondary school.",
+                    exampleAr:
+                        "أَخُوي لِسَّا فِي الْمَدْرَسَة، بْيِدْرُس صَفّ تَّاسِع.",
                     exampleEn: "My brother is still in school; he studies in ninth grade.",
                 },
                 {
                     id: "jame3a",
                     ar: "جَامْعَة",
                     en: "university",
+                    enArabeezy: "jame3a",
                     hint:
-                        "Plural: جَامْعَات. ‘My university’ = جَامْعْتِي. You can add city: جَامْعَة غَزَّة، جَامْعَة بِيِرْزَيْت.",
+                        "Plural: جَامْعَات. ‘My university’ = جَامْعْتِي. You can add the city name.",
                     exampleAr: "أَنَا بَدْرُس فِي جَامْعَة غَزَّة.",
                     exampleEn: "I study at Gaza University.",
                 },
@@ -3306,26 +3948,110 @@ const defaultLessons = {
                     id: "qism",
                     ar: "قِسْم",
                     en: "department",
+                    enArabeezy: "qism",
                     hint:
                         "Plural: أَقْسَام. قِسْم الْهَنْدَسَة، قِسْم اللُّغَات، قِسْم الْحَاسُوب.",
                     exampleAr: "أَنَا فِي قِسْم الْهَنْدَسَة الْكَهْرَبَائِيَّة.",
                     exampleEn: "I am in the electrical engineering department.",
                 },
                 {
+                    id: "maktab",
+                    ar: "مَكْتَب",
+                    en: "office / desk",
+                    enArabeezy: "maktab",
+                    hint: "Office at work or a desk.",
+                    exampleAr: "بِشْتِغِل في مَكْتَب صْغير بِالشِّرْكَة.",
+                    exampleEn: "I work in a small office at the company.",
+                },
+                {
+                    id: "sherkeh",
+                    ar: "شِرْكَة",
+                    en: "company",
+                    enArabeezy: "sherkeh",
+                    hint: "Workplace, company.",
+                    exampleAr: "أَبوي بِشْتِغِل في شِرْكَة خُصوصِيّة.",
+                    exampleEn: "My father works in a private company.",
+                },
+                {
+                    id: "mu3allem",
+                    ar: "مُعَلِّم / مُعَلِّمَة",
+                    en: "teacher (m/f)",
+                    enArabeezy: "mu3allem / mu3allmeh",
+                    hint:
+                        "Spoken synonym of أُسْتَاذ. Used for school / institute teachers.",
+                    exampleAr: "مُعَلِّمَة الرِّيَاضِيَّات كْتِير شَاطْرَة.",
+                    exampleEn: "The math teacher is very good.",
+                },
+                {
+                    id: "zamil",
+                    ar: "زْمِيل / زْمِيلَة",
+                    en: "classmate / colleague (m/f)",
+                    enArabeezy: "zmiil / zmileh",
+                    hint:
+                        "Plural: زْمَلَا. Used for study or work colleagues.",
+                    exampleAr:
+                        "زْميلي في الشُّغُل بيساعِدْني كْثير.",
+                    exampleEn: "My colleague at work helps me a lot.",
+                },
+                {
+                    id: "mudir",
+                    ar: "مُدِير / مُدِيرَة",
+                    en: "manager / director",
+                    enArabeezy: "mudiir / mudiireh",
+                    hint: "Used in work or school context. Plural: مُدَرَا.",
+                    exampleAr:
+                        "مُدِير الشُّغُل عِنْدُه اِجْتِمَاع كُلّ يَوْم إِثْنَيْن.",
+                    exampleEn:
+                        "The manager at work has a meeting every Monday.",
+                },
+                {
+                    id: "muwazzaf",
+                    ar: "مُوَظَّف / مُوَظَّفِة",
+                    en: "employee (m/f)",
+                    enArabeezy: "muwazzaf / muwazzafeh",
+                    hint: "Person who works in an office, bank, company, etc.",
+                    exampleAr: "أُخوي مُوَظَّف في بَنْك.",
+                    exampleEn: "My brother is an employee in a bank.",
+                },
+                {
+                    id: "mohandes",
+                    ar: "مُهَنْدِس / مُهَنْدِسَة",
+                    en: "engineer (m/f)",
+                    enArabeezy: "mohandes / mohandeseh",
+                    hint: "Profession (software, civil, electrical…).",
+                    exampleAr:
+                        "بِدْرُس عَشان أَصير مُهَنْدِسَة بَرْمَجِيّات.",
+                    exampleEn: "I study so I can become a software engineer.",
+                },
+                {
+                    id: "mumarriD",
+                    ar: "مُمَرِّض / مُمَرِّضَة",
+                    en: "nurse (m/f)",
+                    enArabeezy: "mumarriD / mumarriDa",
+                    hint: "Health profession.",
+                    exampleAr: "أُختي مُمَرِّضَة في مُسْتَشْفَى.",
+                    exampleEn: "My sister is a nurse in a hospital.",
+                },
+
+                // ===== STUDY TOOLS & ACADEMIC THINGS =====
+                {
                     id: "daftar",
                     ar: "دَفْتَر",
                     en: "notebook",
-                    hint:
-                        "Plural: دَفَاتِر. ‘my notebook’ = دَفْتَرِي.",
-                    exampleAr: "بَكْتُب مْلَاحَظَات فِي دَفْتَر خَاصّ لِكُلّ مَادَّة.",
-                    exampleEn: "I write notes in a special notebook for each subject.",
+                    enArabeezy: "daftar",
+                    hint: "Plural: دَفَاتِر. ‘My notebook’ = دَفْتَرِي.",
+                    exampleAr:
+                        "بَكْتُب مْلَاحَظَات فِي دَفْتَر خَاصّ لِكُلّ مَادَّة.",
+                    exampleEn:
+                        "I write notes in a special notebook for each subject.",
                 },
                 {
                     id: "qalam",
                     ar: "قَلَم",
                     en: "pen",
+                    enArabeezy: "qalam",
                     hint:
-                        "Plural: أَقْلَام. قَلَم رَصَاص (pencil)، قَلَم حِبْر (ink pen).",
+                        "Plural: أَقْلَام. قَلَم رَصَاص = pencil, قَلَم حِبْر = ink pen.",
                     exampleAr: "دَايْمًا بَنْسَى قَلَمِي فِي الْقَاعَة.",
                     exampleEn: "I always forget my pen in the classroom.",
                 },
@@ -3333,55 +4059,30 @@ const defaultLessons = {
                     id: "kumbyuter",
                     ar: "كُمْبْيُوتِر / لَابْتُوب",
                     en: "computer / laptop",
-                    hint:
-                        "Used a lot for online study and work. Plural: لَابْتُوبَات.",
-                    exampleAr: "بَدْرُس وَبَشْتِغِل أُونْلَايْن عَلَى اللَّابْتُوب.",
+                    enArabeezy: "kombyuter / laptop",
+                    hint: "Used a lot for online study and work.",
+                    exampleAr:
+                        "بَدْرُس وَبَشْتِغِل أُونْلَايْن عَلَى اللَّابْتُوب.",
                     exampleEn: "I study and work online on the laptop.",
                 },
-                {
-                    id: "mu3allem",
-                    ar: "مُعَلِّم / مُعَلِّمَة",
-                    en: "teacher",
-                    hint:
-                        "Spoken synonym of أُسْتَاذ. Masc: مُعَلِّم، fem: مُعَلِّمَة.",
-                    exampleAr: "مُعَلِّمَة الرِّيَاضِيَّات كْتِير شَاطْرَة.",
-                    exampleEn: "The math teacher is very good.",
-                },
-                {
-                    id: "zamel",
-                    ar: "زْمِيل / زْمِيلَة",
-                    en: "classmate / colleague",
-                    hint:
-                        "Plural: زْمَلَا. Used for study or work: زْمِيلِي فِي الشُّغُل.",
-                    exampleAr: "عِنْدِي زْمِيلَة مِن إِيطَالْيَا بِتِدْرُس عَرَبِي.",
-                    exampleEn: "I have a classmate from Italy who studies Arabic.",
-                },
-                {
-                    id: "mudir",
-                    ar: "مُدِير / مُدِيرَة",
-                    en: "manager / director",
-                    hint:
-                        "Work context. Plural: مُدَرَا.",
-                    exampleAr: "مُدِير الشُّغُل عِنْدُه اِجْتِمَاع كُلّ يَوْم إِثْنَيْن.",
-                    exampleEn: "The manager at work has a meeting every Monday.",
-                },
-
-                // ===== STUDY THINGS =====
                 {
                     id: "mawdoo3",
                     ar: "مَوْضُوع",
                     en: "topic / subject (theme)",
+                    enArabeezy: "mawDoo3",
                     hint:
-                        "Plural: مَوَاضِيع. Used for essay topics, speaking topics, etc.",
-                    exampleAr: "الْيَوْم مَوْضُوع الدَّرْس هُوَّ الشُّغُل وَالدِّرَاسَة.",
+                        "Plural: مَوَاضِيع. Used for essay topics, project topics, etc.",
+                    exampleAr:
+                        "الْيَوْم مَوْضُوع الدَّرْس هُوَّ الشُّغُل وَالدِّرَاسَة.",
                     exampleEn: "Today the lesson topic is work and study.",
                 },
                 {
                     id: "mawadd",
                     ar: "مَوَادّ",
                     en: "subjects (school/university)",
+                    enArabeezy: "mawaadd",
                     hint:
-                        "Plural word already. Singular مَادَّة = one subject.",
+                        "Plural word already. Singular مَادَّة = one subject / course.",
                     exampleAr: "عِنْدِي تَلَات مَوَادّ هَالْسِّمِسْتِر.",
                     exampleEn: "I have three subjects this semester.",
                 },
@@ -3389,91 +4090,144 @@ const defaultLessons = {
                     id: "imti7an",
                     ar: "اِمْتِحَان",
                     en: "exam / test",
+                    enArabeezy: "imti7an",
                     hint:
                         "Plural: اِمْتِحَانَات. ‘final exam’ = اِمْتِحَان نِهَائِي.",
-                    exampleAr: "الأُسْبُوع الْجَاي عِنْدِي اِمْتِحَان مُهِمّ.",
+                    exampleAr: "الأُسْبوع الْجَاي عِنْدِي اِمْتِحَان مُهِمّ.",
                     exampleEn: "Next week I have an important exam.",
                 },
                 {
                     id: "wajeb",
                     ar: "وَاجِب",
                     en: "homework / assignment",
+                    enArabeezy: "wajeb",
                     hint:
                         "Plural: وَاجْبَات. In spoken Arabic ‘homework’ is usually وَاجِب.",
-                    exampleAr: "الأُسْتَاذ بْيِعْطِينَا وَاجِب بَعْد كُلّ دَرْس.",
+                    exampleAr:
+                        "الأُسْتَاذ بْيِعْطِينَا وَاجِب بَعْد كُلّ دَرْس.",
                     exampleEn: "The teacher gives us homework after every lesson.",
                 },
                 {
                     id: "mashroo3",
                     ar: "مَشْرُوع",
                     en: "project",
+                    enArabeezy: "mashroo3",
                     hint:
                         "Plural: مَشَارِيع. مَشْرُوع تَّخَرُّج = graduation project.",
-                    exampleAr: "هَادَا أَوَّل مَشْرُوع بَسَوِّيه فِي الْجَامْعَة.",
+                    exampleAr:
+                        "هَادَا أَوَّل مَشْرُوع بَسَوِّيه فِي الْجَامْعَة.",
                     exampleEn: "This is the first project I do at university.",
                 },
                 {
-                    id: "ijtema3",
-                    ar: "اِجْتِمَاع",
-                    en: "meeting",
-                    hint:
-                        "Plural: اِجْتِمَاعَات. Work or study meeting.",
-                    exampleAr: "بْنِعْمِل اِجْتِمَاع فِرِيق كُلّ أُسْبُوع.",
-                    exampleEn: "We do a team meeting every week.",
+                    id: "mu7adara",
+                    ar: "مُحاضَرَة",
+                    en: "lecture / class session",
+                    enArabeezy: "mu7aDara",
+                    hint: "University / college lesson.",
+                    exampleAr: "عندي مُحاضَرَة ساعَتَيْن اليوم.",
+                    exampleEn: "I have a two-hour lecture today.",
+                },
+                {
+                    id: "istira7a",
+                    ar: "اِسْتِراحَة",
+                    en: "break",
+                    enArabeezy: "istira7a",
+                    hint: "Pause from work or class.",
+                    exampleAr:
+                        "بِنْخُد اِسْتِراحَة صْغيرَة بَين المُحاضَرات.",
+                    exampleEn: "We take a short break between the lectures.",
                 },
 
-                // ===== WORK WORDS =====
+                // ===== WORK & JOB WORDS =====
                 {
                     id: "shoghol",
                     ar: "شُغُل",
                     en: "work / job",
+                    enArabeezy: "shoghol",
                     hint:
                         "Can mean ‘work’ in general or a job. ‘I have work’: عِنْدِي شُغُل.",
-                    exampleAr: "بَشْتِغِل وَبَدْرُس فِي نَفْس الْوَقْت، عِنْدِي شُغُل جُزْئِي.",
-                    exampleEn: "I work and study at the same time; I have a part-time job.",
+                    exampleAr:
+                        "بَشْتِغِل وَبَدْرُس فِي نَفْس الْوَقْت، عِنْدِي شُغُل جُزْئِي.",
+                    exampleEn:
+                        "I work and study at the same time; I have a part-time job.",
                 },
                 {
                     id: "wazifeh",
                     ar: "وَظِيفَة",
                     en: "job / position",
+                    enArabeezy: "waZiifeh",
                     hint:
                         "Plural: وَظَايِف. More formal than شُغُل.",
-                    exampleAr: "الْكُلّ بِيِدَوِّر عَلَى وَظِيفَة مُنَاسْبَة بَعْد التَّخَرُّج.",
-                    exampleEn: "Everyone looks for a suitable job after graduation.",
+                    exampleAr:
+                        "الْكُلّ بِيِدَوِّر عَلَى وَظِيفَة مُنَاسْبَة بَعْد التَّخَرُّج.",
+                    exampleEn:
+                        "Everyone looks for a suitable job after graduation.",
                 },
                 {
                     id: "duwam",
-                    ar: "دْوَام",
+                    ar: "دْوَام / دَوام",
                     en: "working hours / shift",
-                    hint:
-                        "دْوَام صَبَاحِي، دْوَام كَامِل، دْوَام جُزْئِي.",
-                    exampleAr: "دْوَام الشُّغُل مِن السَّاعَة تَمْنْيَة لِلسَّاعَة أَرْبَعَة.",
+                    enArabeezy: "dawam",
+                    hint: "دْوَام صَبَاحِي، دْوَام كَامِل، دْوَام جُزْئِي.",
+                    exampleAr:
+                        "دْوَام الشُّغُل مِن السَّاعَة تَمْنْيَة لِلسَّاعَة أَرْبَعَة.",
                     exampleEn: "Working hours are from eight to four.",
                 },
+                {
+                    id: "dawam_kamel",
+                    ar: "بِدَوَّام كامِل",
+                    en: "full-time",
+                    enArabeezy: "bidawwam_kamel",
+                    hint: "Full-time work or study schedule.",
+                    exampleAr: "أَبوي بِشْتِغِل بِدَوَّام كامِل.",
+                    exampleEn: "My father works full-time.",
+                },
+                {
+                    id: "dawam_joz2i",
+                    ar: "دَوام جُزْئِي",
+                    en: "part-time",
+                    enArabeezy: "dawam_joz2i",
+                    hint: "Part-time work or job.",
+                    exampleAr: "أنا طالِب وبَشْتِغِل دَوام جُزْئِي.",
+                    exampleEn: "I’m a student and I work part-time.",
+                },
 
-                // ===== VERBS (STUDY/WORK) =====
+                // ===== STUDY & WORK VERBS =====
                 {
                     id: "badros",
                     ar: "بَدْرُس",
                     en: "I study",
+                    enArabeezy: "badros",
                     hint:
                         "From دَرَس = to study. Used with subject or field: بَدْرُس عَرَبِي / هَنْدَسَة / طِبّ.",
                     exampleAr: "بَدْرُس حَاسُوب فِي الْجَامْعَة.",
                     exampleEn: "I study computer science at university.",
                 },
                 {
+                    id: "yidros",
+                    ar: "يِدْرُس",
+                    en: "to study",
+                    enArabeezy: "yidros",
+                    hint: "Dictionary verb form ‘to study’.",
+                    exampleAr: "بَدْرُس كُمْبْيُوتِر سايِنْس.",
+                    exampleEn: "I study computer science.",
+                },
+                {
                     id: "bat3allam",
                     ar: "بَتْعَلَّم",
                     en: "I learn",
+                    enArabeezy: "bat3allam",
                     hint:
                         "From تَعَلَّم = to learn. More general than ‘study’.",
-                    exampleAr: "بَتْعَلَّم اللُّغَة الْعَرَبِيَّة وَاللُّغَة الإِنْجْلِيزِيَّة.",
+                    exampleAr:
+                        "بَتْعَلَّم اللُّغَة الْعَرَبِيَّة وَاللُّغَة الإِنْجْلِيزِيَّة.",
                     exampleEn: "I am learning Arabic and English.",
                 },
                 {
                     id: "bas2al",
                     ar: "بَسْأَل",
                     en: "I ask (a question)",
+                    enArabeezy: "bas2al",
                     hint:
                         "From سَأَل = to ask. Used a lot in class: بَسْأَل الأُسْتَاذ.",
                     exampleAr: "لَمَّا مَا أَفْهَم بَسْأَل الأُسْتَاذ.",
@@ -3483,26 +4237,31 @@ const defaultLessons = {
                     id: "bafham",
                     ar: "بَفْهَم",
                     en: "I understand",
+                    enArabeezy: "bafham",
                     hint:
                         "From فَهِم = to understand. Negative: مَا بَفْهَم.",
-                    exampleAr: "أَحْيَانًا بَفْهَم الدَّرْس، أَحْيَانًا بَحْتَاج تِّكْرَار.",
-                    exampleEn: "Sometimes I understand the lesson, sometimes I need repetition.",
+                    exampleAr:
+                        "أَحْيَانًا بَفْهَم الدَّرْس، أَحْيَانًا بَحْتَاج تِّكْرَار.",
+                    exampleEn:
+                        "Sometimes I understand the lesson, sometimes I need repetition.",
                 },
                 {
-                    id: "bakmel",
+                    id: "bakammel",
                     ar: "بَكَمِّل",
-                    en: "I continue / I finish (a degree/level)",
-                    hint:
-                        "Chunk: بَكَمِّل دِرَاسَة، بَكَمِّل مَشْرُوع.",
-                    exampleAr: "بَكَمِّل مُسْتَوَى أَوَّل فِي اللُّغَة الْفِلَسْطِينِيَّة.",
+                    en: "I continue / I complete",
+                    enArabeezy: "bakammel",
+                    hint: "Chunk: بَكَمِّل دِرَاسَة، بَكَمِّل مَشْرُوع.",
+                    exampleAr:
+                        "بَكَمِّل مُسْتَوَى أَوَّل فِي اللُّغَة الْفِلَسْطِينِيَّة.",
                     exampleEn: "I am completing level one in Palestinian Arabic.",
                 },
                 {
                     id: "banja7",
                     ar: "بَنْجَح",
                     en: "I pass / I succeed",
+                    enArabeezy: "banja7",
                     hint:
-                        "Used with exams/subjects. Opposite: بَرْسُب = I fail (repeat).",
+                        "Used with exams/subjects. Opposite: بَرْسُب = I fail.",
                     exampleAr: "بَنْجَح فِي الاِمْتِحَان إِذَا بَدْرُس مْنِيح.",
                     exampleEn: "I pass the exam if I study well.",
                 },
@@ -3510,37 +4269,64 @@ const defaultLessons = {
                     id: "barsob",
                     ar: "بَرْسُب",
                     en: "I fail (a subject / exam)",
-                    hint:
-                        "From رَسَب = to fail. Sensitive word, use carefully.",
-                    exampleAr: "مَا بَدِّي أَرْسُب، عَشَان هَيْك بَدْرُس كْتِير.",
+                    enArabeezy: "barsob",
+                    hint: "From رَسَب = to fail. Sensitive word, use carefully.",
+                    exampleAr:
+                        "مَا بَدِّي أَرْسُب، عَشَان هَيْك بَدْرُس كْتِير.",
                     exampleEn: "I don’t want to fail, so I study a lot.",
                 },
                 {
                     id: "bashteghil",
                     ar: "بَشْتِغِل",
                     en: "I work",
+                    enArabeezy: "bashteghil",
                     hint:
                         "Spoken verb for ‘work’. Add where or how: بَشْتِغِل أُونْلَايْن، بَشْتِغِل فِي مَكْتَب.",
-                    exampleAr: "بَشْتِغِل مُدَرِّسَة جُزْئِيّ وَبَدْرُس كَمَان.",
+                    exampleAr:
+                        "بَشْتِغِل مُدَرِّسَة جُزْئِيّ وَبَدْرُس كَمَان.",
                     exampleEn: "I work part-time as a teacher and study as well.",
                 },
                 {
-                    id: "badrreb",
+                    id: "yishtaghel",
+                    ar: "يِشْتِغِل",
+                    en: "to work",
+                    enArabeezy: "yishtaghel",
+                    hint: "Dictionary verb form ‘to work’.",
+                    exampleAr: "بَشْتِغِل جُزْئِي بَعْد الجامْعَة.",
+                    exampleEn: "I work part-time after university.",
+                },
+                {
+                    id: "badarreb",
                     ar: "بَدَرِّب",
                     en: "I train / I give training",
+                    enArabeezy: "badarreb",
                     hint:
-                        "From دَرَّب = to train. For giving courses.",
-                    exampleAr: "بَدَرِّب طُلَّاب أَجَانِب عَلَى اللُّغَة الْفِلَسْطِينِيَّة.",
-                    exampleEn: "I train foreign students in Palestinian Arabic.",
+                        "From دَرَّب = to train. For giving courses/workshops.",
+                    exampleAr:
+                        "بَدَرِّب طُلَّاب أَجَانِب عَلَى اللُّغَة الْفِلَسْطِينِيَّة.",
+                    exampleEn:
+                        "I train foreign students in Palestinian Arabic.",
                 },
                 {
                     id: "badarris",
                     ar: "بَدَرِّس",
                     en: "I teach",
+                    enArabeezy: "badarris",
                     hint:
-                        "From دَرَّس = to teach. Teacher speaking: أَنَا بَدَرِّس عَرَبِي أُونْلَايْن.",
-                    exampleAr: "أَنَا بَدَرِّس عَرَبِي لِطُلَّاب مِن دُوَل مُخْتَلِفَة.",
-                    exampleEn: "I teach Arabic to students from different countries.",
+                        "From دَرَّس = to teach. Teacher speaking about their job.",
+                    exampleAr:
+                        "أَنَا بَدَرِّس عَرَبِي لِطُلَّاب مِن دُوَل مُخْتَلِفَة.",
+                    exampleEn:
+                        "I teach Arabic to students from different countries.",
+                },
+                {
+                    id: "yitkharraj",
+                    ar: "يِتْخَرَّج",
+                    en: "to graduate",
+                    enArabeezy: "yitkharraj",
+                    hint: "Finish university or school.",
+                    exampleAr: "بَدّي أِتْخَرَّج السَّنِة الجاي.",
+                    exampleEn: "I want to graduate next year.",
                 },
             ],
 
@@ -3549,8 +4335,8 @@ const defaultLessons = {
                     id: "youm_dirasah",
                     ar: "يَوْم دِرَاسَة",
                     en: "school / study day",
-                    hint:
-                        "Opposite: يَوْم إِجَازَة = day off.",
+                    enArabeezy: "youm_diraseh",
+                    hint: "Opposite: يَوْم إِجَازَة = day off.",
                     exampleAr: "الْخَمِيس عِنْدْنَا يَوْم دِرَاسَة طَوِيل.",
                     exampleEn: "On Thursday we have a long study day.",
                 },
@@ -3558,171 +4344,188 @@ const defaultLessons = {
                     id: "sabt_lakhmis",
                     ar: "مِن السَّبْت لِلْخَمِيس",
                     en: "from Saturday to Thursday",
+                    enArabeezy: "min_issabt_lil5amiis",
                     hint:
                         "Typical study/work week in many Arab countries.",
-                    exampleAr: "بَدْرُس مِن السَّبْت لِلْخَمِيس وَالجُمُعَة إِجَازَة.",
-                    exampleEn: "I study from Saturday to Thursday and Friday is off.",
+                    exampleAr:
+                        "بَدْرُس مِن السَّبْت لِلْخَمِيس وَالجُمُعَة إِجَازَة.",
+                    exampleEn:
+                        "I study from Saturday to Thursday and Friday is off.",
                 },
                 {
                     id: "mu3adal",
                     ar: "مُعَدَّل",
                     en: "average / GPA",
+                    enArabeezy: "mu3addal",
+                    hint: "Study context: مُعَدَّل عَالِي / مُنْخَفِض.",
+                    exampleAr:
+                        "بَدِّي مُعَدَّل عَالِي عَشَان أَلْقَى وَظِيفَة أَحْسَن.",
+                    exampleEn:
+                        "I want a high GPA so I can find a better job.",
+                },
+                {
+                    id: "mahameh",
+                    ar: "مَهَمّة",
+                    en: "task",
+                    enArabeezy: "mahameh",
+                    hint: "Task at work or for a project.",
+                    exampleAr:
+                        "كُل يَوم المُدير بِعْطيهِم مَهَمّات جْديدة.",
+                    exampleEn:
+                        "Every day the manager gives them new tasks.",
+                },
+                {
+                    id: "maw3ed",
+                    ar: "مَوعِد",
+                    en: "appointment / deadline",
+                    enArabeezy: "maw3ed",
+                    hint: "Time for a meeting or for submitting something.",
+                    exampleAr: "مَوعِد تَسْليم المَشْروع بُكْرَة.",
+                    exampleEn:
+                        "The deadline for submitting the project is tomorrow.",
+                },
+                {
+                    id: "lazem",
+                    ar: "لازِم",
+                    en: "must / have to",
+                    enArabeezy: "lazem",
+                    hint: "Used to express obligation.",
+                    exampleAr:
+                        "لازِم أَدْرُس كْثير لِلْاِمْتِحان.",
+                    exampleEn: "I must study a lot for the exam.",
+                },
+                {
+                    id: "ma_ba2dar",
+                    ar: "ما بَقْدَر",
+                    en: "I can’t / I’m not able",
+                    enArabeezy: "ma_ba2dar",
                     hint:
-                        "Study context: مُعَدَّل عَالِي / مُنْخَفِض.",
-                    exampleAr: "بَدِّي مُعَدَّل عَالِي عَشَان أَلْقَى وَظِيفَة أَحْسَن.",
-                    exampleEn: "I want a high GPA so I can find a better job.",
+                        "Used when you don’t have time, energy, or possibility.",
+                    exampleAr:
+                        "ما بَقْدَر أِطْلَع اليوم، عندي شُغُل.",
+                    exampleEn: "I can’t go out today, I have work.",
+                },
+                {
+                    id: "wa2t_faDi",
+                    ar: "وَقْت فاضي",
+                    en: "free time",
+                    enArabeezy: "wa2t_faDi",
+                    hint: "Time without work or study.",
+                    exampleAr: "ما عِنْدي وَقْت فاضي اليوم.",
+                    exampleEn: "I have no free time today.",
                 },
             ],
-        },
+        }
+        ,
 
         // ====================================
         // DIALOGUE (class + project + work + future)
         // ====================================
-        dialogue: {
-            lines: [
-                // Scene 1 – First day in a university class
+        "dialogue": {
+            "lines": [
                 {
-                    speaker: "Teacher",
-                    ar: "مَرْحَبَا جَمِيعًا، الْيَوْم دَرْس جْدِيد عَنِ الشُّغُل وَالدِّرَاسَة. يَلَّا نِتْعَرَّف.",
-                    en: "Hello everyone, today is a new lesson about work and study. Let’s get to know each other.",
+                    "speaker": "Majd",
+                    "ar": "صَباح الخير يا سارة، كِيف دَوامِك اليوم؟",
+                    "en": "Good morning, Sara, how is your schedule today?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "رُوبَا، بِتْقَدْرِي تِحْكِي لَنَا شُو بَدْرُسِي وَوَيْن؟",
-                    en: "Roba, can you tell us what and where you study?",
+                    "speaker": "Sara",
+                    "ar": "صَباح النّور يا مَجْد، دَوامي مَجْنون! عندي جامْعَة وَشُغُل.",
+                    "en": "Good morning, Majd, my schedule is crazy! I have university and work."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "أَنَا بَدْرُس هَنْدَسَة اِتِّصَالَات فِي جَامْعَة غَزَّة.",
-                    en: "I study communications engineering at Gaza University.",
+                    "speaker": "Majd",
+                    "ar": "جَدّ؟ وين بَشْتِغِلي؟",
+                    "en": "Really? Where do you work?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "مُمْتَاز. وَبِتْشْتِغْلِي كَمَان وَلَّا بَسّ دِرَاسَة؟",
-                    en: "Excellent. And do you also work or only study?",
+                    "speaker": "Sara",
+                    "ar": "بَشْتِغِل دَوام جُزْئِي في مَكْتَب بِشِرْكَة صْغيرَة.",
+                    "en": "I work part-time in an office at a small company."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "حالِيًّا بَتْعَلَّم كْتِير وَمَا بَشْتِغِل، بَسّ أَدْرُس شْوَيّ فْرِي لِلْفْرَنْت إِنْد.",
-                    en: "Right now I’m learning a lot and not working, but I study a bit of front-end in my free time.",
-                },
-
-                // Scene 2 – Mark & Yara, mixed work-study life
-                {
-                    speaker: "Teacher",
-                    ar: "مَارْك، وَإِنْتَ؟ شُو بَدْرُس وَشُو بِتْسَوِّي فِي الْحَيَاة؟",
-                    en: "Mark, and you? What do you study and what do you do in life?",
+                    "speaker": "Majd",
+                    "ar": "وَقت قَدّيش الدَّوام؟",
+                    "en": "How long are your work hours?"
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا بَدْرُس لُغَات، وَبَشْتِغِل جُزْئِيّ فِي مَكْتَب سِيَاحَة.",
-                    en: "I study languages and work part-time in a travel office.",
+                    "speaker": "Sara",
+                    "ar": "مِن التّْنين لَلخَميس، مِن السّاعَة تْنين لَلْخَمْسَة.",
+                    "en": "From Monday to Thursday, from two o’clock to five."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَحْيَانًا بَكُون تَعْبَان بَعْد الدْوَام، بَسّ بَحَاوِل أَدْرُس كُلّ يَوْم شْوَيّ.",
-                    en: "Sometimes I am tired after work, but I try to study a bit every day.",
+                    "speaker": "Majd",
+                    "ar": "وطَبْعًا قبل هيك عَندِك مُحاضَرات بِالجامْعَة؟",
+                    "en": "And of course before that you have lectures at the university?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "يَارَا، إِنْتِي بَتْدَرِّسِي وَلَّا بَسّ بَدْرُس؟",
-                    en: "Yara, do you teach or only study?",
+                    "speaker": "Sara",
+                    "ar": "إي، الصُّبِح بَدْرُس، وبَعْدين بَروح عَالشُّغُل.",
+                    "en": "Yes, in the morning I study, and then I go to work."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "أَنَا بَدَرِّس عَرَبِي أُونْلَايْن وَبَتْعَلَّم إِيطَالِيّ لِحَالِي.",
-                    en: "I teach Arabic online and learn Italian by myself.",
-                },
-
-                // Scene 3 – Talking about subjects & exams
-                {
-                    speaker: "Teacher",
-                    ar: "قَدِّيش مَوَادّ عِنْدْكُم هَالْسِّمِسْتِر؟",
-                    en: "How many subjects do you have this semester?",
+                    "speaker": "Majd",
+                    "ar": "ما بِتْحِسّ إنّو ما عِنْدِك وَقْت فاضي؟",
+                    "en": "Don’t you feel like you have no free time?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "عِنْدِي خَمْس مَوَادّ، فِيه مَادَّة صَعْبَة جِدًّا اِسْمْهَا نُظُم تَّشْغِيل.",
-                    en: "I have five subjects; there is a very difficult subject called Operating Systems.",
+                    "speaker": "Sara",
+                    "ar": "صِراحَةً، نادِرًا بْلاقي وَقْت فاضي. لاِزِم أَدْرُس لِلْمَشْروع وِلْاِمْتِحانات كْمان.",
+                    "en": "Honestly, I rarely find free time. I have to study for the project and for exams too."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا عِنْدِي تَلَات مَوَادّ لُغَة، وَاحِد عَنْ النَّحْو، وَاحِد عَنْ الْمُحَادَثَة.",
-                    en: "I have three language subjects: one about grammar and one about conversation.",
+                    "speaker": "Majd",
+                    "ar": "وشُو مَجال الشُّغُل؟",
+                    "en": "And what type of work is it?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "فِي اِمْتِحَانَات قَرِيبًا؟",
-                    en: "Do you have exams soon?",
+                    "speaker": "Sara",
+                    "ar": "مُساعَدَة إِداريّة، بَطَبِّع أَوْراق، بِرُدّ عَالتّليفون، وَبَساعِد المُوَظَّفين.",
+                    "en": "Administrative assistance: I print papers, answer the phone, and help the employees."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "أَه، الأُسْبُوع الْجَاي عِنْدِي اِمْتِحَان مُحَادَثَة، بَدْرُس كْلِمَات كْتِير.",
-                    en: "Yes, next week I have a speaking exam; I’m studying a lot of vocabulary.",
-                },
-
-                // Scene 4 – Project and team meeting
-                {
-                    speaker: "Teacher",
-                    ar: "هَلَّقْ خَلِّينَا نِحْكِي عَنِ الْمَشْرُوع. مِين بَطْلُب يِشْرَح فِرِيقُه؟",
-                    en: "Now let’s talk about the project. Who wants to explain their team?",
+                    "speaker": "Majd",
+                    "ar": "بِتْحِسّ إنّو الشُّغُل بيساعِدِك بِالدِّراسَة وَلّا بِتْعَبِك أكْتَر؟",
+                    "en": "Do you feel that the job helps you with your studies, or does it just tire you out more?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "إِحْنَا فِرِيق مِن تَلَات زْمَلَا، مَنِشْتِغِل عَلَى مَشْرُوع تَّخَرُّج صْغِير فِي الْوِيب.",
-                    en: "We are a team of three colleagues; we are working on a small graduation project in web.",
+                    "speaker": "Sara",
+                    "ar": "هُوَّ مُتْعِب، بَس كْمان بَتْعَلَّم مَهارات جْديدة.",
+                    "en": "It’s tiring, but I also learn new skills."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "عِنْدْنَا اِجْتِمَاع كُلّ أُسْبُوع عَلَى الزُّوم لِنُشُوف وَيْن وَصَلْنَا.",
-                    en: "We have a meeting every week on Zoom to see where we reached.",
+                    "speaker": "Majd",
+                    "ar": "أنا طالِب بَس، ما بَشْتِغِل هَلَّق. بس أَحْيانًا بَفَكِّر آخُد دَوام جُزْئِي.",
+                    "en": "I’m only a student, I don’t work right now. But sometimes I think about taking a part-time job."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا بَعْمَل بَحْث عَنْ تَّعَلُّم اللُّغَات أُونْلَايْن، بَجَمَّع مَعْلُومَات وَبَكْتُب تَّقْرِير.",
-                    en: "I’m doing research about learning languages online; I collect information and write a report.",
-                },
-
-                // Scene 5 – Future plans
-                {
-                    speaker: "Teacher",
-                    ar: "طَيِّب، بَعْد مَا تِخَلَّصُوا دِرَاسَة، شُو بَدَّكُم تِسَوُّوا؟",
-                    en: "Okay, after you finish your studies, what do you want to do?",
+                    "speaker": "Sara",
+                    "ar": "إذا بَدَّك تِشْتِغِل، لازم تِنَظِّم وَقْتَك مْنيح.",
+                    "en": "If you want to work, you must organize your time well."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "بِصِدْق، أَنَا بَدِّي أَشْتِغِل فِي مَشْرُوعَات تَّعْلِيم أُونْلَايْن، وَأَدَرِّس لَهْجَة فِلَسْطِينِيَّة.",
-                    en: "Honestly, I want to work in online education projects and teach Palestinian dialect.",
+                    "speaker": "Majd",
+                    "ar": "عَنْ قريب عنا اِمْتِحانات، صَعِب أَفَكِّر بِشُغُل هَلَّق.",
+                    "en": "We have exams soon, it’s hard to think about work now."
                 },
                 {
-                    speaker: "Mark",
-                    ar: "أَنَا بِفَكِّر أَدْرُس مَاجِسْتِير فِي تَّعْلِيم اللُّغَات.",
-                    en: "I’m thinking of studying a master’s in language teaching.",
+                    "speaker": "Sara",
+                    "ar": "مَزْبوط، الأَهَم هَلَّق الدِّراسَة. بَعْدين بِتْدَوِّر عَشُغُل مُناسِب.",
+                    "en": "True, right now the most important thing is studying. Later you look for a suitable job."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "أَنَا بَكَمِّل تَّدْرِيس أُونْلَايْن، وَمُمْكِن فِي الْمُسْتَقْبَل أَفْتَح مَرْكَز صْغِير.",
-                    en: "I will continue teaching online, and maybe in the future open a small center.",
-                },
-
-                // Scene 6 – Wrap-up
-                {
-                    speaker: "Teacher",
-                    ar: "مُمْتَاز، هَيْك حَكَيْنَا عَنِ الدِّرَاسَة وَالشُّغُل وَالْمُسْتَقْبَل بِلَّهْجَة فِلَسْطِينِيَّة.",
-                    en: "Excellent, this way we talked about study, work, and the future in Palestinian Arabic.",
+                    "speaker": "Majd",
+                    "ar": "إنْ شاءَ الله بَعْد ما أِتْخَرَّج أَلاقِي وَظِيفَة كْوَيْسِة.",
+                    "en": "Inshallah after I graduate I’ll find a good job."
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "لِلْوَاجِب، كْتُبُوا نَصّ قَصِير عَنْ يَوْم دِرَاسَة أَو يَوْم شُغُل مِثَالِي عِنْدْكُم.",
-                    en: "For homework, write a short text about your ideal study day or work day.",
-                },
-                {
-                    speaker: "Roba",
-                    ar: "شُكْرًا أُسْتَاذ، هَالْمَوْضُوع قَرَّب بَيْن الْحَيَاة الْحَقِيقِيَّة وَاللُّغَة.",
-                    en: "Thank you, teacher, this topic connected real life and language.",
-                },
-            ],
-        },
+                    "speaker": "Sara",
+                    "ar": "وأنا كْمان، خَلِّينا نِرْكِز عَالدِّراسَة هَلَّق.",
+                    "en": "Me too; let’s focus on the studies for now."
+                }
+            ]
+        }
+        ,
 
         // ====================================
         // GRAMMAR
@@ -3891,7 +4694,6 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
     // Inside your defaultLessons literal:
     [LESSON_ID_HEALTH]: {
         meta: {
@@ -3918,478 +4720,679 @@ const defaultLessons = {
         // ====================================
         vocabulary: {
             core: [
+                // ===== GENERAL HEALTH =====
+                {
+                    id: "se7a",
+                    ar: "صِحّة",
+                    en: "health",
+                    enArabeezy: "ṣiḥḥa / se77a",
+                    hint:
+                        "General word for health. صِحّة كْوَيْسِة = good health. Also used in toast: صَحّة! = cheers / to your health.",
+                    exampleAr: "الصِّحّة أَهَمّ إِشي بِالحَياة.",
+                    exampleEn: "Health is the most important thing in life.",
+                },
+                {
+                    id: "marid",
+                    ar: "مَريض / مَريضَة",
+                    en: "sick person / patient (m/f)",
+                    enArabeezy: "marīḍ / marīḍa",
+                    hint: "Someone who is ill or a patient at the clinic or hospital.",
+                    exampleAr: "المَريض لازم يِرْتاح كَم يَوم.",
+                    exampleEn: "The patient needs to rest for a few days.",
+                },
+                {
+                    id: "ta3ban",
+                    ar: "تَعْبان / تَعْبانَة",
+                    en: "tired, unwell (m/f)",
+                    enArabeezy: "ta3bān / ta3bāna",
+                    hint: "Can mean physically tired or not feeling well.",
+                    exampleAr: "حاسِس حالي تَعْبان اليوم.",
+                    exampleEn: "I feel unwell today.",
+                },
+                {
+                    id: "salamtek",
+                    ar: "سَلَامْتَك / سَلَامْتِك",
+                    en: "get well soon",
+                    enArabeezy: "salāmtak / salāmtik",
+                    hint: "Masc: سَلَامْتَك, fem: سَلَامْتِك. Reply: الله يِسَلِّمَك.",
+                    exampleAr: "سَلَامْتِك، إِنْ شَاءَ الله تِقُومِي بِالسَّلَامَة.",
+                    exampleEn: "Get well soon, may you recover safely.",
+                },
+
                 // ===== PLACES & PEOPLE =====
                 {
                     id: "mustashfa",
                     ar: "مُسْتَشْفَى",
                     en: "hospital",
+                    enArabeezy: "mustashfa",
                     hint:
-                        "Plural: مُسْتَشْفَيَات. Used for serious problems or emergencies.",
-                    exampleAr: "لَمَّا الْحَالَة صَعْبَة، بِنْرُوح عَلَى المُسْتَشْفَى.",
-                    exampleEn: "When the case is serious, we go to the hospital.",
+                        "Plural: مُسْتَشْفَيَات. Used for serious health problems or emergencies.",
+                    exampleAr: "خَدّوه عَالمُسْتَشْفَى بَعْد الحادِث.",
+                    exampleEn: "They took him to the hospital after the accident.",
                 },
                 {
                     id: "3yadeh",
-                    ar: "عِيَادَة",
-                    en: "clinic",
+                    ar: "عِيادَة",
+                    en: "clinic / doctor’s office",
+                    enArabeezy: "ʿiyādeh / 3yādeh",
                     hint:
-                        "Small clinic / doctor’s office. عِيَادَة دِّكْتُور أَسْنَان = dentist clinic.",
-                    exampleAr: "فِي عِيَادَة قَرِيبَة مِن بَيْتْنَا.",
-                    exampleEn: "There is a clinic close to our house.",
+                        "Smaller than a hospital. عِيادَة جِدْول = small clinic; عِيادَة جامْعِيّة = university clinic.",
+                    exampleAr: "في عِيادَة جامْعِيّة جَوّا الجامْعَة.",
+                    exampleEn: "There is a university clinic inside the campus.",
                 },
                 {
                     id: "saydaliyyeh",
-                    ar: "صَيْدَلِيَّة",
+                    ar: "صَيْدَلِيّة",
                     en: "pharmacy",
-                    hint:
-                        "Plural: صَيْدَلِيَّات. You can buy medicine here.",
-                    exampleAr: "بَعْد الدِّكْتُور بِنْرُوح عَلَى الصَّيْدَلِيَّة نِجِيب دَّوَا.",
-                    exampleEn: "After the doctor, we go to the pharmacy to get medicine.",
+                    enArabeezy: "ṣaydaliyyeh / saydaliyyeh",
+                    hint: "Place where you buy medicine. Plural: صَيْدَلِيّات.",
+                    exampleAr: "لازِم نَمُرّ عَالصَّيْدَلِيّة نِشْتِري دَوا.",
+                    exampleEn: "We need to pass by the pharmacy to buy medicine.",
                 },
                 {
                     id: "doktor",
-                    ar: "دِكْتُور / دِكْتُورَة",
-                    en: "doctor",
-                    hint:
-                        "Masc: دِكْتُور, fem: دِكْتُورَة. Common in spoken Arabic.",
-                    exampleAr: "الدِّكْتُورَة سَأَلَتْنِي عَنِ الأَعْرَاض.",
-                    exampleEn: "The doctor asked me about the symptoms.",
+                    ar: "دْكتور / دْكتورَة",
+                    en: "doctor (m/f)",
+                    enArabeezy: "doktōr / doktōra",
+                    hint: "Medical doctor. Very common word in speech.",
+                    exampleAr: "الدْكتور حَكى إنّو مِش شِي خَطير.",
+                    exampleEn: "The doctor said it’s nothing serious.",
                 },
                 {
                     id: "mumarred",
                     ar: "مُمَرِّض / مُمَرِّضَة",
-                    en: "nurse",
-                    hint:
-                        "Hospital / clinic context. Plural: مُمَرِّضِين.",
-                    exampleAr: "المُمَرِّضَة أَخَذَت الضَّغْط وَالْحَرَارَة.",
-                    exampleEn: "The nurse took the blood pressure and temperature.",
+                    en: "nurse (m/f)",
+                    enArabeezy: "mumarreḍ / mumarreḍa",
+                    hint: "Nurse in hospital or clinic. Plural: مُمَرِّضِين.",
+                    exampleAr: "المُمَرِّضَة أَخَدِت الضَّغِط.",
+                    exampleEn: "The nurse took the blood pressure.",
                 },
                 {
                     id: "is3af",
-                    ar: "إِسْعَاف",
-                    en: "ambulance / emergency medical service",
+                    ar: "إِسْعاف",
+                    en: "ambulance / first aid",
+                    enArabeezy: "isʿāf / is3āf",
                     hint:
-                        "Also used for the ambulance car. يِتَّصِل عَالإِسْعَاف = call ambulance.",
-                    exampleAr: "فِي حَادِث، حَدَا يِتَّصِل عَالإِسْعَاف.",
-                    exampleEn: "There is an accident, someone call an ambulance.",
+                        "Can mean ambulance car or emergency medical help. يِتَّصِل عَالإِسْعاف = call an ambulance.",
+                    exampleAr: "اتَّصِل بالإِسْعاف إذا الحَالِة خَطيرَة.",
+                    exampleEn: "Call an ambulance if the situation is serious.",
+                },
+                {
+                    id: "qism_taware2",
+                    ar: "قِسْم طَوارِئ",
+                    en: "emergency room",
+                    enArabeezy: "ʾism ṭawāreʾ / qism tawāre2",
+                    hint: "Emergency department in a hospital.",
+                    exampleAr: "وَدّوه عَـقِسْم طَوارِئ بَسِرْعَة.",
+                    exampleEn: "They took him quickly to the emergency room.",
                 },
 
-                // ===== GENERAL HEALTH =====
+                // ===== MEDICINE & TREATMENT =====
                 {
-                    id: "se7a",
-                    ar: "صِحِّة",
-                    en: "health",
-                    hint:
-                        "صِحِّة كْوَيْسِة = good health. Also used in toast: صَحَّة! = cheers / to your health.",
-                    exampleAr: "المُهِمّ تْحَافِظ عَلَى صِحِّتَك.",
-                    exampleEn: "The important thing is to keep your health.",
+                    id: "dawa",
+                    ar: "دَوا",
+                    en: "medicine",
+                    enArabeezy: "dawa",
+                    hint: "General word for medicine. Plural: أَدْوِيَة.",
+                    exampleAr: "بِأخُد الدَّوا مَرّتين في اليوم.",
+                    exampleEn: "I take the medicine twice a day.",
                 },
                 {
-                    id: "marid",
-                    ar: "مَرِيض",
-                    en: "sick / ill",
-                    hint:
-                        "Masc: مَرِيض, fem: مَرِيضَة, plural: مَرْضَى. Don’t make a separate entry; just use forms in context.",
-                    exampleAr: "أَنَا مَرِيضَة شْوَيّ، مَا بَقْدَر أِجِي عَلَى الدَّرْس الْيَوْم.",
-                    exampleEn: "I’m a bit sick; I can’t come to the lesson today.",
+                    id: "7abbeh",
+                    ar: "حَبّة",
+                    en: "pill / tablet",
+                    enArabeezy: "ḥabbeh / habbeh",
+                    hint: "One pill or tablet of medicine.",
+                    exampleAr: "خُد حَبّة بَعْد الأَكِل.",
+                    exampleEn: "Take a pill after food.",
                 },
                 {
-                    id: "ta3ban_health",
-                    ar: "تَعْبَان",
-                    en: "tired / exhausted (physically)",
-                    hint:
-                        "Masc: تَعْبَان, fem: تَعْبَانَة. Used for physical tiredness or after illness.",
-                    exampleAr: "بَعْد الْحُمَّى كُنْت تَعْبَانَة كْتِير.",
-                    exampleEn: "After the fever I was very tired.",
+                    id: "ibra",
+                    ar: "إِبْرَة",
+                    en: "injection / shot",
+                    enArabeezy: "ʾibra / ibra",
+                    hint: "Needle injection.",
+                    exampleAr: "مُمْكِن تَأْخُد إِبْرَة لِتِنْزيل الحَرارَة.",
+                    exampleEn: "You can take an injection to bring the fever down.",
                 },
                 {
-                    id: "salamtek",
-                    ar: "سَلَامْتَك / سَلَامْتِك",
-                    en: "Get well soon",
-                    hint:
-                        "Masc: سَلَامْتَك, fem: سَلَامْتِك. Reply: الله يِسَلِّمَك.",
-                    exampleAr: "سَلَامْتِك رُوبَا، إِنْ شَاءَ الله تِقُومِي بِالسَّلَامَة.",
-                    exampleEn: "Get well soon, Roba, may you recover safely.",
+                    id: "ba7taj_dawa",
+                    ar: "بَحْتاج دَوا",
+                    en: "I need medicine",
+                    enArabeezy: "baḥtāj dawa / ba7taj dawa",
+                    hint: "From اِحْتَاج = to need. Add ‘for’: دَوا لِلْكْحَة.",
+                    exampleAr: "بَحْتاج دَوا لِلرَّشَح وِالكْحَة.",
+                    exampleEn: "I need medicine for the cold and the cough.",
+                },
+                {
+                    id: "ba7taj_doktor",
+                    ar: "بَحْتاج دْكتور",
+                    en: "I need a doctor",
+                    enArabeezy: "ba7taj doktor",
+                    hint: "Stronger: بَحْتاج دْكتور هَلّق = I need a doctor now.",
+                    exampleAr: "هُوَّ تَعْبان كْتير، بَحْتاج دْكتور هَلّق.",
+                    exampleEn: "He is very unwell; he needs a doctor now.",
+                },
+                {
+                    id: "bakhod_dawa",
+                    ar: "بَاخُد دَوا",
+                    en: "I take medicine",
+                    enArabeezy: "bākhod dawa / bakhod dawa",
+                    hint: "Very common chunk: بَاخُد دَوا ثَلَاث مَرّات فِي الْيَوْم.",
+                    exampleAr: "بَاخُد دَوا بَعْد الأَكِل.",
+                    exampleEn: "I take medicine after food.",
+                },
+                {
+                    id: "musakkin",
+                    ar: "مُسَكِّن",
+                    en: "painkiller",
+                    enArabeezy: "musakkin",
+                    hint: "Medicine to reduce pain.",
+                    exampleAr: "أَعْطُوه مُسَكِّن خَفيف لِلْوَجَع.",
+                    exampleEn: "They gave him a mild painkiller for the pain.",
                 },
 
                 // ===== SYMPTOMS & PAIN =====
                 {
                     id: "waja3",
                     ar: "وَجَع",
-                    en: "pain",
-                    hint:
-                        "وَجَع رَاس = headache, وَجَع بَطِن = stomach ache, وَجَع ضَّهْر = back pain.",
-                    exampleAr: "عِنْدِي وَجَع بَطِن مِن الْبَارِحَة.",
-                    exampleEn: "I have stomach pain since yesterday.",
+                    en: "pain / ache",
+                    enArabeezy: "wajaʿ / waja3",
+                    hint: "General word: وَجَع راس, وَجَع بَطِن, وَجَع ضَهِر...",
+                    exampleAr: "في وَجَع قَوي بِضْهَري.",
+                    exampleEn: "There is strong pain in my back.",
                 },
                 {
                     id: "rasi_biwaja3ni",
-                    ar: "رَاسِي بِوَجَعْنِي",
-                    en: "I have a headache",
-                    hint:
-                        "Structure: (part of body) + بِوَجَعْنِي = it hurts me. Ex: ضَهْرِي بِوَجَعْنِي.",
-                    exampleAr: "رَاسِي بِوَجَعْنِي وْمِش قَادْرَة أَرْكَّز.",
-                    exampleEn: "My head hurts and I can’t focus.",
+                    ar: "راسي بيوجَعْني",
+                    en: "my head hurts / I have a headache",
+                    enArabeezy: "rāsi byūjaʿni / rasi biwaja3ni",
+                    hint: "Pattern: body-part + بيوجَعْني.",
+                    exampleAr: "راسي بيوجَعْني مِن الصُّبِح.",
+                    exampleEn: "My head has been hurting since morning.",
                 },
                 {
                     id: "batni_biwaja3ni",
-                    ar: "بَطْنِي بِوَجَعْنِي",
-                    en: "I have a stomach ache",
-                    hint:
-                        "Same pattern as رَاسِي بِوَجَعْنِي, good for many body parts.",
-                    exampleAr: "بَطْنِي بِوَجَعْنِي بَعْد مَا أَكَلْت سْرِيع.",
-                    exampleEn: "My stomach hurts after I ate quickly.",
+                    ar: "بَطْني بيوجَعْني",
+                    en: "my stomach hurts",
+                    enArabeezy: "baṭni byūjaʿni / batni biwaja3ni",
+                    hint: "Same pattern for stomach.",
+                    exampleAr: "بَطْني بيوجَعْني بَعْد الأَكِل.",
+                    exampleEn: "My stomach hurts after eating.",
                 },
                 {
-                    id: "7arrareh",
-                    ar: "حَرَارَة",
-                    en: "fever / temperature",
-                    hint:
-                        "عِنْدِي حَرَارَة = I have a fever. بِتْخُد حَرَارَة = take someone’s temperature.",
-                    exampleAr: "بِحِسّ إِنُّه عِنْدِي حَرَارَة الْلَيْلَة.",
-                    exampleEn: "I feel like I have a fever tonight.",
+                    id: "zahri_biwaja3ni",
+                    ar: "ضَهْري بيوجَعْني",
+                    en: "my back hurts",
+                    enArabeezy: "ẓahri byūjaʿni / dahri biwaja3ni",
+                    hint: "Same pattern for back.",
+                    exampleAr: "ضَهْري بيوجَعْني لَمّا أُقْعُد كْتير.",
+                    exampleEn: "My back hurts when I sit for a long time.",
                 },
                 {
-                    id: "rzaz",
-                    ar: "رَشَح / زُكَام",
-                    en: "cold (runny nose / mild flu)",
-                    hint:
-                        "Both words used; رَشَح very common in speech.",
-                    exampleAr: "عِنْدِي رَشَح وَمَنْخَارِي مْسَكَّر.",
+                    id: "7arara",
+                    ar: "حَرارَة / سُخونَة",
+                    en: "fever",
+                    enArabeezy: "ḥarāra / sukhūna",
+                    hint: "High temperature. عِنْدي حَرارَة = I have a fever.",
+                    exampleAr: "حاسِس في حَرارَة، جِسْمي سُخن.",
+                    exampleEn: "I feel feverish, my body is hot.",
+                },
+                {
+                    id: "bard",
+                    ar: "بَرِد / نَزْلَة بَرِد",
+                    en: "a cold",
+                    enArabeezy: "barid / nazlet bard",
+                    hint: "Common cold / catching a cold.",
+                    exampleAr: "مَعِي بَرِد مِن بَارِحَة.",
+                    exampleEn: "I’ve had a cold since yesterday.",
+                },
+                {
+                    id: "rashah",
+                    ar: "رَشَح",
+                    en: "runny nose / cold",
+                    enArabeezy: "rashḥ / rashah",
+                    hint: "Often used for cold and runny nose.",
+                    exampleAr: "عِنْدي رَشَح وَأَنْفِي مْسَدود.",
                     exampleEn: "I have a cold and my nose is blocked.",
                 },
                 {
-                    id: "so3al",
-                    ar: "سُعَال / كْحَة",
+                    id: "flu",
+                    ar: "إِنْفْلُوِنْزا",
+                    en: "flu",
+                    enArabeezy: "influenza / infloanza",
+                    hint: "Stronger than a simple cold.",
+                    exampleAr: "الدْكتور حَكالها إنّو مَعْها إِنْفْلُوِنْزا.",
+                    exampleEn: "The doctor told her she has the flu.",
+                },
+                {
+                    id: "ku7a",
+                    ar: "كُحَّة",
                     en: "cough",
-                    hint:
-                        "In speech: كْحَة كثير. Verb: بَكُحّ = I cough.",
-                    exampleAr: "مِن امْبَارِح وَأَنَا عِنْدِي كْحَة.",
-                    exampleEn: "Since yesterday I’ve had a cough.",
+                    enArabeezy: "kuḥḥa / ku7a",
+                    hint: "Cough (noun). Verb: بَكُحّ = I cough.",
+                    exampleAr: "الكُحَّة ما راضْيِة تِرَوِّح.",
+                    exampleEn: "The cough is not going away.",
                 },
                 {
                     id: "doukha",
                     ar: "دُوخَة",
                     en: "dizziness",
-                    hint:
-                        "بِدُوخ = I feel dizzy.",
-                    exampleAr: "لَمَّا بَقُوم بَسِرْعَة بَحِسّ بِدُوخَة.",
-                    exampleEn: "When I stand up quickly I feel dizzy.",
+                    enArabeezy: "dūkha / doukha",
+                    hint: "Feeling of spinning / lightheaded.",
+                    exampleAr: "حَسّ حالُه في دُوخَة لَمّا وِقِف.",
+                    exampleEn: "He felt dizzy when he stood up.",
                 },
                 {
-                    id: "jar7",
-                    ar: "جَرْح",
-                    en: "wound / cut",
-                    hint:
-                        "جَرَح صْغِير = small cut. Verb: اِنْجَرَح = to get injured.",
-                    exampleAr: "إِصْبِعِي فِيه جَرْح صْغِير، بَسّ بِوَجَع.",
-                    exampleEn: "My finger has a small cut, but it hurts.",
-                },
-                {
-                    id: "kasr",
-                    ar: "كِسِر",
-                    en: "broken bone / fracture",
-                    hint:
-                        "عِنْدُه كِسِر فِي إِجْرُه = he has a broken leg.",
-                    exampleAr: "وَقَع مِن الدَّرَج وَصَار فِيه كِسِر.",
-                    exampleEn: "He fell from the stairs and got a fracture.",
-                },
-                {
-                    id: "nafas",
-                    ar: "نَفَس",
-                    en: "breath",
-                    hint:
-                        "مِش قَادِر آخُد نَفَس = I can’t breathe. دُغْرِي لِلْإِسْعَاف فِي هَيْك حَالَة.",
-                    exampleAr: "الزَّلَمِي مِش قَادِر يَأْخُد نَفَس مْنِيح.",
-                    exampleEn: "The man can’t breathe well.",
+                    id: "ma8aS",
+                    ar: "مَغَص",
+                    en: "cramp / stomach pain",
+                    enArabeezy: "maʿʾaṣ / ma8aṣ",
+                    hint: "Stomach cramp or sharp stomach pain.",
+                    exampleAr: "مَغَص البَطن مْزْعِج كْتير.",
+                    exampleEn: "Stomach cramps are very uncomfortable.",
                 },
 
-                // ===== VERBS & CHUNKS =====
+                // ===== SERIOUS / EMERGENCY SYMPTOMS =====
+                {
+                    id: "mighma_3alih",
+                    ar: "مِغْمَى عَلَيْه",
+                    en: "unconscious / fainted (m.)",
+                    enArabeezy: "mighmā ʿaleyh / mighma 3aleih",
+                    hint: "Used in emergencies when someone faints.",
+                    exampleAr: "الشَّب مِغْمَى عَلَيْه عَلأَرْض.",
+                    exampleEn: "The guy is unconscious on the ground.",
+                },
+                {
+                    id: "biyenzef",
+                    ar: "بِيِنزِف",
+                    en: "he is bleeding",
+                    enArabeezy: "biyinzif / biyenzef",
+                    hint: "Present tense, used in emergencies.",
+                    exampleAr: "إِيدُه بِيِنزِفَت دَم كْتير.",
+                    exampleEn: "His hand is bleeding a lot.",
+                },
+                {
+                    id: "ma_ba2dar_atnaffas",
+                    ar: "ما بَقْدَر أَتْنَفَّس مْنيح",
+                    en: "I can’t breathe well",
+                    enArabeezy: "ma baʾdar atnaffas mneeḥ / ma ba2dar atnaffas mneeh",
+                    hint: "Breathing problem, emergency symptom.",
+                    exampleAr: "بِحِسّ إنّو ما بَقْدَر أَتْنَفَّس مْنيح.",
+                    exampleEn: "I feel like I can’t breathe well.",
+                },
+                {
+                    id: "ittasel_bil_is3af",
+                    ar: "اِتَّصِل بالإِسْعاف",
+                    en: "call an ambulance",
+                    enArabeezy: "ittasil bil is3āf",
+                    hint: "Imperative phrase in emergencies.",
+                    exampleAr: "إذا الحالَة خَطيرَة، اِتَّصِل بالإِسْعاف طَوالي.",
+                    exampleEn: "If it’s a serious condition, call the ambulance immediately.",
+                },
+
+                // ===== CONDITIONS & NUMBERS =====
+                {
+                    id: "Da3et",
+                    ar: "ضَغِط",
+                    en: "blood pressure",
+                    enArabeezy: "ḍaġiṭ / Daġet",
+                    hint: "Talk about high or low blood pressure.",
+                    exampleAr: "اليوم الضَّغِط عَندُه عالي.",
+                    exampleEn: "Today his blood pressure is high.",
+                },
+                {
+                    id: "sukkar",
+                    ar: "سُكَّر",
+                    en: "diabetes / sugar level",
+                    enArabeezy: "sukkar",
+                    hint: "Used for sugar level and diabetes.",
+                    exampleAr:
+                        "جَدّي مَعُه سُكَّر ولازِم يِنْتَبِه عَالْأَكِل.",
+                    exampleEn:
+                        "My grandfather has diabetes and has to watch his food.",
+                },
+                {
+                    id: "7asasseyyeh",
+                    ar: "حَساسيّة",
+                    en: "allergy",
+                    enArabeezy: "ḥasāsiyyeh / 7asaseyyeh",
+                    hint: "Allergy to food, medicine, dust, etc.",
+                    exampleAr: "عِنْدي حَساسيّة مِن شِيَة أَدْوِيَة.",
+                    exampleEn: "I have an allergy to some medicines.",
+                },
+                {
+                    id: "ta2min_se7i",
+                    ar: "تَأْمِين صِحّي",
+                    en: "health insurance",
+                    enArabeezy: "taʾmīn ṣiḥḥi / ta2miin se77i",
+                    hint: "Insurance that covers medical costs.",
+                    exampleAr: "التَّأْمِين الصِّحّي بِيغَطّي المُسْتَشْفَى.",
+                    exampleEn: "The health insurance covers the hospital.",
+                },
+
+                // ===== ACCIDENTS & INJURIES =====
+                {
+                    id: "7adeth",
+                    ar: "حادِث",
+                    en: "accident",
+                    enArabeezy: "ḥādeṯ / 7adeth",
+                    hint: "Traffic accident or other incident.",
+                    exampleAr: "صار حادِث قُرُب الجامْعَة.",
+                    exampleEn: "There was an accident near the university.",
+                },
+                {
+                    id: "jur7",
+                    ar: "جُرْح",
+                    en: "wound / injury",
+                    enArabeezy: "jurḥ / jur7",
+                    hint: "Cut or open wound.",
+                    exampleAr: "الجُرْح مِش عَميق، بَس لازِم تَنْظيف.",
+                    exampleEn: "The wound isn’t deep, but it needs cleaning.",
+                },
+
+                // ===== USEFUL CHUNKS =====
                 {
                     id: "ba7es_hali",
-                    ar: "بَحِسّ حَالِي...",
-                    en: "I feel (myself)…",
-                    hint:
-                        "Followed by tired / sick / better: بَحِسّ حَالِي تَعْبَان / أَحْسَن.",
-                    exampleAr: "الْيَوْم بَحِسّ حَالِي أَفْضَل مِن امْبَارِح.",
+                    ar: "بَحِسّ حالي ...",
+                    en: "I feel (myself) ...",
+                    enArabeezy: "baḥiss ḥāli ... / ba7es 7ali",
+                    hint: "Followed by: تَعْبان, أَحْسَن, مَرِيض ...",
+                    exampleAr: "اليوم بَحِسّ حالي أَفْضَل مِن امْبارِح.",
                     exampleEn: "Today I feel better than yesterday.",
                 },
                 {
                     id: "3indi_symptom",
-                    ar: "عِنْدِي...",
-                    en: "I have… (symptom)",
-                    hint:
-                        "Very useful: عِنْدِي وَجَع رَاس، عِنْدِي رَشَح، عِنْدِي حَرَارَة.",
-                    exampleAr: "عِنْدِي وَجَع رَاس وَرَشَح شْوَيّ.",
-                    exampleEn: "I have a headache and a little cold.",
-                },
-                {
-                    id: "biwaja3ni_hon",
-                    ar: "بِوَجَعْنِي هُون",
-                    en: "It hurts here",
-                    hint:
-                        "Used with pointing. Doctor often asks: هُون؟ لَمَّا يِضْغَط.",
-                    exampleAr: "بِوَجَعْنِي هُون لَمَّا أَضْغَط.",
-                    exampleEn: "It hurts here when I press.",
-                },
-                {
-                    id: "ba7taj_dawa",
-                    ar: "بَحْتَاج دَّوَا",
-                    en: "I need medicine",
-                    hint:
-                        "From اِحْتَاج = to need. Add ‘for’: بَحْتَاج دَّوَا لِلْكْحَة.",
-                    exampleAr: "بَحْتَاج دَّوَا لِلرَّشَح وِالكْحَة.",
-                    exampleEn: "I need medicine for the cold and cough.",
-                },
-                {
-                    id: "ba7taj_doktor",
-                    ar: "بَحْتَاج دِكْتُور",
-                    en: "I need a doctor",
-                    hint:
-                        "Stronger: بَحْتَاج دِكْتُور هَلَّقْ = I need a doctor now.",
-                    exampleAr: "هُوَّ تَعْبَان كْتِير، بَحْتَاج دِكْتُور هَلَّقْ.",
-                    exampleEn: "He is very unwell; he needs a doctor now.",
-                },
-                {
-                    id: "ittasel_bil_is3af",
-                    ar: "اِتَّصِل عَالإِسْعَاف",
-                    en: "Call an ambulance",
-                    hint:
-                        "Imperative to someone else. For ‘call the doctor’: اِتَّصِل فِي الدِّكْتُور.",
-                    exampleAr: "حَدَا يِتَّصِل عَالإِسْعَاف بَسُرْعَة!",
-                    exampleEn: "Someone call an ambulance quickly!",
+                    ar: "عِنْدي ...",
+                    en: "I have ... (symptom)",
+                    enArabeezy: "ʿindi ... / 3indi ...",
+                    hint: "Very useful: عِنْدي وَجَع راس، عِنْدي رَشَح، عِنْدي حَرارَة.",
+                    exampleAr: "عِنْدي وَجَع راس وَرَشَح شْوَيّ.",
+                    exampleEn: "I have a headache and a bit of a cold.",
                 },
                 {
                     id: "barta7",
-                    ar: "بَرْتَاح",
+                    ar: "بَرْتاح",
                     en: "I rest",
-                    hint:
-                        "From اِرْتَاح = to rest. Used a lot when sick or tired.",
-                    exampleAr: "الدِّكْتُور حَكَالي أَرْجَع عَلَى الْبَيْت وَأَرْتَاح يَوْمَيْن.",
-                    exampleEn: "The doctor told me to go home and rest for two days.",
-                },
-                {
-                    id: "bakhod_dawa",
-                    ar: "بَاخُد دَّوَا",
-                    en: "I take medicine",
-                    hint:
-                        "Very common chunk: بَاخُد دَّوَا ثَلَاث مَرَّات فِي الْيَوْم.",
-                    exampleAr: "بَاخُد دَّوَا بَعْد الْأَكْل.",
-                    exampleEn: "I take medicine after food.",
+                    enArabeezy: "bartaḥ / barta7",
+                    hint: "Used when sick or tired. From اِرْتاح.",
+                    exampleAr:
+                        "الدْكتور حَكى أَرْجَع عَلَبَيْت وَأَرْتاح يَوْمَيْن.",
+                    exampleEn:
+                        "The doctor told me to go home and rest for two days.",
                 },
                 {
                     id: "bimshi_el7al",
-                    ar: "بِمْشِي الْحَال",
-                    en: "It’s okay / I’ll manage",
-                    hint:
-                        "Used when not too serious: ‘it’s manageable’.",
-                    exampleAr: "مَو كْتِير وَجَع، بِمْشِي الْحَال.",
-                    exampleEn: "It’s not too painful, I’ll manage.",
+                    ar: "بِمْشي الحَال",
+                    en: "it’s okay / I’ll manage",
+                    enArabeezy: "bimshi l-ḥāl / bimshi el7al",
+                    hint: "Used when it’s not too serious: ‘manageable’.",
+                    exampleAr: "مَو كْتير وَجَع، بِمْشي الحَال.",
+                    exampleEn: "It’s not very painful; I’ll manage.",
+                },
+
+                // ===== APPOINTMENTS & TESTS =====
+                {
+                    id: "maw3ed",
+                    ar: "مَوْعِد",
+                    en: "appointment",
+                    enArabeezy: "mawʿid / maw3ed",
+                    hint: "Time booked with a doctor or clinic.",
+                    exampleAr: "عندي مَوْعِد عَالسّاعَة تْلاتَة.",
+                    exampleEn: "I have an appointment at three o’clock.",
+                },
+                {
+                    id: "natijit_fa7S",
+                    ar: "نَتيجَة الفَحْص",
+                    en: "test result",
+                    enArabeezy: "natījit il-faḥṣ / natijet el-fa7s",
+                    hint: "Result of blood test / lab test.",
+                    exampleAr: "نَتيجَة الفَحْص بِتْطْلَع بُكْرَة.",
+                    exampleEn: "The test result comes out tomorrow.",
                 },
             ],
 
             extra: [
                 {
-                    id: "7asasseyyeh",
-                    ar: "حَسَاسِيَّة",
-                    en: "allergy",
-                    hint:
-                        "حَسَاسِيَّة مِن دَّوَا / مِن أَكْل.",
-                    exampleAr: "عِنْدِي حَسَاسِيَّة مِن نَوْع مُعَيَّن مِن الدَّوَا.",
-                    exampleEn: "I have an allergy to a certain type of medicine.",
+                    id: "a3rad",
+                    ar: "أَعْراض",
+                    en: "symptoms",
+                    enArabeezy: "aʿrāḍ / a3raḍ",
+                    hint: "Signs of illness.",
+                    exampleAr: "شُو الأَعْراض إلّي حاسِس فيها؟",
+                    exampleEn: "What symptoms are you feeling?",
                 },
                 {
-                    id: "dawa",
-                    ar: "دَّوَا",
-                    en: "medicine",
-                    hint:
-                        "Plural: أَدْوِيَة. Used for any medication.",
-                    exampleAr: "الصَّيْدَلِي أَعْطَانِي دَّوَا لِلرَّشَح.",
-                    exampleEn: "The pharmacist gave me medicine for the cold.",
+                    id: "tenaffos_3amiq",
+                    ar: "تَنَفُّس عَميق",
+                    en: "deep breathing",
+                    enArabeezy: "tanaffus ʿamīq / tenaffos 3amiq",
+                    hint: "Used in calming / first aid or anxiety situations.",
+                    exampleAr: "خُد تَنَفُّس عَميق شْوي شْوي.",
+                    exampleEn: "Take a deep breath slowly.",
                 },
                 {
-                    id: "balash_tkhaf",
+                    id: "muraja3a",
+                    ar: "مُراجَعَة",
+                    en: "follow-up visit",
+                    enArabeezy: "murājaʿa / muraja3a",
+                    hint: "Check-up after the first visit.",
+                    exampleAr:
+                        "الدْكتور حَكى يِرْجَع عَالمُراجَعَة بَعْد أُسْبوع.",
+                    exampleEn:
+                        "The doctor said he should come back for a follow-up after a week.",
+                },
+                {
+                    id: "man3_tibbi",
+                    ar: "مَنْع طِبّي",
+                    en: "medical restriction",
+                    enArabeezy: "manʿ ṭibbi / man3 tibbi",
+                    hint: "Not allowed because of a health reason.",
+                    exampleAr: "عِنْدُه مَنْع طِبّي مِن الرِّياضَة القَوِيّة.",
+                    exampleEn: "He has a medical restriction from intense sports.",
+                },
+                {
+                    id: "7aleh_khaTireh",
+                    ar: "حالَة خَطيرَة",
+                    en: "serious condition",
+                    enArabeezy: "ḥāle khāṭireh / 7aleh khaTireh",
+                    hint: "Used for strong emergencies.",
+                    exampleAr:
+                        "إذا الحالَة خَطيرَة، اتَّصِل طَوالي بالإِسْعاف.",
+                    exampleEn:
+                        "If it’s a serious condition, call the ambulance immediately.",
+                },
+                {
+                    id: "balashet_t5aff",
                     ar: "بَلَّشْت تِخَفّ",
-                    en: "It started to get better",
-                    hint:
-                        "From خَفّ = to become lighter / less. For pain or symptoms.",
-                    exampleAr: "بَعْد الدَّوَا الْوَجَع بَلَّشْ يِخَفّ.",
+                    en: "it started to get better",
+                    enArabeezy: "ballashet tikhaf / balashet t5aff",
+                    hint: "From خَفّ = to become lighter / less (pain or symptoms).",
+                    exampleAr: "بَعْد الدَّوا الْوَجَع بَلَّشْ يِخَفّ.",
                     exampleEn: "After the medicine, the pain started to get better.",
                 },
             ],
-        },
+        }
+        ,
 
         // ====================================
         // DIALOGUE (multi-scene: feeling sick → clinic → small emergency)
         // ====================================
-        dialogue: {
-            lines: [
-                // Scene 1 – In class, student not feeling well
+        "dialogue": {
+            "lines": [
                 {
-                    speaker: "Teacher",
-                    ar: "رُوبَا، مْبَيِّن عَلَيْك تَعْبَانَة الْيَوْم، بَحِسّ حَالِك مْنِيح؟",
-                    en: "Roba, you look tired today, do you feel okay?",
+                    "speaker": "Hala",
+                    "ar": "يا مِنى، وَجْهَك مِش مْريِح، كِيف حاسّة حالِك؟",
+                    "en": "Mina, you don’t look well, how are you feeling?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "صَرَاحَةً، لَا. بَحِسّ حَالِي مَرِيضَة شْوَيّ، رَاسِي بِوَجَعْنِي وَعِنْدِي حَرَارَة.",
-                    en: "Honestly, no. I feel a bit sick; my head hurts and I have a fever.",
+                    "speaker": "Mina",
+                    "ar": "صِراحةً تَعْبانَة، راسي بيوجَعْني كْتير.",
+                    "en": "Honestly, I’m tired, my head hurts a lot."
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "مِن إِمْتَى عِنْدِك هَالْأَعْرَاض؟",
-                    en: "Since when do you have these symptoms?",
+                    "speaker": "Hala",
+                    "ar": "مِن أَمْتَى بادي الوَجَع؟",
+                    "en": "Since when did the pain start?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مِن امْبَارِح بِلَّيْل، وَالْيَوْم الصُّبِح صِحِيت تَعْبَانَة كْتِير.",
-                    en: "Since last night, and this morning I woke up very tired.",
+                    "speaker": "Mina",
+                    "ar": "مِن بَارِحَة المَسَا، ومعي شْوَيِّة كُحَّة وَرَشَح.",
+                    "en": "Since last night, and I have a bit of cough and a runny nose."
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "أَحْسَن تْرُوحِي عَالدِّكْتُورَة بَعْد الدَّرْس، مَو تِتْهَاوَنِي مَع الْحَرَارَة.",
-                    en: "It’s better you go to the doctor after the lesson; don’t take the fever lightly.",
-                },
-
-                // Scene 2 – At the clinic reception
-                {
-                    speaker: "Receptionist",
-                    ar: "مَرْحَبَا، أَهْلًا فِيك فِي الْعِيَادَة. شُو عِنْدِك الْيَوْم؟",
-                    en: "Hello, welcome to the clinic. What do you have today?",
+                    "speaker": "Hala",
+                    "ar": "قِسْتِي الحَرارَة؟ حاسّة في سُخونَة؟",
+                    "en": "Did you take your temperature? Do you feel feverish?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "عِنْدِي وَجَع رَاس قَوِي وَحَرَارَة، وَبَحِسّ حَالِي دَايْخَة.",
-                    en: "I have a strong headache and a fever, and I feel dizzy.",
+                    "speaker": "Mina",
+                    "ar": "إي، حَرارتي طالْعَة شْوَي، جِسْمي سُخن.",
+                    "en": "Yes, my temperature is a bit high, my body is hot."
                 },
                 {
-                    speaker: "Receptionist",
-                    ar: "اِسْمِك؟ وَفِي عِنْدِك مَلَفّ هُون مِن قَبْل؟",
-                    en: "Your name? And do you already have a file here?",
+                    "speaker": "Hala",
+                    "ar": "ما بِنْصَح تِضَلّي هيك، خَلِّينا نِنْزِل عَالعِيادَة الجَامْعِيّة.",
+                    "en": "I don’t advise you to stay like this, let’s go down to the university clinic."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "اِسْمِي رُوبَا مُرْتَجَى، يمكن عِنْدِي مَلَفّ قَدِيم.",
-                    en: "My name is Roba Murtaja; maybe I have an old file.",
+                    "speaker": "Mina",
+                    "ar": "هَلَّق عِنّا مُحاضَرَة، ما بَقْدَر أَفَوِّتْها.",
+                    "en": "We have a lecture now, I can’t miss it."
                 },
                 {
-                    speaker: "Receptionist",
-                    ar: "طَيِّب، اِسْتَنِّي شْوَيّ، الدِّكْتُورَة حَتْنَادِيك كَمَان دَقِيقَة.",
-                    en: "Okay, wait a bit, the doctor will call you in a minute.",
-                },
-
-                // Scene 3 – With the doctor
-                {
-                    speaker: "Doctor",
-                    ar: "أَهْلًا رُوبَا، سَلَامْتِك. اِحْكِي لِي شُو الْمُشْكِلَة.",
-                    en: "Welcome, Roba, get well soon. Tell me what the problem is.",
+                    "speaker": "Hala",
+                    "ar": "صِحِّتِك أَهَمّ، إذا حالْتِك ساءَت بيصير خَطير.",
+                    "en": "Your health is more important, if your condition gets worse it could be serious."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مِن امْبَارِح عِنْدِي حَرَارَة وَوَجَع رَاس، وَاللَّيْل مَا نِمِت مْنِيح.",
-                    en: "Since yesterday I’ve had a fever and headache, and last night I didn’t sleep well.",
+                    "speaker": "Mina",
+                    "ar": "مَعِك حَق، يَلّا نِروح عَالعِيادَة.",
+                    "en": "You’re right, let’s go to the clinic."
                 },
                 {
-                    speaker: "Doctor",
-                    ar: "فِيه كْحَة أَو رَشَح؟ مَغْص فِي الْبَطِن؟",
-                    en: "Do you have cough or a cold? Stomach cramps?",
+                    "speaker": "Hala",
+                    "ar": "شُوفي، هون مَكْتوب: عِيادَة الطّالِبين، مِنِفُوت؟",
+                    "en": "Look, here it says: Student clinic, shall we go in?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "عِنْدِي كْحَة خَفِيفَة، بَسّ مَا فِيه مَغْص. بَحِسّ دُوخَة لَمَّا أُوقَف.",
-                    en: "I have a light cough, but no cramps. I feel dizzy when I stand up.",
+                    "speaker": "Mina",
+                    "ar": "إي، بِس نِسْأَل أَوَّل عَن المَوْعِد.",
+                    "en": "Yes, but let’s first ask about the appointment."
                 },
                 {
-                    speaker: "Doctor",
-                    ar: "هَلَّقْ حَأَخُد لَك الْحَرَارَة وَالضَّغْط، وَبَعْدِين أَعْطِيك دَّوَا.",
-                    en: "Now I’ll take your temperature and blood pressure, then give you medicine.",
+                    "speaker": "Nurse",
+                    "ar": "مَسّا الخير، شُو المُشْكِلَة؟",
+                    "en": "Good afternoon, what’s the problem?"
                 },
                 {
-                    speaker: "Doctor",
-                    ar: "مُعْظَم الظَّن هَادَا رَشَح قَوِي. بَدِّك تَرْتَاحِي فِي الْبَيْت وَتَشْرَبِي مَيّ كْتِير.",
-                    en: "Most probably this is a strong cold. You need to rest at home and drink plenty of water.",
+                    "speaker": "Hala",
+                    "ar": "صاحْبْتي تَعْبانَة، راسْها بيوجَعْها ومعها حَرارَة.",
+                    "en": "My friend is unwell, her head hurts and she has a fever."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "فِيه خَطَر أَو شِي جِدّ؟",
-                    en: "Is there any danger or something serious?",
+                    "speaker": "Nurse",
+                    "ar": "حَسَب الأَسْماء، في قُدّامْكُم طالِب واحِد بَس، اِسْتَنّوا شْوَي.",
+                    "en": "According to the list, there’s only one student before you, please wait a bit."
                 },
                 {
-                    speaker: "Doctor",
-                    ar: "لَا، بَسّ إِذَا الْحَرَارَة مَا نِزْلِت رُوحِي عَلَى الْمُسْتَشْفَى تِتْأَكَّدُوا.",
-                    en: "No, but if the fever doesn’t go down, go to the hospital to check.",
-                },
-
-                // Scene 4 – Small accident in the street
-                {
-                    speaker: "Narrator",
-                    ar: "بَعْد أُسْبُوع، رُوبَا وَصَاحْبْتَهَا يَارَا مَاشِيِين فِي الشَّارِع.",
-                    en: "A week later, Roba and her friend Yara are walking in the street.",
+                    "speaker": "Mina",
+                    "ar": "حسّيت فَجْأَة بِدُوخَة شْوَي…",
+                    "en": "I suddenly felt a bit dizzy…"
                 },
                 {
-                    speaker: "Yara",
-                    ar: "اِنْتَبِهِي رُوبَا، السِّلِّم مْبَلَّل!",
-                    en: "Careful, Roba, the stairs are wet!",
+                    "speaker": "Hala",
+                    "ar": "إِقْعُدي هون وخُدي تَنَفُّس عَميق، إذا حَسّيتي حالِك مِغْمَى عَلَيْك بِنادِي الإِسْعاف.",
+                    "en": "Sit here and take deep breaths; if you feel like you’re going to faint I’ll call the ambulance."
                 },
                 {
-                    speaker: "Narrator",
-                    ar: "رُوبَا نْزَلَقِت وَوَقَعِت مِن عَلَى الدَّرَج.",
-                    en: "Roba slipped and fell down the stairs.",
+                    "speaker": "Nurse",
+                    "ar": "تْفَضَّلي، هَلَّق دَوْرِك عَالدْكتور.",
+                    "en": "Come in, it’s your turn to see the doctor."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "آخ، إِجْرِي بِتْوَجَّعْنِي كْتِير!",
-                    en: "Ouch, my leg really hurts!",
+                    "speaker": "Doctor",
+                    "ar": "مَسّا الخير، اِحْكيلي شْو الأَعْراض إلّي عِنْدِك.",
+                    "en": "Good afternoon, tell me what symptoms you have."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "حَدَا يِسَاعِد! مُمْكِن حَدَا يِتَّصِل عَالإِسْعَاف؟",
-                    en: "Someone help! Can someone call an ambulance?",
+                    "speaker": "Mina",
+                    "ar": "راسي بيوجَعْني، معي كُحَّة وَرَشَح، وحاسّة في حَرارَة.",
+                    "en": "My head hurts, I have a cough and runny nose, and I feel feverish."
                 },
                 {
-                    speaker: "Bystander",
-                    ar: "سَلَامْتِك أُخْتِي، هَلَّقْ بَتَّصِل. فِيه دَم أَو جَرْح كْبِير؟",
-                    en: "Get well soon, sister, I’ll call now. Is there blood or a big wound?",
+                    "speaker": "Doctor",
+                    "ar": "في وَجَع بِالبَطْن أَو مَغَص؟ في مَشاكِل بِالتَّنَفُّس؟",
+                    "en": "Any stomach pain or cramps? Any breathing problems?"
                 },
                 {
-                    speaker: "Yara",
-                    ar: "فِيه جَرْح صْغِير، بَسّ بِنْخَاف يِكُون فِيه كِسِر فِي الإِجْر.",
-                    en: "There’s a small cut, but we’re afraid there might be a fracture in the leg.",
-                },
-
-                // Scene 5 – At the emergency room (short)
-                {
-                    speaker: "Nurse",
-                    ar: "مَسَا الْخِير، شُو صَار مَعَك؟",
-                    en: "Good evening, what happened to you?",
+                    "speaker": "Mina",
+                    "ar": "لا، بَس تَعَب وَوَجَع راس، ما في مَشْكِلَة بِالتَّنَفُّس.",
+                    "en": "No, just tiredness and a headache, no problem with breathing."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "وَقَعِت مِن عَلَى الدَّرَج، وَهَلَّقْ إِجْرِي بِوَجَعْنِي لَمَّا أَمْشِي.",
-                    en: "I fell from the stairs and now my leg hurts when I walk.",
+                    "speaker": "Doctor",
+                    "ar": "حَسَب الحَرارَة والأَعْراض، شَكْلُه نَزْلَة بَرِد قَوِيّة أَو إِنْفْلُوِنْزا خَفيفَة.",
+                    "en": "From the temperature and symptoms, it looks like a strong cold or a mild flu."
                 },
                 {
-                    speaker: "Nurse",
-                    ar: "رَح نِعْمِل صُورَة لِلْإِجْر، اِسْتَنِّي شْوَيّ.",
-                    en: "We’ll do an X-ray for the leg, wait a bit.",
+                    "speaker": "Doctor",
+                    "ar": "لازِم تِرْتاحي كَم يَوم، تِشْرَبي ميّ وَسَوائِل دافْيِة وَتَأْخُدي مُسَكِّن وَدَوا للكُحَّة.",
+                    "en": "You need to rest for a few days, drink water and warm fluids, and take a painkiller and cough medicine."
                 },
                 {
-                    speaker: "Narrator",
-                    ar: "بَعْد الْفُحُوصَات طِلِع مَا فِيه كِسِر، بَسّ رَضَّة قَوِيَّة.",
-                    en: "After the tests, it turned out there was no fracture, just a strong bruise.",
+                    "speaker": "Mina",
+                    "ar": "دْكتور، بِقْدَر أِكَمِّل مُحاضَراتي اليوْم؟",
+                    "en": "Doctor, can I continue my lectures today?"
                 },
                 {
-                    speaker: "Doctor",
-                    ar: "خُذِي دَّوَا لِلْوَجَع، وَرِيحِي إِجْرِك كَمْ يَوْم.",
-                    en: "Take pain medicine and rest your leg for a few days.",
+                    "speaker": "Doctor",
+                    "ar": "أَحْسَن إنِّك تِرْوحي عَالبَيْت اليوم، الجِسِم بِحْتاج رَاحَة.",
+                    "en": "It’s better if you go home today, your body needs rest."
                 },
                 {
-                    speaker: "Yara",
-                    ar: "سَلَامْتِك رُوبَا، مِرَّة جَاي مَا بَدْنَا دْرَامَا فِي الدَّرْس!",
-                    en: "Get well soon, Roba; next time we don’t want drama in the lesson!",
+                    "speaker": "Doctor",
+                    "ar": "إذا حَسّيتي إنّو الحَرارَة طالْعَة كْتير أَو ما بَقْدَر تِتْنَفَّسي مْنيح، لازم تْروحي عَطَوارِئ أَو تِتَّصْلي بالإِسْعاف.",
+                    "en": "If you feel your fever is very high or you can’t breathe well, you must go to the emergency room or call an ambulance."
                 },
-            ],
-        },
+                {
+                    "speaker": "Mina",
+                    "ar": "طَيِّب، بِسَوّي مِثْل ما حَكَيت.",
+                    "en": "Okay, I’ll do as you said."
+                },
+                {
+                    "speaker": "Doctor",
+                    "ar": "هاي الوَصْفَة، بتِقْدَري تَصْرْفي الدَّوا مِن أَيّ صَيْدَلِيّة.",
+                    "en": "Here’s the prescription, you can get the medicine from any pharmacy."
+                },
+                {
+                    "speaker": "Hala",
+                    "ar": "شُو حَكَالك الدْكتور؟ الأُمور مُطَمْئِنَة؟",
+                    "en": "What did the doctor tell you? Is everything reassuring?"
+                },
+                {
+                    "speaker": "Mina",
+                    "ar": "حَكى إنّو شَكْلُه بَرِد أَو إِنْفْلُوِنْزا، ولازِم رَاحَة وَدَوا.",
+                    "en": "He said it looks like a cold or flu, and I need rest and medicine."
+                },
+                {
+                    "speaker": "Hala",
+                    "ar": "يَلّا نِمُرّ عَالصَّيْدَلِيّة، بَعْدين بَوَصِّلِك عَالبَيْت.",
+                    "en": "Let’s pass by the pharmacy, then I’ll take you home."
+                },
+                {
+                    "speaker": "Mina",
+                    "ar": "مِشْكُورَة كْتير، عنْجَد ساعَدْتيني اليوم.",
+                    "en": "Thank you so much, you really helped me today."
+                },
+                {
+                    "speaker": "Hala",
+                    "ar": "وَلا يِهُمِّك، المُهِم تْحِسِّي أَحْسَن، وإذا صار إِشي طارِئ اتَّصْلي فيّي طَوالي.",
+                    "en": "Don’t mention it, the important thing is that you feel better; if anything urgent happens call me immediately."
+                }
+            ]
+        }
+        ,
 
         // ====================================
         // GRAMMAR
@@ -4554,7 +5557,6 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
     // Inside your defaultLessons literal:
     [LESSON_ID_APARTMENT]: {
         meta: {
@@ -4584,498 +5586,671 @@ const defaultLessons = {
                 // ===== APARTMENT & BUILDING =====
                 {
                     id: "shaqqa",
-                    ar: "شَقَّة",
+                    ar: "شِقّة",
                     en: "apartment / flat",
+                    enArabeezy: "shéʾa / shé2a",
                     hint:
-                        "Plural: شُقَق. ‘my apartment’ = شَقَّتِي. Used for rented or owned flats.",
-                    exampleAr: "شَقَّتِي صْغِيرَة بَسّ مُرَتَّبَة.",
-                    exampleEn: "My apartment is small but organized.",
+                        "Plural: شِقَق / شُقَق. ‘my apartment’ = شِقْتي. Used for rented or owned flats.",
+                    exampleAr: "بِسْكُن بِشِقّة قَريب مِن الجامْعَة.",
+                    exampleEn: "I live in an apartment near the university.",
                 },
                 {
                     id: "3imara",
-                    ar: "عِمَارَة",
+                    ar: "عِمارَة",
                     en: "building",
+                    enArabeezy: "3imāra",
                     hint:
-                        "Also بِنَايِة in some areas. عِمَارَة ثَلَاث طَوَابِق = three-floor building.",
-                    exampleAr: "إِحْنَا سَاكْنِين فِي عِمَارَة قُرِيبَة مِن الْبَحَر.",
-                    exampleEn: "We live in a building close to the sea.",
+                        "Also بِنَاية in some areas. عِمارَة تَلات طَوابِق = a three-floor building.",
+                    exampleAr: "العِمارَة قَديمَة بَس نْضيفَة.",
+                    exampleEn: "The building is old but clean.",
                 },
                 {
                     id: "taba2",
-                    ar: "طَابِق",
-                    en: "floor (level)",
+                    ar: "طابِق",
+                    en: "floor (1st, 2nd…)",
+                    enArabeezy: "ṭābeʾ / ṭābe2",
                     hint:
-                        "Plural: طَوَابِق. أَوَّل طَابِق / تَانِي طَابِق / طَابِق أَرْضِي.",
-                    exampleAr: "شَقَّتْنَا فِي الطَّابِق التَّالِت.",
-                    exampleEn: "Our apartment is on the third floor.",
+                        "Level in the building. أَوَّل طابِق / تاني طابِق / طابِق أَرْضي.",
+                    exampleAr: "الشِّقّة عَالطّابِق التّالِت.",
+                    exampleEn: "The apartment is on the third floor.",
                 },
                 {
                     id: "sellem",
-                    ar: "سِلِّم",
-                    en: "staircase / stairs",
+                    ar: "دَرَج / سِلِّم",
+                    en: "stairs / staircase",
+                    enArabeezy: "daraj / séllem",
                     hint:
-                        "Plural: سَلالِم. بَطْلَع عَالسِّلِّم = I go up the stairs.",
-                    exampleAr: "مَا فِيه أَسَنْسِير، كُلّ يَوْم بَطْلَع عَالسِّلِّم.",
-                    exampleEn: "There is no elevator; every day I go up the stairs.",
+                        "دَرَج = stairs in general, سِلِّم = staircase in a building.",
+                    exampleAr: "لَمّا الأسانْسير خَرْبان، نِطْلَع عَالدَّرَج.",
+                    exampleEn: "When the elevator is broken, we go up the stairs.",
                 },
                 {
                     id: "bab_el3imara",
-                    ar: "بَاب الْعِمَارَة",
+                    ar: "باب العِمارَة",
                     en: "building door / entrance",
-                    hint:
-                        "Also used generally for the main entrance.",
-                    exampleAr: "بَاب الْعِمَارَة بِيِضَلّ مَفْتُوح بَعْد الْمَغْرِب.",
-                    exampleEn: "The building door stays open after sunset.",
-                },
-                {
-                    id: "jar",
-                    ar: "جَار / جَارَة",
-                    en: "neighbour",
-                    hint:
-                        "Masc: جَار, fem: جَارَة, plural: جِيرَان.",
-                    exampleAr: "جِيرَانَّا لَطِيفِين بَسّ أَحْيَانًا عِنْدْهُم ضَجَّة.",
-                    exampleEn: "Our neighbours are kind but sometimes they’re noisy.",
-                },
-                {
-                    id: "sa7eb_elbeit",
-                    ar: "صَاحِب الْبَيْت",
-                    en: "landlord / owner",
-                    hint:
-                        "Literally ‘owner of the house’. Used for the one who owns the apartment.",
-                    exampleAr: "صَاحِب الْبَيْت بِيِسْكُن فِي نَفْس الْعِمَارَة.",
-                    exampleEn: "The landlord lives in the same building.",
-                },
-                {
-                    id: "ijar",
-                    ar: "إِيجَار",
-                    en: "rent",
-                    hint:
-                        "Monthly rent. ‘I pay the rent’ = بِدْفَع الإِيجَار.",
-                    exampleAr: "الإِيجَار بِتْدْفَع كُلّ أَوَّل شَهَر.",
-                    exampleEn: "The rent is paid at the beginning of each month.",
+                    enArabeezy: "bāb il-3imāra",
+                    hint: "Main entrance of the building.",
+                    exampleAr: "باب العِمارَة مِش مْسَكَّر مْنيح.",
+                    exampleEn: "The building door doesn’t close well.",
                 },
 
-                // ===== ROOMS & FURNITURE =====
+                // ===== ROOMS =====
                 {
-                    id: "ghurfeh_noom",
-                    ar: "غُرْفَة نُّوم",
+                    id: "ghurfet_nawm",
+                    ar: "غُرْفِة نَوْم",
                     en: "bedroom",
-                    hint:
-                        "Short: غُرْفَة. Plural: غُرَف.",
-                    exampleAr: "فِي شَقَّتْنَا غُرْفَتَيْن نُّوم.",
-                    exampleEn: "In our apartment there are two bedrooms.",
+                    enArabeezy: "ghurfet nōm",
+                    hint: "Short: غُرْفِة = room. Plural: غُرَف.",
+                    exampleAr: "الشِّقّة فيها غُرْفِة نَوْم واحْدِة.",
+                    exampleEn: "The apartment has one bedroom.",
                 },
                 {
                     id: "salon",
-                    ar: "صَالُون",
-                    en: "living room / sitting room",
-                    hint:
-                        "Used for the main room for guests and family.",
-                    exampleAr: "مِنِقْعُد فِي الصَّالُون نِتْفَرَّج عَلَى التِّلِفِزْيُون.",
+                    ar: "صالون",
+                    en: "living room",
+                    enArabeezy: "ṣālōn / salon",
+                    hint: "Sitting room for guests and family.",
+                    exampleAr: "بِنِقْعُد بِالصّالون نِتْفَرَّج عَالتِّلْفِزْيون.",
                     exampleEn: "We sit in the living room and watch TV.",
                 },
                 {
                     id: "matbakh",
                     ar: "مَطْبَخ",
                     en: "kitchen",
-                    hint:
-                        "Plural: مَطَابِخ. ‘Open kitchen’ = مَطْبَخ مَفْتُوح.",
-                    exampleAr: "مَطْبَخ الْبَيْت صْغِير بَسّ مُرَتَّب.",
-                    exampleEn: "The kitchen is small but tidy.",
+                    enArabeezy: "maṭbakh",
+                    hint: "Room for cooking. Plural: مَطابِخ.",
+                    exampleAr: "مَطْبَخ الشِّقّة صْغير بَس مُرَتَّب.",
+                    exampleEn: "The apartment’s kitchen is small but tidy.",
                 },
                 {
                     id: "7ammam",
-                    ar: "حَمَّام",
+                    ar: "حَمّام",
                     en: "bathroom",
-                    hint:
-                        "Can also mean ‘toilet’ in context.",
-                    exampleAr: "الحَمَّام فِي آخِر الْمَمَرّ.",
-                    exampleEn: "The bathroom is at the end of the hallway.",
+                    enArabeezy: "ḥammām / 7ammam",
+                    hint: "Bathroom / toilet, depending on context.",
+                    exampleAr: "الحَمّام في مَشْكِلَة بِالمَيّ.",
+                    exampleEn: "There is a water problem in the bathroom.",
                 },
                 {
                     id: "balkon",
-                    ar: "بَلكُون",
+                    ar: "بَلكون / شُرْفَة",
                     en: "balcony",
-                    hint:
-                        "Sometimes بَالْكُونَة. Used a lot in cities.",
-                    exampleAr: "بَنْشَر الْغْسِيل عَلَى البَلكُون.",
-                    exampleEn: "We hang the laundry on the balcony.",
-                },
-                {
-                    id: "takhteh",
-                    ar: "تَخْت",
-                    en: "bed",
-                    hint:
-                        "Plural: تْخُوت. ‘my bed’ = تَخْتِي.",
-                    exampleAr: "التَّخْت قُدَّام الشُّبَّاك.",
-                    exampleEn: "The bed is in front of the window.",
-                },
-                {
-                    id: "kanapeh",
-                    ar: "كَنَبَايِة",
-                    en: "sofa / couch",
-                    hint:
-                        "Plural: كَنَبَايَات.",
-                    exampleAr: "فِي كَنَبَايِة كْبِيرَة فِي الصَّالُون.",
-                    exampleEn: "There is a big sofa in the living room.",
-                },
-                {
-                    id: "tawleh",
-                    ar: "طَاوْلَة",
-                    en: "table",
-                    hint:
-                        "Plural: طَوَاوِل. طَاوْلَة أَكْل = dining table.",
-                    exampleAr: "مَنَاكِل عَلَى طَاوْلَة صْغِيرَة فِي الْمَطْبَخ.",
-                    exampleEn: "We eat at a small table in the kitchen.",
-                },
-                {
-                    id: "korsi",
-                    ar: "كُرْسِي",
-                    en: "chair",
-                    hint:
-                        "Plural: كَرَاسِي.",
-                    exampleAr: "مَا فِيه كَرَاسِي كْفَايَة لِلضُّيُوف.",
-                    exampleEn: "There aren’t enough chairs for the guests.",
+                    enArabeezy: "balkōn / shurfa",
+                    hint: "Outside space of the apartment (balcony).",
+                    exampleAr: "بَحِبّ أَشْرَب قَهْوِة عَالبَلكون.",
+                    exampleEn: "I like to drink coffee on the balcony.",
                 },
 
-                // ===== UTILITIES & PROBLEMS =====
+                // ===== PEOPLE & MONEY =====
                 {
-                    id: "kahraba",
-                    ar: "كَهرَبَا",
-                    en: "electricity",
-                    hint:
-                        "مَا فِيه كَهرَبَا = there is no electricity. قَطْع كَهرَبَا = power cut.",
-                    exampleAr: "فِي قَطْع كَهرَبَا كُلّ لَيْلَة تَقْرِيبًا.",
-                    exampleEn: "There is a power cut almost every night.",
+                    id: "jar",
+                    ar: "جار / جارَة",
+                    en: "neighbor (m/f)",
+                    enArabeezy: "jār / jāra",
+                    hint: "Someone who lives next door or nearby. Plural: جيران.",
+                    exampleAr: "جيرانّا طَيِّبين بَس صَوْتهم عالي أَحْيانا.",
+                    exampleEn: "Our neighbors are nice but sometimes loud.",
                 },
+                {
+                    id: "sa7eb_elbeit",
+                    ar: "صاحِب البَيْت",
+                    en: "landlord / owner",
+                    enArabeezy: "ṣāḥeb il-bēt / sa7eb el-beit",
+                    hint: "Owner of the apartment or house.",
+                    exampleAr: "صاحِب البَيْت ساكِن في نَفْس العِمارَة.",
+                    exampleEn: "The landlord lives in the same building.",
+                },
+                {
+                    id: "ijar",
+                    ar: "إيجار",
+                    en: "rent",
+                    enArabeezy: "ījār / ijar",
+                    hint: "Money paid every month for the apartment.",
+                    exampleAr: "إيجار الشِّقّة غالي شْوَي.",
+                    exampleEn: "The apartment’s rent is a bit expensive.",
+                },
+                {
+                    id: "fatora",
+                    ar: "فاتورَة",
+                    en: "bill",
+                    enArabeezy: "fātūra / fatora",
+                    hint: "General word, often for utilities.",
+                    exampleAr: "لازِم أَدْفَع فاتورَة الشَّهِر هادا.",
+                    exampleEn: "I have to pay this month’s bill.",
+                },
+                {
+                    id: "fatora_kahraba",
+                    ar: "فاتورَة كَهْرَبا",
+                    en: "electricity bill",
+                    enArabeezy: "fātūrat kahrabā",
+                    hint: "Monthly bill for electricity.",
+                    exampleAr: "فاتورَة الكَهْرَبا طِلْعِت عالْعادَة أَكْتَر.",
+                    exampleEn: "The electricity bill came higher than usual.",
+                },
+                {
+                    id: "fatora_mayy",
+                    ar: "فاتورَة مَيّ",
+                    en: "water bill",
+                    enArabeezy: "fātūrat mayy",
+                    hint: "Bill for water consumption.",
+                    exampleAr: "فاتورَة المَيّ مِش مَشْمُولَة بِالإيجار.",
+                    exampleEn: "The water bill is not included in the rent.",
+                },
+
+                // ===== DOORS, WINDOWS & KEYS =====
+                {
+                    id: "mifta7",
+                    ar: "مِفْتاح",
+                    en: "key",
+                    enArabeezy: "miftaḥ / mifta7",
+                    hint: "Key for the door, etc.",
+                    exampleAr: "نِسيت المِفْتاح جُوّا الشِّقّة.",
+                    exampleEn: "I forgot the key inside the apartment.",
+                },
+                {
+                    id: "bab",
+                    ar: "باب",
+                    en: "door",
+                    enArabeezy: "bāb",
+                    hint: "Door of a room, apartment, or building.",
+                    exampleAr: "باب البَلكون مِش مْسَكَّر مْنيح.",
+                    exampleEn: "The balcony door doesn’t close well.",
+                },
+                {
+                    id: "shubbak",
+                    ar: "شُبّاك",
+                    en: "window",
+                    enArabeezy: "shubbāk / shubbak",
+                    hint: "Window of a room.",
+                    exampleAr: "الشُّبّاك مَكْسور وبدّه تَصْلِيح.",
+                    exampleEn: "The window is broken and needs repair.",
+                },
+
+                // ===== UTILITIES & APPLIANCES =====
                 {
                     id: "mayy",
                     ar: "مَيّ",
                     en: "water",
-                    hint:
-                        "مَيّ قَطَرَة = running tap water; قَطْع مَيّ = no water.",
-                    exampleAr: "الْيَوْم مَا فِيه مَيّ فِي الحَمَّام.",
-                    exampleEn: "Today there is no water in the bathroom.",
+                    enArabeezy: "mayy",
+                    hint: "Tap water / water in general.",
+                    exampleAr: "المَيّ بِتِنْقِط مِن السَّقْف.",
+                    exampleEn: "Water is dripping from the ceiling.",
                 },
                 {
-                    id: "internet",
-                    ar: "إِنْتَرْنِت",
-                    en: "internet",
-                    hint:
-                        "Used as is. ضَعْف إِنْتَرْنِت = weak internet.",
-                    exampleAr: "الإِنْتَرْنِت ضَعِيف، مَا بَقْدَر أَدْرُس أُونْلَايْن مْنِيح.",
-                    exampleEn: "The internet is weak; I can’t study online well.",
+                    id: "kahraba",
+                    ar: "كَهْرَبا",
+                    en: "electricity",
+                    enArabeezy: "kahrabā / kahraba",
+                    hint: "Power in the house. قَطْع كَهْرَبا = power cut.",
+                    exampleAr: "الكَهْرَبا بِتِنْقِطِع كْثير بِهالْمَنطِقَة.",
+                    exampleEn: "The electricity cuts off a lot in this area.",
                 },
                 {
                     id: "daw",
                     ar: "ضَوّ",
                     en: "light",
-                    hint:
-                        "For electricity / lamps: ضَوّ الْغُرْفَة.",
-                    exampleAr: "ضَوّ الْمَطْبَخ مَا بِشْتَغِل.",
-                    exampleEn: "The kitchen light doesn’t work.",
+                    enArabeezy: "ḍaww / daw",
+                    hint: "Electric light / lamp.",
+                    exampleAr: "في ضَوّ مِش شَغّال بِالْمَمَرّ.",
+                    exampleEn: "There is a light not working in the hallway.",
                 },
                 {
-                    id: "mushkileh",
-                    ar: "مُشْكِلَة",
-                    en: "problem",
-                    hint:
-                        "Plural: مُشْكِلَات. مَا فِيه مُشْكِلَة = no problem.",
-                    exampleAr: "فِي مُشْكِلَة فِي الْمَيّ مِن أُسْبُوع.",
-                    exampleEn: "There has been a problem with the water for a week.",
+                    id: "ghassaleh",
+                    ar: "غَسّالِة",
+                    en: "washing machine",
+                    enArabeezy: "ghassāle / ghassaleh",
+                    hint: "Machine for washing clothes.",
+                    exampleAr: "غَسّالِة الشِّقّة خَرْبانِة هالأَيام.",
+                    exampleEn: "The apartment’s washing machine is broken these days.",
                 },
                 {
-                    id: "dojjeh",
-                    ar: "ضَجَّة",
-                    en: "noise",
-                    hint:
-                        "Also إِزْعَاج (more formal). ضَجَّة مِن الْجِيرَان.",
-                    exampleAr: "فِيه ضَجَّة كْتِير مِن فُوق.",
-                    exampleEn: "There is a lot of noise from upstairs.",
+                    id: "tallajeh",
+                    ar: "تَلّاجَة",
+                    en: "fridge",
+                    enArabeezy: "tallājeh",
+                    hint: "Refrigerator.",
+                    exampleAr: "التَّلّاجَة مَش مْبَرِّدَة مْنيح.",
+                    exampleEn: "The fridge is not cooling well.",
                 },
                 {
-                    id: "ratoobe",
-                    ar: "رُطُوبَة",
-                    en: "humidity / damp",
-                    hint:
-                        "Used for walls and air. حِيط رَطِب = damp wall.",
-                    exampleAr: "فِي رُطُوبَة عَلَى حِيط الحَمَّام.",
-                    exampleEn: "There is humidity on the bathroom wall.",
+                    id: "ghaz",
+                    ar: "غَاز",
+                    en: "gas (for cooking)",
+                    enArabeezy: "ghāz / ghaz",
+                    hint: "Gas cylinder or gas line.",
+                    exampleAr: "قِنّينِة الغَاز فاضيِة، لازم نِغَيِّرْها.",
+                    exampleEn: "The gas cylinder is empty; we need to change it.",
                 },
                 {
-                    id: "tasarrub",
-                    ar: "تَسَرُّب",
-                    en: "leak",
-                    hint:
-                        "From water / pipes. فِي تَسَرُّب مَيّ مِن السَّقِف.",
-                    exampleAr: "فِي تَسَرُّب مَيّ فِي الْمَطْبَخ.",
-                    exampleEn: "There is a water leak in the kitchen.",
+                    id: "furn",
+                    ar: "فُرْن",
+                    en: "oven",
+                    enArabeezy: "furn",
+                    hint: "For baking / cooking, gas or electric.",
+                    exampleAr: "الفُرْن الكَهْرَبا خَرْبان اليوم.",
+                    exampleEn: "The electric oven is broken today.",
                 },
                 {
-                    id: "maksur",
-                    ar: "مَكْسُور",
-                    en: "broken",
-                    hint:
-                        "Masc: مَكْسُور, fem: مَكْسُورَة. For objects: بَاب مَكْسُور.",
-                    exampleAr: "شُبَّاك الصَّالُون مَكْسُور.",
-                    exampleEn: "The living room window is broken.",
+                    id: "sakhan_mayy",
+                    ar: "سَخّان مَيّ",
+                    en: "water heater",
+                    enArabeezy: "sakkhān mayy",
+                    hint: "Heater for shower water.",
+                    exampleAr: "السَّخّان مَش شَغّال، المَيّ بارْدِة.",
+                    exampleEn: "The water heater is not working; the water is cold.",
+                },
+                {
+                    id: "makyyef",
+                    ar: "مِكيّف",
+                    en: "air conditioner",
+                    enArabeezy: "mikayyef / makyyef",
+                    hint: "AC unit.",
+                    exampleAr: "المِكيّف بِطَفّي لَمّا نِشَغِّل غَسّالِة.",
+                    exampleEn: "The AC turns off when we turn on the washing machine.",
+                },
+                {
+                    id: "maghsaleh",
+                    ar: "مَغْسَلِة",
+                    en: "sink (bathroom or kitchen)",
+                    enArabeezy: "maghsaleh",
+                    hint: "Basin for water.",
+                    exampleAr: "المَغْسَلِة في الحَمّام مَسْدودَة.",
+                    exampleEn: "The bathroom sink is blocked.",
+                },
+                {
+                    id: "7anafiyeh",
+                    ar: "حَنَفِيّة",
+                    en: "tap / faucet",
+                    enArabeezy: "ḥanafyyeh / 7anafiyeh",
+                    hint: "Water tap.",
+                    exampleAr: "الحَنَفِيّة بْتِخَرّ مَيّ طول الليل.",
+                    exampleEn: "The tap drips water all night.",
+                },
+                {
+                    id: "massdood",
+                    ar: "مَسْدود",
+                    en: "blocked / clogged",
+                    enArabeezy: "masdūd / masdood",
+                    hint: "Used for sink, toilet, drain, etc.",
+                    exampleAr: "المَجْرى مَسْدود وبَدّه تَنْظيف.",
+                    exampleEn: "The drain is blocked and needs cleaning.",
+                },
+                {
+                    id: "beykhar_mayy",
+                    ar: "بِيخَرّ مَيّ",
+                    en: "it leaks water",
+                    enArabeezy: "bikharr mayy / bey5ar mayy",
+                    hint: "Used for tap, pipe, ceiling.",
+                    exampleAr: "السَّقْف بِيخَرّ مَيّ لَمّا تِمْطُر.",
+                    exampleEn: "The ceiling leaks when it rains.",
                 },
 
-                // ===== VERBS / CHUNKS =====
+                // ===== ELEVATOR, STAIRS & NOISE =====
                 {
-                    id: "basta2jer",
-                    ar: "بَسْتَأْجِر",
-                    en: "I rent (an apartment)",
-                    hint:
-                        "From اِسْتَأْجَر = to rent. بَسْتَأْجِر شَقَّة فِي غَزَّة.",
-                    exampleAr: "هَادِي أَوَّل مَرَّة بَسْتَأْجِر شَقَّة لَحَالِي.",
-                    exampleEn: "This is the first time I rent an apartment by myself.",
+                    id: "mis3ad",
+                    ar: "مِصْعَد / أسانْسير",
+                    en: "elevator",
+                    enArabeezy: "miṣʿad / asansēr",
+                    hint: "Lift in the building.",
+                    exampleAr: "المِصْعَد بْوِقَّف بِنُصّ الطّابِق أَحْيانًا.",
+                    exampleEn: "The elevator sometimes stops between floors.",
                 },
                 {
-                    id: "badfa3_ijar",
-                    ar: "بَدْفَع الإِيجَار",
-                    en: "I pay the rent",
-                    hint:
-                        "Add time: كُلّ أَوَّل شَهَر / فِي نِصّ الشَّهَر.",
-                    exampleAr: "بَدْفَع الإِيجَار أُونْلَايْن.",
-                    exampleEn: "I pay the rent online.",
+                    id: "sawt_3ali",
+                    ar: "صَوْت عالي",
+                    en: "loud noise",
+                    enArabeezy: "ṣōt ʿāli / sawt 3ali",
+                    hint: "Used for neighbors, street, etc.",
+                    exampleAr: "في صَوْت عالي مِن الجيران بِاللَّيْل.",
+                    exampleEn: "There is loud noise from the neighbors at night.",
+                },
+
+                // ===== STATE OF THINGS =====
+                {
+                    id: "maksur",
+                    ar: "مَكْسور",
+                    en: "broken",
+                    enArabeezy: "maksūr / maksour",
+                    hint: "Physically broken (glass, door, window).",
+                    exampleAr: "الشُّبّاك مَكْسور بِنُصّه.",
+                    exampleEn: "The window is broken in the middle.",
                 },
                 {
-                    id: "byzabbET",
-                    ar: "بِزَبِّط",
-                    en: "he fixes / he repairs",
-                    hint:
-                        "Spoken verb: زَبَّط. بْنِزَبِّط الْمُشْكِلَة = we fix the problem.",
-                    exampleAr: "صَاحِب الْبَيْت حَكَى إِنُّه حَيِزَبِّط التَّسَرُّب.",
-                    exampleEn: "The landlord said he will fix the leak.",
-                },
-                {
-                    id: "bittkasar",
-                    ar: "بِتْكَسَّر",
-                    en: "it breaks / gets broken",
-                    hint:
-                        "Passive meaning: اَللَّمْبَة بِتْكَسَّر كْتِير.",
-                    exampleAr: "كُلّ شَهَر شِي بِتْكَسَّر فِي الشَّقَّة.",
-                    exampleEn: "Every month something gets broken in the apartment.",
-                },
-                {
-                    id: "bistanna_sabbaq",
-                    ar: "بِسْتَنَّى السَّبَّاك",
-                    en: "I wait for the plumber",
-                    hint:
-                        "سَبَّاك = plumber. Use with second professions too.",
-                    exampleAr: "مِنِ الصُّبِح وَأَنَا بِسْتَنَّى السَّبَّاك.",
-                    exampleEn: "I’ve been waiting for the plumber since morning.",
-                },
-                {
-                    id: "batwasal_ma3",
-                    ar: "بَتْوَاصَل مَع...",
-                    en: "I contact / I get in touch with…",
-                    hint:
-                        "بَتْوَاصَل مَع صَاحِب الْبَيْت / مَع الشَّرِكَة.",
-                    exampleAr: "لَمَّا فِي مُشْكِلَة بَتْوَاصَل مَع صَاحِب الْبَيْت.",
-                    exampleEn: "When there is a problem, I contact the landlord.",
-                },
-                {
-                    id: "fi_mushkileh_fi",
-                    ar: "فِي مُشْكِلَة فِي...",
-                    en: "There is a problem with…",
-                    hint:
-                        "Template: فِي مُشْكِلَة فِي الْمَيّ / فِي الضَّوّ / فِي البَلكُون.",
-                    exampleAr: "فِي مُشْكِلَة فِي الإِنْتَرْنِت مِن امْبَارِح.",
-                    exampleEn: "There has been a problem with the internet since yesterday.",
+                    id: "kharban",
+                    ar: "خَرْبان",
+                    en: "not working / out of order",
+                    enArabeezy: "kharbān / kharban",
+                    hint: "Device that doesn’t work.",
+                    exampleAr: "الأسانْسير خَرْبان من أُسْبوع.",
+                    exampleEn: "The elevator has been out of order for a week.",
                 },
                 {
                     id: "ma_bishtghil",
                     ar: "مَا بِشْتَغِل",
                     en: "it doesn’t work",
+                    enArabeezy: "ma bishtghil",
                     hint:
-                        "Used for any device: الضَّوّ مَا بِشْتَغِل، الغَسَّالَة مَا بِتِشْتَغِل.",
-                    exampleAr: "السِّخَّان مَا بِشْتَغِل، الْمَيّ بَارْدَة.",
-                    exampleEn: "The heater doesn’t work; the water is cold.",
+                        "Used for any device: الضَّوّ مَا بِشْتَغِل، الغَسّالِة مَا بِتِشْتَغِل.",
+                    exampleAr: "السَّخّان مَا بِشْتَغِل، المَيّ بارْدِة.",
+                    exampleEn: "The water heater doesn’t work; the water is cold.",
+                },
+
+                // ===== VERBS & USEFUL CHUNKS =====
+                {
+                    id: "basta2jer",
+                    ar: "بَسْتَأْجِر",
+                    en: "I rent (an apartment)",
+                    enArabeezy: "bastaʾjir / basta2jer",
+                    hint:
+                        "From اِسْتَأْجَر = to rent. بَسْتَأْجِر شِقّة فِي غَزّة.",
+                    exampleAr: "هَادي أَوَّل مَرّة بَسْتَأْجِر شِقّة لَحالي.",
+                    exampleEn: "This is the first time I rent an apartment by myself.",
+                },
+                {
+                    id: "badfa3_ijar",
+                    ar: "بَدْفَع الإيجار",
+                    en: "I pay the rent",
+                    enArabeezy: "badfaʿ il-ījār / badfa3 el-ijar",
+                    hint: "Add time: كُلّ أَوَّل شَهِر / فِي نُصّ الشَّهِر.",
+                    exampleAr: "بَدْفَع الإيجار أُونْلايْن.",
+                    exampleEn: "I pay the rent online.",
+                },
+                {
+                    id: "fi_mushkileh_fi",
+                    ar: "في مُشْكِلَة في...",
+                    en: "there is a problem with…",
+                    enArabeezy: "fī mushkile fi...",
+                    hint:
+                        "Template: في مُشْكِلَة في المَيّ / في الضَوّ / في البَلكون...",
+                    exampleAr: "في مُشْكِلَة في الإِنْتَرْنِت مِن امْبارِح.",
+                    exampleEn: "There has been a problem with the internet since yesterday.",
+                },
+                {
+                    id: "batwasal_ma3",
+                    ar: "بَتْواصَل مَع...",
+                    en: "I contact / get in touch with…",
+                    enArabeezy: "batwāṣal maʿ...",
+                    hint: "بَتْواصَل مَع صاحِب البَيْت / مَع الشِّرْكَة.",
+                    exampleAr: "لَمّا في مُشْكِلَة بَتْواصَل مَع صاحِب البَيْت.",
+                    exampleEn: "When there is a problem, I contact the landlord.",
                 },
             ],
 
             extra: [
                 {
-                    id: "sakkan_jdid",
-                    ar: "سَكَن جْدِيد",
-                    en: "new place / new apartment (to live in)",
-                    hint:
-                        "Used when moving. نَقَلْت عَلَى سَكَن جْدِيد.",
-                    exampleAr: "رُوبَا نَقَلِت عَلَى سَكَن جْدِيد قُرِيب مِن الْجَامْعَة.",
+                    id: "3a2d_ijar",
+                    ar: "عَقْد إيجار",
+                    en: "rental contract",
+                    enArabeezy: "ʿaʾd ījār / 3a2d ijār",
+                    hint: "Paper that explains rules, rent, and conditions.",
+                    exampleAr: "عَقْد الإيجار مَكْتوب فيه كُلّ الشُّروط.",
+                    exampleEn: "All the conditions are written in the rental contract.",
+                },
+                {
+                    id: "shakwa",
+                    ar: "شَكْوَى",
+                    en: "complaint",
+                    enArabeezy: "shakwā / shakwa",
+                    hint: "Formal complaint to landlord or authority.",
+                    exampleAr: "مُمْكِن نِقَدِّم شَكْوَى عَن الصَّوْت العالي.",
+                    exampleEn: "We can file a complaint about the loud noise.",
+                },
+                {
+                    id: "7ares_el3imara",
+                    ar: "حارِس العِمارَة",
+                    en: "building guard / caretaker",
+                    enArabeezy: "ḥāres il-3imāra / 7ares el-3imara",
+                    hint: "Person who looks after the building.",
+                    exampleAr: "حارِس العِمارَة بِفَتِّح الباب وَبْيِنَظِّف الدَّرَج.",
+                    exampleEn: "The building guard opens the door and cleans the stairs.",
+                },
+                {
+                    id: "ratoobe",
+                    ar: "رُطوبَة",
+                    en: "humidity / damp",
+                    enArabeezy: "ruṭūba / ratoobe",
+                    hint: "Moisture on walls or in the air.",
+                    exampleAr: "في رُطوبَة عَالحِيط بِغُرْفِة النَّوْم.",
+                    exampleEn: "There is damp on the wall in the bedroom.",
+                },
+                {
+                    id: "tedfi2a",
+                    ar: "تِدْفِئَة",
+                    en: "heating",
+                    enArabeezy: "tidfiʾa / tedfi2a",
+                    hint: "System for warming the house.",
+                    exampleAr: "ما في تِدْفِئَة مْنيحَة بِالشِّتْوي.",
+                    exampleEn: "There is no good heating in winter.",
+                },
+                {
+                    id: "merwa7a",
+                    ar: "مِرْوَحَة",
+                    en: "fan",
+                    enArabeezy: "mirwaḥa / merwa7a",
+                    hint: "Ceiling or standing fan.",
+                    exampleAr: "المِرْوَحَة أَسْهَل مِن المِكيّف لَلفاتورَة.",
+                    exampleEn: "A fan is easier on the bill than the AC.",
+                },
+                {
+                    id: "sakan_jdid",
+                    ar: "سَكَن جْديد",
+                    en: "new place / new apartment",
+                    enArabeezy: "sakan jdid",
+                    hint: "Used when someone has just moved.",
+                    exampleAr: "رُوبَا نَقَلِت عَسَكَن جْديد قَريب مِن الجامْعَة.",
                     exampleEn: "Roba moved to a new place near the university.",
                 },
                 {
-                    id: "sawt_3ali",
-                    ar: "صَوْت عَالِي",
-                    en: "loud sound / loud noise",
-                    hint:
-                        "Used for neighbours, TV, street.",
-                    exampleAr: "فِي صَوْت عَالِي مِن شَقَّة الْجِيرَان كُلّ لَيْلَة.",
-                    exampleEn: "There is a loud sound from the neighbours’ apartment every night.",
-                },
-                {
                     id: "mash7oun",
-                    ar: "مَشْحُون",
-                    en: "charged (for electricity card, meter)",
-                    hint:
-                        "For prepaid electricity: العَدَّاد مَشْحُون؟",
-                    exampleAr: "نَسِينَا نِشْحَن الْعَدَّاد، قَطَعِت الْكَهرَبَا.",
+                    ar: "مَشْحون",
+                    en: "charged (for electricity card / meter)",
+                    enArabeezy: "mashḥūn / mash7oun",
+                    hint: "Used for prepaid electricity meters.",
+                    exampleAr: "نَسِينَا نِشْحَن العَدّاد، قَطَعِت الكَهْرَبا.",
                     exampleEn: "We forgot to charge the meter, the electricity went off.",
                 },
             ],
-        },
+        }
+        ,
 
         // ====================================
         // DIALOGUE (moving in, problems, landlord & neighbour)
         // ====================================
-        dialogue: {
-            lines: [
-                // Scene 1 – Moving into a new apartment
+        "dialogue": {
+            "lines": [
                 {
-                    speaker: "Narrator",
-                    ar: "رُوبَا لَقِت شَقَّة جْدِيدَة قُرِيبَة مِن الْجَامْعَة، وَرَاحِت تِشُوفْهَا مَع صَاحِب الْبَيْت.",
-                    en: "Roba found a new apartment near the university and went to see it with the landlord.",
+                    "speaker": "Rami",
+                    "ar": "مَسّا الخير يا خالِد، نِقَلْت عَالشِّقّة الجْديدَة أَخِيرًا!",
+                    "en": "Good evening, Khaled, I finally moved to the new apartment!"
                 },
                 {
-                    speaker: "Landlord",
-                    ar: "مَرْحَبَا رُوبَا، أَهْلًا وَسَهْلًا. هَادِي الشَّقَّة، تْفَضَّلِي.",
-                    en: "Hello Roba, welcome. This is the apartment, please come in.",
+                    "speaker": "Khaled",
+                    "ar": "مَبْروك! شُو أَخْبار الشِّقّة؟ كْبيرَة وِلّا صْغيرَة؟",
+                    "en": "Congratulations! How is the apartment? Big or small?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مَرْحَبَا، شُكْرًا. الشَّقَّة مُرَتَّبَة، كَم غُرْفَة فِيهَا؟",
-                    en: "Hello, thank you. The apartment is tidy. How many rooms does it have?",
+                    "speaker": "Rami",
+                    "ar": "مِش كْبيرَة بَس مْنيحَة، فيها غُرْفِة نَوْم واحْدِة، صالون، مَطْبَخ وَحَمّام.",
+                    "en": "It’s not big but it’s nice; it has one bedroom, a living room, a kitchen and a bathroom."
                 },
                 {
-                    speaker: "Landlord",
-                    ar: "فِيهَا غُرْفَتَيْن نُّوم، صَالُون، مَطْبَخ وَحَمَّام، وَبَلكُون صْغِيرَة.",
-                    en: "It has two bedrooms, a living room, a kitchen and a bathroom, and a small balcony.",
+                    "speaker": "Khaled",
+                    "ar": "وعِندَك بَلكون كْمان وِلّا لا؟",
+                    "en": "And do you also have a balcony or not?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "فِي كَهْرَبَا وَمَيّ كُوَيِّس؟",
-                    en: "Is the electricity and water good?",
+                    "speaker": "Rami",
+                    "ar": "إي، في بَلكون صْغير عَطَريق الشّارِع الرّئيسي.",
+                    "en": "Yes, there is a small balcony on the main street."
                 },
                 {
-                    speaker: "Landlord",
-                    ar: "أَه طَبْعًا، بَسّ مَرَّات فِي قَطْع كَهرَبَا مِن الشِّرْكَة زَيّ كِلّ الْمِنْطَقَة.",
-                    en: "Yes of course, but sometimes there are power cuts from the company like in the whole area.",
+                    "speaker": "Khaled",
+                    "ar": "عَأيّ طابِق الشِّقّة؟ العِمارَة في أسانْسير؟",
+                    "en": "On which floor is the apartment? Does the building have an elevator?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "وَقَدِّيش الإِيجَار فِي الشَّهَر؟",
-                    en: "And how much is the rent per month?",
+                    "speaker": "Rami",
+                    "ar": "عَالطّابِق الرّابِع، وفي مِصْعَد، بَس خَرْبان أَحْيانًا.",
+                    "en": "On the fourth floor, and there is an elevator, but it’s sometimes out of order."
                 },
                 {
-                    speaker: "Landlord",
-                    ar: "الإِيجَار أَلْف وَمِيّة شِيكِل، دُوْن فَوَاتِير.",
-                    en: "The rent is 1100 shekels, without the bills.",
+                    "speaker": "Khaled",
+                    "ar": "طَيِّب، قَدّيش الإيجار؟ شامِل فاتورَة مَيّ وَكَهْرَبا؟",
+                    "en": "Okay, how much is the rent? Does it include water and electricity bills?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مُمْكِن نِشْمِل الإِنْتَرْنِت مَع الإِيجَار؟",
-                    en: "Is it possible to include the internet with the rent?",
+                    "speaker": "Rami",
+                    "ar": "الإيجار خَمِس مِيّة شِكِل، بَس فاتورَة المَيّ وَالكَهْرَبا عَلَيْنا.",
+                    "en": "The rent is five hundred shekels, but the water and electricity bills are on us."
                 },
                 {
-                    speaker: "Landlord",
-                    ar: "مُمْكِن، بَسّ سَاعَتْهَا بِيِصِير الإِيجَار أَلْف وَثَلَاث مِيّة.",
-                    en: "Possible, but then the rent becomes 1300.",
-                },
-
-                // Scene 2 – One month later: problems start
-                {
-                    speaker: "Narrator",
-                    ar: "بَعْد شَهَر، بَلَّشِت تْظْهَر مُشْكِلَات صْغِيرَة فِي الشَّقَّة.",
-                    en: "After a month, small problems started to appear in the apartment.",
+                    "speaker": "Khaled",
+                    "ar": "والجيران؟ هاد السُّؤال المُهِم.",
+                    "en": "And the neighbors? That’s the important question."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "صَبَاح الْخِير، أُسَامَة. فِي مُشْكِلَة فِي الْمَيّ فِي الْمَطْبَخ.",
-                    en: "Good morning, Osama. There is a problem with the water in the kitchen.",
+                    "speaker": "Rami",
+                    "ar": "جارتي اللّي حَدِّي طَيِّبَة، بَس الجار اللّي فَوقنا صَوْته عالي بِاللَّيْل.",
+                    "en": "My neighbor next door is nice, but the neighbor above us is loud at night."
                 },
                 {
-                    speaker: "Landlord",
-                    ar: "شُو فِيه؟ مَا بِتِجِي مَيّ أَو فِي تَسَرُّب؟",
-                    en: "What is it? No water coming or is there a leak?",
+                    "speaker": "Khaled",
+                    "ar": "مُمْكِن تِحْكوا مَعُه بِهُدُوء أَو تِحْكوا مَع صاحِب البَيْت.",
+                    "en": "You can talk to him calmly or talk to the landlord."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "الحَنَفِيَّة بِتْسَرِّب مَيّ تَحْت السِّنْك، وَحِيط الصَّالُون صَار فِيه رُطُوبَة.",
-                    en: "The tap is leaking water under the sink, and the living-room wall has become damp.",
+                    "speaker": "Rami",
+                    "ar": "بِصْراحَة في مَشاكِل تانِيَة جَوّا الشِّقّة.",
+                    "en": "Honestly, there are other problems inside the apartment."
                 },
                 {
-                    speaker: "Landlord",
-                    ar: "مُحْتَمَل اللِّيلَة أَبْعَت سَبَّاك يِشُوف الْمُشْكِلَة.",
-                    en: "Probably tonight I’ll send a plumber to check the problem.",
+                    "speaker": "Khaled",
+                    "ar": "جَدّ؟ مِثْل إيش؟",
+                    "en": "Really? Like what?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "لَوْ سَمَحْت، بَدِّي حَدَا يِجِي الْيَوْم، عَشَان التَّسَرُّب زَاد.",
-                    en: "Please, I need someone to come today because the leak has increased.",
-                },
-
-                // Scene 3 – Noise from neighbours
-                {
-                    speaker: "Narrator",
-                    ar: "فِي نَفْس الْأُسْبُوع، صَارَت مُشْكِلَة ضَجَّة مَع الْجِيرَان.",
-                    en: "In the same week, there was a noise problem with the neighbours.",
+                    "speaker": "Rami",
+                    "ar": "المَغْسَلِة في الحَمّام مَسْدودَة، والمَيّ بْتِنْقِط مِن السَّقْف لَمّا أَفَتِّح الحَنَفِيّة.",
+                    "en": "The sink in the bathroom is blocked and water drips from the ceiling when I open the tap."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مَسَا الْخِير، أَنَا رُوبَا مِن الطَّابِق التَّانِي.",
-                    en: "Good evening, I’m Roba from the second floor.",
+                    "speaker": "Khaled",
+                    "ar": "وَلا مَرّة حَكَيت لِصاحِب البَيْت عَن هالمَشاكِل؟",
+                    "en": "Have you never told the landlord about these problems?"
                 },
                 {
-                    speaker: "Neighbour",
-                    ar: "مَسَا النُّور، أَهْلًا رُوبَا. فِيه إِشِي؟",
-                    en: "Good evening, welcome Roba. Is there something?",
+                    "speaker": "Rami",
+                    "ar": "لِأ، كُنِت مَشْغول بِالنَّقْل وَالاِمْتِحانات، بَس لازم أِتِّصِل فيه.",
+                    "en": "No, I was busy with moving and exams, but I must call him."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "بِصِرَاحَة فِي ضَجَّة كْتِير مِن عِنْدْكُمْ بَعْد الْمِسَا، خُصُوصًا يَوْم الدِّرَاسَة.",
-                    en: "Honestly there is a lot of noise from your place at night, especially on study days.",
+                    "speaker": "Khaled",
+                    "ar": "يَلّا نتِّصِل هَلَّق، أَفْضَل مِن بُكْرَة.",
+                    "en": "Let’s call him now; better than tomorrow."
                 },
                 {
-                    speaker: "Neighbour",
-                    ar: "آسْفِين، الأَوْلاد بِلْعَبُوا كْرَة قَدَم جُوَّا الصَّالُون. رَاح نِحَاوِل نِهَدِّي الصَّوْت.",
-                    en: "We’re sorry, the kids play football in the living room. We’ll try to lower the noise.",
+                    "speaker": "Rami",
+                    "ar": "أُكَيْ، هَيْ بَتِّصِل... أَلو، مَسّا الخير يا أُسْتاذ سامِر، أنا المُسْتَأجِر الجْديد بالشِّقّة الرّابِعَة.",
+                    "en": "Okay, I’m calling… Hello, good evening Mr. Samer, I’m the new tenant in the fourth-floor apartment."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "شُكْرًا إِلْك، مَا بَدِّي أُزْعِل حَدَا، بَسّ عِنْدِي اِمْتِحَانَات.",
-                    en: "Thank you; I don’t want to upset anyone, but I have exams.",
-                },
-
-                // Scene 4 – Technician visit
-                {
-                    speaker: "Narrator",
-                    ar: "بِالنِّهَايَة إِجَى السَّبَّاك لِيِشُوف تَّسَرُّب الْمَيّ.",
-                    en: "Finally the plumber came to check the water leak.",
+                    "speaker": "Landlord",
+                    "ar": "مَسّا النّور، أَهْلًا، أكِيد. شُو الأَخْبار؟ في مَشْكِلَة؟",
+                    "en": "Good evening, welcome. Sure. What’s up? Is there a problem?"
                 },
                 {
-                    speaker: "Plumber",
-                    ar: "مَسَا الْخِير، أَنْتِ رُوبَا؟ صَاحِب الْبَيْت بَعَتْنِي.",
-                    en: "Good evening, are you Roba? The landlord sent me.",
+                    "speaker": "Rami",
+                    "ar": "إي صَراحَةً، في كَم مَشْكِلَة صْغيرَة: المَغْسَلِة في الحَمّام مَسْدودَة، والحَنَفِيّة بْتِخَرّ مَيّ طول الليل.",
+                    "en": "Yes honestly, there are a few small problems: the bathroom sink is blocked and the tap leaks water all night."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "أَه، تْفَضَّل. التَّسَرُّب مِن تَحْت الحَنَفِيَّة، وَالرُّطُوبَة طِلِعِت عَالحِيط.",
-                    en: "Yes, come in. The leak is under the tap, and the humidity has come up on the wall.",
+                    "speaker": "Landlord",
+                    "ar": "المَيّ بِتْوَقَّف تامًّا أَو بَس ضَعيفَة؟",
+                    "en": "Does the water stop completely or is it just weak?"
                 },
                 {
-                    speaker: "Plumber",
-                    ar: "حَنَفِيَّة قَدِيمَة، بَدَّهَا تَّغْيِير. بَحَاوِل أَزَبِّط الْيَوْم.",
-                    en: "The tap is old, it needs changing. I’ll try to fix it today.",
+                    "speaker": "Rami",
+                    "ar": "المَيّ مَوْجودَة بَس المَجْرى مَسْدود، والمَيّ بِتِجْمَع عَالأَرْض.",
+                    "en": "The water is there but the drain is blocked, and the water gathers on the floor."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مُمْتَاز، شُكْرًا كْتِير. صَار لِي أُسْبُوع وَأَنَا بَسْتَنَّى حَدَا يِجِي.",
-                    en: "Great, thanks a lot. I’ve been waiting a week for someone to come.",
+                    "speaker": "Landlord",
+                    "ar": "طَيِّب، بَبْعَت سَبّاك يِشوف المَشْكِلَة بُكْرَة الصُّبِح.",
+                    "en": "Okay, I’ll send a plumber to check the problem tomorrow morning."
                 },
-            ],
-        },
+                {
+                    "speaker": "Rami",
+                    "ar": "وكَمان في مَشْكِلَة بِالكَهْرَبا، لَمّا أَشَغِّل المِكيّف والغَسّالِة مَع بَعْض بِيِنْطْفي الضَّوّ.",
+                    "en": "And there’s also a problem with the electricity; when I turn on the AC and the washing machine together, the lights go off."
+                },
+                {
+                    "speaker": "Landlord",
+                    "ar": "مُمْكِن المُفَتِّح (القاطِع) ضَعيف، بَجي أَنا اليَوم عَالمَسَا أَتْأَكَّد.",
+                    "en": "Maybe the breaker is weak; I’ll come this evening to make sure."
+                },
+                {
+                    "speaker": "Khaled",
+                    "ar": "(بِهَمْس) اِسْأَلُه عَن الأسانْسير، ليش كْثير خَرْبان.",
+                    "en": "(whispering) Ask him about the elevator, why it’s often broken."
+                },
+                {
+                    "speaker": "Rami",
+                    "ar": "كمان حَضْرِتَك، الأسانْسير بِيوقَف بِنُصّ الطّابِق أَحْيانًا، ومَرّة خِفْنا نِعْلَق جُوّاه.",
+                    "en": "Also sir, the elevator sometimes stops between floors, and once we were afraid we’d get stuck inside."
+                },
+                {
+                    "speaker": "Landlord",
+                    "ar": "عارِف، العُمْرُه قَديم شْوَي، بَس في شِرْكَة صِيانَة حَتِجي هالأُسْبوع تِصَلِّحُه.",
+                    "en": "I know, it’s a bit old, but a maintenance company is coming this week to fix it."
+                },
+                {
+                    "speaker": "Rami",
+                    "ar": "مِنِيح كْثير، شُكْرًا عَالاِهْتِمام.",
+                    "en": "That’s very good, thank you for the attention."
+                },
+                {
+                    "speaker": "Landlord",
+                    "ar": "إذا في أيّ مَشْكِلَة تانيِة، بَعْتِلِّي رِسالَة أَو اِتِّصِل فيّي طَوالي.",
+                    "en": "If there is any other problem, send me a message or call me immediately."
+                },
+                {
+                    "speaker": "Rami",
+                    "ar": "أَكِيد، مَع السَّلامَة.",
+                    "en": "Of course, goodbye."
+                },
+                {
+                    "speaker": "Khaled",
+                    "ar": "طَيِّب، شُو حَكالَك صاحِب البَيْت؟",
+                    "en": "Okay, what did the landlord tell you?"
+                },
+                {
+                    "speaker": "Rami",
+                    "ar": "قال بَبْعَت سَبّاك لِلْمَغْسَلِة والحَنَفِيّة، وبَجي هُوّ يِشوف الكَهْرَبا، وَالأسانْسير حَيِصَلِّحوه هالأُسْبوع.",
+                    "en": "He said he’ll send a plumber for the sink and tap, and he’ll come himself to check the electricity, and the elevator will be fixed this week."
+                },
+                {
+                    "speaker": "Khaled",
+                    "ar": "مْنيح. أَحْسَن إِنَّك تِكْتِب كُل المَشاكِل عَوَرَقَة، حَتى ما تِنْسى شِي.",
+                    "en": "Good. It’s better if you write all the problems on a paper so you don’t forget anything."
+                },
+                {
+                    "speaker": "Rami",
+                    "ar": "صَح، وعَندي عَقْد الإيجار مَكْتوب فيه إنّو هُمَّ مَسْؤولين يِصَلِّحوا الأَشْيَا الخَرْبانِة.",
+                    "en": "Right, and in my rental contract it’s written that they’re responsible for fixing broken things."
+                },
+                {
+                    "speaker": "Khaled",
+                    "ar": "إذا ما رَدّوا بَعْدين، مُمْكِن تِقَدِّم شَكْوَى لِلْمَكْتَب تبَع الإيجار.",
+                    "en": "If they don’t respond later, you can file a complaint at the rental office."
+                },
+                {
+                    "speaker": "Rami",
+                    "ar": "إن شاء الله ما نِوْصَل لَهالْمَرْحَلَة، بَس هَلَّق حاسِس الشِّقّة أَرْتاح بَعْد ما حَكَيْت.",
+                    "en": "Inshallah we don’t reach that stage, but now I feel more comfortable about the apartment after talking."
+                }
+            ]
+        }
+        ,
 
         // ====================================
         // GRAMMAR
@@ -5236,7 +6411,6 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
     // Inside your defaultLessons literal:
     [LESSON_ID_SHOPPING]: {
         meta: {
@@ -5263,379 +6437,538 @@ const defaultLessons = {
         // ====================================
         vocabulary: {
             core: [
-                // ===== PLACES & PEOPLE =====
+                // ===== PLACES =====
+                {
+                    id: "dukkan",
+                    ar: "دُكّان",
+                    en: "corner shop / mini-market",
+                    enArabeezy: "dukkān / dukkan",
+                    hint:
+                        "Small neighbourhood shop for basic groceries and stuff.",
+                    exampleAr: "رُحْت عَالدُّكّان أَشْتِري خُبِز وَحْلِيب.",
+                    exampleEn: "I went to the corner shop to buy bread and milk.",
+                },
+                {
+                    id: "ma7al",
+                    ar: "مَحَلّ",
+                    en: "shop / store",
+                    enArabeezy: "ma7all / maḥall",
+                    hint:
+                        "General word for any shop. Plural: مَحَلّات.",
+                    exampleAr: "هَادَا أَحْسَن مَحَلّ أَوَاعِي بِالحَارَة.",
+                    exampleEn: "This is the best clothes shop in the neighbourhood.",
+                },
                 {
                     id: "souk",
                     ar: "سُوق",
                     en: "market",
+                    enArabeezy: "sūʾ / souq",
                     hint:
-                        "Traditional market or large shopping area. Often many small stalls.",
-                    exampleAr: "رُوحِنَا عَالسُّوق نِشْتَرِي خُضَر وَفَواكِه.",
-                    exampleEn: "We go to the market to buy vegetables and fruits.",
+                        "Traditional market or big shopping street with many small shops.",
+                    exampleAr: "بِنِنْزِل عَالسُّوق يَوْم الجُمعة.",
+                    exampleEn: "We go down to the market on Friday.",
                 },
                 {
-                    id: "ma7al",
-                    ar: "مَحَلّ / مَحَلّات",
-                    en: "shop / stores",
+                    id: "supermarket",
+                    ar: "سوبِرماركِت",
+                    en: "supermarket",
+                    enArabeezy: "supermarket",
                     hint:
-                        "Singular: مَحَلّ, plural: مَحَلّات. Small shops or boutiques.",
-                    exampleAr: "فِي مَحَلّ بِيعْنَا أَحْسَن أَسْعَار.",
-                    exampleEn: "There is a shop that sells us the best prices.",
-                },
-                {
-                    id: "bakkal",
-                    ar: "بَقَّال",
-                    en: "grocer / small grocery store",
-                    hint:
-                        "Typical neighbourhood small store. Plural: بَقَّالِين.",
-                    exampleAr: "بَقَّال القَرْيَة عِنْدُه خَبَز طَازِج.",
-                    exampleEn: "The village grocer has fresh bread.",
-                },
-                {
-                    id: "3amel_kass",
-                    ar: "عَامِل كَاس",
-                    en: "cashier",
-                    hint:
-                        "Person at checkout. Also used in small shops or supermarkets.",
-                    exampleAr: "الدَّفْع عِند عَامِل الكَاس بِلْوَقْت.",
-                    exampleEn: "Payment is done with the cashier at the time.",
+                        "Big self-service grocery shop.",
+                    exampleAr: "المَوارِد الكْبيرَة مِنِشتِريها مِن السوبِرماركِت.",
+                    exampleEn: "We buy the big supplies from the supermarket.",
                 },
 
                 // ===== MONEY & PRICE =====
                 {
-                    id: "shekel",
-                    ar: "شِيكِل",
-                    en: "shekel",
+                    id: "masari",
+                    ar: "مَصاري",
+                    en: "money (cash)",
+                    enArabeezy: "maṣāri / masari",
                     hint:
-                        "Currency unit in Palestine and Israel. Plural: شِيكِلَات.",
-                    exampleAr: "هَادِي قِيمَتُهَا خَمْسِين شِيكِل.",
-                    exampleEn: "This costs fifty shekels.",
+                        "Very common Palestinian word for money in general.",
+                    exampleAr: "مَعِي مَصاري شْوَيّ بَس.",
+                    exampleEn: "I only have a little money.",
                 },
                 {
-                    id: "dolar",
-                    ar: "دُولَار",
-                    en: "dollar",
-                    hint:
-                        "Used sometimes in pricing. Plural: دُولَارَات.",
-                    exampleAr: "السِّعْر بالِدُولَار أَقَلّ مِن بِالْشِّيكِل هَالْمَرَّة.",
-                    exampleEn: "The price in dollars is less than in shekels this time.",
+                    id: "se3er",
+                    ar: "سِعِر",
+                    en: "price",
+                    enArabeezy: "siʿer / se3er",
+                    hint: "How much something costs.",
+                    exampleAr: "شُو السِّعِر هُون؟",
+                    exampleEn: "What’s the price here?",
                 },
                 {
-                    id: "thaman",
-                    ar: "ثَمَن",
-                    en: "price / cost",
+                    id: "addeish_hada",
+                    ar: "قَدِّيش هَادَا؟",
+                    en: "How much is this?",
+                    enArabeezy: "addeish hāda? / 2addeish hada?",
                     hint:
-                        "Formal word but used in speech. Often in shops or when asking.",
-                    exampleAr: "شُو ثَمَن هَادِي الكَمِيصَة؟",
-                    exampleEn: "What is the price of this shirt?",
-                },
-                {
-                    id: "bikam",
-                    ar: "بِكَم؟",
-                    en: "How much? / For how much?",
-                    hint:
-                        "Very common question for price in Levantine dialects. Short, direct.",
-                    exampleAr: "هَادَا بِيْعْنُوه بِكَم؟",
-                    exampleEn: "How much do they sell this for?",
+                        "Most common way to ask the price of something you’re holding/pointing at.",
+                    exampleAr: "قَدِّيش هَادَا، لَو سَمَحِت؟",
+                    exampleEn: "How much is this, please?",
                 },
                 {
                     id: "ghali",
-                    ar: "غَالِي",
+                    ar: "غالي",
                     en: "expensive",
+                    enArabeezy: "ghāli / ghali",
                     hint:
-                        "Masc: غَالِي, fem: غَالِيَة, plural: غَالِين.",
-                    exampleAr: "هَادَا غَالِي كْتِير، مَا بَكْفِي عِندِي مَال.",
-                    exampleEn: "This is too expensive; I don’t have enough money.",
+                        "Masc: غالي, fem: غاليِة. Opposite of رخيص.",
+                    exampleAr: "صَرَاحَةً هَادَا غالي شْوَيّ.",
+                    exampleEn: "Honestly, this is a bit expensive.",
                 },
                 {
                     id: "rakhis",
-                    ar: "رَخِيْص",
-                    en: "cheap",
+                    ar: "رخيص",
+                    en: "cheap / inexpensive",
+                    enArabeezy: "rakhiṣ / rakhis",
                     hint:
-                        "Masc: رَخِيص, fem: رَخِيصَة, plural: رَخِيصِين.",
-                    exampleAr: "هُوَّا صَار يِبِيع رَخِيص لِمُدَّة مَعَيَّنَة.",
-                    exampleEn: "He started selling cheap for a limited time.",
+                        "Masc: رخيص, fem: رخيصَة. Can be positive (good price) or negative (bad quality).",
+                    exampleAr: "السِّعِر رخيص بَس الجَوْدَة عادي.",
+                    exampleEn: "The price is cheap but the quality is average.",
                 },
                 {
-                    id: "munaasib",
-                    ar: "مُنَاسِب",
-                    en: "reasonable / suitable",
+                    id: "tanzeel",
+                    ar: "تَنْزيلات",
+                    en: "sale / discounts",
+                    enArabeezy: "tanzīlāt / tanzeelat",
                     hint:
-                        "Describes price or fit. Often means fair price.",
-                    exampleAr: "السِّعْر هَيّ مُنَاسِب، آخُد الْمِنْدِيل.",
-                    exampleEn: "The price is reasonable; I’ll take the scarf.",
+                        "Also خَصْم = discount. Shops write: تَنْزيلات كْبيرَة.",
+                    exampleAr: "فِي تَنْزيلات عَلَى الأَوَاعِي هالأَيام.",
+                    exampleEn: "There are sales on clothes these days.",
                 },
                 {
-                    id: "kthir",
-                    ar: "كْتِير",
-                    en: "too much / a lot",
-                    hint:
-                        "Used for price or quantity. Common in speech.",
-                    exampleAr: "السِّعْر كْتِير. مُمْكِن نِنَاقِص؟",
-                    exampleEn: "The price is too much. Can we reduce?",
-                },
-                {
-                    id: "shway",
-                    ar: "شْوَيّ",
-                    en: "a little / just a bit",
-                    hint:
-                        "Very common. Works with price or quantity.",
-                    exampleAr: "كَمِّنِي شْوَيّ، يَلَّا.",
-                    exampleEn: "Reduce it a little for me, come on.",
+                    id: "khasm",
+                    ar: "خَصْم",
+                    en: "discount",
+                    enArabeezy: "khaṣm / khasm",
+                    hint: "Money taken off the original price.",
+                    exampleAr: "فِيه خَصْم لِلطُلّاب؟",
+                    exampleEn: "Is there a student discount?",
                 },
 
-                // ===== NUMBERS & QUANTITY =====
+                // ===== PAYMENT =====
                 {
-                    id: "wa7ad",
-                    ar: "وَاحِد",
-                    en: "one",
+                    id: "kash",
+                    ar: "كاش",
+                    en: "cash",
+                    enArabeezy: "cash",
                     hint:
-                        "Basic number. Use with counters and items.",
-                    exampleAr: "بَدِّي وَاحِد مِن هَادَا.",
-                    exampleEn: "I want one of this.",
+                        "Pay with physical money, not card.",
+                    exampleAr: "بِفَضَّل أَدْفَع كاش.",
+                    exampleEn: "I prefer to pay in cash.",
                 },
                 {
-                    id: "etneen",
-                    ar: "اتْنَيْن",
-                    en: "two",
+                    id: "card",
+                    ar: "كَرْت / كَرْد",
+                    en: "bank card",
+                    enArabeezy: "kart / card",
                     hint:
-                        "Used as number. Followed by noun in correct form.",
-                    exampleAr: "بَدِّي اتْنَيْن خُبْز.",
-                    exampleEn: "I want two breads.",
+                        "Bank card / debit or credit.",
+                    exampleAr: "مُمْكِن أَدْفَع بِالكَرْت؟",
+                    exampleEn: "Can I pay by card?",
                 },
                 {
-                    id: "tlateh",
-                    ar: "تَلَاتَة",
-                    en: "three",
+                    id: "atm",
+                    ar: "صَرّاف آلي",
+                    en: "ATM / cash machine",
+                    enArabeezy: "ṣarrāf ʾāli / sarraf āli",
                     hint:
-                        "Used as number. Same idea.",
-                    exampleAr: "أَخُد تَلَاتَة كُتُف مِن الفَواكِه.",
-                    exampleEn: "Take three kilos of fruit.",
+                        "Machine to withdraw money from your card.",
+                    exampleAr: "فِيه صَرّاف آلي قُدّام المَحَلّ.",
+                    exampleEn: "There is an ATM in front of the shop.",
+                },
+                {
+                    id: "wasl",
+                    ar: "وَصْل / بَوْن",
+                    en: "receipt",
+                    enArabeezy: "waṣl / bawn",
+                    hint:
+                        "Paper you get after paying. Useful if you want to return something.",
+                    exampleAr: "خُد الوَصْل، يُمْكِن تْحْتَاجه بَعْدين.",
+                    exampleEn: "Take the receipt, you might need it later.",
+                },
+                {
+                    id: "fatora_shop",
+                    ar: "فاتورَة",
+                    en: "invoice / bill",
+                    enArabeezy: "fātūra / fatora",
+                    hint:
+                        "More official than وَصْل, especially for big purchases or deliveries.",
+                    exampleAr: "طَلَبْنَا فاتورَة رَسْمِيّة مِن الشِّرْكَة.",
+                    exampleEn: "We asked for an official invoice from the company.",
+                },
+
+                // ===== ITEM DETAILS =====
+                {
+                    id: "no3",
+                    ar: "نَوْع",
+                    en: "type / kind",
+                    enArabeezy: "nawʿ / no3",
+                    hint:
+                        "What kind: نوع القَمِيص، نوع القَهْوِة، نوع القِماش.",
+                    exampleAr: "شُو نَوْع القِماش هَادَا؟",
+                    exampleEn: "What type of fabric is this?",
+                },
+                {
+                    id: "lawn",
+                    ar: "لَوْن",
+                    en: "color",
+                    enArabeezy: "lawn",
+                    hint:
+                        "Plural: أَلْوان. Very common in clothes & shoes shopping.",
+                    exampleAr: "عِنْدو أَلْوان تَانِيَة مِن نَفْس الموديل.",
+                    exampleEn: "They have other colors of the same model.",
+                },
+                {
+                    id: "7ajm",
+                    ar: "حَجِم / مَقاس",
+                    en: "size",
+                    enArabeezy: "7ajm / maqās",
+                    hint:
+                        "حَجِم for general size, مَقاس for clothes & shoes.",
+                    exampleAr: "مَقاس الحِذَاء كْبِير عَلَيّ شْوَيّ.",
+                    exampleEn: "The shoe size is a bit big on me.",
                 },
                 {
                     id: "kilo",
-                    ar: "كِيلُو",
-                    en: "kilogram",
+                    ar: "كِيلو",
+                    en: "kilo (kilogram)",
+                    enArabeezy: "kilo",
                     hint:
-                        "Used for weight. Plural: كِيلُوهَات.",
-                    exampleAr: "كِيلُو طَمَاطِم، وَكِيلُو بَطَاطَا.",
-                    exampleEn: "A kilo of tomatoes and a kilo of potatoes.",
+                        "Used in markets for fruits, vegetables, etc.",
+                    exampleAr: "بَدّي نُصّ كِيلو بَنادُورَة.",
+                    exampleEn: "I want half a kilo of tomatoes.",
                 },
                 {
-                    id: "3ala_shway",
-                    ar: "عَلَى شْوَيّ",
-                    en: "a little bit / small amount",
+                    id: "era",
+                    ar: "قِطْعَة",
+                    en: "piece / item",
+                    enArabeezy: "ʾiṭʿa / 2eṭ3a",
                     hint:
-                        "Use for quick small purchases.",
-                    exampleAr: "عَلَى شْوَيّ زُعْتَر وَزَيْت زَيْتُون.",
-                    exampleEn: "A little bit of zaatar and olive oil.",
+                        "One piece of something: clothes, cake, cheese…",
+                    exampleAr: "بَدّي قِطْعَة كْمان مِن هَادَا النَّوْع.",
+                    exampleEn: "I want one more piece of this type.",
                 },
 
-                // ===== VERBS & CHUNKS =====
+                // ===== VERBS & USEFUL CHUNKS =====
                 {
-                    id: "badfa3",
-                    ar: "بَدْفَع",
-                    en: "I pay",
+                    id: "bashtiri",
+                    ar: "بَشْتِري",
+                    en: "I buy",
+                    enArabeezy: "bashtiri",
                     hint:
-                        "Follow with price or method. Present tense with b‑ prefix common in Levantine dialects. :contentReference[oaicite:0]{index=0}",
-                    exampleAr: "بَدْفَع مَعْ كَارْد أَو نَقْد.",
-                    exampleEn: "I pay with card or cash.",
+                        "From اِشْتَرَى = to buy. Very frequent in shopping talk.",
+                    exampleAr: "كْلّ مَرَّة بَطْلَع عَالسُّوق بَشْتِري إِشِيّات زْيادَة.",
+                    exampleEn: "Every time I go to the market I buy extra things.",
                 },
                 {
-                    id: "bikamm",
-                    ar: "بِكَم بـ...",
-                    en: "How much is ...?",
+                    id: "biybi3",
+                    ar: "بِيِبيع",
+                    en: "he sells",
+                    enArabeezy: "biybīʿ / biybi3",
                     hint:
-                        "Add item: بِكَم بِالكوحة؟ etc. Variant shortened from بِكَم.",
-                    exampleAr: "بِكَم بِالقَمِيص؟",
-                    exampleEn: "How much is the shirt?",
+                        "From بَاع = to sell. For the shop or seller.",
+                    exampleAr: "المَحَلّ بِيِبيع أَحْذِيَة وَشَنْط كْمَان.",
+                    exampleEn: "The shop also sells shoes and bags.",
                 },
                 {
-                    id: "bi3tini",
-                    ar: "بِعْطِينِي",
-                    en: "Give me / sell me",
+                    id: "baddi_ashtiri",
+                    ar: "بَدّي أِشْتِري...",
+                    en: "I want to buy...",
+                    enArabeezy: "baddi ashtiri...",
                     hint:
-                        "Used when asking seller to give or sell item.",
-                    exampleAr: "بِعْطِينِي هَادِي، لَوْ سَمَحْت.",
-                    exampleEn: "Give me this, please.",
+                        "Good opener with the seller: بَدّي أِشْتِري بنْطَلُون / هَدِيّة...",
+                    exampleAr: "بَدّي أِشْتِري هَدِيّة لِصْحِبْتي.",
+                    exampleEn: "I want to buy a gift for my friend.",
                 },
                 {
-                    id: "bashuf",
-                    ar: "بَشُوف",
-                    en: "I look / I’m looking",
+                    id: "ana_bas_batfarraj",
+                    ar: "أَنا بَس بَتْفَرَّج",
+                    en: "I’m just looking",
+                    enArabeezy: "ana bas batfarraj",
                     hint:
-                        "Used when browsing items.",
-                    exampleAr: "بَشُوف فْي حَاجَة جَدِيدَة لِلشِّتَا.",
-                    exampleEn: "I’m looking for something new for winter.",
+                        "Polite way to tell the seller you’re not ready to buy yet.",
+                    exampleAr: "مِش مُجْبَرَة تِشْتِري، حَتّى لَو حَكِيتِيلُه: أَنا بَس بَتْفَرَّج.",
+                    exampleEn: "You’re not obliged to buy, even if you tell him: I’m just looking.",
                 },
                 {
-                    id: "bi3tidh",
-                    ar: "بِعْطِيك",
-                    en: "I give you",
+                    id: "3indak_ishi_tani",
+                    ar: "عِنْدَك إِشِي تَانِي؟",
+                    en: "Do you have something else?",
+                    enArabeezy: "ʿindak ishi tāni? / 3indak ishi tani?",
                     hint:
-                        "From أعطى, used when seller offers price or item.",
-                    exampleAr: "بِعْطِيك بُلُوزَة بِخَمْسِين شِيكِل.",
-                    exampleEn: "I give you a blouse for fifty shekels.",
+                        "Useful to ask for another model / color / size.",
+                    exampleAr: "عِنْدَك إِشِي تَانِي نَفْس المَقاس بَس لَوْن تَانِي؟",
+                    exampleEn: "Do you have something else in the same size but a different color?",
                 },
                 {
-                    id: "kthir_3alik",
-                    ar: "كْتِير عَلَيْك",
-                    en: "too much for you",
+                    id: "mumkin_tnazzel_shway",
+                    ar: "مُمْكِن تْنَزِّل شْوَيّ؟",
+                    en: "Can you make it a bit cheaper?",
+                    enArabeezy: "mumkin tnazzel shway?",
                     hint:
-                        "Polite way to say something is expensive.",
-                    exampleAr: "هَادَا كْتِير عَلَيْك، مُمْكِن نِنَاقِص شْوَيّ؟",
-                    exampleEn: "This is too much for you, can we reduce a bit?",
+                        "Common bargaining phrase in markets and some shops.",
+                    exampleAr: "السِّعِر عالي، مُمْكِن تْنَزِّل شْوَيّ؟",
+                    exampleEn: "The price is high, can you lower it a bit?",
+                },
+                {
+                    id: "akher_se3er",
+                    ar: "آخِر سِعِر؟",
+                    en: "What’s your final price?",
+                    enArabeezy: "ā5er se3er? / akher se3er?",
+                    hint:
+                        "Used in bargaining when you want the lowest price.",
+                    exampleAr: "يَعْنِي هَادَا آخِر سِعِر وَلّا فِيه نْقَاص كْمَان؟",
+                    exampleEn: "So is this your final price or can you go lower?",
                 },
             ],
 
             extra: [
                 {
-                    id: "takhfid",
-                    ar: "تَخْفِيض",
-                    en: "discount",
+                    id: "mizaniyyeh",
+                    ar: "مِيزانِيّة",
+                    en: "budget",
+                    enArabeezy: "mīzāniyyeh / mizaniyyeh",
                     hint:
-                        "Used for sales. Often in stores and markets.",
-                    exampleAr: "فِيه تَخْفِيض خُصُوصِي لِلنِّهَاِيَة.",
-                    exampleEn: "There is a special discount for the end.",
+                        "Money you plan to spend.",
+                    exampleAr: "مِيزانِيّتي لِلشوبينغ هالشَّهِر مَحْدودَة.",
+                    exampleEn: "My shopping budget this month is limited.",
                 },
                 {
-                    id: "kul_3ala_3alamat",
-                    ar: "كُلّ عَلَى عَلَامَات",
-                    en: "check tags / labels",
+                    id: "safqa",
+                    ar: "صَفْقَة / لُقْطَة",
+                    en: "good deal / bargain",
+                    enArabeezy: "ṣafʾa / loʾta / lo2ta",
                     hint:
-                        "Used to check sizes or price tags in shops.",
-                    exampleAr: "لا تِنسَى تِلْفَت أَعْلَامَة السِّعْر قَبْل ما تِشْتَرِي.",
-                    exampleEn: "Don’t forget to look at the price tag before buying.",
+                        "لُقْطَة = really good catch / bargain.",
+                    exampleAr: "هَادِي لُقْطَة، السِّعِر كْتِير مْناسِب.",
+                    exampleEn: "This is a steal, the price is very good.",
                 },
                 {
-                    id: "mabrouk",
-                    ar: "مَبْرُوك",
-                    en: "congratulations",
+                    id: "istibdal",
+                    ar: "اِسْتِبْدال",
+                    en: "exchange (change an item)",
+                    enArabeezy: "istibdāl / istibdal",
                     hint:
-                        "Used after a good buy or when someone gets a deal.",
-                    exampleAr: "مَبْرُوك! أَخَذْت هَدِيَّة جَمِيلَة بِنصّ السِّعْر.",
-                    exampleEn: "Congrats! You got a nice gift at half price.",
+                        "Changing item for another one. Often with وَصْل.",
+                    exampleAr: "مُمْكِن اِسْتِبْدال بِنَفْس السِّعِر بَس مَقاس تَانِي؟",
+                    exampleEn: "Can I exchange it for the same price but a different size?",
+                },
+                {
+                    id: "istirja3",
+                    ar: "اِسْتِرْجاع",
+                    en: "return (give back item)",
+                    enArabeezy: "istirjāʿ / istirja3",
+                    hint:
+                        "Taking item back to the shop and getting money back.",
+                    exampleAr: "السِّياسَة عِنْدْهُم مَا فِيه اِسْتِرْجاع، بَس اِسْتِبْدال.",
+                    exampleEn: "Their policy has no returns, only exchanges.",
+                },
+                {
+                    id: "3ard_khas",
+                    ar: "عَرْض خَاصّ",
+                    en: "special offer",
+                    enArabeezy: "ʿarḍ khāṣṣ / 3ard khaṣ",
+                    hint:
+                        "Temporary promotion: 2 for 1, or cheaper price.",
+                    exampleAr: "فِي عَرْض خَاصّ عَلَى الشَّمْبُو الْيَوْم.",
+                    exampleEn: "There is a special offer on shampoo today.",
+                },
+                {
+                    id: "khidmet_zaba2en",
+                    ar: "خِدْمِة زَبائِن",
+                    en: "customer service",
+                    enArabeezy: "khidmet zabāʾen / khidmet zaba2en",
+                    hint:
+                        "Where you complain or ask for help with a purchase.",
+                    exampleAr: "خِدْمِة الزَّبائِن فِي هالمَحَلّ مُمْتازَة.",
+                    exampleEn: "Customer service in this shop is excellent.",
                 },
             ],
-        },
+        }
+        ,
 
         // ====================================
         // DIALOGUE
         // ====================================
-        dialogue: {
-            lines: [
-                // Scene 1 – At a market stall buying fruit
+        "dialogue": {
+            "lines": [
                 {
-                    speaker: "Seller",
-                    ar: "صَبَاح الْخِير، تْفَضَّلِي! فَواكِه طَازَة اليَوْم.",
-                    en: "Good morning, come in! Fresh fruits today.",
+                    "speaker": "Nader",
+                    "ar": "مَسّا الخير يا يوسف، شُو أخْبارَك؟",
+                    "en": "Good evening, Yousef, how are you?"
                 },
                 {
-                    speaker: "Student",
-                    ar: "صَبَاح الْخِير، بَشُوف شْوَيّ بَطَّاطَا وَطَمَاطِم.",
-                    en: "Good morning, I’m looking at some potatoes and tomatoes.",
+                    "speaker": "Yousef",
+                    "ar": "مَسّا النّور، تَمام. اليوم عندي وَقْت أشتري شِي لِلحَفْلَة.",
+                    "en": "Good evening, I’m fine. Today I have time to buy something for the party."
                 },
                 {
-                    speaker: "Seller",
-                    ar: "كَمّ بِدِّك؟",
-                    en: "How much do you want?",
+                    "speaker": "Nader",
+                    "ar": "طَيّب، مُمْكِن نروح عَالدُّكّان القَريب، سَامِع إنّو في تنزيلات هالأُسْبوع.",
+                    "en": "Okay, we can go to the nearby shop; I heard there are discounts this week."
                 },
                 {
-                    speaker: "Student",
-                    ar: "بَدِّي كِيلُو طَمَاطِم وَتَلَاتَة كِيلُوهَات بَطَّاطَا.",
-                    en: "I want one kilo of tomatoes and three kilos of potatoes.",
+                    "speaker": "Yousef",
+                    "ar": "مُمْتاز، يِلّا نِروح.",
+                    "en": "Great, let’s go."
                 },
                 {
-                    speaker: "Seller",
-                    ar: "طَيِّب، شَتَانِيهُم مَع بَعْض؟ بِسِّعْر خَمْسِين شِيكِل.",
-                    en: "Okay, both together? At a price of fifty shekels.",
+                    "speaker": "Yousef",
+                    "ar": "سَلام عَليكم، قَدّيش سِعِر هاد القَمِيص؟",
+                    "en": "Peace be upon you, how much is this shirt?"
                 },
                 {
-                    speaker: "Student",
-                    ar: "خَمْسِين؟ هَادَا شْوَي غَالِي. مُمْكِن تِنَاقِص شْوَيّ؟",
-                    en: "Fifty? That’s a bit expensive. Can you reduce a little?",
+                    "speaker": "Shopkeeper",
+                    "ar": "هَادَا بِخَمْسُمِيّة شِكِل.",
+                    "en": "This one is five hundred shekels."
                 },
                 {
-                    speaker: "Seller",
-                    ar: "آسِف، الْكِيلُوهَات كْتِير. أَخُفِّض لِكْ تِلْتِين شِيكِل.",
-                    en: "Sorry, the kilos are many. I’ll reduce three shekels for you.",
+                    "speaker": "Nader",
+                    "ar": "غالي شْوَي. مُمْكِن تِنَزِّل السِّعِر؟",
+                    "en": "It’s a bit expensive. Can you lower the price?"
                 },
                 {
-                    speaker: "Student",
-                    ar: "شُكْرًا كْتِير. يَلَّا بَدْفَع خَمْس وَارْبَعِين شِيكِل.",
-                    en: "Thank you very much. Okay I pay forty-five shekels.",
+                    "speaker": "Shopkeeper",
+                    "ar": "بِقْدَر أعمل لَكُم تَنزيل صْغير، خَلّيه أَرْبَعْمِيّة وَخَمْسِين.",
+                    "en": "I can give you a small discount; let’s make it four hundred fifty."
                 },
                 {
-                    speaker: "Seller",
-                    ar: "تِسْلَمِي. خُدِي مَا لَك زَاد، نَشُوفَك مَرَّة تَانِي.",
-                    en: "Bless you. Take your change; see you next time.",
-                },
-
-                // Scene 2 – Buying clothes in a small shop
-                {
-                    speaker: "Shop Owner",
-                    ar: "أَهْلًا، إِذَا بِدِّك لِبْس جَدِيد لِلشِّتَا، هُوّ لِحَالَك.",
-                    en: "Welcome, if you want new winter clothes, here they are.",
+                    "speaker": "Nader",
+                    "ar": "وفي تَنزيلات تانيِة هالأُسْبوع عَالأغراض التّانْيِة؟",
+                    "en": "And are there other discounts this week on the other items?"
                 },
                 {
-                    speaker: "Student",
-                    ar: "بِشُوف هَادِي القَمِيصَة، بِيْعْنُوه بِكَم؟",
-                    en: "I’m looking at this shirt; how much do they sell it for?",
+                    "speaker": "Shopkeeper",
+                    "ar": "إي، في تنزيلات عَالمُعْظَم، بَس هالقَمِيص من البِضاعَة الجْديدَة.",
+                    "en": "Yes, there are discounts on most things, but this shirt is from the new stock."
                 },
                 {
-                    speaker: "Shop Owner",
-                    ar: "هَادِي بِيِعُوهَا بِتِسْعِين شِيكِل.",
-                    en: "They sell it for ninety shekels.",
+                    "speaker": "Yousef",
+                    "ar": "طَيّب، شُوف هاد القَمِيص التّاني، هُوّ أَرْخَص؟",
+                    "en": "Okay, look at this other shirt, is it cheaper?"
                 },
                 {
-                    speaker: "Student",
-                    ar: "تِسْعِين غَالِي. مُمْكِن نِنَاقِص؟",
-                    en: "Ninety is expensive. Can we reduce?",
+                    "speaker": "Shopkeeper",
+                    "ar": "إي، هَادَا أَرْخَص، سِعْرُه أَرْبَعْمِيّة شِكِل.",
+                    "en": "Yes, this one is cheaper, its price is four hundred shekels."
                 },
                 {
-                    speaker: "Shop Owner",
-                    ar: "مِنْ أُول تِلْتِين شِيكِل. إِنْتِ أَوَّل مَرَّة تِشْتِرِي مِنْنِي.",
-                    en: "From the start three shekels. It’s your first time buying from me.",
+                    "speaker": "Nader",
+                    "ar": "مُمْكِن نِقارن الجَوْدَة بَيْن الإِثْنَيْن؟",
+                    "en": "Can we compare the quality between the two?"
                 },
                 {
-                    speaker: "Student",
-                    ar: "حَسَن، يَلَّا شُكْرًا. بَدْفَع سِتِّين شِيكِل.",
-                    en: "Okay, thanks. I pay sixty shekels.",
+                    "speaker": "Shopkeeper",
+                    "ar": "الأَوَّل جَوْدَتُه أَعْلَى والقماش أَغْلَى، بَس التّاني كْمان مْنيح لِلاِسْتِعْمال اليومي.",
+                    "en": "The first has higher quality and more expensive fabric, but the second is also good for daily use."
                 },
                 {
-                    speaker: "Shop Owner",
-                    ar: "تِسْلَمِي. بْتِجِي كُلّ شَهْر طَلِع بِنِزْلَة.",
-                    en: "Bless you. Come every month; there’s a discount.",
-                },
-
-                // Scene 3 – Online purchase conversation
-                {
-                    speaker: "Student",
-                    ar: "بَدِّي أَشْتَرِي هَادَا الْهَاتِف عَلَى الأِنْتَرْنِت. شُو ثَمَنُه؟",
-                    en: "I want to buy this phone online. What is its price?",
+                    "speaker": "Yousef",
+                    "ar": "أنا مِيزانِيتي مَحْدودَة، بَدّي شِي مُمْكِن أَشتِريه وما يْكَسِّرني.",
+                    "en": "My budget is limited, I want something I can buy without it breaking me."
                 },
                 {
-                    speaker: "Seller Online",
-                    ar: "الثَّمَن سَاعِدَة عَلى التَّوَاصُل. مُمكِن نِدْفَع بِالْبَنْك كَارْد أَو نَقْد عِنْد التَّسْلِيم.",
-                    en: "The price is sent via message. We can pay by bank card or cash on delivery.",
+                    "speaker": "Shopkeeper",
+                    "ar": "مُمْكِن أعمل تَنزيل عَالتّاني، نِخَلّيه تْلَاتْمِيّة وَخَمْسِين إِذا بتاخُدُه هَلَّق.",
+                    "en": "I can give a discount on the second one, we make it three hundred fifty if you take it now."
                 },
                 {
-                    speaker: "Student",
-                    ar: "مُمْكِن تِعْطِينِي السِّعْر خُصُوصِي؟ أَنَا طَالْب.",
-                    en: "Can you give me the special price? I’m a student.",
+                    "speaker": "Nader",
+                    "ar": "هَيك أَحْسَن. بَصِير تْلَاتْمِيّة وَخَمْسِين بِالدَّفْع عَالبِطاقَة (الكَرْد)؟",
+                    "en": "That’s better. Will it still be three hundred fifty if we pay by card?"
                 },
                 {
-                    speaker: "Seller Online",
-                    ar: "نَعَم، خَصْم لِلطُّلاّب تِلْتِين شِيكِل. أَنْتَ أَخُد سِتَّة وَسِتِّين شِيكِل.",
-                    en: "Yes, student discount of thirty shekels. You take sixty-six shekels.",
+                    "speaker": "Shopkeeper",
+                    "ar": "بِالبِطاقَة في عَلَيْها رُسُوم وبِضِيف ضَرِيبَة صْغيرَة.",
+                    "en": "With card there are fees and we add a small tax."
                 },
                 {
-                    speaker: "Student",
-                    ar: "مُمْتَاز، يَلَّا بَدْفَع. شُكْرًا عَلَى الْخِدْمَة.",
-                    en: "Great, okay I pay. Thanks for the service.",
+                    "speaker": "Yousef",
+                    "ar": "قَدّيش تَقْريبًا الضَّرِيبَة والرُّسُوم؟",
+                    "en": "Approximately how much are the tax and fees?"
                 },
-            ],
-        },
+                {
+                    "speaker": "Shopkeeper",
+                    "ar": "تَقْريبًا خَمِسْطَعْش شِكِل زِيادَة.",
+                    "en": "Around fifteen shekels extra."
+                },
+                {
+                    "speaker": "Nader",
+                    "ar": "طَيّب، مُمْكِن نَدْفَع كاش وتِضَلّ تْلَاتْمِيّة وَخَمْسِين بَس؟",
+                    "en": "Okay, can we pay cash and keep it three hundred fifty only?"
+                },
+                {
+                    "speaker": "Shopkeeper",
+                    "ar": "إي، الكاش أَفْضَل، خَلّيه تْلَاتْمِيّة وَخَمْسِين كاش بِلَا زِيادَة.",
+                    "en": "Yes, cash is better, let’s keep it three hundred fifty cash with no extra."
+                },
+                {
+                    "speaker": "Yousef",
+                    "ar": "لَو اشْتَرَيْنا شِي تاني مَعُه، مُمْكِن تِنَزِّل كْمان شْوَي؟",
+                    "en": "If we buy something else with it, can you lower the price a bit more?"
+                },
+                {
+                    "speaker": "Shopkeeper",
+                    "ar": "إِذا أَخَدتوا كَم قِطْعَة، بِنِقْدَر نِعْمَل تَنزيل إِضافي عَالحِساب الكُلِّي.",
+                    "en": "If you take a few items, we can give an additional discount on the total."
+                },
+                {
+                    "speaker": "Nader",
+                    "ar": "طَيّب، هَاد رِباط (كِرافِت) كْمان حْلُو. قَدّيش سِعْرُه؟",
+                    "en": "Okay, this tie is also nice. How much is it?"
+                },
+                {
+                    "speaker": "Shopkeeper",
+                    "ar": "هَاد بِخَمْسين شِكِل، بَس إِذا مَع القَمِيص، بَعْطيكُم التّنتين بِتْلَاتْمِيّة وَتْسعِين.",
+                    "en": "This is fifty shekels, but if it’s with the shirt, I’ll give you both for three hundred ninety."
+                },
+                {
+                    "speaker": "Yousef",
+                    "ar": "تْلَاتْمِيّة وَتْسعِين مْنيحَة، بِناسِب مِيزانِيتي.",
+                    "en": "Three hundred ninety is good, it suits my budget."
+                },
+                {
+                    "speaker": "Nader",
+                    "ar": "مْوافِقين، مْنِخُد القَمِيص وَالرِّباط.",
+                    "en": "We agree, we’ll take the shirt and the tie."
+                },
+                {
+                    "speaker": "Shopkeeper",
+                    "ar": "بَدّكُم كيس كْبير وَلّا صْغير؟",
+                    "en": "Do you want a big bag or a small one?"
+                },
+                {
+                    "speaker": "Nader",
+                    "ar": "كيس صْغير بِكَفّي، شُكْرًا.",
+                    "en": "A small bag is enough, thank you."
+                },
+                {
+                    "speaker": "Shopkeeper",
+                    "ar": "هاي الكيس، وهاي الفاتورَة، أَهْلًا وسَهْلًا فيكُم.",
+                    "en": "Here is the bag, and here is the receipt, you’re most welcome."
+                },
+                {
+                    "speaker": "Yousef",
+                    "ar": "شُكْرًا إِلَك، الله يُعْطيك العافْيِة.",
+                    "en": "Thank you, may God give you health."
+                },
+                {
+                    "speaker": "Nader",
+                    "ar": "يِلّا نِرْجَع عَالبَيْت وَنُجَرِّب القَمِيص، بِفْكِر يْطْلَع كْتير مُناسِب لِلحَفْلَة.",
+                    "en": "Let’s go back home and try the shirt on; I think it will be very suitable for the party."
+                },
+                {
+                    "speaker": "Yousef",
+                    "ar": "إي، شَكْلُه أَحْلى إِشِي شُفْناه اليوم.",
+                    "en": "Yes, it looks like the nicest thing we saw today."
+                }
+            ]
+        }
+        ,
 
         // ====================================
         // GRAMMAR
@@ -5770,8 +7103,7 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
-    // Inside your defaultLessons literal:
+    // Inside your defaultLessons literal:هان وصلنا
     [LESSON_ID_WEATHER]: {
         meta: {
             level: "Pre-Intermediate",
@@ -6420,8 +7752,6 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
-
     // Inside your defaultLessons literal:
     [LESSON_ID_OPINIONS]: {
         meta: {
@@ -7009,8 +8339,6 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
-
     // Inside your defaultLessons literal:
     [LESSON_ID_COMPLAINTS]: {
         meta: {
@@ -7609,8 +8937,6 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
-
     // Inside your defaultLessons literal:
     [LESSON_ID_PLANS_FUTURE]: {
         meta: {
@@ -8173,9 +9499,7 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
     // Inside your defaultLessons literal:
-
     [LESSON_ID_HOBBIES]: {
         meta: {
             level: "Intermediate",
@@ -8756,7 +10080,6 @@ const defaultLessons = {
             myNotes: "",
         },
     },
-
     [LESSON_ID_FEELINGS]: {
         meta: {
             level: "Intermediate",
@@ -9362,9 +10685,6 @@ const defaultLessons = {
     },
 
 
-
-
-
 };
 
 // actual lessons object (will be filled from defaults + localStorage)
@@ -9395,11 +10715,128 @@ let customUnits = {
     "Pre-Intermediate": [],
     Intermediate: [],
 };
+// =============== SECONDARY AUTH APP (لإنشاء الطلاب فقط) ===============
+let secondaryAuth = null;
+
+function getSecondaryAuth() {
+    if (secondaryAuth) return secondaryAuth;
+
+    if (typeof firebase === "undefined" || typeof firebaseConfig === "undefined") {
+        console.warn("Firebase or firebaseConfig not available for secondary app.");
+        return null;
+    }
+
+    // نحاول نلقى app باسم "teacherAdmin" لو موجود
+    let secondaryApp = firebase.apps.find((a) => a.name === "teacherAdmin");
+    if (!secondaryApp) {
+        secondaryApp = firebase.initializeApp(firebaseConfig, "teacherAdmin");
+    }
+
+    secondaryAuth = secondaryApp.auth();
+    return secondaryAuth;
+}
+
+// ================= AUTH UI =================
+function updateAuthUI() {
+    const authStatus = document.getElementById("authStatus");
+    const btnLogin = document.getElementById("btnLogin");
+    const btnLogout = document.getElementById("btnLogout");
+
+    const navTeacher = document.querySelector(
+        '.top-nav__link[data-nav="teacher-dashboard-screen"]'
+    );
+    const navProfiles = document.querySelector(
+        '.top-nav__link[data-nav="students-screen"]'
+    );
+
+    if (!appState.currentUser) {
+        if (authStatus) authStatus.textContent = "Not signed in";
+        if (btnLogin) btnLogin.style.display = "inline-flex";
+        if (btnLogout) btnLogout.style.display = "none";
+
+        // أي حد مش مسجّل → ما يشوف Teacher Dashboard
+        if (navTeacher) navTeacher.style.display = "none";
+        // لو حابة تخلي Profiles ظاهر قبل تسجيل الدخول، خليه هيك:
+        if (navProfiles) navProfiles.style.display = "inline-flex";
+        return;
+    }
+
+    const { email, role } = appState.currentUser;
+
+    if (authStatus) authStatus.textContent = `${role.toUpperCase()} – ${email}`;
+    if (btnLogin) btnLogin.style.display = "none";
+    if (btnLogout) btnLogout.style.display = "inline-flex";
+
+    if (role === "teacher") {
+        if (navTeacher) navTeacher.style.display = "inline-flex";
+        if (navProfiles) navProfiles.style.display = "inline-flex";
+    } else {
+        // student
+        if (navTeacher) navTeacher.style.display = "none";
+        // الطالب ما يشوف صفحة البروفايلات
+        if (navProfiles) navProfiles.style.display = "none";
+    }
+}
+
+// =============== AUTH STATE LISTENER =================
+auth.onAuthStateChanged(async (user) => {
+    if (!user) {
+        appState.currentUser = null;
+        updateAuthUI();
+        // رجّعيه للصفحة الرئيسية لو حابة
+        showScreen("home-screen");
+        return;
+    }
+
+    try {
+        const snap = await db.collection("users").doc(user.uid).get();
+        const data = snap.data() || {};
+        const role = data.role || "student";
+
+        appState.currentUser = {
+            uid: user.uid,
+            email: user.email,
+            role,
+        };
+
+        updateAuthUI();
+
+        if (role === "teacher") {
+            // مدرّس → نزامن الطلاب + نفتح لوحة المدرّس
+            await syncTeacherStudentsFromCloud?.();
+            renderStudents();
+            renderTeacherLessonList();
+            goToTeacherDashboard();
+        } else {
+            // طالب → نجهّز له student واحد مربوط بحسابه
+            appState.students = [
+                {
+                    id: user.uid,
+                    name: user.email,
+                    level: "Beginner",
+                    goals: [],
+                    progress: {},
+                    homeworkNotes: {},
+                },
+            ];
+            appState.currentStudentId = user.uid;
+            // يروح مباشرة على الوحدات
+            goToLevels();
+        }
+    } catch (err) {
+        console.error("auth.onAuthStateChanged error:", err);
+    }
+});
+
+
 // ========================= VOCAB MODAL STATE =========================
 const vocabModalState = {
     list: [],       // array of items (core أو extra)
     index: 0,       // current index in list
-    showExamples: true, // هل الأمثلة ظاهرة أو مخفية
+    showExamples: true,// هل الأمثلة ظاهرة أو مخفية
+    showAr: true,
+    showEn: true,
+    showArabeezy: true,
 };
 
 // ========================= HELPERS =========================
@@ -9740,9 +11177,60 @@ function closeExportModal() {
     if (modal) modal.classList.remove("modal--open");
 }
 
+async function saveStudentsToCloud() {
+    if (!appState.currentUser || appState.currentUser.role !== "teacher") return;
+
+    const batch = db.batch();
+    const ref = db.collection("teacherStudents");
+
+    // نفضي كل طلاب هذا المعلم ثم نرفع من جديد (بسيطة مبدئيًا)
+    const snap = await ref.where("teacherId", "==", appState.currentUser.uid).get();
+    snap.forEach((doc) => batch.delete(doc.ref));
+
+    appState.students.forEach((s) => {
+        const docRef = ref.doc();
+        batch.set(docRef, {
+            teacherId: appState.currentUser.uid,
+            name: s.name,
+            level: s.level,
+            goals: s.goals || [],
+            progress: s.progress || {},
+            homeworkNotes: s.homeworkNotes || {},
+        });
+    });
+
+    await batch.commit();
+}
+
 function saveStudentsToLS() {
     localStorage.setItem(LS_STUDENTS_KEY, JSON.stringify(appState.students));
+    // 🔁 كمان نرفع للسحابة (لما يكون معلم مسجّل)
+    saveStudentsToCloud().catch(console.error);
 }
+
+async function syncTeacherStudentsFromCloud() {
+    if (!appState.currentUser || appState.currentUser.role !== "teacher") return;
+
+    const ref = db.collection("teacherStudents");
+    const snap = await ref.where("teacherId", "==", appState.currentUser.uid).get();
+
+    const loaded = [];
+    snap.forEach((doc) => {
+        const d = doc.data();
+        loaded.push({
+            id: doc.id, // أو خلي ID محلي منفصل
+            name: d.name,
+            level: d.level,
+            goals: d.goals || [],
+            progress: d.progress || {},
+            homeworkNotes: d.homeworkNotes || {},
+        });
+    });
+
+    appState.students = loaded;
+    saveStudentsToLS(); // نخزن نسخة محلية
+}
+
 function loadStudentsFromLS() {
     try {
         const raw = localStorage.getItem(LS_STUDENTS_KEY);
@@ -9858,10 +11346,16 @@ function goToHome() {
     showScreen("home-screen");
 }
 function goToStudents() {
-    document.body.classList.remove("home-only");
+    // لو المستخدم طالب أو مش مسجل → ما إله دخل في صفحة البروفايلات
+    if (!appState.currentUser || appState.currentUser.role === "student") {
+        goToLevels();
+        return;
+    }
+
     showScreen("students-screen");
     renderStudents();
 }
+
 function goToLevels() {
     document.body.classList.remove("home-only");
     if (!getCurrentStudent()) {
@@ -10207,10 +11701,22 @@ function openPrintWindow(html) {
 }
 
 function goToTeacherDashboard() {
-    document.body.classList.remove("home-only");
+    // لو مش مسجل، أو مش مدرّس:
+    if (!appState.currentUser || appState.currentUser.role !== "teacher") {
+        // بدل ما نعمل alert بس، نفتحه على مودال تسجيل دخول المدرّس
+        if (typeof openAuthModal === "function") {
+            openAuthModal("teacher");
+        } else {
+            alert("Teacher access only.");
+        }
+        return;
+    }
+
     showScreen("teacher-dashboard-screen");
     renderTeacherLessonList();
 }
+
+
 
 
 // ========================= STUDENTS =========================
@@ -10543,40 +12049,76 @@ function renderOverviewTab(container, lesson) {
 }
 
 // Vocabulary
+
+
 function renderVocabModalFromState() {
     const item = vocabModalState.list[vocabModalState.index];
     if (!item) return;
 
-    $("#vocabModalWord").textContent = item.ar;
-    $("#vocabModalMeaning").textContent = item.en;
-    $("#vocabModalHint").textContent = item.hint || "";
-    $("#vocabModalExampleAr").textContent = item.exampleAr || "";
-    $("#vocabModalExampleEn").textContent = item.exampleEn || "";
-
-    // تحديث حالة إظهار/إخفاء الأمثلة
+    const elAr = $("#vocabModalWord");
+    const elEn = $("#vocabModalMeaning");
+    const elArabeezy = $("#vocabModalArabeezy");
+    const elHint = $("#vocabModalHint"); // لو ما عندك هاد السطر ممكن تشيليه
     const exAr = $("#vocabModalExampleAr");
+    const exEn = $("#vocabModalExampleEn");
 
-    const toggleBtn = $("#vocabToggleExamplesBtn");
+    elAr.textContent = item.ar || "";
+    elEn.textContent = item.en || "";
+    elArabeezy.textContent = item.enArabeezy || "";
+    if (elHint) elHint.textContent = item.hint || "";
+    exAr.textContent = item.exampleAr || "";
+    exEn.textContent = item.exampleEn || "";
+
+    // show/hide based on state
+    elAr.style.display = vocabModalState.showAr ? "" : "none";
+    elEn.style.display = vocabModalState.showEn ? "" : "none";
+
 
     if (vocabModalState.showExamples) {
         exAr.style.display = "";
-
-        if (toggleBtn) toggleBtn.textContent = "👁 Hide examples";
+        elAr.style.display = "";
     } else {
         exAr.style.display = "none";
+        elAr.style.display = "none";
+    }
+    if (vocabModalState.showEn) {
+        exEn.style.display = "";
+        elEn.style.display = "";
+        elArabeezy.style.display = "";
+    } else {
+        exEn.style.display = "none";
+        elEn.style.display = "none";
+        elArabeezy.style.display = "none";
+    }
+    // تحديث نص الزر (Hide / Show) لكل حقل
 
-        if (toggleBtn) toggleBtn.textContent = "👁 Show examples";
+    const btnEn = $("#vocabToggleEnBtn");
+    const btnEx = $("#vocabToggleExamplesBtn");
+
+
+    if (btnEn) {
+        btnEn.textContent = vocabModalState.showEn ? "👁 Hide" : "👁 Show";
+    }
+
+    if (btnEx) {
+        btnEx.textContent = vocabModalState.showExamples ? "👁 Hide" : "👁 Show";
     }
 }
+
+
 
 function openVocabModal(list, index) {
     vocabModalState.list = list || [];
     vocabModalState.index = index || 0;
-    vocabModalState.showExamples = true; // كل مرة نفتح، نرجّع الأمثلة ظاهرة
+    vocabModalState.showExamples = true;
+    vocabModalState.showAr = true;
+    vocabModalState.showEn = true;
+    vocabModalState.showArabeezy = true;
 
     renderVocabModalFromState();
     $("#vocabModal").classList.add("modal--open");
 }
+
 
 function closeVocabModal() {
     $("#vocabModal").classList.remove("modal--open");
@@ -11283,6 +12825,8 @@ function renderTeacherLessonList() {
             appState.currentLessonId = id;
             renderTeacherEditor(id, card); // ⭐ مررنا الكارد
         });
+
+
 
 
         const btnOpen = document.createElement("button");
@@ -11997,6 +13541,37 @@ function renderTeacherEditor(lessonId, anchorCard) {
         editor.innerHTML = "";
     });
 }
+// ================= AUTH MODAL HELPERS =================
+function openAuthModal(forcedRole) {
+    document.body.classList.remove("home-only");
+    console.log("openAuthModal called with role:", forcedRole);
+    const modal = document.getElementById("authModal");
+    const roleSelect = document.getElementById("authRole");
+    const errorBox = document.getElementById("authError");
+
+    if (!modal) return;
+
+    // مسح أي خطأ قديم
+    if (errorBox) errorBox.textContent = "";
+
+    // لو جاي من زر "أنا طالب" أو "أنا مدرس"
+    if (forcedRole === "student" || forcedRole === "teacher") {
+        modal.dataset.forcedRole = forcedRole;
+        if (roleSelect) roleSelect.value = forcedRole;
+    } else {
+        // لو جاي من زر Login العادي
+        delete modal.dataset.forcedRole;
+    }
+
+    modal.classList.add("modal--open");
+}
+
+function closeAuthModal() {
+    const modal = document.getElementById("authModal");
+    if (!modal) return;
+    modal.classList.remove("modal--open");
+    delete modal.dataset.forcedRole;
+}
 
 // ========================= DOM READY =========================
 document.addEventListener("DOMContentLoaded", () => {
@@ -12017,8 +13592,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // hero buttons
-    $("#btnHeroStudent").addEventListener("click", () => goToStudents());
-    $("#btnHeroTeacher").addEventListener("click", () => goToTeacherDashboard());
+    // ===== HERO BUTTONS (أنا طالب / أنا مدرس) =====
+    const btnHeroStudent = document.getElementById("btnHeroStudent");
+    const btnHeroTeacher = document.getElementById("btnHeroTeacher");
+
+    if (btnHeroStudent) {
+        btnHeroStudent.addEventListener("click", () => {
+            // الطالب → نفتح مودال تسجيل الدخول كـ STUDENT
+            console.log("Student hero clicked");
+            openAuthModal("student");
+        });
+    }
+
+    if (btnHeroTeacher) {
+        btnHeroTeacher.addEventListener("click", () => {
+            // المدرّس → نفتح مودال تسجيل الدخول كـ TEACHER
+            console.log("Teacher hero clicked");
+            openAuthModal("teacher");
+        });
+    }
 
     // add student
     $("#addStudentForm").addEventListener("submit", (e) => {
@@ -12234,21 +13826,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnPrev = document.getElementById("vocabPrevBtn");
     const btnNext = document.getElementById("vocabNextBtn");
     const btnToggleExamples = document.getElementById("vocabToggleExamplesBtn");
+    const btnToggleAr = document.getElementById("vocabToggleArBtn");
+    const btnToggleEn = document.getElementById("vocabToggleEnBtn");
+    const btnToggleArabeezy = document.getElementById("vocabToggleArabeezyBtn");
     function checkIfVocabDone() {
+        if (!currentLesson || !currentLesson.vocabulary) return;
+
         const allVocab = [
-            ...(currentLesson.vocabulary?.core || []),
-            ...(currentLesson.vocabulary?.extra || []),
+            ...(currentLesson.vocabulary.core || []),
+            ...(currentLesson.vocabulary.extra || []),
         ];
 
         const visited = ensureVocabVisitedSet();
-
-        const allSeen = allVocab.every(v => visited.has(v.id));
+        const allSeen = allVocab.every((v) => visited.has(v.id));
 
         if (allSeen) {
-            markLessonSectionDone("vocabulary"); // 🔥 تعلّمناه Done
-            updateLessonProgressUI(); // تحديث الواجهة
+            // لما يمرّ على كل الكلمات مرة واحدة على الأقل
+            markLessonSectionDone("vocabulary");
+            updateLessonProgressUI();
         }
     }
+
     if (btnPrev) {
         btnPrev.addEventListener("click", () => {
             if (!vocabModalState.list.length) return;
@@ -12284,6 +13882,150 @@ document.addEventListener("DOMContentLoaded", () => {
             renderVocabModalFromState();
         });
     }
+    if (btnToggleAr) {
+        btnToggleAr.addEventListener("click", () => {
+            vocabModalState.showAr = !vocabModalState.showAr;
+            renderVocabModalFromState();
+        });
+    }
+
+    if (btnToggleEn) {
+        btnToggleEn.addEventListener("click", () => {
+            vocabModalState.showEn = !vocabModalState.showEn;
+            renderVocabModalFromState();
+        });
+    }
+
+    if (btnToggleArabeezy) {
+        btnToggleArabeezy.addEventListener("click", () => {
+            vocabModalState.showArabeezy = !vocabModalState.showArabeezy;
+            renderVocabModalFromState();
+        });
+    }
+    document.getElementById("btnLogin").addEventListener("click", openAuthModal);
+    document
+        .querySelectorAll("[data-close-auth]")
+        .forEach((el) => el.addEventListener("click", closeAuthModal));
+
+    document.getElementById("btnLogout").addEventListener("click", () => {
+        auth.signOut();
+    });
+
+    document.getElementById("authForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const email = document.getElementById("authEmail").value.trim();
+        const password = document.getElementById("authPassword").value;
+        const roleSelect = document.getElementById("authRole");
+        const modal = document.getElementById("authModal");
+        const errorBox = document.getElementById("authError");
+
+        if (errorBox) errorBox.textContent = "";
+
+        // الدور المقصود: لو جاي من زر Student / Teacher في الهيرو
+        let role = roleSelect ? roleSelect.value : "student";
+        if (modal && modal.dataset.forcedRole) {
+            role = modal.dataset.forcedRole; // student أو teacher
+        }
+
+        try {
+            let cred;
+
+            if (role === "teacher") {
+                // المدرّس: sign in ثم sign up لو مش موجود
+                try {
+                    cred = await auth.signInWithEmailAndPassword(email, password);
+                } catch (err) {
+                    if (err.code === "auth/user-not-found") {
+                        // أول مرة → ننشئ حساب مدرس
+                        cred = await auth.createUserWithEmailAndPassword(email, password);
+                        await db.collection("users").doc(cred.user.uid).set({
+                            email,
+                            role: "teacher",
+                            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                        });
+                    } else {
+                        throw err;
+                    }
+                }
+            } else {
+                // الطالب: فقط تسجيل دخول بحساب جاهز
+                try {
+                    cred = await auth.signInWithEmailAndPassword(email, password);
+                } catch (err) {
+                    if (err.code === "auth/user-not-found") {
+                        if (errorBox) {
+                            errorBox.textContent =
+                                "لا يوجد حساب بهذا الإيميل. تواصلي مع المدرّس ليعمل لك حساب.";
+                        } else {
+                            alert("لا يوجد حساب بهذا الإيميل. اسألي المدرس يعمل لك حساب.");
+                        }
+                        return;
+                    }
+                    throw err;
+                }
+            }
+
+            // نقرأ بيانات المستخدم من Firestore
+            const userDoc = await db.collection("users").doc(cred.user.uid).get();
+            const data = userDoc.data() || {};
+
+            const finalRole = data.role || role || "student";
+
+            appState.currentUser = {
+                uid: cred.user.uid,
+                email: cred.user.email,
+                role: finalRole,
+            };
+
+            closeAuthModal();
+            updateAuthUI();
+
+            // 🔁 توجيه حسب الدور
+            if (finalRole === "teacher") {
+                // نزامن بيانات الطلاب من السحابة ونفتح Teacher Dashboard
+                await syncTeacherStudentsFromCloud();
+                renderStudents();
+                renderTeacherLessonList();
+                goToTeacherDashboard();
+            } else {
+                // STUDENT:
+                // نحمّل بيانات الطالب / تقدمه من السحابة (لو عندك هذه الدالة)
+                await loadStudentProgressFromCloud?.();
+
+                // نربط الطالب الحالي بـ currentStudentId
+                appState.students = [
+                    {
+                        id: appState.currentUser.uid,
+                        name: appState.currentUser.email,
+                        level: "Beginner",
+                        goals: [],
+                        progress: {},
+                        homeworkNotes: {},
+                    },
+                ];
+                appState.currentStudentId = appState.currentUser.uid;
+
+                // مباشرة نفتح صفحة الوحدات
+                goToLevels();
+            }
+        } catch (err) {
+            console.error("Auth error:", err);
+            if (errorBox) {
+                if (err.code === "auth/wrong-password" || err.code === "auth/invalid-login-credentials") {
+                    errorBox.textContent = "كلمة السر غير صحيحة. حاولي مرة ثانية.";
+                } else {
+                    errorBox.textContent = "مشكلة في تسجيل الدخول: " + err.message;
+                }
+            } else {
+                alert("Auth error: " + err.message);
+            }
+        }
+    });
+
+
+
+
 
     // Add Unit form
     $("#addUnitForm").addEventListener("submit", (e) => {
@@ -12338,6 +14080,208 @@ document.addEventListener("DOMContentLoaded", () => {
     renderStudents();
     renderTeacherLessonList();
     goToHome();
+
+
+    const btnLoginTop = document.getElementById("btnLogin");
+    if (btnLoginTop) {
+        btnLoginTop.addEventListener("click", () => openAuthModal());
+    }
+
+
+    const createStudentForm = document.getElementById("createStudentForm");
+    if (createStudentForm) {
+        createStudentForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            // تأكيد أن المستخدم الحالي مدرّس
+            if (!appState.currentUser || appState.currentUser.role !== "teacher") {
+                alert("Only teachers can create students.");
+                return;
+            }
+
+            const emailEl = document.getElementById("newStudentEmail");
+            const passwordEl = document.getElementById("newStudentPassword");
+            const msg = document.getElementById("createStudentMsg");
+
+            const email = emailEl.value.trim();
+            const password = passwordEl.value.trim();
+
+            if (msg) {
+                msg.textContent = "";
+                msg.style.color = "#111827";
+            }
+
+            if (!email || !password) {
+                if (msg) {
+                    msg.style.color = "#b91c1c";
+                    msg.textContent = "Please enter student email and a temporary password.";
+                }
+                return;
+            }
+
+            if (password.length < 6) {
+                if (msg) {
+                    msg.style.color = "#b91c1c";
+                    msg.textContent = "Password must be at least 6 characters.";
+                }
+                return;
+            }
+
+            const submitBtn = createStudentForm.querySelector('button[type="submit"]');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Creating...";
+            }
+
+            try {
+                const secAuth = getSecondaryAuth();
+                if (!secAuth) {
+                    if (msg) {
+                        msg.style.color = "#b91c1c";
+                        msg.textContent = "Secondary Firebase app is not available.";
+                    }
+                    return;
+                }
+
+                // 🧑‍🎓 إنشاء المستخدم الجديد باستخدام الـ secondary auth
+                const cred = await secAuth.createUserWithEmailAndPassword(email, password);
+                const uid = cred.user.uid;
+
+                // كتابة بيانات الطالب في Firestore
+                await db.collection("users").doc(uid).set({
+                    email,
+                    role: "student",
+                    createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                    createdBy: appState.currentUser.uid || null, // المدرّس الذي أنشأه (اختياري)
+                });
+
+                // تسجيل خروج من الـ secondary auth فقط (ما يمس جلسة المدرّس)
+                await secAuth.signOut();
+
+                // تنظيف الحقول
+                emailEl.value = "";
+                passwordEl.value = "";
+
+                if (msg) {
+                    msg.style.color = "#15803d";
+                    msg.textContent =
+                        "Student account created successfully. Share the email and password with the student.";
+                }
+            } catch (err) {
+                console.error("Create student error:", err);
+                if (msg) {
+                    msg.style.color = "#b91c1c";
+                    if (err.code === "auth/email-already-in-use") {
+                        msg.textContent = "This email is already in use. Pick another email for the student.";
+                    } else if (err.code === "auth/invalid-email") {
+                        msg.textContent = "Invalid email format.";
+                    } else {
+                        msg.textContent = "Error: " + err.message;
+                    }
+                }
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Create Student";
+                }
+            }
+        });
+    }
 });
 
-// DEFAULT LESSON DATA DEFINITION ENDS HERE
+
+async function handleCreateStudentSubmit(e) {
+    e.preventDefault();
+    console.log("Create student submitted");
+    if (!appState.currentUser || appState.currentUser.role !== "teacher") {
+        alert("Only teachers can create students.");
+        return;
+    }
+
+    const emailEl = document.getElementById("newStudentEmail");
+    const passwordEl = document.getElementById("newStudentPassword");
+    const msg = document.getElementById("createStudentMsg");
+
+    const email = emailEl.value.trim();
+    const password = passwordEl.value.trim();
+
+    if (msg) {
+        msg.textContent = "";
+        msg.style.color = "#111827";
+    }
+
+    if (!email || !password) {
+        if (msg) {
+            msg.style.color = "#b91c1c";
+            msg.textContent = "Please enter student email and a temporary password.";
+        }
+        return;
+    }
+
+    if (password.length < 6) {
+        if (msg) {
+            msg.style.color = "#b91c1c";
+            msg.textContent = "Password must be at least 6 characters.";
+        }
+        return;
+    }
+
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Creating...";
+    }
+
+    try {
+        const secAuth = getSecondaryAuth();
+        if (!secAuth) {
+            if (msg) {
+                msg.style.color = "#b91c1c";
+                msg.textContent = "Secondary Firebase app is not available.";
+            }
+            return;
+        }
+
+        const cred = await secAuth.createUserWithEmailAndPassword(email, password);
+        const uid = cred.user.uid;
+
+        await db.collection("users").doc(uid).set({
+            email,
+            role: "student",
+            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            createdBy: appState.currentUser.uid || null,
+        });
+
+        await secAuth.signOut();
+
+        emailEl.value = "";
+        passwordEl.value = "";
+
+        if (msg) {
+            msg.style.color = "#15803d";
+            msg.textContent =
+                "Student account created successfully. Share the email and password with the student.";
+        }
+    } catch (err) {
+        console.error("Create student error:", err);
+        if (msg) {
+            msg.style.color = "#b91c1c";
+            if (err.code === "auth/email-already-in-use") {
+                msg.textContent = "This email is already in use. Pick another email.";
+            } else if (err.code === "auth/invalid-email") {
+                msg.textContent = "Invalid email format.";
+            } else {
+                msg.textContent = "Error: " + err.message;
+            }
+        }
+    } finally {
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Create Student";
+        }
+    }
+}
+
+
+

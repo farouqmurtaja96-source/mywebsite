@@ -24,6 +24,39 @@
             </nav>
         </div>
     </header>
+    <!-- Modal بسيط للـ Login/Signup -->
+    <div id="authModal" class="modal">
+        <div class="modal__backdrop" data-close-auth></div>
+        <div class="modal__body">
+            <button class="modal__close" data-close-auth>&times;</button>
+            <h3 style="margin-bottom:8px;">Sign in / Sign up</h3>
+            <form id="authForm" autocomplete="off">
+                <div class="form-field">
+                    <label>Email</label>
+                    <input type="email" id="authEmail" required autocomplete="username" />
+                </div>
+                <div class="form-field">
+                    <label>Password</label>
+                    <input type="password" id="authPassword" required autocomplete="current-password" />
+                </div>
+                <div class="form-field">
+                    <label>Role</label>
+                    <select id="authRole" disabled aria-hidden="true">
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn--primary btn--sm">Continue</button>
+            </form>
+            <p class="small-note" style="font-size:0.8rem;">
+                If your email is not registered yet, please ask your teacher to create an account for you.
+            </p>
+            <p id="authError" style="color:#b91c1c; font-size:0.8rem; margin-top:6px;"></p>
+
+        </div>
+    </div>
+
+    <!-- ============== HOME SCREEN ============== -->
     <section id="home-screen" class="screen screen--active screen--full-hero">
         <div class="hero hero--full">
             <div class="hero__overlay"></div>
@@ -37,15 +70,24 @@
                     <button id="btnHeroTeacher" class="btn btn--outline btn--lg">
                         👩‍🏫 I'm a Teacher
                     </button>
+
                 </div>
             </div>
         </div>
     </section>
+
     <main>
-        <!-- ============== HOME SCREEN ============== -->
+        <!-- ============== Auth SCREEN ============== -->
+
+        <div id="authBar" class="top-nav__links">
+            <span id="authStatus" style="font-size:0.8rem; margin-right:8px;"></span>
+            <button id="btnLogin" class="top-nav__link">Login</button>
+            <button id="btnLogout" class="top-nav__link" style="display:none;">Logout</button>
+        </div>
 
 
-        <!-- ============== STUDENT SELECTION SCREEN ============== -->
+
+        <!--  ==== STUDENT SELECTION SCREEN ============== -->
         <section id="students-screen" class="screen">
             <div class="section-header">
                 <h2>Select your Profile</h2>
@@ -296,6 +338,24 @@
 
                 </div>
             </div>
+            <section class="teacher-editor__section">
+                <h4>Create Student Account</h4>
+                <p class="teacher-edit-note">
+                    استخدمي هذا النموذج لإنشاء حساب طالب. أعطيه الإيميل وكلمة السر ليدخل.
+                </p>
+                <form id="createStudentForm">
+                    <div class="form-field">
+                        <label>Student Email</label>
+                        <input type="email" id="newStudentEmail" required />
+                    </div>
+                    <div class="form-field">
+                        <label>Temporary Password</label>
+                        <input type="text" id="newStudentPassword" required />
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--sm">Create Student</button>
+                </form>
+                <p id="createStudentMsg" style="font-size:0.8rem; margin-top:4px;"></p>
+            </section>
 
             <div id="teacherLessonList" class="card-list">
                 <!-- Filled by JS -->
@@ -335,23 +395,44 @@
         <div class="modal__backdrop" data-close-modal></div>
         <div class="modal__body">
             <button class="modal__close" data-close-modal>&times;</button>
+
+            <!-- الكلمة بالعربي -->
+
             <h3 id="vocabModalWord" class="modal__word"></h3>
+
+            <!-- الكلمة بالإنجليزي -->
             <p id="vocabModalMeaning" class="modal__meaning"></p>
+
+            <!-- Arabeezy -->
+            <p id="vocabModalArabeezy" class="modal__arabeezy"></p>
+
             <p id="vocabModalHint" class="modal__hint"></p>
+
             <div class="modal__examples">
                 <p id="vocabModalExampleAr" class="modal__example--ar"></p>
                 <p id="vocabModalExampleEn" class="modal__example--en"></p>
+            </div>
+
+            <div class="modal__controls">
+
 
             </div>
+
             <div class="modal__actions">
-                <button id="vocabPrevBtn" class="btn btn--ghost btn--sm">⬅ Previous</button>
+                <button id="vocabPrevBtn" class="btn btn--ghost btn--sm">⬅ Prev</button>
+                <button id="vocabToggleEnBtn" class="btn btn--outline btn--sm">
+                    👁 Hide English
+                </button>
+
                 <button id="vocabToggleExamplesBtn" class="btn btn--outline btn--sm">
                     👁 Hide examples
                 </button>
                 <button id="vocabNextBtn" class="btn btn--ghost btn--sm">Next ➡</button>
+
             </div>
         </div>
     </div>
+
     <!-- =================== EXPORT PDF OPTIONS MODAL =================== -->
     <div id="exportModal" class="modal">
         <div class="modal__backdrop" data-close-export-modal></div>
@@ -413,9 +494,34 @@
         </div>
     </div>
 
+    <!-- Firebase compat SDKs (v9) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
 
+    <script>
+        // 🔹 Firebase config تبع مشروعك (نفس اللي جبتيه من الكونسول)
+        const firebaseConfig = {
+            apiKey: "AIzaSyC0haaF1Y9I-cbDfaHhSYD38COP_sMLnNI",
+            authDomain: "palestinian-arabic-lab.firebaseapp.com",
+            projectId: "palestinian-arabic-lab",
+            storageBucket: "palestinian-arabic-lab.firebasestorage.app",
+            messagingSenderId: "867160813546",
+            appId: "1:867160813546:web:fe81642287dff700ab4c93",
+            measurementId: "G-Q2GHE6545F"
+        };
 
+        // 🔹 تهيئة Firebase (compat style)
+        firebase.initializeApp(firebaseConfig);
+
+        // 🔹 متغيرات global تقدري تستخدميها في app.js
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+
+    <!-- لازم app.js ييجي بعد تهيئة Firebase -->
     <script src="app.js"></script>
+
 
 </body>
 
