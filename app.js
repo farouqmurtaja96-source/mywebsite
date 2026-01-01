@@ -5,6 +5,7 @@ const LS_FONT_SIZE_KEY = "pal_arabic_font_size";
 const LS_CUSTOM_UNITS_KEY = "pal_arabic_custom_units";
 const LS_BACKUP_SETTINGS_KEY = "pal_arabic_backup_settings";
 const LS_WHITEBOARD_PREFIX = "pal_arabic_whiteboard_";
+const LS_USER_ROLE_KEY = "pal_arabic_user_role";
 
 const LESSON_ID_GREETING = "Beginner-Greetings-L1";
 const LESSON_ID_DAILY_ROUTINE = "Beginner-DailyRoutine-L1";
@@ -6794,8 +6795,8 @@ const defaultLessons = {
         // ====================================
         // DIALOGUE
         // ====================================
-        "dialogue": {
-            "lines": [
+        dialogue: {
+            lines: [
                 {
                     "speaker": "Nader",
                     "ar": "مَسّا الخير يا يوسف، شُو أخْبارَك؟",
@@ -7134,23 +7135,26 @@ const defaultLessons = {
                     id: "el_jaww",
                     ar: "الجَوّ",
                     en: "the weather",
-                    hint: "Main word for ‘weather’ in everyday speech.",
+                    enArabeezy: "el-jaww",
+                    hint: "Most common word for ‘weather’ in Palestinian Arabic.",
                     exampleAr: "اليوم الجَوّ حِلُو.",
                     exampleEn: "The weather is nice today.",
                 },
                 {
-                    id: "sa3b_jaww",
-                    ar: "الجَوّ صَعْب",
-                    en: "the weather is tough / harsh",
-                    hint: "Used when weather is uncomfortable (too hot, too cold…).",
-                    exampleAr: "بِهَذَا الفَصِل الجَوّ صَعْب.",
-                    exampleEn: "In this season the weather is harsh.",
+                    id: "taqs",
+                    ar: "طَقْس",
+                    en: "weather / climate",
+                    enArabeezy: "taʔs / ta2s",
+                    hint: "More formal than الجَوّ, used in news or apps.",
+                    exampleAr: "بَشوف الطَّقْس قَبِل ما أَطْلَع.",
+                    exampleEn: "I check the weather before I go out.",
                 },
                 {
                     id: "bared",
                     ar: "بَرْد",
-                    en: "cold",
-                    hint: "Used as ‘it’s cold’: اليَوْم في بَرْد.",
+                    en: "cold (weather)",
+                    enArabeezy: "bard",
+                    hint: "‘There is cold’: في بَرْد اليوم.",
                     exampleAr: "فِي بَرْد قَوِي بِاللَّيْل.",
                     exampleEn: "It’s very cold at night.",
                 },
@@ -7158,147 +7162,241 @@ const defaultLessons = {
                     id: "shawb",
                     ar: "شُوب",
                     en: "heat / hot weather",
-                    hint: "Used for hot weather: في شُوب اليوم.",
-                    exampleAr: "فِي شُوب مْزْعِج بِالصَّيْف.",
-                    exampleEn: "There’s annoying heat in the summer.",
+                    enArabeezy: "shob",
+                    hint: "Used for hot weather, not for spicy food!",
+                    exampleAr: "الدُّنْيا شُوب هالأَيام.",
+                    exampleEn: "It’s really hot these days.",
                 },
                 {
                     id: "daafi",
                     ar: "دَافِي",
                     en: "warm",
-                    hint: "Masc: دَافِي, fem: دَافْيَة.",
-                    exampleAr: "الجَوّ دَافِي بِالرَّبِيع.",
-                    exampleEn: "The weather is warm in spring.",
+                    enArabeezy: "daafi",
+                    hint: "Masc: دَافِي، fem: دَافْيَة.",
+                    exampleAr: "الجَوّ دَافِي وَمُرِيح اليوم.",
+                    exampleEn: "The weather is warm and comfortable today.",
                 },
                 {
-                    id: "mrattab",
-                    ar: "مْرَتَّب",
-                    en: "pleasant / nice (about weather)",
-                    hint: "Literally ‘tidy’, used casually to mean nice/pleasant.",
-                    exampleAr: "اليَوْم الجَوّ مْرَتَّب، لَا شُوب وَلَا بَرْد.",
-                    exampleEn: "Today the weather is pleasant, neither hot nor cold.",
+                    id: "mureeh",
+                    ar: "مُرِيح",
+                    en: "comfortable (weather)",
+                    enArabeezy: "muree7",
+                    hint: "Not too hot, not too cold.",
+                    exampleAr: "الجَوّ مُرِيح، مْناسِب لِلْطِّلْعَة.",
+                    exampleEn: "The weather is comfortable, good for going out.",
                 },
                 {
-                    id: "mshmess",
+                    id: "rtoubeh",
+                    ar: "رُطُوبَة",
+                    en: "humidity",
+                    enArabeezy: "ruṭoobe / rotoobe",
+                    hint: "Very common in coastal cities.",
+                    exampleAr: "الرُّطُوبَة عَالْآخِر بِالصَّيْف.",
+                    exampleEn: "The humidity is extreme in summer.",
+                },
+
+                // ===== SUN / CLOUD / RAIN =====
+                {
+                    id: "shams",
+                    ar: "شَمِس",
+                    en: "sun",
+                    enArabeezy: "shamis / shams",
+                    hint: "Everyday word for sun.",
+                    exampleAr: "الشَّمِس قَوِيّة، لَبْسِة نَظّارَة؟",
+                    exampleEn: "The sun is strong, are you wearing sunglasses?",
+                },
+                {
+                    id: "mshammes",
                     ar: "مْشَمَّس",
                     en: "sunny",
-                    hint: "From شَمْس (sun).",
-                    exampleAr: "بُكْرَا الجَوّ مْشَمَّس.",
-                    exampleEn: "Tomorrow the weather is sunny.",
+                    enArabeezy: "mshammes",
+                    hint: "From شمس. Sunny day.",
+                    exampleAr: "بُكْرَا مْشَمَّس، مْنِطْلَع نِتْمَشّى؟",
+                    exampleEn: "Tomorrow is sunny, shall we go for a walk?",
+                },
+                {
+                    id: "ghem",
+                    ar: "غَيْم",
+                    en: "cloud",
+                    enArabeezy: "gheim / gheym",
+                    hint: "Cloud itself; for ‘clouds’: غيوم.",
+                    exampleAr: "في غَيْم كْتير بالسَّما.",
+                    exampleEn: "There are a lot of clouds in the sky.",
                 },
                 {
                     id: "mghayyam",
                     ar: "مْغَيَّم",
                     en: "cloudy / overcast",
-                    hint: "Used when the sky is full of clouds.",
-                    exampleAr: "السَّمَا مْغَيَّمَة الْيَوْم.",
+                    enArabeezy: "mghayyam",
+                    hint: "Sky full of clouds.",
+                    exampleAr: "السَّما مْغَيَّمَة اليوم.",
                     exampleEn: "The sky is cloudy today.",
                 },
                 {
                     id: "matar",
                     ar: "مَطَر",
                     en: "rain",
+                    enArabeezy: "maTar / matar",
                     hint: "There is rain: في مَطَر.",
-                    exampleAr: "أَحْلَى شَيْ لَمَّا يِنْزِل مَطَر.",
-                    exampleEn: "The best thing is when it rains.",
+                    exampleAr: "أَحْلَى شِي لَمّا يِنْزِل مَطَر.",
+                    exampleEn: "The nicest thing is when it rains.",
                 },
                 {
                     id: "btemTor",
                     ar: "بْتِمْطِر",
-                    en: "it rains / it’s raining",
-                    hint: "Present: هَلَّق بْتِمْطِر = it’s raining now.",
-                    exampleAr: "بَرَّه بْتِمْطِر، لَابْسِة جَاكِيت؟",
-                    exampleEn: "It’s raining outside, are you wearing a jacket?",
+                    en: "it’s raining",
+                    enArabeezy: "btemTor / btimTor",
+                    hint: "Present tense ‘to rain’.",
+                    exampleAr: "بَرّا بْتِمْطِر، خُد شَمْسِيّة.",
+                    exampleEn: "It’s raining outside, take an umbrella.",
                 },
                 {
-                    id: "riya7",
-                    ar: "رِيَاح",
-                    en: "winds",
-                    hint: "Often singular رِيح in speech.",
-                    exampleAr: "فِي رِيح قَوِيّة بَاللَّيْل.",
-                    exampleEn: "There’s strong wind at night.",
+                    id: "shamseyyeh",
+                    ar: "شَمْسِيّة",
+                    en: "umbrella",
+                    enArabeezy: "shamseyyeh",
+                    hint: "Literally ‘sun-thing’, used for rain umbrella too.",
+                    exampleAr: "وين الشَّمْسِيّة تَبَعِتَك؟",
+                    exampleEn: "Where’s your umbrella?",
                 },
                 {
-                    id: "ghubar",
-                    ar: "غُبَار",
-                    en: "dust",
-                    hint: "Used with ‘جو مْعَجَّج’ (dusty weather).",
-                    exampleAr: "الجَوّ اليَوْم فِيه غُبَار.",
-                    exampleEn: "There’s dust in the air today.",
+                    id: "ri7",
+                    ar: "رِيح",
+                    en: "wind",
+                    enArabeezy: "ree7",
+                    hint: "Strong wind: رِيح قَوِيّة.",
+                    exampleAr: "الرِّيح قَوِيّة، سَكِّر الشُّبّاك.",
+                    exampleEn: "The wind is strong, close the window.",
                 },
                 {
-                    id: "rtoubeh",
-                    ar: "رُطُوبَة",
-                    en: "humidity",
-                    hint: "Very common in coastal cities (like Gaza).",
-                    exampleAr: "الرُّطُوبَة عَالِيَة بِالصَّيْف.",
-                    exampleEn: "The humidity is high in summer.",
-                },
-                {
-                    id: "3asefa",
+                    id: "3asefeh",
                     ar: "عَاصْفَة",
                     en: "storm",
-                    hint: "For strong wind and rain.",
-                    exampleAr: "اللَّيْلِة فِيه عَاصْفَة، بْنِضَلّ فِي الْبَيْت.",
-                    exampleEn: "Tonight there is a storm; we stay at home.",
+                    enArabeezy: "3aaSfeh / ʿaasfeh",
+                    hint: "Wind + strong rain = عاصفة.",
+                    exampleAr: "اللَّيْلِة في عَاصْفَة، مَنْضَلّ فِي الْبَيْت.",
+                    exampleEn: "Tonight there’s a storm, we’ll stay home.",
                 },
                 {
                     id: "talj",
                     ar: "تَلْج",
                     en: "snow",
-                    hint: "Not everywhere, but high cities maybe.",
-                    exampleAr: "مَرَّة فِي السَّنَة مُمْكِن يِنْزِل تَلْج.",
-                    exampleEn: "Maybe once a year it snows.",
+                    enArabeezy: "talj",
+                    hint: "Not very common in many cities, but known.",
+                    exampleAr: "نَزَل تَلْج بِاللَّيْل.",
+                    exampleEn: "It snowed last night.",
                 },
                 {
-                    id: "fog",
-                    ar: "ضَّبَاب",
+                    id: "dababb",
+                    ar: "ضَباب",
                     en: "fog",
-                    hint: "Low visibility, especially in mornings.",
-                    exampleAr: "فِي ضَّبَاب عَلَى الطَّرِيق السَّحِر.",
-                    exampleEn: "There’s fog on the road early in the morning.",
+                    enArabeezy: "dabāb / dabaab",
+                    hint: "Low visibility, especially in morning.",
+                    exampleAr: "في ضَباب عَالطَّرِيق، اسْوُق هَداوِي.",
+                    exampleEn: "There’s fog on the road, drive slowly.",
                 },
 
-                // ===== SEASONS & TIMES =====
+                // ===== TEMPERATURE & SEASONS =====
+                {
+                    id: "darajet_el7arara",
+                    ar: "دَرَجَة الحَرارَة",
+                    en: "temperature",
+                    enArabeezy: "darajet el-7arāra",
+                    hint: "Literally ‘degree of heat’.",
+                    exampleAr: "دَرَجَة الحَرارَة اليوم حَوالَي عِشْرين.",
+                    exampleEn: "The temperature today is around twenty.",
+                },
+                {
+                    id: "ta7t_el_sefr",
+                    ar: "تَحْت الصِّفِر",
+                    en: "below zero",
+                    enArabeezy: "ta7t es-sefr",
+                    hint: "Very cold weather.",
+                    exampleAr: "بِهالْبَلَد الحَرارَة تَحْت الصِّفِر بِالشِّتَا.",
+                    exampleEn: "In this country the temperature is below zero in winter.",
+                },
+                {
+                    id: "abrad_min",
+                    ar: "أَبْرَد مِن...",
+                    en: "colder than...",
+                    enArabeezy: "abrad min...",
+                    hint: "Comparative: اليوم أَبْرَد مِن امبارِح.",
+                    exampleAr: "اليوم أَبْرَد مِن امْبارِح.",
+                    exampleEn: "Today is colder than yesterday.",
+                },
                 {
                     id: "fasl",
                     ar: "فَصِل",
                     en: "season",
+                    enArabeezy: "faSl / faSel",
                     hint: "Plural: فُصُول.",
-                    exampleAr: "أَحْب فَصِل الرَّبِيع.",
-                    exampleEn: "I love the spring season.",
+                    exampleAr: "شُو أَحْلَى فَصِل عِنْدَك؟",
+                    exampleEn: "What’s your favourite season?",
                 },
                 {
                     id: "seif",
                     ar: "صَيْف",
                     en: "summer",
+                    enArabeezy: "Seyf / seif",
                     hint: "",
-                    exampleAr: "الصَّيْف فِي غَزَّة شُوب وَرُطُوبَة.",
-                    exampleEn: "Summer in Gaza is hot and humid.",
+                    exampleAr: "مَا بَحِبّ الصَّيْف، الشُّوب بِجَنِّن.",
+                    exampleEn: "I don’t like summer, the heat is crazy.",
                 },
                 {
                     id: "sheta",
                     ar: "شِتَا",
                     en: "winter",
+                    enArabeezy: "sheta",
                     hint: "",
-                    exampleAr: "بِالشِّتَا بَحِبّ أَشْرَب شَاي سُخُن.",
-                    exampleEn: "In winter I like to drink hot tea.",
+                    exampleAr: "بِالشِّتَا بَلْبِس أَواعي ثَقِيلَة.",
+                    exampleEn: "In winter I wear heavy clothes.",
                 },
                 {
                     id: "rabee3",
                     ar: "رَبِيع",
                     en: "spring",
+                    enArabeezy: "rabee3",
                     hint: "",
-                    exampleAr: "الرَّبِيع أَهْدَأ فَصِل عِنْدِي.",
-                    exampleEn: "Spring is the calmest season for me.",
+                    exampleAr: "الرَّبِيع فَصِل مُناسِب لِلْمَشِي.",
+                    exampleEn: "Spring is a good season for walking.",
                 },
                 {
                     id: "kharif",
                     ar: "خَرِيف",
                     en: "autumn / fall",
+                    enArabeezy: "kharif",
                     hint: "",
-                    exampleAr: "بِالخَرِيف بْتِقَع الوَرَق مِن الشَّجَر.",
+                    exampleAr: "بِالخَرِيف الوَرَق بْيُوقَع مِن الشَّجَر.",
                     exampleEn: "In autumn the leaves fall from the trees.",
+                },
+
+                // ===== CLOTHES & DAILY TALK =====
+                {
+                    id: "jaket",
+                    ar: "جاكِت",
+                    en: "jacket",
+                    enArabeezy: "jaket",
+                    hint: "Used for any light/medium jacket.",
+                    exampleAr: "لا تِنْسى الجاكِت، بَرّا بَرْد.",
+                    exampleEn: "Don’t forget your jacket, it’s cold outside.",
+                },
+                {
+                    id: "awa3i_2teeleh",
+                    ar: "أَواعِي ثَقِيلَة",
+                    en: "heavy clothes",
+                    enArabeezy: "awa3i ta2eeleh",
+                    hint: "Winter clothes: jackets, sweaters…",
+                    exampleAr: "طَلَّعْنا الأَواعِي الثَّقِيلَة لِلشِّتَا.",
+                    exampleEn: "We took out the heavy clothes for winter.",
+                },
+                {
+                    id: "mblall",
+                    ar: "مُبْتَلّ",
+                    en: "wet (from rain)",
+                    enArabeezy: "mobtall / mobtall",
+                    hint: "Used for clothes, ground, hair…",
+                    exampleAr: "رَجَعْت مُبْتَلّ مِن المَطَر.",
+                    exampleEn: "I came back soaked from the rain.",
                 },
 
                 // ===== SMALL TALK CHUNKS =====
@@ -7306,284 +7404,247 @@ const defaultLessons = {
                     id: "keef_el_jaww_3andak",
                     ar: "كِيف الجَوّ عِنْدَك؟",
                     en: "How’s the weather where you are?",
-                    hint: "Good opener on calls with people in other places.",
+                    enArabeezy: "keef el-jaww 3andak?",
+                    hint: "Perfect opener for small talk.",
                     exampleAr: "كِيف الجَوّ عِنْدَك اليَوْم؟",
                     exampleEn: "How’s the weather where you are today?",
                 },
                 {
-                    id: "sho_hada_el_jaww",
-                    ar: "شُو هَادَا الجَوّ!",
-                    en: "What is this weather! / Wow, this weather!",
-                    hint: "Expressing surprise (good or bad). Tone decides.",
-                    exampleAr: "شُو هَادَا الجَوّ! مَرَّة شُوب مَرَّة بَرْد.",
-                    exampleEn: "What is this weather! One moment hot, one moment cold.",
+                    id: "el_jaww_mnasib",
+                    ar: "الجَوّ مْناسِب لِلْطِّلْعَة.",
+                    en: "The weather is good for going out.",
+                    enArabeezy: "el-jaww mnasib lil-ṭal3a",
+                    hint: "Nice positive comment about the day.",
+                    exampleAr: "اليوم الجَوّ مْناسِب لِلْطِّلْعَة عَالبَحِر.",
+                    exampleEn: "Today the weather is good for going out to the beach.",
                 },
                 {
-                    id: "ma_bastahmel_el_shoub",
+                    id: "ma_bastahmel_el_shob",
                     ar: "مَا بَسْتَحْمِل الشُّوب.",
                     en: "I can’t stand the heat.",
-                    hint: "Strong personal opinion.",
-                    exampleAr: "صِرَاحَةً، مَا بَسْتَحْمِل الشُّوب.",
+                    enArabeezy: "ma basta7mel esh-shob",
+                    hint: "Strong opinion about weather.",
+                    exampleAr: "صَرَاحَةً، مَا بَسْتَحْمِل الشُّوب.",
                     exampleEn: "Honestly, I can’t stand the heat.",
                 },
                 {
                     id: "b7eb_el_matar",
                     ar: "بَحِبّ المَطَر.",
                     en: "I love the rain.",
+                    enArabeezy: "ba7ebb el-matar",
                     hint: "",
-                    exampleAr: "بَحِبّ المَطَر، بْحِسّ بِيِه هُدُوء.",
-                    exampleEn: "I love the rain; I feel calm with it.",
+                    exampleAr: "بَحِبّ المَطَر، بْحِسّ الجَوّ أَهْدَى.",
+                    exampleEn: "I love the rain; I feel the weather is calmer.",
                 },
                 {
-                    id: "mni7_lil_mashi",
-                    ar: "مْنِيح لِلْمَشِي",
-                    en: "good for walking",
-                    hint: "Useful opinion chunk to extend small talk.",
-                    exampleAr: "اليَوْم الجَوّ مْنِيح لِلْمَشِي.",
-                    exampleEn: "Today the weather is good for walking.",
-                },
-                {
-                    id: "dayman_heik",
-                    ar: "دَايْمَنْ هَيْك",
-                    en: "it’s always like this",
-                    hint: "Explains local climate.",
-                    exampleAr: "فِي الرَّبِيع الجَوّ بَيْتْغَيَّر سَرِيع، دَايْمَنْ هَيْك.",
-                    exampleEn: "In spring the weather changes quickly, it’s always like this.",
-                },
-                {
-                    id: "3an_jad",
-                    ar: "عَنْ جَدّ؟",
-                    en: "Really?",
-                    hint: "Keeps small talk going; shows interest.",
-                    exampleAr: "عَنْ جَدّ؟ مَا كُنْت مُتَوَقِّع شِتَا اليَوْم.",
-                    exampleEn: "Really? I wasn’t expecting rain today.",
-                },
-                {
-                    id: "wallah",
-                    ar: "وَالله",
-                    en: "really / honestly / I swear",
-                    hint: "Very common filler for emphasis.",
-                    exampleAr: "وَالله اليَوْم بَرْد أَكْثَر مِن امْبَارِح.",
-                    exampleEn: "Honestly, today is colder than yesterday.",
-                },
-                {
-                    id: "saraha",
-                    ar: "صَرَاحَةً",
-                    en: "honestly / to be honest",
-                    hint: "Good for sharing opinion in small talk.",
-                    exampleAr: "صَرَاحَةً، مَا بَحِبّ الشِّتَا.",
-                    exampleEn: "Honestly, I don’t like winter.",
-                },
-                {
-                    id: "tqleb_sere3",
-                    ar: "بْتِقْلِب سَرِيع",
-                    en: "it changes quickly",
-                    hint: "Used for weather or mood.",
-                    exampleAr: "الجَوّ فِي الرَّبِيع بْتِقْلِب سَرِيع.",
-                    exampleEn: "The weather in spring changes quickly.",
+                    id: "t2lib_saree3",
+                    ar: "الجَوّ بْيِقْلِب سَرِيع.",
+                    en: "The weather changes quickly.",
+                    enArabeezy: "el-jaww byi2leb saree3",
+                    hint: "Use for spring or unstable days.",
+                    exampleAr: "بِالرَّبِيع الجَوّ بْيِقْلِب سَرِيع.",
+                    exampleEn: "In spring the weather changes quickly.",
                 },
             ],
 
             extra: [
                 {
-                    id: "nashif_hawa",
-                    ar: "هَوَا نَاشِف",
+                    id: "hawa_nashef",
+                    ar: "هَوا ناشِف",
                     en: "dry air",
-                    hint: "",
-                    exampleAr: "فِي الْجَبَل الهَوَا نَاشِف شْوَيّ.",
-                    exampleEn: "In the mountain the air is a bit dry.",
+                    enArabeezy: "hawa nashef",
+                    hint: "Opposite of humid air.",
+                    exampleAr: "بِالْجَبَل الهَوا ناشِف أَكْثَر.",
+                    exampleEn: "In the mountains the air is drier.",
                 },
                 {
-                    id: "m3jo2",
-                    ar: "مْخْنُوق",
-                    en: "stuffy / suffocating (about air)",
-                    hint: "Used when air feels heavy or polluted.",
-                    exampleAr: "الجَوّ مْخْنُوق، مَا فِيه هَوَا.",
-                    exampleEn: "The air feels stuffy; there’s no breeze.",
+                    id: "hawa_m5noq",
+                    ar: "هَوا مْخْنُوق",
+                    en: "stuffy air",
+                    enArabeezy: "hawa mkhnooʔ / mkhno2",
+                    hint: "Air feels heavy or polluted.",
+                    exampleAr: "الجَوّ مْخْنُوق جُوّا، اِفْتَح الشُّبّاك شْوَيّ.",
+                    exampleEn: "The air inside feels stuffy, open the window a bit.",
                 },
                 {
-                    id: "bardo",
-                    ar: "بَرْضُه",
-                    en: "still / anyway",
-                    hint: "Filler to continue small talk.",
-                    exampleAr: "بَرْضُه، مَع كُلّ هَادَا بَحِبّ الرَّبِيع أَكْثَر.",
-                    exampleEn: "Still, with all that, I like spring more.",
+                    id: "nashret_ta2s",
+                    ar: "نَشْرَة طَقْس",
+                    en: "weather report / forecast",
+                    enArabeezy: "nashret ta2s",
+                    hint: "Like on TV or apps.",
+                    exampleAr: "شُفْت نَشْرَة الطَّقْس قَبِل ما تْسافِرِي؟",
+                    exampleEn: "Did you check the weather report before you travelled?",
+                },
+                {
+                    id: "dardashe_3an_el_jaww",
+                    ar: "دَرْدَشَة عَن الجَوّ",
+                    en: "small talk about the weather",
+                    enArabeezy: "dardashe 3an el-jaww",
+                    hint: "Talking about the weather just to start a conversation.",
+                    exampleAr: "أَحْيَانًا مِنْبَلِّش الدَّرْس بِدَرْدَشَة عَن الجَوّ.",
+                    exampleEn: "Sometimes we start the lesson with small talk about the weather.",
+                },
+                {
+                    id: "nashaf_el_matar",
+                    ar: "المَطَر نَشَف",
+                    en: "the rain dried up / stopped",
+                    enArabeezy: "el-matar nashaf",
+                    hint: "Colloquial way to say the rain has stopped.",
+                    exampleAr: "المَطَر نَشَف، يَلّا نِطْلَع.",
+                    exampleEn: "The rain has stopped, let’s go out.",
                 },
             ],
-        },
+        }
+        ,
 
         // ====================================
         // DIALOGUE (3 LONG SCENES)
         // ====================================
         dialogue: {
-            lines: [
-                // Scene 1 – At university entrance (classic small talk)
+            "lines": [
                 {
-                    speaker: "Narrator",
-                    ar: "رُوبَا وَصَاحِبْتَهَا لِين بِيِسْتَنُّوا بَرَّه عَنْد بَاب الْجَامْعَة.",
-                    en: "Roba and her friend Lynn are waiting outside at the university gate.",
+                    "speaker": "Lina",
+                    "ar": "صَباح الخير! كِيف الجَوّ بُرا؟",
+                    "en": "Good morning! How’s the weather outside?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "صَبَاح الْخِير يَا لِين! شُو هَادَا الجَوّ؟ مَرَّة شُوب مَرَّة بَرْد.",
-                    en: "Good morning, Lynn! What is this weather? One moment hot, one moment cold.",
+                    "speaker": "Rania",
+                    "ar": "صَباح النّور! مِشْمِس وشُوب شْوَي.",
+                    "en": "Good morning! Sunny and a bit hot."
                 },
                 {
-                    speaker: "Lynn",
-                    ar: "صَبَاح النُّور! وَالله عِنْدِك حَقّ، الجَوّ اليَوْم مْغَيَّم وَرُطُوبَة عَالِيَة.",
-                    en: "Good morning! You’re right, the weather today is cloudy and very humid.",
+                    "speaker": "Lina",
+                    "ar": "بِفَكِّر نِطْلَع نِتْمَشّى.",
+                    "en": "I think we should go for a walk."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "كِيف الجَوّ عِنْدْك فِي الحَارَة؟ عِنَّا بِالْبَيْت بَرْد أَكْثَر.",
-                    en: "How’s the weather in your neighborhood? At our home it’s even colder.",
+                    "speaker": "Rania",
+                    "ar": "مُمْكِن، بَس إحْتِمال تِنْزَل مَطَر بَعْد الضُّهُر.",
+                    "en": "Maybe, but it might rain this afternoon."
                 },
                 {
-                    speaker: "Lynn",
-                    ar: "عِنَّا كَمَان بَرْد، بَسّ صَرَاحَةً بَحِبّ هَيْك جَوّ. مْنِيح لِلْمَشِي بَعْد الدَّرْس.",
-                    en: "It’s also cold at ours, but honestly I like this kind of weather. It’s good for walking after class.",
+                    "speaker": "Lina",
+                    "ar": "عَفْكَرَة، شُوب تْحِبّي أكْتَر؟ الصَّيف ولا الشِّتا؟",
+                    "en": "By the way, what do you like more? Summer or winter?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "عَنْ جَدّ؟ أَنَا مَا بَسْتَحْمِل البَرْد. بَفضَّل الجَوّ الدَّافِي.",
-                    en: "Really? I can’t stand the cold. I prefer warm weather.",
+                    "speaker": "Rania",
+                    "ar": "بِصِراحَة الشِّتا. بَحبّ الجَوّ البَارِد.",
+                    "en": "Honestly winter. I love the cold weather."
                 },
                 {
-                    speaker: "Lynn",
-                    ar: "بِالصَّيْف فِي غَزَّة شُوب مَجْنُون. مَا بَسْتَحْمِل الشُّوب أَبَدًا.",
-                    en: "In summer in Gaza the heat is crazy. I can’t stand the heat at all.",
+                    "speaker": "Lina",
+                    "ar": "أنا العَكْس! بَحبّ الصَّيف والبحَر.",
+                    "en": "I’m the opposite! I love summer and the beach."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "صَح، الصَّيْف مْتْعِب، بَسّ الشِّتَا كَمَان مْتْعِب. الجَوّ دَايْمَنْ بْتِقْلِب سَرِيع.",
-                    en: "True, summer is exhausting, but winter is also exhausting. The weather always changes quickly.",
+                    "speaker": "Rania",
+                    "ar": "كُلّ فَصْل إِلُه جَمالُه.",
+                    "en": "Every season has its beauty."
                 },
                 {
-                    speaker: "Lynn",
-                    ar: "المُهِمّ، الجَوّ اليَوْم مْرَتَّب لِلْقَهْوِة بَعْد المُحَاضَرَة.",
-                    en: "The important thing is, today’s weather is perfect for coffee after the lecture.",
+                    "speaker": "Lina",
+                    "ar": "إحْتِمال نِشوف ثَلْج هَالسَّنَة؟",
+                    "en": "Maybe we’ll see snow this year?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "فِكْرَة حِلْوَة! يَلَّا بَعْد الدَّرْس مِنْطْلَع عَالكَافِيه.",
-                    en: "Nice idea! Let’s go to a café after class.",
-                },
-
-                // Scene 2 – On the bus, talking to a stranger
-                {
-                    speaker: "Narrator",
-                    ar: "بَعْد الدَّرْس، رُوبَا رَكِبِت بَاص مُزْدَحِم وَقَعَدِت جَنْب وَاحِدَة مَجْهُولَة.",
-                    en: "After class, Roba took a crowded bus and sat next to a stranger.",
+                    "speaker": "Rania",
+                    "ar": "إذا الحَرارَة نَزَلَت تَحْت الصّفِر، أكيد!",
+                    "en": "If the temperature drops below zero, for sure!"
                 },
                 {
-                    speaker: "Stranger",
-                    ar: "مَسَا الْخِير.",
-                    en: "Good evening.",
+                    "speaker": "Lina",
+                    "ar": "شُو خَبَرِك بِالجامْعَة؟",
+                    "en": "How’s everything at university?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مَسَا النُّور.",
-                    en: "Good evening.",
+                    "speaker": "Rania",
+                    "ar": "تَمام، بُدرس كْتير. وإنتي؟",
+                    "en": "Good, studying a lot. And you?"
                 },
                 {
-                    speaker: "Stranger",
-                    ar: "اليَوْم الجَوّ غَرِيب شْوَيّ، صُبِح شُوب وَهَلَّق فِي مَطَر.",
-                    en: "Today the weather is a bit strange; it was hot in the morning and now there’s rain.",
+                    "speaker": "Lina",
+                    "ar": "نَفْس الإِشي، بَس عِنْدي وِقْت لَلدَّرْدَشَة!",
+                    "en": "Same thing, but I have time for chatting!"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "وَالله صَحّ. السَّمَا مْغَيَّمَة وَفِي رِيح بَرْد.",
-                    en: "Honestly, that’s true. The sky is cloudy and there’s a cold wind.",
+                    "speaker": "Rania",
+                    "ar": "دَردَشة الطَّقْس أَسْهَل دَردَشة!",
+                    "en": "Weather talk is the easiest small talk!"
                 },
                 {
-                    speaker: "Stranger",
-                    ar: "بْتِحِبّ الشِّتَا أَو الصَّيْف أَكْثَر؟",
-                    en: "Do you like winter or summer more?",
+                    "speaker": "Lina",
+                    "ar": "إسْمَعي! الهَوا قَوِيّ. نِلبُس جاكِت؟",
+                    "en": "Listen! The wind is strong. Should we wear jackets?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مُمكِن أَحْكِي: وَلَا وَاحِد. صَرَاحَةً بَحِبّ الرَّبِيع وَالخَرِيف، الجَوّ فِيه بَكُون مْرَتَّب.",
-                    en: "I could say: neither. Honestly, I like spring and autumn; the weather then is pleasant.",
+                    "speaker": "Rania",
+                    "ar": "إي، خُدي جاكِت وأَواعي ثَقيلَة.",
+                    "en": "Yes, take a jacket and heavy clothes."
                 },
                 {
-                    speaker: "Stranger",
-                    ar: "عَنْ جَدّ؟ أَنَا العَكْس، بَحِبّ الشِّتَا بَلِيل. المَطَر بْيِعْمِل جَوّ هَادِي.",
-                    en: "Really? I’m the opposite; I like winter at night. Rain creates a calm mood.",
+                    "speaker": "Lina",
+                    "ar": "الجَوّ اتْقَلَّب سَرِيع!",
+                    "en": "The weather changed quickly!"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مَعَك حَقّ، بَسّ لَمَّا الجَوّ مْخْنُوق وَرُطُوبَة كْتِير، مَا بَقْدَر أَرْكَّز.",
-                    en: "You’re right, but when the air is stuffy and very humid, I can’t concentrate.",
+                    "speaker": "Rania",
+                    "ar": "إحْتِمال مُؤَقَّت.",
+                    "en": "Maybe it’s temporary."
                 },
                 {
-                    speaker: "Stranger",
-                    ar: "دَايْمَنْ هَيْك بِالصَّيْف عِنْدْنَا. الجَوّ بْتِقْلِب بِنْهَار وَبِلَّيْل.",
-                    en: "It’s always like that in our summers. The weather changes between day and night.",
+                    "speaker": "Lina",
+                    "ar": "مِنِسْتَنى شْوَي؟ بَرْكي نَشّف مَطَر.",
+                    "en": "Shall we wait a bit? Maybe the rain stops."
                 },
                 {
-                    speaker: "Narrator",
-                    ar: "بَعْد شْوَيّ، وَقَف البَاص وَكُلّ وَاحِد نَزَل عَطَرِيقُه.",
-                    en: "After a while, the bus stopped and each one got off on their way.",
-                },
-
-                // Scene 3 – Video call between cities
-                {
-                    speaker: "Narrator",
-                    ar: "فِي المَسَا، رُوبَا عَمِلِت مُكَالَمَة فِيدْيُو مَع صَدِيقْتَهَا نُور فِي رَام الله.",
-                    en: "In the evening, Roba made a video call with her friend Noor in Ramallah.",
+                    "speaker": "Rania",
+                    "ar": "طَيِّب. نِتْفَرَّج عَالتَّقْس.",
+                    "en": "Okay. Let’s check the forecast."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مَرْحَبَا نُور! كِيفِك؟ كِيف الجَوّ فِي رَام الله؟",
-                    en: "Hi Noor! How are you? How’s the weather in Ramallah?",
+                    "speaker": "Lina",
+                    "ar": "لَو ضَلّ الجَوّ مُرِيح، مِنْعَمِل وَقْت حِلْو عَالبَحَر.",
+                    "en": "If the weather stays nice, we’ll have a good time at the beach."
                 },
                 {
-                    speaker: "Noor",
-                    ar: "هَلَّق عِنَّا بَرْد كْتِير، وَمُمْكِن بَعْد شْوَيّ يِنْزِل تَلْج.",
-                    en: "Right now it’s very cold here, and maybe it will snow later.",
+                    "speaker": "Rania",
+                    "ar": "وأَنا جاهْزَة دايمًا للبَحَر!",
+                    "en": "And I am always ready for the beach!"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "عَنْ جَدّ؟ عِنَّا فِي غَزَّة، الجَوّ دَافِي وَرُطُوبَة شْوَيّ.",
-                    en: "Really? Here in Gaza the weather is warm and a bit humid.",
+                    "speaker": "Lina",
+                    "ar": "إذِن يَلّا نِخَطِّط لبُكْرَة.",
+                    "en": "Then let’s plan for tomorrow."
                 },
                 {
-                    speaker: "Noor",
-                    ar: "فُرْقَة جْدِيدَة! دَرَجَة الحَرَارَة عِنَّا تَمَانِيَة بَسّ.",
-                    en: "Big difference! The temperature here is only eight.",
+                    "speaker": "Rania",
+                    "ar": "مُوافْقَة! بْنِتَّفِق بَعْد المَسَا.",
+                    "en": "Deal! We’ll confirm in the evening."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "وَالله؟ عِنَّا قَرِيب مِن الخَمْسْطَاش. بِالصِّيف العَكْس، أَنْتُو أَحْسَن مِنَّا.",
-                    en: "Really? Ours is around fifteen. In summer it’s the opposite; you’re better than us.",
+                    "speaker": "Lina",
+                    "ar": "شُكْرًا عَل الدَّردَشَة.",
+                    "en": "Thanks for the chat."
                 },
                 {
-                    speaker: "Noor",
-                    ar: "صَح، بِالصَّيْف عِنَّا هَوَا أَكْتَر. طَيِّب، شُو عَامْلَة بِهَادَا الجَوّ؟",
-                    en: "True, in summer we have more breeze. So, what are you doing in this weather?",
+                    "speaker": "Rania",
+                    "ar": "وَلا يِهِمِّك! الطَّقْس بْجَمِّع القْلوب.",
+                    "en": "No problem! The weather brings hearts together!"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "صَرَاحَةً، لَابْسَة بْلُوزَة خَفِيفَة، بَشْرَب شَاي بِنَعْنَع وَبْتِفَرَّج عَلَى المَطَر مِن الشُّبَّاك.",
-                    en: "Honestly, I’m wearing a light sweater, drinking mint tea and watching the rain from the window.",
+                    "speaker": "Lina",
+                    "ar": "مَع السَّلامَة!",
+                    "en": "Goodbye!"
                 },
                 {
-                    speaker: "Noor",
-                    ar: "جَوّ رُومَانْسِي! بَرْضُه، بَعْد الدِّرَاسَة، شْوَيّ مَطَر بِيِهَدّ الأَعْصَاب.",
-                    en: "Romantic mood! Still, after studying, a bit of rain calms the nerves.",
-                },
-                {
-                    speaker: "Roba",
-                    ar: "يَلَّا، بِالتَّوْفِيق فِي المَشَارِيع، وَخَلِّينَا نِحْكِي بُكْرَا نِشُوف الجَوّ كِيف حَيِتْغَيَّر.",
-                    en: "Alright, good luck with your projects and let’s talk tomorrow to see how the weather changes.",
-                },
-                {
-                    speaker: "Noor",
-                    ar: "أَكِيد. مَع السَّلَامَة!",
-                    en: "Sure. Bye!",
-                },
-            ],
-        },
+                    "speaker": "Rania",
+                    "ar": "مع السَّلامَة!",
+                    "en": "Goodbye!"
+                }
+            ]
+        }
+        ,
 
         // ====================================
         // GRAMMAR – NEW FOCUS
@@ -7638,11 +7699,10 @@ const defaultLessons = {
                     "These small words make your small talk sound natural:\n\n" +
                     "• عَنْ جَدّ؟ = Really? (shows interest, asks for more)\n" +
                     "• وَالله… = Honestly… / I swear… (adds emotion)\n" +
-                    "• بَرْضُه = Still / anyway\n\n" +
                     "Example mini-dialogue:\n" +
                     "– اليَوْم الجَوّ بَرْد كْتِير.\n" +
-                    "– عَنْ جَدّ؟ عِنَّا دَافِي شْوَيّ.\n" +
-                    "– وَالله؟ بَرْضُه، أَحْسَن مِن الشُّوب.",
+                    "– عَنْ جَدّ؟ عِنَّا دَافِي شْوَيّ.\n",
+
             },
         ],
 
@@ -7783,6 +7843,7 @@ const defaultLessons = {
                     id: "ra2y",
                     ar: "رَأْي",
                     en: "opinion",
+                    enArabeezy: "ra2y",
                     hint: "Plural: آراء (aaraa’). ‘my opinion’ = رَأْيِي.",
                     exampleAr: "رَأْيِك مُهِمّ.",
                     exampleEn: "Your opinion is important.",
@@ -7791,22 +7852,43 @@ const defaultLessons = {
                     id: "bira2yi",
                     ar: "بِرَأْيِي",
                     en: "in my opinion",
+                    enArabeezy: "bi-ra2yi",
                     hint: "Very useful starter for giving opinions.",
                     exampleAr: "بِرَأْيِي، هَادَا الكُورْس مْفِيد.",
                     exampleEn: "In my opinion, this course is useful.",
                 },
                 {
+                    id: "bi3tiqadi",
+                    ar: "بِاعْتِقَادِي",
+                    en: "I believe / I think",
+                    enArabeezy: "bi-e3teqādi",
+                    hint: "Slightly more formal than بِرَأْيِي.",
+                    exampleAr: "بِاعْتِقَادِي المَوْضوع مِش هَالْقَدّ خَطِير.",
+                    exampleEn: "I believe the issue is not that serious.",
+                },
+                {
+                    id: "bil_nisbe_ili",
+                    ar: "بالنِّسْبَة إِلِي",
+                    en: "for me / from my point of view",
+                    enArabeezy: "bil-nisbe ʾe-li",
+                    hint: "Good to show that it’s a personal view.",
+                    exampleAr: "بالنِّسْبَة إِلِي، الشُّغُل مَع الدِّراسَة مُتْعِب.",
+                    exampleEn: "For me, working while studying is tiring.",
+                },
+                {
                     id: "bafakker",
                     ar: "بَفَكِّر",
                     en: "I think",
-                    hint: "Also ‘I’m thinking’, but often used for opinions.",
-                    exampleAr: "بَفَكِّر المَوْضُوع سَهْل.",
+                    enArabeezy: "bafakker",
+                    hint: "Also ‘I’m thinking’, but very common for opinions.",
+                    exampleAr: "بَفَكِّر المَوْضوع سَهْل.",
                     exampleEn: "I think the topic is easy.",
                 },
                 {
                     id: "ba7ess",
                     ar: "بَحِسّ",
                     en: "I feel / I have the feeling",
+                    enArabeezy: "ba7ess",
                     hint: "Used for emotional or soft opinions.",
                     exampleAr: "بَحِسّ الفِكْرَة حِلْوَة بَسّ مِش مُنَظَّمَة.",
                     exampleEn: "I feel the idea is nice but not organized.",
@@ -7814,8 +7896,9 @@ const defaultLessons = {
                 {
                     id: "beshuf",
                     ar: "بَشُوف",
-                    en: "I see / I think (my view)",
-                    hint: "Spoken way to share view: ‘the way I see it’.",
+                    en: "I see / my view is",
+                    enArabeezy: "bashuf",
+                    hint: "Spoken way to share your view: ‘the way I see it’.",
                     exampleAr: "أَنَا بَشُوف إِنُّه الأَفْضَل نِبْدَى بَسِيط.",
                     exampleEn: "I see that it’s better to start simple.",
                 },
@@ -7823,7 +7906,8 @@ const defaultLessons = {
                     id: "saraha",
                     ar: "صَرَاحَةً",
                     en: "honestly / to be honest",
-                    hint: "Good for softening a strong opinion.",
+                    enArabeezy: "Sara7a",
+                    hint: "Good for softening a strong opinion (بِصَرَاحَة / صراحة).",
                     exampleAr: "صَرَاحَةً، مَا عَجَبْنِي الفِلْم.",
                     exampleEn: "Honestly, I didn’t like the movie.",
                 },
@@ -7831,7 +7915,8 @@ const defaultLessons = {
                     id: "3an_jad",
                     ar: "عَنْ جَدّ؟",
                     en: "Really?",
-                    hint: "Shows interest in the other person’s opinion.",
+                    enArabeezy: "ʿan jad?",
+                    hint: "Shows interest or surprise about someone’s opinion.",
                     exampleAr: "عَنْ جَدّ؟ أَنَا العَكْس تَمَامًا.",
                     exampleEn: "Really? I’m the complete opposite.",
                 },
@@ -7841,6 +7926,7 @@ const defaultLessons = {
                     id: "ba7ebb",
                     ar: "بَحِبّ",
                     en: "I like / I love",
+                    enArabeezy: "ba7ebb",
                     hint: "Use with nouns or verbs.",
                     exampleAr: "بَحِبّ اللُّغَات وَبَحِبّ أَتْعَلَّم جْدِيد.",
                     exampleEn: "I like languages and I like learning new things.",
@@ -7849,6 +7935,7 @@ const defaultLessons = {
                     id: "ma_ba7ebb",
                     ar: "مَا بَحِبّ",
                     en: "I don’t like",
+                    enArabeezy: "ma ba7ebb",
                     hint: "Polite way to say you don’t like something.",
                     exampleAr: "مَا بَحِبّ الأَفْلَام الطَّوِيلَة.",
                     exampleEn: "I don’t like long movies.",
@@ -7857,6 +7944,7 @@ const defaultLessons = {
                     id: "baftadel",
                     ar: "بَفَضَّل",
                     en: "I prefer",
+                    enArabeezy: "bafaDDel",
                     hint: "Use when choosing between options.",
                     exampleAr: "بَفَضَّل أَتْعَلَّم وَاحِد عَ وَاحِد بَدَل مَرَّة وَاحْدَة.",
                     exampleEn: "I prefer to learn one by one instead of all at once.",
@@ -7865,6 +7953,7 @@ const defaultLessons = {
                     id: "mesh_kteer",
                     ar: "مِش كْتِير",
                     en: "not very / not really",
+                    enArabeezy: "mish kteer",
                     hint: "Soft way to say you don’t like something.",
                     exampleAr: "مِش كْتِير بَحِبّ القَهْوِة بِدُون سُكَّر.",
                     exampleEn: "I don’t really like coffee without sugar.",
@@ -7872,8 +7961,9 @@ const defaultLessons = {
                 {
                     id: "abadan",
                     ar: "أَبَدًا",
-                    en: "at all / never",
-                    hint: "Used in negative sentences.",
+                    en: "at all / never (in this context)",
+                    enArabeezy: "abadan",
+                    hint: "Comes with a negative verb.",
                     exampleAr: "مَا بَحِبّ الرُّطُوبَة أَبَدًا.",
                     exampleEn: "I don’t like humidity at all.",
                 },
@@ -7881,6 +7971,7 @@ const defaultLessons = {
                     id: "kwayyes",
                     ar: "كْوَيِّس",
                     en: "good / okay",
+                    enArabeezy: "kwayyes",
                     hint: "Basic evaluation word: good / fine.",
                     exampleAr: "الكُورْس كْوَيِّس بَسّ مُمْكِن يِكُون أَفْضَل.",
                     exampleEn: "The course is good but it could be better.",
@@ -7889,14 +7980,16 @@ const defaultLessons = {
                     id: "3adi",
                     ar: "عَادِي",
                     en: "normal / it’s okay",
-                    hint: "Used when something is ‘so-so’.",
-                    exampleAr: "الفِلْم عَادِي، مَو كْتِير حِلُو ومَو سَيِّئ.",
+                    enArabeezy: "3adi",
+                    hint: "Use when something is ‘so-so’.",
+                    exampleAr: "الفِلْم عَادِي، لَا كْتِير حِلُو وَلَا سَيِّئ.",
                     exampleEn: "The movie is okay, not very good and not bad.",
                 },
                 {
                     id: "momtaz",
                     ar: "مُمْتَاز",
                     en: "excellent",
+                    enArabeezy: "momtāz",
                     hint: "Stronger than ‘good’.",
                     exampleAr: "الدَّرْس اليَوْم مُمْتَاز.",
                     exampleEn: "Today’s lesson is excellent.",
@@ -7905,9 +7998,37 @@ const defaultLessons = {
                     id: "sayye2",
                     ar: "سَيِّئ",
                     en: "bad",
+                    enArabeezy: "sayyeʾ",
                     hint: "Stronger negative opinion.",
                     exampleAr: "الخِدْمَة فِي هَادَا المَحَلّ سَيِّئَة.",
                     exampleEn: "The service in this shop is bad.",
+                },
+                {
+                    id: "momil",
+                    ar: "مُمْل",
+                    en: "boring",
+                    enArabeezy: "momell",
+                    hint: "Negative quality for classes / movies / work…",
+                    exampleAr: "الصُّفُوف أُونلايْن أَحْيَانًا مُمْلِّة.",
+                    exampleEn: "Online classes are sometimes boring.",
+                },
+                {
+                    id: "mofid",
+                    ar: "مُفِيد",
+                    en: "useful",
+                    enArabeezy: "mufeid",
+                    hint: "Positive value word.",
+                    exampleAr: "الكَوْرْسات أُونلايْن مُفِيدَة لِكْتِير نَاس.",
+                    exampleEn: "Online courses are useful for many people.",
+                },
+                {
+                    id: "khaTeer",
+                    ar: "خَطِير",
+                    en: "serious / dangerous",
+                    enArabeezy: "khaTeer",
+                    hint: "For issues, not just physical danger.",
+                    exampleAr: "الإِدْمَان عَالسوشال ميديا مَوْضوع خَطِير.",
+                    exampleEn: "Addiction to social media is a serious issue.",
                 },
 
                 // ===== AGREE / DISAGREE =====
@@ -7915,267 +8036,444 @@ const defaultLessons = {
                     id: "bwaafe2",
                     ar: "بْوَافِق",
                     en: "I agree",
+                    enArabeezy: "bwaafeʾ",
                     hint: "From وَافَق = to agree.",
-                    exampleAr: "بْوَافِق مَعَك ١٠٠٪.",
+                    exampleAr: "بْوَافِق مَعَك مِيِّة بِالْمِيِّة.",
                     exampleEn: "I agree with you 100%.",
                 },
                 {
                     id: "ma_bwaafe2",
                     ar: "مَا بْوَافِق",
                     en: "I don’t agree",
-                    hint: "Can be softened with شْوَيّ / صَرَاحَةً.",
+                    enArabeezy: "ma bwaafeʾ",
+                    hint: "Can be softened with صَرَاحَةً / شْوَيّ.",
                     exampleAr: "صَرَاحَةً، مَا بْوَافِق عَلَى هَادَا الرَّأْي.",
                     exampleEn: "Honestly, I don’t agree with this opinion.",
+                },
+                {
+                    id: "mumkin_a5talef",
+                    ar: "مُمْكِن أَخْتِلِف مَعَك",
+                    en: "can I disagree with you (polite)",
+                    enArabeezy: "mumkin a5talef ma3ak",
+                    hint: "Very polite way to disagree.",
+                    exampleAr: "مُمْكِن أَخْتِلِف مَعَك بِهالنُّقْطَة شْوَي؟",
+                    exampleEn: "Can I disagree with you a bit on this point?",
                 },
                 {
                     id: "ma3ak_ha2",
                     ar: "مَعَك حَقّ",
                     en: "you’re right",
+                    enArabeezy: "ma3ak 7aʾ",
                     hint: "Very common in daily speech.",
-                    exampleAr: "مَعَك حَقّ، المَوْضُوع بِيِحْتَاج وَقْت.",
+                    exampleAr: "مَعَك حَقّ، المَوْضوع بِحْتاج وَقْت.",
                     exampleEn: "You’re right, the topic needs time.",
                 },
                 {
-                    id: "bifri2",
-                    ar: "بِفْرِق",
-                    en: "it makes a difference",
-                    hint: "Used for things that matter.",
-                    exampleAr: "طَرِيقَة الشَّرْح بِتِفْرِق مَع الطَّالِب.",
-                    exampleEn: "The way of explaining makes a difference for the student.",
+                    id: "la2_mish_mit2akked",
+                    ar: "لَأ، مِش مِتْأَكِّد",
+                    en: "no, I’m not sure",
+                    enArabeezy: "la2, mish mit2akked",
+                    hint: "Used to show doubt about information (change ending for fem).",
+                    exampleAr: "لَأ، مِش مِتْأَكِّد مِن هالمَعْلُومِة.",
+                    exampleEn: "No, I’m not sure about this information.",
                 },
                 {
-                    id: "ma_bifri2",
-                    ar: "مَا بِفْرِق",
-                    en: "it doesn’t matter / it’s the same",
-                    hint: "Use for neutral preference.",
-                    exampleAr: "بِالنِّسْبَة إِلِي، مَا بِفْرِق صَبَاح أَو مَسَا.",
-                    exampleEn: "For me, it doesn’t matter, morning or evening.",
+                    id: "la2_bel3aks",
+                    ar: "لَأ، بْالعَكْس",
+                    en: "no, on the contrary",
+                    enArabeezy: "la2, bil-3aks",
+                    hint: "Strong disagreement but can be said in a friendly tone.",
+                    exampleAr: "لَأ، بْالعَكْس، هُوَّ كْثير مُفِيد.",
+                    exampleEn: "No, on the contrary, it’s very useful.",
                 },
 
                 // ===== REASONS & CONNECTORS =====
                 {
                     id: "la2anno",
-                    ar: "لأَنُّه",
+                    ar: "لَأَنُّه",
                     en: "because",
+                    enArabeezy: "la2anno",
                     hint: "Key connector for giving reasons.",
-                    exampleAr: "بَحِبّ الدَّرْس لَأَنُّه مْنَظَّم.",
-                    exampleEn: "I like the lesson because it’s organized.",
+                    exampleAr: "بَحِبّ الشِّتَا لَأَنُّه الجَوّ هَادِي.",
+                    exampleEn: "I like winter because the weather is calm.",
                 },
                 {
                     id: "3ashan_heik",
                     ar: "عَشَان هَيْك",
                     en: "that’s why / so",
-                    hint: "Good for explaining result.",
-                    exampleAr: "الدَّرْس طَوِيل، عَشَان هَيْك بَدِّنَا بِكِّير.",
+                    enArabeezy: "3ashān heek",
+                    hint: "Good for explaining the result.",
+                    exampleAr: "الدَّرْس طَوِيل، عَشَان هَيْك بَدِّينَا بِكِّير.",
                     exampleEn: "The lesson is long, that’s why we started early.",
                 },
                 {
                     id: "ya3ni",
                     ar: "يَعْنِي",
                     en: "I mean / like / you know",
-                    hint: "Very common filler.",
-                    exampleAr: "يَعْنِي، الدَّرْس مْفِيد بَسّ كْتِير مَعْلُومَات.",
-                    exampleEn: "I mean, the lesson is useful but there is a lot of information.",
+                    enArabeezy: "ya3ni",
+                    hint: "Very common filler in Palestinian Arabic.",
+                    exampleAr: "يَعْنِي، الدَّرْس مْفِيد بَسّ فِيه مَعْلُومَات كْتِير.",
+                    exampleEn: "I mean, the lesson is useful but it has a lot of information.",
                 },
                 {
                     id: "tab3an",
                     ar: "طَبْعًا",
                     en: "of course",
-                    hint: "Agreeing strongly.",
-                    exampleAr: "طَبْعًا، هَادَا شَيْ مُهِمّ.",
+                    enArabeezy: "Tab3an",
+                    hint: "Shows strong agreement.",
+                    exampleAr: "طَبْعًا، هَادَا شِي مُهِمّ.",
                     exampleEn: "Of course, that’s important.",
                 },
                 {
                     id: "mumkin",
                     ar: "مُمْكِن",
                     en: "maybe / it’s possible",
+                    enArabeezy: "mumkin",
                     hint: "Soft opinion or suggestion.",
                     exampleAr: "مُمْكِن نِجَرِّب طَرِيقَة تَانِيَة.",
                     exampleEn: "Maybe we can try another method.",
                 },
-            ],
 
-            extra: [
+                // ===== TOPIC / PROS & CONS =====
                 {
-                    id: "mush_moqne3",
-                    ar: "مِش مُقْنِع",
-                    en: "not convincing",
-                    hint: "Used for ideas/arguments.",
-                    exampleAr: "الحُجَّة هَادِي مِش مُقْنِعَة كْتِير.",
-                    exampleEn: "This argument is not very convincing.",
+                    id: "mawdu3",
+                    ar: "مَوْضُوع",
+                    en: "topic / subject",
+                    enArabeezy: "mawDoo3",
+                    hint: "What you’re talking about.",
+                    exampleAr: "المَوْضوع حَسّاس شْوَي.",
+                    exampleEn: "The topic is a bit sensitive.",
                 },
                 {
-                    id: "ma3gol",
+                    id: "jadal",
+                    ar: "جَدَل",
+                    en: "controversy / heated debate",
+                    enArabeezy: "jadal",
+                    hint: "Argument around a topic.",
+                    exampleAr: "المَوْضوع عَامِل جَدَل عَالسوشال ميديا.",
+                    exampleEn: "The topic is causing controversy on social media.",
+                },
+                {
+                    id: "munaqasha",
+                    ar: "مُنَاقَشَة",
+                    en: "discussion",
+                    enArabeezy: "munaʾasha / munaqasha",
+                    hint: "General word for discussion.",
+                    exampleAr: "المُنَاقَشَة هَادِي هَادِي وْمُحْتَرَمَة.",
+                    exampleEn: "This discussion is calm and respectful.",
+                },
+                {
+                    id: "mawqef",
+                    ar: "مَوْقِف",
+                    en: "position / stance",
+                    enArabeezy: "mawʾef / mawqef",
+                    hint: "Your position on a topic.",
+                    exampleAr: "مَوْقْفِي مِخْتِلِف عَن مَوْقَفَك.",
+                    exampleEn: "My position is different from yours.",
+                },
+                {
+                    id: "min_na7ye_w_min_na7ye",
+                    ar: "مِن ناحِيَة... مِن ناحِيَة تَانِيِة",
+                    en: "on one hand... on the other hand",
+                    enArabeezy: "min nā7yeh... min nā7yeh tānyeh",
+                    hint: "Great frame for a balanced opinion.",
+                    exampleAr:
+                        "مِن ناحِيَة التَّكْلِفَة غالْيَة، مِن ناحِيَة تَانِيِة الجَوْدَة عاليِة.",
+                    exampleEn:
+                        "On one hand the cost is high, on the other hand the quality is high.",
+                },
+                {
+                    id: "miyezeh",
+                    ar: "مَيِّزَة",
+                    en: "advantage",
+                    enArabeezy: "meyyzeh",
+                    hint: "Positive point of something.",
+                    exampleAr: "مِن مَيِّزَات التَّعْلِيم أُونلايْن إِنُّه مَرِن.",
+                    exampleEn: "One advantage of online learning is that it’s flexible.",
+                },
+                {
+                    id: "3ayb",
+                    ar: "عَيْب",
+                    en: "disadvantage / flaw",
+                    enArabeezy: "3eib",
+                    hint: "Here means negative point (not social ‘shame’).",
+                    exampleAr: "أَكْبَر عَيْب إِنُّه بْيِعْزِل النَّاس.",
+                    exampleEn: "The biggest disadvantage is that it isolates people.",
+                },
+                {
+                    id: "ma3qool",
                     ar: "مَعْقُول",
                     en: "reasonable / makes sense",
+                    enArabeezy: "ma3ʾool",
                     hint: "Question: مَعْقُول؟ = really? seriously?",
                     exampleAr: "الفِكْرَة مَعْقُولَة بَسّ بِتِحْتَاج تَنْظِيم.",
                     exampleEn: "The idea is reasonable but needs organization.",
                 },
                 {
-                    id: "bistahil",
-                    ar: "بِسْتَاهِل",
-                    en: "it deserves / worth it",
-                    hint: "Used for effort vs value.",
-                    exampleAr: "الكُورْس طَوِيل بَسّ بِسْتَاهِل.",
-                    exampleEn: "The course is long but worth it.",
+                    id: "mush_moqne3",
+                    ar: "مِش مُقْنِع",
+                    en: "not convincing",
+                    enArabeezy: "mish moqne3",
+                    hint: "Used for ideas / arguments.",
+                    exampleAr: "الحُجَّة هَادِي مِش مُقْنِعَة كْتِير.",
+                    exampleEn: "This argument is not very convincing.",
                 },
                 {
-                    id: "mish_mohim",
-                    ar: "مِش مُهِمّ",
-                    en: "it’s not important",
-                    hint: "Use carefully; can sound a bit direct.",
-                    exampleAr: "هَادَا التَّفْصِيل مِش مُهِمّ هَلَّق.",
-                    exampleEn: "This detail is not important right now.",
+                    id: "monsef",
+                    ar: "مُنْصِف",
+                    en: "fair / just (about judgement)",
+                    enArabeezy: "monsef",
+                    hint: "Balanced, not too harsh or too soft.",
+                    exampleAr: "حُكْمَك مِش مُنْصِف تْجَاهُه.",
+                    exampleEn: "Your judgement isn’t fair towards him.",
                 },
                 {
-                    id: "ahamm_shay",
-                    ar: "أَهَمّ شِي",
-                    en: "the most important thing",
-                    hint: "",
-                    exampleAr: "أَهَمّ شِي تِحِسّ إِنَّك عَم تِتْقَدَّم.",
-                    exampleEn: "The most important thing is that you feel you’re progressing.",
+                    id: "wa2e3i",
+                    ar: "واقِعي",
+                    en: "realistic",
+                    enArabeezy: "wāqe3i",
+                    hint: "Opposite of ‘ideal’.",
+                    exampleAr: "رَأْيَك واقِعي أَكْتَر مِن رَأْيِي.",
+                    exampleEn: "Your opinion is more realistic than mine.",
+                },
+                {
+                    id: "yqetne3",
+                    ar: "يِقْتِنِع",
+                    en: "to be convinced",
+                    enArabeezy: "yeʾtene3 / yeqtane3",
+                    hint: "Someone changes their opinion.",
+                    exampleAr: "صِرْت مُقْتَنِع بَعْد ما شَرَحْتِيلِي.",
+                    exampleEn: "I became convinced after you explained it to me.",
                 },
             ],
-        },
+
+            extra: [
+                {
+                    id: "wejhet_nazar",
+                    ar: "وِجْهَة نَظَر",
+                    en: "point of view",
+                    enArabeezy: "wijhet naZar",
+                    hint: "Synonym for opinion / perspective.",
+                    exampleAr: "إِلُه وِجْهَة نَظَر مِخْتِلْفِة.",
+                    exampleEn: "He has a different point of view.",
+                },
+                {
+                    id: "no2tet_qowa",
+                    ar: "نِقْطَة قُوَّة",
+                    en: "strong point",
+                    enArabeezy: "noʾtet ʾoowa",
+                    hint: "Good point in an argument.",
+                    exampleAr: "هَادِي نِقْطَة قُوَّة فِي حِجَاجَك.",
+                    exampleEn: "This is a strong point in your argument.",
+                },
+                {
+                    id: "no2tet_Da3f",
+                    ar: "نِقْطَة ضَعْف",
+                    en: "weak point",
+                    enArabeezy: "noʾtet Da3f",
+                    hint: "Part that needs work.",
+                    exampleAr: "فِيه نِقْطَة ضَعْف بِالْفِكْرَة.",
+                    exampleEn: "There is a weak point in the idea.",
+                },
+                {
+                    id: "ye7tarem_ra2y",
+                    ar: "يِحْتَرِم رَأْي",
+                    en: "to respect an opinion",
+                    enArabeezy: "ye7tarem ra2y",
+                    hint: "Important in discussions.",
+                    exampleAr: "بِهِمّني تِحْتَرِمُوا آرَاء بَعْض.",
+                    exampleEn: "It’s important that you respect each other’s opinions.",
+                },
+                {
+                    id: "7eyadi",
+                    ar: "حِيادِي",
+                    en: "neutral",
+                    enArabeezy: "7eyādi",
+                    hint: "No strong opinion either way.",
+                    exampleAr: "أَنَا حِيادِي بِهالمَوْضوع.",
+                    exampleEn: "I’m neutral on this topic.",
+                },
+                {
+                    id: "niqash_hadi",
+                    ar: "نِقَاش هَادِي",
+                    en: "calm debate",
+                    enArabeezy: "neʾāsh hādi",
+                    hint: "Discussion without shouting.",
+                    exampleAr: "بِفَضِّل نَعْمِل نِقَاش هَادِي بِلَا صُرَاخ.",
+                    exampleEn: "I prefer to have a calm debate without shouting.",
+                },
+            ],
+        }
+        ,
 
         // ====================================
         // DIALOGUE – LONG & RICH
         // ====================================
         dialogue: {
             lines: [
-                // Scene 1 – After class: talking about the course
                 {
-                    speaker: "Narrator",
-                    ar: "بَعْد الدَّرْس، رُوبَا وَسَلْمَى قَاعِدِين فِي الكَافِيه قُرِيب مِن الجَامْعَة.",
-                    en: "After the lesson, Roba and Salma are sitting in a café near the university.",
+                    "speaker": "Samer",
+                    "ar": "صَباح الخير يا لانا، خَلَّصْتِ البْروجِكْت أونلاين؟",
+                    "en": "Good morning Lana, did you finish the online project?"
                 },
                 {
-                    speaker: "Salma",
-                    ar: "صَرَاحَةً، بَحِبّ هَادَا الكُورْس. الطَّرِيقَة مْرَتَّبَة.",
-                    en: "Honestly, I like this course. The method is well-organized.",
+                    "speaker": "Lana",
+                    "ar": "صَباح النّور يا سامِر. لِسّا شْوَي، بَس بِصَراحَة بَحِسّ التَّعْلِيم أونلاين أَفْضَل مِن الوُجودِي.",
+                    "en": "Good morning Samer. Not yet, but honestly I feel online learning is better than face-to-face."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "أَنَا كَمَان بَحِسّ إنُّه مْفِيد، بَسّ مِش كْتِير بَحِبّ الوَاجِب.",
-                    en: "I also feel it’s useful, but I don’t really like the homework.",
+                    "speaker": "Samer",
+                    "ar": "جَدّ؟ بِرَأْيي العَكْس تَمامًا.",
+                    "en": "Really? In my opinion it’s the complete opposite."
                 },
                 {
-                    speaker: "Salma",
-                    ar: "لِيش؟",
-                    en: "Why?",
+                    "speaker": "Lana",
+                    "ar": "مُمْكِن أَفْهَم ليش؟",
+                    "en": "Can I understand why?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "لأَنُّه أَحْيَانًا طَوِيل، عَشَان هَيْك بَفَضَّل الوَاجِب يِكُون أَقَلّ بَسّ مُسْتَمِرّ.",
-                    en: "Because sometimes it’s long, so I prefer the homework to be less but more regular.",
+                    "speaker": "Samer",
+                    "ar": "بالنِّسْبَة إِلِي، الصَّفوف أونلاين مُمْلِّة، والناس بِتِنْشِتِت كْثير.",
+                    "en": "For me, online classes are boring and people get very distracted."
                 },
                 {
-                    speaker: "Salma",
-                    ar: "بِرَأْيِي، الكَمّ مْنِيح. الوَاجِب الكْتِير بِسَاعِدْنَا نِتْدَرَّب أَكْثَر.",
-                    en: "In my opinion, the amount is fine. Lots of homework helps us practice more.",
+                    "speaker": "Lana",
+                    "ar": "مَزْبوط في ناس بِتِنْشِتِت، بَس بِاعْتِقادي التَّعْلِيم أونلاين مَرِن أَكْتَر.",
+                    "en": "True, some people get distracted, but I believe online learning is more flexible."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مُمْكِن، بَفْهَم رَأْيِك. مَعَك حَقّ، بَسّ شُوفِي جَدْوَلِي مَع الشُّغُل.",
-                    en: "Maybe, I understand your opinion. You’re right, but look at my schedule with work.",
+                    "speaker": "Samer",
+                    "ar": "مُمْكِن أَخْتِلِف مَعَك شْوَي. البَمَاشِر أَسْهَل لِلاسْئِلَة والنِّقاش.",
+                    "en": "I might disagree with you a bit. In-person is easier for questions and discussion."
                 },
                 {
-                    speaker: "Salma",
-                    ar: "مَعْقُول. طَيِّب، شُو أَهَمّ شِي فِي الكُورْس لَك؟",
-                    en: "Makes sense. So, what’s the most important thing in the course for you?",
+                    "speaker": "Lana",
+                    "ar": "مَعَك حَقّ بِالنِّقاش، بَس أَحْيانًا الوَقْت ما بِيِسْمَح نِجي عالجامْعَة.",
+                    "en": "You’re right about discussion, but sometimes we don’t have time to come to campus."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "أَهَمّ شِي عِنْدِي إِنِّي أَحِسّ إِنِّي عَم أِحْكِي أَكْثَر. بَحِبّ لَمَّا المُدَرِّس يِسْأَلْنَا رَأْيِنَا.",
-                    en: "The most important thing for me is to feel that I’m speaking more. I like it when the teacher asks us for our opinion.",
+                    "speaker": "Samer",
+                    "ar": "صَراحَةً مِش مِتْأَكِّد إنّه الكُل عَم يِسْتَفِيد أونلاين.",
+                    "en": "Honestly, I’m not sure everyone benefits from online learning."
                 },
                 {
-                    speaker: "Salma",
-                    ar: "وَالله مَعَك حَقّ. بْوَافِق مَعَك هُون ١٠٠٪.",
-                    en: "Honestly, you’re right. I totally agree with you on this.",
-                },
-
-                // Scene 2 – Friends disagree about a movie
-                {
-                    speaker: "Narrator",
-                    ar: "فِي الوِيكِينْد، رُوبَا وَمَاجِد رَاحُوا عَالسِّينِمَا يِشُوفُوا فِلْم جْدِيد.",
-                    en: "On the weekend, Roba and Majed went to the cinema to see a new movie.",
+                    "speaker": "Lana",
+                    "ar": "مِن ناحِيَة إنّه في ناس ما بِتِرْكِز، مَعَك حَقّ. مِن ناحِيَة تانيِة، في مَيِّزات، مِثْل تَسْجِيل المَحاضَرَة.",
+                    "en": "On one hand, you’re right that some people don’t focus. On the other hand, there are advantages, like recording the lecture."
                 },
                 {
-                    speaker: "Majed",
-                    ar: "بِصَرَاحَة، الفِلْم مُمْتَاز! عَجَبْنِي كْتِير.",
-                    en: "Honestly, the movie was excellent! I liked it a lot.",
+                    "speaker": "Samer",
+                    "ar": "هاي مَيِّزَة مُمْتازَة صَراحَةً.",
+                    "en": "That’s honestly an excellent advantage."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "عَنْ جَدّ؟ أَنَا بَشُوف إنُّه عَادِي.",
-                    en: "Really? I see it as just okay.",
+                    "speaker": "Lana",
+                    "ar": "خَلِّينا نِتْرُك التَّعْلِيم. شُو رَأْيَك بِالسوشال ميديا؟",
+                    "en": "Let’s leave education. What’s your opinion on social media?"
                 },
                 {
-                    speaker: "Majed",
-                    ar: "لِيش عَادِي؟ المَوْضُوع عَمِيق وَالتَّمْثِيل قَوِي.",
-                    en: "Why just okay? The topic is deep and the acting is strong.",
+                    "speaker": "Samer",
+                    "ar": "المَوْضوع هون أَكْثَر خَطِير. بَرْأيي الإِدْمان عَالسوشال ميديا عَيْب كْبير.",
+                    "en": "Here the topic is more serious. In my opinion, addiction to social media is a big problem."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "الفِكْرَة حِلْوَة، بَسّ النِّهَايَة مِش مُقْنِعَة بِنِسْبَة إِلِي.",
-                    en: "The idea is nice, but the ending is not convincing for me.",
+                    "speaker": "Lana",
+                    "ar": "أنا وافْقَك إنّه في إِدْمان، بَس كَمان مِفِيدَة لِلتَّواصُل وَالدِّراسَة.",
+                    "en": "I agree there is addiction, but it’s also useful for communication and study."
                 },
                 {
-                    speaker: "Majed",
-                    ar: "مُمْكِن. بَحِسّ إنُّه النِّهَايَة مَفْتُوحَة، عَشَان هَيْك حَبَّيْتْهَا.",
-                    en: "Maybe. I feel the ending is open, that’s why I liked it.",
+                    "speaker": "Samer",
+                    "ar": "إي، بَس النّاس صارُت تِضَيِّع وَقْت كْثِير، عَشان هيك بَحِسّ الأَثَر أَكْثَر سَلْبِي.",
+                    "en": "Yes, but people started wasting a lot of time, so I feel the effect is more negative."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مَا بْوَافِق كْتِير. بَفَضَّل النِّهَايَات الْوَاضْحَة.",
-                    en: "I don’t really agree. I prefer clear endings.",
+                    "speaker": "Lana",
+                    "ar": "حاسِه إنّك عَم تِبالِغ شْوَي.",
+                    "en": "I feel that you are exaggerating a bit."
                 },
                 {
-                    speaker: "Majed",
-                    ar: "طَيِّب، اِخْتِلَاف الآرَاء مْش مُشْكِلَة.",
-                    en: "Okay, difference of opinions is not a problem.",
+                    "speaker": "Samer",
+                    "ar": "مُمْكِن، بَس شُوف الإِحْصائِيّات عن وَقْت الاسْتِخْدام.",
+                    "en": "Maybe, but look at the statistics about usage time."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "صَح، أَهَمّ شِي كُنَّا مَع بَعْض وَاِنْبَسَطْنَا.",
-                    en: "True, the most important thing is that we were together and had fun.",
-                },
-
-                // Scene 3 – Teacher asks student’s opinion about study plan
-                {
-                    speaker: "Teacher",
-                    ar: "رُوبَا، بِرَأْيِك خُطَّة الدَّرْس هَادِي مْنَاسِبَة إِلِك؟ ثَلَاث مَرَّات فِي الأُسْبُوع؟",
-                    en: "Roba, in your opinion is this lesson plan suitable for you? Three times a week?",
+                    "speaker": "Lana",
+                    "ar": "مَع هيك، ب فکر إنّو المَسْؤوليّة عَالشَّخْص نَفْسُه، هُوَّ يِقَرِّر كَيْف يِسْتَخْدِمها.",
+                    "en": "Even so, I think the responsibility is on the person themselves; they decide how to use it."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "صَرَاحَةً، بَحِسّ ثَلَاث مَرَّات كْتِير شْوَيّ مَع الجَامْعَة.",
-                    en: "Honestly, I feel three times is a bit much with university.",
+                    "speaker": "Samer",
+                    "ar": "حُكْمَك هِنا واقِعي أَكْثَر.",
+                    "en": "Your judgement here is more realistic."
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "مُمْكِن نِخَلِّيه مَرَّتَيْن فِي الأُسْبُوع. مِش مُشْكِلَة.",
-                    en: "We can make it twice a week. No problem.",
+                    "speaker": "Lana",
+                    "ar": "طَيِّب، شُو مَوْقِفَك مِن الشُّغُل مع الدِّراسَة؟",
+                    "en": "Okay, what’s your position on working while studying?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "بَفَكِّر مَرَّتَيْن أَحْسَن. هَيْك بَقْدَر أَحِلّ الوَاجِب بُرَاحَة.",
-                    en: "I think twice is better. This way I can do the homework comfortably.",
+                    "speaker": "Samer",
+                    "ar": "بِرَأْيي إذا الشُّغُل جُزْئِي، مُمْكِن يِكون مُفِيد، لَأَنّه بِعَلِّم مَسْؤوليّة.",
+                    "en": "In my opinion, if the work is part-time, it can be useful because it teaches responsibility."
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "طَبْعًا. أَهَمّ شِي مِن نَاحِيَتِي إنُّه تِحِسِّي إِنِّك عَم تِتْقَدَّم.",
-                    en: "Of course. The most important thing for me is that you feel you are progressing.",
+                    "speaker": "Lana",
+                    "ar": "أنا ما بُوافِقَك مِئِة بِالمِئِة. بَحِسّ إنّه كْثير طَلَب مِن الطّالِب.",
+                    "en": "I don’t fully agree with you. I feel it’s asking too much from the student."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مَعَك حَقّ. شُكْرًا إِنَّك سَأَلْتِنِي رَأْيِي.",
-                    en: "You’re right. Thank you for asking my opinion.",
+                    "speaker": "Samer",
+                    "ar": "صح في عَيْب، لَأَنّه المَجْهود بْيِصِير أَكْثَر، بَس الفائِدَة عَلى المُسْتَقبَل كْبيرَة.",
+                    "en": "True, there is a downside because the effort becomes greater, but the benefit for the future is big."
                 },
-            ],
-        },
+                {
+                    "speaker": "Lana",
+                    "ar": "مِن ناحِيَة الخِبْرَة مَعَك حَقّ، مِن ناحِيَة الصِّحَّة النَّفْسِيّة أنا خايفَة.",
+                    "en": "From the perspective of experience you’re right, from the perspective of mental health I’m worried."
+                },
+                {
+                    "speaker": "Samer",
+                    "ar": "مُمْكِن نِتَّفِق إنّه كُل حَالِة إلْها ظُرُوفها؟",
+                    "en": "Can we agree that each case has its own circumstances?"
+                },
+                {
+                    "speaker": "Lana",
+                    "ar": "إي، هاد حِلّ مُنْصِف. مِش ضَروري نِقْتَنِع نَفْس الرَّأْي.",
+                    "en": "Yes, that’s a fair solution. We don’t have to be convinced of the same opinion."
+                },
+                {
+                    "speaker": "Samer",
+                    "ar": "المُهِم نِحْتَرِم آرَاء بَعْض.",
+                    "en": "The important thing is that we respect each other’s opinions."
+                },
+                {
+                    "speaker": "Lana",
+                    "ar": "صَراحَةً بَسْتَمْتِع لَمّا نِنَاقِش مَواضيع هيك مَعَك.",
+                    "en": "Honestly, I enjoy it when we discuss topics like this together."
+                },
+                {
+                    "speaker": "Samer",
+                    "ar": "وأنا كْمان، الحِوار مَعِك دايمًا هادِي وَمُحْتَرَم.",
+                    "en": "Me too, the conversation with you is always calm and respectful."
+                },
+                {
+                    "speaker": "Lana",
+                    "ar": "يَلّا نِكَمِّل البْروجِكْت قَبْل ما نِدْخُل بِجَدَل تاني!",
+                    "en": "Let’s finish the project before we get into another debate!"
+                },
+                {
+                    "speaker": "Samer",
+                    "ar": "مَزْبوط، نِكَمِّل شُغُل وبَعْدين كَمّالِة حَكِي.",
+                    "en": "True, let’s finish the work and continue talking later."
+                },
+                {
+                    "speaker": "Lana",
+                    "ar": "اتِّفَقْنا.",
+                    "en": "Deal."
+                }
+            ]
+        }
+        ,
 
         // ====================================
         // GRAMMAR
@@ -8365,6 +8663,7 @@ const defaultLessons = {
                     id: "co_core_1",
                     ar: "شَكْوَى",
                     en: "complaint",
+                    enArabeezy: "shakwa",
                     hint: "Formal or semi-formal complaint",
                     exampleAr: "بِفَكِّر أَقَدِّم شَكْوَى رَسْمِيّة.",
                     exampleEn: "I’m thinking of filing an official complaint.",
@@ -8373,6 +8672,7 @@ const defaultLessons = {
                     id: "co_core_2",
                     ar: "يِشْتِكي",
                     en: "to complain",
+                    enArabeezy: "yeshtiki",
                     hint: "Verb: he complains",
                     exampleAr: "ما بِحِبّ أِشْتِكي، بَس في مَشْكِلة جَدِّيّة.",
                     exampleEn: "I don’t like to complain, but there is a serious problem.",
@@ -8381,6 +8681,7 @@ const defaultLessons = {
                     id: "co_core_3",
                     ar: "مَشْكِلة",
                     en: "problem",
+                    enArabeezy: "mashkleh",
                     hint: "General word",
                     exampleAr: "في مَشْكِلة بِالمَوَاصَلات.",
                     exampleEn: "There is a problem with the transportation.",
@@ -8389,6 +8690,7 @@ const defaultLessons = {
                     id: "co_core_4",
                     ar: "مُزْعِج",
                     en: "annoying / disturbing",
+                    enArabeezy: "moz3ej",
                     hint: "Describes noise, behavior, etc.",
                     exampleAr: "الصَّوْت مُزْعِج كْثير.",
                     exampleEn: "The noise is very annoying.",
@@ -8397,6 +8699,7 @@ const defaultLessons = {
                     id: "co_core_5",
                     ar: "مِش مَعْقول",
                     en: "unacceptable / unbelievable",
+                    enArabeezy: "mish ma3ʾool",
                     hint: "Strong reaction to situation",
                     exampleAr: "مِش مَعْقول كُل يوم نِسْتَنّى ساعة.",
                     exampleEn: "It’s not acceptable to wait an hour every day.",
@@ -8405,6 +8708,7 @@ const defaultLessons = {
                     id: "co_core_6",
                     ar: "عنْجَد",
                     en: "really / seriously",
+                    enArabeezy: "3an jad",
                     hint: "Emphasis marker",
                     exampleAr: "عنْجَد الوَضْع صار مُزْعِج.",
                     exampleEn: "Seriously, the situation has become annoying.",
@@ -8413,6 +8717,7 @@ const defaultLessons = {
                     id: "co_core_7",
                     ar: "يِنْرْفِز",
                     en: "to make (someone) nervous / annoyed",
+                    enArabeezy: "yenrfiz",
                     hint: "Colloquial verb",
                     exampleAr: "التَّأْخير بْيِنْرْفِزني.",
                     exampleEn: "The delay makes me nervous.",
@@ -8421,6 +8726,7 @@ const defaultLessons = {
                     id: "co_core_8",
                     ar: "يِتْأَخَّر",
                     en: "to be late / delayed",
+                    enArabeezy: "yitʾaʾkhar",
                     exampleAr: "الباص دايْمًا بْيِتْأَخَّر.",
                     exampleEn: "The bus is always late.",
                 },
@@ -8428,7 +8734,8 @@ const defaultLessons = {
                     id: "co_core_9",
                     ar: "بِضِلّ",
                     en: "keeps / continues",
-                    hint: "Used with problem continuing",
+                    enArabeezy: "bidall",
+                    hint: "Used with a problem continuing",
                     exampleAr: "المَشْكِلة بِضِلّ تِتْكَرَّر.",
                     exampleEn: "The problem keeps repeating.",
                 },
@@ -8436,6 +8743,7 @@ const defaultLessons = {
                     id: "co_core_10",
                     ar: "مِن حَقّي",
                     en: "it’s my right",
+                    enArabeezy: "min 7aqqi",
                     hint: "Used in complaints",
                     exampleAr: "مِن حَقّي أوْصَل عَالوَقْت.",
                     exampleEn: "It’s my right to arrive on time.",
@@ -8444,6 +8752,7 @@ const defaultLessons = {
                     id: "co_core_11",
                     ar: "خِدْمَة",
                     en: "service",
+                    enArabeezy: "khidmeh",
                     exampleAr: "الخِدْمَة هون مِش عَالمُسْتَوى.",
                     exampleEn: "The service here is not at the right level.",
                 },
@@ -8451,6 +8760,7 @@ const defaultLessons = {
                     id: "co_core_12",
                     ar: "مُسْتَوى",
                     en: "level / standard",
+                    enArabeezy: "mostawa",
                     exampleAr: "مُسْتَوى النَّظافَة واطي.",
                     exampleEn: "The level of cleanliness is low.",
                 },
@@ -8458,6 +8768,7 @@ const defaultLessons = {
                     id: "co_core_13",
                     ar: "مَسؤول",
                     en: "person in charge",
+                    enArabeezy: "masʾool",
                     hint: "Manager / responsible person",
                     exampleAr: "بَحِبّ أحْكي مَع المَسؤول لو سَمَحْت.",
                     exampleEn: "I’d like to speak to the person in charge, please.",
@@ -8466,6 +8777,7 @@ const defaultLessons = {
                     id: "co_core_14",
                     ar: "مُوَظَّف الاسْتِقْبال",
                     en: "receptionist",
+                    enArabeezy: "mwaZZaf il-isteʾbāl",
                     exampleAr: "حَكِيت مَع مُوَظَّف الاسْتِقْبال عَن المَشْكِلة.",
                     exampleEn: "I spoke with the receptionist about the problem.",
                 },
@@ -8473,6 +8785,7 @@ const defaultLessons = {
                     id: "co_core_15",
                     ar: "يِعالِج المَشْكِلة",
                     en: "to handle / fix the problem",
+                    enArabeezy: "ye3ālej il-mashkleh",
                     exampleAr: "لازِم حدا يِعالِج المَشْكِلة سَريع.",
                     exampleEn: "Someone must handle the problem quickly.",
                 },
@@ -8480,6 +8793,7 @@ const defaultLessons = {
                     id: "co_core_16",
                     ar: "يِحِلّ المَشْكِلة",
                     en: "to solve the problem",
+                    enArabeezy: "ye7ell il-mashkleh",
                     exampleAr: "إن شاء الله تِحِلّوا المَشْكِلة قَرِيب.",
                     exampleEn: "Hopefully you will solve the problem soon.",
                 },
@@ -8487,6 +8801,7 @@ const defaultLessons = {
                     id: "co_core_17",
                     ar: "يِوَعِد",
                     en: "to promise",
+                    enArabeezy: "yewa3ed",
                     exampleAr: "وَعَدُونا يِحِلّوا المَشْكِلة.",
                     exampleEn: "They promised us they would solve the problem.",
                 },
@@ -8494,6 +8809,7 @@ const defaultLessons = {
                     id: "co_core_18",
                     ar: "يِرُدّ",
                     en: "to reply / respond",
+                    enArabeezy: "yerodd",
                     exampleAr: "المَكْتَب ما رَدّ عَالشَّكْوَى.",
                     exampleEn: "The office didn’t respond to the complaint.",
                 },
@@ -8501,6 +8817,7 @@ const defaultLessons = {
                     id: "co_core_19",
                     ar: "يِعْتِذِر",
                     en: "to apologize",
+                    enArabeezy: "ye3tezr",
                     exampleAr: "المُوَظَّف اِعْتَذَر عَالتَّأْخير.",
                     exampleEn: "The employee apologized for the delay.",
                 },
@@ -8508,6 +8825,7 @@ const defaultLessons = {
                     id: "co_core_20",
                     ar: "عُذْر",
                     en: "excuse",
+                    enArabeezy: "3ozr",
                     exampleAr: "العُذْر مَش مَقْنِع.",
                     exampleEn: "The excuse is not convincing.",
                 },
@@ -8515,6 +8833,7 @@ const defaultLessons = {
                     id: "co_core_21",
                     ar: "مَقْنِع",
                     en: "convincing",
+                    enArabeezy: "maqne3",
                     exampleAr: "التَّبْرير ما كان مَقْنِع.",
                     exampleEn: "The explanation wasn’t convincing.",
                 },
@@ -8522,6 +8841,7 @@ const defaultLessons = {
                     id: "co_core_22",
                     ar: "يِتْجاهَل",
                     en: "to ignore",
+                    enArabeezy: "yitjāhal",
                     exampleAr: "حاسَّة إنّهم عَم يِتْجاهَلوا المَشْكِلة.",
                     exampleEn: "I feel they are ignoring the problem.",
                 },
@@ -8529,6 +8849,7 @@ const defaultLessons = {
                     id: "co_core_23",
                     ar: "مِسْتَمِرّ",
                     en: "continuous / ongoing",
+                    enArabeezy: "mestamer",
                     exampleAr: "الصَّوْت المُزْعِج مِسْتَمِرّ لَحد هَلَّق.",
                     exampleEn: "The annoying noise is still ongoing.",
                 },
@@ -8536,6 +8857,7 @@ const defaultLessons = {
                     id: "co_core_24",
                     ar: "تِكْرار",
                     en: "repetition",
+                    enArabeezy: "tekraar",
                     exampleAr: "تِكْرار المَشْكِلة خَلّاني أِشْتِكي.",
                     exampleEn: "The repetition of the problem made me complain.",
                 },
@@ -8543,6 +8865,7 @@ const defaultLessons = {
                     id: "co_core_25",
                     ar: "مَرَّة واحْدَة / أوَّل مَرّة",
                     en: "one time / first time",
+                    enArabeezy: "marra wa7deh / awwal marra",
                     exampleAr: "لو مَرَّة واحْدَة مَش مُشْكِلة، بَس هادا تِكْرار.",
                     exampleEn: "If it were one time it’s fine, but this is repeated.",
                 },
@@ -8550,6 +8873,7 @@ const defaultLessons = {
                     id: "co_core_26",
                     ar: "مَع إحْتِرامي",
                     en: "with all respect",
+                    enArabeezy: "ma3 e7terāmi",
                     hint: "Softener before criticism",
                     exampleAr: "مَع إحْتِرامي، الخِدْمَة هون ضَعيفَة.",
                     exampleEn: "With all respect, the service here is weak.",
@@ -8558,6 +8882,7 @@ const defaultLessons = {
                     id: "co_core_27",
                     ar: "ما قَصْدي أِزَعِّل حَدا",
                     en: "I don’t mean to upset anyone",
+                    enArabeezy: "ma ʾasdi aza33el 7ada",
                     exampleAr: "ما قَصْدي أِزَعِّل حَدا بَس الوَضْع مِش مَقْبول.",
                     exampleEn: "I don’t mean to upset anyone, but the situation is not acceptable.",
                 },
@@ -8565,6 +8890,7 @@ const defaultLessons = {
                     id: "co_core_28",
                     ar: "مُمْكِن تِعْمِلوا شِي؟",
                     en: "can you do something?",
+                    enArabeezy: "mumkin t3mlo shi?",
                     hint: "Request for action",
                     exampleAr: "المَشْكِلة مِسْتَمِرّة، مُمْكِن تِعْمِلوا شِي؟",
                     exampleEn: "The problem is ongoing, can you do something?",
@@ -8573,6 +8899,7 @@ const defaultLessons = {
                     id: "co_core_29",
                     ar: "بِتْمَنّى تِلْقوا حَلّ",
                     en: "I hope you find a solution",
+                    enArabeezy: "bitmanna telʾo 7all",
                     exampleAr: "بِتْمَنّى تِلْقوا حَلّ قَبْل الاسْبوع الجّاي.",
                     exampleEn: "I hope you find a solution before next week.",
                 },
@@ -8580,7 +8907,8 @@ const defaultLessons = {
                     id: "co_core_30",
                     ar: "ما إلِي خِلِق",
                     en: "I have no energy / I’m fed up",
-                    hint: "Colloquial, express frustration",
+                    enArabeezy: "ma eli khileʾ",
+                    hint: "Colloquial, expresses frustration",
                     exampleAr: "عنْجَد ما إلِي خِلِق أِتْعامَل مَع هالْمَوْضوع بَعْد.",
                     exampleEn: "Honestly I have no energy to deal with this any more.",
                 },
@@ -8588,6 +8916,7 @@ const defaultLessons = {
                     id: "co_core_31",
                     ar: "يِصْبِر",
                     en: "to be patient",
+                    enArabeezy: "yesbor",
                     exampleAr: "صَبَرْنا شَهِر كَامِل، بَس المَشْكِلة كَمانها.",
                     exampleEn: "We were patient for a whole month but the problem is still there.",
                 },
@@ -8595,6 +8924,7 @@ const defaultLessons = {
                     id: "co_core_32",
                     ar: "يِشَكِّر",
                     en: "to thank",
+                    enArabeezy: "yeshakkir",
                     exampleAr: "بِدّي أِشَكِّرَك عَالتَّجاوُب.",
                     exampleEn: "I want to thank you for responding.",
                 },
@@ -8602,6 +8932,7 @@ const defaultLessons = {
                     id: "co_core_33",
                     ar: "يِتْفاهَم",
                     en: "to understand each other",
+                    enArabeezy: "yitfāham",
                     exampleAr: "هامّ نِتْفاهَم عَحَلّ وَسَط.",
                     exampleEn: "It’s important that we agree on a middle solution.",
                 },
@@ -8609,6 +8940,7 @@ const defaultLessons = {
                     id: "co_core_34",
                     ar: "حَلّ وَسَط",
                     en: "compromise / middle solution",
+                    enArabeezy: "7all wasaT",
                     exampleAr: "مُمْكِن نِلاقِي حَلّ وَسَط يِرْضي الجِهْتَيْن.",
                     exampleEn: "We can find a compromise that satisfies both sides.",
                 },
@@ -8616,15 +8948,18 @@ const defaultLessons = {
                     id: "co_core_35",
                     ar: "مُعامَلَة",
                     en: "treatment (how they treat you)",
+                    enArabeezy: "mo3āmaleh",
                     exampleAr: "مُعامَلَة المُوَظَّفين إِلَنا كانِت مُحْتَرَمَة.",
                     exampleEn: "The way the employees treated us was respectful.",
                 },
             ],
+
             extra: [
                 {
                     id: "co_extra_1",
                     ar: "قِسْم شَكَاوِي",
                     en: "complaints department",
+                    enArabeezy: "ʾesm shakaawi",
                     exampleAr: "في قِسْم شَكَاوِي بِالإِدارَة.",
                     exampleEn: "There is a complaints department in the administration.",
                 },
@@ -8632,6 +8967,7 @@ const defaultLessons = {
                     id: "co_extra_2",
                     ar: "رَدّ رَسْمِي",
                     en: "official reply",
+                    enArabeezy: "radd rasmi",
                     exampleAr: "اسْتَنّينا رَدّ رَسْمِي ومَا إجا.",
                     exampleEn: "We waited for an official reply and it didn’t come.",
                 },
@@ -8639,6 +8975,7 @@ const defaultLessons = {
                     id: "co_extra_3",
                     ar: "حِجّة",
                     en: "pretext / lame excuse",
+                    enArabeezy: "7ejjeh",
                     exampleAr: "حاسِّة إنّه هادا كُلّه حِجّة.",
                     exampleEn: "I feel like this is all just an excuse.",
                 },
@@ -8646,6 +8983,7 @@ const defaultLessons = {
                     id: "co_extra_4",
                     ar: "مُتابَعَة",
                     en: "follow-up",
+                    enArabeezy: "motābaʿa",
                     exampleAr: "بِدّنا مُتابَعَة عَالمَشْكِلة مِش بَس وَعْد.",
                     exampleEn: "We want follow-up on the problem, not just a promise.",
                 },
@@ -8653,176 +8991,179 @@ const defaultLessons = {
                     id: "co_extra_5",
                     ar: "تَعْويض",
                     en: "compensation",
+                    enArabeezy: "ta3weeD",
                     exampleAr: "طَلَبْنا تَعْويض بَسِيط عَالخَسارَة.",
                     exampleEn: "We asked for a small compensation for the loss.",
                 },
             ],
-        },
+        }
+        ,
 
         dialogue: {
             lines: [
                 {
-                    speaker: "A",
-                    ar: "يا مِنى، عنْجَد ما إلِي خِلِق اليوم.",
-                    en: "Mina, I honestly have no energy today.",
+                    "speaker": "Rina",
+                    "ar": "يا مِنى، عنْجَد ما إلِي خِلِق اليوم.",
+                    "en": "Mina, I honestly have no energy today."
                 },
                 {
-                    speaker: "B",
-                    ar: "شُو صار يا رِنا؟ شَكْلِك مْعَصَّبِة.",
-                    en: "What happened, Rina? You look upset.",
+                    "speaker": "Mina",
+                    "ar": "شُو صار يا رِنا؟ شَكْلِك مْعَصَّبِة.",
+                    "en": "What happened, Rina? You look upset."
                 },
                 {
-                    speaker: "A",
-                    ar: "الباص للجامْعَة تَقريبًا كُل يوم بْيِتْأَخَّر نُصّ ساعة أَو أَكْثَر.",
-                    en: "The bus to the university is almost every day half an hour late or more.",
+                    "speaker": "Rina",
+                    "ar": "الباص للجامْعَة تَقريبًا كُل يوم بْيِتْأَخَّر نُصّ ساعة أَو أَكْثَر.",
+                    "en": "The bus to the university is almost every day half an hour late or more."
                 },
                 {
-                    speaker: "B",
-                    ar: "إي بَعْرِف، عنْجَد مُزْعِج.",
-                    en: "Yeah, I know, it’s really annoying.",
+                    "speaker": "Mina",
+                    "ar": "إي بَعْرِف، عنْجَد مُزْعِج.",
+                    "en": "Yeah, I know, it’s really annoying."
                 },
                 {
-                    speaker: "A",
-                    ar: "مِش مَعْقول نِدْفَع اِشْتِراك وِنْضَلّ نِسْتَنّى عَالفاضي.",
-                    en: "It’s not acceptable that we pay a subscription and keep waiting for nothing.",
+                    "speaker": "Rina",
+                    "ar": "مِش مَعْقول نِدْفَع اِشْتِراك وِنْضَلّ نِسْتَنّى عَالفاضي.",
+                    "en": "It’s not acceptable that we pay a subscription and keep waiting for nothing."
                 },
                 {
-                    speaker: "B",
-                    ar: "حاوَلْتي تِشْتِكي لَحَدّا؟",
-                    en: "Have you tried complaining to someone?",
+                    "speaker": "Mina",
+                    "ar": "حاوَلْتي تِشْتِكي لَحَدّا؟",
+                    "en": "Have you tried complaining to someone?"
                 },
                 {
-                    speaker: "A",
-                    ar: "مَرّة حَكَيْت مَع السّواق، بَس حَكى إنّه الزَّحْمِة مِش بِيِدُه.",
-                    en: "Once I talked to the driver, but he said the traffic is not in his hands.",
+                    "speaker": "Rina",
+                    "ar": "مَرّة حَكَيْت مَع السّواق، بَس حَكى إنّه الزَّحْمِة مِش بِيِدُه.",
+                    "en": "Once I talked to the driver, but he said the traffic is not in his hands."
                 },
                 {
-                    speaker: "B",
-                    ar: "مَع إحْتِرامي إلُه، بَس المَشْكِلة مِسْتَمِرّة.",
-                    en: "With all respect to him, but the problem is continuing.",
+                    "speaker": "Mina",
+                    "ar": "مَع إحْتِرامي إلُه، بَس المَشْكِلة مِسْتَمِرّة.",
+                    "en": "With all respect to him, but the problem is continuing."
                 },
                 {
-                    speaker: "A",
-                    ar: "صَحّ. تِكْرار المَشْكِلة هوّي إلّي بْيِنْرْفِز.",
-                    en: "Right. The repetition of the problem is what really gets on my nerves.",
+                    "speaker": "Rina",
+                    "ar": "صَحّ. تِكْرار المَشْكِلة هوّي إلّي بْيِنْرْفِز.",
+                    "en": "Right. The repetition of the problem is what really gets on my nerves."
                 },
                 {
-                    speaker: "B",
-                    ar: "مِن حَقِّك توْصَلي عَالوَقْت. ليش ما نِحْكي مَع مُوَظَّف الاسْتِقْبال بِالشَّرِكِة؟",
-                    en: "It’s your right to arrive on time. Why don’t we talk to the receptionist at the company?",
+                    "speaker": "Mina",
+                    "ar": "مِن حَقِّك توْصَلي عَالوَقْت. ليش ما نِحْكي مَع مُوَظَّف الاسْتِقْبال بِالشَّرِكِة؟",
+                    "en": "It’s your right to arrive on time. Why don’t we talk to the receptionist at the company?"
                 },
                 {
-                    speaker: "A",
-                    ar: "بِخاف يِفَكْرونا عَم نِبالِغ.",
-                    en: "I’m afraid they’ll think we’re exaggerating.",
+                    "speaker": "Rina",
+                    "ar": "بِخاف يِفَكْرونا عَم نِبالِغ.",
+                    "en": "I’m afraid they’ll think we’re exaggerating."
                 },
                 {
-                    speaker: "B",
-                    ar: "لا، إذا حَكَيْتي بِهُدُوء وَأَدَب ما حَدا يِزْعَل.",
-                    en: "No, if you speak calmly and politely, no one will get upset.",
+                    "speaker": "Mina",
+                    "ar": "لا، إذا حَكَيْتي بِهُدُوء وَأَدَب ما حَدا يِزْعَل.",
+                    "en": "No, if you speak calmly and politely, no one will get upset."
                 },
                 {
-                    speaker: "A",
-                    ar: "طَيِّب، تِجي مَعِي؟",
-                    en: "Okay, will you come with me?",
+                    "speaker": "Rina",
+                    "ar": "طَيِّب، تِجي مَعِي؟",
+                    "en": "Okay, will you come with me?"
                 },
                 {
-                    speaker: "B",
-                    ar: "أكيد، يَلّا نِنْزِل عَالمَكْتَب.",
-                    en: "Of course, let’s go down to the office.",
+                    "speaker": "Mina",
+                    "ar": "أكيد، يَلّا نِنْزِل عَالمَكْتَب.",
+                    "en": "Of course, let’s go down to the office."
                 },
                 {
-                    speaker: "Receptionist",
-                    ar: "مَسّا الخير، تْفَضَّلوا.",
-                    en: "Good afternoon, welcome.",
+                    "speaker": "Receptionist",
+                    "ar": "مَسّا الخير، تْفَضَّلوا.",
+                    "en": "Good afternoon, welcome."
                 },
                 {
-                    speaker: "A",
-                    ar: "مَسّا النّور. مَع إحْتِرامي، في مَشْكِلة حابّين نِحْكي فيها.",
-                    en: "Good afternoon. With all respect, there is a problem we’d like to talk about.",
+                    "speaker": "Rina",
+                    "ar": "مَسّا النّور. مَع إحْتِرامي، في مَشْكِلة حابّين نِحْكي فيها.",
+                    "en": "Good afternoon. With all respect, there is a problem we’d like to talk about."
                 },
                 {
-                    speaker: "Receptionist",
-                    ar: "تْفَضَّلوا إحْكوا، شُو في؟",
-                    en: "Please go ahead, what’s going on?",
+                    "speaker": "Receptionist",
+                    "ar": "تْفَضَّلوا إحْكوا، شُو في؟",
+                    "en": "Please go ahead, what’s going on?"
                 },
                 {
-                    speaker: "A",
-                    ar: "الباص تَبَع جامْعَة غالِبًا بْيِتْأَخَّر نُصّ ساعة، وأَحْيانًا أَكْتَر.",
-                    en: "The university bus usually is thirty minutes late, and sometimes more.",
+                    "speaker": "Rina",
+                    "ar": "الباص تَبَع جامْعَة غالِبًا بْيِتْأَخَّر نُصّ ساعة، وأَحْيانًا أَكْتَر.",
+                    "en": "The university bus usually is thirty minutes late, and sometimes more."
                 },
                 {
-                    speaker: "B",
-                    ar: "والمَشْكِلة مِش مَرَّة واحْدَة، هادا تِكْرار يَومِي تَقريبًا.",
-                    en: "And the problem isn’t just once, this is almost daily repetition.",
+                    "speaker": "Mina",
+                    "ar": "والمَشْكِلة مِش مَرَّة واحْدَة، هادا تِكْرار يَومِي تَقريبًا.",
+                    "en": "And the problem isn’t just once, this is almost daily repetition."
                 },
                 {
-                    speaker: "A",
-                    ar: "عنْجَد صار الوَضْع مُزْعِج، ومِن حَقّنا نوْصَل عَمحاضْراتنا عَالوَقْت.",
-                    en: "It really has become annoying, and it’s our right to arrive to our lectures on time.",
+                    "speaker": "Rina",
+                    "ar": "عنْجَد صار الوَضْع مُزْعِج، ومِن حَقّنا نوْصَل عَمحاضْراتنا عَالوَقْت.",
+                    "en": "It really has become annoying, and it’s our right to arrive to our lectures on time."
                 },
                 {
-                    speaker: "Receptionist",
-                    ar: "مِنْفْهَم عَلَيْكُم، بِصَراحَة الزَّحْمِة قَوِيّة هالأيّام.",
-                    en: "We understand you; honestly, the traffic is heavy these days.",
+                    "speaker": "Receptionist",
+                    "ar": "مِنْفْهَم عَلَيْكُم، بِصَراحَة الزَّحْمِة قَوِيّة هالأيّام.",
+                    "en": "We understand you; honestly, the traffic is heavy these days."
                 },
                 {
-                    speaker: "A",
-                    ar: "مُتَفَهِّمَة الزَّحْمِة، بَس العُذْر مَش مَقْنِع لَمّا المَشْكِلة مِسْتَمِرّة.",
-                    en: "I understand the traffic, but the excuse is not convincing when the problem is ongoing.",
+                    "speaker": "Rina",
+                    "ar": "مُتَفَهِّمَة الزَّحْمِة، بَس العُذْر مَش مَقْنِع لَمّا المَشْكِلة مِسْتَمِرّة.",
+                    "en": "I understand the traffic, but the excuse is not convincing when the problem is ongoing."
                 },
                 {
-                    speaker: "B",
-                    ar: "مُمْكِن تِعْمِلوا شِي عَالمَوْعِد؟ تَطْلَع الباصات أَبْكَر شْوَي؟",
-                    en: "Can you do something about the schedule? Can the buses leave a bit earlier?",
+                    "speaker": "Mina",
+                    "ar": "مُمْكِن تِعْمِلوا شِي عَالمَوْعِد؟ تَطْلَع الباصات أَبْكَر شْوَي؟",
+                    "en": "Can you do something about the schedule? Can the buses leave a bit earlier?"
                 },
                 {
-                    speaker: "Receptionist",
-                    ar: "إحْنا مِرْتَبِطين بِوَقْت مُحَدَّد، بَس بِنْقِل الحَكِي لَلمَسؤول.",
-                    en: "We are tied to a fixed time, but we will pass your words to the person in charge.",
+                    "speaker": "Receptionist",
+                    "ar": "إحْنا مِرْتَبِطين بِوَقْت مُحَدَّد، بَس بِنْقِل الحَكِي لَلمَسؤول.",
+                    "en": "We are tied to a fixed time, but we will pass your words to the person in charge."
                 },
                 {
-                    speaker: "A",
-                    ar: "صَبَرْنا شَهِر كَامِل، وبِتْمَنّى هالمَرّة يكون في مُتابَعَة حَقِيقِيّة.",
-                    en: "We’ve been patient for a whole month, and I hope this time there will be real follow-up.",
+                    "speaker": "Rina",
+                    "ar": "صَبَرْنا شَهِر كَامِل، وبِتْمَنّى هالمَرّة يكون في مُتابَعَة حَقِيقِيّة.",
+                    "en": "We’ve been patient for a whole month, and I hope this time there will be real follow-up."
                 },
                 {
-                    speaker: "Receptionist",
-                    ar: "عَن جَدّ إحْنا آسْفِين عَالإِزْعاج، وبنِوَعِد نِراجِع الجَدْوَل.",
-                    en: "We are really sorry for the inconvenience, and we promise to review the schedule.",
+                    "speaker": "Receptionist",
+                    "ar": "عَن جَدّ إحْنا آسْفِين عَالإِزْعاج، وبنِوَعِد نِراجِع الجَدْوَل.",
+                    "en": "We are really sorry for the inconvenience, and we promise to review the schedule."
                 },
                 {
-                    speaker: "B",
-                    ar: "شُكْرًا عَالتَّجاوُب، وبِتْمَنّى تِلْقوا حَلّ في أَقْرَب وَقْت.",
-                    en: "Thank you for responding, and I hope you find a solution as soon as possible.",
+                    "speaker": "Mina",
+                    "ar": "شُكْرًا عَالتَّجاوُب، وبِتْمَنّى تِلْقوا حَلّ في أَقْرَب وَقْت.",
+                    "en": "Thank you for responding, and I hope you find a solution as soon as possible."
                 },
                 {
-                    speaker: "A",
-                    ar: "ما قَصْدي أِزَعِّل حَدا، بَس الجِدّ الوَضْع مِش مَعْقول.",
-                    en: "I don’t mean to upset anyone, but honestly the situation is unacceptable.",
+                    "speaker": "Rina",
+                    "ar": "ما قَصْدي أِزَعِّل حَدا، بَس الجِدّ الوَضْع مِش مَعْقول.",
+                    "en": "I don’t mean to upset anyone, but honestly the situation is unacceptable."
                 },
                 {
-                    speaker: "Receptionist",
-                    ar: "لا، حَكْيكُم مَفْهُوم، وهَادا حَقِّكُم. نِشَكِّرُكُم إنّكم حَكَيْتوا بِأَدَب.",
-                    en: "No, your words are understood, and this is your right. We thank you for speaking politely.",
+                    "speaker": "Receptionist",
+                    "ar": "لا، حَكْيكُم مَفْهُوم، وهَادا حَقِّكُم. نِشَكِّرُكُم إنّكم حَكَيْتوا بِأَدَب.",
+                    "en": "No, your words are understood, and this is your right. We thank you for speaking politely."
                 },
                 {
-                    speaker: "A",
-                    ar: "إن شاء الله نِتْفاهَم عَحَلّ وَسَط يِرْضي الكِلّ.",
-                    en: "Hopefully we can agree on a compromise that satisfies everyone.",
+                    "speaker": "Rina",
+                    "ar": "إن شاء الله نِتْفاهَم عَحَلّ وَسَط يِرْضي الكِلّ.",
+                    "en": "Hopefully we can agree on a compromise that satisfies everyone."
                 },
                 {
-                    speaker: "B",
-                    ar: "يَلّا رِنا، نِرْجَع عَالمَحاضْرَة قَبْل ما نِتْأَخَّر مَرّة تانيِة.",
-                    en: "Come on Rina, let’s go back to the lecture before we’re late again.",
+                    "speaker": "Mina",
+                    "ar": "يَلّا رِنا، نِرْجَع عَالمَحاضْرَة قَبْل ما نِتْأَخَّر مَرّة تانيِة.",
+                    "en": "Come on Rina, let’s go back to the lecture before we’re late again."
                 },
                 {
-                    speaker: "A",
-                    ar: "مَزْبوط، يِلّا نِمْشي.",
-                    en: "True, let’s go.",
-                },
-            ],
-        },
+                    "speaker": "Rina",
+                    "ar": "مَزْبوط، يِلّا نِمْشي.",
+                    "en": "True, let’s go."
+                }
+            ]
+        }
+        ,
 
         grammar: [
             {
@@ -8968,6 +9309,7 @@ const defaultLessons = {
                     id: "baddi",
                     ar: "بَدّي",
                     en: "I want / I’m going to (intention)",
+                    enArabeezy: "baddi",
                     hint:
                         "Very common for simple plans: بَدّي أَدْرُس = I want to / I’m going to study.",
                     exampleAr: "بَدّي أَدْرُس بُكْرَا بَعْد الدَّرْس.",
@@ -8977,6 +9319,7 @@ const defaultLessons = {
                     id: "ra7",
                     ar: "رَح",
                     en: "will (future marker)",
+                    enArabeezy: "ra7",
                     hint:
                         "Used before the verb for planned/expected future: رَح أُسَافِر = I will travel.",
                     exampleAr: "بُكْرَا رَح أُصْحَى بَكِّير.",
@@ -8986,6 +9329,7 @@ const defaultLessons = {
                     id: "nawi",
                     ar: "نَاوِي",
                     en: "I intend / I’m planning (inside myself)",
+                    enArabeezy: "nawi",
                     hint:
                         "Masc: نَاوِي، fem: نَاوْيَة. Use with ‘إِنِّي’: نَاوِي إِنِّي…",
                     exampleAr: "أَنَا نَاوْيَة إِنِّي أُكَمِّل دِرَاسَة عَرَبِي.",
@@ -8995,6 +9339,7 @@ const defaultLessons = {
                     id: "mukhattat",
                     ar: "مُخَطِّط",
                     en: "planning / I have a plan",
+                    enArabeezy: "mukhattet",
                     hint:
                         "Masc: مُخَطِّط، fem: مُخَطِّطَة. Stronger, more organized than نَاوِي.",
                     exampleAr: "مُخَطِّط إِنِّي أُسَافِر بَعْد سَنَة.",
@@ -9004,6 +9349,7 @@ const defaultLessons = {
                     id: "7abeb",
                     ar: "حَابِب",
                     en: "I’d like / I feel like (want in a soft way)",
+                    enArabeezy: "7abeb",
                     hint:
                         "Masc: حَابِب، fem: حَابْبَة. Softer than بَدّي.",
                     exampleAr: "حَابْبَة أَجَرِّب شِي جْدِيد هَالسَّنَة.",
@@ -9013,6 +9359,7 @@ const defaultLessons = {
                     id: "lazem",
                     ar: "لَازِم",
                     en: "must / have to",
+                    enArabeezy: "lazem",
                     hint:
                         "Used for obligations, plans you ‘have to’ do.",
                     exampleAr: "لَازِم أُخَلِّص الوَاجِب قَبْل الجُومْعَة.",
@@ -9024,6 +9371,7 @@ const defaultLessons = {
                     id: "elyoom",
                     ar: "اليَوْم",
                     en: "today",
+                    enArabeezy: "elyoom",
                     hint: "",
                     exampleAr: "اليَوْم مَا عِنْدِي خُطَط كْتِير.",
                     exampleEn: "I don’t have many plans today.",
@@ -9032,6 +9380,7 @@ const defaultLessons = {
                     id: "bukra",
                     ar: "بُكْرَا",
                     en: "tomorrow",
+                    enArabeezy: "bukra",
                     hint: "",
                     exampleAr: "بُكْرَا رَح أَقَابِل صَدِيقْتِي.",
                     exampleEn: "Tomorrow I will meet my friend.",
@@ -9040,6 +9389,7 @@ const defaultLessons = {
                     id: "ba3d_bukra",
                     ar: "بَعْد بُكْرَا",
                     en: "the day after tomorrow",
+                    enArabeezy: "ba3d bukra",
                     hint: "",
                     exampleAr: "بَعْد بُكْرَا بَدّي أُرَتِّب غُرْفْتِي.",
                     exampleEn: "The day after tomorrow I’m going to tidy my room.",
@@ -9048,6 +9398,7 @@ const defaultLessons = {
                     id: "hal_usbou3",
                     ar: "هَالْأُسْبُوع",
                     en: "this week",
+                    enArabeezy: "hal usbou3",
                     hint: "",
                     exampleAr: "هَالْأُسْبُوع عِنْدِي مِشَارِيع كْتِير.",
                     exampleEn: "This week I have many projects.",
@@ -9056,6 +9407,7 @@ const defaultLessons = {
                     id: "jاي_ousbou3",
                     ar: "الأُسْبُوع الجَّاي",
                     en: "next week",
+                    enArabeezy: "il usbou3 il jay",
                     hint: "",
                     exampleAr: "الأُسْبُوع الجَّاي رَح نِبْدَى وَحْدَة جْدِيدَة.",
                     exampleEn: "Next week we will start a new unit.",
@@ -9064,6 +9416,7 @@ const defaultLessons = {
                     id: "shahr_jاي",
                     ar: "الشَّهِر الجَّاي",
                     en: "next month",
+                    enArabeezy: "ish-shahr il jay",
                     hint: "",
                     exampleAr: "الشَّهِر الجَّاي نَاوِي أَبْلِش رِيَاضَة.",
                     exampleEn: "Next month I intend to start doing exercise.",
@@ -9072,25 +9425,30 @@ const defaultLessons = {
                     id: "hal_saneh",
                     ar: "هَالسَّنَة",
                     en: "this year",
+                    enArabeezy: "hal saneh",
                     hint: "",
-                    exampleAr: "هَالسَّنَة حَابِب أُسَافِر مَرَّة وَاحْدَة عَالأَقَلّ.",
+                    exampleAr:
+                        "هَالسَّنَة حَابِب أُسَافِر مَرَّة وَاحْدَة عَالأَقَلّ.",
                     exampleEn: "This year I’d like to travel at least once.",
                 },
                 {
                     id: "saneh_jayyeh",
                     ar: "السَّنَة الجَّاي",
                     en: "next year",
+                    enArabeezy: "is-saneh il jayyeh",
                     hint: "",
-                    exampleAr: "السَّنَة الجَّاي مُخَطِّط أَكْمِّل مُسْتَوَى أَعْلَى.",
+                    exampleAr:
+                        "السَّنَة الجَّاي مُخَطِّط أَكْمِّل مُسْتَوَى أَعْلَى.",
                     exampleEn: "Next year I’m planning to complete a higher level.",
                 },
                 {
                     id: "ba3deen",
                     ar: "بَعْدِين",
                     en: "later / after that",
-                    hint:
-                        "Useful connector for future sequences.",
-                    exampleAr: "بَدّي أَدْرُس شْوَيّ، بَعْدِين أَتْفَرَّج عَلَى فِلْم.",
+                    enArabeezy: "ba3deen",
+                    hint: "Useful connector for future sequences.",
+                    exampleAr:
+                        "بَدّي أَدْرُس شْوَيّ، بَعْدِين أَتْفَرَّج عَلَى فِلْم.",
                     exampleEn: "I’m going to study a bit, then watch a movie.",
                 },
 
@@ -9099,6 +9457,7 @@ const defaultLessons = {
                     id: "mashrou3",
                     ar: "مَشْرُوع",
                     en: "project",
+                    enArabeezy: "mashrou3",
                     hint: "Study or work project.",
                     exampleAr: "عِنْدِي مَشْرُوع كْبِير لِلنِّهَاية السَّنَة.",
                     exampleEn: "I have a big project for the end of the year.",
@@ -9107,6 +9466,7 @@ const defaultLessons = {
                     id: "imti7an",
                     ar: "اِمْتِحَان",
                     en: "exam",
+                    enArabeezy: "imti7an",
                     hint: "",
                     exampleAr: "بَدّي أَجَهِّز لِاِمْتِحَان بُكْرَا.",
                     exampleEn: "I’m going to prepare for an exam tomorrow.",
@@ -9115,6 +9475,7 @@ const defaultLessons = {
                     id: "safar",
                     ar: "سَفَر",
                     en: "travel",
+                    enArabeezy: "safar",
                     hint: "",
                     exampleAr: "حَابِب أَخَطِّط لِسَفَر قَصِير فِي الصَّيْف.",
                     exampleEn: "I’d like to plan a short trip in summer.",
@@ -9123,6 +9484,7 @@ const defaultLessons = {
                     id: "i3tlah",
                     ar: "عُطْلَة",
                     en: "holiday / vacation",
+                    enArabeezy: "3otleh",
                     hint: "",
                     exampleAr: "بِالعُطْلَة بَدّي أَرِيح وَأَنَام كْتِير.",
                     exampleEn: "In the holiday I’m going to rest and sleep a lot.",
@@ -9131,9 +9493,12 @@ const defaultLessons = {
                     id: "dagheT",
                     ar: "ضَغْط",
                     en: "pressure / stress (busy period)",
+                    enArabeezy: "daghT",
                     hint: "",
-                    exampleAr: "هَالشَّهِر فِيه ضَغْط، مَنْهُفّ شُغُل وَدِرَاسَة.",
-                    exampleEn: "This month is a period of pressure: a lot of work and study.",
+                    exampleAr:
+                        "هَالشَّهِر فِيه ضَغْط، مَنْهُفّ شُغُل وَدِرَاسَة.",
+                    exampleEn:
+                        "This month is a period of pressure: a lot of work and study.",
                 },
 
                 // ===== ASKING ABOUT PLANS =====
@@ -9141,6 +9506,7 @@ const defaultLessons = {
                     id: "shoo_mokhattatak",
                     ar: "شُو مُخَطَّطَاتَك؟",
                     en: "What are your plans?",
+                    enArabeezy: "shoo mukhattatatak?",
                     hint:
                         "Masc/fem the same if you drop the ending in speech: مُخَطَّطَاتَك.",
                     exampleAr: "شُو مُخَطَّطَاتَك لِهَالسَّنَة؟",
@@ -9150,6 +9516,7 @@ const defaultLessons = {
                     id: "shoo_baddak_t3mel",
                     ar: "شُو بَدَّك تِعْمِل بُكْرَا؟",
                     en: "What do you want to do tomorrow?",
+                    enArabeezy: "shoo baddak t3mel bukra?",
                     hint:
                         "Fem: شُو بَدِّك تِعْمْلِي؟ You can keep 1 entry & explain here.",
                     exampleAr: "شُو بَدِّك تِعْمْلِي بُكْرَا بَعْد الدَّرْس؟",
@@ -9159,14 +9526,17 @@ const defaultLessons = {
                     id: "3indak_khatta",
                     ar: "عِنْدَك خُطَّة؟",
                     en: "Do you have a plan?",
+                    enArabeezy: "3indak khitta?",
                     hint: "",
                     exampleAr: "لِوِيكِينْد، عِنْدَك خُطَّة أَو لِسَّه؟",
-                    exampleEn: "For the weekend, do you have a plan or not yet?",
+                    exampleEn:
+                        "For the weekend, do you have a plan or not yet?",
                 },
                 {
                     id: "ma3_time",
                     ar: "لِبَعْدِين / لِبَعْد شْوَيّ",
                     en: "for later",
+                    enArabeezy: "lba3deen / lba3d shway",
                     hint: "Used when arranging time: لِبَعْدِين = for later.",
                     exampleAr: "خَلِّينَا نِخَلِّي الدَّرْس لِبَعْدِين.",
                     exampleEn: "Let’s leave the lesson for later.",
@@ -9178,164 +9548,223 @@ const defaultLessons = {
                     id: "ahdaf",
                     ar: "أَهْدَاف",
                     en: "goals",
+                    enArabeezy: "ahdaf",
                     hint: "Singular: هَدَف.",
-                    exampleAr: "عِنْدِي أَهْدَاف لِهَالسَّنَة فِي الدِّرَاسَة وَاللُّغَة.",
-                    exampleEn: "I have goals for this year in study and language.",
+                    exampleAr:
+                        "عِنْدِي أَهْدَاف لِهَالسَّنَة فِي الدِّرَاسَة وَاللُّغَة.",
+                    exampleEn:
+                        "I have goals for this year in study and language.",
                 },
                 {
                     id: "tadreejan",
                     ar: "تَدْرِيجِيًّا",
                     en: "gradually",
+                    enArabeezy: "tadreejeyyan",
                     hint: "",
-                    exampleAr: "بَدّي أَتْقَدَّم تَدْرِيجِيًّا يَعْنِي شْوَيّ شْوَيّ.",
-                    exampleEn: "I want to progress gradually, step by step.",
+                    exampleAr:
+                        "بَدّي أَتْقَدَّم تَدْرِيجِيًّا يَعْنِي شْوَيّ شْوَيّ.",
+                    exampleEn:
+                        "I want to progress gradually, step by step.",
                 },
                 {
                     id: "illa_iza",
                     ar: "إِلَّا إِذَا",
                     en: "unless / except if",
+                    enArabeezy: "illa iza",
                     hint: "Used when plan might change.",
-                    exampleAr: "رَح أِجِي عَالدَّرْس، إِلَّا إِذَا طَلَع شِي طَارِئ.",
-                    exampleEn: "I will come to the lesson, unless something urgent comes up.",
+                    exampleAr:
+                        "رَح أِجِي عَالدَّرْس، إِلَّا إِذَا طَلَع شِي طَارِئ.",
+                    exampleEn:
+                        "I will come to the lesson, unless something urgent comes up.",
                 },
                 {
                     id: "tanzim_wa2t",
                     ar: "تَنْظِيم وَقْت",
                     en: "time management",
+                    enArabeezy: "tanzeem wa2t",
                     hint: "",
-                    exampleAr: "هَدَفِي هَالسَّنَة أُحَسِّن تَنْظِيم الوَقْت عِنْدِي.",
-                    exampleEn: "My goal this year is to improve my time management.",
+                    exampleAr:
+                        "هَدَفِي هَالسَّنَة أُحَسِّن تَنْظِيم الوَقْت عِنْدِي.",
+                    exampleEn:
+                        "My goal this year is to improve my time management.",
                 },
             ],
-        },
+        }
+        ,
 
         // ====================================
         // DIALOGUE – LONG SCENES
         // ====================================
         dialogue: {
             lines: [
-                // Scene 1 – Two friends planning the week
                 {
-                    speaker: "Narrator",
-                    ar: "رُوبَا وَصَاحِبْتَهَا نُور قَاعِدِين بَعْد الدَّرْس بِالكَافِيه وَبِيِحْكُوا عَن خُطَّط هَالْأُسْبُوع.",
-                    en: "Roba and her friend Noor are sitting in a café after the lesson, talking about this week’s plans.",
+                    "speaker": "Omar",
+                    "ar": "هاي يا مَلِك، كِيفِك اليوم؟",
+                    "en": "Hey Malek, how are you today?"
                 },
                 {
-                    speaker: "Noor",
-                    ar: "رُوبَا، شُو مُخَطَّطَاتَك لِهَالْأُسْبُوع؟",
-                    en: "Roba, what are your plans for this week?",
+                    "speaker": "Malek",
+                    "ar": "هَلَّق تَعْبان شْوَي، بَس مَبْسوط عَالخِطَط لِلأُسْبوع الجّاي.",
+                    "en": "I’m a bit tired now, but I’m happy about the plans for next week."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "هَالْأُسْبُوع فِيه ضَغْط شْوَيّ. بَدّي أُخَلِّص مَشْرُوع لِلْجَامْعَة، وَرَح يِكُون عِنْدِي اِمْتِحَان يَوم الخَمِيس.",
-                    en: "This week is a bit stressful. I want to finish a project for university, and I’ll have an exam on Thursday.",
+                    "speaker": "Omar",
+                    "ar": "جَدّ؟ قُول، شُو مُخَطِّط تِعْمِل؟",
+                    "en": "Really? Tell me, what are you planning to do?"
                 },
                 {
-                    speaker: "Noor",
-                    ar: "وَبَعْد الاِمْتِحَان؟ بَفْتِكِر بَدِّك تِرْتَاحِي شْوَيّ.",
-                    en: "And after the exam? I guess you want to rest a little.",
+                    "speaker": "Malek",
+                    "ar": "الأُسْبوع الجّاي رَح أِبْلِّش تَدْرِيب بِشِرْكَة سوفتْوِير.",
+                    "en": "Next week I’ll start an internship at a software company."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "طَبْعًا! بَعْد الاِمْتِحَان بَعْدِين بَدّي أَطْلَع مَع أَصْحَابِي عَلَالبَحِر إِذَا الجَوّ مْنِيح.",
-                    en: "Of course! After the exam, then I want to go out with my friends to the beach if the weather is nice.",
+                    "speaker": "Omar",
+                    "ar": "واو، مُمْتاز! صار لَك زَمان ناوي عَهاد الاشي.",
+                    "en": "Wow, that’s great! You’ve been intending to do that for a long time."
                 },
                 {
-                    speaker: "Noor",
-                    ar: "فِكْرَة حِلْوَة. أَنَا نَاوْيَة أَبْلِش أُرَتِّب خُطَّط لِهَالسَّنَة.",
-                    en: "Nice idea. I intend to start organizing my plans for this year.",
+                    "speaker": "Malek",
+                    "ar": "إي، بِرَأْيي هاي خُطْوَة خُطْوَة لِلْمُسْتَقْبَل.",
+                    "en": "Yes, in my opinion it’s a step-by-step move for the future."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مُخَطَّطَات دِرَاسَة وَلَّا شُغُل وَلَّا سَفَر؟",
-                    en: "Plans for study, work, or travel?",
+                    "speaker": "Omar",
+                    "ar": "طيب وإجازَة الصَّيْف؟ رَح تِسافِر وِلّا كُلَّه شُغُل؟",
+                    "en": "And the summer vacation? Will you travel or is it all work?"
                 },
                 {
-                    speaker: "Noor",
-                    ar: "كُلّ شِي شْوَيّ. حَابْبَة أَطَوِّر حَالِي فِي العَرَبِي، وَحَابْبَة كَمَان أَتْعَلَّم شِي لِلْبَرْمَجَة.",
-                    en: "A bit of everything. I’d like to improve my Arabic and also learn something in programming.",
+                    "speaker": "Malek",
+                    "ar": "حابِب أُسافِر أُسْبوع، بَس أوَّل إِشي بَدّي أُوَفِّر مَصاري.",
+                    "en": "I’d like to travel for a week, but first I want to save money."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مَعَك حَقّ، هَادَا مُمْتَاز. أَنَا كَمَان حَابْبَة أَدْرُس شْوَيّ بَرْمَجَة فِي الشَّهِر الجَّاي.",
-                    en: "You’re right, that’s great. I’d also like to study some programming next month.",
-                },
-
-                // Scene 2 – Talking about long-term future plans
-                {
-                    speaker: "Narrator",
-                    ar: "بَعْد مَا حَكَوْا عَن هَالْأُسْبُوع، بَلَّشُوا يِحْكُوا عَن السَّنَة الجَّاي وَالأَهْدَاف الكْبِيرَة.",
-                    en: "After they talked about this week, they started talking about next year and bigger goals.",
+                    "speaker": "Omar",
+                    "ar": "إن شاء الله يِزْبُط مَعَك. أنا خِطّتي أِتْخَرَّج السَّنَة الجّاي.",
+                    "en": "Hopefully it works out. My plan is to graduate next year."
                 },
                 {
-                    speaker: "Noor",
-                    ar: "السَّنَة الجَّاي، شُو أَهَمّ شِي بَدِّك تِحَقِّقِيه؟",
-                    en: "Next year, what is the most important thing you want to achieve?",
+                    "speaker": "Malek",
+                    "ar": "وبَعْدين؟ بَعْد التَّخَرُّج، شُو ناوي تِعْمِل؟",
+                    "en": "And then? After graduation, what do you intend to do?"
                 },
                 {
-                    speaker: "Roba",
-                    ar: "بِرَأْيِي، أَهَمّ شِي أُحَسِّن تَنْظِيم الوَقْت عِنْدِي. مَثَلًا: خُطَّة وَاضْحَة لِلدِّرَاسَة، لِلمَشْرُوع، وَلِلرَّاحَة.",
-                    en: "In my opinion, the most important thing is to improve my time management. For example: a clear plan for study, the project, and rest.",
+                    "speaker": "Omar",
+                    "ar": "لَسّه القَرار مِش نِهائي، بَس ناوي أَقَدِّم عَشُغُل وبِنْفَس الوَقْت أُكَمِّل دِراسَة.",
+                    "en": "The decision is not final yet, but I intend to apply for a job and at the same time continue studying."
                 },
                 {
-                    speaker: "Noor",
-                    ar: "وَالله مَعَك حَقّ. أَنَا مُخَطِّطَة إِنِّي آخُد كُورْس خَاص لِتَنْظِيم الوَقْت.",
-                    en: "Honestly, you’re right. I’m planning to take a special course on time management.",
+                    "speaker": "Malek",
+                    "ar": "مُو مُسْتَعْجِل شْوَي؟ كْثير شُغُل لَواحِد.",
+                    "en": "Aren’t you rushing it a bit? It’s a lot of work for one person."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "حَلُو. حَابْبَة كَمَان أُسَافِر فِي العُطْلَة إِلَى مَكَان هَادِي أَقْرَأ كْتُب.",
-                    en: "Nice. I’d also like to travel in the vacation to a calm place and read books.",
+                    "speaker": "Omar",
+                    "ar": "مَبْسوط بِالفِكْرَة، بَس إذا شُفْت ضَغْط كْثير مُمْكِن أِأَجِّل واحِد مِن الهَدَفين.",
+                    "en": "I like the idea, but if I see too much pressure I might postpone one of the two goals."
                 },
                 {
-                    speaker: "Noor",
-                    ar: "إِنْ شَاء الله. رَح يِصِير كُلّه. شُو رَأْيِك نِكْتُب أَهْدَاف هَالسَّنَة عَلَى وَرَقَة مَع بَعْض؟",
-                    en: "God willing, it will all happen. What do you think if we write this year’s goals on paper together?",
+                    "speaker": "Malek",
+                    "ar": "مْهِمّ تِرَتِّب أَوْلَوِيّاتَك، هادا أَهَمّ إشِي.",
+                    "en": "It’s important to arrange your priorities, that’s the most important thing."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "فِكْرَة مُمْتَازَة. هَيْك مَنْشُوف إِيش تَحَقَّق بَعْد سَنَة.",
-                    en: "Excellent idea. This way we can see what has been achieved after a year.",
-                },
-
-                // Scene 3 – Teacher asking about next week’s plan
-                {
-                    speaker: "Narrator",
-                    ar: "فِي آخِر الدَّرْس، المُدَرِّس سَأَل رُوبَا عَن خُطَّطْهَا لِلدِّرَاسَة.",
-                    en: "At the end of the lesson, the teacher asked Roba about her study plans.",
+                    "speaker": "Omar",
+                    "ar": "صَحّ. على سِيرَة الخِطَط، شُو رَأْيَك نِطْلَع نِتْغَدّى بُكْرَة؟",
+                    "en": "Right. Speaking of plans, what do you think about going out for lunch tomorrow?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "رُوبَا، الأُسْبُوع الجَّاي، شُو بَدِّك تِعْمْلِي لِتْثَبِّتِي الدَّرْس اليَوم؟",
-                    en: "Roba, next week, what do you want to do to consolidate today’s lesson?",
+                    "speaker": "Malek",
+                    "ar": "بُكْرَة هَلَّق شْوَي مَشْغول، يِمْكِن بَعْد بُكْرَة أَفْضَل.",
+                    "en": "Tomorrow I’m a bit busy, maybe the day after tomorrow is better."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "بَدّي كُلّ يَوم أُرَاجِع المُفْرَدَات عَالأَقَلّ عَشَر دَقَايِق. وَرَح أُسَجِّل صَوْت أَحكِي فِيه عَن خُطَّط هَالشَّهِر.",
-                    en: "I want to review the vocabulary every day for at least ten minutes. And I’ll record audio where I talk about this month’s plans.",
+                    "speaker": "Omar",
+                    "ar": "تمام، بَعْد بُكْرَة عَالسّاعَة اِثْنَيْن؟",
+                    "en": "Okay, the day after tomorrow at two o’clock?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "مُمْتَاز. فِي شِي تَانِي نَاوْيَة تِعْمْلِيه؟",
-                    en: "Excellent. Anything else you intend to do?",
+                    "speaker": "Malek",
+                    "ar": "أَكِيد، رَح أِفْضي حالي.",
+                    "en": "Sure, I’ll make myself free."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "مُمْكِن كَمَان أَكْتُب لِسْتَة أَهْدَاف لِهَالسَّنَة بِالعَرَبِي، عَشَان أَتْعَوَّد أَكْتُب عَن الْمُسْتَقْبَل.",
-                    en: "Maybe I’ll also write a list of goals for this year in Arabic, so I get used to writing about the future.",
+                    "speaker": "Omar",
+                    "ar": "وإذا صار تَغْيِير بالخِطّة؟",
+                    "en": "And if there’s a change in the plan?"
                 },
                 {
-                    speaker: "Teacher",
-                    ar: "طَبْعًا، هَادَا بِسْتَاهِل الوَقْت. إِلَّا إِذَا طَلَع شِي طَارِئ، مَنْحَاوِل نِمْشِي عَلَى الخُطَّة.",
-                    en: "Of course, that’s worth the time. Unless something urgent comes up, we will try to follow the plan.",
+                    "speaker": "Malek",
+                    "ar": "مِنْتِّفِق هَلَّق، وإذا اِضْطْرّينا نِلْغي أَو نِأَجِّل، بِبَعْتِلَك مِسِج.",
+                    "en": "We’ll agree now, and if we have to cancel or postpone, I’ll send you a message."
                 },
                 {
-                    speaker: "Roba",
-                    ar: "إِنْ شَاء الله. شُكْرًا إِنَّك سَأَلْتِنِي عَن خُطَّطِي.",
-                    en: "God willing. Thank you for asking me about my plans.",
+                    "speaker": "Omar",
+                    "ar": "شُكْرًا، بحِبّ الناس إلّي بِتِلْتِزِم بِمَواعِيدها.",
+                    "en": "Thanks, I like people who stick to their appointments."
                 },
-            ],
-        },
+                {
+                    "speaker": "Malek",
+                    "ar": "تِصَدِّق؟ قَبِل، كُنْت أُخَطِّط كْثير وبَس ولا إِشِي يِصِير!",
+                    "en": "You know what? Before, I used to plan a lot and then nothing happened!"
+                },
+                {
+                    "speaker": "Omar",
+                    "ar": "هَلَّق صِرْت أَكْثَر واقِعي؟",
+                    "en": "So now you’ve become more realistic?"
+                },
+                {
+                    "speaker": "Malek",
+                    "ar": "إي، بِحاوِل أِخُذ خُطْوَة خُطْوَة وما أِحْطّ عَحالي ضَغْط كْثير.",
+                    "en": "Yes, I try to go step by step and not put too much pressure on myself."
+                },
+                {
+                    "speaker": "Omar",
+                    "ar": "حِلِم السَّفَر لِسّه مَوْجود عِنْدَك؟",
+                    "en": "Is the dream of traveling still there for you?"
+                },
+                {
+                    "speaker": "Malek",
+                    "ar": "أَكِيد! إن شاء الله بَعْد ما أِتْخَرَّج وَأُوَفِّر مَصاري، رَح أُقْدِّم عَمنْحَة.",
+                    "en": "Of course! God willing, after I graduate and save money, I’ll apply for a scholarship."
+                },
+                {
+                    "speaker": "Omar",
+                    "ar": "وإذا ما زَبَطْت المنْحَة؟",
+                    "en": "And if the scholarship doesn’t work out?"
+                },
+                {
+                    "speaker": "Malek",
+                    "ar": "دايمًا في خِيار تاني، مُمْكِن آخُذ كُورْسات أونلاين وأَطَوِّر حالي مِن هون.",
+                    "en": "There is always a second option: I can take online courses and improve myself from here."
+                },
+                {
+                    "speaker": "Omar",
+                    "ar": "هالحَكِي بيعْجِبْني، في تَفاؤُل وبِنَفْس الوَقْت واقِعِي.",
+                    "en": "I like that; there is optimism and at the same time realism."
+                },
+                {
+                    "speaker": "Malek",
+                    "ar": "وإنت؟ شُو أَكْبَر هَدَف لَك لَلْمُسْتَقْبَل؟",
+                    "en": "And you? What is your biggest goal for the future?"
+                },
+                {
+                    "speaker": "Omar",
+                    "ar": "هَدَفي أِتْخَرَّج، أِتْوَظَّف بِمَكان بحِبّه، وبَعْدين أُسافِر تَدْرِيب بَرّا سَنِة واحْدَة.",
+                    "en": "My goal is to graduate, get a job in a place I like, and then travel for a one-year training abroad."
+                },
+                {
+                    "speaker": "Malek",
+                    "ar": "إن شاء الله كِلّ خِطَطَك تِزْبُط، خُطْوَة خُطْوَة.",
+                    "en": "God willing, all your plans will work out, step by step."
+                },
+                {
+                    "speaker": "Omar",
+                    "ar": "وإن شاء الله خِطَطَك إنت كْمان.",
+                    "en": "And God willing, your plans too."
+                }
+            ]
+        }
+        ,
 
         // ====================================
         // GRAMMAR
@@ -9530,6 +9959,7 @@ const defaultLessons = {
                     id: "hobi",
                     ar: "هِوَايِة",
                     en: "hobby",
+                    enArabeezy: "hiwaye",
                     hint: "Plural: هَوَايَات. Useful pattern: هِوَايِتِي = my hobby.",
                     exampleAr: "هِوَايِتِي الرَّسِم وَالقِرَايَة.",
                     exampleEn: "My hobbies are drawing and reading.",
@@ -9538,6 +9968,7 @@ const defaultLessons = {
                     id: "riyada",
                     ar: "رِيَاضَة",
                     en: "sports / exercise",
+                    enArabeezy: "riyada",
                     hint: "Can be general ‘sports’ or ‘exercise’.",
                     exampleAr: "بِحَاوِل أَعْمِل رِيَاضَة ثَلَاث مَرَّات فِي الأُسْبُوع.",
                     exampleEn: "I try to do exercise three times a week.",
@@ -9546,6 +9977,7 @@ const defaultLessons = {
                     id: "kora",
                     ar: "كُرَة قَدَم",
                     en: "football / soccer",
+                    enArabeezy: "kurat 2adam / kora",
                     hint: "Often shortened to كُرَة.",
                     exampleAr: "أَخُوي بِحِبّ يِلْعَب كُرَة قَدَم مَع أَصْحَابُه.",
                     exampleEn: "My brother likes to play football with his friends.",
@@ -9554,6 +9986,7 @@ const defaultLessons = {
                     id: "musiqa",
                     ar: "مُوسِيقَى",
                     en: "music",
+                    enArabeezy: "musiqa",
                     hint: "Very common with verbs ‘listen’ and ‘play (instrument)’.",
                     exampleAr: "فِي الفَرَاغ بَسْمَع مُوسِيقَى هَادِيَّة.",
                     exampleEn: "In my free time I listen to calm music.",
@@ -9562,6 +9995,7 @@ const defaultLessons = {
                     id: "kitaab",
                     ar: "كِتَاب",
                     en: "book",
+                    enArabeezy: "kitaab",
                     hint: "Plural: كُتُب.",
                     exampleAr: "بَحِبّ الكُتُب التَّنْمِيَة الذَّاتِيَّة.",
                     exampleEn: "I like self-development books.",
@@ -9570,6 +10004,7 @@ const defaultLessons = {
                     id: "masalsal",
                     ar: "مُسَلْسَل",
                     en: "series / TV show",
+                    enArabeezy: "mosalsal",
                     hint: "Plural: مُسَلْسَلَات.",
                     exampleAr: "أَحْيَانًا بِتْفَرَّج عَلَى مُسَلْسَل عَاللَّابْتُوب.",
                     exampleEn: "Sometimes I watch a series on the laptop.",
@@ -9578,14 +10013,16 @@ const defaultLessons = {
                     id: "film",
                     ar: "فِلْم",
                     en: "movie",
+                    enArabeezy: "film",
                     hint: "Plural: أَفْلَام.",
                     exampleAr: "فِي الوِيكِينْد بِنْرُوح عَلَالسِّينِمَا نِتْفَرَّج عَلَى فِلْم.",
                     exampleEn: "On weekends we go to the cinema to watch a movie.",
                 },
                 {
-                    id: " بحر",
+                    id: "ba7er",
                     ar: "بَحِر",
                     en: "sea / beach",
+                    enArabeezy: "ba7er",
                     hint: "Used a lot in Gaza/Palestine context.",
                     exampleAr: "أَحْلَى شِي فِي الصَّيْف القَعْدَة عَالبَحِر.",
                     exampleEn: "The best thing in summer is sitting by the sea.",
@@ -9594,6 +10031,7 @@ const defaultLessons = {
                     id: "nadi",
                     ar: "نَادِي",
                     en: "club / gym",
+                    enArabeezy: "nadi",
                     hint: "Can be sports club or gym depending on context.",
                     exampleAr: "مَسَا كُلّ ثَنِين بِرُوح عَلنَّادِي.",
                     exampleEn: "Every Monday evening I go to the gym.",
@@ -9604,6 +10042,7 @@ const defaultLessons = {
                     id: "yil3ab",
                     ar: "يِلْعَب",
                     en: "to play (a game / sport)",
+                    enArabeezy: "yil3ab",
                     hint: "Masdar (verbal noun): لِعِب. With كُرَة, شَدَّة (cards), إلخ.",
                     exampleAr: "بِحِبّ أِلْعَب كُرَة قَدَم مَع الصَّحَاب.",
                     exampleEn: "I like to play football with friends.",
@@ -9612,6 +10051,7 @@ const defaultLessons = {
                     id: "yi2ra",
                     ar: "يِقْرَا",
                     en: "to read",
+                    enArabeezy: "yi2ra",
                     hint: "1st person: بَقْرَا.",
                     exampleAr: "قَبْل مَا أَنَام بَقْرَا نُصّ سَاعَة.",
                     exampleEn: "Before I sleep, I read for half an hour.",
@@ -9620,6 +10060,7 @@ const defaultLessons = {
                     id: "yirsem",
                     ar: "يِرْسِم",
                     en: "to draw",
+                    enArabeezy: "yirsem",
                     hint: "1st person: بَرْسِم.",
                     exampleAr: "أُخْتِي بَتْرْسِم صُوَر كْتِير حْلُوَة.",
                     exampleEn: "My sister draws very nice pictures.",
@@ -9628,6 +10069,7 @@ const defaultLessons = {
                     id: "yisma3",
                     ar: "يِسْمَع",
                     en: "to listen (to)",
+                    enArabeezy: "yisma3",
                     hint: "Use preposition لَـ: بَسْمَع لَأَغَانِي هَادِيَّة.",
                     exampleAr: "وَأَنَا مْسَافْرَة بَسْمَع مُوسِيقَى.",
                     exampleEn: "When I’m traveling, I listen to music.",
@@ -9636,6 +10078,7 @@ const defaultLessons = {
                     id: "yitfarraj",
                     ar: "يِتْفَرَّج",
                     en: "to watch",
+                    enArabeezy: "yitfarraj",
                     hint: "Often with عَلَى: يِتْفَرَّج عَلَى فِلْم / مُسَلْسَل.",
                     exampleAr: "بِاللَّيْل بِتْفَرَّج عَلَى مُسَلْسَل تُرْكِي.",
                     exampleEn: "At night I watch a Turkish series.",
@@ -9644,6 +10087,7 @@ const defaultLessons = {
                     id: "yimshi",
                     ar: "يِمْشِي",
                     en: "to walk",
+                    enArabeezy: "yimshi",
                     hint: "For exercise walk or just going around.",
                     exampleAr: "مَسَا بْرُوح أِمْشِي نُصّ سَاعَة حَوَالِين البَيْت.",
                     exampleEn: "In the evening I go walk for half an hour around the house.",
@@ -9652,6 +10096,7 @@ const defaultLessons = {
                     id: "yisba7",
                     ar: "يِسْبَح",
                     en: "to swim",
+                    enArabeezy: "yisba7",
                     hint: "1st person: بَسْبَح.",
                     exampleAr: "فِي الصَّيْف بَسْبَح كْتِير عَالبَحِر.",
                     exampleEn: "In summer I swim a lot at the sea.",
@@ -9660,6 +10105,7 @@ const defaultLessons = {
                     id: "yit3allam_ala",
                     ar: "يِتْعَلَّم عَلَى آلَة",
                     en: "to learn (an instrument)",
+                    enArabeezy: "yit3allam 3ala aleh",
                     hint: "Example with oud, guitar, piano, etc.",
                     exampleAr: "هَالفَتْرَة بَتْعَلَّم عَلَى الْعُود.",
                     exampleEn: "These days I’m learning the oud.",
@@ -9670,6 +10116,7 @@ const defaultLessons = {
                     id: "3adean",
                     ar: "عَادَةً",
                     en: "usually",
+                    enArabeezy: "3adatan",
                     hint: "Very useful to talk about routine.",
                     exampleAr: "عَادَةً بَقْضِي الوِيكِينْد مَع العِيلَة.",
                     exampleEn: "Usually I spend the weekend with my family.",
@@ -9678,14 +10125,16 @@ const defaultLessons = {
                     id: "a7yanan",
                     ar: "أَحْيَانًا",
                     en: "sometimes",
+                    enArabeezy: "a7yanan",
                     hint: "",
                     exampleAr: "أَحْيَانًا بَرُوح عَلَالسِّينِمَا مَع أَصْحَابِي.",
                     exampleEn: "Sometimes I go to the cinema with my friends.",
                 },
                 {
-                    id: "nادرan",
+                    id: "nadiran",
                     ar: "نَادِرًا",
                     en: "rarely",
+                    enArabeezy: "nadiran",
                     hint: "",
                     exampleAr: "نَادِرًا بَتْفَرَّج عَلَى تِلْفِزْيُون.",
                     exampleEn: "I rarely watch TV.",
@@ -9694,6 +10143,7 @@ const defaultLessons = {
                     id: "walla_omar",
                     ar: "وَلَا مَرَّة",
                     en: "never",
+                    enArabeezy: "wala marra",
                     hint: "Strong negative frequency.",
                     exampleAr: "وَلَا مَرَّة جَرَّبْت أِسْبَح بِالبَحِر فِي الشِّتَا.",
                     exampleEn: "I have never tried swimming in the sea in winter.",
@@ -9702,6 +10152,7 @@ const defaultLessons = {
                     id: "bil_weikend",
                     ar: "بِالوِيكِينْد",
                     en: "on the weekend",
+                    enArabeezy: "bil weekend",
                     hint: "Very common chunk in youth speech.",
                     exampleAr: "بِالوِيكِينْد بْنِطْبُخ أَكْلَة خَاصَّة فِي البَيْت.",
                     exampleEn: "On the weekend we cook a special dish at home.",
@@ -9710,6 +10161,7 @@ const defaultLessons = {
                     id: "fi_elfaragh",
                     ar: "فِي الفَرَاغ",
                     en: "in free time",
+                    enArabeezy: "fi il faraagh",
                     hint: "",
                     exampleAr: "فِي الفَرَاغ بَتْعَلَّم لُغَات عَلَى الإِنْتَرْنِت.",
                     exampleEn: "In my free time I learn languages online.",
@@ -9720,6 +10172,7 @@ const defaultLessons = {
                     id: "ma3_hali",
                     ar: "مَع حَالِي",
                     en: "by myself / alone",
+                    enArabeezy: "ma3 7ali",
                     hint: "",
                     exampleAr: "لَمَّا أِقْرَا بَفَضَّل أَقْعُد مَع حَالِي.",
                     exampleEn: "When I read I prefer to sit by myself.",
@@ -9728,6 +10181,7 @@ const defaultLessons = {
                     id: "ma3_as7abi",
                     ar: "مَع أَصْحَابِي",
                     en: "with my friends",
+                    enArabeezy: "ma3 aṣ7abi",
                     hint: "",
                     exampleAr: "بِحِبّ أِلْعَب كُرَة قَدَم مَع أَصْحَابِي.",
                     exampleEn: "I like to play football with my friends.",
@@ -9736,6 +10190,7 @@ const defaultLessons = {
                     id: "ma3_el3eileh",
                     ar: "مَع العِيلَة",
                     en: "with the family",
+                    enArabeezy: "ma3 il-3eileh",
                     hint: "",
                     exampleAr: "أَكْثَر شِي بِنْبَسِط لَمَّا أَطْلَع مَع العِيلَة.",
                     exampleEn: "I enjoy it most when I go out with my family.",
@@ -9747,6 +10202,7 @@ const defaultLessons = {
                     id: "taslee",
                     ar: "تَسْلِيِة",
                     en: "fun / entertainment",
+                    enArabeezy: "tasliyeh",
                     hint: "From the verb يِتْسَلَّى ‘to have fun / pass time’.",
                     exampleAr: "بِسْتَعْمِل المُسَلْسَل لِلتَّسْلِيِة بَعْد الدِّرَاسَة.",
                     exampleEn: "I use a series for fun after studying.",
@@ -9755,6 +10211,7 @@ const defaultLessons = {
                     id: "yitshallaa",
                     ar: "يِتْسَلَّى",
                     en: "to have fun / entertain oneself",
+                    enArabeezy: "yitshallā",
                     hint: "1st person: بَتْسَلَّى.",
                     exampleAr: "بَتْسَلَّى لَمَّا أِرْسِم أَو أِسْمَع مُوسِيقَى.",
                     exampleEn: "I have fun when I draw or listen to music.",
@@ -9763,6 +10220,7 @@ const defaultLessons = {
                     id: "yistirikh",
                     ar: "يِسْتِرِيح",
                     en: "to rest / relax",
+                    enArabeezy: "yistiri7",
                     hint: "1st person: بَسْتِرِيح.",
                     exampleAr: "بَعْد الأُسْبُوع الطَّوِيل بَسْتِرِيح بِالوِيكِينْد.",
                     exampleEn: "After a long week I relax on the weekend.",
@@ -9771,6 +10229,7 @@ const defaultLessons = {
                     id: "mufaddal",
                     ar: "مُفَضَّل",
                     en: "favorite",
+                    enArabeezy: "mufaDDal",
                     hint: "Masc: مُفَضَّل، fem: مُفَضَّلَة.",
                     exampleAr: "أَكْتُب هِوَايَتَك المُفَضَّلَة بِالعَرَبِي.",
                     exampleEn: "Write your favorite hobby in Arabic.",
@@ -9779,12 +10238,14 @@ const defaultLessons = {
                     id: "mafiwa2t",
                     ar: "مَا فِيش وَقْت",
                     en: "there is no time",
+                    enArabeezy: "ma fiish wa2t",
                     hint: "Very common excuse when talking about hobbies.",
                     exampleAr: "بِحِبّ أَرْسِم بَسّ مَا فِيش وَقْت هَالْفَتْرَة.",
                     exampleEn: "I like drawing but there’s no time these days.",
                 },
             ],
-        },
+        }
+        ,
 
         // ====================================
         // DIALOGUE – LONG & NATURAL
@@ -10783,7 +11244,7 @@ auth.onAuthStateChanged(async (user) => {
     if (!user) {
         appState.currentUser = null;
         updateAuthUI();
-        // رجّعيه للصفحة الرئيسية لو حابة
+        // رجّعيه للصفحة الرئيسية
         showScreen("home-screen");
         return;
     }
@@ -10791,7 +11252,16 @@ auth.onAuthStateChanged(async (user) => {
     try {
         const snap = await db.collection("users").doc(user.uid).get();
         const data = snap.data() || {};
-        const role = data.role || "student";
+
+        // نحاول نقرأ الدور من Firestore، ولو مش موجود من localStorage
+        let savedRole = null;
+        try {
+            savedRole = localStorage.getItem(LS_USER_ROLE_KEY);
+        } catch (e) {
+            console.warn("Could not read role from localStorage", e);
+        }
+
+        const role = data.role || savedRole || "student";
 
         appState.currentUser = {
             uid: user.uid,
@@ -10799,16 +11269,21 @@ auth.onAuthStateChanged(async (user) => {
             role,
         };
 
+        // نحدّث الـ localStorage بالدور النهائي
+        try {
+            localStorage.setItem(LS_USER_ROLE_KEY, role);
+        } catch (e) {
+            console.warn("Could not save role to localStorage", e);
+        }
+
         updateAuthUI();
 
         if (role === "teacher") {
-            // مدرّس → نزامن الطلاب + نفتح لوحة المدرّس
             await syncTeacherStudentsFromCloud?.();
             renderStudents();
             renderTeacherLessonList();
             goToTeacherDashboard();
         } else {
-            // طالب → نجهّز له student واحد مربوط بحسابه
             appState.students = [
                 {
                     id: user.uid,
@@ -10820,13 +11295,13 @@ auth.onAuthStateChanged(async (user) => {
                 },
             ];
             appState.currentStudentId = user.uid;
-            // يروح مباشرة على الوحدات
             goToLevels();
         }
     } catch (err) {
         console.error("auth.onAuthStateChanged error:", err);
     }
 });
+
 
 
 // ========================= VOCAB MODAL STATE =========================
@@ -11287,6 +11762,15 @@ function loadLessonDataFromLS() {
         }
     }
 }
+function markVocabularyDone() {
+    // هذي الدالة تعتمد إنو عندك setStudentProgressField موجودة
+    // وتشتغل على الدرس والطالب الحاليين
+    try {
+        setStudentProgressField("vocabulary", true);
+    } catch (e) {
+        console.warn("Could not mark vocabulary as done:", e);
+    }
+}
 
 function saveLessonToLS(lessonId) {
     localStorage.setItem(LS_LESSON_PREFIX + lessonId, JSON.stringify(lessons[lessonId]));
@@ -11351,7 +11835,7 @@ function goToStudents() {
         goToLevels();
         return;
     }
-
+    document.body.classList.remove("home-only");
     showScreen("students-screen");
     renderStudents();
 }
@@ -11418,7 +11902,8 @@ function buildLessonExportHtml(lesson, options) {
             <tr>
                 <td class="ar">${escapeHtml(w.ar)}</td>
                 <td class="en">${escapeHtml(w.en)}</td>
-                <td class="en">${escapeHtml(w.hint || "")}</td>
+                
+                <td class="en">${escapeHtml(w.enArabeezy)}</td>
                 <td class="en">
                     ${escapeHtml(w.exampleAr || "")}
                     ${w.exampleAr || w.exampleEn ? " — " : ""}
@@ -11631,7 +12116,7 @@ function buildLessonExportHtml(lesson, options) {
                         <tr>
                             <th>العربي</th>
                             <th>English</th>
-                            <th>Hint</th>
+                            <th>enArabeezy</th>
                             <th>Example</th>
                         </tr>
                     </thead>
@@ -11711,7 +12196,7 @@ function goToTeacherDashboard() {
         }
         return;
     }
-
+    document.body.classList.remove("home-only")
     showScreen("teacher-dashboard-screen");
     renderTeacherLessonList();
 }
@@ -12253,47 +12738,43 @@ function renderVocabularyTab(container, lesson) {
     const hint = document.createElement("p");
     hint.className = "teacher-edit-note";
     hint.textContent =
-        "Tap a card to see details and example sentences. Visiting all core items will complete this section.";
+        "Tap a card to see details and example sentences. When you finish reviewing, press 'Done' to complete this section.";
     container.appendChild(hint);
 
-    renderVocabularyGroup(container, "Core Vocabulary", lesson.vocabulary.core, true);
-    renderVocabularyGroup(container, "Extra Vocabulary", lesson.vocabulary.extra, false);
+    // ✅ شريط "تم إنهاء القسم"
+    const doneBar = document.createElement("div");
+    doneBar.className = "section-done-bar";
 
-    if (appState.teacherMode) {
-        const panel = document.createElement("div");
-        panel.style.marginTop = "12px";
-        panel.innerHTML =
-            '<p class="teacher-edit-note"><strong>Teacher Mode:</strong> Use quick actions here for vocabulary. For bulk edits, use Teacher Dashboard later if needed.</p>';
+    const doneLabel = document.createElement("span");
+    doneLabel.className = "section-done-text";
 
-        const row = document.createElement("div");
-        row.style.display = "flex";
-        row.style.flexWrap = "wrap";
-        row.style.gap = "6px";
 
-        const btnAddCore = document.createElement("button");
-        btnAddCore.className = "btn btn--outline btn--sm";
-        btnAddCore.textContent = "Add Core Word";
-        btnAddCore.addEventListener("click", () => handleAddVocabItem(lesson, "core"));
+    const doneBtn = document.createElement("button");
+    doneBtn.className = "btn btn--outline btn--sm section-done-btn";
+    doneBtn.textContent = "Mark Vocabulary as Done";
 
-        const btnAddExtra = document.createElement("button");
-        btnAddExtra.className = "btn btn--outline btn--sm";
-        btnAddExtra.textContent = "Add Extra Word";
-        btnAddExtra.addEventListener("click", () => handleAddVocabItem(lesson, "extra"));
+    doneBtn.addEventListener("click", () => {
+        markVocabularyDone();
+    });
 
-        const btnEdit = document.createElement("button");
-        btnEdit.className = "btn btn--ghost btn--sm";
-        btnEdit.textContent = "Edit / Delete Words";
-        btnEdit.addEventListener("click", () => handleEditVocabItems(lesson));
+    doneBar.appendChild(doneLabel);
+    doneBar.appendChild(doneBtn);
+    container.appendChild(doneBar);
 
-        row.appendChild(btnAddCore);
-        row.appendChild(btnAddExtra);
-        row.appendChild(btnEdit);
-        panel.appendChild(row);
-        container.appendChild(panel);
+    // ✅ باقي تبويب المفردات
+    const vocab = lesson.vocabulary || {};
+    const core = Array.isArray(vocab.core) ? vocab.core : [];
+    const extra = Array.isArray(vocab.extra) ? vocab.extra : [];
+
+    if (core.length) {
+        renderVocabularyGroup(container, "Core Vocabulary", core, true);
     }
-
-    renderSectionStatus(container, "vocabulary");
+    if (extra.length) {
+        renderVocabularyGroup(container, "Extra Vocabulary", extra, false);
+    }
 }
+
+
 
 // Dialogue
 function renderDialogueTab(container, lesson) {
@@ -13846,6 +14327,13 @@ document.addEventListener("DOMContentLoaded", () => {
             updateLessonProgressUI();
         }
     }
+    function updateLessonProgressUI() {
+        // حدّث شريط التقدم
+        updateProgressBar();
+
+        // حدّث بادج قسم المفردات فقط
+        updateSectionStatusBadge("vocabulary");
+    }
 
     if (btnPrev) {
         btnPrev.addEventListener("click", () => {
@@ -13861,17 +14349,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnNext) {
         btnNext.addEventListener("click", () => {
             if (!vocabModalState.list.length) return;
+
             vocabModalState.index =
                 (vocabModalState.index + 1) % vocabModalState.list.length;
-            vocabModalState.showExamples = true;
+
             renderVocabModalFromState();
-            const currentItem = vocabModalState.list[vocabModalState.index];
-            if (currentItem && currentItem.id) {
-                const s = ensureVocabVisitedSet();
-                s.add(currentItem.id);
-                updateLessonProgressUI();
-                checkIfVocabDone();
-            }
         });
     }
 
@@ -13978,8 +14460,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 role: finalRole,
             };
 
+            // خزّن الدور محلياً عشان نرجع له بعد الـ refresh
+            try {
+                localStorage.setItem(LS_USER_ROLE_KEY, finalRole);
+            } catch (e) {
+                console.warn("Could not save role to localStorage", e);
+            }
+
             closeAuthModal();
             updateAuthUI();
+
 
             // 🔁 توجيه حسب الدور
             if (finalRole === "teacher") {

@@ -150,9 +150,18 @@ main {
 }
 
 
-/* حالة الصفحة الرئيسية فقط */
 
 
+
+/* لما نكون في وضع الصفحة الرئيسية فقط، خبّي شريط الـ Login/Auth */
+body.home-only #authBar {
+    display: none;
+}
+
+/* لو حابة تخفي كل الـ <main> بالكامل في الهوم: */
+body.home-only main {
+    display: none;
+}
 
 
 
@@ -354,6 +363,28 @@ main {
 .section-header {
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+.section-done-bar {
+    margin: 8px 0 14px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: rgba(0, 128, 0, 0.03);
+    border: 1px dashed rgba(0, 128, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.section-done-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.section-done-btn {
+    white-space: nowrap;
 }
 
 .section-header--with-actions {
