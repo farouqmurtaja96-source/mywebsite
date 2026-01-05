@@ -391,134 +391,159 @@ const defaultLessons = {
         // ====================================
         dialogue: {
             lines: [
-                // Scene 1 – First day in class
                 {
-                    speaker: "T",
-                    ar: "السَّلَامُ عَلَيْكُمْ يَا جَمَاعَة، أَهْلًا وَسَهْلًا فِيكُم فِي أَوَّل دَرْس عَرَبِي.",
-                    en: "Peace be upon you, everyone, welcome to your first Arabic lesson.",
+                    "speaker": "Teacher",
+                    "ar": "مَرْحَبَا، أَهْلًا وَسَهْلًا فِي الدَّرْس!",
+                    "en": "Hi, welcome to the lesson!"
                 },
                 {
-                    speaker: "S1",
-                    ar: "وَعَلَيْكُم السَّلَام أُسْتَاذ، صَبَاح الْخِير.",
-                    en: "And peace be upon you, teacher, good morning.",
+                    "speaker": "Lina",
+                    "ar": "مَرْحَبَا أُسْتَاذ.",
+                    "en": "Hi, teacher."
                 },
                 {
-                    speaker: "T",
-                    ar: "صَبَاح النُّور، يَلَّا نِبْدَا تَعَارُف. مَرْحَبَا، شُو اِسْمَك؟",
-                    en: "Good morning, let’s start with introductions. Hi, what’s your name?",
+                    "speaker": "Teacher",
+                    "ar": "صَبَاح الْخِير، كِيفَك الْيَوْم؟",
+                    "en": "Good morning, how are you today?"
                 },
                 {
-                    speaker: "S1",
-                    ar: "مَرْحَبَا، أَنَا اِسْمِي لِين، أَنَا طَالْبَة جْدِيدَة.",
-                    en: "Hi, my name is Lynn, I’m a new student.",
+                    "speaker": "Lina",
+                    "ar": "أَنَا مْنِيحَة، شُكْرًا. وَإِنْتَ؟",
+                    "en": "I’m good, thanks. And you?"
                 },
                 {
-                    speaker: "T",
-                    ar: "فُرْصَة سَعِيدَة يَا لِين، أَنَا أُسْتَاذ أَحْمَد.",
-                    en: "Nice to meet you, Lynn, I’m teacher Ahmad.",
-                },
-
-                // Scene 2 – How are you + feelings
-                {
-                    speaker: "T",
-                    ar: "كِيف حَالِك الْيَوْم؟ مْنِيحَة، مَاشِي، وَلَّا تَعْبَانَة؟",
-                    en: "How are you today? Good, okay, or tired?",
+                    "speaker": "Teacher",
+                    "ar": "أَنَا مْنِيح، الْحَمْدِلِلَّه.",
+                    "en": "I’m good, praise be to God."
                 },
                 {
-                    speaker: "S1",
-                    ar: "الصِّدْقِي أَنَا مَبْسُوطَة، بَسّ شْوَيّ تَعْبَانَة مِن السَّفَر.",
-                    en: "Honestly, I’m happy, but a bit tired from the trip.",
+                    "speaker": "Teacher",
+                    "ar": "شُو اِسْمِك؟",
+                    "en": "What’s your name?"
                 },
                 {
-                    speaker: "T",
-                    ar: "مُمْتَاز، هَادَا إِحْسَاس طَبِيعِي فِي أَوَّل يَوْم.",
-                    en: "Great, that’s a normal feeling on the first day.",
-                },
-
-                // Scene 3 – Origin and where you live
-                {
-                    speaker: "T",
-                    ar: "مِنْ وِين إِنْتِ أَصْلًا؟",
-                    en: "Where are you originally from?",
+                    "speaker": "Lina",
+                    "ar": "أَنَا اِسْمِي لِينْ.",
+                    "en": "My name is Lynn."
                 },
                 {
-                    speaker: "S1",
-                    ar: "أَنَا مِنْ كَنَدَا، بَسّ هَلَّقْ أَنَا سَاكْنَة فِي رَام اللّٰه.",
-                    en: "I’m from Canada, but now I live in Ramallah.",
+                    "speaker": "Teacher",
+                    "ar": "فُرْصَة سَعِيدَة يَا لِينْ.",
+                    "en": "Nice to meet you, Lynn."
                 },
                 {
-                    speaker: "T",
-                    ar: "حِلُو كْتِير. أَكِيد كَان تَعْبَان السَّفَر.",
-                    en: "Very nice. I’m sure the trip was tiring.",
-                },
-
-                // Scene 4 – Another student joins
-                {
-                    speaker: "S2",
-                    ar: "مَرْحَبَا جَمِيعًا! آسِف إِنِّي تَأَخَّرْت شْوَيّ.",
-                    en: "Hi everyone! Sorry I’m a little late.",
+                    "speaker": "Lina",
+                    "ar": "تْشَرَّفْت فِيك أُسْتَاذ.",
+                    "en": "Pleased to meet you, teacher."
                 },
                 {
-                    speaker: "T",
-                    ar: "مِش مُشْكِلَة، تْفَضَّل إِقْعُد. شُو اِسْمَك؟",
-                    en: "No problem, please sit. What’s your name?",
+                    "speaker": "Teacher",
+                    "ar": "مِنْ وِين إِنْتِي أَصْلًا؟",
+                    "en": "Where are you originally from?"
                 },
                 {
-                    speaker: "S2",
-                    ar: "أَنَا اِسْمِي مَارْك، أَنَا طَالِب عَرَبِي بَرْضُه.",
-                    en: "My name is Mark, I’m also an Arabic student.",
+                    "speaker": "Lina",
+                    "ar": "أَنَا مِنْ كَنَدَا.",
+                    "en": "I’m from Canada."
                 },
                 {
-                    speaker: "T",
-                    ar: "مِنْ وِين إِنْتَ يَا مَارْك؟",
-                    en: "Where are you from, Mark?",
+                    "speaker": "Teacher",
+                    "ar": "حِلُو! وَهَلَّقْ وِين سَاكْنَة؟",
+                    "en": "Nice! And where do you live now?"
                 },
                 {
-                    speaker: "S2",
-                    ar: "أَنَا مِنْ أَمْرِيكَا، بَسّ هَلَّقْ أَنَا سَاكِن فِي غَزَّة شَهْر.",
-                    en: "I’m from the United States, but now I’m living in Gaza for a month.",
-                },
-
-                // Scene 5 – Small talk between students
-                {
-                    speaker: "S1",
-                    ar: "مَرْحَبَا مَارْك، أَنَا لِين. كِيف حَالَك فِي غَزَّة؟ مْنِيح وَلَّا مَاشِي؟",
-                    en: "Hi Mark, I’m Lynn. How are you in Gaza? Good or just okay?",
+                    "speaker": "Lina",
+                    "ar": "هَلَّقْ أَنَا سَاكْنَة فِي رَام اللّٰه.",
+                    "en": "Now I live in Ramallah."
                 },
                 {
-                    speaker: "S2",
-                    ar: "بِصِرَاحَة أَنَا مَبْسُوط كْتِير، النَّاس طَيِّبِين، بَسّ أَنَا مِش فَاهِم كُلّ الْكَلِمَات بَعْد.",
-                    en: "Honestly, I’m very happy, people are kind, but I don’t understand all the words yet.",
+                    "speaker": "Lina",
+                    "ar": "وَإِنْتَ مِنْ وِين؟",
+                    "en": "And where are you from?"
                 },
                 {
-                    speaker: "S1",
-                    ar: "وَلَا يَهَمَّك، أَكِيد مَع الدَّرْس رَحْ تِفْهَم أَكْثَر.",
-                    en: "Don’t worry, with the lessons you will definitely understand more.",
-                },
-
-                // Scene 6 – Closing the lesson
-                {
-                    speaker: "T",
-                    ar: "طَيِّب يَا جَمَاعَة، يَلَّا، هَادَا كَان أَوَّل تَعَارُف بَيْنَا.",
-                    en: "Alright everyone, this was our first introduction together.",
+                    "speaker": "Teacher",
+                    "ar": "أَنَا مِنْ غَزَّة، بَسّ هَلَّقْ بَشْتِغِل فِي الْقُدْس.",
+                    "en": "I’m from Gaza, but now I work in Jerusalem."
                 },
                 {
-                    speaker: "T",
-                    ar: "مَع السَّلَامَة لْهَالْيَوْم، مَا تِنْسُوا تِتْدَرَّبُوا عَلَى الْحِوَار.",
-                    en: "Goodbye for today, don’t forget to practice the dialogue.",
+                    "speaker": "Teacher",
+                    "ar": "إِنْتِي طَالْبَة وَلَّا بِتْشْتِغْلِي؟",
+                    "en": "Are you a student or do you work?"
                 },
                 {
-                    speaker: "S1",
-                    ar: "شُكْرًا أُسْتَاذ، مَع السَّلَامَة، الله مَعَك.",
-                    en: "Thank you, teacher, goodbye, God be with you.",
+                    "speaker": "Lina",
+                    "ar": "أَنَا طَالْبَة، بَدْرُس عَرَبِي وَإِنْجِلِيزِي.",
+                    "en": "I’m a student, I study Arabic and English."
                 },
                 {
-                    speaker: "S2",
-                    ar: "مَع السَّلَامَة، اِنْبِسِطُوا بِيَوْمْكُم!",
-                    en: "Goodbye, enjoy your day!",
+                    "speaker": "Teacher",
+                    "ar": "حِلُو، أَنَا كَمَان أُسْتَاذ عَرَبِي.",
+                    "en": "Nice, I’m also an Arabic teacher."
                 },
-            ],
-        },
+                {
+                    "speaker": "Lina",
+                    "ar": "مَبْسُوطَة إِنِّي مَعَك فِي الدَّرْس.",
+                    "en": "I’m happy to be in your class."
+                },
+                {
+                    "speaker": "Teacher",
+                    "ar": "وَإِحْنَا مَبْسُوطِين فِيك كَمَان.",
+                    "en": "And we’re happy to have you too."
+                },
+                {
+                    "speaker": "Adam",
+                    "ar": "السَّلَامُ عَلَيْكُمْ يَا شَبَاب!",
+                    "en": "Peace be upon you, everyone!"
+                },
+                {
+                    "speaker": "Lina",
+                    "ar": "وَعَلَيْكُم السَّلَام، مَرْحَبَا!",
+                    "en": "And peace be upon you, hi!"
+                },
+                {
+                    "speaker": "Teacher",
+                    "ar": "كِيفْكُم الْيَوْم؟",
+                    "en": "How are you all today?"
+                },
+                {
+                    "speaker": "Adam",
+                    "ar": "إِحْنَا مْنَاح، بَسّ شَوَيّ تَعْبَانِين.",
+                    "en": "We’re fine, just a bit tired."
+                },
+                {
+                    "speaker": "Sara",
+                    "ar": "أَنَا مَبْسُوط إِنِّي بَدْرُس عَرَبِي مَعْكُم.",
+                    "en": "I’m happy that I study Arabic with you all."
+                },
+                {
+                    "speaker": "Teacher",
+                    "ar": "طَيِّب يَلَّا، هَادَا كَانَ التَّعَارُف الْأَوَّل.",
+                    "en": "Alright, this was our first introduction."
+                },
+                {
+                    "speaker": "Teacher",
+                    "ar": "مَع السَّلَامَة، مَا تِنْسُوا الْوَاجِب.",
+                    "en": "Goodbye, don’t forget the homework."
+                },
+                {
+                    "speaker": "Lina",
+                    "ar": "مَع السَّلَامَة أُسْتَاذ، بِالتَّوْفِيق.",
+                    "en": "Goodbye, teacher, good luck."
+                },
+                {
+                    "speaker": "Adam",
+                    "ar": "شُكْرًا، اِنْبِسِطُوا بِوَقْتْكُم الْيَوْم.",
+                    "en": "Thank you, enjoy your time today."
+                },
+                {
+                    "speaker": "Sara",
+                    "ar": "مِش مُشْكِلَة، أَكِيد مَا مْنِنْسَى الْوَاجِب.",
+                    "en": "No problem, we definitely won’t forget the homework."
+                }
+            ]
+        }
+        ,
 
         // ====================================
         // GRAMMAR (creative, like a mini textbook)
@@ -689,6 +714,9 @@ const defaultLessons = {
         },
     },
 
+
+
+
     [LESSON_ID_DAILY_ROUTINE]: {
         meta: {
             level: "Beginner",
@@ -712,8 +740,8 @@ const defaultLessons = {
         // ====================================
         // VOCABULARY
         // ====================================
-        "vocabulary": {
-            "core": [
+        vocabulary: {
+            core: [
                 {
                     "id": "baS7a",
                     "ar": "بَصْحَى",
@@ -963,7 +991,7 @@ const defaultLessons = {
                     "en": "Then / after that",
                     "enArabeezy": "ba3deen",
                     "hint": "Used to link actions in a sequence.",
-                    "exampleAr": "بَصْحَى، بَتْغَسَّل، بَعْدَيْن بَفْطَر.",
+                    "exampleAr": "بَصْحَى، بَغَسَّل، بَعْدَيْن بَفْطَر.",
                     "exampleEn": "I wake up, wash, then have breakfast."
                 },
                 {
@@ -1068,8 +1096,8 @@ const defaultLessons = {
                 },
                 {
                     "speaker": "Karim",
-                    "ar": "بَصْحَى السَّاعَة سِتِّة، بَتْغَسَّل، بَعْدَيْن بَفْطَر وَبَشْرَب قَهْوَة.",
-                    "en": "I wake up at six, wash, then have breakfast and drink coffee."
+                    "ar": "بَصْحَى السَّاعَة سِتِّة، بَغَسَّل وَجْهِي، بَعْدَيْن بَفْطَر وَبَشْرَب قَهْوَة.",
+                    "en": "I wake up at six, wash my face, then have breakfast and drink coffee."
                 },
                 {
                     "speaker": "Lynn",
@@ -1098,7 +1126,7 @@ const defaultLessons = {
                 },
                 {
                     "speaker": "Karim",
-                    "ar": "كُل يَوْم بَدْرُسِي؟",
+                    "ar": "كُل يَوْم بَتدْرُسِي؟",
                     "en": "Do you study every day?"
                 },
                 {
@@ -1138,7 +1166,7 @@ const defaultLessons = {
                 },
                 {
                     "speaker": "Karim",
-                    "ar": "ثَلَاث مَرَّات فِي الْأُسْبُوع بتلعب رِيَاضَة بَعْد الشُّغُل.",
+                    "ar": "ثَلَاث مَرَّات فِي الْأُسْبُوع بلعب رِيَاضَة بَعْد الشُّغُل.",
                     "en": "Three times a week I exercise after work."
                 },
                 {
@@ -1148,7 +1176,7 @@ const defaultLessons = {
                 },
                 {
                     "speaker": "Lynn",
-                    "ar": "مِثْلِي! يَوْم الْعُطْلَة بَنْضِّف وَبَجْلِي الصُّحُون.",
+                    "ar": "زي! يَوْم الْعُطْلَة بَنْضِّف وَبَجْلِي الصُّحُون.",
                     "en": "Same as me! On the day off I clean and wash the dishes."
                 },
                 {
@@ -1957,8 +1985,8 @@ const defaultLessons = {
         // ====================================
         // DIALOGUE (long café + home + culture)
         // ====================================
-        "dialogue": {
-            "lines": [
+        dialogue: {
+            lines: [
                 {
                     "speaker": "رامي",
                     "ar": "مَرْحَبَا مَرْيَم، شُو أَكَلْتِي الْيَوْم عَلَى الْفْطُور؟",
@@ -1986,18 +2014,18 @@ const defaultLessons = {
                 },
                 {
                     "speaker": "مَرْيَم",
-                    "ar": "أَحْيَانًا بَشْرَب عَصِير بُرْتُقَال بَرْضُه.",
+                    "ar": "أَحْيَانًا بَشْرَب عَصِير بُرْتُقَال كمان.",
                     "en": "Sometimes I drink orange juice too."
                 },
                 {
                     "speaker": "رامي",
-                    "ar": "شُو بْتِحِبّ تَاكُل عَلَى الْغَدَا؟",
+                    "ar": "شُو بْتِحِب تَاكُلي عَلَى الْغَدَا؟",
                     "en": "What do you like to eat for lunch?"
                 },
                 {
                     "speaker": "مَرْيَم",
-                    "ar": "بَحِبّ غَدَا فِيه دْجَاج وَرُزّ وَسَلَطَة.",
-                    "en": "I like lunch with chicken, rice, and salad."
+                    "ar": "بِحِبّ آكُل عَالغَدا دَجَاج وَرُزّ.",
+                    "en": "I like to eat chicken and rice for lunch."
                 },
                 {
                     "speaker": "رامي",
@@ -2006,12 +2034,12 @@ const defaultLessons = {
                 },
                 {
                     "speaker": "مَرْيَم",
-                    "ar": "بَحِبّ لَحْمِة بَسّ مِش كْتِير، أَكْثَر شِي بَحِبّ خُضَار وَفَوَاكِه.",
+                    "ar": "بَحِبّ الَحْمِة بَسّ مِش كْتِير، أَكْثَر شِي بَحِبّ خُضَار وَفَوَاكِه.",
                     "en": "I like meat but not a lot; I like vegetables and fruit the most."
                 },
                 {
                     "speaker": "رامي",
-                    "ar": "فَوَاكِه أَيّ وَاحْدَة أَكْثَر شِي؟",
+                    "ar": "شُو أَكْتَر فَاكْهَة بِتْحِبّي؟",
                     "en": "Which fruit do you like the most?"
                 },
                 {
@@ -2026,8 +2054,8 @@ const defaultLessons = {
                 },
                 {
                     "speaker": "مَرْيَم",
-                    "ar": "مُنَاسِب، أَنَا جُوعَانَة كْتِير.",
-                    "en": "Sounds good, I’m very hungry."
+                    "ar": "تمام، أَنَا جُوعَانَة كْتِير.",
+                    "en": "ok, I’m very hungry."
                 },
                 {
                     "speaker": "سَامِي",
@@ -2071,7 +2099,7 @@ const defaultLessons = {
                 },
                 {
                     "speaker": "مَرْيَم",
-                    "ar": "صَحّ، بَسّ السَّلَطَة مِلِح شَوَيّ.",
+                    "ar": "صَحّ، بَسّ السَّلَطَة مالحة شَوَيّ.",
                     "en": "True, but the salad is a bit salty."
                 },
                 {
@@ -11302,6 +11330,383 @@ auth.onAuthStateChanged(async (user) => {
     }
 });
 
+// =======================
+// Translation Sentence Generator (from lesson vocabulary)
+// =======================
+
+function normalizeText(s) {
+    return (s || "").toString().trim();
+}
+
+function pickRandom(arr) {
+    if (!Array.isArray(arr) || arr.length === 0) return null;
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+function uniqBy(arr, keyFn) {
+    const seen = new Set();
+    const out = [];
+    for (const x of arr) {
+        const k = keyFn(x);
+        if (!k || seen.has(k)) continue;
+        seen.add(k);
+        out.push(x);
+    }
+    return out;
+}
+
+// Try to detect nouns / greetings / misc from vocabulary (very lightweight)
+function bucketVocabulary(vocabItems) {
+    const items = (Array.isArray(vocabItems) ? vocabItems : [])
+        .map((it) => ({
+            ...it,
+            ar: normalizeText(it.ar),
+            en: normalizeText(it.en),
+            hint: normalizeText(it.hint),
+            exampleAr: normalizeText(it.exampleAr),
+            exampleEn: normalizeText(it.exampleEn),
+        }))
+        .filter((it) => it.ar || it.en);
+
+    // greetings / common phrases: heuristics by english keywords OR arabic starts
+    const greetingKeywords = [
+        "hello",
+        "hi",
+        "good morning",
+        "good evening",
+        "goodbye",
+        "welcome",
+        "nice to meet",
+        "please",
+        "thanks",
+        "thank you",
+    ];
+
+    const greetings = items.filter((it) => {
+        const en = it.en.toLowerCase();
+        const ar = it.ar;
+        return (
+            greetingKeywords.some((k) => en.includes(k)) ||
+            ar.includes("مرحبا") ||
+            ar.includes("أهلا") ||
+            ar.includes("صباح") ||
+            ar.includes("مساء") ||
+            ar.includes("مع السلامة") ||
+            ar.includes("تشرف")
+        );
+    });
+
+    // nouns: heuristic - english contains "my" forms or common noun list in hint
+    // (Not perfect; we also just keep "others" as nouns candidates.)
+    const nounCandidates = items.filter((it) => {
+        const en = it.en.toLowerCase();
+        const ar = it.ar;
+        // If it looks like a noun (contains "/" or is a single word) we allow it
+        const enWords = en.split(/\s+/).filter(Boolean);
+        return enWords.length <= 3 || ar.length <= 12;
+    });
+
+    // verbs: if forms.present has content OR english starts with "to "
+    const verbs = items.filter((it) => {
+        const en = it.en.toLowerCase();
+        const hasForms =
+            it.forms &&
+            ((it.forms.present && Object.keys(it.forms.present).length > 0) ||
+                (it.forms.past && Object.keys(it.forms.past).length > 0) ||
+                (it.forms.future && Object.keys(it.forms.future).length > 0));
+        return hasForms || en.startsWith("to ");
+    });
+
+    const others = items;
+
+    return {
+        all: items,
+        greetings: uniqBy(greetings, (x) => x.id || x.ar || x.en),
+        nouns: uniqBy(nounCandidates, (x) => x.id || x.ar || x.en),
+        verbs: uniqBy(verbs, (x) => x.id || x.ar || x.en),
+        others: uniqBy(others, (x) => x.id || x.ar || x.en),
+    };
+}
+
+/**
+ * Generate translation sentences (not word=word) from lesson vocabulary
+ * @param {object} lesson - the lesson object (has vocabulary)
+ * @param {number} count - how many translation items to generate
+ * @returns {Array} translation items [{id,type,textAr,textEn}]
+ */
+function generateTranslationFromVocab(lesson, count = 10) {
+    const vocabCore = lesson?.vocabulary?.core || [];
+    const vocabExtra = lesson?.vocabulary?.extra || [];
+    const vocab = bucketVocabulary([...vocabCore, ...vocabExtra]);
+
+    const results = [];
+
+    // Some reusable fillers to make sentences natural
+    const names = ["سارة", "أحمد", "لينا", "كريم", "نابل", "هبة"];
+    const timesAr = ["اليوم", "هلّق", "بكرا"];
+    const timesEn = ["today", "now", "tomorrow"];
+
+    function addPair(en, ar) {
+        const textEn = normalizeText(en);
+        const textAr = normalizeText(ar);
+        if (!textEn || !textAr) return;
+
+        // avoid duplicates
+        const key = (textEn + "||" + textAr).toLowerCase();
+        if (results.some((r) => (r.textEn + "||" + r.textAr).toLowerCase() === key)) return;
+
+        // alternate directions roughly half/half
+        const type = results.length % 2 === 0 ? "enToAr" : "arToEn";
+
+        results.push({
+            id: `auto_t_${results.length + 1}`,
+            type,
+            textEn,
+            textAr,
+        });
+    }
+
+    // ---------- Template 1: Greeting + name ----------
+    // "Hello, I'm X." / "مرحبا، أنا X."
+    if (vocab.greetings.length) {
+        const g = pickRandom(vocab.greetings);
+        const helloAr = g?.ar || "مرحبا";
+        const helloEn = g?.en || "Hello";
+        const name = pickRandom(names);
+
+        addPair(`${helloEn}! I'm ${name}.`, `${helloAr}! أنا ${name}.`);
+    } else {
+        const name = pickRandom(names);
+        addPair(`Hello! I'm ${name}.`, `مرحبا! أنا ${name}.`);
+    }
+
+    // ---------- Template 2: How are you? + I'm fine ----------
+    // "How are you today? I'm fine." / "كيفك اليوم؟ أنا منيح/منيحة."
+    // If you have "كيفك" or "منيح" in vocab, use them, else fallback
+    const howAr =
+        pickRandom(vocab.others.filter((x) => x.ar.includes("كيف")))?.ar || "كيفك";
+    const howEn =
+        pickRandom(vocab.others.filter((x) => x.en.toLowerCase().includes("how are")))?.en ||
+        "How are you";
+    const fineAr =
+        pickRandom(vocab.others.filter((x) => x.ar.includes("منيح") || x.ar.includes("منيحة")))
+            ?.ar || "منيح";
+    const fineEn =
+        pickRandom(vocab.others.filter((x) => x.en.toLowerCase().includes("fine")))
+            ?.en || "I’m fine";
+
+    const tA = pickRandom(timesAr);
+    const tE = timesEn[timesAr.indexOf(tA)] || "today";
+    addPair(`${howEn} ${tE}? ${fineEn}.`, `${howAr} ${tA}؟ أنا ${fineAr}.`);
+
+    // ---------- Template 3: Nice to meet you ----------
+    // "Nice to meet you, X." / "تشرفنا يا X."
+    const meetAr =
+        pickRandom(vocab.others.filter((x) => x.ar.includes("تشرف")))?.ar || "تشرفنا";
+    const meetEn =
+        pickRandom(vocab.others.filter((x) => x.en.toLowerCase().includes("nice to meet")))
+            ?.en || "Nice to meet you";
+    const name2 = pickRandom(names);
+    addPair(`${meetEn}, ${name2}.`, `${meetAr} يا ${name2}.`);
+
+    // ---------- Template 4: Want + noun (biddi + noun) ----------
+    // We'll pick a noun candidate; if none, use "قهوة" (coffee)
+    const noun = pickRandom(vocab.nouns) || { ar: "قهوة", en: "coffee" };
+    // Natural sentence:
+    // "I want a coffee, please." / "بدي قهوة، لو سمحت."
+    addPair(
+        `I want ${noun.en || "coffee"}, please.`,
+        `بدي ${noun.ar || "قهوة"}، لو سمحت.`
+    );
+
+    // ---------- Template 5: Do you have + noun? ----------
+    // "Do you have ___?" / "عندك ___؟"
+    const noun2 = pickRandom(shuffle(vocab.nouns)) || { ar: "مي", en: "water" };
+    addPair(`Do you have ${noun2.en || "water"}?`, `عندك ${noun2.ar || "مي"}؟`);
+
+    // ---------- Template 6: My family / my work / my study style ----------
+    // If you have family nouns, use them, otherwise use generic
+    const familyWord =
+        pickRandom(vocab.others.filter((x) => x.en.toLowerCase().includes("family") || x.ar.includes("عيلة")))
+            ?.ar || "عيلتي";
+    const familyEn =
+        pickRandom(vocab.others.filter((x) => x.en.toLowerCase().includes("family")))
+            ?.en || "My family";
+
+    addPair(`${familyEn} is big.`, `${familyWord} كبيرة.`);
+
+    // ---------- Template 7: Goodbye + see you tomorrow ----------
+    const byeAr =
+        pickRandom(vocab.others.filter((x) => x.ar.includes("مع السلامة") || x.ar.includes("الله معك")))
+            ?.ar || "مع السلامة";
+    const byeEn =
+        pickRandom(vocab.others.filter((x) => x.en.toLowerCase().includes("goodbye")))
+            ?.en || "Goodbye";
+    addPair(`${byeEn}, see you tomorrow.`, `${byeAr}، بشوفك بكرا.`);
+
+    // ---------- Bonus: Use existing example sentences from vocab (if present) ----------
+    // These are already full sentences and strongly "from the lesson"
+    // We add a few of them if they exist, to reach target count.
+    const examplePairs = vocab.all
+        .filter((it) => it.exampleAr && it.exampleEn)
+        .map((it) => ({ en: it.exampleEn, ar: it.exampleAr }));
+
+    for (const ex of shuffle(examplePairs)) {
+        if (results.length >= count) break;
+        addPair(ex.en, ex.ar);
+    }
+
+    // If still not enough, generate variations with different nouns/times
+    while (results.length < count) {
+        const n = pickRandom(vocab.nouns) || { ar: "قهوة", en: "coffee" };
+        const ta = pickRandom(timesAr);
+        const te = timesEn[timesAr.indexOf(ta)] || "today";
+        addPair(
+            `I want ${n.en || "coffee"} ${te}.`,
+            `بدي ${n.ar || "قهوة"} ${ta}.`
+        );
+    }
+
+    return results.slice(0, count);
+}
+
+/**
+ * Ensure lesson has translation items (auto-generate if empty)
+ * Call this when opening a lesson or rendering the Translation tab.
+ */
+function ensureLessonTranslation(lesson, count = 10) {
+    if (!lesson.practice) lesson.practice = {};
+    if (!Array.isArray(lesson.practice.translation) || lesson.practice.translation.length === 0) {
+        lesson.practice.translation = generateTranslationFromVocab(lesson, count);
+    }
+}
+function safeArr(x) { return Array.isArray(x) ? x : []; }
+function txt(x) { return (x ?? "").toString().trim(); }
+function shuffleArray(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+function pick(arr) { return arr.length ? arr[Math.floor(Math.random() * arr.length)] : null; }
+function uniqPairs(items) {
+    const seen = new Set();
+    return items.filter(it => {
+        const key = (txt(it.textEn) + "||" + txt(it.textAr)).toLowerCase();
+        if (!txt(it.textEn) || !txt(it.textAr)) return false;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+    });
+}
+
+
+function generateTranslationItemsFromLesson(lesson, minCount = 7) {
+    const items = [];
+
+    const vocab = lesson?.vocabulary || {};
+    const core = safeArr(vocab.core);
+    const extra = safeArr(vocab.extra);
+    const allVocab = [...core, ...extra];
+
+    // 1) أخذ أمثلة من vocabulary (أفضل مصدر لأنه جمل جاهزة من المنهج)
+    for (const v of allVocab) {
+        const ar = txt(v.exampleAr);
+        const en = txt(v.exampleEn);
+        if (ar && en) {
+            items.push({ id: `ex_${txt(v.id) || Math.random()}`, textEn: en, textAr: ar });
+        }
+    }
+
+    // 2) أخذ جمل من الحوار (كل سطر pair مع ترجمته)
+    const lines = safeArr(lesson?.dialogue?.lines);
+    for (const line of lines) {
+        const ar = txt(line.ar);
+        const en = txt(line.en);
+        if (ar && en) {
+            items.push({ id: `dlg_${Math.random()}`, textEn: en, textAr: ar });
+        }
+    }
+
+    // 3) إذا لسه أقل من المطلوب: نولّد جمل بالقوالب
+    const nouns = allVocab
+        .map(v => ({ ar: txt(v.ar), en: txt(v.en) }))
+        .filter(v => v.ar || v.en);
+
+    const nameAr = ["سارة", "أحمد", "لينا", "كريم", "هبة", "نابل"];
+    const nameEn = ["Sara", "Ahmad", "Lina", "Karim", "Hiba", "Nabil"];
+
+    const getNoun = () => pick(nouns) || { ar: "قهوة", en: "coffee" };
+
+    const templates = [
+        () => {
+            const i = Math.floor(Math.random() * nameAr.length);
+            return { en: `Hello! I'm ${nameEn[i]}.`, ar: `مرحبا! أنا ${nameAr[i]}.` };
+        },
+        () => {
+            return { en: `How are you today?`, ar: `كيفك اليوم؟` };
+        },
+        () => {
+            const n = getNoun();
+            return { en: `I want ${n.en || "coffee"}, please.`, ar: `بدي ${n.ar || "قهوة"}، لو سمحت.` };
+        },
+        () => {
+            const n = getNoun();
+            return { en: `Do you have ${n.en || "water"}?`, ar: `عندك ${n.ar || "مي"}؟` };
+        },
+        () => {
+            const n = getNoun();
+            return { en: `This is ${n.en || "it"}.`, ar: `هاد ${n.ar || "هاد"}.` };
+        },
+        () => {
+            return { en: `Nice to meet you.`, ar: `تشرفنا.` };
+        },
+        () => {
+            return { en: `Goodbye, see you tomorrow.`, ar: `مع السلامة، بشوفك بكرا.` };
+        },
+    ];
+
+    let guard = 0;
+    while (items.length < minCount && guard < 50) {
+        const t = pick(templates);
+        if (t) {
+            const out = t();
+            items.push({ id: `auto_${items.length + 1}`, textEn: out.en, textAr: out.ar });
+        }
+        guard++;
+    }
+
+    return uniqPairs(items).slice(0, Math.max(minCount, 7));
+}
+
+
+function ensureTranslationItems(lesson, minCount = 7) {
+    if (!lesson.practice) lesson.practice = {};
+    const list = safeArr(lesson.practice.translation);
+
+    if (list.length > 0) return; // موجودة مسبقاً
+
+    const generated = generateTranslationItemsFromLesson(lesson, minCount);
+
+    // نحولها لصيغة القالب: type + textEn/textAr
+    lesson.practice.translation = generated.map((it, idx) => ({
+        id: it.id || `t_${idx + 1}`,
+        type: idx % 2 === 0 ? "enToAr" : "arToEn",
+        textEn: it.textEn,
+        textAr: it.textAr,
+    }));
+}
 
 
 // ========================= VOCAB MODAL STATE =========================
@@ -11312,6 +11717,13 @@ const vocabModalState = {
     showAr: true,
     showEn: true,
     showArabeezy: true,
+};
+const translationState = {
+    items: [],
+    index: 0,
+    hidePrompt: false,
+    hideAnswer: false,
+    shuffled: false,
 };
 
 // ========================= HELPERS =========================
@@ -12906,47 +13318,203 @@ function renderDialogueTab(container, lesson) {
 
 // Grammar
 function renderGrammarTab(container, lesson) {
-    const title = document.createElement("h3");
-    title.textContent = "Grammar Focus";
+    // هنا صار "Translation"
+    ensureTranslationItems(lesson, 7);
 
-    const grid = document.createElement("div");
-    grid.className = "grammar-grid";
+    const list = safeArr(lesson?.practice?.translation);
+    translationState.items = list;
+    translationState.index = 0;
+    translationState.hidePrompt = false;
+    translationState.hideAnswer = false;
+    translationState.shuffled = false;
 
-    lesson.grammar.forEach((g) => {
-        const card = document.createElement("div");
-        card.className = "grammar-card";
+    // زر "تم"
+    const doneBar = document.createElement("div");
+    doneBar.className = "section-done-bar";
 
-        const t = document.createElement("div");
-        t.className = "grammar-item-title";
-        t.textContent = g.title;
+    const doneText = document.createElement("span");
+    doneText.className = "translation-muted";
+    doneText.textContent = "بعد ما تخلص ترجمة الجمل اضغط تم لإنهاء القسم.";
 
-        const desc = document.createElement("div");
-        desc.textContent = g.description;
-
-        card.appendChild(t);
-        card.appendChild(desc);
-        grid.appendChild(card);
+    const doneBtn = document.createElement("button");
+    doneBtn.className = "btn btn--outline btn--sm";
+    doneBtn.textContent = "✓ تم إنهاء قسم الترجمة";
+    doneBtn.addEventListener("click", () => {
+        // لأن المفتاح الداخلي ما زال grammar
+        setStudentProgressField("grammar", true);
     });
 
-    const btn = document.createElement("button");
-    btn.className = "btn btn--primary btn--sm";
-    btn.textContent = "Mark Grammar as Done";
-    btn.addEventListener("click", () => setStudentProgressField("grammar", true));
+    doneBar.appendChild(doneText);
+    doneBar.appendChild(doneBtn);
+    container.appendChild(doneBar);
 
-    container.appendChild(title);
-    container.appendChild(grid);
-    container.appendChild(btn);
+    // Toolbar (إخفاء مرتب، مش معجوق)
+    const toolbar = document.createElement("div");
+    toolbar.className = "translation-toolbar";
 
-    if (appState.teacherMode) {
-        const note = document.createElement("p");
-        note.className = "teacher-edit-note";
-        note.textContent =
-            "Teacher Mode: To change grammar points, use the Teacher Dashboard form (Edit Lesson Content) where you can add/edit/delete rules.";
-        container.appendChild(note);
+    const left = document.createElement("div");
+    left.className = "group";
+
+    const btnHidePrompt = document.createElement("button");
+    btnHidePrompt.className = "btn btn--ghost btn--sm";
+    btnHidePrompt.textContent = "Hide prompt";
+
+    const btnHideAnswer = document.createElement("button");
+    btnHideAnswer.className = "btn btn--ghost btn--sm";
+    btnHideAnswer.textContent = "Hide answer";
+
+    const btnShuffle = document.createElement("button");
+    btnShuffle.className = "btn btn--ghost btn--sm";
+    btnShuffle.textContent = "Shuffle";
+
+    const btnReset = document.createElement("button");
+    btnReset.className = "btn btn--ghost btn--sm";
+    btnReset.textContent = "Reset";
+
+    left.appendChild(btnHidePrompt);
+    left.appendChild(btnHideAnswer);
+    left.appendChild(btnShuffle);
+    left.appendChild(btnReset);
+
+    const right = document.createElement("div");
+    right.className = "group";
+
+    const counter = document.createElement("span");
+    counter.className = "translation-muted";
+    counter.textContent = list.length ? `1 / ${list.length}` : "0 / 0";
+
+    const btnPrev = document.createElement("button");
+    btnPrev.className = "btn btn--ghost btn--sm";
+    btnPrev.textContent = "⬅ Prev";
+
+    const btnNext = document.createElement("button");
+    btnNext.className = "btn btn--ghost btn--sm";
+    btnNext.textContent = "Next ➡";
+
+    right.appendChild(btnPrev);
+    right.appendChild(btnNext);
+    right.appendChild(counter);
+
+    toolbar.appendChild(left);
+    toolbar.appendChild(right);
+    container.appendChild(toolbar);
+
+    // Card container
+    const cardHost = document.createElement("div");
+    container.appendChild(cardHost);
+
+    // Render function
+    function renderTranslationCard() {
+        cardHost.innerHTML = "";
+
+        const item = translationState.items[translationState.index];
+        if (!item) {
+            const p = document.createElement("p");
+            p.className = "translation-muted";
+            p.textContent = "No translation items available.";
+            cardHost.appendChild(p);
+            return;
+        }
+
+        const type = item.type === "arToEn" ? "Arabic → English" : "English → Arabic";
+
+        const card = document.createElement("div");
+        card.className = "translation-card";
+
+        const badge = document.createElement("span");
+        badge.className = "translation-badge";
+        badge.textContent = type;
+
+        const prompt = document.createElement("div");
+        prompt.className = "translation-prompt";
+
+        const answer = document.createElement("div");
+        answer.className = "translation-answer";
+
+        // prompt/answer content
+        if (item.type === "enToAr") {
+            prompt.textContent = translationState.hidePrompt ? "••••••••" : `EN: ${txt(item.textEn)}`;
+            answer.textContent = translationState.hideAnswer ? "••••••••" : `AR: ${txt(item.textAr)}`;
+        } else {
+            prompt.textContent = translationState.hidePrompt ? "••••••••" : `AR: ${txt(item.textAr)}`;
+            answer.textContent = translationState.hideAnswer ? "••••••••" : `EN: ${txt(item.textEn)}`;
+        }
+
+        const btnShow = document.createElement("button");
+        btnShow.className = "btn btn--outline btn--sm";
+        btnShow.textContent = "Show answer";
+
+        btnShow.addEventListener("click", () => {
+            const isVisible = answer.classList.toggle("is-visible");
+            btnShow.textContent = isVisible ? "Hide answer" : "Show answer";
+        });
+
+        const footer = document.createElement("div");
+        footer.className = "translation-footer";
+
+        const tip = document.createElement("span");
+        tip.className = "translation-muted";
+        tip.textContent = "Try to say it out loud before showing the answer.";
+
+        footer.appendChild(tip);
+        footer.appendChild(btnShow);
+
+        card.appendChild(badge);
+        card.appendChild(prompt);
+        card.appendChild(footer);
+        card.appendChild(answer);
+
+        cardHost.appendChild(card);
+
+        counter.textContent = `${translationState.index + 1} / ${translationState.items.length}`;
+
+        // Update toolbar button text states
+        btnHidePrompt.textContent = translationState.hidePrompt ? "Show prompt" : "Hide prompt";
+        btnHideAnswer.textContent = translationState.hideAnswer ? "Show answer" : "Hide answer";
     }
 
-    renderSectionStatus(container, "grammar");
+    // toolbar actions
+    btnHidePrompt.addEventListener("click", () => {
+        translationState.hidePrompt = !translationState.hidePrompt;
+        renderTranslationCard();
+    });
+
+    btnHideAnswer.addEventListener("click", () => {
+        translationState.hideAnswer = !translationState.hideAnswer;
+        renderTranslationCard();
+    });
+
+    btnShuffle.addEventListener("click", () => {
+        translationState.items = shuffleArray(translationState.items);
+        translationState.index = 0;
+        translationState.shuffled = true;
+        renderTranslationCard();
+    });
+
+    btnReset.addEventListener("click", () => {
+        translationState.index = 0;
+        translationState.hidePrompt = false;
+        translationState.hideAnswer = false;
+        renderTranslationCard();
+    });
+
+    btnPrev.addEventListener("click", () => {
+        if (!translationState.items.length) return;
+        translationState.index =
+            (translationState.index - 1 + translationState.items.length) % translationState.items.length;
+        renderTranslationCard();
+    });
+
+    btnNext.addEventListener("click", () => {
+        if (!translationState.items.length) return;
+        translationState.index =
+            (translationState.index + 1) % translationState.items.length;
+        renderTranslationCard();
+    });
+
+    renderTranslationCard();
 }
+
 
 // Practice
 function renderPracticeTab(container, lesson) {
@@ -14772,6 +15340,11 @@ async function handleCreateStudentSubmit(e) {
         }
     }
 }
+
+
+
+
+
 
 
 

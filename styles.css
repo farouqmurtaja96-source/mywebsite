@@ -358,6 +358,90 @@ body.home-only main {
     max-width: 520px;
 }
 
+/* ===== Translation UI ===== */
+.translation-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 0 12px;
+    padding: 10px;
+    border-radius: 12px;
+    background: var(--bg-elevated);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.translation-toolbar .group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.translation-card {
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    background: var(--bg-elevated);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.translation-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: var(--text-muted);
+    width: fit-content;
+}
+
+.translation-prompt {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.translation-answer {
+    padding-top: 8px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.12);
+    opacity: 0.95;
+    display: none;
+}
+
+.translation-answer.is-visible {
+    display: block;
+}
+
+.translation-footer {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.translation-muted {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.section-done-bar {
+    margin: 8px 0 12px;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(0, 128, 0, 0.03);
+    border: 1px dashed rgba(0, 128, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+}
 
 /* Generic sections */
 .section-header {
