@@ -11179,6 +11179,17 @@ const defaultLessons = {
 // actual lessons object (will be filled from defaults + localStorage)
 const lessons = {};
 
+
+let cloudSaveTimer = null;
+
+function scheduleCloudSave() {
+    if (!appState.currentUser || appState.currentUser.role !== "teacher") return;
+    clearTimeout(cloudSaveTimer);
+    cloudSaveTimer = setTimeout(() => {
+        saveStudentsToCloud().catch(console.error);
+    }, 600); // نصف ثانية بعد آخر تغيير
+}
+
 // ========================= STATE =========================
 const appState = {
     students: [],
@@ -12075,7 +12086,7 @@ async function saveStudentsToCloud() {
     snap.forEach((doc) => batch.delete(doc.ref));
 
     appState.students.forEach((s) => {
-        const docRef = ref.doc();
+        const docRef = ref.doc(s.id);
         batch.set(docRef, {
             teacherId: appState.currentUser.uid,
             name: s.name,
@@ -12089,11 +12100,11 @@ async function saveStudentsToCloud() {
     await batch.commit();
 }
 
-function saveStudentsToLS() {
+function saveStudentsToLS({ skipCloud = false } = {}) {
     localStorage.setItem(LS_STUDENTS_KEY, JSON.stringify(appState.students));
-    // 🔁 كمان نرفع للسحابة (لما يكون معلم مسجّل)
-    saveStudentsToCloud().catch(console.error);
+    if (!skipCloud) scheduleCloudSave();
 }
+
 
 async function syncTeacherStudentsFromCloud() {
     if (!appState.currentUser || appState.currentUser.role !== "teacher") return;
@@ -12115,7 +12126,7 @@ async function syncTeacherStudentsFromCloud() {
     });
 
     appState.students = loaded;
-    saveStudentsToLS(); // نخزن نسخة محلية
+    saveStudentsToLS({ skipCloud: true }); // نخزن نسخة محلية
 }
 
 function loadStudentsFromLS() {
