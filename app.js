@@ -12733,7 +12733,7 @@ function renderLevels() {
     const levelsDef = [
         {
             level: "Beginner",
-            units: ["Greetings", "Daily Routine", "Food & Drink", "Family"],
+            units: ["Greetings", "Daily Routine", "Food & Drink", "Family", "trans"],
         },
         {
             level: "Pre-Intermediate",
