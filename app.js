@@ -3579,8 +3579,8 @@ const defaultLessons = {
         // ====================================
         // DIALOGUE (multi-scene – from home to class)
         // ====================================
-        "dialogue": {
-            "lines": [
+        dialogue: {
+            lines: [
                 {
                     "speaker": "Malek",
                     "ar": "لَو سَمَحْتي، كيف بوْصَل عَالجامْعَة مِن هان؟",
@@ -4450,8 +4450,8 @@ const defaultLessons = {
         // ====================================
         // DIALOGUE (class + project + work + future)
         // ====================================
-        "dialogue": {
-            "lines": [
+        dialogue: {
+            lines: [
                 {
                     "speaker": "Majd",
                     "ar": "صَباح الخير يا سارة، كِيف دَوامِك اليوم؟",
@@ -5247,8 +5247,8 @@ const defaultLessons = {
         // ====================================
         // DIALOGUE (multi-scene: feeling sick → clinic → small emergency)
         // ====================================
-        "dialogue": {
-            "lines": [
+        dialogue: {
+            lines: [
                 {
                     "speaker": "Hala",
                     "ar": "يا مِنى، وَجْهَك مِش مْريِح، كِيف حاسّة حالِك؟",
@@ -6085,8 +6085,8 @@ const defaultLessons = {
         // ====================================
         // DIALOGUE (moving in, problems, landlord & neighbour)
         // ====================================
-        "dialogue": {
-            "lines": [
+        dialogue: {
+            lines: [
                 {
                     "speaker": "Rami",
                     "ar": "مَسّا الخير يا خالِد، نِقَلْت عَالشِّقّة الجْديدَة أَخِيرًا!",
@@ -7529,7 +7529,7 @@ const defaultLessons = {
         // DIALOGUE (3 LONG SCENES)
         // ====================================
         dialogue: {
-            "lines": [
+            lines: [
                 {
                     "speaker": "Lina",
                     "ar": "صَباح الخير! كِيف الجَوّ بُرا؟",

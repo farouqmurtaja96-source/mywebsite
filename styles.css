@@ -1212,7 +1212,7 @@ select:focus {
     font-weight: 700;
     font-size: 0.85em;
     min-width: 1.2em;
-    margin-right: 20px;
+
 
 }
 
@@ -1220,7 +1220,7 @@ select:focus {
     font-weight: 700;
     font-size: 0.85em;
     min-width: 1.2em;
-    margin-left: 40px;
+    margin-left: 10px;
 }
 
 .dialogue-text {
