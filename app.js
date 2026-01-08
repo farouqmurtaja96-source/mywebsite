@@ -6,6 +6,153 @@ const LS_CUSTOM_UNITS_KEY = "pal_arabic_custom_units";
 const LS_BACKUP_SETTINGS_KEY = "pal_arabic_backup_settings";
 const LS_WHITEBOARD_PREFIX = "pal_arabic_whiteboard_";
 const LS_USER_ROLE_KEY = "pal_arabic_user_role";
+// ========================= CLOUD SYNC (LESSON TEMPLATES) =========================
+const CLOUD_LESSONS_COLLECTION = "lessonTemplates"; // Firestore collection name
+const CLOUD_LESSONS_DOC_SHAPE_VERSION = 1;
+
+// Local buffer to avoid overwriting active teacher edits when a remote update arrives
+const remoteLessonBuffer = {}; // { [lessonId]: lessonObj }
+
+function getServerTimestamp() {
+    return firebase.firestore.FieldValue.serverTimestamp();
+}
+
+async function loadLessonsFromCloudOnce() {
+    if (!window.db) return;
+    try {
+        const snap = await window.db.collection(CLOUD_LESSONS_COLLECTION).get();
+        snap.forEach((doc) => {
+            const data = doc.data() || {};
+            const lesson = data.lesson || null;
+            if (lesson && typeof lesson === "object") {
+                lessons[doc.id] = lesson;
+                // keep a local offline copy too
+                saveLessonToLS(doc.id);
+            }
+        });
+    } catch (e) {
+        console.warn("loadLessonsFromCloudOnce failed:", e);
+    }
+}
+
+function subscribeLessonsFromCloud() {
+    if (!window.db) return () => { };
+    try {
+        return window.db.collection(CLOUD_LESSONS_COLLECTION).onSnapshot(
+            (snap) => {
+                snap.docChanges().forEach((ch) => {
+                    const id = ch.doc.id;
+                    const data = ch.doc.data() || {};
+                    const lesson = data.lesson || null;
+                    if (!lesson || typeof lesson !== "object") return;
+
+                    // If teacher is actively editing this lesson, don't overwrite their local editor state.
+                    const isTeacherEditingThis =
+                        appState &&
+                        appState.currentUser &&
+                        appState.currentUser.role === "teacher" &&
+                        appState.teacherEditingLessonId === id;
+
+                    if (isTeacherEditingThis) {
+                        remoteLessonBuffer[id] = lesson;
+                        // Optional: show a gentle UI hint if editor exists
+                        const banner = document.getElementById("tdRemoteUpdateBanner");
+                        if (banner) banner.classList.remove("hidden");
+                        return;
+                    }
+
+                    lessons[id] = lesson;
+                    saveLessonToLS(id);
+
+                    // If user is viewing this lesson right now, refresh view
+                    if (appState && appState.currentLessonId === id) {
+                        try {
+                            renderLesson();
+                        } catch { }
+                    }
+                    // If user is on levels page, refresh units display (titles may change)
+                    try {
+                        const levelsScreen = document.getElementById("levels-screen");
+                        if (levelsScreen && levelsScreen.classList.contains("screen--active")) {
+                            renderLevels();
+                        }
+                    } catch { }
+                });
+            },
+            (err) => console.warn("subscribeLessonsFromCloud error:", err)
+        );
+    } catch (e) {
+        console.warn("subscribeLessonsFromCloud failed:", e);
+        return () => { };
+    }
+}
+
+async function saveLessonToCloud(lessonId) {
+    if (!window.db) return;
+    try {
+        await window.db.collection(CLOUD_LESSONS_COLLECTION).doc(lessonId).set(
+            {
+                lesson: lessons[lessonId],
+                shapeVersion: CLOUD_LESSONS_DOC_SHAPE_VERSION,
+                updatedAt: getServerTimestamp(),
+                updatedBy: appState?.currentUser?.uid || null,
+            },
+            { merge: true }
+        );
+    } catch (e) {
+        console.warn("saveLessonToCloud failed:", e);
+    }
+}
+
+
+async function deleteLessonFromCloud(lessonId) {
+    if (!window.db) return;
+    try {
+        await window.db.collection(CLOUD_LESSONS_COLLECTION).doc(lessonId).delete();
+    } catch (e) {
+        console.warn("deleteLessonFromCloud failed:", e);
+    }
+}
+
+
+// =========================
+// Lesson Cloud Sync - Lazy (to reduce reads)
+// =========================
+function startLessonCloudSync() {
+    if (!window.db) return;
+    if (appState._lessonsSyncStarted) return;
+    appState._lessonsSyncStarted = true;
+
+    // 1) Load once (pull latest cloud versions)
+    loadLessonsFromCloudOnce().then(() => {
+        // 2) Start realtime listener only while in Units/Lesson screens
+        if (!appState._unsubscribeLessons) {
+            appState._unsubscribeLessons = subscribeLessonsFromCloud();
+        }
+    });
+}
+
+function stopLessonCloudSync() {
+    if (appState._unsubscribeLessons) {
+        try { appState._unsubscribeLessons(); } catch { }
+        appState._unsubscribeLessons = null;
+    }
+    appState._lessonsSyncStarted = false;
+}
+
+async function syncLessonsNow({ showToast = true } = {}) {
+    await loadLessonsFromCloudOnce();
+    if (showToast) toast("Synced lessons from cloud.");
+}
+
+function setLessonSyncForScreen(screenId) {
+    // Only keep realtime listener on while user is in Units/Lesson view
+    const shouldListen = screenId === "levels-screen" || screenId === "lesson-screen";
+    if (shouldListen) startLessonCloudSync();
+    else stopLessonCloudSync();
+}
+
+
 
 const LESSON_ID_GREETING = "Beginner-Greetings-L1";
 const LESSON_ID_DAILY_ROUTINE = "Beginner-DailyRoutine-L1";
@@ -11320,7 +11467,7 @@ auth.onAuthStateChanged(async (user) => {
         if (role === "teacher") {
             await syncTeacherStudentsFromCloud?.();
             renderStudents();
-            renderTeacherLessonList();
+            renderTeacherPicker();
             goToTeacherDashboard();
         } else {
             appState.students = [
@@ -12028,7 +12175,7 @@ function applyBackupSnapshot(snapshot) {
 
     // إعادة رسم الواجهات الرئيسية
     renderStudents();
-    renderTeacherLessonList();
+    renderTeacherPicker();
     if (getCurrentStudent()) {
         renderLevels();
     }
@@ -12246,6 +12393,7 @@ function showScreen(id) {
 }
 
 function goToHome() {
+    persistResumeBeforeNav();
     // ندخل وضع الصفحة الرئيسية فقط
     document.body.classList.add("home-only");
 
@@ -12253,6 +12401,7 @@ function goToHome() {
     showScreen("home-screen");
 }
 function goToStudents() {
+    persistResumeBeforeNav();
     // لو المستخدم طالب أو مش مسجل → ما إله دخل في صفحة البروفايلات
     if (!appState.currentUser || appState.currentUser.role === "student") {
         goToLevels();
@@ -12264,6 +12413,7 @@ function goToStudents() {
 }
 
 function goToLevels() {
+    persistResumeBeforeNav();
     document.body.classList.remove("home-only");
     if (!getCurrentStudent()) {
         goToStudents();
@@ -12588,6 +12738,8 @@ function buildLessonExportHtml(lesson, options) {
     </p>
 </body>
 </html>
+        </div>
+      </div>
     `;
 }
 
@@ -12609,6 +12761,7 @@ function openPrintWindow(html) {
 }
 
 function goToTeacherDashboard() {
+    persistResumeBeforeNav();
     // لو مش مسجل، أو مش مدرّس:
     if (!appState.currentUser || appState.currentUser.role !== "teacher") {
         // بدل ما نعمل alert بس، نفتحه على مودال تسجيل دخول المدرّس
@@ -12621,7 +12774,7 @@ function goToTeacherDashboard() {
     }
     document.body.classList.remove("home-only")
     showScreen("teacher-dashboard-screen");
-    renderTeacherLessonList();
+    renderTeacherPicker();
 }
 
 
@@ -12689,7 +12842,10 @@ function renderStudents() {
         btnContinue.textContent = "Continue Learning";
         btnContinue.addEventListener("click", () => {
             appState.currentStudentId = student.id;
-            goToLevels();
+            // If teacher saved a resume spot for this student, go there
+            if (!tryResumeStudent(student)) {
+                goToLevels();
+            }
         });
 
         const btnDelete = document.createElement("button");
@@ -12733,7 +12889,7 @@ function renderLevels() {
     const levelsDef = [
         {
             level: "Beginner",
-            units: ["Greetings", "Daily Routine", "Food & Drink", "Family"],
+            units: ["Greetings", "Daily Routine", "Food & Drink", "Family", "trans"],
         },
         {
             level: "Pre-Intermediate",
@@ -12754,7 +12910,8 @@ function renderLevels() {
         const titleRow = document.createElement("div");
         titleRow.className = "level-card__title";
 
-        const title = document.createElement("h3");
+        const title = document.createElement("h4");
+        title.className = "td-lessonitem__title";
         title.textContent = lvl.level;
 
         const badge = document.createElement("span");
@@ -12884,9 +13041,63 @@ function updateSectionStatusBadge(sectionKey) {
     badge.textContent = done ? "✓ Section completed" : "Section not completed yet";
 }
 
+
+
+function persistResumeBeforeNav() {
+    // Only save if we are currently in a lesson with an active student
+    try {
+        if (appState && appState.currentLessonId && appState.currentStudentId) {
+            saveResumeSpot({ silent: true });
+        }
+    } catch { }
+}
+
+// =======================
+// Resume Last Spot (per student)
+// =======================
+function ensureStudentLastSeen(student) {
+    if (!student) return;
+    if (!student.lastSeen || typeof student.lastSeen !== "object") {
+        student.lastSeen = null;
+    }
+}
+
+function saveResumeSpot({ silent = false } = {}) {
+    const student = getCurrentStudent();
+    if (!student) return;
+    ensureStudentLastSeen(student);
+
+    student.lastSeen = {
+        lessonId: appState.currentLessonId,
+        tab: appState.currentTab || "overview",
+        at: Date.now(),
+    };
+
+    saveStudentsToLS();
+    // if teacher, also save student cloud snapshot (debounced)
+    try { scheduleCloudSave(); } catch { }
+
+    if (!silent) {
+        toast("Saved! Next time this student will open right here.");
+    }
+}
+
+function tryResumeStudent(student) {
+    if (!student || !student.lastSeen) return false;
+    const { lessonId, tab } = student.lastSeen || {};
+    if (!lessonId || !lessons[lessonId]) return false;
+
+    appState.currentLessonId = lessonId;
+    appState.currentTab = tab || "overview";
+    goToLessonView({ teacherMode: false });
+    return true;
+}
+
 // Tabs
 function setActiveTab(tabKey) {
     appState.currentTab = tabKey;
+    // Auto-save student's last spot whenever they switch tabs
+    try { saveResumeSpot({ silent: true }); } catch { }
     $all(".lesson-tab").forEach((btn) =>
         btn.classList.toggle("lesson-tab--active", btn.dataset.tab === tabKey)
     );
@@ -13111,6 +13322,7 @@ function handleAddVocabItem(lesson, groupKey) {
         exampleEn,
     });
     saveLessonToLS(appState.currentLessonId);
+    saveLessonToCloud(appState.currentLessonId);
     setActiveTab("vocabulary");
 }
 
@@ -13154,6 +13366,7 @@ function handleEditVocabItems(lesson) {
         }
     }
     saveLessonToLS(appState.currentLessonId);
+    saveLessonToCloud(appState.currentLessonId);
     setActiveTab("vocabulary");
 }
 
@@ -13207,7 +13420,8 @@ function renderDialogueTab(container, lesson) {
     header.style.alignItems = "center";
     header.style.gap = "8px";
 
-    const title = document.createElement("h3");
+    const title = document.createElement("h4");
+    title.className = "td-lessonitem__title";
     title.textContent = "Model Dialogue";
 
     const controls = document.createElement("div");
@@ -13529,7 +13743,8 @@ function renderGrammarTab(container, lesson) {
 
 // Practice
 function renderPracticeTab(container, lesson) {
-    const title = document.createElement("h3");
+    const title = document.createElement("h4");
+    title.className = "td-lessonitem__title";
     title.textContent = "Practice – Quiz & Role-play";
 
     const quizBlock = document.createElement("div");
@@ -13617,7 +13832,8 @@ function renderHomeworkTab(container, lesson) {
     const student = getCurrentStudent();
     const progress = student && getStudentProgress(student, appState.currentLessonId);
 
-    const title = document.createElement("h3");
+    const title = document.createElement("h4");
+    title.className = "td-lessonitem__title";
     title.textContent = "Homework";
 
     const text = document.createElement("p");
@@ -13703,7 +13919,8 @@ function shuffleArray(arr) {
 }
 
 function renderReviewTab(container, lesson) {
-    const title = document.createElement("h3");
+    const title = document.createElement("h4");
+    title.className = "td-lessonitem__title";
     title.textContent = "Quick Review – Flashcards";
 
     const all = [...lesson.vocabulary.core, ...lesson.vocabulary.extra];
@@ -13813,7 +14030,8 @@ function renderReviewTab(container, lesson) {
 
 // Teacher notes
 function renderTeacherNotesTab(container, lesson) {
-    const title = document.createElement("h3");
+    const title = document.createElement("h4");
+    title.className = "td-lessonitem__title";
     title.textContent = "Teacher Notes";
 
     const info = document.createElement("p");
@@ -13830,6 +14048,7 @@ function renderTeacherNotesTab(container, lesson) {
     textarea.addEventListener("change", () => {
         lesson.teacherNotes.myNotes = textarea.value;
         saveLessonToLS(appState.currentLessonId);
+        saveLessonToCloud(appState.currentLessonId);
     });
 
     container.appendChild(title);
@@ -13846,10 +14065,153 @@ function updateTeacherTabsVisibility() {
 }
 
 // ========================= TEACHER DASHBOARD =========================
+
+function getLessonIdsSorted() {
+    return Object.keys(lessons).sort((a, b) => {
+        const la = lessons[a]?.meta?.level || "";
+        const lb = lessons[b]?.meta?.level || "";
+        const ua = lessons[a]?.meta?.unit || "";
+        const ub = lessons[b]?.meta?.unit || "";
+        const ta = lessons[a]?.meta?.lessonTitle || "";
+        const tb = lessons[b]?.meta?.lessonTitle || "";
+        return (la + ua + ta).localeCompare(lb + ub + tb);
+    });
+}
+
+function getUniqueUnits() {
+    const units = new Set();
+    getLessonIdsSorted().forEach((id) => {
+        const u = (lessons[id]?.meta?.unit || "").trim();
+        if (u) units.add(u);
+    });
+    return Array.from(units).sort((a, b) => a.localeCompare(b));
+}
+
+function renderTeacherPicker() {
+    const unitSel = document.getElementById("tdUnitSelect");
+    const lessonSel = document.getElementById("tdLessonSelect");
+    const sectionSel = document.getElementById("tdPickSection");
+    const btnEdit = document.getElementById("tdEditSelected");
+    const btnOpen = document.getElementById("tdOpenSelected");
+    const btnDelete = document.getElementById("tdDeleteSelected");
+    const btnSync = document.getElementById("tdSyncLessonsNow");
+
+    // If picker UI isn't present, fall back to the full list
+    if (!unitSel || !lessonSel || !sectionSel || !btnEdit || !btnOpen || !btnDelete) {
+        renderTeacherPicker();
+        return;
+    }
+
+    // Hide the long list to reduce clutter (still present for compatibility)
+    const listEl = document.getElementById("teacherLessonList");
+    if (listEl) listEl.style.display = "none";
+
+    const units = getUniqueUnits();
+    const savedUnit = localStorage.getItem("td_selected_unit") || "";
+    const savedLesson = localStorage.getItem("td_selected_lesson") || "";
+    const savedPickSection = localStorage.getItem("td_pick_section") || "overview";
+
+    // Fill unit select
+    unitSel.innerHTML = "";
+    const optAll = document.createElement("option");
+    optAll.value = "";
+    optAll.textContent = "All units";
+    unitSel.appendChild(optAll);
+
+    units.forEach((u) => {
+        const opt = document.createElement("option");
+        opt.value = u;
+        opt.textContent = u;
+        unitSel.appendChild(opt);
+    });
+
+    if (savedUnit && units.includes(savedUnit)) unitSel.value = savedUnit;
+
+    // restore last picked section
+    if (sectionSel) {
+        sectionSel.value = savedPickSection;
+        sectionSel.onchange = () => localStorage.setItem("td_pick_section", sectionSel.value || "overview");
+    }
+
+    function fillLessons() {
+        const unit = unitSel.value;
+        const ids = getLessonIdsSorted().filter((id) => {
+            const u = (lessons[id]?.meta?.unit || "").trim();
+            return !unit || u === unit;
+        });
+
+        lessonSel.innerHTML = "";
+        ids.forEach((id) => {
+            const lesson = lessons[id];
+            const opt = document.createElement("option");
+            opt.value = id;
+            opt.textContent = `${lesson.meta.level} • ${lesson.meta.unit} • ${lesson.meta.lessonTitle}`;
+            lessonSel.appendChild(opt);
+        });
+
+        // restore last selected lesson if still in filtered set
+        if (savedLesson && ids.includes(savedLesson)) lessonSel.value = savedLesson;
+        else if (ids.length) lessonSel.value = ids[0];
+
+        localStorage.setItem("td_selected_unit", unitSel.value || "");
+        localStorage.setItem("td_selected_lesson", lessonSel.value || "");
+    }
+
+    fillLessons();
+
+    unitSel.onchange = () => {
+        localStorage.setItem("td_selected_unit", unitSel.value || "");
+        fillLessons();
+    };
+
+    lessonSel.onchange = () => {
+        localStorage.setItem("td_selected_lesson", lessonSel.value || "");
+    };
+
+    btnEdit.onclick = () => {
+        const id = lessonSel.value;
+        if (!id) return;
+        const picked = (sectionSel && sectionSel.value) ? sectionSel.value : (localStorage.getItem("td_pick_section") || "overview");
+        renderTeacherEditor(id, null, picked);
+    };
+
+    btnOpen.onclick = () => {
+        const id = lessonSel.value;
+        if (!id) return;
+        appState.currentLessonId = id;
+        goToLessonView({ teacherMode: false });
+    };
+
+    if (btnSync) {
+        btnSync.onclick = async () => {
+            await loadLessonsFromCloudOnce();
+            // refresh picker lists
+            renderTeacherPicker();
+            alert("Synced lessons from online.");
+        };
+    }
+
+    btnDelete.onclick = () => {
+        const id = lessonSel.value;
+        if (!id) return;
+        if (!confirm("Delete this lesson template? This cannot be undone.")) return;
+        delete lessons[id];
+        localStorage.removeItem(LS_LESSON_PREFIX + id);
+        try { deleteLessonFromCloud(id); } catch { }
+        // refresh selects
+        renderTeacherPicker();
+        const editor = $("#teacherEditor");
+        editor.style.display = "none";
+        editor.innerHTML = "";
+    };
+}
+
+
 function renderTeacherLessonList() {
     const listEl = $("#teacherLessonList");
     listEl.innerHTML = "";
     const ids = Object.keys(lessons);
+    const q = (document.getElementById("tdLessonSearch")?.value || "").trim().toLowerCase();
     if (!ids.length) {
         const p = document.createElement("p");
         p.className = "empty-state";
@@ -13859,75 +14221,84 @@ function renderTeacherLessonList() {
         return;
     }
 
-    ids.forEach((id) => {
-        const lesson = lessons[id];
-        const card = document.createElement("article");
-        card.className = "card card--lesson";
+    ids
+        .filter((id) => {
+            if (!q) return true;
+            const lesson = lessons[id] || {};
+            const hay = `${id} ${lesson?.meta?.level || ""} ${lesson?.meta?.unit || ""} ${lesson?.meta?.lessonTitle || ""}`.toLowerCase();
+            return hay.includes(q);
+        })
+        .forEach((id) => {
+            const lesson = lessons[id];
+            const card = document.createElement("article");
+            card.className = "td-lessonitem" + (appState.currentLessonId === id ? " td-lessonitem--active" : "");
 
-        const title = document.createElement("h3");
-        title.textContent = `${lesson.meta.level} – ${lesson.meta.unit}`;
+            const title = document.createElement("h4");
+            title.className = "td-lessonitem__title";
+            title.textContent = `${lesson.meta.level} – ${lesson.meta.unit}`;
 
-        const meta = document.createElement("p");
-        meta.className = "card__meta";
-        meta.textContent = lesson.meta.lessonTitle;
+            const meta = document.createElement("p");
+            meta.className = "td-lessonitem__meta";
+            meta.textContent = lesson.meta.lessonTitle;
 
-        const badge = document.createElement("span");
-        badge.className = "card__badge";
-        badge.textContent = `ID: ${id}`;
+            const badge = document.createElement("span");
+            badge.className = "td-lessonitem__id";
+            badge.textContent = `ID: ${id}`;
 
-        const actions = document.createElement("div");
-        actions.className = "card__actions";
+            const actions = document.createElement("div");
+            actions.className = "td-lessonitem__actions";
 
-        const btnEdit = document.createElement("button");
-        btnEdit.className = "btn btn--primary btn--sm";
-        btnEdit.textContent = "Edit Lesson Content";
-        btnEdit.addEventListener("click", () => {
-            appState.currentLessonId = id;
-            renderTeacherEditor(id, card); // ⭐ مررنا الكارد
-        });
-
-
+            const btnEdit = document.createElement("button");
+            btnEdit.className = "btn btn--primary btn--sm";
+            btnEdit.textContent = "Edit Lesson Content";
+            btnEdit.addEventListener("click", () => {
+                appState.currentLessonId = id;
+                renderTeacherEditor(id, card); // ⭐ مررنا الكارد
+            });
 
 
-        const btnOpen = document.createElement("button");
-        btnOpen.className = "btn btn--outline btn--sm";
-        btnOpen.textContent = "Open Lesson View";
-        btnOpen.addEventListener("click", () => {
-            appState.currentLessonId = id;
-            appState.teacherMode = false;
-            $("#teacherModeToggle").checked = false;
-            goToLessonView({ teacherMode: false });
-        });
 
-        const btnDelete = document.createElement("button");
-        btnDelete.className = "btn btn--ghost btn--sm";
-        btnDelete.textContent = "Delete Template";
-        btnDelete.addEventListener("click", () => {
-            if (
-                !confirm(
-                    `Delete lesson template "${lesson.meta.lessonTitle}"?\nThis does not delete students' progress, but the lesson won't be available anymore.`
+
+            const btnOpen = document.createElement("button");
+            btnOpen.className = "btn btn--outline btn--sm";
+            btnOpen.textContent = "Open Lesson View";
+            btnOpen.addEventListener("click", () => {
+                appState.currentLessonId = id;
+                appState.teacherMode = false;
+                $("#teacherModeToggle").checked = false;
+                goToLessonView({ teacherMode: false });
+            });
+
+            const btnDelete = document.createElement("button");
+            btnDelete.className = "btn btn--ghost btn--sm";
+            btnDelete.textContent = "Delete Template";
+            btnDelete.addEventListener("click", () => {
+                if (
+                    !confirm(
+                        `Delete lesson template "${lesson.meta.lessonTitle}"?\nThis does not delete students' progress, but the lesson won't be available anymore.`
+                    )
                 )
-            )
-                return;
-            delete lessons[id];
-            localStorage.removeItem(LS_LESSON_PREFIX + id);
-            const editor = $("#teacherEditor");
-            editor.style.display = "none";
-            editor.innerHTML = "";
-            renderTeacherLessonList();
+                    return;
+                delete lessons[id];
+                localStorage.removeItem(LS_LESSON_PREFIX + id);
+                deleteLessonFromCloud(id);
+                const editor = $("#teacherEditor");
+                editor.style.display = "none";
+                editor.innerHTML = "";
+                renderTeacherPicker();
+            });
+
+            actions.appendChild(btnEdit);
+            actions.appendChild(btnOpen);
+            actions.appendChild(btnDelete);
+
+            card.appendChild(title);
+            card.appendChild(meta);
+            card.appendChild(badge);
+            card.appendChild(actions);
+
+            listEl.appendChild(card);
         });
-
-        actions.appendChild(btnEdit);
-        actions.appendChild(btnOpen);
-        actions.appendChild(btnDelete);
-
-        card.appendChild(title);
-        card.appendChild(meta);
-        card.appendChild(badge);
-        card.appendChild(actions);
-
-        listEl.appendChild(card);
-    });
 }
 
 function createNewLessonTemplate() {
@@ -13963,12 +14334,23 @@ function createNewLessonTemplate() {
         },
     };
     saveLessonToLS(newId);
-    renderTeacherLessonList();
+    saveLessonToCloud(newId);
+    renderTeacherPicker();
     renderTeacherEditor(newId);
 }
 
 
-function renderTeacherEditor(lessonId, anchorCard) {
+
+function applyTeacherSectionFilter(sectionKey) {
+    const sections = $all('.teacher-editor__section[data-td-section]');
+    sections.forEach((sec) => {
+        const key = sec.getAttribute('data-td-section');
+        sec.classList.toggle('td-hidden-section', key !== sectionKey);
+    });
+    localStorage.setItem("td_selected_section", sectionKey);
+}
+
+function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
     const lesson = lessons[lessonId];
     const editor = $("#teacherEditor");
     if (!lesson || !editor) return;
@@ -13996,7 +14378,21 @@ function renderTeacherEditor(lessonId, anchorCard) {
       All changes here are saved locally and will apply to all students for this lesson.
     </p>
 
-    <div class="teacher-editor__section">
+    <div class="td-sectionbar">
+      <label for="tdSectionSelect">Edit section</label>
+      <select id="tdSectionSelect" class="td-select">
+        <option value="meta">Lesson Meta</option>
+        <option value="overview">Overview</option>
+        <option value="vocab">Vocabulary</option>
+        <option value="dialogue">Dialogue</option>
+        <option value="grammar">Grammar</option>
+        <option value="practice">Practice</option>
+        <option value="homework">Homework</option>
+        <option value="notes">Teacher Notes</option>
+      </select>
+    </div>
+
+    <div class="teacher-editor__section" data-td-section="meta">
       <h4>Lesson Meta</h4>
       <div class="form-field form-field--inline">
         <label for="tdMetaLevel">Level</label>
@@ -14020,7 +14416,7 @@ function renderTeacherEditor(lessonId, anchorCard) {
       </div>
     </div>
 
-    <div class="teacher-editor__section">
+    <div class="teacher-editor__section" data-td-section="overview">
       <h4>Overview</h4>
       <div class="form-field">
         <label for="tdOverviewTitle">Overview Title</label>
@@ -14041,7 +14437,7 @@ function renderTeacherEditor(lessonId, anchorCard) {
     </div>
 
     <!-- 🆕 Vocab Section -->
-    <div class="teacher-editor__section">
+    <div class="teacher-editor__section" data-td-section="vocab">
       <h4>Vocabulary</h4>
       <p class="teacher-edit-note">
         Edit core and extra vocabulary for this lesson. These words تظهر في تبويب Vocabulary و Quick Review.
@@ -14062,7 +14458,7 @@ function renderTeacherEditor(lessonId, anchorCard) {
       </div>
     </div>
 
-    <div class="teacher-editor__section">
+    <div class="teacher-editor__section" data-td-section="dialogue">
       <h4>Dialogue</h4>
       <p class="teacher-edit-note">Edit each line: speaker, Arabic (RTL) and English.</p>
       <div id="tdDialogueList"></div>
@@ -14121,6 +14517,19 @@ function renderTeacherEditor(lessonId, anchorCard) {
     </div>
   `;
 
+    // Section filter: show only one editor section at a time
+    const sectionSel = document.getElementById("tdSectionSelect");
+    if (sectionSel) {
+        const saved = localStorage.getItem("td_selected_section") || "meta";
+        sectionSel.value = saved;
+        applyTeacherSectionFilter(sectionSel.value);
+        sectionSel.addEventListener("change", () => applyTeacherSectionFilter(sectionSel.value));
+    } else {
+        // if no selector, show all
+        $all('.teacher-editor__section[data-td-section]').forEach((sec) => sec.classList.remove('td-hidden-section'));
+    }
+
+
     // ========== Meta ==========
     $("#tdMetaLevel").value = lesson.meta.level;
     $("#tdMetaUnit").value = lesson.meta.unit;
@@ -14132,7 +14541,7 @@ function renderTeacherEditor(lessonId, anchorCard) {
         lesson.meta.unit = $("#tdMetaUnit").value.trim() || "Unit";
         lesson.meta.lessonTitle = $("#tdMetaTitle").value.trim() || "Lesson";
         saveLessonToLS(lessonId);
-        renderTeacherLessonList();
+        renderTeacherPicker();
         alert("Lesson meta saved.");
     });
 
@@ -14189,6 +14598,8 @@ function renderTeacherEditor(lessonId, anchorCard) {
             $("#tdOverviewDesc").value.trim() || lesson.overview.description;
         lesson.overview.goals = newGoals;
         saveLessonToLS(lessonId);
+        // also sync online (shared)
+        saveLessonToCloud(lessonId);
         alert("Overview saved.");
     });
 
@@ -14270,12 +14681,16 @@ function renderTeacherEditor(lessonId, anchorCard) {
     $("#tdSaveVocabCore").addEventListener("click", () => {
         lesson.vocabulary.core = collectVocabFrom(vocabCoreList, true);
         saveLessonToLS(lessonId);
+        // also sync online (shared)
+        saveLessonToCloud(lessonId);
         alert("Core vocabulary saved.");
     });
 
     $("#tdSaveVocabExtra").addEventListener("click", () => {
         lesson.vocabulary.extra = collectVocabFrom(vocabExtraList, false);
         saveLessonToLS(lessonId);
+        // also sync online (shared)
+        saveLessonToCloud(lessonId);
         alert("Extra vocabulary saved.");
     });
 
@@ -14319,6 +14734,8 @@ function renderTeacherEditor(lessonId, anchorCard) {
         });
         lesson.dialogue.lines = newLines;
         saveLessonToLS(lessonId);
+        // also sync online (shared)
+        saveLessonToCloud(lessonId);
         alert("Dialogue saved.");
     });
 
@@ -14374,6 +14791,8 @@ function renderTeacherEditor(lessonId, anchorCard) {
         });
         lesson.grammar = newGrammar;
         saveLessonToLS(lessonId);
+        // also sync online (shared)
+        saveLessonToCloud(lessonId);
         alert("Grammar saved.");
     });
 
@@ -14530,6 +14949,8 @@ function renderTeacherEditor(lessonId, anchorCard) {
         });
         lesson.practice.quiz = newQuiz;
         saveLessonToLS(lessonId);
+        // also sync online (shared)
+        saveLessonToCloud(lessonId);
         alert("MCQ saved.");
     });
 
@@ -14577,6 +14998,8 @@ function renderTeacherEditor(lessonId, anchorCard) {
         });
         lesson.practice.rolePlays = newPrompts;
         saveLessonToLS(lessonId);
+        // also sync online (shared)
+        saveLessonToCloud(lessonId);
         alert("Role-play prompts saved.");
     });
 
@@ -14585,6 +15008,8 @@ function renderTeacherEditor(lessonId, anchorCard) {
     $("#tdSaveHomework").addEventListener("click", () => {
         lesson.homework.instructions = $("#tdHomeworkText").value.trim();
         saveLessonToLS(lessonId);
+        // also sync online (shared)
+        saveLessonToCloud(lessonId);
         alert("Homework instructions saved.");
     });
 
@@ -14593,6 +15018,8 @@ function renderTeacherEditor(lessonId, anchorCard) {
     $("#tdSaveTeacherNotes").addEventListener("click", () => {
         lesson.teacherNotes.myNotes = $("#tdTeacherNotes").value.trim();
         saveLessonToLS(lessonId);
+        // also sync online (shared)
+        saveLessonToCloud(lessonId);
         alert("Teacher notes saved.");
     });
 
@@ -14647,6 +15074,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const target = btn.dataset.nav;
             if (target === "home-screen") goToHome();
             else if (target === "students-screen") goToStudents();
+            else if (target === "levels-screen") goToLevels();
             else if (target === "teacher-dashboard-screen") goToTeacherDashboard();
         });
     });
@@ -15055,7 +15483,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // نزامن بيانات الطلاب من السحابة ونفتح Teacher Dashboard
                 await syncTeacherStudentsFromCloud();
                 renderStudents();
-                renderTeacherLessonList();
+                renderTeacherPicker();
                 goToTeacherDashboard();
             } else {
                 // STUDENT:
@@ -15145,9 +15573,16 @@ document.addEventListener("DOMContentLoaded", () => {
         el.addEventListener("click", () => closeVocabModal())
     );
 
+
+    const tdSyncNowBtn = document.getElementById("tdSyncNowBtn");
+    if (tdSyncNowBtn) {
+        tdSyncNowBtn.addEventListener("click", async () => {
+            await syncLessonsNow();
+        });
+    }
     // initial
     renderStudents();
-    renderTeacherLessonList();
+    renderTeacherPicker();
     goToHome();
 
 
@@ -15357,5 +15792,35 @@ async function handleCreateStudentSubmit(e) {
 
 
 
+
+
+let __toastTimer = null;
+function toast(message) {
+    const existing = document.getElementById("toast");
+    let el = existing;
+    if (!el) {
+        el = document.createElement("div");
+        el.id = "toast";
+        el.style.position = "fixed";
+        el.style.left = "50%";
+        el.style.bottom = "18px";
+        el.style.transform = "translateX(-50%)";
+        el.style.padding = "10px 12px";
+        el.style.borderRadius = "12px";
+        el.style.background = "rgba(17,24,39,.92)";
+        el.style.color = "white";
+        el.style.fontSize = ".9rem";
+        el.style.zIndex = "9999";
+        el.style.maxWidth = "92vw";
+        el.style.boxShadow = "0 10px 20px rgba(0,0,0,.18)";
+        document.body.appendChild(el);
+    }
+    el.textContent = message;
+    el.style.opacity = "1";
+    if (__toastTimer) clearTimeout(__toastTimer);
+    __toastTimer = setTimeout(() => {
+        el.style.opacity = "0";
+    }, 1800);
+}
 
 

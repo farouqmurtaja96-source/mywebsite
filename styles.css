@@ -158,6 +158,10 @@ body.home-only #authBar {
     display: none;
 }
 
+body.home-only .top-nav {
+    display: none;
+}
+
 /* لو حابة تخفي كل الـ <main> بالكامل في الهوم: */
 body.home-only main {
     display: none;
@@ -1600,4 +1604,238 @@ select:focus {
 
 .toast--error {
     background-color: var(--danger);
+}
+
+/* =========================
+   Teacher Dashboard (Light UI)
+   ========================= */
+.td-layout {
+    display: grid;
+
+    gap: 14px;
+    align-items: start;
+    margin-top: 12px;
+}
+
+.td-sidebar {
+    position: sticky;
+    top: 12px;
+    align-self: start;
+    border: 1px solid rgba(15, 23, 42, .08);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, .06);
+    overflow: hidden;
+}
+
+.td-sidebar__head {
+    padding: 12px;
+    border-bottom: 1px solid rgba(15, 23, 42, .08);
+}
+
+.td-sidebar__title {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+}
+
+.td-sidebar__tools {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.td-search {
+    flex: 1;
+    padding: 10px 10px;
+    border: 1px solid rgba(15, 23, 42, .14);
+    border-radius: 12px;
+    outline: none;
+}
+
+.td-lessonlist {
+    padding: 8px;
+    max-height: calc(100vh - 210px);
+    overflow: auto;
+}
+
+.td-lessonitem {
+    border: 1px solid rgba(15, 23, 42, .08);
+    border-radius: 12px;
+    padding: 10px;
+    background: #fff;
+    cursor: pointer;
+    transition: transform .08s ease, box-shadow .08s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.td-lessonitem:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 18px rgba(15, 23, 42, .08);
+}
+
+.td-lessonitem--active {
+    border-color: rgba(99, 102, 241, .45);
+    box-shadow: 0 10px 18px rgba(99, 102, 241, .12);
+}
+
+.td-lessonitem__title {
+    font-weight: 700;
+    margin: 0;
+    font-size: .98rem;
+}
+
+.td-lessonitem__meta {
+    margin: 0;
+    opacity: .85;
+    font-size: .88rem;
+}
+
+.td-lessonitem__id {
+    font-size: .78rem;
+    opacity: .65;
+}
+
+.td-lessonitem__actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+.td-main {
+    min-width: 0;
+}
+
+.td-editor {
+    border: 1px solid rgba(15, 23, 42, .08);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, .06);
+    overflow: hidden;
+}
+
+.td-editor__top {
+    position: sticky;
+    top: 12px;
+    z-index: 10;
+    background: #fff;
+    border-bottom: 1px solid rgba(15, 23, 42, .08);
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.td-editor__title {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.td-editor__hint {
+    margin: 2px 0 0;
+    font-size: .85rem;
+    opacity: .75;
+}
+
+.td-editor__body {
+    padding: 12px;
+}
+
+.td-accordion {
+    border: 1px solid rgba(15, 23, 42, .08);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.td-accordion summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 23, 42, .03);
+}
+
+.td-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.td-accordion__content {
+    padding: 10px 12px;
+}
+
+@media (max-width: 980px) {
+    .td-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .td-sidebar {
+        position: relative;
+        top: auto;
+    }
+
+    .td-lessonlist {
+        max-height: 320px;
+    }
+}
+
+
+/* =========================
+   Teacher Dashboard Picker
+   ========================= */
+.td-picker {
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.td-select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #fff;
+    font-size: 0.95rem;
+}
+
+.td-picker__actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Section filter inside editor */
+.td-sectionbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0 14px;
+    padding: 10px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.td-sectionbar label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.td-sectionbar select {
+    min-width: 220px;
+}
+
+.teacher-editor__section.td-hidden-section {
+    display: none;
 }

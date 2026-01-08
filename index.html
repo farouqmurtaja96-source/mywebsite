@@ -167,6 +167,33 @@
                     </p>
                 </div>
             </div>
+            </aside>
+            <section class="td-main">
+                <div id="teacherEditor" class="lesson-content td-editor" style="margin-top: 0; display: none;"></div>
+                <div id="addUnitCard" class="card add-unit-card td-addunit">
+                    <h3>Add New Unit</h3>
+                    <p class="section-header__subtitle">
+                        Create custom units for any level. If you later create a lesson template with the same
+                        Level &amp; Unit name, it will be linked automatically.
+                    </p>
+                    <form id="addUnitForm" class="add-unit-form">
+                        <div class="form-field form-field--inline">
+                            <label for="addUnitLevel">Level</label>
+                            <select id="addUnitLevel">
+                                <option value="Beginner">Beginner</option>
+                                <option value="Pre-Intermediate">Pre-Intermediate</option>
+                                <option value="Intermediate">Intermediate</option>
+                            </select>
+                        </div>
+                        <div class="form-field form-field--inline">
+                            <label for="addUnitName">Unit name</label>
+                            <input id="addUnitName" placeholder="e.g. Transportation" />
+                        </div>
+                        <button type="submit" class="btn btn--outline btn--sm">Add Unit</button>
+                    </form>
+                </div>
+            </section>
+            </div>
         </section>
 
         <!-- ============== LEVEL & UNIT SCREEN ============== -->
@@ -180,6 +207,7 @@
                 </div>
                 <div class="section-header__actions">
                     <button id="btnSwitchProfile" class="btn btn--ghost">Switch Profile</button>
+                    <button id="btnSyncLessonsNow" class="btn btn--ghost">↻ Sync lessons</button>
                     <button id="btnGoTeacherDashboard" class="btn btn--outline">Teacher Dashboard</button>
                 </div>
             </div>
@@ -222,6 +250,9 @@
                     <button id="btnBackToStudents" class="btn btn--ghost btn--sm">Back to Profiles</button>
                     <button id="btnToggleWhiteboard" class="btn btn--ghost btn--sm">
                         ✏️ Whiteboard
+                    </button>
+                    <button id="btnSaveSpot" class="btn btn--outline btn--sm">
+                        💾 Save spot
                     </button>
                     <button id="btnExportLessonPdf" class="btn btn--outline btn--sm">
                         📄 Export Lesson PDF
@@ -357,35 +388,58 @@
                 <p id="createStudentMsg" style="font-size:0.8rem; margin-top:4px;"></p>
             </section>
 
-            <div id="teacherLessonList" class="card-list">
-                <!-- Filled by JS -->
-            </div>
+            <div class="td-layout">
+                <aside class="td-sidebar">
+                    <div class="td-sidebar__head">
+                        <h3 class="td-sidebar__title">Lessons</h3>
+                        <div class="td-sidebar__tools">
+                            <input id="tdLessonSearch" class="td-search" type="search"
+                                placeholder="Search lessons..." />
+                            <button id="tdSyncNowBtn" class="btn btn--ghost btn--sm"
+                                title="Sync lessons from cloud">↻</button>
 
-            <!-- 🔧 هنا يتم رندر الفورم الخاص بتعديل الدرس -->
-            <div id="teacherEditor" class="lesson-content" style="margin-top: 14px; display: none;">
-                <!-- Filled by JS -->
-            </div>
-            <div id="addUnitCard" class="card add-unit-card">
-                <h3>Add New Unit</h3>
-                <p class="section-header__subtitle">
-                    Create custom units for any level. If you later create a lesson template with the same
-                    Level &amp; Unit name, it will be linked automatically.
-                </p>
-                <form id="addUnitForm" class="add-unit-form">
-                    <div class="form-field form-field--inline">
-                        <label for="addUnitLevel">Level</label>
-                        <select id="addUnitLevel">
-                            <option value="Beginner">Beginner</option>
-                            <option value="Pre-Intermediate">Pre-Intermediate</option>
-                            <option value="Intermediate">Intermediate</option>
-                        </select>
+                            <div class="td-picker">
+                                <div class="form-field">
+                                    <label for="tdUnitSelect">Unit</label>
+                                    <select id="tdUnitSelect" class="td-select"></select>
+                                </div>
+                                <div class="form-field">
+                                    <label for="tdLessonSelect">Lesson</label>
+                                    <select id="tdLessonSelect" class="td-select"></select>
+                                </div>
+                                <div class="form-field">
+                                    <label for="tdPickSection">Section</label>
+                                    <select id="tdPickSection" class="td-select">
+                                        <option value="meta">Lesson Meta</option>
+                                        <option value="overview">Overview</option>
+                                        <option value="vocab">Vocabulary</option>
+                                        <option value="dialogue">Dialogue</option>
+                                        <option value="grammar">Grammar</option>
+                                        <option value="practice">Practice</option>
+                                        <option value="homework">Homework</option>
+                                        <option value="notes">Teacher Notes</option>
+                                    </select>
+                                </div>
+                                <div class="td-picker__actions">
+                                    <button id="tdSyncLessonsNow" class="btn btn--outline btn--sm">↻ Sync
+                                        lessons</button>
+                                    <button id="tdEditSelected" class="btn btn--primary btn--sm">Edit</button>
+                                    <button id="tdOpenSelected" class="btn btn--outline btn--sm">Open</button>
+                                    <button id="tdDeleteSelected" class="btn btn--ghost btn--sm">Delete</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="teacherLessonList" class="card-list td-lessonlist">
+                        <!-- Filled by JS -->
                     </div>
                     <div class="form-field">
                         <label for="addUnitName">Unit Name</label>
                         <input id="addUnitName" type="text" placeholder="e.g. Transportation" />
                     </div>
                     <button type="submit" class="btn btn--outline btn--sm">Add Unit</button>
-                </form>
+                    </form>
             </div>
         </section>
     </main>
@@ -514,12 +568,13 @@
         // 🔹 تهيئة Firebase (compat style)
         firebase.initializeApp(firebaseConfig);
 
-        // 🔹 متغيرات global تقدري تستخدميها في app.js
-        const auth = firebase.auth();
-        const db = firebase.firestore();
+        // 🔹 Global handles used across the app (compat SDK)
+        // IMPORTANT: attach to window so other scripts can access reliably.
+        window.auth = firebase.auth();
+        window.db = firebase.firestore();
     </script>
 
-    <!-- لازم app.js ييجي بعد تهيئة Firebase -->
+    <!-- App scripts (order matters) -->
     <script src="app.js"></script>
 
 
