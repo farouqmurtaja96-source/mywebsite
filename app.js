@@ -1591,7 +1591,7 @@ const defaultLessons = {
                     enArabeezy: "3asha",
                     hint:
                         "Evening meal. Verb: بِتْعَشَّى = I have dinner. Sometimes dinner is light (like tea and cheese).",
-                    exampleAr: "بِالْعَشِي بِنِتْعَشَّى مَع بَعْض قُدَّام التِّلْفِزْيُون.",
+                    exampleAr: "بِالْمسا بِنِتْعَشَّى مَع بَعْض قُدَّام التِّلْفِزْيُون.",
                     exampleEn: "In the evening we have dinner together in front of the TV.",
                 },
 
@@ -1603,7 +1603,7 @@ const defaultLessons = {
                     enArabeezy: "khobez",
                     hint:
                         "Very common. Singular as a mass: خُبِز. You can also hear: رغِيف خُبِز = a loaf of bread.",
-                    exampleAr: "مَا فِيش فُطُور بِلَا خُبِز فِي كْتِير بُيُوت.",
+                    exampleAr: "بِكْتير بُيُوت ما في فُطور بدون خُبِز..",
                     exampleEn: "In many homes there is no breakfast without bread.",
                 },
                 {
@@ -1713,8 +1713,8 @@ const defaultLessons = {
                     enArabeezy: "khodar",
                     hint:
                         "",
-                    exampleAr: "إِمِّي دَايْمًا بِتِسَوِّي خْضَار طَازَة مَع الْغَدَا.",
-                    exampleEn: "My mom always prepares fresh vegetables with lunch.",
+                    exampleAr: "إِمِّي دَايْمًا بِتِسَوِّي سلطة خْضَار طَازَة مَع الْغَدَا.",
+                    exampleEn: "My mom always prepares salad fresh vegetables with lunch.",
                 },
                 {
                     id: "fawakeh",
@@ -1763,7 +1763,7 @@ const defaultLessons = {
                     enArabeezy: "dajaj",
                     hint:
                         "دَجَاج = chicken (meat). For a whole chicken you can hear جَاجَة.",
-                    exampleAr: "مَقْلُوبِة دَجَاج أَكْلَة مَفْضُولَة عِنْد نَّاس كْتِير.",
+                    exampleAr: "مَقْلُوبِة دَجَاج أَكْلَة مَفْضُلَة عِنْد نَّاس كْتِير.",
                     exampleEn: "Chicken maqlubeh is a favorite dish for many people.",
                 },
                 {
@@ -1825,7 +1825,7 @@ const defaultLessons = {
                     enArabeezy: "shay",
                     hint:
                         "Very common drink. شَاي أَخْضَر / أَسْوَد / مَع نَعْنَاع.",
-                    exampleAr: "جَدَّتِي بِتِحِبّ شَاي مَع نَعْنَاع.",
+                    exampleAr: "ستي بِتِحِبّ شَاي مَع نَعْنَاع.",
                     exampleEn: "My grandmother loves tea with mint.",
                 },
                 {
@@ -1915,7 +1915,7 @@ const defaultLessons = {
                     en: "not tasty",
                     enArabeezy: "mish_zaki",
                     hint: "Simple way to say you don’t like the taste.",
-                    exampleAr: "صِرْصِير الْأَكِل الْيَوْم مِش زَكِي.",
+                    exampleAr: "بصراحة الْأَكِل الْيَوْم مِش زَكِي.",
                     exampleEn: "Honestly, today the food is not tasty.",
                 },
                 {
@@ -1956,7 +1956,7 @@ const defaultLessons = {
                     en: "I don’t like",
                     enArabeezy: "ma_ba7ebb",
                     hint: "Simple negation for ‘I don’t like’.",
-                    exampleAr: "مَا بَحِبّ قَهْوَة قَوِيِّة.",
+                    exampleAr: "ما بحبّ القهوة التّقيلة.",
                     exampleEn: "I don’t like strong coffee.",
                 },
                 {
@@ -1985,7 +1985,7 @@ const defaultLessons = {
                     enArabeezy: "baTbokh",
                     hint:
                         "From طَبَخ = to cook. For she cooks: بْتُطْبُخ، for he: بِيِطْبُخ.",
-                    exampleAr: "أَحْيَانًا بَطْبُخ أَنَا، مَو دَايْمًا إِمِّي.",
+                    exampleAr: "أَحْيَانًا بَطْبُخ أَنَا، مَش دَايْمًا إِمِّي.",
                     exampleEn: "Sometimes I cook, not always my mom.",
                 },
                 {
@@ -1995,7 +1995,7 @@ const defaultLessons = {
                     enArabeezy: "baTlob",
                     hint:
                         "Spoken form for ‘I order’ (in café / restaurant): بَطْلُب قَهْوَة، بَطْلُب سَنْدْوِيش.",
-                    exampleAr: "فِي الْمَقْهَى بَطْلُب قَهْوَة وَعَصِير.",
+                    exampleAr: "فِي الْكافيه بَطْلُب قَهْوَة وَعَصِير.",
                     exampleEn: "At the café I order coffee and juice.",
                 },
                 {
@@ -2034,7 +2034,7 @@ const defaultLessons = {
                     en: "in a restaurant",
                     enArabeezy: "fi_maT3am",
                     hint: "Place context for food.",
-                    exampleAr: "بِنْقَعُد فِي مَطْعَم صَغِير قُرْب الْبَحَر.",
+                    exampleAr: "بنقعد بمطعم صغير قريب من البحر.",
                     exampleEn: "We sit in a small restaurant near the sea.",
                 },
                 {
@@ -2086,7 +2086,7 @@ const defaultLessons = {
                     enArabeezy: "maTbukh",
                     hint:
                         "Opposite of raw. خْضَار مَطْبُوخَة = cooked vegetables.",
-                    exampleAr: "بِفَضَّل خْضَار مَطْبُوخَة عَنْ المَقْلِيَّة.",
+                    exampleAr: "بفَضِّل الخُضَار المَطبوخ عَالمَقْلي.",
                     exampleEn: "I prefer cooked vegetables over fried ones.",
                 },
                 {
@@ -2161,12 +2161,12 @@ const defaultLessons = {
                 },
                 {
                     "speaker": "مَرْيَم",
-                    "ar": "أَحْيَانًا بَشْرَب عَصِير بُرْتُقَال كمان.",
-                    "en": "Sometimes I drink orange juice too."
+                    "ar": "أَحْيَانًا بَشْرَب حليب كمان.",
+                    "en": "Sometimes I drink milk too."
                 },
                 {
                     "speaker": "رامي",
-                    "ar": "شُو بْتِحِب تَاكُلي عَلَى الْغَدَا؟",
+                    "ar": "شُو بْتِحِبي تَاكُلي عَلَى الْغَدَا؟",
                     "en": "What do you like to eat for lunch?"
                 },
                 {
@@ -2181,8 +2181,8 @@ const defaultLessons = {
                 },
                 {
                     "speaker": "مَرْيَم",
-                    "ar": "بَحِبّ الَحْمِة بَسّ مِش كْتِير، أَكْثَر شِي بَحِبّ خُضَار وَفَوَاكِه.",
-                    "en": "I like meat but not a lot; I like vegetables and fruit the most."
+                    "ar": "بَحِبّ الَلحْمِة بَسّ مِش كْتِير، أَكْثَر شِي بَحِبّ دجاج.",
+                    "en": "I like meat but not a lot; I like chicken the most."
                 },
                 {
                     "speaker": "رامي",
@@ -2231,8 +2231,8 @@ const defaultLessons = {
                 },
                 {
                     "speaker": "مَرْيَم",
-                    "ar": "أَنَا عَطْشَانَة، بَدِّي عَصِير بُرْتُقَال.",
-                    "en": "I’m thirsty, I want orange juice."
+                    "ar": "أَنَا عَطْشَانَة، بَدِّي كولا.",
+                    "en": "I’m thirsty, I want cola."
                 },
                 {
                     "speaker": "سَامِي",
@@ -2253,11 +2253,6 @@ const defaultLessons = {
                     "speaker": "رامي",
                     "ar": "مَع هَيْك، الْغَدَا صِحِّي أَكْثَر مِن مَطَاعِم ثَانِيِة.",
                     "en": "Even so, this lunch is healthier than other restaurants."
-                },
-                {
-                    "speaker": "مَرْيَم",
-                    "ar": "مُنِيح إِنُّه فِيه خُضَار وَفَوَاكِه عَلَى الْجَانِب.",
-                    "en": "It’s good that there are vegetables and fruits on the side."
                 },
                 {
                     "speaker": "رامي",
