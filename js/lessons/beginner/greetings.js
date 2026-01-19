@@ -402,7 +402,7 @@ export const lesson = {
             },
             {
                 "speaker": "Teacher",
-                "ar": "مِنْ وِين إِنْتِي أَصْلًا؟",
+                "ar": "مِنْ وِين إِنْتِي أَصْلك؟",
                 "en": "Where are you originally from?"
             },
             {
@@ -412,12 +412,12 @@ export const lesson = {
             },
             {
                 "speaker": "Teacher",
-                "ar": "حِلُو! وَهَلَّقْ وِين سَاكْنَة؟",
+                "ar": "حِلُو! وَهَلَّقيت وِين سَاكْنَة؟",
                 "en": "Nice! And where do you live now?"
             },
             {
                 "speaker": "Lina",
-                "ar": "هَلَّقْ أَنَا سَاكْنَة فِي رَام اللّٰه.",
+                "ar": "هَلَّقيت أَنَا سَاكْنَة فِي رَام اللّٰه.",
                 "en": "Now I live in Ramallah."
             },
             {
@@ -427,7 +427,7 @@ export const lesson = {
             },
             {
                 "speaker": "Teacher",
-                "ar": "أَنَا مِنْ غَزَّة، بَسّ هَلَّقْ بَشْتِغِل فِي الْقُدْس.",
+                "ar": "أَنَا مِنْ غَزَّة، بَسّ هَلَّقيت بَشْتِغِل فِي الْقُدْس.",
                 "en": "I’m from Gaza, but now I work in Jerusalem."
             },
             {
@@ -500,11 +500,7 @@ export const lesson = {
                 "ar": "شُكْرًا، اِنْبِسِطُوا بِوَقْتْكُم الْيَوْم.",
                 "en": "Thank you, enjoy your time today."
             },
-            {
-                "speaker": "Sara",
-                "ar": "مِش مُشْكِلَة، أَكِيد مَا مْنِنْسَى الْوَاجِب.",
-                "en": "No problem, we definitely won’t forget the homework."
-            }
+
         ]
     }
     ,

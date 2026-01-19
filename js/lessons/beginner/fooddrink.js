@@ -54,7 +54,7 @@ export const lesson = {
                 enArabeezy: "3asha",
                 hint:
                     "Evening meal. Verb: بِتْعَشَّى = I have dinner. Sometimes dinner is light (like tea and cheese).",
-                exampleAr: "بِالْعَشِي بِنِتْعَشَّى مَع بَعْض قُدَّام التِّلْفِزْيُون.",
+                exampleAr: "بِالْمسا بِنِتْعَشَّى مَع بَعْض قُدَّام التِّلْفِزْيُون.",
                 exampleEn: "In the evening we have dinner together in front of the TV.",
             },
 
@@ -66,7 +66,7 @@ export const lesson = {
                 enArabeezy: "khobez",
                 hint:
                     "Very common. Singular as a mass: خُبِز. You can also hear: رغِيف خُبِز = a loaf of bread.",
-                exampleAr: "مَا فِيش فُطُور بِلَا خُبِز فِي كْتِير بُيُوت.",
+                exampleAr: "بكتير بيوت ما في فطور من دون خبز.",
                 exampleEn: "In many homes there is no breakfast without bread.",
             },
             {
@@ -166,7 +166,7 @@ export const lesson = {
                 enArabeezy: "salata",
                 hint:
                     "General word for salad. Plural سَلَطَات = types of salad.",
-                exampleAr: "مَع الْغَدَا دَائِمًا فِيه سَلَطَة.",
+                exampleAr: "دايمًا في سلطة مع الغدا.",
                 exampleEn: "There is always salad with lunch.",
             },
             {
@@ -176,8 +176,8 @@ export const lesson = {
                 enArabeezy: "khodar",
                 hint:
                     "",
-                exampleAr: "إِمِّي دَايْمًا بِتِسَوِّي خْضَار طَازَة مَع الْغَدَا.",
-                exampleEn: "My mom always prepares fresh vegetables with lunch.",
+                exampleAr: "إِمِّي دَايْمًا بِتِسَوِّي سلطة خضَار طَازَة مَع الْغَدَا.",
+                exampleEn: "My mom always prepares fresh vegetables salad with lunch.",
             },
             {
                 id: "fawakeh",
@@ -216,17 +216,17 @@ export const lesson = {
                 enArabeezy: "la7me",
                 hint:
                     "Generic word for meat. You can say: لَحِم or لَحْمِة. Example: لَحِم جَاج (chicken), لَحِم بَقَرِي (beef).",
-                exampleAr: "مَا بَاكُل لَحِم كْتِير، أَكْثَر إِشِي دَجَاج.",
+                exampleAr: "مَا بَاكُل لَحِم كْتِير، أَكْثَر إِشِي جَاج.",
                 exampleEn: "I don’t eat a lot of meat, mostly chicken.",
             },
             {
                 id: "dajaj",
-                ar: "دَجَاج",
+                ar: "جَاج",
                 en: "chicken",
                 enArabeezy: "dajaj",
                 hint:
                     "دَجَاج = chicken (meat). For a whole chicken you can hear جَاجَة.",
-                exampleAr: "مَقْلُوبِة دَجَاج أَكْلَة مَفْضُولَة عِنْد نَّاس كْتِير.",
+                exampleAr: "المقلوبة بالجاج أكلة مفضّلة عند كتير ناس",
                 exampleEn: "Chicken maqlubeh is a favorite dish for many people.",
             },
             {
@@ -288,7 +288,7 @@ export const lesson = {
                 enArabeezy: "shay",
                 hint:
                     "Very common drink. شَاي أَخْضَر / أَسْوَد / مَع نَعْنَاع.",
-                exampleAr: "جَدَّتِي بِتِحِبّ شَاي مَع نَعْنَاع.",
+                exampleAr: "ستي بِتِحِبّ شَاي مَع نَعْنَاع.",
                 exampleEn: "My grandmother loves tea with mint.",
             },
             {
@@ -378,7 +378,7 @@ export const lesson = {
                 en: "not tasty",
                 enArabeezy: "mish_zaki",
                 hint: "Simple way to say you don’t like the taste.",
-                exampleAr: "صِرْصِير الْأَكِل الْيَوْم مِش زَكِي.",
+                exampleAr: "بصراحة اكِل الْيَوْم مِش زَكِي.",
                 exampleEn: "Honestly, today the food is not tasty.",
             },
             {
@@ -419,7 +419,7 @@ export const lesson = {
                 en: "I don’t like",
                 enArabeezy: "ma_ba7ebb",
                 hint: "Simple negation for ‘I don’t like’.",
-                exampleAr: "مَا بَحِبّ قَهْوَة قَوِيِّة.",
+                exampleAr: "مَا بَحِبّ قَهْوَة تقيلة.",
                 exampleEn: "I don’t like strong coffee.",
             },
             {
@@ -448,7 +448,7 @@ export const lesson = {
                 enArabeezy: "baTbokh",
                 hint:
                     "From طَبَخ = to cook. For she cooks: بْتُطْبُخ، for he: بِيِطْبُخ.",
-                exampleAr: "أَحْيَانًا بَطْبُخ أَنَا، مَو دَايْمًا إِمِّي.",
+                exampleAr: "أَحْيَانًا بَطْبُخ أَنَا، مَش دَايْمًا إِمِّي.",
                 exampleEn: "Sometimes I cook, not always my mom.",
             },
             {
@@ -458,7 +458,7 @@ export const lesson = {
                 enArabeezy: "baTlob",
                 hint:
                     "Spoken form for ‘I order’ (in café / restaurant): بَطْلُب قَهْوَة، بَطْلُب سَنْدْوِيش.",
-                exampleAr: "فِي الْمَقْهَى بَطْلُب قَهْوَة وَعَصِير.",
+                exampleAr: "فِي الكافي بَطْلُب قَهْوَة وَعَصِير.",
                 exampleEn: "At the café I order coffee and juice.",
             },
             {
@@ -497,7 +497,7 @@ export const lesson = {
                 en: "in a restaurant",
                 enArabeezy: "fi_maT3am",
                 hint: "Place context for food.",
-                exampleAr: "بِنْقَعُد فِي مَطْعَم صَغِير قُرْب الْبَحَر.",
+                exampleAr: "بِنْقَعُد فِي مَطْعَم صَغِير قُرْيب من الْبَحَر.",
                 exampleEn: "We sit in a small restaurant near the sea.",
             },
             {
@@ -552,15 +552,7 @@ export const lesson = {
                 exampleAr: "بِفَضَّل خْضَار مَطْبُوخَة عَنْ المَقْلِيَّة.",
                 exampleEn: "I prefer cooked vegetables over fried ones.",
             },
-            {
-                id: "7ilo",
-                ar: "حِلُو",
-                en: "sweet (taste)",
-                enArabeezy: "7ilo",
-                hint: "Also means ‘beautiful’, but here for taste.",
-                exampleAr: "الْحَلَا حِلُو بَسّ ثَقِيل شَوَيّ.",
-                exampleEn: "The dessert is sweet but a bit heavy.",
-            },
+
             {
                 id: "m7ar",
                 ar: "حَارّ  ",
@@ -609,8 +601,8 @@ export const lesson = {
             },
             {
                 "speaker": "رامي",
-                "ar": "وَكَمَان قَهْوَة وَلَّا شَاي؟",
-                "en": "And also coffee or tea?"
+                "ar": "شو شربتي كمان قهوة ولا شاي",
+                "en": "Did you also drink coffee or tea?"
             },
             {
                 "speaker": "مَرْيَم",
@@ -624,17 +616,17 @@ export const lesson = {
             },
             {
                 "speaker": "مَرْيَم",
-                "ar": "أَحْيَانًا بَشْرَب عَصِير بُرْتُقَال كمان.",
-                "en": "Sometimes I drink orange juice too."
+                "ar": "أَحْيَانًا بَشْرَب حليب كمان.",
+                "en": "Sometimes I drink milk too."
             },
             {
                 "speaker": "رامي",
-                "ar": "شُو بْتِحِب تَاكُلي عَلَى الْغَدَا؟",
+                "ar": "شُو بْتِحِبي تَاكُلي عَلَى الْغَدَا؟",
                 "en": "What do you like to eat for lunch?"
             },
             {
                 "speaker": "مَرْيَم",
-                "ar": "بِحِبّ آكُل عَالغَدا دَجَاج وَرُزّ.",
+                "ar": "بِحِبّ آكُل عَالغَدا جَاج وَرُزّ.",
                 "en": "I like to eat chicken and rice for lunch."
             },
             {
@@ -644,7 +636,7 @@ export const lesson = {
             },
             {
                 "speaker": "مَرْيَم",
-                "ar": "بَحِبّ الَحْمِة بَسّ مِش كْتِير، أَكْثَر شِي بَحِبّ خُضَار وَفَوَاكِه.",
+                "ar": "بَحِبّ الَحْمِة بَسّ مِش كْتِير، أَكْثَر شِي بَحِبّ جاج.",
                 "en": "I like meat but not a lot; I like vegetables and fruit the most."
             },
             {
@@ -689,12 +681,12 @@ export const lesson = {
             },
             {
                 "speaker": "رامي",
-                "ar": "أَنَا بَحِبّ قَهْوَة بَعْد الْأَكِل، هَلَّقْ بَدِّي مَيِّة.",
+                "ar": "أَنَا بَحِبّ قَهْوَة بَعْد الْأَكِل، هَلَّقيت بَدِّي مَيِّة.",
                 "en": "I like coffee after food; now I want water."
             },
             {
                 "speaker": "مَرْيَم",
-                "ar": "أَنَا عَطْشَانَة، بَدِّي عَصِير بُرْتُقَال.",
+                "ar": "أَنَا عَطْشَانَة، بَدِّي كولا.",
                 "en": "I’m thirsty, I want orange juice."
             },
             {
@@ -717,11 +709,7 @@ export const lesson = {
                 "ar": "مَع هَيْك، الْغَدَا صِحِّي أَكْثَر مِن مَطَاعِم ثَانِيِة.",
                 "en": "Even so, this lunch is healthier than other restaurants."
             },
-            {
-                "speaker": "مَرْيَم",
-                "ar": "مُنِيح إِنُّه فِيه خُضَار وَفَوَاكِه عَلَى الْجَانِب.",
-                "en": "It’s good that there are vegetables and fruits on the side."
-            },
+
             {
                 "speaker": "رامي",
                 "ar": "شُكْرًا كْتِير، الْأَكِل كَان زَكِي.",

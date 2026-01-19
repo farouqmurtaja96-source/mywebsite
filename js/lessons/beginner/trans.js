@@ -33,7 +33,7 @@ export const lesson = {
                 en: "transportation, public transport",
                 enArabeezy: "muwaSalat",
                 hint: "General word for transportation / public transport.",
-                exampleAr: "اليوم المُوَاصَلات زَحْمَة كْتير.",
+                exampleAr: "اليوم المواصلات كتير زحمة.",
                 exampleEn: "Today the transportation is very crowded.",
             },
 
@@ -50,7 +50,7 @@ export const lesson = {
             },
             {
                 id: "taxi",
-                ar: "تَكْسِي / تاكسي",
+                ar: " تاكسي",
                 en: "taxi",
                 enArabeezy: "taxi",
                 hint:
@@ -58,24 +58,15 @@ export const lesson = {
                 exampleAr: "أَحْيانًا باخُد تاكسي لَمّا أكون مُسْتَعْجِل.",
                 exampleEn: "Sometimes I take a taxi when I’m in a hurry.",
             },
-            {
-                id: "servis",
-                ar: "سِرْفِيس",
-                en: "service (shared taxi)",
-                enArabeezy: "servis",
-                hint:
-                    "Shared taxi on a fixed route with a fixed price. Plural: سَرَافِيس. Close to the idea of سَيّارة أُجْرَة.",
-                exampleAr: "سِرْفِيس أَرْخَص مِن التَّكْسِي الْخَاصّ.",
-                exampleEn: "A service is cheaper than a private taxi.",
-            },
+
             {
                 id: "buss",
-                ar: "بُصّ / باص",
+                ar: " باص",
                 en: "bus",
                 enArabeezy: "buss/bas",
                 hint:
                     "Spoken Palestinian pronunciation for ‘bus’. You may hear بُصّ or باص. Plural: بُصَّات.",
-                exampleAr: "فِي بُصّ بِيِرُوح مِن غَزَّة عَلَى رَام اللّٰه.",
+                exampleAr: "في باص بروح من غزّة على رام الله.",
                 exampleEn: "There is a bus that goes from Gaza to Ramallah.",
             },
             {
@@ -96,15 +87,7 @@ export const lesson = {
                 exampleAr: "رِكِبنا القِطار لَمّا كُنّا بِالأُرْدُن.",
                 exampleEn: "We took the train when we were in Jordan.",
             },
-            {
-                id: "metro",
-                ar: "مِتْرو",
-                en: "metro / subway",
-                enArabeezy: "metro",
-                hint: "Underground / metro. Not in every city.",
-                exampleAr: "في مِدِن ثانِيَة في مِتْرو، مِش عَنا.",
-                exampleEn: "In other cities there is a metro, not here.",
-            },
+
 
             // ===== PLACES & ROADS =====
             {
@@ -114,8 +97,8 @@ export const lesson = {
                 enArabeezy: "ma7aTTa",
                 hint:
                     "General ‘station’: مَحَطَّة بُصّ = bus station; مَحَطَّة سِرْفِيس = service station.",
-                exampleAr: "بِنِسْتَنَّى فِي مَحَطَّة السِّرْفِيس.",
-                exampleEn: "We wait at the service station.",
+                exampleAr: "بنستنى بمحطّة القطار.",
+                exampleEn: "We wait at the train station.",
             },
             {
                 id: "mawqif_basat",
@@ -142,7 +125,7 @@ export const lesson = {
                 en: "gas station",
                 enArabeezy: "kameen_benzin",
                 hint: "Place to get fuel for cars and buses.",
-                exampleAr: "السَيّارة وَقَفَت قُدّام كَمين البْنَزين.",
+                exampleAr: "السيارة وقفت قدّام محطة البنزين.",
                 exampleEn: "The car stopped in front of the gas station.",
             },
             {
@@ -152,7 +135,7 @@ export const lesson = {
                 enArabeezy: "ishara",
                 hint:
                     "إِشَارَة ضَوْ = traffic light. People just say: عِنْد الإِشَارَة.",
-                exampleAr: "التَّكْسِي وَقَف عِنْد الإِشَارَة الْحَمْرَا.",
+                exampleAr: "التاكسي وقف عالإشارة الحمرا.",
                 exampleEn: "The taxi stopped at the red light.",
             },
 
@@ -163,7 +146,7 @@ export const lesson = {
                 en: "traffic / crowd / traffic jam",
                 enArabeezy: "za7meh",
                 hint: "Used a lot for traffic jam: فِي زَحْمَة فِي الشَّارِع.",
-                exampleAr: "تَأَخَّرْت عَ الدَّرْس عَشَان فِي زَحْمَة.",
+                exampleAr: "تَأَخَّرْت عَلى الدَّرْس عَشَان فِي زَحْمَة.",
                 exampleEn: "I was late to the lesson because there was traffic.",
             },
 
@@ -175,7 +158,7 @@ export const lesson = {
                 enArabeezy: "barkab",
                 hint:
                     "From رِكِب = to ride. بَرْكَب تَكْسِي / بَرْكَب بُصّ / بَرْكَب سِرْفِيس.",
-                exampleAr: "كُلّ يَوْم بَرْكَب بُصّ عَلَى الْجَامْعَة.",
+                exampleAr: "كُلّ يَوْم بَرْكَب باص عَلَى الْجَامْعَة.",
                 exampleEn: "Every day I take a bus to university.",
             },
             {
@@ -184,7 +167,7 @@ export const lesson = {
                 en: "to ride, get on (bus, taxi, etc.)",
                 enArabeezy: "rikib/yirkab",
                 hint: "Dictionary form of the verb ‘to ride / get on’.",
-                exampleAr: "يَلا نِركَب الباص، حَيِمْشي هَلَّق.",
+                exampleAr: "يَلا نِركَب الباص، حَيِمْشي هَلَّقيت.",
                 exampleEn: "Let’s get on the bus, it’s about to leave now.",
             },
             {
@@ -196,15 +179,6 @@ export const lesson = {
                     "Used for getting off a bus/taxi or going down: بَنْزِل مِن التَّكْسِي.",
                 exampleAr: "بَنْزِل قُدَّام مَدْخَل الْجَامْعَة.",
                 exampleEn: "I get off in front of the university entrance.",
-            },
-            {
-                id: "nizil_yinzil",
-                ar: "نِزِل، يِنْزِل",
-                en: "to get off, get out (of a vehicle)",
-                enArabeezy: "nizil/yinzil",
-                hint: "Opposite of يركب ‘to get on’.",
-                exampleAr: "بِنْزِل قُدّام الجامْعَة، لَو سَمَحْت.",
-                exampleEn: "I get off in front of the university, please.",
             },
             {
                 id: "bsoog",
@@ -221,7 +195,7 @@ export const lesson = {
                 en: "to arrive, reach",
                 enArabeezy: "wisel/yowsal",
                 hint: "Verb ‘to arrive’ at a place.",
-                exampleAr: "إِمْتَى وِصِل الباص عَالبلَد؟",
+                exampleAr: "مْتَى وِصِل الباص عَالبلَد؟",
                 exampleEn: "When did the bus arrive in town?",
             },
             {
@@ -236,22 +210,22 @@ export const lesson = {
             },
             {
                 id: "ra7_yiroo7",
-                ar: "راح، يِروح",
+                ar: "بروح",
                 en: "to go",
                 enArabeezy: "ra7/yiroo7",
                 hint: "General verb ‘to go’ to a place.",
-                exampleAr: "كل يوم بِروح عَالجامْعَة عَالسّاعَة تْمانْيِة.",
+                exampleAr: "كل يوم بروح عالجامعة الساعة تمانية.",
                 exampleEn: "Every day I go to the university at eight o’clock.",
             },
             {
                 id: "tla3_yitla3",
-                ar: "طِلِع، يِطْلَع",
+                ar: "طِلِع",
                 en: "to leave / depart (bus/taxi) or go up",
                 enArabeezy: "tli3/yitla3",
                 hint: "Also used like ‘the bus left / departed’.",
                 exampleAr: "الباص طِلِع، لَحِقْناه بِصُعوبَة.",
                 exampleEn: "The bus left; we caught it with difficulty.",
-            },
+            },///////
             {
                 id: "yifoot_3a",
                 ar: "يِفوت عَـ...",
@@ -268,7 +242,7 @@ export const lesson = {
                 enArabeezy: "bita2akhar",
                 hint:
                     "From تَأَخَّر = to be late. مَا بِدِّي أِتْأَخَّر = I don’t want to be late.",
-                exampleAr: "لَمَّا فِي زَحْمَة بِنِتْأَخَّر كْتِير.",
+                exampleAr: "لما يكون في زحمة، بنتأخّر كتير.",
                 exampleEn: "When there is traffic, we get very late.",
             },
             {
@@ -278,25 +252,17 @@ export const lesson = {
                 enArabeezy: "bastanna",
                 hint:
                     "From اِسْتَنَّى = to wait. بَسْتَنَّى السِّرْفِيس / بَسْتَنَّى صَاحْبِي.",
-                exampleAr: "بَسْتَنَّى البُصّ مِن نُصّ سَاعَة.",
+                exampleAr: "صارلي نص ساعة بستنى الباص.",
                 exampleEn: "I’ve been waiting for the bus for half an hour.",
             },
-            {
-                id: "bna2el",
-                ar: "بَنْقِل",
-                en: "I move / I transport",
-                enArabeezy: "bna2el",
-                hint: "Used for moving people or things: سَيَّارَة بْتِنْقِل رُكَّاب.",
-                exampleAr: "السِّرْفِيس بْيِنْقِل نَّاس مِن مِنْطَقَة لِمِنْطَقَة.",
-                exampleEn: "The service transports people from one area to another.",
-            },
+
             {
                 id: "bamshi",
                 ar: "بَمْشِي",
                 en: "I walk",
                 enArabeezy: "bamshi",
                 hint: "From مِشِي = walking. ‘On foot’: بَمْشِي عَلَى رِجْلَيّ.",
-                exampleAr: "لَمَّا الْمَسَافَة قَرِيبَة بَمْشِي مَا بَرْكَب.",
+                exampleAr: "لما تكون المسافة قريبة، بمشي وما باخد سيارة.",
                 exampleEn: "When the distance is close, I walk and don’t take a vehicle.",
             },
             {
@@ -306,47 +272,12 @@ export const lesson = {
                 enArabeezy: "ba2aTTi3_eshshari3",
                 hint:
                     "Chunk: بَقَطِّع الشَّارِع = I cross the street. Used a lot with traffic lights.",
-                exampleAr: "بَقَطِّع الشَّارِع لَمَّا الإِشَارَة خَضْرَا.",
+                exampleAr: "بقطع الشارع لما الإشارة تكون خضرا.",
                 exampleEn: "I cross the street when the light is green.",
             },
 
-            // ===== DIRECTIONS =====
-            {
-                id: "shmal",
-                ar: "شْمال",
-                en: "left",
-                enArabeezy: "shmal",
-                hint: "Direction: left.",
-                exampleAr: "خُد شْمال عَأوَّل لَفَّة.",
-                exampleEn: "Take a left at the first turn.",
-            },
-            {
-                id: "yameen",
-                ar: "يَمين",
-                en: "right",
-                enArabeezy: "yameen",
-                hint: "Direction: right.",
-                exampleAr: "بَعْدين خُد يَمين عَشارِع الكورنيش.",
-                exampleEn: "Then take a right onto the corniche street.",
-            },
-            {
-                id: "doghri",
-                ar: "دُغري",
-                en: "straight",
-                enArabeezy: "doghri",
-                hint: "Straight ahead.",
-                exampleAr: "ضَلّك مَاشي دُغري قُدّامَك.",
-                exampleEn: "Keep going straight ahead.",
-            },
-            {
-                id: "2uddamak",
-                ar: "قُدّامَك",
-                en: "in front of you / straight ahead",
-                enArabeezy: "2uddamak",
-                hint: "Used with directions and landmarks.",
-                exampleAr: "المَحَطّة قُدّامَك عَلْيامين.",
-                exampleEn: "The station is in front of you on the right.",
-            },
+
+
 
             // ===== QUESTIONS & USEFUL CHUNKS =====
             {
@@ -356,141 +287,25 @@ export const lesson = {
                 enArabeezy: "keef_ba2dar_aroo7_3ala",
                 hint:
                     "Chunk for asking directions: كِيف بَقْدَر أَرُوح عَلَى الْجَامْعَة؟",
-                exampleAr: "كِيف بَقْدَر أَرُوح عَلَى مَحَطَّة البُصّ؟",
+                exampleAr: "كِيف بَقْدَر أَرُوح عَلَى مَحَطَّة الباص",
                 exampleEn: "How can I go to the bus station?",
             },
-            {
-                id: "keef_bowsal_3a",
-                ar: "كيف بوْصَل عَـ...؟",
-                en: "How do I get to ...?",
-                enArabeezy: "keef_bowsal_3a",
-                hint: "Key phrase for asking directions.",
-                exampleAr: "كيف بوْصَل عَالمَحَطّة مِن هون؟",
-                exampleEn: "How do I get to the station from here?",
-            },
-            {
-                id: "b_kam",
-                ar: "بِكَم التَّكْسِي؟",
-                en: "How much is the taxi?",
-                enArabeezy: "bikam_it_taxi",
-                hint: "Chunk for price. You can change: بِكَم السِّرْفِيس؟",
-                exampleAr: "لَازِم تِسْأَل: بِكَم التَّكْسِي قَبْل مَا تَرْكَب.",
-                exampleEn: "You should ask ‘How much is the taxi?’ before you get in.",
-            },
+
             {
                 id: "2addesh_el2ijra",
                 ar: "قَدّيش الأُجْرَة؟",
                 en: "How much is the fare?",
                 enArabeezy: "2addesh_el2ijreh",
                 hint: "Phrase for asking the price (fare) of bus/taxi/etc.",
-                exampleAr: "لَمّا تِرْكَب تاكسي، إسْأَل السَّوّاق: قَدّيش الأُجْرَة؟",
+                exampleAr: "لما تاخد تاكسي، اسأل السواق: قديش الأجرة؟",
                 exampleEn: "When you take a taxi, ask the driver: How much is the fare?",
             },
-            {
-                id: "adeysh_wa2t",
-                ar: "قَدِّيش بِيِأَخُد وَقْت؟",
-                en: "How long does it take?",
-                enArabeezy: "2addesh_bya5od_wa2t",
-                hint:
-                    "Used for duration: قَدِّيش بِيِأَخُد وَقْت مِن غَزَّة لَرَام اللّٰه؟",
-                exampleAr: "قَدِّيش بِيِأَخُد وَقْت مِن الْبَيْت عَلَى الشُّغُل؟",
-                exampleEn: "How long does it take from home to work?",
-            },
-            {
-                id: "fi_mobashar",
-                ar: "فِي خَطّ مُبَاشِر؟",
-                en: "Is there a direct line?",
-                enArabeezy: "fi_5aTT_mobasher",
-                hint: "خَطّ = route / line. مُبَاشِر = direct (no change).",
-                exampleAr: "فِي خَطّ مُبَاشِر مِن هُون عَلَى الْجَامْعَة؟",
-                exampleEn: "Is there a direct line from here to the university?",
-            },
-            {
-                id: "bighayyir",
-                ar: "بِغَيِّر خَطّ",
-                en: "I change line / transfer",
-                enArabeezy: "bghayyir_5aTT",
-                hint:
-                    "Chunk: بَغَيِّر خَطّ فِي الْمَحَطَّة. Useful when you change buses or services.",
-                exampleAr: "بَرْكَب سِرْفِيس وَبِغَيِّر خَطّ فِي الْوَسَط.",
-                exampleEn: "I take a service and change line in the city center.",
-            },
+
+
         ],
 
         extra: [
-            {
-                id: "rukkaab",
-                ar: "رُكَّاب",
-                en: "passengers",
-                enArabeezy: "rukkaab",
-                hint: "Plural only in practice. رَاكِب = passenger (singular).",
-                exampleAr: "السِّرْفِيس مَمْلِي رُكَّاب.",
-                exampleEn: "The service is full of passengers.",
-            },
-            {
-                id: "sawa2",
-                ar: "سَوَّاق",
-                en: "driver",
-                enArabeezy: "sawwa2",
-                hint: "From سَاق. سَوَّاق التَّكْسِي = taxi driver.",
-                exampleAr: "سَوَّاق التَّكْسِي كَان لَطِيف.",
-                exampleEn: "The taxi driver was kind.",
-            },
-            {
-                id: "maw2af",
-                ar: "مَوْقَف",
-                en: "parking / stop",
-                enArabeezy: "maw2af",
-                hint:
-                    "مَوْقَف السَّيَّارَات = parking; مَوْقَف البُصّ = bus stop / stand.",
-                exampleAr: "بِسْتَنُّوا فِي مَوْقَف السَّيَّارَات.",
-                exampleEn: "They wait in the car park.",
-            },
-            {
-                id: "tafri3a",
-                ar: "تَفْرِيعَة",
-                en: "side street / turn-off",
-                enArabeezy: "tafri3a",
-                hint: "Useful word in giving directions.",
-                exampleAr: "خُد أَوَّل تَفْرِيعَة عَالشْمال.",
-                exampleEn: "Take the first side street on the left.",
-            },
-            {
-                id: "juwwa_barra",
-                ar: "جُوَّا / بَرّا",
-                en: "inside / outside",
-                enArabeezy: "juwwa/barra",
-                hint: "Location words often used with stations and vehicles.",
-                exampleAr: "إسْتَنّاني بَرّا مَحَطّة الباص.",
-                exampleEn: "Wait for me outside the bus station.",
-            },
-            {
-                id: "muta2akher",
-                ar: "مُتَأَخِّر",
-                en: "late (for transport / time)",
-                enArabeezy: "muta2akher",
-                hint: "Used for buses and people being late.",
-                exampleAr: "الباص كان مُتَأَخِّر نُصّ ساعَة.",
-                exampleEn: "The bus was half an hour late.",
-            },
-            {
-                id: "biwa22ef_hon",
-                ar: "بِوَقّف هون؟",
-                en: "Does it stop here?",
-                enArabeezy: "biwa22ef_hon",
-                hint: "Ask if a bus / service stops at this place.",
-                exampleAr: "إسْأَل حَدا: الباص لَلبَلَد بِوَقّف هون؟",
-                exampleEn: "Ask someone: Does the bus to town stop here?",
-            },
-            {
-                id: "3ala_l_za7meh",
-                ar: "عَلَى الزَّحْمَة",
-                en: "with the traffic / in heavy traffic",
-                enArabeezy: "3ala_iz_za7meh",
-                hint: "Chunk e.g. يَوْم الْخَمِيس كُلّ الإِشِي عَلَى الزَّحْمَة.",
-                exampleAr: "بَوْصَل بَعْد نُصّ سَاعَة، أَكِيد عَلَى الزَّحْمَة.",
-                exampleEn: "I arrive after half an hour, of course with traffic.",
-            },
+
         ],
     },
 
@@ -526,7 +341,7 @@ export const lesson = {
             },
             {
                 "speaker": "Rasha",
-                "ar": "إمشِي دُغري قُدّامَك تقريبًا دَقِيقْتين، بَعْدين خُد يَمين.",
+                "ar": "إمشِي دُغري قُدّامَك تقريبًا دَقِيقْتين، بَعْدين لف يَمين.",
                 "en": "Walk straight ahead for about two minutes, then turn right."
             },
             {
@@ -571,7 +386,7 @@ export const lesson = {
             },
             {
                 "speaker": "Rasha",
-                "ar": "بِزَبُط، بس التاكسي أَغْلى. إسأل السَّوّاق: قَدّيش بياخد لَلجامْعَة؟",
+                "ar": "بتقدر، بس التاكسي أَغْلى. إسأل السَّوّاق: قَدّيش بياخد لَلجامْعَة؟",
                 "en": "You can, but the taxi is more expensive. Ask the driver: How much is the fare to the university?"
             },
             {
@@ -611,7 +426,7 @@ export const lesson = {
             },
             {
                 "speaker": "Rasha",
-                "ar": "شي ٣ شيكِل أو ٤ حسب الطَّريق.",
+                "ar": "تقريبا ٣ شيكِل أو ٤ حسب الطَّريق.",
                 "en": "Around 3 or 4 shekels depending on the route."
             },
             {
