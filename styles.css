@@ -1839,3 +1839,80 @@ select:focus {
 .teacher-editor__section.td-hidden-section {
     display: none;
 }
+/* =========================
+   Branching Dialogue (Decisions)
+   ========================= */
+
+.branching-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.branching-meta-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.branching-meta-row .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.branching-choices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.branch-choice {
+    text-align: left;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.96);
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.branch-choice:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+}
+
+.branch-choice__en {
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.branch-choice__ar {
+    direction: rtl;
+    text-align: right;
+    font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
+    margin-top: 6px;
+    font-size: 1.05em;
+}
+
+.branching-end {
+    margin-top: 10px;
+    border-radius: 16px;
+    padding: 10px 12px;
+    background: #f9fafb;
+    border: 1px solid rgba(226, 232, 240, 0.96);
+}
+
+.branching-end strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Minor spacing polish for the new second grid */
+#dialogueOnlyContainer {
+    margin-bottom: 8px;
+}

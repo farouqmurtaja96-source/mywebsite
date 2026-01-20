@@ -1726,6 +1726,13 @@ function renderLevels() {
         card.appendChild(unitsContainer);
         container.appendChild(card);
     });
+
+    // Render the new "Dialogue Only (Decisions)" section if present
+    try {
+        if (typeof window.renderDialogueOnlyLevels === "function") {
+            window.renderDialogueOnlyLevels();
+        }
+    } catch (e) { }
 }
 
 // ========================= LESSON VIEW =========================

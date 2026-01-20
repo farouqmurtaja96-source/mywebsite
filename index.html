@@ -214,7 +214,46 @@
 
             <div id="levelsContainer" class="levels-grid"></div>
 
+            <div class="section-header" style="margin-top:18px;">
+                <h3 style="margin:0;">Dialogue Practice (Decisions)</h3>
+                <p class="section-header__subtitle">Same units, but dialogue-only with branching choices.</p>
+            </div>
 
+            <div id="dialogueOnlyContainer" class="levels-grid"></div>
+
+
+</section>
+
+        <!-- ============== BRANCHING DIALOGUE SCREEN ============== -->
+        <section id="branching-screen" class="screen">
+            <div class="lesson-topbar">
+                <div>
+                    <p class="lesson-topbar__label">Student</p>
+                    <p class="lesson-topbar__value" id="branchingStudentName">–</p>
+                </div>
+                <div class="lesson-topbar__center">
+                    <p class="lesson-topbar__label">Dialogue</p>
+                    <p class="lesson-topbar__value" id="branchingMeta">–</p>
+                </div>
+                <div class="lesson-topbar__right">
+                    <div class="font-controls">
+                        <button id="btnBranchingFontSmaller" class="btn btn--ghost btn--icon">A−</button>
+                        <button id="btnBranchingFontLarger" class="btn btn--ghost btn--icon">A+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-secondary-bar">
+                <div class="lesson-secondary-bar__buttons">
+                    <button id="btnBackToLevelsFromBranching" class="btn btn--ghost btn--sm">Back to Units</button>
+                    <button id="btnBranchingRestart" class="btn btn--outline btn--sm">Restart</button>
+                    <button id="btnBranchingUndo" class="btn btn--outline btn--sm">Undo</button>
+                    <button id="btnBranchingToggleAr" class="btn btn--outline btn--sm">Hide Arabic</button>
+                    <button id="btnBranchingToggleEn" class="btn btn--outline btn--sm">Hide English</button>
+                </div>
+            </div>
+
+            <div id="branchingContent" class="lesson-content"></div>
         </section>
 
         <!-- ============== LESSON VIEW SCREEN ============== -->

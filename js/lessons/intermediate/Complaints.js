@@ -99,7 +99,7 @@ export const lesson = {
                 en: "keeps / continues",
                 enArabeezy: "bidall",
                 hint: "Used with a problem continuing",
-                exampleAr: "المَشْكِلة بِضِلّ تِتْكَرَّر.",
+                exampleAr: "المَشْكِلة بِتضِلّ تِتْكَرَّر.",
                 exampleEn: "The problem keeps repeating.",
             },
             {
@@ -116,7 +116,7 @@ export const lesson = {
                 ar: "خِدْمَة",
                 en: "service",
                 enArabeezy: "khidmeh",
-                exampleAr: "الخِدْمَة هون مِش عَالمُسْتَوى.",
+                exampleAr: "الخدمة هون مش بالمستوى المطلوب.",
                 exampleEn: "The service here is not at the right level.",
             },
             {
@@ -124,7 +124,7 @@ export const lesson = {
                 ar: "مُسْتَوى",
                 en: "level / standard",
                 enArabeezy: "mostawa",
-                exampleAr: "مُسْتَوى النَّظافَة واطي.",
+                exampleAr: "مُسْتَوى النَّظافَة قليل.",
                 exampleEn: "The level of cleanliness is low.",
             },
             {
@@ -149,7 +149,7 @@ export const lesson = {
                 ar: "يِعالِج المَشْكِلة",
                 en: "to handle / fix the problem",
                 enArabeezy: "ye3ālej il-mashkleh",
-                exampleAr: "لازِم حدا يِعالِج المَشْكِلة سَريع.",
+                exampleAr: "لازِم حدا يِعالِج المَشْكِلة بسرعة.",
                 exampleEn: "Someone must handle the problem quickly.",
             },
             {
@@ -229,7 +229,7 @@ export const lesson = {
                 ar: "مَرَّة واحْدَة / أوَّل مَرّة",
                 en: "one time / first time",
                 enArabeezy: "marra wa7deh / awwal marra",
-                exampleAr: "لو مَرَّة واحْدَة مَش مُشْكِلة، بَس هادا تِكْرار.",
+                exampleAr: "لو كانت مرّة وحدة ماشي الحال، بس هاي بتتكرّر.",
                 exampleEn: "If it were one time it’s fine, but this is repeated.",
             },
             {
@@ -272,7 +272,7 @@ export const lesson = {
                 en: "I have no energy / I’m fed up",
                 enArabeezy: "ma eli khileʾ",
                 hint: "Colloquial, expresses frustration",
-                exampleAr: "عنْجَد ما إلِي خِلِق أِتْعامَل مَع هالْمَوْضوع بَعْد.",
+                exampleAr: "بصراحة ما عندي طاقة أتعامل مع هالموضوع أكتر.",
                 exampleEn: "Honestly I have no energy to deal with this any more.",
             },
             {
@@ -280,7 +280,7 @@ export const lesson = {
                 ar: "يِصْبِر",
                 en: "to be patient",
                 enArabeezy: "yesbor",
-                exampleAr: "صَبَرْنا شَهِر كَامِل، بَس المَشْكِلة كَمانها.",
+                exampleAr: "تحمّلنا شهر كامل، بس المشكلة لسه موجودة.",
                 exampleEn: "We were patient for a whole month but the problem is still there.",
             },
             {
@@ -296,7 +296,7 @@ export const lesson = {
                 ar: "يِتْفاهَم",
                 en: "to understand each other",
                 enArabeezy: "yitfāham",
-                exampleAr: "هامّ نِتْفاهَم عَحَلّ وَسَط.",
+                exampleAr: "مهم نتّفق على حلّ وسط.",
                 exampleEn: "It’s important that we agree on a middle solution.",
             },
             {
@@ -371,12 +371,12 @@ export const lesson = {
             },
             {
                 "speaker": "Mina",
-                "ar": "شُو صار يا رِنا؟ شَكْلِك مْعَصَّبِة.",
+                "ar": "شو اللي صار يا رينا؟ شكلك متضايقة.",
                 "en": "What happened, Rina? You look upset."
             },
             {
                 "speaker": "Rina",
-                "ar": "الباص للجامْعَة تَقريبًا كُل يوم بْيِتْأَخَّر نُصّ ساعة أَو أَكْثَر.",
+                "ar": "الباص اللي بروح عالجامعة تقريبًا كل يوم بتأخّر نص ساعة أو أكتر.",
                 "en": "The bus to the university is almost every day half an hour late or more."
             },
             {
@@ -406,7 +406,7 @@ export const lesson = {
             },
             {
                 "speaker": "Rina",
-                "ar": "صَحّ. تِكْرار المَشْكِلة هوّي إلّي بْيِنْرْفِز.",
+                "ar": "صح. تكرار المشكلة هو اللي فعليًا بنرفزني كتير.",
                 "en": "Right. The repetition of the problem is what really gets on my nerves."
             },
             {
@@ -421,12 +421,12 @@ export const lesson = {
             },
             {
                 "speaker": "Mina",
-                "ar": "لا، إذا حَكَيْتي بِهُدُوء وَأَدَب ما حَدا يِزْعَل.",
+                "ar": "لا، إذا حكيتي بهدوء وبأدب، ولا حدا رح يزعل.",
                 "en": "No, if you speak calmly and politely, no one will get upset."
             },
             {
                 "speaker": "Rina",
-                "ar": "طَيِّب، تِجي مَعِي؟",
+                "ar": "طيب، بتيجي معي؟",
                 "en": "Okay, will you come with me?"
             },
             {
@@ -451,7 +451,7 @@ export const lesson = {
             },
             {
                 "speaker": "Rina",
-                "ar": "الباص تَبَع جامْعَة غالِبًا بْيِتْأَخَّر نُصّ ساعة، وأَحْيانًا أَكْتَر.",
+                "ar": "باص الجامعة عادةً بتأخّر نص ساعة، وأحيانًا أكتر.",
                 "en": "The university bus usually is thirty minutes late, and sometimes more."
             },
             {
@@ -466,22 +466,18 @@ export const lesson = {
             },
             {
                 "speaker": "Receptionist",
-                "ar": "مِنْفْهَم عَلَيْكُم، بِصَراحَة الزَّحْمِة قَوِيّة هالأيّام.",
+                "ar": "فاهمين عليكم، وبصراحة الأيام هاي في زحمة سير كتيرة.",
                 "en": "We understand you; honestly, the traffic is heavy these days."
             },
-            {
-                "speaker": "Rina",
-                "ar": "مُتَفَهِّمَة الزَّحْمِة، بَس العُذْر مَش مَقْنِع لَمّا المَشْكِلة مِسْتَمِرّة.",
-                "en": "I understand the traffic, but the excuse is not convincing when the problem is ongoing."
-            },
+
             {
                 "speaker": "Mina",
-                "ar": "مُمْكِن تِعْمِلوا شِي عَالمَوْعِد؟ تَطْلَع الباصات أَبْكَر شْوَي؟",
+                "ar": "ممكن تعملوا إشي بخصوص الموعد؟ ممكن الباصات تطلع أبكر شوي؟",
                 "en": "Can you do something about the schedule? Can the buses leave a bit earlier?"
             },
             {
                 "speaker": "Receptionist",
-                "ar": "إحْنا مِرْتَبِطين بِوَقْت مُحَدَّد، بَس بِنْقِل الحَكِي لَلمَسؤول.",
+                "ar": "إحنا ملتزمين بوقت ثابت، بس رح نوصل كلامكم للمسؤول.",
                 "en": "We are tied to a fixed time, but we will pass your words to the person in charge."
             },
             {
@@ -491,7 +487,7 @@ export const lesson = {
             },
             {
                 "speaker": "Receptionist",
-                "ar": "عَن جَدّ إحْنا آسْفِين عَالإِزْعاج، وبنِوَعِد نِراجِع الجَدْوَل.",
+                "ar": "عَن جَدّ إحْنا آسْفِين عَالإِزْعاج، وبنِوَعِدكم نِراجِع الجَدْوَل.",
                 "en": "We are really sorry for the inconvenience, and we promise to review the schedule."
             },
             {
@@ -501,19 +497,15 @@ export const lesson = {
             },
             {
                 "speaker": "Rina",
-                "ar": "ما قَصْدي أِزَعِّل حَدا، بَس الجِدّ الوَضْع مِش مَعْقول.",
+                "ar": "ما قَصْدي أِزَعِّل حَدا، بَس بجد الوَضْع مِش مَعْقول.",
                 "en": "I don’t mean to upset anyone, but honestly the situation is unacceptable."
             },
             {
                 "speaker": "Receptionist",
-                "ar": "لا، حَكْيكُم مَفْهُوم، وهَادا حَقِّكُم. نِشَكِّرُكُم إنّكم حَكَيْتوا بِأَدَب.",
+                "ar": "لا، كلامكم مَفْهُوم، وهَادا حَقِّكُم. وبنِشَكِّرُكُم إنّكم حَكَيْتوا بِأَدَب.",
                 "en": "No, your words are understood, and this is your right. We thank you for speaking politely."
             },
-            {
-                "speaker": "Rina",
-                "ar": "إن شاء الله نِتْفاهَم عَحَلّ وَسَط يِرْضي الكِلّ.",
-                "en": "Hopefully we can agree on a compromise that satisfies everyone."
-            },
+
             {
                 "speaker": "Mina",
                 "ar": "يَلّا رِنا، نِرْجَع عَالمَحاضْرَة قَبْل ما نِتْأَخَّر مَرّة تانيِة.",
