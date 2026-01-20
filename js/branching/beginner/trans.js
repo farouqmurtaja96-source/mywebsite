@@ -1,5 +1,21 @@
 import { LESSON_ID_TRANSPORT } from '../../core/constants.js';
-import { makePlaceholderDialogue } from '../_placeholder.js';
+
+
+function makePlaceholderDialogue({ dialogueId, level, unit, title }) {
+  return {
+    meta: { level, unit, title: title || (unit + ' - Decisions') },
+    startNodeId: 'n1',
+    nodes: {
+      n1: {
+        speaker: 'System',
+        ar: 'هالمحادثة لسه مش جاهزة. قريباً إن شاء الله ✅',
+        en: 'This branching dialogue is not ready yet. Coming soon ✅',
+        choices: [],
+      },
+    },
+  };
+}
+
 
 export const dialogueId = 'BD::' + LESSON_ID_TRANSPORT;
 export const dialogue = makePlaceholderDialogue({
