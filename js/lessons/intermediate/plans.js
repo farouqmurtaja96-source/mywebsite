@@ -34,7 +34,7 @@ export const lesson = {
                 enArabeezy: "baddi",
                 hint:
                     "Very common for simple plans: بَدّي أَدْرُس = I want to / I’m going to study.",
-                exampleAr: "بَدّي أَدْرُس بُكْرَا بَعْد الدَّرْس.",
+                exampleAr: "بَدّي أَدْرُس بُكْرَا بَعْد الحصة.",
                 exampleEn: "I’m going to study tomorrow after the lesson.",
             },
             {
@@ -44,7 +44,7 @@ export const lesson = {
                 enArabeezy: "ra7",
                 hint:
                     "Used before the verb for planned/expected future: رَح أُسَافِر = I will travel.",
-                exampleAr: "بُكْرَا رَح أُصْحَى بَكِّير.",
+                exampleAr: "بُكْرَا رَح أُصْحَى بدري.",
                 exampleEn: "Tomorrow I will wake up early.",
             },
             {
@@ -54,17 +54,17 @@ export const lesson = {
                 enArabeezy: "nawi",
                 hint:
                     "Masc: نَاوِي، fem: نَاوْيَة. Use with ‘إِنِّي’: نَاوِي إِنِّي…",
-                exampleAr: "أَنَا نَاوْيَة إِنِّي أُكَمِّل دِرَاسَة عَرَبِي.",
+                exampleAr: "أَنَا نَاوْيَ  أُكَمِّل دِرَاسَة عَرَبِي.",
                 exampleEn: "I intend to continue studying Arabic.",
             },
             {
                 id: "mukhattat",
-                ar: "مُخَطِّط",
+                ar: "مخَطِّط",
                 en: "planning / I have a plan",
                 enArabeezy: "mukhattet",
                 hint:
                     "Masc: مُخَطِّط، fem: مُخَطِّطَة. Stronger, more organized than نَاوِي.",
-                exampleAr: "مُخَطِّط إِنِّي أُسَافِر بَعْد سَنَة.",
+                exampleAr: "مخَطِّط إِنِّي أُسَافِر بَعْد سَنَة.",
                 exampleEn: "I’m planning to travel in a year.",
             },
             {
@@ -74,7 +74,7 @@ export const lesson = {
                 enArabeezy: "7abeb",
                 hint:
                     "Masc: حَابِب، fem: حَابْبَة. Softer than بَدّي.",
-                exampleAr: "حَابْبَة أَجَرِّب شِي جْدِيد هَالسَّنَة.",
+                exampleAr: "حَابْبَ أَجَرِّب شِي جْدِيد هَالسَّنَة.",
                 exampleEn: "I’d like to try something new this year.",
             },
             {
@@ -84,7 +84,7 @@ export const lesson = {
                 enArabeezy: "lazem",
                 hint:
                     "Used for obligations, plans you ‘have to’ do.",
-                exampleAr: "لَازِم أُخَلِّص الوَاجِب قَبْل الجُومْعَة.",
+                exampleAr: "لَازِم أُخَلِّص الوَاجِب قَبْل الجمعة.",
                 exampleEn: "I have to finish the homework before Friday.",
             },
 
@@ -184,15 +184,7 @@ export const lesson = {
                 exampleAr: "عِنْدِي مَشْرُوع كْبِير لِلنِّهَاية السَّنَة.",
                 exampleEn: "I have a big project for the end of the year.",
             },
-            {
-                id: "imti7an",
-                ar: "اِمْتِحَان",
-                en: "exam",
-                enArabeezy: "imti7an",
-                hint: "",
-                exampleAr: "بَدّي أَجَهِّز لِاِمْتِحَان بُكْرَا.",
-                exampleEn: "I’m going to prepare for an exam tomorrow.",
-            },
+
             {
                 id: "safar",
                 ar: "سَفَر",
@@ -211,17 +203,8 @@ export const lesson = {
                 exampleAr: "بِالعُطْلَة بَدّي أَرِيح وَأَنَام كْتِير.",
                 exampleEn: "In the holiday I’m going to rest and sleep a lot.",
             },
-            {
-                id: "dagheT",
-                ar: "ضَغْط",
-                en: "pressure / stress (busy period)",
-                enArabeezy: "daghT",
-                hint: "",
-                exampleAr:
-                    "هَالشَّهِر فِيه ضَغْط، مَنْهُفّ شُغُل وَدِرَاسَة.",
-                exampleEn:
-                    "This month is a period of pressure: a lot of work and study.",
-            },
+
+
 
             // ===== ASKING ABOUT PLANS =====
             {
@@ -326,7 +309,7 @@ export const lesson = {
             },
             {
                 "speaker": "Malek",
-                "ar": "هَلَّق تَعْبان شْوَي، بَس مَبْسوط عَالخِطَط لِلأُسْبوع الجّاي.",
+                "ar": "هَلَّقيت تَعْبان شْوَي، بَس مَبْسوط عَالخِطَط لِلأُسْبوع الجّاي.",
                 "en": "I’m a bit tired now, but I’m happy about the plans for next week."
             },
             {
@@ -361,7 +344,7 @@ export const lesson = {
             },
             {
                 "speaker": "Omar",
-                "ar": "إن شاء الله يِزْبُط مَعَك. أنا خِطّتي أِتْخَرَّج السَّنَة الجّاي.",
+                "ar": "بتمنى يِزْبُط مَعَك. أنا خِطّتي أِتْخَرَّج السَّنَة الجّاي.",
                 "en": "Hopefully it works out. My plan is to graduate next year."
             },
             {
@@ -376,12 +359,12 @@ export const lesson = {
             },
             {
                 "speaker": "Malek",
-                "ar": "مُو مُسْتَعْجِل شْوَي؟ كْثير شُغُل لَواحِد.",
+                "ar": "مش مستعجل شوي؟ هاد شغل كتير على شخص واحد.",
                 "en": "Aren’t you rushing it a bit? It’s a lot of work for one person."
             },
             {
                 "speaker": "Omar",
-                "ar": "مَبْسوط بِالفِكْرَة، بَس إذا شُفْت ضَغْط كْثير مُمْكِن أِأَجِّل واحِد مِن الهَدَفين.",
+                "ar": "مَبْسوط بِالفِكْرَة، بَس إذا شُفْت ضَغْط كْثير مُمْكِن أَجِّل واحِد مِن الهَدَفين.",
                 "en": "I like the idea, but if I see too much pressure I might postpone one of the two goals."
             },
             {
@@ -396,13 +379,13 @@ export const lesson = {
             },
             {
                 "speaker": "Malek",
-                "ar": "بُكْرَة هَلَّق شْوَي مَشْغول، يِمْكِن بَعْد بُكْرَة أَفْضَل.",
+                "ar": "بُكْرَة شْوَي مَشْغول، يِمْكِن بَعْد بُكْرَة أَفْضَل.",
                 "en": "Tomorrow I’m a bit busy, maybe the day after tomorrow is better."
             },
             {
                 "speaker": "Omar",
-                "ar": "تمام، بَعْد بُكْرَة عَالسّاعَة اِثْنَيْن؟",
-                "en": "Okay, the day after tomorrow at two o’clock?"
+                "ar": "تمام، بَعْد بُكْرَة عَالسّاعَة وحدة",
+                "en": "Okay, the day after tomorrow at one o’clock?"
             },
             {
                 "speaker": "Malek",
@@ -416,7 +399,7 @@ export const lesson = {
             },
             {
                 "speaker": "Malek",
-                "ar": "مِنْتِّفِق هَلَّق، وإذا اِضْطْرّينا نِلْغي أَو نِأَجِّل، بِبَعْتِلَك مِسِج.",
+                "ar": "مِنْتِّفِق هَلَّقيت، وإذا اِضْطْرّينا نِلْغي أَو نِأَجِّل، بِبَعْتِلَك مِسِج.",
                 "en": "We’ll agree now, and if we have to cancel or postpone, I’ll send you a message."
             },
             {
@@ -431,7 +414,7 @@ export const lesson = {
             },
             {
                 "speaker": "Omar",
-                "ar": "هَلَّق صِرْت أَكْثَر واقِعي؟",
+                "ar": "يعني هلّق صرت واقعي أكتر؟",
                 "en": "So now you’ve become more realistic?"
             },
             {

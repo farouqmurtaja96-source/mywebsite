@@ -67,15 +67,7 @@ export const lesson = {
                 exampleAr: "أَنَا فِي قِسْم الْهَنْدَسَة الْكَهْرَبَائِيَّة.",
                 exampleEn: "I am in the electrical engineering department.",
             },
-            {
-                id: "maktab",
-                ar: "مَكْتَب",
-                en: "office / desk",
-                enArabeezy: "maktab",
-                hint: "Office at work or a desk.",
-                exampleAr: "بِشْتِغِل في مَكْتَب صْغير بِالشِّرْكَة.",
-                exampleEn: "I work in a small office at the company.",
-            },
+
             {
                 id: "sherkeh",
                 ar: "شِرْكَة",
@@ -196,7 +188,7 @@ export const lesson = {
                 enArabeezy: "mawaadd",
                 hint:
                     "Plural word already. Singular مَادَّة = one subject / course.",
-                exampleAr: "عِنْدِي تَلَات مَوَادّ هَالْسِّمِسْتِر.",
+                exampleAr: "عِنْدِي تَلَات مَوَادّ هالفصل.",
                 exampleEn: "I have three subjects this semester.",
             },
             {
@@ -316,15 +308,7 @@ export const lesson = {
                 exampleAr: "بَدْرُس حَاسُوب فِي الْجَامْعَة.",
                 exampleEn: "I study computer science at university.",
             },
-            {
-                id: "yidros",
-                ar: "يِدْرُس",
-                en: "to study",
-                enArabeezy: "yidros",
-                hint: "Dictionary verb form ‘to study’.",
-                exampleAr: "بَدْرُس كُمْبْيُوتِر سايِنْس.",
-                exampleEn: "I study computer science.",
-            },
+
             {
                 id: "bat3allam",
                 ar: "بَتْعَلَّم",
@@ -346,18 +330,7 @@ export const lesson = {
                 exampleAr: "لَمَّا مَا أَفْهَم بَسْأَل الأُسْتَاذ.",
                 exampleEn: "When I don’t understand, I ask the teacher.",
             },
-            {
-                id: "bafham",
-                ar: "بَفْهَم",
-                en: "I understand",
-                enArabeezy: "bafham",
-                hint:
-                    "From فَهِم = to understand. Negative: مَا بَفْهَم.",
-                exampleAr:
-                    "أَحْيَانًا بَفْهَم الدَّرْس، أَحْيَانًا بَحْتَاج تِّكْرَار.",
-                exampleEn:
-                    "Sometimes I understand the lesson, sometimes I need repetition.",
-            },
+
             {
                 id: "bakammel",
                 ar: "بَكَمِّل",
@@ -396,7 +369,7 @@ export const lesson = {
                 hint:
                     "Spoken verb for ‘work’. Add where or how: بَشْتِغِل أُونْلَايْن، بَشْتِغِل فِي مَكْتَب.",
                 exampleAr:
-                    "بَشْتِغِل مُدَرِّسَة جُزْئِيّ وَبَدْرُس كَمَان.",
+                    "بشتغل مُدرّس دوام جزئي وبدرس كمان.",
                 exampleEn: "I work part-time as a teacher and study as well.",
             },
             {
@@ -405,7 +378,7 @@ export const lesson = {
                 en: "to work",
                 enArabeezy: "yishtaghel",
                 hint: "Dictionary verb form ‘to work’.",
-                exampleAr: "بَشْتِغِل جُزْئِي بَعْد الجامْعَة.",
+                exampleAr: "بشتغل دوام جزئي بعد الجامعة.",
                 exampleEn: "I work part-time after university.",
             },
             {
@@ -538,12 +511,12 @@ export const lesson = {
         lines: [
             {
                 "speaker": "Majd",
-                "ar": "صَباح الخير يا سارة، كِيف دَوامِك اليوم؟",
+                "ar": "صباح الخير يا سارة، كيف جدولك اليوم؟",
                 "en": "Good morning, Sara, how is your schedule today?"
             },
             {
                 "speaker": "Sara",
-                "ar": "صَباح النّور يا مَجْد، دَوامي مَجْنون! عندي جامْعَة وَشُغُل.",
+                "ar": "صباح الخير يا مجد، جدّ جدولي ملخبط! عندي جامعة وشغل.",
                 "en": "Good morning, Majd, my schedule is crazy! I have university and work."
             },
             {
@@ -558,8 +531,8 @@ export const lesson = {
             },
             {
                 "speaker": "Majd",
-                "ar": "وَقت قَدّيش الدَّوام؟",
-                "en": "How long are your work hours?"
+                "ar": "قدّيش ساعات شغلك؟ وكم يوم بتدوامي",
+                "en": "How long are your work hours? And how many days do you work?"
             },
             {
                 "speaker": "Sara",
@@ -578,12 +551,12 @@ export const lesson = {
             },
             {
                 "speaker": "Majd",
-                "ar": "ما بِتْحِسّ إنّو ما عِنْدِك وَقْت فاضي؟",
+                "ar": "ما بِتْحِسّي إنّو ما عِنْدِك وَقْت فاضي؟",
                 "en": "Don’t you feel like you have no free time?"
             },
             {
                 "speaker": "Sara",
-                "ar": "صِراحَةً، نادِرًا بْلاقي وَقْت فاضي. لاِزِم أَدْرُس لِلْمَشْروع وِلْاِمْتِحانات كْمان.",
+                "ar": "بصِراحَةً، نادِرًا ما بْلاقي وَقْت فاضي. لاِزِم أَدْرُس لِلْمَشْروع وِلْاِمْتِحانات كْمان.",
                 "en": "Honestly, I rarely find free time. I have to study for the project and for exams too."
             },
             {
@@ -598,7 +571,7 @@ export const lesson = {
             },
             {
                 "speaker": "Majd",
-                "ar": "بِتْحِسّ إنّو الشُّغُل بيساعِدِك بِالدِّراسَة وَلّا بِتْعَبِك أكْتَر؟",
+                "ar": "بتحسّ إنو الشغل بيساعدك بدراستك، ولا بس بتعبك أكتر؟",
                 "en": "Do you feel that the job helps you with your studies, or does it just tire you out more?"
             },
             {

@@ -64,7 +64,7 @@ export const lesson = {
                 enArabeezy: "daraj / séllem",
                 hint:
                     "دَرَج = stairs in general, سِلِّم = staircase in a building.",
-                exampleAr: "لَمّا الأسانْسير خَرْبان، نِطْلَع عَالدَّرَج.",
+                exampleAr: "لما يكون المصعد خربان، بنطلع عالدَّرَج.",
                 exampleEn: "When the elevator is broken, we go up the stairs.",
             },
             {
@@ -161,15 +161,7 @@ export const lesson = {
                 exampleAr: "لازِم أَدْفَع فاتورَة الشَّهِر هادا.",
                 exampleEn: "I have to pay this month’s bill.",
             },
-            {
-                id: "fatora_kahraba",
-                ar: "فاتورَة كَهْرَبا",
-                en: "electricity bill",
-                enArabeezy: "fātūrat kahrabā",
-                hint: "Monthly bill for electricity.",
-                exampleAr: "فاتورَة الكَهْرَبا طِلْعِت عالْعادَة أَكْتَر.",
-                exampleEn: "The electricity bill came higher than usual.",
-            },
+
             {
                 id: "fatora_mayy",
                 ar: "فاتورَة مَيّ",
@@ -261,7 +253,7 @@ export const lesson = {
                 en: "gas (for cooking)",
                 enArabeezy: "ghāz / ghaz",
                 hint: "Gas cylinder or gas line.",
-                exampleAr: "قِنّينِة الغَاز فاضيِة، لازم نِغَيِّرْها.",
+                exampleAr: "جرة الغَاز فاضيِة، لازم نِغَيِّرْها.",
                 exampleEn: "The gas cylinder is empty; we need to change it.",
             },
             {
@@ -270,7 +262,7 @@ export const lesson = {
                 en: "oven",
                 enArabeezy: "furn",
                 hint: "For baking / cooking, gas or electric.",
-                exampleAr: "الفُرْن الكَهْرَبا خَرْبان اليوم.",
+                exampleAr: "فرن الكَهْرَبا خَرْبان اليوم.",
                 exampleEn: "The electric oven is broken today.",
             },
             {
@@ -306,25 +298,17 @@ export const lesson = {
                 en: "tap / faucet",
                 enArabeezy: "ḥanafyyeh / 7anafiyeh",
                 hint: "Water tap.",
-                exampleAr: "الحَنَفِيّة بْتِخَرّ مَيّ طول الليل.",
+                exampleAr: "الحَنَفِيّة بتنقط مَيّ طول الليل.",
                 exampleEn: "The tap drips water all night.",
             },
-            {
-                id: "massdood",
-                ar: "مَسْدود",
-                en: "blocked / clogged",
-                enArabeezy: "masdūd / masdood",
-                hint: "Used for sink, toilet, drain, etc.",
-                exampleAr: "المَجْرى مَسْدود وبَدّه تَنْظيف.",
-                exampleEn: "The drain is blocked and needs cleaning.",
-            },
+
             {
                 id: "beykhar_mayy",
-                ar: "بِيخَرّ مَيّ",
+                ar: "بنقط مَيّ",
                 en: "it leaks water",
                 enArabeezy: "bikharr mayy / bey5ar mayy",
                 hint: "Used for tap, pipe, ceiling.",
-                exampleAr: "السَّقْف بِيخَرّ مَيّ لَمّا تِمْطُر.",
+                exampleAr: "السَّقْف بنقط مَيّ لَمّا تشتي.",
                 exampleEn: "The ceiling leaks when it rains.",
             },
 
@@ -355,8 +339,8 @@ export const lesson = {
                 en: "broken",
                 enArabeezy: "maksūr / maksour",
                 hint: "Physically broken (glass, door, window).",
-                exampleAr: "الشُّبّاك مَكْسور بِنُصّه.",
-                exampleEn: "The window is broken in the middle.",
+                exampleAr: "الشُّبّاك مَكْسور .",
+                exampleEn: "The window is broken ",
             },
             {
                 id: "kharban",
@@ -414,7 +398,7 @@ export const lesson = {
                 en: "I contact / get in touch with…",
                 enArabeezy: "batwāṣal maʿ...",
                 hint: "بَتْواصَل مَع صاحِب البَيْت / مَع الشِّرْكَة.",
-                exampleAr: "لَمّا في مُشْكِلَة بَتْواصَل مَع صاحِب البَيْت.",
+                exampleAr: "لَمّا يكون في مُشْكِلَة بَتْواصَل مَع صاحِب البَيْت.",
                 exampleEn: "When there is a problem, I contact the landlord.",
             },
         ],
@@ -429,15 +413,7 @@ export const lesson = {
                 exampleAr: "عَقْد الإيجار مَكْتوب فيه كُلّ الشُّروط.",
                 exampleEn: "All the conditions are written in the rental contract.",
             },
-            {
-                id: "shakwa",
-                ar: "شَكْوَى",
-                en: "complaint",
-                enArabeezy: "shakwā / shakwa",
-                hint: "Formal complaint to landlord or authority.",
-                exampleAr: "مُمْكِن نِقَدِّم شَكْوَى عَن الصَّوْت العالي.",
-                exampleEn: "We can file a complaint about the loud noise.",
-            },
+
             {
                 id: "7ares_el3imara",
                 ar: "حارِس العِمارَة",
@@ -462,18 +438,10 @@ export const lesson = {
                 en: "heating",
                 enArabeezy: "tidfiʾa / tedfi2a",
                 hint: "System for warming the house.",
-                exampleAr: "ما في تِدْفِئَة مْنيحَة بِالشِّتْوي.",
+                exampleAr: "ما في تِدْفِئَة مْنيحَة بالشتا.",
                 exampleEn: "There is no good heating in winter.",
             },
-            {
-                id: "merwa7a",
-                ar: "مِرْوَحَة",
-                en: "fan",
-                enArabeezy: "mirwaḥa / merwa7a",
-                hint: "Ceiling or standing fan.",
-                exampleAr: "المِرْوَحَة أَسْهَل مِن المِكيّف لَلفاتورَة.",
-                exampleEn: "A fan is easier on the bill than the AC.",
-            },
+
             {
                 id: "sakan_jdid",
                 ar: "سَكَن جْديد",
@@ -523,17 +491,17 @@ export const lesson = {
             },
             {
                 "speaker": "Rami",
-                "ar": "إي، في بَلكون صْغير عَطَريق الشّارِع الرّئيسي.",
+                "ar": "إي، في بَلكون صْغيرة عالشّارِع الرّئيسي.",
                 "en": "Yes, there is a small balcony on the main street."
             },
             {
                 "speaker": "Khaled",
-                "ar": "عَأيّ طابِق الشِّقّة؟ العِمارَة في أسانْسير؟",
+                "ar": "عَأيّ طابِق الشِّقّة؟ العِمارَة فيها أسانْسير؟",
                 "en": "On which floor is the apartment? Does the building have an elevator?"
             },
             {
                 "speaker": "Rami",
-                "ar": "عَالطّابِق الرّابِع، وفي مِصْعَد، بَس خَرْبان أَحْيانًا.",
+                "ar": "عَالطّابِق الرّابِع، وفي مِصْعَد،بس احيانا بكون خربان.",
                 "en": "On the fourth floor, and there is an elevator, but it’s sometimes out of order."
             },
             {
@@ -543,7 +511,7 @@ export const lesson = {
             },
             {
                 "speaker": "Rami",
-                "ar": "الإيجار خَمِس مِيّة شِكِل، بَس فاتورَة المَيّ وَالكَهْرَبا عَلَيْنا.",
+                "ar": "الإيجار خَمِس مِيّة شِيكِل، بَس فاتورَة المَيّ وَالكَهْرَبا عَلَيْنا.",
                 "en": "The rent is five hundred shekels, but the water and electricity bills are on us."
             },
             {
@@ -553,7 +521,7 @@ export const lesson = {
             },
             {
                 "speaker": "Rami",
-                "ar": "جارتي اللّي حَدِّي طَيِّبَة، بَس الجار اللّي فَوقنا صَوْته عالي بِاللَّيْل.",
+                "ar": "جارتي اللّي قبالي طَيِّبَة، بَس الجار اللّي فَوقنا صَوْته عالي بِاللَّيْل.",
                 "en": "My neighbor next door is nice, but the neighbor above us is loud at night."
             },
             {
@@ -573,7 +541,7 @@ export const lesson = {
             },
             {
                 "speaker": "Rami",
-                "ar": "المَغْسَلِة في الحَمّام مَسْدودَة، والمَيّ بْتِنْقِط مِن السَّقْف لَمّا أَفَتِّح الحَنَفِيّة.",
+                "ar": "المَغْسَلِة في الحَمّام مَسْددَة، والمَيّ بْتِنْقِط مِن السَّقْف لَمّا أَفَتِّح الحَنَفِيّة.",
                 "en": "The sink in the bathroom is blocked and water drips from the ceiling when I open the tap."
             },
             {
@@ -588,12 +556,12 @@ export const lesson = {
             },
             {
                 "speaker": "Khaled",
-                "ar": "يَلّا نتِّصِل هَلَّق، أَفْضَل مِن بُكْرَة.",
+                "ar": "يَلّا نتِّصِل هَلَّقيت، أَفْضَل مِن بُكْرَة.",
                 "en": "Let’s call him now; better than tomorrow."
             },
             {
                 "speaker": "Rami",
-                "ar": "أُكَيْ، هَيْ بَتِّصِل... أَلو، مَسّا الخير يا أُسْتاذ سامِر، أنا المُسْتَأجِر الجْديد بالشِّقّة الرّابِعَة.",
+                "ar": "تمام هَيْ بَتِّصِل... أَلو، مَسّا الخير يا أُسْتاذ سامِر، أنا المُسْتَأجِر الجْديد بالشِّقّة الرّابِعَة.",
                 "en": "Okay, I’m calling… Hello, good evening Mr. Samer, I’m the new tenant in the fourth-floor apartment."
             },
             {
@@ -603,12 +571,12 @@ export const lesson = {
             },
             {
                 "speaker": "Rami",
-                "ar": "إي صَراحَةً، في كَم مَشْكِلَة صْغيرَة: المَغْسَلِة في الحَمّام مَسْدودَة، والحَنَفِيّة بْتِخَرّ مَيّ طول الليل.",
+                "ar": "إي صَراحَةً، في كَم مَشْكِلَة صْغيرَة: المَغْسَلِة في الحَمّام مَسْددَة، والحَنَفِيّة بتنقط مَيّ طول الليل.",
                 "en": "Yes honestly, there are a few small problems: the bathroom sink is blocked and the tap leaks water all night."
             },
             {
                 "speaker": "Landlord",
-                "ar": "المَيّ بِتْوَقَّف تامًّا أَو بَس ضَعيفَة؟",
+                "ar": "الميّ بتقطع كليًّا ولا بس ضعيفة؟",
                 "en": "Does the water stop completely or is it just weak?"
             },
             {
@@ -623,7 +591,7 @@ export const lesson = {
             },
             {
                 "speaker": "Rami",
-                "ar": "وكَمان في مَشْكِلَة بِالكَهْرَبا، لَمّا أَشَغِّل المِكيّف والغَسّالِة مَع بَعْض بِيِنْطْفي الضَّوّ.",
+                "ar": "وكَمان في مَشْكِلَة بِالكَهْرَبا، لَمّا أَشَغِّل المِكيّف والغَسّالِة مَع بَعْض بِيِطْفي الضَّوّ.",
                 "en": "And there’s also a problem with the electricity; when I turn on the AC and the washing machine together, the lights go off."
             },
             {
@@ -633,17 +601,17 @@ export const lesson = {
             },
             {
                 "speaker": "Khaled",
-                "ar": "(بِهَمْس) اِسْأَلُه عَن الأسانْسير، ليش كْثير خَرْبان.",
-                "en": "(whispering) Ask him about the elevator, why it’s often broken."
+                "ar": " اِسْأَلُه عَن الأسانْسير، ليش كْثير خَرْبان.",
+                "en": " Ask him about the elevator, why it’s often broken."
             },
             {
                 "speaker": "Rami",
-                "ar": "كمان حَضْرِتَك، الأسانْسير بِيوقَف بِنُصّ الطّابِق أَحْيانًا، ومَرّة خِفْنا نِعْلَق جُوّاه.",
+                "ar": "كمان حَضْرِتَك، الأسانْسير بِيوقَف بِنُصّ الطّابِق أَحْيانًا، ومَرّة خِفْنا نعْلق جُوّاه.",
                 "en": "Also sir, the elevator sometimes stops between floors, and once we were afraid we’d get stuck inside."
             },
             {
                 "speaker": "Landlord",
-                "ar": "عارِف، العُمْرُه قَديم شْوَي، بَس في شِرْكَة صِيانَة حَتِجي هالأُسْبوع تِصَلِّحُه.",
+                "ar": "عارِف، العُمْارُه قَديم شْوَي، بَس في شِرْكَة صِيانَة حَتِجي هالأُسْبوع تِصَلِّحُه.",
                 "en": "I know, it’s a bit old, but a maintenance company is coming this week to fix it."
             },
             {
@@ -653,7 +621,7 @@ export const lesson = {
             },
             {
                 "speaker": "Landlord",
-                "ar": "إذا في أيّ مَشْكِلَة تانيِة، بَعْتِلِّي رِسالَة أَو اِتِّصِل فيّي طَوالي.",
+                "ar": "إذا في أيّ مَشْكِلَة تانيِة، بَعْتِلِّي رِسالَة أَو اِتِّصِل فيّي مباشرة.",
                 "en": "If there is any other problem, send me a message or call me immediately."
             },
             {
@@ -688,7 +656,7 @@ export const lesson = {
             },
             {
                 "speaker": "Rami",
-                "ar": "إن شاء الله ما نِوْصَل لَهالْمَرْحَلَة، بَس هَلَّق حاسِس الشِّقّة أَرْتاح بَعْد ما حَكَيْت.",
+                "ar": "إن شاء الله ما نوصل لهالمرحلة، بس هلّق صرت حاسس براحة أكتر بخصوص الشقة بعد الحكي.",
                 "en": "Inshallah we don’t reach that stage, but now I feel more comfortable about the apartment after talking."
             }
         ]

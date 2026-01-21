@@ -36,15 +36,7 @@ export const lesson = {
                 exampleAr: "اليوم الجَوّ حِلُو.",
                 exampleEn: "The weather is nice today.",
             },
-            {
-                id: "taqs",
-                ar: "طَقْس",
-                en: "weather / climate",
-                enArabeezy: "taʔs / ta2s",
-                hint: "More formal than الجَوّ, used in news or apps.",
-                exampleAr: "بَشوف الطَّقْس قَبِل ما أَطْلَع.",
-                exampleEn: "I check the weather before I go out.",
-            },
+
             {
                 id: "bared",
                 ar: "بَرْد",
@@ -87,7 +79,7 @@ export const lesson = {
                 en: "humidity",
                 enArabeezy: "ruṭoobe / rotoobe",
                 hint: "Very common in coastal cities.",
-                exampleAr: "الرُّطُوبَة عَالْآخِر بِالصَّيْف.",
+                exampleAr: "الرطوبة بالصيف بتكون عالية كتير.",
                 exampleEn: "The humidity is extreme in summer.",
             },
 
@@ -98,7 +90,7 @@ export const lesson = {
                 en: "sun",
                 enArabeezy: "shamis / shams",
                 hint: "Everyday word for sun.",
-                exampleAr: "الشَّمِس قَوِيّة، لَبْسِة نَظّارَة؟",
+                exampleAr: "الشمس قويّة، لابس نضّارة شمس؟",
                 exampleEn: "The sun is strong, are you wearing sunglasses?",
             },
             {
@@ -107,7 +99,7 @@ export const lesson = {
                 en: "sunny",
                 enArabeezy: "mshammes",
                 hint: "From شمس. Sunny day.",
-                exampleAr: "بُكْرَا مْشَمَّس، مْنِطْلَع نِتْمَشّى؟",
+                exampleAr: "بكرا الجو مشمس، نطلع نتمشّى؟",
                 exampleEn: "Tomorrow is sunny, shall we go for a walk?",
             },
             {
@@ -146,22 +138,14 @@ export const lesson = {
                 exampleAr: "بَرّا بْتِمْطِر، خُد شَمْسِيّة.",
                 exampleEn: "It’s raining outside, take an umbrella.",
             },
-            {
-                id: "shamseyyeh",
-                ar: "شَمْسِيّة",
-                en: "umbrella",
-                enArabeezy: "shamseyyeh",
-                hint: "Literally ‘sun-thing’, used for rain umbrella too.",
-                exampleAr: "وين الشَّمْسِيّة تَبَعِتَك؟",
-                exampleEn: "Where’s your umbrella?",
-            },
+
             {
                 id: "ri7",
-                ar: "رِيح",
+                ar: "الهوا",
                 en: "wind",
-                enArabeezy: "ree7",
+                enArabeezy: "",
                 hint: "Strong wind: رِيح قَوِيّة.",
-                exampleAr: "الرِّيح قَوِيّة، سَكِّر الشُّبّاك.",
+                exampleAr: "الهوا قوي، سكّر الشباك.",
                 exampleEn: "The wind is strong, close the window.",
             },
             {
@@ -188,7 +172,7 @@ export const lesson = {
                 en: "fog",
                 enArabeezy: "dabāb / dabaab",
                 hint: "Low visibility, especially in morning.",
-                exampleAr: "في ضَباب عَالطَّرِيق، اسْوُق هَداوِي.",
+                exampleAr: "في ضباب عالطريق، سوق على مهلك.",
                 exampleEn: "There’s fog on the road, drive slowly.",
             },
 
@@ -285,15 +269,7 @@ export const lesson = {
                 exampleAr: "طَلَّعْنا الأَواعِي الثَّقِيلَة لِلشِّتَا.",
                 exampleEn: "We took out the heavy clothes for winter.",
             },
-            {
-                id: "mblall",
-                ar: "مُبْتَلّ",
-                en: "wet (from rain)",
-                enArabeezy: "mobtall / mobtall",
-                hint: "Used for clothes, ground, hair…",
-                exampleAr: "رَجَعْت مُبْتَلّ مِن المَطَر.",
-                exampleEn: "I came back soaked from the rain.",
-            },
+
 
             // ===== SMALL TALK CHUNKS =====
             {
@@ -332,15 +308,7 @@ export const lesson = {
                 exampleAr: "بَحِبّ المَطَر، بْحِسّ الجَوّ أَهْدَى.",
                 exampleEn: "I love the rain; I feel the weather is calmer.",
             },
-            {
-                id: "t2lib_saree3",
-                ar: "الجَوّ بْيِقْلِب سَرِيع.",
-                en: "The weather changes quickly.",
-                enArabeezy: "el-jaww byi2leb saree3",
-                hint: "Use for spring or unstable days.",
-                exampleAr: "بِالرَّبِيع الجَوّ بْيِقْلِب سَرِيع.",
-                exampleEn: "In spring the weather changes quickly.",
-            },
+
         ],
 
         extra: [
@@ -371,24 +339,7 @@ export const lesson = {
                 exampleAr: "شُفْت نَشْرَة الطَّقْس قَبِل ما تْسافِرِي؟",
                 exampleEn: "Did you check the weather report before you travelled?",
             },
-            {
-                id: "dardashe_3an_el_jaww",
-                ar: "دَرْدَشَة عَن الجَوّ",
-                en: "small talk about the weather",
-                enArabeezy: "dardashe 3an el-jaww",
-                hint: "Talking about the weather just to start a conversation.",
-                exampleAr: "أَحْيَانًا مِنْبَلِّش الدَّرْس بِدَرْدَشَة عَن الجَوّ.",
-                exampleEn: "Sometimes we start the lesson with small talk about the weather.",
-            },
-            {
-                id: "nashaf_el_matar",
-                ar: "المَطَر نَشَف",
-                en: "the rain dried up / stopped",
-                enArabeezy: "el-matar nashaf",
-                hint: "Colloquial way to say the rain has stopped.",
-                exampleAr: "المَطَر نَشَف، يَلّا نِطْلَع.",
-                exampleEn: "The rain has stopped, let’s go out.",
-            },
+
         ],
     }
     ,
@@ -415,13 +366,13 @@ export const lesson = {
             },
             {
                 "speaker": "Rania",
-                "ar": "مُمْكِن، بَس إحْتِمال تِنْزَل مَطَر بَعْد الضُّهُر.",
+                "ar": "مُمْكِن،بس ممكن تمطر بعد الظهر..",
                 "en": "Maybe, but it might rain this afternoon."
             },
             {
                 "speaker": "Lina",
-                "ar": "عَفْكَرَة، شُوب تْحِبّي أكْتَر؟ الصَّيف ولا الشِّتا؟",
-                "en": "By the way, what do you like more? Summer or winter?"
+                "ar": " إيش بتحبي أكتر؟ الصيف ولا الشتا؟",
+                "en": " what do you like more? Summer or winter?"
             },
             {
                 "speaker": "Rania",
@@ -450,7 +401,7 @@ export const lesson = {
             },
             {
                 "speaker": "Lina",
-                "ar": "شُو خَبَرِك بِالجامْعَة؟",
+                "ar": "كيف الأمور بالجامعة؟",
                 "en": "How’s everything at university?"
             },
             {
@@ -463,11 +414,7 @@ export const lesson = {
                 "ar": "نَفْس الإِشي، بَس عِنْدي وِقْت لَلدَّرْدَشَة!",
                 "en": "Same thing, but I have time for chatting!"
             },
-            {
-                "speaker": "Rania",
-                "ar": "دَردَشة الطَّقْس أَسْهَل دَردَشة!",
-                "en": "Weather talk is the easiest small talk!"
-            },
+
             {
                 "speaker": "Lina",
                 "ar": "إسْمَعي! الهَوا قَوِيّ. نِلبُس جاكِت؟",
@@ -480,54 +427,25 @@ export const lesson = {
             },
             {
                 "speaker": "Lina",
-                "ar": "الجَوّ اتْقَلَّب سَرِيع!",
+                "ar": "الجَوّ اتغير بسرعة!",
                 "en": "The weather changed quickly!"
             },
             {
                 "speaker": "Rania",
-                "ar": "إحْتِمال مُؤَقَّت.",
+                "ar": "يمكن يكون مؤقّت.",
                 "en": "Maybe it’s temporary."
             },
             {
                 "speaker": "Lina",
-                "ar": "مِنِسْتَنى شْوَي؟ بَرْكي نَشّف مَطَر.",
+                "ar": "نستنى شوي؟ يمكن الهوا يوقّف.",
                 "en": "Shall we wait a bit? Maybe the rain stops."
             },
             {
                 "speaker": "Rania",
-                "ar": "طَيِّب. نِتْفَرَّج عَالتَّقْس.",
+                "ar": "تمام. خلّينا نطّلع على النشرة.",
                 "en": "Okay. Let’s check the forecast."
             },
-            {
-                "speaker": "Lina",
-                "ar": "لَو ضَلّ الجَوّ مُرِيح، مِنْعَمِل وَقْت حِلْو عَالبَحَر.",
-                "en": "If the weather stays nice, we’ll have a good time at the beach."
-            },
-            {
-                "speaker": "Rania",
-                "ar": "وأَنا جاهْزَة دايمًا للبَحَر!",
-                "en": "And I am always ready for the beach!"
-            },
-            {
-                "speaker": "Lina",
-                "ar": "إذِن يَلّا نِخَطِّط لبُكْرَة.",
-                "en": "Then let’s plan for tomorrow."
-            },
-            {
-                "speaker": "Rania",
-                "ar": "مُوافْقَة! بْنِتَّفِق بَعْد المَسَا.",
-                "en": "Deal! We’ll confirm in the evening."
-            },
-            {
-                "speaker": "Lina",
-                "ar": "شُكْرًا عَل الدَّردَشَة.",
-                "en": "Thanks for the chat."
-            },
-            {
-                "speaker": "Rania",
-                "ar": "وَلا يِهِمِّك! الطَّقْس بْجَمِّع القْلوب.",
-                "en": "No problem! The weather brings hearts together!"
-            },
+
             {
                 "speaker": "Lina",
                 "ar": "مَع السَّلامَة!",
