@@ -35,8 +35,9 @@ export const lesson = {
                 enArabeezy: "hiwaye",
                 hint: "Plural: هَوَايَات. Useful pattern: هِوَايِتِي = my hobby.",
                 exampleAr: "هِوَايِتِي الرَّسِم وَالقِرَايَة.",
+                exampleArabeezy: "hwayty elrsm welqraya.",
                 exampleEn: "My hobbies are drawing and reading.",
-            },
+},
             {
                 id: "riyada",
                 ar: "رِيَاضَة",
@@ -44,8 +45,9 @@ export const lesson = {
                 enArabeezy: "riyada",
                 hint: "Can be general ‘sports’ or ‘exercise’.",
                 exampleAr: "بِحَاوِل أَعْمِل رِيَاضَة ثَلَاث مَرَّات فِي الأُسْبُوع.",
+                exampleArabeezy: "b7awl a3ml ryada thlath mrat fy elasbw3.",
                 exampleEn: "I try to do exercise three times a week.",
-            },
+},
             {
                 id: "kora",
                 ar: "كُرَة قَدَم",
@@ -53,8 +55,9 @@ export const lesson = {
                 enArabeezy: "kurat 2adam / kora",
                 hint: "Often shortened to كُرَة.",
                 exampleAr: "أَخُوي بِحِبّ يِلْعَب كُرَة قَدَم مَع أَصْحَابُه.",
+                exampleArabeezy: "akhwy b7b yl3b kra qdm m3 as7abh.",
                 exampleEn: "My brother likes to play football with his friends.",
-            },
+},
             {
                 id: "musiqa",
                 ar: "مُوسِيقَى",
@@ -62,8 +65,9 @@ export const lesson = {
                 enArabeezy: "musiqa",
                 hint: "Very common with verbs ‘listen’ and ‘play (instrument)’.",
                 exampleAr: "بوقت فراغي بسمع موسيقى هادية.",
+                exampleArabeezy: "bwqt fraghy bsm3 mwsyqa hadya.",
                 exampleEn: "In my free time I listen to calm music.",
-            },////////////////
+},////////////////
             {
                 id: "kitaab",
                 ar: "كِتَاب",
@@ -71,8 +75,9 @@ export const lesson = {
                 enArabeezy: "kitaab",
                 hint: "Plural: كُتُب.",
                 exampleAr: "بَحِبّ كُتُب التَّنْمِيَة الذَّاتِيَّة.",
+                exampleArabeezy: "b7b ktb eltnmya eldhatya.",
                 exampleEn: "I like self-development books.",
-            },
+},
             {
                 id: "masalsal",
                 ar: "مُسَلْسَل",
@@ -80,8 +85,9 @@ export const lesson = {
                 enArabeezy: "mosalsal",
                 hint: "Plural: مُسَلْسَلَات.",
                 exampleAr: "أَحْيَانًا بِتْفَرَّج عَلَى مُسَلْسَلات عَاللَّابْتُوب.",
+                exampleArabeezy: "a7yana btfrj 3la mslslat 3allabtwb.",
                 exampleEn: "Sometimes I watch a series on the laptop.",
-            },
+},
             {
                 id: "film",
                 ar: "فِلْم",
@@ -89,8 +95,9 @@ export const lesson = {
                 enArabeezy: "film",
                 hint: "Plural: أَفْلَام.",
                 exampleAr: "فِي الوِيكِينْد بِنْرُوح عَلى السِّينِمَا نِتْفَرَّج عَلَى فِلْم.",
+                exampleArabeezy: "fy elwykynd bnrw7 3la elsynma ntfrj 3la flm.",
                 exampleEn: "On weekends we go to the cinema to watch a movie.",
-            },
+},
             {
                 id: "ba7er",
                 ar: "بَحِر",
@@ -98,8 +105,9 @@ export const lesson = {
                 enArabeezy: "ba7er",
                 hint: "Used a lot in Gaza/Palestine context.",
                 exampleAr: "أَحْلَى شِي فِي الصَّيْف القَعْدَة عَالبَحِر.",
+                exampleArabeezy: "a7la shy fy elsyf elq3da 3alb7r.",
                 exampleEn: "The best thing in summer is sitting by the sea.",
-            },
+},
             {
                 id: "nadi",
                 ar: "نَادِي",
@@ -107,8 +115,9 @@ export const lesson = {
                 enArabeezy: "nadi",
                 hint: "Can be sports club or gym depending on context.",
                 exampleAr: "مَسَا كُلّ ثَنِين بِرُوح عَلى النَّادِي.",
+                exampleArabeezy: "msa kl thnyn brw7 3la elnady.",
                 exampleEn: "Every Monday evening I go to the gym.",
-            },
+},
 
             // ===== LEISURE VERBS =====
             {
@@ -118,8 +127,9 @@ export const lesson = {
                 enArabeezy: "yil3ab",
                 hint: "Masdar (verbal noun): لِعِب. With كُرَة, شَدَّة (cards), إلخ.",
                 exampleAr: "بِحِبّ أِلْعَب كُرَة قَدَم مَع اصحابي.",
+                exampleArabeezy: "b7b al3b kra qdm m3 as7aby.",
                 exampleEn: "I like to play football with friends.",
-            },
+},
             {
                 id: "yi2ra",
                 ar: "يِقْرَا",
@@ -127,8 +137,9 @@ export const lesson = {
                 enArabeezy: "yi2ra",
                 hint: "1st person: بَقْرَا.",
                 exampleAr: "قَبْل مَا أَنَام بَقْرَا نُصّ سَاعَة.",
+                exampleArabeezy: "qbl ma anam bqra ns sa3a.",
                 exampleEn: "Before I sleep, I read for half an hour.",
-            },
+},
             {
                 id: "yirsem",
                 ar: "يِرْسِم",
@@ -136,8 +147,9 @@ export const lesson = {
                 enArabeezy: "yirsem",
                 hint: "1st person: بَرْسِم.",
                 exampleAr: "أُخْتِي بَتْرْسِم صُوَر كْتِير حْلُوَة.",
+                exampleArabeezy: "akhty btrsm swr ktyr 7lwa.",
                 exampleEn: "My sister draws very nice pictures.",
-            },
+},
             {
                 id: "yisma3",
                 ar: "يِسْمَع",
@@ -145,8 +157,9 @@ export const lesson = {
                 enArabeezy: "yisma3",
                 hint: "Use preposition لَـ: بَسْمَع لَأَغَانِي هَادِيَّة.",
                 exampleAr: "وَأَنَا مْسَافْرَة بَسْمَع مُوسِيقَى.",
+                exampleArabeezy: "wana msafra bsm3 mwsyqa.",
                 exampleEn: "When I’m traveling, I listen to music.",
-            },
+},
             {
                 id: "yitfarraj",
                 ar: "يِتْفَرَّج",
@@ -154,8 +167,9 @@ export const lesson = {
                 enArabeezy: "yitfarraj",
                 hint: "Often with عَلَى: يِتْفَرَّج عَلَى فِلْم / مُسَلْسَل.",
                 exampleAr: "بِاللَّيْل بِتْفَرَّج عَلَى مُسَلْسَل تُرْكِي.",
+                exampleArabeezy: "bellyl btfrj 3la mslsl trky.",
                 exampleEn: "At night I watch a Turkish series.",
-            },
+},
             {
                 id: "yimshi",
                 ar: "يِمْشِي",
@@ -163,8 +177,9 @@ export const lesson = {
                 enArabeezy: "yimshi",
                 hint: "For exercise walk or just going around.",
                 exampleAr: "بالمسا بْرُوح أِمْشِي نُصّ سَاعَة حَوَالِين البَيْت.",
+                exampleArabeezy: "belmsa brw7 amshy ns sa3a 7walyn elbyt.",
                 exampleEn: "In the evening I go walk for half an hour around the house.",
-            },
+},
             {
                 id: "yisba7",
                 ar: "يِسْبَح",
@@ -172,9 +187,9 @@ export const lesson = {
                 enArabeezy: "yisba7",
                 hint: "1st person: بَسْبَح.",
                 exampleAr: "فِي الصَّيْف بَسْبَح كْتِير في البَحِر.",
+                exampleArabeezy: "fy elsyf bsb7 ktyr fy elb7r.",
                 exampleEn: "In summer I swim a lot in the sea.",
-            },
-
+},
 
             // ===== FREQUENCY & TIME =====
             {
@@ -184,8 +199,9 @@ export const lesson = {
                 enArabeezy: "3adatan",
                 hint: "Very useful to talk about routine.",
                 exampleAr: "عَادَةً بَقْضِي الوِيكِينْد مَع العِيلَة.",
+                exampleArabeezy: "3ada bqdy elwykynd m3 el3yla.",
                 exampleEn: "Usually I spend the weekend with my family.",
-            },
+},
             {
                 id: "a7yanan",
                 ar: "أَحْيَانًا",
@@ -193,8 +209,9 @@ export const lesson = {
                 enArabeezy: "a7yanan",
                 hint: "",
                 exampleAr: "أَحْيَانًا بَرُوح عَلَى السِّينِمَا مَع أَصْحَابِي.",
+                exampleArabeezy: "a7yana brw7 3la elsynma m3 as7aby.",
                 exampleEn: "Sometimes I go to the cinema with my friends.",
-            },
+},
 
             {
                 id: "walla_omar",
@@ -203,8 +220,9 @@ export const lesson = {
                 enArabeezy: "wala marra",
                 hint: "Strong negative frequency.",
                 exampleAr: "وَلَا مَرَّة جَرَّبْت أِسْبَح بِالبَحِر فِي الشِّتَا.",
+                exampleArabeezy: "wla mra jrbt asb7 belb7r fy elshta.",
                 exampleEn: "I have never tried swimming in the sea in winter.",
-            },
+},
             {
                 id: "bil_weikend",
                 ar: "بِالوِيكِينْد",
@@ -212,9 +230,9 @@ export const lesson = {
                 enArabeezy: "bil weekend",
                 hint: "Very common chunk in youth speech.",
                 exampleAr: "بِالوِيكِينْد بْنِطْبُخ أَكْلَة خَاصَّة فِي البَيْت.",
+                exampleArabeezy: "belwykynd bntbkh akla khasa fy elbyt.",
                 exampleEn: "On the weekend we cook a special dish at home.",
-            },
-
+},
 
             // ===== WITH WHOM =====
             {
@@ -224,8 +242,9 @@ export const lesson = {
                 enArabeezy: "ma3 7ali",
                 hint: "",
                 exampleAr: "لَمَّا أِقْرَا بَفَضَّل أَقْعُد مَع حَالِي.",
+                exampleArabeezy: "lma aqra bfdl aq3d m3 7aly.",
                 exampleEn: "When I read I prefer to sit by myself.",
-            },
+},
             {
                 id: "ma3_as7abi",
                 ar: "مَع أَصْحَابِي",
@@ -233,8 +252,9 @@ export const lesson = {
                 enArabeezy: "ma3 aṣ7abi",
                 hint: "",
                 exampleAr: "بِحِبّ أِلْعَب كُرَة قَدَم مَع أَصْحَابِي.",
+                exampleArabeezy: "b7b al3b kra qdm m3 as7aby.",
                 exampleEn: "I like to play football with my friends.",
-            },
+},
             {
                 id: "ma3_el3eileh",
                 ar: "مَع العِيلَة",
@@ -242,8 +262,9 @@ export const lesson = {
                 enArabeezy: "ma3 il-3eileh",
                 hint: "",
                 exampleAr: "أكتر إشي بستمتع فيه لما أطلع مع عيلتي.",
+                exampleArabeezy: "aktr ishy bstmt3 fyh lma atl3 m3 3ylty.",
                 exampleEn: "I enjoy it most when I go out with my family.",
-            },
+},
         ],
 
         extra: [
@@ -336,7 +357,6 @@ export const lesson = {
                 en: "Honestly, these days there isn’t much time. But when I have free time I go for a walk or play sports at the gym.",
             },
 
-
             // Scene 3 – Making plans for next weekend
             {
                 speaker: "Narrator",
@@ -379,72 +399,135 @@ export const lesson = {
     // ====================================
     // GRAMMAR
     // ====================================
-    grammar: [
+
+  grammar: [
         {
-            id: "b_prefix_hobbies",
-            title: "Present simple with «بـ» for hobbies and routines",
+            id: "dual_nouns_review",
+            title: "Dual Nouns Review (ـين)",
+            short: "Use ـين to say two of something.",
             description:
-                "We use the «بـ» (b-) prefix for simple present, especially habits and routines:\n\n" +
-                "• بَقْرَا كِتَاب كُلّ لَيْلَة. = I read a book every night.\n" +
-                "• بَسْبَح بِالصَّيْف كْتِير. = I swim a lot in summer.\n" +
-                "• بَرُوح عَلنَّادِي مَرَّتَيْن فِي الأُسْبُوع. = I go to the gym twice a week.\n\n" +
-                "Pattern: ب + [root verb form in dialect] → present:\n" +
-                "بَقْرَا، بَرْسِم، بَسْمَع، بَتْفَرَّج، بَمْشِي، بَسْبَح.",
+                `The dual form shows exactly two items.
+In spoken Arabic, we usually add ـين to the noun.
+
+Use it for time, objects, and hobbies.`,
+            table: {
+                title: "Dual Examples",
+                headers: ["Arabic", "Arabeezy", "English", "Usage"],
+                rows: [
+                    ["ساعتين", "saa3teen", "two hours", "Time"],
+                    ["مرتين", "marrteen", "two times", "Frequency"],
+                    ["كتابين", "ktaab-een", "two books", "Objects"],
+                    ["فلمين", "film-een", "two movies", "Hobbies"],
+                    ["لعبتين", "la3bteen", "two games", "Leisure"]
+                ]
+            },
+            examples: [
+                { ar: "بتفرج على فلمين بالأسبوع", arabeezy: "btifarraj 3ala film-een bel-usboo3", en: "I watch two movies a week." },
+                { ar: "بتمرن ساعتين", arabeezy: "btimarrin saa3teen", en: "I train for two hours." },
+                { ar: "بقرأ كتابين بالشهر", arabeezy: "ba2ra ktaab-een bish-shahr", en: "I read two books a month." },
+                { ar: "بروح مرتين عالنادي", arabeezy: "bruu7 marrteen 3an-naadi", en: "I go to the gym twice." },
+                { ar: "عندي لعبتين مفضّلتين", arabeezy: "3indi la3bteen mufaDDalteen", en: "I have two favorite games." }
+            ],
+            teacherNotes:
+                `Spoken uses ـين without case endings.
+MSA has dual with different endings.
+Keep nouns common and daily.
+Practice with time and hobbies.`,
+            commonMistakes: [
+                "Using plural instead of dual",
+                "Dropping ـين",
+                "Overusing dual with large numbers"
+            ],
+            functionalUse: "Use this when you talk about exactly two items or times."
         },
         {
-            id: "frequency_words",
-            title: "Frequency words: عَادَةً، أَحْيَانًا، نَادِرًا، وَلَا مَرَّة",
+            id: "imperative_advanced",
+            title: "Imperative (Advanced Use)",
+            short: "Use commands for suggestions and instructions.",
             description:
-                "Very useful adverbs for how often:\n\n" +
-                "• عَادَةً = usually\n" +
-                "• أَحْيَانًا = sometimes\n" +
-                "• نَادِرًا = rarely\n" +
-                "• وَلَا مَرَّة = never\n\n" +
-                "They often come at the beginning of the sentence:\n" +
-                "• عَادَةً بَقْضِي الوِيكِينْد مَع العِيلَة.\n" +
-                "• أَحْيَانًا بَرُوح عَلَالبَحِر.\n" +
-                "• نَادِرًا بَتْفَرَّج عَلَى تِلْفِزْيُون.\n" +
-                "• وَلَا مَرَّة جَرَّبْت هَالهِوَايِة.",
-        },
-        {
-            id: "with_whom_structure",
-            title: "Saying who you do the hobby with",
-            description:
-                "Use the chunk «مَع …» to say with whom you do something:\n\n" +
-                "• مَع حَالِي = by myself / alone.\n" +
-                "• مَع أَصْحَابِي = with my friends.\n" +
-                "• مَع العِيلَة = with the family.\n\n" +
-                "Examples:\n" +
-                "• بَتْسَلَّى لَمَّا أِلْعَب كُرَة مَع أَصْحَابِي.\n" +
-                "• بَفْضَّل أَقْرَا مَع حَالِي.\n" +
-                "• بِالوِيكِينْد بِنْطْلَع مَع العِيلَة.",
-        },
-        {
-            id: "question_free_time",
-            title: "Asking about free time and hobbies",
-            description:
-                "Useful question patterns:\n\n" +
-                "• كِيف بْتِقْضِي الفَرَاغ عِنْدِك؟ = How do you spend your free time?\n" +
-                "• شُو هِوَايِتَك المُفَضَّلَة؟ = What’s your favorite hobby?\n" +
-                "• كَم مَرَّة فِي الأُسْبُوع…؟ = How many times a week…?\n\n" +
-                "You can answer with present + frequency word:\n" +
-                "– كَم مَرَّة فِي الأُسْبُوع بَرُوح عَلنَّادِي؟\n" +
-                "– مَرَّتَيْن فِي الأُسْبُوع عَادَةً.",
-        },
-        {
-            id: "mafiwa2t_excuse",
-            title: "Using «مَا فِيش وَقْت» as a soft excuse",
-            description:
-                "When talking about hobbies we often say there is no time:\n\n" +
-                "• بَحِبّ أَرْسِم بَسّ مَا فِيش وَقْت هَالْفَتْرَة.\n" +
-                "  = I like drawing but there is no time these days.\n\n" +
-                "This is a very natural chunk and explains why we don’t do the hobby often, without sounding negative.",
-        },
+                `Imperatives are used for advice, suggestions, and polite requests.
+Negative commands often use لا + فعل.
+
+Use short, friendly commands in daily speech.`,
+            table: {
+                title: "Common Imperatives",
+                headers: ["Arabic", "Arabeezy", "English", "Usage"],
+                rows: [
+                    ["لا تنسى", "la tensa", "Don’t forget", "Negative"],
+                    ["جرّب", "jarreb", "Try", "Suggestion"],
+                    ["احكي", "i7ki", "Speak", "Instruction"],
+                    ["لو سمحت", "law sama7t", "Please", "Polite"],
+                    ["لا تحكي", "la t7ki", "Don’t speak", "Negative" ]
+                ]
+            },
+            examples: [
+                { ar: "لا تنسى تجيب الكرة", arabeezy: "la tensa tjeeb el-kora", en: "Don’t forget to bring the ball." },
+                { ar: "جرّب تعزف هالأغنية", arabeezy: "jarreb t3azef hal-ughniyye", en: "Try to play this song." },
+                { ar: "احكي عربي معنا", arabeezy: "i7ki 3arabi ma3na", en: "Speak Arabic with us." },
+                { ar: "لو سمحت تعال بكير", arabeezy: "law sama7t ta3al bakkeer", en: "Please come early." },
+                { ar: "لا تحكي بصوت عالي", arabeezy: "la t7ki biSout 3aali", en: "Don’t speak loudly." }
+            ],
+            teacherNotes:
+                `Spoken keeps commands short; MSA uses formal imperative forms.
+Teach negative لا + فعل clearly.
+Use polite requests for real-life context.
+Practice with classroom routines.`,
+            commonMistakes: [
+                "Forgetting لا in negative commands",
+                "Using past tense for commands",
+                "Overusing formal MSA phrases"
+            ],
+            functionalUse: "Use this to give instructions, suggestions, and polite requests."
+        }
     ],
+
+
 
     // ====================================
     // PRACTICE
     // ====================================
+    microChecks: {
+        enabled: true,
+        every: 5,
+        items: [
+            {
+                id: "mc_match_1",
+                type: "match",
+                prompt: "Match the English word to Arabic: hobby",
+                options: ["هِوَايِة", "رِيَاضَة", "كُرَة قَدَم", "مُوسِيقَى", "كِتَاب"],
+                correct: "هِوَايِة",
+            },
+            {
+                id: "mc_complete_2",
+                type: "complete",
+                prompt: "Complete the Arabic sentence for: Sometimes I watch a series on the laptop.\nأَحْيَانًا بِتْفَرَّج عَلَى ___ات عَاللَّابْتُوب.",
+                options: ["مُسَلْسَل", "فِلْم", "بَحِر", "نَادِي", "يِلْعَب"],
+                correct: "مُسَلْسَل",
+            },
+            {
+                id: "mc_reorder_3",
+                type: "reorder",
+                prompt: "Reorder the Arabic words to match: Before I sleep, I read for half an hour.",
+                options: ["قَبْل", "مَا", "أَنَام", "بَقْرَا", "نُصّ", "سَاعَة"],
+                correct: ["قَبْل", "مَا", "أَنَام", "بَقْرَا", "نُصّ", "سَاعَة"],
+            },
+            {
+                id: "mc_choose_4",
+                type: "choose",
+                prompt: "Choose the correct Arabic word for: to swim",
+                options: ["يِسْبَح", "عَادَةً", "أَحْيَانًا", "وَلَا مَرَّة", "بِالوِيكِينْد"],
+                correct: "يِسْبَح",
+            },
+            {
+                id: "mc_match_5",
+                type: "match",
+                prompt: "Match the English word to Arabic: by myself / alone",
+                options: ["مَع حَالِي", "مَع أَصْحَابِي", "مَع العِيلَة"],
+                correct: "مَع حَالِي",
+            },
+        ],
+    },
+
     practice: {
         quiz: [
             {
@@ -499,6 +582,14 @@ export const lesson = {
             "Role-play 1: Student A asks Student B about their free time using: كِيف بْتِقْضِي الفَرَاغ عِنْدِك؟، شُو هِوَايِتَك المُفَضَّلَة؟، كَم مَرَّة فِي الأُسْبُوع…؟. Student B answers with عَادَةً / أَحْيَانًا / نَادِرًا + present tense.",
             "Role-play 2: Two friends are planning the weekend. They must mention at least 3 activities (walk, watch a movie, draw, go to the sea, gym) and use بَعْدِين to sequence the plan.",
             "Role-play 3: The teacher asks you about hobbies in an ‘exam style’ mini interview. You answer in full sentences: what you like, when you do it, and with whom (مَع حَالِي / مَع أَصْحَابِي / مَع العِيلَة).",
+        ],
+        translation: [
+            { id: "hob_t1", type: "enToAr", textEn: "I play football.", textAr: "أنا بلعب كرة قدم." },
+            { id: "hob_t2", type: "arToEn", textEn: "She likes reading.", textAr: "هي بتحب القراءة." },
+            { id: "hob_t3", type: "enToAr", textEn: "What do you do in your free time?", textAr: "شو بتعمل بوقت الفراغ؟" },
+            { id: "hob_t4", type: "arToEn", textEn: "We go hiking on weekends.", textAr: "بنروح مشي بالويكند." },
+            { id: "hob_t5", type: "enToAr", textEn: "I like music.", textAr: "أنا بحب الموسيقى." },
+            { id: "hob_t6", type: "arToEn", textEn: "He watches movies a lot.", textAr: "هو بتفرج على أفلام كتير." }
         ],
     },
 

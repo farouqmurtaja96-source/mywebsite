@@ -4,6 +4,7 @@
 import * as CONST from '../core/constants.js';
 import { defaultLessons as importedDefaultLessons } from '../lessons/index.js';
 import * as Cloud from '../cloud/lessonsCloud.js';
+import { arabicLetters, arabicLettersExtras, arabicLettersExercises } from '../data/arabicLettersData.js';
 
 // Re-create original constant names in module scope
 const LS_STUDENTS_KEY = CONST.LS_STUDENTS_KEY;
@@ -596,6 +597,7 @@ const vocabModalState = {
     showAr: true,
     showEn: true,
     showArabeezy: true,
+    nextClickCount: 0,
 };
 const translationState = {
     items: [],
@@ -604,6 +606,451 @@ const translationState = {
     hideAnswer: false,
     shuffled: false,
 };
+const microCheckState = {
+    isOpen: false,
+    pendingNextAdvance: false,
+    currentItem: null,
+    currentLessonId: null,
+    checked: false,
+    selectedOption: null,
+    buildAnswer: [],
+    rotationIndexByLesson: {},
+};
+
+function getVocabMemoryKey(lessonId) {
+    return `pal_vocab_memory_${lessonId || "unknown"}`;
+}
+
+function loadVocabMemory(lessonId) {
+    try {
+        const raw = localStorage.getItem(getVocabMemoryKey(lessonId));
+        return raw ? JSON.parse(raw) : {};
+    } catch {
+        return {};
+    }
+}
+
+function saveVocabMemory(lessonId, memory) {
+    try {
+        localStorage.setItem(getVocabMemoryKey(lessonId), JSON.stringify(memory || {}));
+    } catch { }
+}
+
+function setVocabMemoryStatus(lessonId, itemId, status) {
+    if (!lessonId || !itemId) return;
+    const memory = loadVocabMemory(lessonId);
+    memory[itemId] = status;
+    saveVocabMemory(lessonId, memory);
+}
+
+
+
+function getMicroCheckConfig(lesson) {
+    const cfg = lesson?.microChecks || {};
+    return {
+        enabled: cfg.enabled === true,
+        every: Number.isFinite(cfg.every) ? cfg.every : 5,
+        items: Array.isArray(cfg.items) ? cfg.items : [],
+    };
+}
+
+function ensureMicroCheckItems(lesson) {
+    if (!lesson || !lesson.microChecks) return;
+    const items = Array.isArray(lesson.microChecks.items) ? lesson.microChecks.items : [];
+    const existingTypes = new Set(items.map((it) => it.type));
+    const needed = ["match", "complete", "reorder", "choose"].filter(
+        (type) => !existingTypes.has(type)
+    );
+    if (!needed.length) return;
+    const generated = buildMicroCheckItemsFromLesson(lesson, needed);
+    if (generated.length) {
+        lesson.microChecks.items = items.concat(generated);
+    }
+}
+
+function buildMicroCheckItemsFromLesson(lesson, types) {
+    const vocab = getLessonVocabPairs(lesson);
+    const grammarRows = getLessonGrammarRows(lesson);
+    const items = [];
+    let autoId = 1;
+    const makeId = (prefix) => `mc_auto_${prefix}_${autoId++}`;
+
+    types.forEach((type) => {
+        let item = null;
+        if (type === "match") {
+            item = buildMatchMicroCheck(vocab, makeId);
+        } else if (type === "complete") {
+            item = buildCompleteMicroCheck(vocab, makeId);
+        } else if (type === "reorder") {
+            item = buildReorderMicroCheck(vocab, makeId);
+        } else if (type === "choose") {
+            item = buildChooseMicroCheck(grammarRows, makeId);
+        }
+        if (item) items.push(item);
+    });
+
+    return items;
+}
+
+function getLessonVocabPairs(lesson) {
+    const vocab = lesson?.vocabulary || {};
+    const items = [...safeArr(vocab.core), ...safeArr(vocab.extra)].map((it) => ({
+        ar: txt(it.ar),
+        en: txt(it.en),
+        exampleAr: txt(it.exampleAr),
+        exampleEn: txt(it.exampleEn),
+    }));
+    return items.filter((it) => it.ar && it.en);
+}
+
+function getLessonGrammarRows(lesson) {
+    const pronouns = [
+        "أنا",
+        "إنتَ",
+        "إنتِ",
+        "هو",
+        "هي",
+        "إحنا",
+        "إنتو",
+        "هم",
+        "انت",
+        "انتي",
+    ];
+    const items = safeArr(lesson?.grammar);
+    const rows = [];
+    items.forEach((g) => {
+        const examples = Array.isArray(g.examples) ? g.examples : [];
+        examples.forEach((ex) => {
+            const exampleText = txt(ex.ar);
+            if (!exampleText) return;
+            const matched = pronouns.find((p) => exampleText.includes(p));
+            if (!matched) return;
+            rows.push({ pronoun: matched, example: exampleText });
+        });
+    });
+    return rows;
+}
+
+function buildMatchMicroCheck(vocab, makeId) {
+    if (vocab.length < 2) return null;
+    const target = pick(vocab);
+    if (!target) return null;
+    const distractors = shuffleArray(vocab.filter((it) => it.en !== target.en))
+        .map((it) => it.en)
+        .filter(Boolean);
+    const options = shuffleArray([target.en, ...distractors].slice(0, 4));
+    if (options.length < 2) return null;
+    return {
+        id: makeId("match"),
+        type: "match",
+        prompt: `طابق الكلمة العربية مع الترجمة: ${target.ar}`,
+        options,
+        correct: target.en,
+    };
+}
+
+function buildCompleteMicroCheck(vocab, makeId) {
+    const candidates = vocab.filter(
+        (it) => it.exampleAr && it.ar && it.exampleAr.includes(it.ar)
+    );
+    if (!candidates.length) return null;
+    const target = pick(candidates);
+    if (!target) return null;
+    const prompt = target.exampleAr.replace(target.ar, "___");
+    const distractors = shuffleArray(vocab.filter((it) => it.ar !== target.ar))
+        .map((it) => it.ar)
+        .filter(Boolean);
+    const options = shuffleArray([target.ar, ...distractors].slice(0, 4));
+    if (options.length < 2) return null;
+    return {
+        id: makeId("complete"),
+        type: "complete",
+        prompt,
+        options,
+        correct: target.ar,
+    };
+}
+
+function buildReorderMicroCheck(vocab, makeId) {
+    const sentences = vocab
+        .map((it) => it.exampleAr || it.exampleEn)
+        .filter(Boolean);
+    const candidates = sentences
+        .map((text) => ({ text, words: tokenizeMicroCheckWords(text) }))
+        .filter((it) => it.words.length >= 3 && it.words.length <= 8);
+    if (!candidates.length) return null;
+    const target = pick(candidates);
+    if (!target) return null;
+    return {
+        id: makeId("reorder"),
+        type: "reorder",
+        prompt: "رتّب الكلمات",
+        options: target.words,
+        correct: target.words,
+    };
+}
+
+function buildChooseMicroCheck(rows, makeId) {
+    if (rows.length < 2) return null;
+    const target = pick(rows);
+    if (!target) return null;
+    const distractors = shuffleArray(rows.filter((r) => r.pronoun !== target.pronoun))
+        .map((r) => r.pronoun)
+        .filter(Boolean);
+    const options = shuffleArray([target.pronoun, ...distractors].slice(0, 4));
+    if (options.length < 2) return null;
+    return {
+        id: makeId("choose"),
+        type: "choose",
+        prompt: `اختر الضمير الصحيح: ${target.example}`,
+        options,
+        correct: target.pronoun,
+    };
+}
+
+function tokenizeMicroCheckWords(text) {
+    return String(text)
+        .replace(/[.,!?;:()"]/g, "")
+        .split(/\s+/)
+        .filter(Boolean);
+}
+
+function pickNextMicroCheckItem(lesson) {
+    const cfg = getMicroCheckConfig(lesson);
+    if (!cfg.items.length) return null;
+    const lessonId = appState.currentLessonId || "lesson";
+    const nextIndex = microCheckState.rotationIndexByLesson[lessonId] || 0;
+    microCheckState.rotationIndexByLesson[lessonId] =
+        (nextIndex + 1) % cfg.items.length;
+    return cfg.items[nextIndex];
+}
+
+function openMicroCheckModal(lesson) {
+    const item = pickNextMicroCheckItem(lesson);
+    if (!item) return false;
+    const modal = document.getElementById("microCheckModal");
+    if (!modal) return false;
+
+    microCheckState.isOpen = true;
+    microCheckState.currentItem = item;
+    microCheckState.currentLessonId = appState.currentLessonId;
+    microCheckState.checked = false;
+    microCheckState.selectedOption = null;
+    microCheckState.buildAnswer = [];
+
+    renderMicroCheckItem(item);
+    modal.classList.add("modal--open");
+    return true;
+}
+
+function closeMicroCheckModal() {
+    const modal = document.getElementById("microCheckModal");
+    if (modal) modal.classList.remove("modal--open");
+    microCheckState.isOpen = false;
+    microCheckState.currentItem = null;
+    microCheckState.checked = false;
+    microCheckState.selectedOption = null;
+    microCheckState.buildAnswer = [];
+    microCheckState.pendingNextAdvance = false;
+}
+
+function renderMicroCheckItem(item) {
+    const titleEl = document.getElementById("microCheckTitle");
+    const promptEl = document.getElementById("microCheckPrompt");
+    const optionsEl = document.getElementById("microCheckOptions");
+    const builderEl = document.getElementById("microCheckBuilder");
+    const feedbackEl = document.getElementById("microCheckFeedback");
+    const resetBtn = document.getElementById("microCheckResetBtn");
+    const checkBtn = document.getElementById("microCheckCheckBtn");
+    const continueBtn = document.getElementById("microCheckContinueBtn");
+    const closeBtn = document.getElementById("microCheckCloseBtn");
+
+    if (!titleEl || !promptEl || !optionsEl || !builderEl || !feedbackEl) return;
+
+    const titles = {
+        match: "Match (Arabic ↔ English) – طابق",
+        complete: "Complete the sentence – اختار الكلمة الناقصة",
+        reorder: "Build it – رتّب الكلمات",
+        choose: "Choose the correct form – اختر الصيغة",
+    };
+
+    titleEl.textContent = item.title || titles[item.type] || "Micro-Check";
+    promptEl.textContent = item.prompt || "";
+    feedbackEl.textContent = "";
+    optionsEl.innerHTML = "";
+    builderEl.innerHTML = "";
+
+    if (resetBtn) resetBtn.style.display = item.type === "reorder" ? "" : "none";
+    if (checkBtn) checkBtn.disabled = false;
+    if (continueBtn) continueBtn.disabled = true;
+    if (closeBtn) closeBtn.disabled = true;
+
+    if (item.type === "reorder") {
+        const bankLabel = document.createElement("div");
+        bankLabel.className = "translation-muted";
+        bankLabel.textContent = "Word bank";
+
+        const answerLabel = document.createElement("div");
+        answerLabel.className = "translation-muted";
+        answerLabel.textContent = "Your sentence";
+
+        const bank = document.createElement("div");
+        bank.className = "microcheck__bank";
+        const answer = document.createElement("div");
+        answer.className = "microcheck__answer";
+
+        const baseWords = Array.isArray(item.options) && item.options.length
+            ? item.options
+            : Array.isArray(item.correct)
+                ? item.correct
+                : String(item.correct || "")
+                    .split(" ")
+                    .filter(Boolean);
+        const words = shuffleArray(baseWords || []);
+        microCheckState.buildAnswer = [];
+
+        function renderBank() {
+            bank.innerHTML = "";
+            words.forEach((w, idx) => {
+                const chip = document.createElement("button");
+                chip.type = "button";
+                chip.className = "microcheck__chip";
+                chip.textContent = w;
+                chip.addEventListener("click", () => {
+                    const picked = words.splice(idx, 1)[0];
+                    microCheckState.buildAnswer.push(picked);
+                    renderBank();
+                    renderAnswer();
+                });
+                bank.appendChild(chip);
+            });
+        }
+
+        function renderAnswer() {
+            answer.innerHTML = "";
+            microCheckState.buildAnswer.forEach((w, idx) => {
+                const chip = document.createElement("button");
+                chip.type = "button";
+                chip.className = "microcheck__chip";
+                chip.textContent = w;
+                chip.addEventListener("click", () => {
+                    const removed = microCheckState.buildAnswer.splice(idx, 1)[0];
+                    words.splice(idx, 0, removed);
+                    renderBank();
+                    renderAnswer();
+                });
+                answer.appendChild(chip);
+            });
+        }
+
+        renderBank();
+        renderAnswer();
+
+        builderEl.appendChild(bankLabel);
+        builderEl.appendChild(bank);
+        builderEl.appendChild(answerLabel);
+        builderEl.appendChild(answer);
+
+        if (resetBtn) {
+            resetBtn.onclick = () => {
+                words.splice(0, words.length, ...shuffleArray(baseWords || []));
+                microCheckState.buildAnswer = [];
+                renderBank();
+                renderAnswer();
+                feedbackEl.textContent = "";
+                microCheckState.checked = false;
+                if (continueBtn) continueBtn.disabled = true;
+                if (closeBtn) closeBtn.disabled = true;
+            };
+        }
+        return;
+    }
+
+    const options = shuffleArray(item.options || []);
+    options.forEach((opt) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "microcheck__option";
+        btn.textContent = opt;
+        btn.dataset.option = opt;
+        btn.addEventListener("click", () => {
+            if (microCheckState.checked) return;
+            microCheckState.selectedOption = opt;
+            optionsEl.querySelectorAll(".microcheck__option").forEach((b) => {
+                b.classList.toggle("is-selected", b.dataset.option === opt);
+            });
+        });
+        optionsEl.appendChild(btn);
+    });
+}
+
+function evaluateMicroCheck() {
+    const item = microCheckState.currentItem;
+    const feedbackEl = document.getElementById("microCheckFeedback");
+    const continueBtn = document.getElementById("microCheckContinueBtn");
+    const closeBtn = document.getElementById("microCheckCloseBtn");
+
+    if (!item || !feedbackEl) return;
+
+    if (item.type === "reorder") {
+        const correct = Array.isArray(item.correct)
+            ? item.correct
+            : String(item.correct || "")
+                .split(" ")
+                .filter(Boolean);
+        if (microCheckState.buildAnswer.length !== correct.length) {
+            feedbackEl.textContent = "Complete the sentence first.";
+            return;
+        }
+        const isCorrect =
+            microCheckState.buildAnswer.join(" ").trim() === correct.join(" ").trim();
+        feedbackEl.textContent = isCorrect ? "Correct!" : "Not quite. Try again.";
+        microCheckState.checked = isCorrect;
+        if (isCorrect) {
+            if (continueBtn) continueBtn.disabled = false;
+            if (closeBtn) closeBtn.disabled = false;
+        }
+        return;
+    }
+
+    if (!microCheckState.selectedOption) {
+        feedbackEl.textContent = "Choose an answer first.";
+        return;
+    }
+
+    const correct =
+        Array.isArray(item.correct) ? item.correct[0] : item.correct;
+    const isCorrect = microCheckState.selectedOption === correct;
+    feedbackEl.textContent = isCorrect ? "Correct!" : "Not quite. Try again.";
+    microCheckState.checked = isCorrect;
+
+    document.querySelectorAll("#microCheckOptions .microcheck__option").forEach((btn) => {
+        const isThisCorrect = btn.dataset.option === correct;
+        btn.classList.toggle("is-correct", isThisCorrect && microCheckState.checked);
+        btn.classList.toggle(
+            "is-wrong",
+            !isThisCorrect && btn.dataset.option === microCheckState.selectedOption && microCheckState.checked
+        );
+    });
+
+    if (isCorrect) {
+        if (continueBtn) continueBtn.disabled = false;
+        if (closeBtn) closeBtn.disabled = false;
+    }
+}
+
+function continueFromMicroCheck() {
+    if (!microCheckState.checked) return;
+    closeMicroCheckModal();
+    if (microCheckState.pendingNextAdvance) {
+        microCheckState.pendingNextAdvance = false;
+        if (vocabModalState.list.length) {
+            vocabModalState.index =
+                (vocabModalState.index + 1) % vocabModalState.list.length;
+            renderVocabModalFromState();
+        }
+    }
+}
 
 // ========================= HELPERS =========================
 // ========================= WHITEBOARD =========================
@@ -929,6 +1376,468 @@ function handleImportBackupFile(file) {
 
 const $ = (s) => document.querySelector(s);
 const $all = (s) => Array.from(document.querySelectorAll(s));
+
+const arabicLettersState = {
+    selectedId: arabicLetters[0]?.id || null,
+    tab: "letters",
+    selectedForm: "initial",
+    initialized: false,
+};
+const arabicLettersModalState = {
+    open: false,
+};
+const arabicLettersExerciseState = {
+    match: new Map(),
+    order: new Map(),
+    mcq: new Map(),
+};
+
+function renderArabicLettersScreen() {
+    if (!arabicLettersState.initialized) return;
+    renderArabicLettersExtras();
+    renderArabicLettersGrid();
+    renderArabicLetterDetail();
+    renderArabicLettersExercises();
+    setArabicLettersTab(arabicLettersState.tab || "letters");
+}
+
+function initArabicLettersScreen() {
+    const lettersGrid = $("#lettersGrid");
+    if (!lettersGrid || arabicLettersState.initialized) return;
+
+    const tabButtons = $all(".letters-tab-btn");
+    tabButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const tab = btn.dataset.lettersTab || "letters";
+            setArabicLettersTab(tab);
+        });
+    });
+
+    lettersGrid.addEventListener("click", (event) => {
+        const card = event.target.closest(".letter-card");
+        if (!card) return;
+        const letterId = card.dataset.letterId;
+        if (!letterId) return;
+        arabicLettersState.selectedId = letterId;
+        renderArabicLettersGrid();
+        renderArabicLetterDetail();
+        openLetterModal();
+    });
+
+    const exercises = $("#lettersExercises");
+    if (exercises) {
+        exercises.addEventListener("click", handleArabicLettersExerciseClick);
+    }
+    const btnLetterModalPrev = $("#btnLetterModalPrev");
+    const btnLetterModalNext = $("#btnLetterModalNext");
+    if (btnLetterModalPrev) {
+        btnLetterModalPrev.addEventListener("click", () => {
+            selectAdjacentArabicLetter(-1);
+        });
+    }
+    if (btnLetterModalNext) {
+        btnLetterModalNext.addEventListener("click", () => {
+            selectAdjacentArabicLetter(1);
+        });
+    }
+
+    const letterModal = $("#letterModal");
+    if (letterModal) {
+        letterModal.addEventListener("click", (event) => {
+            const btn = event.target.closest("[data-letter-form]");
+            if (!btn) return;
+            const form = btn.dataset.letterForm;
+            if (!form) return;
+            arabicLettersState.selectedForm = form;
+            renderArabicLetterDetail();
+        });
+    }
+
+    $all("[data-close-letter-modal]").forEach((el) =>
+        el.addEventListener("click", () => closeLetterModal())
+    );
+
+    arabicLettersState.initialized = true;
+    renderArabicLettersScreen();
+}
+
+function setArabicLettersTab(tab) {
+    arabicLettersState.tab = tab;
+    const lettersTab = $("#lettersTabLetters");
+    const exercisesTab = $("#lettersTabExercises");
+    const tabButtons = $all(".letters-tab-btn");
+
+    if (lettersTab) lettersTab.classList.toggle("letters-tab--active", tab === "letters");
+    if (exercisesTab) exercisesTab.classList.toggle("letters-tab--active", tab === "exercises");
+    tabButtons.forEach((btn) => {
+        const isActive = btn.dataset.lettersTab === tab;
+        btn.classList.toggle("is-active", isActive);
+    });
+}
+
+function renderArabicLettersExtras() {
+    const extras = $("#lettersExtras");
+    if (!extras) return;
+    extras.innerHTML = arabicLettersExtras
+        .map(
+            (item) => `
+            <div class="letters-extra">
+                <div class="letters-extra__title">${item.title}</div>
+                <div class="letters-extra__text">${item.text}</div>
+            </div>
+        `
+        )
+        .join("");
+}
+
+function renderArabicLettersGrid() {
+    const lettersGrid = $("#lettersGrid");
+    if (!lettersGrid) return;
+
+    lettersGrid.innerHTML = arabicLetters
+        .map((letter) => {
+            const isActive = letter.id === arabicLettersState.selectedId;
+            const sunMoon = letter.sunMoon === "sun" ? "sun" : "moon";
+            return `
+                <button class="letter-card ${isActive ? "letter-card--active" : ""}" data-letter-id="${letter.id}">
+                    <span class="letter-card__glyph" lang="ar">${letter.letter}</span>
+                    <span class="letter-card__name">${letter.nameEn}</span>
+                    <span class="letter-card__badge letter-card__badge--${sunMoon}">
+                        ${sunMoon === "sun" ? "Sun" : "Moon"}
+                    </span>
+                </button>
+            `;
+        })
+        .join("");
+}
+
+function renderArabicLetterDetail() {
+    const letter = arabicLetters.find((item) => item.id === arabicLettersState.selectedId) || arabicLetters[0];
+    if (!letter) return;
+    const glyph = $("#letterModalGlyph");
+    const name = $("#letterModalName");
+    const sound = $("#letterModalSound");
+    const formIsolated = $("#letterModalFormIsolated");
+    const formInitial = $("#letterModalFormInitial");
+    const formMedial = $("#letterModalFormMedial");
+    const formFinal = $("#letterModalFormFinal");
+    const exampleAr = $("#letterModalExampleAr");
+    const exampleArabeezy = $("#letterModalExampleArabeezy");
+    const note = $("#letterModalNote");
+    const sunMoon = $("#letterModalSunMoon");
+    const writingSteps = $("#letterModalWritingSteps");
+
+    if (glyph) glyph.textContent = letter.letter;
+    if (name) name.textContent = `${letter.nameEn} (${letter.nameAr})`;
+    if (sound) sound.textContent = `Sound: ${letter.sound}`;
+    if (sunMoon) sunMoon.textContent = letter.sunMoon === "sun" ? "Sun letter" : "Moon letter";
+    if (formIsolated) formIsolated.textContent = letter.forms.isolated;
+    if (formInitial) formInitial.textContent = letter.forms.initial;
+    if (formMedial) formMedial.textContent = letter.forms.medial;
+    if (formFinal) formFinal.textContent = letter.forms.final;
+    if (exampleAr) exampleAr.textContent = letter.exampleAr;
+    if (exampleArabeezy) exampleArabeezy.textContent = letter.exampleArabeezy;
+    if (note) note.textContent = letter.note;
+
+    renderLetterFormExample(letter);
+    renderLetterFormButtons();
+    renderLetterWritingSteps(letter, writingSteps);
+}
+
+function selectAdjacentArabicLetter(direction) {
+    const currentIndex = arabicLetters.findIndex((item) => item.id === arabicLettersState.selectedId);
+    if (currentIndex === -1) return;
+    const nextIndex = (currentIndex + direction + arabicLetters.length) % arabicLetters.length;
+    arabicLettersState.selectedId = arabicLetters[nextIndex].id;
+    renderArabicLettersGrid();
+    renderArabicLetterDetail();
+    if (arabicLettersModalState.open) openLetterModal();
+}
+
+function openLetterModal() {
+    const modal = $("#letterModal");
+    if (!modal) return;
+    arabicLettersState.selectedForm = arabicLettersState.selectedForm || "initial";
+    renderArabicLetterDetail();
+    modal.classList.add("modal--open");
+    arabicLettersModalState.open = true;
+}
+
+function closeLetterModal() {
+    const modal = $("#letterModal");
+    if (!modal) return;
+    modal.classList.remove("modal--open");
+    arabicLettersModalState.open = false;
+}
+
+function renderLetterFormExample(letter) {
+    const label = $("#letterModalExampleLabel");
+    const exampleAr = $("#letterModalExampleFormAr");
+    const exampleArabeezy = $("#letterModalExampleFormArabeezy");
+    const form = arabicLettersState.selectedForm || "initial";
+    const example = letter.examples?.[form];
+
+    if (label) {
+        const labelText =
+            form === "isolated"
+                ? "Example (Isolated)"
+                : form === "initial"
+                    ? "Example (Beginning)"
+                    : form === "medial"
+                        ? "Example (Middle)"
+                        : "Example (End)";
+        label.textContent = labelText;
+    }
+    if (exampleAr) exampleAr.textContent = example?.ar || "";
+    if (exampleArabeezy) exampleArabeezy.textContent = example?.arabeezy || "";
+}
+
+function renderLetterFormButtons() {
+    $all(".letter-form--btn").forEach((btn) => {
+        const form = btn.dataset.letterForm;
+        btn.classList.toggle("letter-form--active", form === arabicLettersState.selectedForm);
+    });
+}
+
+function renderLetterWritingSteps(letter, listEl) {
+    if (!listEl) return;
+    const steps =
+        letter.writingSteps && letter.writingSteps.length
+            ? letter.writingSteps
+            : [
+                "Start at the top guideline, then follow the curve smoothly.",
+                "Lift the pen only when the stroke ends.",
+                "Practice isolated, then connect it in a short word.",
+            ];
+    listEl.innerHTML = steps.map((step) => `<li>${step}</li>`).join("");
+}
+
+function renderArabicLettersExercises() {
+    const exercises = $("#lettersExercises");
+    if (!exercises) return;
+
+    exercises.innerHTML = arabicLettersExercises
+        .map((exercise) => {
+            if (exercise.type === "match") return renderArabicLettersMatch(exercise);
+            if (exercise.type === "order") return renderArabicLettersOrder(exercise);
+            if (exercise.type === "mcq") return renderArabicLettersMcq(exercise);
+            return "";
+        })
+        .join("");
+
+    arabicLettersExercises.forEach((exercise) => {
+        if (exercise.type === "match") {
+            arabicLettersExerciseState.match.set(exercise.id, {
+                selectedLeft: null,
+                pairs: exercise.pairs,
+                matchedLeft: new Set(),
+                matchedRight: new Set(),
+            });
+        }
+        if (exercise.type === "order") {
+            arabicLettersExerciseState.order.set(exercise.id, {
+                current: [],
+                answer: exercise.answer,
+            });
+        }
+        if (exercise.type === "mcq") {
+            arabicLettersExerciseState.mcq.set(exercise.id, {
+                selected: null,
+                answer: exercise.answer,
+            });
+        }
+    });
+}
+
+function renderArabicLettersMatch(exercise) {
+    const rightItems = shuffleArray(exercise.pairs.map((item) => item.right));
+    return `
+        <div class="exercise-card" data-exercise-id="${exercise.id}" data-exercise-type="match">
+            <div class="exercise-title">Match</div>
+            <div class="exercise-prompt">${exercise.prompt}</div>
+            <div class="match-grid">
+                <div class="match-column">
+                    ${exercise.pairs
+                        .map(
+                            (pair) => `
+                        <button class="match-item" data-match-left="${pair.left}">
+                            ${pair.left}
+                        </button>
+                    `
+                        )
+                        .join("")}
+                </div>
+                <div class="match-column">
+                    ${rightItems
+                        .map(
+                            (item) => `
+                        <button class="match-item" data-match-right="${item}" lang="ar">
+                            ${item}
+                        </button>
+                    `
+                        )
+                        .join("")}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderArabicLettersOrder(exercise) {
+    const pool = shuffleArray(exercise.pool);
+    return `
+        <div class="exercise-card" data-exercise-id="${exercise.id}" data-exercise-type="order">
+            <div class="exercise-title">Build it</div>
+            <div class="exercise-prompt">${exercise.prompt}</div>
+            <div class="order-answer" data-order-answer></div>
+            <div class="order-pool">
+                ${pool
+                    .map(
+                        (item) => `
+                    <button class="order-chip" data-order-item="${item}" lang="ar">
+                        ${item}
+                    </button>
+                `
+                    )
+                    .join("")}
+            </div>
+            <div class="order-status" data-order-status>Tap letters to build the word.</div>
+            <div class="order-controls" style="margin-top:8px; display:flex; gap:8px;">
+                <button class="btn btn--ghost btn--sm" data-order-action="undo">Undo</button>
+                <button class="btn btn--ghost btn--sm" data-order-action="reset">Reset</button>
+            </div>
+        </div>
+    `;
+}
+
+function renderArabicLettersMcq(exercise) {
+    return `
+        <div class="exercise-card" data-exercise-id="${exercise.id}" data-exercise-type="mcq">
+            <div class="exercise-title">Choose</div>
+            <div class="exercise-prompt">${exercise.prompt}</div>
+            <div class="mcq-options">
+                ${exercise.options
+                    .map(
+                        (item) => `
+                    <button class="mcq-option" data-mcq-option="${item}" lang="ar">${item}</button>
+                `
+                    )
+                    .join("")}
+            </div>
+        </div>
+    `;
+}
+
+function handleArabicLettersExerciseClick(event) {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return;
+
+    const exerciseCard = target.closest("[data-exercise-id]");
+    if (!exerciseCard) return;
+    const exerciseId = exerciseCard.dataset.exerciseId;
+    const exerciseType = exerciseCard.dataset.exerciseType;
+
+    if (exerciseType === "match") handleArabicLettersMatchClick(exerciseId, exerciseCard, target);
+    if (exerciseType === "order") handleArabicLettersOrderClick(exerciseId, exerciseCard, target);
+    if (exerciseType === "mcq") handleArabicLettersMcqClick(exerciseId, exerciseCard, target);
+}
+
+function handleArabicLettersMatchClick(exerciseId, exerciseCard, target) {
+    const state = arabicLettersExerciseState.match.get(exerciseId);
+    if (!state) return;
+
+    const leftBtn = target.closest("[data-match-left]");
+    const rightBtn = target.closest("[data-match-right]");
+
+    if (leftBtn) {
+        const leftValue = leftBtn.dataset.matchLeft;
+        if (state.matchedLeft.has(leftValue)) return;
+        state.selectedLeft = leftValue;
+        exerciseCard.querySelectorAll("[data-match-left]").forEach((btn) => {
+            btn.classList.toggle("is-selected", btn.dataset.matchLeft === leftValue);
+        });
+        return;
+    }
+
+    if (rightBtn && state.selectedLeft) {
+        const rightValue = rightBtn.dataset.matchRight;
+        if (state.matchedRight.has(rightValue)) return;
+        const expected = state.pairs.find((pair) => pair.left === state.selectedLeft)?.right;
+
+        if (expected === rightValue) {
+            state.matchedLeft.add(state.selectedLeft);
+            state.matchedRight.add(rightValue);
+            exerciseCard
+                .querySelector(`[data-match-left="${state.selectedLeft}"]`)
+                ?.classList.add("is-correct");
+            rightBtn.classList.add("is-correct");
+        } else {
+            rightBtn.classList.add("is-wrong");
+            setTimeout(() => rightBtn.classList.remove("is-wrong"), 500);
+        }
+
+        state.selectedLeft = null;
+        exerciseCard.querySelectorAll("[data-match-left]").forEach((btn) => {
+            btn.classList.remove("is-selected");
+        });
+    }
+}
+
+function handleArabicLettersOrderClick(exerciseId, exerciseCard, target) {
+    const state = arabicLettersExerciseState.order.get(exerciseId);
+    if (!state) return;
+
+    const orderItem = target.closest("[data-order-item]");
+    const actionBtn = target.closest("[data-order-action]");
+
+    if (orderItem) {
+        if (state.current.length >= state.answer.length) return;
+        state.current.push(orderItem.dataset.orderItem);
+        updateArabicLettersOrderState(state, exerciseCard);
+        return;
+    }
+
+    if (actionBtn) {
+        const action = actionBtn.dataset.orderAction;
+        if (action === "undo") state.current.pop();
+        if (action === "reset") state.current = [];
+        updateArabicLettersOrderState(state, exerciseCard);
+    }
+}
+
+function updateArabicLettersOrderState(state, exerciseCard) {
+    const answerEl = exerciseCard.querySelector("[data-order-answer]");
+    const statusEl = exerciseCard.querySelector("[data-order-status]");
+    if (!answerEl || !statusEl) return;
+
+    answerEl.innerHTML = state.current
+        .map((item) => `<span class="order-chip" lang="ar">${item}</span>`)
+        .join("");
+
+    const isComplete = state.current.length === state.answer.length;
+    const isCorrect = isComplete && state.current.join("") === state.answer.join("");
+    if (isCorrect) {
+        statusEl.textContent = "Great! You built the word.";
+    } else if (isComplete) {
+        statusEl.textContent = "Almost! Try again.";
+    } else {
+        statusEl.textContent = "Tap letters to build the word.";
+    }
+}
+
+function handleArabicLettersMcqClick(exerciseId, exerciseCard, target) {
+    const option = target.closest("[data-mcq-option]");
+    if (!option) return;
+    const state = arabicLettersExerciseState.mcq.get(exerciseId);
+    if (!state) return;
+
+    const selected = option.dataset.mcqOption;
+    const isCorrect = selected === state.answer;
+    exerciseCard.querySelectorAll("[data-mcq-option]").forEach((btn) => {
+        btn.classList.remove("is-correct", "is-wrong");
+    });
+    option.classList.add(isCorrect ? "is-correct" : "is-wrong");
+}
 function openExportModal(source, lessonId, studentName = "") {
     exportContext.lessonId = lessonId;
     exportContext.studentName = studentName;
@@ -1010,6 +1919,12 @@ function ensureStudentProgress(student, lessonId) {
     if (!student.progress) student.progress = {};
     if (!student.progress[lessonId]) {
         student.progress[lessonId] = { ...BASE_PROGRESS_TEMPLATE };
+    } else {
+        Object.keys(BASE_PROGRESS_TEMPLATE).forEach((key) => {
+            if (!(key in student.progress[lessonId])) {
+                student.progress[lessonId][key] = BASE_PROGRESS_TEMPLATE[key];
+            }
+        });
     }
 }
 
@@ -1068,7 +1983,34 @@ function loadLessonDataFromLS() {
         // If meta is still missing core fields, drop it (prevents runtime crashes in teacher picker)
         if (!lesson.meta.level || !lesson.meta.unit || !lesson.meta.lessonTitle) {
             delete lessons[id];
+            return;
         }
+
+        if (!lesson.vocabulary) lesson.vocabulary = { core: [], extra: [] };
+        if (!Array.isArray(lesson.vocabulary.core)) lesson.vocabulary.core = [];
+        if (!Array.isArray(lesson.vocabulary.extra)) lesson.vocabulary.extra = [];
+
+        if (!Array.isArray(lesson.useInLife)) lesson.useInLife = [];
+
+        if (!lesson.dialogue) lesson.dialogue = { lines: [] };
+        if (!Array.isArray(lesson.dialogue.lines)) lesson.dialogue.lines = [];
+
+        if (!Array.isArray(lesson.grammar)) lesson.grammar = [];
+        if (lesson.grammarTab && typeof lesson.grammarTab === "object") {
+            delete lesson.grammarTab;
+        }
+
+        if (!lesson.practice) lesson.practice = { quiz: [], rolePlays: [], translation: [] };
+        if (!Array.isArray(lesson.practice.quiz)) lesson.practice.quiz = [];
+        if (!Array.isArray(lesson.practice.rolePlays)) lesson.practice.rolePlays = [];
+        if (!Array.isArray(lesson.practice.translation)) lesson.practice.translation = [];
+
+        if (!lesson.microChecks || typeof lesson.microChecks !== "object") {
+            lesson.microChecks = { enabled: false, every: 5, items: [] };
+        }
+        lesson.microChecks.enabled = true;
+        if (!Number.isFinite(lesson.microChecks.every)) lesson.microChecks.every = 5;
+        if (!Array.isArray(lesson.microChecks.items)) lesson.microChecks.items = [];
     });
 }
 function markVocabularyDone() {
@@ -1161,6 +2103,14 @@ function goToLevels() {
     showScreen("levels-screen");
     $("#currentStudentNameLevels").textContent = getCurrentStudent().name;
     renderLevels();
+    updateContinueButton();
+}
+
+function goToArabicLetters() {
+    persistResumeBeforeNav();
+    document.body.classList.remove("home-only");
+    showScreen("arabic-letters-screen");
+    renderArabicLettersScreen();
 }
 function goToLessonView(opts = {}) {
     const { teacherMode = null } = opts;
@@ -1176,6 +2126,9 @@ function goToLessonView(opts = {}) {
     updateTeacherTabsVisibility();
     updateLessonTopBar();
     updateProgressBar();
+    const lesson = lessons[appState.currentLessonId];
+    updateLessonTabsVisibility(lesson);
+    appState.currentTab = normalizeLessonTabKey(appState.currentTab, lesson);
     setActiveTab(appState.currentTab || "overview");
 
     // حاول يحمّل whiteboard حق هذا الدرس لو اللوحة مفتوحة
@@ -1218,7 +2171,9 @@ function buildLessonExportHtml(lesson, options) {
                 <td class="en">${escapeHtml(w.enArabeezy)}</td>
                 <td class="en">
                     ${escapeHtml(w.exampleAr || "")}
-                    ${w.exampleAr || w.exampleEn ? " — " : ""}
+                    ${w.exampleAr || w.exampleArabeezy || w.exampleEn ? " - " : ""}
+                    ${escapeHtml(w.exampleArabeezy || "")}
+                    ${w.exampleArabeezy && w.exampleEn ? " - " : ""}
                     ${escapeHtml(w.exampleEn || "")}
                 </td>
             </tr>`;
@@ -1233,7 +2188,10 @@ function buildLessonExportHtml(lesson, options) {
                 (line) => `
                 <div class="dialogue-line">
                     <span class="speaker">${escapeHtml(line.speaker)}:</span>
-                    <span class="dialogue-ar">${escapeHtml(line.ar)}</span>
+                    <div class="dialogue-ar">${escapeHtml(line.ar)}</div>
+                    ${line.arArabeezy || line.arabeezy
+                        ? `<div class="dialogue-arabeezy">${escapeHtml(line.arArabeezy || line.arabeezy)}</div>`
+                        : ""}
                     ${line.en
                         ? `<span class="dialogue-en">${escapeHtml(line.en)}</span>`
                         : ""
@@ -1248,13 +2206,66 @@ function buildLessonExportHtml(lesson, options) {
     let grammarHtml = "";
     if (includeGrammar && lesson.grammar && lesson.grammar.length) {
         grammarHtml = lesson.grammar
-            .map(
-                (g) =>
-                    `<div class="grammar-item">
-                        <h4>${escapeHtml(g.title)}</h4>
-                        <p>${escapeHtml(g.description)}</p>
-                    </div>`
-            )
+            .map((g) => {
+                const desc = g.description ? `<p>${escapeHtml(g.description)}</p>` : "";
+                let tableHtml = "";
+                if (g.table && Array.isArray(g.table.headers) && Array.isArray(g.table.rows)) {
+                    const headCells = g.table.headers
+                        .map((h) => `<th>${escapeHtml(h)}</th>`)
+                        .join("");
+                    const bodyRows = g.table.rows
+                        .map(
+                            (row) =>
+                                `<tr>${row
+                                    .map((cell) => `<td>${escapeHtml(cell)}</td>`)
+                                    .join("")}</tr>`
+                        )
+                        .join("");
+                    tableHtml = `
+                        <div class="grammar-table">
+                            <div class="grammar-table__title">${escapeHtml(g.table.title || "Table")}</div>
+                            <table class="grammar-table__table">
+                                <thead><tr>${headCells}</tr></thead>
+                                <tbody>${bodyRows}</tbody>
+                            </table>
+                        </div>`;
+                }
+
+                const examples = Array.isArray(g.examples) ? g.examples : [];
+                const examplesHtml = examples.length
+                    ? `<div class="grammar-examples">
+                            <div class="grammar-examples__title">Examples</div>
+                            ${examples
+                                .map(
+                                    (ex) => `
+                                <div class="grammar-example">
+                                    <div class="grammar-example__ar">${escapeHtml(ex.ar || "")}</div>
+                                    <div class="grammar-example__arabeezy">${escapeHtml(ex.arabeezy || "")}</div>
+                                    <div class="grammar-example__en">${escapeHtml(ex.en || "")}</div>
+                                </div>`
+                                )
+                                .join("")}
+                        </div>`
+                    : "";
+
+                const teacherNotes =
+                    includeTeacherNotes && version === "teacher"
+                        ? `<div class="grammar-teacher">
+                                <div class="grammar-teacher__title">Teacher Notes</div>
+                                <div class="grammar-teacher__text">${escapeHtml(
+                                    g.teacherNotes || ""
+                                )}</div>
+                           </div>`
+                        : "";
+
+                return `<div class="grammar-item">
+                            <h4>${escapeHtml(g.title)}</h4>
+                            ${desc}
+                            ${tableHtml}
+                            ${examplesHtml}
+                            ${teacherNotes}
+                        </div>`;
+            })
             .join("");
     }
 
@@ -1787,7 +2798,48 @@ function updateSectionStatusBadge(sectionKey) {
     badge.textContent = done ? "✓ Section completed" : "Section not completed yet";
 }
 
+function isGrammarTabEnabled(lesson) {
+    if (!lesson) return false;
+    const hasGrammar = Array.isArray(lesson.grammar) && lesson.grammar.length > 0;
+    return appState.teacherMode && hasGrammar;
+}
 
+function updateLessonTabsVisibility(lesson) {
+    const grammarTab = document.querySelector('.lesson-tab[data-tab="grammar"]');
+    if (grammarTab) {
+        grammarTab.textContent = "Grammar";
+        grammarTab.style.display = isGrammarTabEnabled(lesson) ? "inline-flex" : "none";
+    }
+}
+
+function normalizeLessonTabKey(tabKey, lesson) {
+    if (tabKey === "grammar" && !isGrammarTabEnabled(lesson)) {
+        return "translation";
+    }
+    return tabKey || "overview";
+}
+
+
+function getUseInLifeQuestions(lesson) {
+    const raw = Array.isArray(lesson?.useInLife) ? lesson.useInLife : [];
+    const items = raw
+        .map((q) => {
+            if (typeof q === "string") return { en: q };
+            if (q && typeof q === "object") {
+                return { ar: q.ar || "", en: q.en || "" };
+            }
+            return null;
+        })
+        .filter(Boolean)
+        .filter((q) => q.ar || q.en);
+
+    if (items.length >= 2) return items;
+
+    return [
+        { ar: "شو اسمك؟", en: "What's your name?" },
+        { ar: "إنتَ/إنتِ من وين؟", en: "Where are you from?" },
+    ];
+}
 
 function persistResumeBeforeNav() {
     // Only save if we are currently in a lesson with an active student
@@ -1826,6 +2878,7 @@ function saveResumeSpot({ silent = false } = {}) {
     if (!silent) {
         toast("Saved! Next time this student will open right here.");
     }
+    updateContinueButton();
 }
 
 function tryResumeStudent(student) {
@@ -1839,21 +2892,36 @@ function tryResumeStudent(student) {
     return true;
 }
 
+function updateContinueButton() {
+    const btn = document.getElementById("btnContinueLesson");
+    const student = getCurrentStudent();
+    if (!btn) return;
+    const canResume = !!(student && student.lastSeen && lessons[student.lastSeen.lessonId]);
+    btn.disabled = !canResume;
+    if (canResume) {
+        const lesson = lessons[student.lastSeen.lessonId];
+        btn.textContent = `Continue: ${lesson.meta.unit}`;
+    } else {
+        btn.textContent = "Continue";
+    }
+}
+
 // Tabs
 function setActiveTab(tabKey) {
-    appState.currentTab = tabKey;
+    const lesson = lessons[appState.currentLessonId];
+    const normalizedTab = normalizeLessonTabKey(tabKey, lesson);
+    appState.currentTab = normalizedTab;
     // Auto-save student's last spot whenever they switch tabs
     try { saveResumeSpot({ silent: true }); } catch { }
     $all(".lesson-tab").forEach((btn) =>
-        btn.classList.toggle("lesson-tab--active", btn.dataset.tab === tabKey)
+        btn.classList.toggle("lesson-tab--active", btn.dataset.tab === normalizedTab)
     );
 
     const container = $("#lessonTabContent");
     container.innerHTML = "";
-    const lesson = lessons[appState.currentLessonId];
     if (!lesson) return;
 
-    switch (tabKey) {
+    switch (normalizedTab) {
         case "overview":
             renderOverviewTab(container, lesson);
             break;
@@ -1865,6 +2933,9 @@ function setActiveTab(tabKey) {
             break;
         case "grammar":
             renderGrammarTab(container, lesson);
+            break;
+        case "translation":
+            renderTranslationTab(container, lesson);
             break;
         case "practice":
             renderPracticeTab(container, lesson);
@@ -1900,6 +2971,34 @@ function renderOverviewTab(container, lesson) {
         ul.appendChild(li);
     });
 
+    const useTitle = document.createElement("h4");
+    useTitle.textContent = "Use it in your life";
+    useTitle.style.marginTop = "12px";
+
+    const useList = document.createElement("div");
+    const useItems = getUseInLifeQuestions(lesson);
+    useItems.forEach((q) => {
+        const wrap = document.createElement("div");
+        wrap.style.marginBottom = "6px";
+
+        if (q.ar) {
+            const ar = document.createElement("div");
+            ar.className = "dialogue-col--ar";
+            ar.style.fontSize = "1rem";
+            ar.textContent = q.ar;
+            wrap.appendChild(ar);
+        }
+
+        if (q.en) {
+            const en = document.createElement("div");
+            en.className = "translation-muted";
+            en.textContent = q.en;
+            wrap.appendChild(en);
+        }
+
+        useList.appendChild(wrap);
+    });
+
     const btn = document.createElement("button");
     btn.className = "btn btn--primary btn--sm";
     btn.textContent = "Mark Overview as Done";
@@ -1909,6 +3008,8 @@ function renderOverviewTab(container, lesson) {
     container.appendChild(p);
     container.appendChild(goalsTitle);
     container.appendChild(ul);
+    container.appendChild(useTitle);
+    container.appendChild(useList);
     container.appendChild(btn);
     renderSectionStatus(container, "overview");
 }
@@ -1923,52 +3024,51 @@ function renderVocabModalFromState() {
     const elAr = $("#vocabModalWord");
     const elEn = $("#vocabModalMeaning");
     const elArabeezy = $("#vocabModalArabeezy");
-    const elHint = $("#vocabModalHint"); // لو ما عندك هاد السطر ممكن تشيليه
+    const elHint = $("#vocabModalHint");
+    const elProgress = $("#vocabModalProgress");
+
     const exAr = $("#vocabModalExampleAr");
+    const exArabeezy = $("#vocabModalExampleArabeezy");
     const exEn = $("#vocabModalExampleEn");
 
+    // Fill text
     elAr.textContent = item.ar || "";
     elEn.textContent = item.en || "";
     elArabeezy.textContent = item.enArabeezy || "";
     if (elHint) elHint.textContent = item.hint || "";
-    exAr.textContent = item.exampleAr || "";
-    exEn.textContent = item.exampleEn || "";
 
-    // show/hide based on state
-    elAr.style.display = vocabModalState.showAr ? "" : "none";
+    if (exAr) exAr.textContent = item.exampleAr || "";
+    if (exArabeezy) exArabeezy.textContent = item.exampleArabeezy || "";
+    if (exEn) exEn.textContent = item.exampleEn || "";
+
+    if (elProgress) {
+        elProgress.textContent = `${vocabModalState.index + 1} / ${vocabModalState.list.length}`;
+    }
+
+    // ✅ Word visibility (Arabic word follows example toggle)
+    elAr.style.display = (vocabModalState.showAr && vocabModalState.showExamples) ? "" : "none";
     elEn.style.display = vocabModalState.showEn ? "" : "none";
+    elArabeezy.style.display = vocabModalState.showArabeezy ? "" : "none";
 
+    // ✅ Examples visibility (independent, but respects each language toggle)
+    const showEx = !!vocabModalState.showExamples;
 
-    if (vocabModalState.showExamples) {
-        exAr.style.display = "";
-        elAr.style.display = "";
-    } else {
-        exAr.style.display = "none";
-        elAr.style.display = "none";
-    }
-    if (vocabModalState.showEn) {
-        exEn.style.display = "";
-        elEn.style.display = "";
-        elArabeezy.style.display = "";
-    } else {
-        exEn.style.display = "none";
-        elEn.style.display = "none";
-        elArabeezy.style.display = "none";
-    }
-    // تحديث نص الزر (Hide / Show) لكل حقل
+    if (exAr) exAr.style.display = (showEx && vocabModalState.showAr) ? "" : "none";
+    if (exEn) exEn.style.display = vocabModalState.showEn ? "" : "none";
+    if (exArabeezy) exArabeezy.style.display = vocabModalState.showArabeezy ? "" : "none";
 
+    // Buttons text
+    const btnAr = $("#vocabToggleArBtn");          // لو عندك زر عربي
     const btnEn = $("#vocabToggleEnBtn");
     const btnEx = $("#vocabToggleExamplesBtn");
+    const btnArabeezy = $("#vocabToggleArabeezyBtn");
 
-
-    if (btnEn) {
-        btnEn.textContent = vocabModalState.showEn ? "👁 Hide" : "👁 Show";
-    }
-
-    if (btnEx) {
-        btnEx.textContent = vocabModalState.showExamples ? "👁 Hide" : "👁 Show";
-    }
+    if (btnAr) btnAr.textContent = vocabModalState.showAr ? "👁 Hide" : "👁 Show";
+    if (btnEn) btnEn.textContent = vocabModalState.showEn ? "👁 Hide" : "👁 Show";
+    if (btnArabeezy) btnArabeezy.textContent = vocabModalState.showArabeezy ? "👁 Hide" : "👁 Show";
+    if (btnEx) btnEx.textContent = vocabModalState.showExamples ? "👁 Hide" : "👁 Show";
 }
+
 
 
 
@@ -1979,6 +3079,8 @@ function openVocabModal(list, index) {
     vocabModalState.showAr = true;
     vocabModalState.showEn = true;
     vocabModalState.showArabeezy = true;
+    vocabModalState.nextClickCount = 0;
+    microCheckState.pendingNextAdvance = false;
 
     renderVocabModalFromState();
     $("#vocabModal").classList.add("modal--open");
@@ -1988,6 +3090,7 @@ function openVocabModal(list, index) {
 function closeVocabModal() {
     $("#vocabModal").classList.remove("modal--open");
     vocabModalState.list = [];
+    closeMicroCheckModal();
 }
 
 
@@ -2055,14 +3158,18 @@ function handleAddVocabItem(lesson, groupKey) {
     const en = prompt("English meaning:");
     if (!en) return;
     const hint = prompt("Optional hint / note:") || "";
+    const enArabeezy = prompt("Arabeezy (optional):") || "";
     const exampleAr = prompt("Example sentence in Arabic (optional):") || "";
+    const exampleArabeezy = prompt("Example sentence in Arabeezy (optional):") || "";
     const exampleEn = prompt("Example sentence in English (optional):") || "";
     lesson.vocabulary[groupKey].push({
         id: groupKey + "_" + Date.now(),
         ar,
         en,
+        enArabeezy,
         hint,
         exampleAr,
+        exampleArabeezy,
         exampleEn,
     });
     saveLessonToLS(appState.currentLessonId);
@@ -2100,13 +3207,26 @@ function handleEditVocabItems(lesson) {
     } else if (action.toLowerCase() === "e") {
         const ar = prompt("Arabic:", item.ar) || item.ar;
         const en = prompt("English:", item.en) || item.en;
+        const enArabeezy =
+            prompt("Arabeezy:", item.enArabeezy || "") || item.enArabeezy || "";
         const hint = prompt("Hint:", item.hint || "") || item.hint || "";
         const exampleAr =
             prompt("Example Arabic:", item.exampleAr || "") || item.exampleAr || "";
+        const exampleArabeezy =
+            prompt("Example Arabeezy:", item.exampleArabeezy || "") || item.exampleArabeezy || "";
         const exampleEn =
             prompt("Example English:", item.exampleEn || "") || item.exampleEn || "";
         if (idxInGroup !== -1) {
-            group[idxInGroup] = { ...item, ar, en, hint, exampleAr, exampleEn };
+            group[idxInGroup] = {
+                ...item,
+                ar,
+                en,
+                enArabeezy,
+                hint,
+                exampleAr,
+                exampleArabeezy,
+                exampleEn,
+            };
         }
     }
     saveLessonToLS(appState.currentLessonId);
@@ -2180,6 +3300,10 @@ function renderDialogueTab(container, lesson) {
     btnToggleArabic.className = "btn btn--ghost btn--sm";
     btnToggleArabic.textContent = "Show/Hide Arabic";
 
+    const btnToggleArabeezy = document.createElement("button");
+    btnToggleArabeezy.className = "btn btn--ghost btn--sm";
+    btnToggleArabeezy.textContent = "Show/Hide Arabeezy";
+
     const btnDone = document.createElement("button");
     btnDone.className = "btn btn--primary btn--sm";
     btnDone.textContent = "Mark Dialogue as Done";
@@ -2187,6 +3311,7 @@ function renderDialogueTab(container, lesson) {
 
     controls.appendChild(btnToggleArabic);
     controls.appendChild(btnToggleEnglish);
+    controls.appendChild(btnToggleArabeezy);
     controls.appendChild(btnDone);
 
     header.appendChild(title);
@@ -2219,11 +3344,23 @@ function renderDialogueTab(container, lesson) {
         const arSpeaker = document.createElement("div");
         arSpeaker.className = "dialogue-speaker-ar";
         arSpeaker.textContent = line.speaker;
+        const arContent = document.createElement("div");
+        arContent.className = "dialogue-content";
+
         const arText = document.createElement("div");
         arText.className = "dialogue-text";
         arText.textContent = line.ar;
+        arContent.appendChild(arText);
+
+        const arArabeezyText = line.arArabeezy || line.arabeezy || "";
+        if (arArabeezyText) {
+            const arArabeezy = document.createElement("div");
+            arArabeezy.className = "dialogue-arabeezy";
+            arArabeezy.textContent = arArabeezyText;
+            arContent.appendChild(arArabeezy);
+        }
         arLine.appendChild(arSpeaker);
-        arLine.appendChild(arText);
+        arLine.appendChild(arContent);
         arCol.appendChild(arLine);
     });
 
@@ -2232,20 +3369,23 @@ function renderDialogueTab(container, lesson) {
 
     let englishVisible = true;
     let arabicVisible = true;
+    let arabeezyVisible = true;
+
 
     function adjustLayout() {
-        if (englishVisible && arabicVisible) {
+        const showArabicCol = arabicVisible || arabeezyVisible;
+        if (englishVisible && showArabicCol) {
             layout.style.gridTemplateColumns = "minmax(0, 1fr) minmax(0, 1fr)";
             enCol.style.display = "block";
             arCol.style.display = "block";
             enCol.style.margin = "0";
             arCol.style.margin = "0";
-        } else if (englishVisible && !arabicVisible) {
+        } else if (englishVisible && !showArabicCol) {
             layout.style.gridTemplateColumns = "minmax(0, 1fr)";
             enCol.style.display = "block";
             arCol.style.display = "none";
             enCol.style.margin = "0 auto";
-        } else if (!englishVisible && arabicVisible) {
+        } else if (!englishVisible && showArabicCol) {
             layout.style.gridTemplateColumns = "minmax(0, 1fr)";
             enCol.style.display = "none";
             arCol.style.display = "block";
@@ -2258,6 +3398,18 @@ function renderDialogueTab(container, lesson) {
         }
     }
 
+    function updateArabicVisibility() {
+        arCol.querySelectorAll(".dialogue-text").forEach((el) => {
+            el.style.display = arabicVisible ? "" : "none";
+        });
+    }
+
+    function updateArabeezyVisibility() {
+        arCol.querySelectorAll(".dialogue-arabeezy").forEach((el) => {
+            el.style.display = arabeezyVisible ? "" : "none";
+        });
+    }
+
     btnToggleEnglish.addEventListener("click", () => {
         englishVisible = !englishVisible;
         adjustLayout();
@@ -2266,10 +3418,19 @@ function renderDialogueTab(container, lesson) {
     btnToggleArabic.addEventListener("click", () => {
         arabicVisible = !arabicVisible;
         adjustLayout();
+        updateArabicVisibility();
+    });
+
+    btnToggleArabeezy.addEventListener("click", () => {
+        arabeezyVisible = !arabeezyVisible;
+        adjustLayout();
+        updateArabeezyVisibility();
     });
 
     // أول مرة
     adjustLayout();
+    updateArabicVisibility();
+    updateArabeezyVisibility();
 
     container.appendChild(header);
     container.appendChild(layout);
@@ -2285,9 +3446,8 @@ function renderDialogueTab(container, lesson) {
     renderSectionStatus(container, "dialogue");
 }
 
-// Grammar
-function renderGrammarTab(container, lesson) {
-    // هنا صار "Translation"
+// Translation
+function renderTranslationTab(container, lesson) {
     ensureTranslationItems(lesson, 7);
 
     const list = safeArr(lesson?.practice?.translation);
@@ -2309,8 +3469,7 @@ function renderGrammarTab(container, lesson) {
     doneBtn.className = "btn btn--outline btn--sm";
     doneBtn.textContent = "✓ تم إنهاء قسم الترجمة";
     doneBtn.addEventListener("click", () => {
-        // لأن المفتاح الداخلي ما زال grammar
-        setStudentProgressField("grammar", true);
+        setStudentProgressField("translation", true);
     });
 
     doneBar.appendChild(doneText);
@@ -2482,6 +3641,163 @@ function renderGrammarTab(container, lesson) {
     });
 
     renderTranslationCard();
+    renderSectionStatus(container, "translation");
+}
+
+// Grammar
+function renderGrammarTab(container, lesson) {
+    const title = document.createElement("h4");
+    title.className = "td-lessonitem__title";
+    title.textContent = "Grammar Notes";
+    container.appendChild(title);
+
+    const items = safeArr(lesson?.grammar);
+    if (!items.length) {
+        const empty = document.createElement("p");
+        empty.className = "translation-muted";
+        empty.textContent = "No grammar points available yet.";
+        container.appendChild(empty);
+    } else {
+        const accordion = document.createElement("div");
+        accordion.className = "grammar-accordion";
+
+        items.forEach((g, idx) => {
+            const details = document.createElement("details");
+            details.className = "grammar-accordion__item";
+            if (idx === 0) details.open = true;
+
+            const summary = document.createElement("summary");
+            summary.className = "grammar-accordion__summary";
+
+            const summaryTitle = document.createElement("span");
+            summaryTitle.className = "grammar-accordion__title";
+            summaryTitle.textContent = g.title || "Grammar point";
+
+            const summaryHint = document.createElement("span");
+            summaryHint.className = "grammar-accordion__hint";
+            summaryHint.textContent = g.short || "Tap to see rules, examples, and notes.";
+
+            summary.appendChild(summaryTitle);
+            summary.appendChild(summaryHint);
+
+            const body = document.createElement("div");
+            body.className = "grammar-accordion__body";
+
+            const desc = document.createElement("p");
+            desc.className = "grammar-desc";
+            desc.textContent = g.description || "";
+            body.appendChild(desc);
+
+            if (g.table && Array.isArray(g.table.headers) && Array.isArray(g.table.rows)) {
+                const tableWrap = document.createElement("div");
+                tableWrap.className = "grammar-topic-table";
+
+                const tableTitle = document.createElement("div");
+                tableTitle.className = "grammar-topic-table__title";
+                tableTitle.textContent = g.table.title || "Table";
+
+                const table = document.createElement("table");
+                table.className = "grammar-table__table";
+
+                const thead = document.createElement("thead");
+                const headRow = document.createElement("tr");
+                g.table.headers.forEach((h) => {
+                    const th = document.createElement("th");
+                    th.textContent = h;
+                    headRow.appendChild(th);
+                });
+                thead.appendChild(headRow);
+
+                const tbody = document.createElement("tbody");
+                g.table.rows.forEach((row) => {
+                    const tr = document.createElement("tr");
+                    row.forEach((cell) => {
+                        const td = document.createElement("td");
+                        td.textContent = cell;
+                        tr.appendChild(td);
+                    });
+                    tbody.appendChild(tr);
+                });
+
+                table.appendChild(thead);
+                table.appendChild(tbody);
+                tableWrap.appendChild(tableTitle);
+                tableWrap.appendChild(table);
+                body.appendChild(tableWrap);
+            }
+
+            const examples = Array.isArray(g.examples) ? g.examples : [];
+            const examplesBlock = document.createElement("div");
+            examplesBlock.className = "grammar-examples";
+            const examplesTitle = document.createElement("div");
+            examplesTitle.className = "grammar-examples__title";
+            examplesTitle.textContent = "Examples";
+            examplesBlock.appendChild(examplesTitle);
+
+            if (!examples.length) {
+                const emptyExamples = document.createElement("div");
+                emptyExamples.className = "grammar-examples__empty";
+                emptyExamples.textContent = "No examples yet.";
+                examplesBlock.appendChild(emptyExamples);
+            } else {
+                const list = document.createElement("div");
+                list.className = "grammar-examples__list";
+                examples.forEach((ex) => {
+                    const row = document.createElement("div");
+                    row.className = "grammar-example";
+
+                    const ar = document.createElement("div");
+                    ar.className = "grammar-example__ar";
+                    ar.textContent = ex.ar || "";
+
+                    const arabeezy = document.createElement("div");
+                    arabeezy.className = "grammar-example__arabeezy";
+                    arabeezy.textContent = ex.arabeezy || "";
+
+                    const en = document.createElement("div");
+                    en.className = "grammar-example__en";
+                    en.textContent = ex.en || "";
+
+                    row.appendChild(ar);
+                    row.appendChild(arabeezy);
+                    row.appendChild(en);
+                    list.appendChild(row);
+                });
+                examplesBlock.appendChild(list);
+            }
+            body.appendChild(examplesBlock);
+
+            if (appState.teacherMode) {
+                const notesWrap = document.createElement("div");
+                notesWrap.className = "grammar-teacher";
+
+                const notesTitle = document.createElement("div");
+                notesTitle.className = "grammar-teacher__title";
+                notesTitle.textContent = "Teacher Notes";
+
+                const notesText = document.createElement("div");
+                notesText.className = "grammar-teacher__text";
+                notesText.textContent = g.teacherNotes || "No teacher notes yet.";
+
+                notesWrap.appendChild(notesTitle);
+                notesWrap.appendChild(notesText);
+                body.appendChild(notesWrap);
+            }
+
+            details.appendChild(summary);
+            details.appendChild(body);
+            accordion.appendChild(details);
+        });
+
+        container.appendChild(accordion);
+    }
+
+    const doneBtn = document.createElement("button");
+    doneBtn.className = "btn btn--outline btn--sm";
+    doneBtn.textContent = "Mark Grammar as Done";
+    doneBtn.addEventListener("click", () => setStudentProgressField("grammar", true));
+    container.appendChild(doneBtn);
+    renderSectionStatus(container, "grammar");
 }
 
 
@@ -3062,6 +4378,7 @@ function createNewLessonTemplate() {
             description: "",
             goals: [],
         },
+        useInLife: [],
         vocabulary: {
             core: [],
             extra: [],
@@ -3073,6 +4390,12 @@ function createNewLessonTemplate() {
         practice: {
             quiz: [],
             rolePlays: [],
+            translation: [],
+        },
+        microChecks: {
+            enabled: false,
+            every: 5,
+            items: [],
         },
         homework: {
             instructions: "",
@@ -3102,6 +4425,12 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
     const lesson = lessons[lessonId];
     const editor = $("#teacherEditor");
     if (!lesson || !editor) return;
+
+    if (!lesson.practice) lesson.practice = { quiz: [], rolePlays: [], translation: [] };
+    if (!Array.isArray(lesson.practice.translation)) lesson.practice.translation = [];
+    if (lesson.grammarTab && typeof lesson.grammarTab === "object") {
+        delete lesson.grammarTab;
+    }
 
     // نحرك الفورم تحت الكارد اللي انضغط (Teacher Dashboard)
     editor.innerHTML = "";
@@ -3134,6 +4463,7 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
         <option value="vocab">Vocabulary</option>
         <option value="dialogue">Dialogue</option>
         <option value="grammar">Grammar</option>
+        <option value="translation">Translation</option>
         <option value="practice">Practice</option>
         <option value="homework">Homework</option>
         <option value="notes">Teacher Notes</option>
@@ -3182,6 +4512,13 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
           <button id="tdSaveGoals" class="btn btn--primary btn--sm">Save Goals</button>
         </div>
       </div>
+      <div class="form-field">
+        <label>Use it in your life (Arabic + English)</label>
+        <div id="tdUseInLifeList"></div>
+        <div class="td-editor-buttons">
+          <button id="tdAddUseInLife" class="btn btn--outline btn--sm">Add Prompt</button>
+        </div>
+      </div>
     </div>
 
     <!-- 🆕 Vocab Section -->
@@ -3216,7 +4553,7 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
       </div>
     </div>
 
-    <div class="teacher-editor__section">
+    <div class="teacher-editor__section" data-td-section="grammar">
       <h4>Grammar Points</h4>
       <p class="teacher-edit-note">Short rules with descriptions.</p>
       <div id="tdGrammarList"></div>
@@ -3226,7 +4563,17 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
       </div>
     </div>
 
-    <div class="teacher-editor__section">
+    <div class="teacher-editor__section" data-td-section="translation">
+      <h4>Translation (Practice)</h4>
+      <p class="teacher-edit-note">Custom translation sentences for the Translation tab.</p>
+      <div id="tdTranslationList"></div>
+      <div class="td-editor-buttons">
+        <button id="tdAddTranslation" class="btn btn--outline btn--sm">Add Sentence</button>
+        <button id="tdSaveTranslation" class="btn btn--primary btn--sm">Save Translation</button>
+      </div>
+    </div>
+
+    <div class="teacher-editor__section" data-td-section="practice">
       <h4>Practice – MCQ</h4>
       <p class="teacher-edit-note">Edit quiz questions: Arabic question and 3 English options.</p>
       <div id="tdQuizList"></div>
@@ -3236,7 +4583,7 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
       </div>
     </div>
 
-    <div class="teacher-editor__section">
+    <div class="teacher-editor__section" data-td-section="practice">
       <h4>Practice – Role-play Prompts</h4>
       <p class="teacher-edit-note">Short speaking prompts for in-class practice.</p>
       <div id="tdRoleList"></div>
@@ -3246,7 +4593,7 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
       </div>
     </div>
 
-    <div class="teacher-editor__section">
+    <div class="teacher-editor__section" data-td-section="homework">
       <h4>Homework Instructions</h4>
       <p class="teacher-edit-note">This text is shared for all students.</p>
       <textarea id="tdHomeworkText" class="homework-notes" rows="3"></textarea>
@@ -3255,7 +4602,7 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
       </div>
     </div>
 
-    <div class="teacher-editor__section">
+    <div class="teacher-editor__section" data-td-section="notes">
       <h4>Teacher Notes (Template)</h4>
       <textarea id="tdTeacherNotes" class="homework-notes" rows="3"></textarea>
       <div class="td-editor-buttons">
@@ -3269,7 +4616,8 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
     const sectionSel = document.getElementById("tdSectionSelect");
     if (sectionSel) {
         const saved = localStorage.getItem("td_selected_section") || "meta";
-        sectionSel.value = saved;
+        const initial = preselectSection || saved;
+        sectionSel.value = initial;
         applyTeacherSectionFilter(sectionSel.value);
         sectionSel.addEventListener("change", () => applyTeacherSectionFilter(sectionSel.value));
     } else {
@@ -3318,6 +4666,43 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
     }
     renderGoals();
 
+    const useInLifeListEl = $("#tdUseInLifeList");
+    function createUseInLifeRow(item = {}) {
+        const row = document.createElement("div");
+        row.className = "td-role-row";
+
+        const ar = document.createElement("input");
+        ar.className = "td-input td-input--ar";
+        ar.placeholder = "Arabic prompt";
+        ar.value = item.ar || "";
+
+        const en = document.createElement("input");
+        en.className = "td-input";
+        en.placeholder = "English prompt";
+        en.value = item.en || "";
+
+        const delBtn = document.createElement("button");
+        delBtn.type = "button";
+        delBtn.className = "btn btn--ghost btn--sm";
+        delBtn.textContent = "Delete";
+        delBtn.addEventListener("click", () => row.remove());
+
+        row.appendChild(ar);
+        row.appendChild(en);
+        row.appendChild(delBtn);
+        return row;
+    }
+
+    function renderUseInLife() {
+        if (!useInLifeListEl) return;
+        useInLifeListEl.innerHTML = "";
+        (lesson.useInLife || []).forEach((q) => {
+            const item = typeof q === "string" ? { en: q } : q;
+            useInLifeListEl.appendChild(createUseInLifeRow(item));
+        });
+    }
+    renderUseInLife();
+
     $("#tdAddGoal").addEventListener("click", () => {
         const row = document.createElement("div");
         row.className = "td-role-row";
@@ -3334,6 +4719,14 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
         goalsListEl.appendChild(row);
     });
 
+    const addUseInLifeBtn = $("#tdAddUseInLife");
+    if (addUseInLifeBtn) {
+        addUseInLifeBtn.addEventListener("click", () => {
+            if (!useInLifeListEl) return;
+            useInLifeListEl.appendChild(createUseInLifeRow({}));
+        });
+    }
+
     $("#tdSaveGoals").addEventListener("click", () => {
         const rows = goalsListEl.querySelectorAll(".td-role-row");
         const newGoals = [];
@@ -3341,10 +4734,21 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
             const val = r.querySelector("input").value.trim();
             if (val) newGoals.push(val);
         });
+
+        const useRows = useInLifeListEl ? useInLifeListEl.querySelectorAll(".td-role-row") : [];
+        const newUseInLife = [];
+        useRows.forEach((r) => {
+            const inputs = r.querySelectorAll("input");
+            const ar = (inputs[0]?.value || "").trim();
+            const en = (inputs[1]?.value || "").trim();
+            if (ar || en) newUseInLife.push({ ar, en });
+        });
+
         lesson.overview.title = $("#tdOverviewTitle").value.trim() || lesson.overview.title;
         lesson.overview.description =
             $("#tdOverviewDesc").value.trim() || lesson.overview.description;
         lesson.overview.goals = newGoals;
+        lesson.useInLife = newUseInLife;
         saveLessonToLS(lessonId);
         // also sync online (shared)
         saveLessonToCloud(lessonId);
@@ -3369,11 +4773,17 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
           <div class="td-label">English meaning</div>
           <input class="td-input td-vocab-en" value="${item.en || ""}" />
 
+          <div class="td-label">Arabeezy (optional)</div>
+          <input class="td-input td-vocab-arabeezy" value="${item.enArabeezy || ""}" />
+
           <div class="td-label">Hint (optional)</div>
           <input class="td-input td-vocab-hint" value="${item.hint || ""}" />
 
           <div class="td-label">Arabic example (optional)</div>
           <textarea class="td-input td-input--ar td-vocab-ex-ar" rows="2">${item.exampleAr || ""}</textarea>
+
+          <div class="td-label">Arabeezy example (optional)</div>
+          <textarea class="td-input td-vocab-ex-arabeezy" rows="2">${item.exampleArabeezy || ""}</textarea>
 
           <div class="td-label">English example (optional)</div>
           <textarea class="td-input td-vocab-ex-en" rows="2">${item.exampleEn || ""}</textarea>
@@ -3413,15 +4823,17 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
         rows.forEach((row) => {
             const ar = row.querySelector(".td-vocab-ar").value.trim();
             const en = row.querySelector(".td-vocab-en").value.trim();
+            const enArabeezy = row.querySelector(".td-vocab-arabeezy").value.trim();
             const hint = row.querySelector(".td-vocab-hint").value.trim();
             const exampleAr = row.querySelector(".td-vocab-ex-ar").value.trim();
+            const exampleArabeezy = row.querySelector(".td-vocab-ex-arabeezy").value.trim();
             const exampleEn = row.querySelector(".td-vocab-ex-en").value.trim();
             if (!ar || !en) return;
             let id = row.dataset.itemId;
             if (!id) {
                 id = (isCore ? "core_" : "extra_") + Date.now() + "_" + Math.random().toString(16).slice(2);
             }
-            result.push({ id, ar, en, hint, exampleAr, exampleEn });
+            result.push({ id, ar, en, enArabeezy, hint, exampleAr, exampleArabeezy, exampleEn });
         });
         return result;
     }
@@ -3451,6 +4863,7 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
         row.innerHTML = `
       <input class="td-input td-input--small td-speaker" value="${line.speaker || ""}" />
       <input class="td-input td-input--ar td-ar" value="${line.ar || ""}" />
+      <input class="td-input td-input--ar td-arabeezy" value="${line.arArabeezy || line.arabeezy || ""}" />
       <input class="td-input td-input--en td-en" value="${line.en || ""}" />
       <button type="button" class="btn btn--ghost btn--sm td-delete">Delete</button>
     `;
@@ -3464,6 +4877,7 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
         row.innerHTML = `
       <input class="td-input td-input--small td-speaker" value="A" />
       <input class="td-input td-input--ar td-ar" value="" placeholder="Arabic line" />
+      <input class="td-input td-input--ar td-arabeezy" value="" placeholder="Arabeezy line" />
       <input class="td-input td-input--en td-en" value="" placeholder="English line" />
       <button type="button" class="btn btn--ghost btn--sm td-delete">Delete</button>
     `;
@@ -3477,8 +4891,9 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
         rows.forEach((r) => {
             const speaker = r.querySelector(".td-speaker").value.trim() || "A";
             const ar = r.querySelector(".td-ar").value.trim();
+            const arArabeezy = r.querySelector(".td-arabeezy").value.trim();
             const en = r.querySelector(".td-en").value.trim();
-            if (ar) newLines.push({ speaker, ar, en });
+            if (ar) newLines.push({ speaker, ar, arArabeezy, en });
         });
         lesson.dialogue.lines = newLines;
         saveLessonToLS(lessonId);
@@ -3492,6 +4907,9 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
     function renderGrammarRows() {
         grammarList.innerHTML = "";
         (lesson.grammar || []).forEach((g) => {
+            const exampleLines = Array.isArray(g.examples)
+                ? g.examples.map((ex) => [ex.ar, ex.arabeezy, ex.en].filter(Boolean).join(" | ")).join("\n")
+                : "";
             const row = document.createElement("div");
             row.className = "td-quiz-row";
             row.innerHTML = `
@@ -3499,6 +4917,10 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
         <input class="td-input td-grammar-title" value="${g.title || ""}" />
         <div class="td-label">Description</div>
         <textarea class="td-input td-grammar-desc" rows="2">${g.description || ""}</textarea>
+        <div class="td-label">Examples (Arabic | Arabeezy | English)</div>
+        <textarea class="td-input td-grammar-examples" rows="3">${exampleLines}</textarea>
+        <div class="td-label">Teacher notes</div>
+        <textarea class="td-input td-grammar-notes" rows="2">${g.teacherNotes || ""}</textarea>
       `;
             const delBtn = document.createElement("button");
             delBtn.type = "button";
@@ -3519,6 +4941,10 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
       <input class="td-input td-grammar-title" placeholder="Rule title" />
       <div class="td-label">Description</div>
       <textarea class="td-input td-grammar-desc" rows="2" placeholder="Description / example"></textarea>
+      <div class="td-label">Examples (Arabic | Arabeezy | English)</div>
+      <textarea class="td-input td-grammar-examples" rows="3" placeholder="مثال عربي | Arabeezy | English"></textarea>
+      <div class="td-label">Teacher notes</div>
+      <textarea class="td-input td-grammar-notes" rows="2" placeholder="Notes for teacher mode"></textarea>
     `;
         const delBtn = document.createElement("button");
         delBtn.type = "button";
@@ -3535,7 +4961,30 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
         rows.forEach((r) => {
             const title = r.querySelector(".td-grammar-title").value.trim();
             const desc = r.querySelector(".td-grammar-desc").value.trim();
-            if (title) newGrammar.push({ id: "g_" + Date.now() + Math.random(), title, description: desc });
+            const notes = r.querySelector(".td-grammar-notes")?.value.trim() || "";
+            const examplesRaw = r.querySelector(".td-grammar-examples")?.value || "";
+            const examples = examplesRaw
+                .split("\n")
+                .map((line) => line.trim())
+                .filter(Boolean)
+                .map((line) => {
+                    const parts = line.split("|").map((p) => p.trim());
+                    return {
+                        ar: parts[0] || "",
+                        arabeezy: parts[1] || "",
+                        en: parts[2] || "",
+                    };
+                })
+                .filter((ex) => ex.ar || ex.en || ex.arabeezy);
+            if (title) {
+                newGrammar.push({
+                    id: "g_" + Date.now() + Math.random(),
+                    title,
+                    description: desc,
+                    teacherNotes: notes,
+                    examples,
+                });
+            }
         });
         lesson.grammar = newGrammar;
         saveLessonToLS(lessonId);
@@ -3543,6 +4992,73 @@ function renderTeacherEditor(lessonId, anchorCard, preselectSection) {
         saveLessonToCloud(lessonId);
         alert("Grammar saved.");
     });
+
+    // ========== Translation ==========
+    const translationList = $("#tdTranslationList");
+    function createTranslationRow(item = {}) {
+        const row = document.createElement("div");
+        row.className = "td-quiz-row";
+        row.dataset.itemId = item.id || "";
+
+        row.innerHTML = `
+      <div class="td-label">Direction</div>
+      <select class="td-select td-translation-type">
+        <option value="enToAr">English → Arabic</option>
+        <option value="arToEn">Arabic → English</option>
+      </select>
+      <div class="td-label">English sentence</div>
+      <textarea class="td-input td-translation-en" rows="2">${item.textEn || ""}</textarea>
+      <div class="td-label">Arabic sentence</div>
+      <textarea class="td-input td-input--ar td-translation-ar" rows="2">${item.textAr || ""}</textarea>
+    `;
+
+        const typeSel = row.querySelector(".td-translation-type");
+        if (typeSel) typeSel.value = item.type || "enToAr";
+
+        const delBtn = document.createElement("button");
+        delBtn.type = "button";
+        delBtn.className = "btn btn--ghost btn--sm";
+        delBtn.textContent = "Delete";
+        delBtn.addEventListener("click", () => row.remove());
+        row.appendChild(delBtn);
+        return row;
+    }
+
+    function renderTranslationRows() {
+        if (!translationList) return;
+        translationList.innerHTML = "";
+        (lesson.practice.translation || []).forEach((t) => {
+            translationList.appendChild(createTranslationRow(t));
+        });
+    }
+    renderTranslationRows();
+
+    const addTranslationBtn = $("#tdAddTranslation");
+    if (addTranslationBtn && translationList) {
+        addTranslationBtn.addEventListener("click", () => {
+            translationList.appendChild(createTranslationRow({}));
+        });
+    }
+
+    const saveTranslationBtn = $("#tdSaveTranslation");
+    if (saveTranslationBtn && translationList) {
+        saveTranslationBtn.addEventListener("click", () => {
+            const rows = translationList.querySelectorAll(".td-quiz-row");
+            const newItems = [];
+            rows.forEach((row, idx) => {
+                const type = row.querySelector(".td-translation-type")?.value || "enToAr";
+                const textEn = row.querySelector(".td-translation-en")?.value.trim() || "";
+                const textAr = row.querySelector(".td-translation-ar")?.value.trim() || "";
+                if (!textEn && !textAr) return;
+                const id = row.dataset.itemId || `t_${Date.now()}_${idx}`;
+                newItems.push({ id, type, textEn, textAr });
+            });
+            lesson.practice.translation = newItems;
+            saveLessonToLS(lessonId);
+            saveLessonToCloud(lessonId);
+            alert("Translation saved.");
+        });
+    }
 
     // ========== Quiz ==========
     const quizList = $("#tdQuizList");
@@ -3827,6 +5343,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    const btnArabicLetters = $("#btnArabicLetters");
+    if (btnArabicLetters) {
+        btnArabicLetters.addEventListener("click", () => {
+            goToArabicLetters();
+        });
+    }
+    const btnLettersBackToUnits = $("#btnLettersBackToUnits");
+    if (btnLettersBackToUnits) {
+        btnLettersBackToUnits.addEventListener("click", () => {
+            goToLevels();
+        });
+    }
+    initArabicLettersScreen();
+
     // hero buttons
     // ===== HERO BUTTONS (أنا طالب / أنا مدرس) =====
     const btnHeroStudent = document.getElementById("btnHeroStudent");
@@ -4051,6 +5581,16 @@ document.addEventListener("DOMContentLoaded", () => {
         appState.currentStudentId = null;
         goToStudents();
     });
+    const btnContinueLesson = document.getElementById("btnContinueLesson");
+    if (btnContinueLesson) {
+        btnContinueLesson.addEventListener("click", () => {
+            const student = getCurrentStudent();
+            if (!student) return;
+            if (!tryResumeStudent(student)) {
+                toast("No saved spot yet.");
+            }
+        });
+    }
     $("#btnGoTeacherDashboard").addEventListener("click", () => {
         goToTeacherDashboard();
     });
@@ -4065,6 +5605,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnToggleAr = document.getElementById("vocabToggleArBtn");
     const btnToggleEn = document.getElementById("vocabToggleEnBtn");
     const btnToggleArabeezy = document.getElementById("vocabToggleArabeezyBtn");
+    const btnDontKnow = document.getElementById("vocabDontKnowBtn");
     function checkIfVocabDone() {
         if (!currentLesson || !currentLesson.vocabulary) return;
 
@@ -4105,9 +5646,32 @@ document.addEventListener("DOMContentLoaded", () => {
         btnNext.addEventListener("click", () => {
             if (!vocabModalState.list.length) return;
 
+            const currentLesson = lessons[appState.currentLessonId];
+            const microCfg = getMicroCheckConfig(currentLesson);
+            if (microCfg.enabled && microCfg.items.length) {
+                vocabModalState.nextClickCount += 1;
+                if (vocabModalState.nextClickCount >= microCfg.every) {
+                    vocabModalState.nextClickCount = 0;
+                    microCheckState.pendingNextAdvance = true;
+                    if (openMicroCheckModal(currentLesson)) {
+                        return;
+                    }
+                    microCheckState.pendingNextAdvance = false;
+                }
+            }
+
             vocabModalState.index =
                 (vocabModalState.index + 1) % vocabModalState.list.length;
 
+            renderVocabModalFromState();
+        });
+    }
+
+    if (btnDontKnow) {
+        btnDontKnow.addEventListener("click", () => {
+            const item = vocabModalState.list[vocabModalState.index];
+            if (!item || !item.id) return;
+            setVocabMemoryStatus(appState.currentLessonId, item.id, "review");
             renderVocabModalFromState();
         });
     }
@@ -4138,6 +5702,20 @@ document.addEventListener("DOMContentLoaded", () => {
             vocabModalState.showArabeezy = !vocabModalState.showArabeezy;
             renderVocabModalFromState();
         });
+    }
+
+    const microCheckCheckBtn = document.getElementById("microCheckCheckBtn");
+    const microCheckContinueBtn = document.getElementById("microCheckContinueBtn");
+    const microCheckCloseBtn = document.getElementById("microCheckCloseBtn");
+
+    if (microCheckCheckBtn) {
+        microCheckCheckBtn.addEventListener("click", () => evaluateMicroCheck());
+    }
+    if (microCheckContinueBtn) {
+        microCheckContinueBtn.addEventListener("click", () => continueFromMicroCheck());
+    }
+    if (microCheckCloseBtn) {
+        microCheckCloseBtn.addEventListener("click", () => continueFromMicroCheck());
     }
     document.getElementById("btnLogin").addEventListener("click", openAuthModal);
     document
@@ -4301,8 +5879,11 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#teacherModeToggle").addEventListener("change", (e) => {
         appState.teacherMode = e.target.checked;
         updateTeacherTabsVisibility();
+        const lesson = lessons[appState.currentLessonId];
+        if (lesson) updateLessonTabsVisibility(lesson);
         setActiveTab(appState.currentTab);
     });
+
 
     // font size
     $("#btnFontSmaller").addEventListener("click", () => {

@@ -35,8 +35,9 @@ export const lesson = {
                 hint:
                     "Masc: مَبْسُوط، fem: مَبْسُوطَة، plural: مَبْسُوطِين. Very common for ‘feeling good / happy’.",
                 exampleAr: "اليَوْم مَبْسُوطَة لِأَنِّي خَلَّصِت المَشْرُوع.",
+                exampleArabeezy: "elywm mbswta lany khlst elmshrw3.",
                 exampleEn: "Today I’m happy because I finished the project.",
-            },
+},
             {
                 id: "za3lan",
                 ar: "زَعْلَان",
@@ -44,8 +45,9 @@ export const lesson = {
                 hint:
                     "Masc: زَعْلَان، fem: زَعْلَانَة. Can be ‘angry’ or ‘sad’ depending on context.",
                 exampleAr: "هُوَّا زَعْلَان شْوَيّ مِن النَّتِيجَة.",
+                exampleArabeezy: "hwa z3lan shwy mn elntyja.",
                 exampleEn: "He is a bit upset about the result.",
-            },
+},
             {
                 id: "ta3ban",
                 ar: "تَعْبَان",
@@ -53,8 +55,9 @@ export const lesson = {
                 hint:
                     "Masc: تَعْبَان، fem: تَعْبَانَة. Physical or mental tiredness.",
                 exampleAr: "بَعْد اليَوْم الطَّوِيل حَاسِّة حَالِي تَعْبَانَة.",
+                exampleArabeezy: "b3d elywm eltwyl 7asa 7aly t3bana.",
                 exampleEn: "After the long day I feel tired.",
-            },
+},
 
             {
                 id: "zahgan",
@@ -63,8 +66,9 @@ export const lesson = {
                 hint:
                     "Masc: زَهْقَان، fem: زَهْقَانَة. Often with مِن: زَهْقَان مِن الدِّرَاسَة.",
                 exampleAr: "حاسس حالي زهقان من الشغل الروتيني",
+                exampleArabeezy: "7ass 7aly zhqan mn elshghl elrwtyny",
                 exampleEn: "I feel bored / fed up with the routine work.",
-            },
+},
             {
                 id: "motawattar",
                 ar: "مُتَوَتِّر",
@@ -72,8 +76,9 @@ export const lesson = {
                 hint:
                     "Masc: مُتَوَتِّر، fem: مُتَوَتِّرَة. Often before exams, interviews, etc.",
                 exampleAr: "متوتّر من قبل ما أقدّم الامتحان.",
+                exampleArabeezy: "mtwtr mn qbl ma aqdm elamt7an.",
                 exampleEn: "I’m nervous before taking the exam.",
-            },
+},
             {
                 id: "mado3oot",
                 ar: "مَضْغُوط",
@@ -81,8 +86,9 @@ export const lesson = {
                 hint:
                     "Masc: مَضْغُوط، fem: مَضْغُوطَة. From the word for ‘pressure’.",
                 exampleAr: "هَالشَّهِر كْلُه مَضْغُوطَة بَيْن الدِّرَاسَة وَالشُّغُل.",
+                exampleArabeezy: "halshhr klh mdghwta byn eldrasa welshghl.",
                 exampleEn: "This month I’m under pressure between study and work.",
-            },
+},
             {
                 id: "merta7",
                 ar: "مِرْتَاح",
@@ -90,8 +96,9 @@ export const lesson = {
                 hint:
                     "Masc: مِرْتَاح، fem: مِرْتَاحَة. Can be physical or emotional comfort.",
                 exampleAr: "بَحِسّ حَالِي مِرْتَاحَ لَمَّا أَكُون عَالبَحِر.",
+                exampleArabeezy: "b7s 7aly mrta7 lma akwn 3alb7r.",
                 exampleEn: "I feel relaxed when I’m at the sea.",
-            },
+},
             {
                 id: "mit7ammis",
                 ar: "مِتْحَمِّس",
@@ -99,8 +106,9 @@ export const lesson = {
                 hint:
                     "Masc: مِتْحَمِّس، fem: مِتْحَمِّسَة. From حَمَاس ‘enthusiasm’.",
                 exampleAr: "مِتْحَمِّسَ أَبْلِش المُسْتَوَى الجَّدِيد.",
+                exampleArabeezy: "mt7ms ablsh elmstwa eljdyd.",
                 exampleEn: "I’m excited to start the new level.",
-            },
+},
             {
                 id: "khayef",
                 ar: "خَايِف",
@@ -108,8 +116,9 @@ export const lesson = {
                 hint:
                     "Masc: خَايِف، fem: خَايْفَة. Often with مِن: خَايْفَة مِن النَّتِيجَة.",
                 exampleAr: "خَايْفَة مِن النَّتِيجَة بَعْد الاِمْتِحَان.",
+                exampleArabeezy: "khayfa mn elntyja b3d elamt7an.",
                 exampleEn: "I’m scared about the result after the exam.",
-            },
+},
             {
                 id: "mashkour",
                 ar: "مَشْكُور",
@@ -117,8 +126,9 @@ export const lesson = {
                 hint:
                     "Literally ‘thanked’; used to express gratitude. Fem: مَشْكُورَة.",
                 exampleAr: "مَشْكُورَة كْتِير عَلَى دَعْمِك، عَنْجَد فَادَنِي.",
+                exampleArabeezy: "mshkwra ktyr 3la d3mk, 3njd fadny.",
                 exampleEn: "I feel very grateful for your support, it really helped me.",
-            },
+},
 
             // ===== MOOD & ENERGY CHUNKS =====
             {
@@ -128,8 +138,9 @@ export const lesson = {
                 hint:
                     "Opposite: مَزَاجِي مِش مْنِيح = my mood is not good.",
                 exampleAr: "اليوم مزاجي منيح، بس تعبان شوي.",
+                exampleArabeezy: "elywm mzajy mny7, bs t3ban shwy.",
                 exampleEn: "Today my mood is good but I’m a bit tired.",
-            },
+},
             {
                 id: "ma_eli_maal",
                 ar: "مش رايق",
@@ -137,8 +148,9 @@ export const lesson = {
                 hint:
                     "Chunk to refuse softly or explain low energy.",
                 exampleAr: "صحابي بدّهم يطلعوا، بس اليوم مش رايق",
+                exampleArabeezy: "s7aby bdhm ytl3wa, bs elywm msh rayq",
                 exampleEn: "My friends want to go out, but today I’m not in the mood.",
-            },
+},
             {
                 id: "ta2ti_zeleeleh",
                 ar: "طَاقْتِي قَلِيلَة",
@@ -146,8 +158,9 @@ export const lesson = {
                 hint:
                     "Useful to say you’re tired mentally/physically.",
                 exampleAr: "طَاقْتِي قَلِيلَة مِن كِلّ الشُّغُل وَالدِّرَاسَة.",
+                exampleArabeezy: "taqty qlyla mn kl elshghl weldrasa.",
                 exampleEn: "My energy is low from all the work and study.",
-            },
+},
             {
                 id: "bihاجa_istiraaha",
                 ar: "بِحَاجَة لاسْتِرَاحَة",
@@ -155,8 +168,9 @@ export const lesson = {
                 hint:
                     "Very natural chunk about self-care.",
                 exampleAr: "حَاسِّة إِنِّي بِحَاجَة لاسْتِرَاحَة يَومَيْن.",
+                exampleArabeezy: "7asa iny b7aja lastra7a ywmyn.",
                 exampleEn: "I feel I need a break for two days.",
-            },
+},
             {
                 id: "mesh_mosta3de",
                 ar: "مِش مُسْتَعِدّ",
@@ -164,8 +178,9 @@ export const lesson = {
                 hint:
                     "Masc: مِش مُسْتَعِدّ، fem: مِش مُسْتَعِدَّة. Emotionally or practically.",
                 exampleAr: "مِش مُسْتَعِدَّة أَخُد قَرَار هَلَّق.",
+                exampleArabeezy: "msh mst3da akhd qrar hlq.",
                 exampleEn: "I’m not ready to make a decision now.",
-            },
+},
             {
                 id: "daye3",
                 ar: "ضَايِع",
@@ -173,8 +188,9 @@ export const lesson = {
                 hint:
                     "Emotional ‘lost’ (not understanding / not sure).",
                 exampleAr: "بِهَالمَوْضُوع حَاسّ حَالِي ضَايِع شْوَيّ.",
+                exampleArabeezy: "bhalmwdw3 7as 7aly day3 shwy.",
                 exampleEn: "In this topic I feel a bit lost.",
-            },
+},
 
             // ===== VERBS ABOUT FEELINGS =====
             {
@@ -184,8 +200,9 @@ export const lesson = {
                 hint:
                     "From يِحِسّ. Often with إِنِّي: بَحِسّ إِنِّي…",
                 exampleAr: "بَحِسّ إِنِّي مَضْغُوطَة هَالأُسْبُوع.",
+                exampleArabeezy: "b7s iny mdghwta halasbw3.",
                 exampleEn: "I feel that I’m under pressure this week.",
-            },
+},
             {
                 id: "bifakker",
                 ar: "بِفَكِّر",
@@ -193,8 +210,9 @@ export const lesson = {
                 hint:
                     "Mental process: thinking / considering.",
                 exampleAr: "بفكّر آخد يوم إجازة أرتاح فيه",
+                exampleArabeezy: "bfkr aakhd ywm ijaza arta7 fyh",
                 exampleEn: "I’m thinking of taking a day off to rest.",
-            },
+},
 
             // ===== SUPPORT & EMPATHY =====
             {
@@ -204,8 +222,9 @@ export const lesson = {
                 hint:
                     "Masc: مَا تِخَاف، fem: مَا تِخَافِي. Emotional support.",
                 exampleAr: "مَا تِخَافِي، كِلّ إِشِي بِيُزْبُط شْوَيّ شْوَيّ.",
+                exampleArabeezy: "ma tkhafy, kl ishy byzbt shwy shwy.",
                 exampleEn: "Don’t worry, everything will work out step by step.",
-            },
+},
             {
                 id: "wala_yhemmak_2",
                 ar: "وَلَا يِهِمَّك",
@@ -213,8 +232,9 @@ export const lesson = {
                 hint:
                     "Masc: وَلَا يِهِمَّك، fem: وَلَا يِهِمِّك. Very common comforting phrase.",
                 exampleAr: "آسِف عَلَى الغَلَط. ـ وَلَا يِهِمَّك، صَار خَيْر.",
+                exampleArabeezy: "aasf 3la elghlt. wla yhmk, sar khyr.",
                 exampleEn: "Sorry about the mistake. — Don’t worry, it’s okay now.",
-            },
+},
             {
                 id: "hadri_nefsek",
                 ar: "دِير(ي) بَالَك عَلَى حَالَك",
@@ -222,8 +242,9 @@ export const lesson = {
                 hint:
                     "Masc: دِير بَالَك عَلَى حَالَك، fem: دِيرِي بَالِك عَلَى حَالِك.",
                 exampleAr: "الدِّرَاسَة مُهِمَّة بَسّ كَمَان دِيرِي بَالِك عَلَى حَالِك.",
+                exampleArabeezy: "eldrasa mhma bs kman dyry belk 3la 7alk.",
                 exampleEn: "Study is important but also take care of yourself.",
-            },
+},
             {
                 id: "taba3i3i",
                 ar: "طَبِيعِي",
@@ -231,8 +252,9 @@ export const lesson = {
                 hint:
                     "Masc: طَبِيعِي، fem: طَبِيعِيَّة. For validating feelings.",
                 exampleAr: "طَبِيعِي تِكُونِي مُتَوَتِّرَة قَبْل الاِمْتِحَان.",
+                exampleArabeezy: "tby3y tkwny mtwtra qbl elamt7an.",
                 exampleEn: "It’s normal to feel nervous before the exam.",
-            },
+},
         ],
 
         extra: [
@@ -243,8 +265,9 @@ export const lesson = {
                 hint:
                     "Emotional idiom: literally ‘his heart/feeling is broken’.",
                 exampleAr: "بَعْد الخَبَر مَبَيِّن عَلِيه مِنْكَسِر خَاطِرُه.",
+                exampleArabeezy: "b3d elkhbr mbyn 3lyh mnksr khatrh.",
                 exampleEn: "After the news he looks heartbroken.",
-            },
+},
             {
                 id: "mabsoot_3ala_elnahaieh",
                 ar: "مَبْسُوط عَلَى الآخِر",
@@ -252,8 +275,9 @@ export const lesson = {
                 hint:
                     "Stronger than just مَبْسُوط.",
                 exampleAr: "نَجَحْت فِي كِلّ المَوَادّ وَمَبْسُوط عَلَى الآخِر.",
+                exampleArabeezy: "nj7t fy kl elmwad wmbswt 3la elaakhr.",
                 exampleEn: "I passed all my subjects and I’m super happy.",
-            },
+},
             {
                 id: "ma_baddi_a7ki",
                 ar: "مَا بَدّي أَحْكِي عَن هَالمَوْضُوع",
@@ -261,8 +285,9 @@ export const lesson = {
                 hint:
                     "Useful boundary phrase when not ready to talk.",
                 exampleAr: "آسف/آسفة، هلّق ما بدي أحكي عن هالموضوع.",
+                exampleArabeezy: "aasf/aasfa, hlq ma bdy a7ky 3n halmwdw3.",
                 exampleEn: "Sorry, right now I don’t want to talk about this topic.",
-            },
+},
             {
                 id: "shway_shway",
                 ar: "شْوَيّ شْوَيّ",
@@ -270,8 +295,9 @@ export const lesson = {
                 hint:
                     "Common calming phrase: take it easy, step by step.",
                 exampleAr: "خُدِيه شْوَيّ شْوَيّ، مَا فِي دَاعِي لِلعَجَلَة.",
+                exampleArabeezy: "khdyh shwy shwy, ma fy da3y lel3jla.",
                 exampleEn: "Take it step by step, there’s no need to rush.",
-            },
+},
         ],
     },
 
@@ -379,69 +405,140 @@ export const lesson = {
                 en: "Thanks you, I feel better now.",
             },
 
-
         ],
     },
 
     // ====================================
     // GRAMMAR
     // ====================================
-    grammar: [
+
+  grammar: [
         {
-            id: "ba7ess_pattern",
-            title: "Using «بَحِسّ» + adjective / clause",
+            id: "full_negation",
+            title: "Full Negation System (ما...ش / مش / ما في)",
+            short: "Use different patterns depending on the sentence type.",
             description:
-                "The verb «بَحِسّ» means ‘I feel’. You can use it with an adjective or with «إِنِّي …»:\n\n" +
-                "• بَحِسّ تَعْبَان. = I feel tired. (masc)\n" +
-                "• بَحِسّ تَعْبَانَة. = I feel tired. (fem)\n" +
-                "• بَحِسّ مِتْحَمِّسَة لِلهَوَايِة الجَّدِيدَة. = I feel excited for the new hobby.\n\n" +
-                "With «إِنِّي …» (that I …):\n" +
-                "• بَحِسّ إِنِّي مَضْغُوطَة. = I feel that I’m under pressure.\n" +
-                "• بَحِسّ إِنِّي مِش مُسْتَعِدّ. = I feel that I’m not ready.",
+                `Spoken Arabic uses different negation patterns.
+Use ما + فعل + ش for actions, مش for adjectives/nouns, and ما في for existence.
+
+Choose the pattern based on what you negate.`,
+            table: {
+                title: "Negation Patterns",
+                headers: ["Arabic Pattern", "Arabeezy", "English", "Usage"],
+                rows: [
+                    ["ما + فعل + ش", "ma + verb + sh", "not (verb)", "Actions"],
+                    ["مش + صفة", "mish + adjective", "not (adj)", "States"],
+                    ["ما في + اسم", "ma fi + noun", "there isn’t", "Existence"],
+                    ["مش أنا", "mish ana", "not me", "Emphasis"]
+                ]
+            },
+            examples: [
+                { ar: "أنا ما بحب الزحمة", arabeezy: "ana ma b7ibb ez-z7me", en: "I don’t like crowds." },
+                { ar: "هو مش مبسوط", arabeezy: "howwa mish mabsuuT", en: "He isn’t happy." },
+                { ar: "ما في أمل", arabeezy: "ma fi amal", en: "There isn’t hope." },
+                { ar: "إنتِ ما بتناميش بكير", arabeezy: "inti ma btinaamish bakkeer", en: "You don’t sleep early. (f)" },
+                { ar: "أنا مش زعلان", arabeezy: "ana mish za3laan", en: "I’m not upset." }
+            ],
+            teacherNotes:
+                `Spoken uses ما...ش more than MSA.
+Teach مش for adjectives early.
+Use feelings and emotions as context.
+Keep patterns clear and separated.`,
+            commonMistakes: [
+                "Using مش with verbs",
+                "Forgetting ش in ما...ش",
+                "Mixing patterns in one sentence"
+            ],
+            functionalUse: "Use this to express what you don’t do or how you don’t feel."
         },
         {
-            id: "mood_positive_negative",
-            title: "Positive vs. negative mood: مَزَاجِي مْنِيح / مَزَاجِي مِش مْنِيح",
+            id: "active_participles_emotions",
+            title: "Active Participles (Emotional States)",
+            short: "Use participles to describe feelings.",
             description:
-                "To talk about mood you can use the chunk «مَزَاجِي …»:\n\n" +
-                "• مَزَاجِي مْنِيح اليَوْم. = My mood is good today.\n" +
-                "• مَزَاجِي مِش مْنِيح هَالأُسْبُوع. = My mood is not good this week.\n\n" +
-                "You can add a reason with «لِأَنِّي …»:\n" +
-                "• مَزَاجِي مِش مْنِيح لِأَنِّي تَعْبَان وَمَضْغُوط.",
-        },
-        {
-            id: "ma_eli_maal_chunk",
-            title: "The chunk «مَا إِلِي مَال» (I’m not in the mood)",
-            description:
-                "«مَا إِلِي مَال» literally means ‘I have no energy / no will’ and is used a lot:\n\n" +
-                "• اليَوْم مَا إِلِي مَال أَطْلَع. = Today I’m not in the mood to go out.\n" +
-                "• مَا إِلِي مَال أُحْكِي عَن هَالمَوْضُوع هَلَّق. = I’m not in the mood to talk about this topic now.\n\n" +
-                "It’s softer than a direct ‘no’, and explains your emotional state.",
-        },
-        {
-            id: "normalizing_tabi3i",
-            title: "Normalizing feelings with «طَبِيعِي»",
-            description:
-                "To support someone, you can say that their feeling is ‘normal’:\n\n" +
-                "• طَبِيعِي تِكُون مُتَوَتِّر قَبْل الاِمْتِحَان. (masc)\n" +
-                "• طَبِيعِي تِكُونِي تَعْبَانَة بَعْد الأُسْبُوع. (fem)\n\n" +
-                "This shows empathy and reduces shame about emotions.",
-        },
-        {
-            id: "soft_support_chunks",
-            title: "Soft support chunks: مَا تِخَافِي، وَلَا يِهِمَّك، دِيرِي بَالِك",
-            description:
-                "Very common supportive phrases:\n\n" +
-                "• مَا تِخَاف / مَا تِخَافِي. = Don’t be afraid / don’t worry.\n" +
-                "• وَلَا يِهِمَّك / وَلَا يِهِمِّك. = Don’t let it worry you.\n" +
-                "• دِير(ي) بَالَك عَلَى حَالَك. = Take care of yourself.\n\n" +
-                "Memorize them as full chunks to sound warm and natural.",
-        },
+                `Spoken Arabic often uses active participles to describe states.
+They act like adjectives and change for gender.
+
+Use them with pronouns to describe emotions.`,
+            table: {
+                title: "Common Emotions",
+                headers: ["Arabic", "Arabeezy", "English", "Usage"],
+                rows: [
+                    ["مبسوط", "mabsuuT", "happy", "Male"],
+                    ["مبسوطة", "mabsuuTa", "happy", "Female"],
+                    ["زعلان", "za3laan", "upset", "Male"],
+                    ["قلقان", "2al2aan", "anxious", "Male"],
+                    ["متوتر", "mtawattar", "stressed", "General"]
+                ]
+            },
+            examples: [
+                { ar: "أنا مبسوط اليوم", arabeezy: "ana mabsuuT el-yom", en: "I’m happy today." },
+                { ar: "هي مبسوطة", arabeezy: "hiyye mabsuuTa", en: "She is happy." },
+                { ar: "هو زعلان", arabeezy: "howwa za3laan", en: "He is upset." },
+                { ar: "إنت قلقان؟", arabeezy: "inta 2al2aan?", en: "Are you anxious?" },
+                { ar: "أنا مش مبسوط", arabeezy: "ana mish mabsuuT", en: "I’m not happy." }
+            ],
+            teacherNotes:
+                `Spoken uses participles more than MSA adjective phrases.
+Focus on gender endings with real examples.
+Use daily emotions and check-ins.
+Avoid formal mental-health terms.`,
+            commonMistakes: [
+                "Mixing masculine/feminine forms",
+                "Adding a verb like \"am\"",
+                "Using formal MSA emotion words"
+            ],
+            functionalUse: "Use this to describe feelings, moods, and emotional states."
+        }
     ],
+
+
 
     // ====================================
     // PRACTICE
     // ====================================
+    microChecks: {
+        enabled: true,
+        every: 5,
+        items: [
+            {
+                id: "mc_match_1",
+                type: "match",
+                prompt: "Match the English word to Arabic: happy / pleased",
+                options: ["مَبْسُوط", "زَعْلَان", "تَعْبَان", "زَهْقَان", "مُتَوَتِّر"],
+                correct: "مَبْسُوط",
+            },
+            {
+                id: "mc_complete_2",
+                type: "complete",
+                prompt: "Complete the Arabic sentence for: This month I’m under pressure between study and work.\nهَالشَّهِر كْلُه ___َة بَيْن الدِّرَاسَة وَالشُّغُل.",
+                options: ["مَضْغُوط", "مِرْتَاح", "مِتْحَمِّس", "خَايِف", "مَشْكُور"],
+                correct: "مَضْغُوط",
+            },
+            {
+                id: "mc_reorder_3",
+                type: "reorder",
+                prompt: "Reorder the Arabic words to match: Today my mood is good but I’m a bit tired.",
+                options: ["اليوم", "مزاجي", "منيح،", "بس", "تعبان", "شوي"],
+                correct: ["اليوم", "مزاجي", "منيح،", "بس", "تعبان", "شوي"],
+            },
+            {
+                id: "mc_choose_4",
+                type: "choose",
+                prompt: "Choose the correct Arabic word for: lost / confused",
+                options: ["ضَايِع", "بَحِسّ", "بِفَكِّر", "مَا تِخَافِي / مَا تِخَاف", "وَلَا يِهِمَّك"],
+                correct: "ضَايِع",
+            },
+            {
+                id: "mc_match_5",
+                type: "match",
+                prompt: "Match the English word to Arabic: take care of yourself",
+                options: ["دِير(ي) بَالَك عَلَى حَالَك", "طَبِيعِي", "مِنْكَسِر خَاطِرُه", "مَبْسُوط عَلَى الآخِر", "مَا بَدّي أَحْكِي عَن هَالمَوْضُوع"],
+                correct: "دِير(ي) بَالَك عَلَى حَالَك",
+            },
+        ],
+    },
+
     practice: {
         quiz: [
             {
@@ -500,6 +597,14 @@ export const lesson = {
             "Role-play 1: Two friends after a hard week. Student A asks about mood using: كِيف مَزَاجِك؟، شُو صَايِر مَعِك؟. Student B answers using at least 3 adjectives (تَعْبَان، مَضْغُوط، زَهْقَان…) and 1 chunk: مَا إِلِي مَال / طَاقْتِي قَلِيلَة.",
             "Role-play 2: Student and teacher. The student explains they feel tired and not motivated. The teacher uses supportive chunks: طَبِيعِي، مَا تِخَافِي، وَلَا يِهِمَّك، شْوَيّ شْوَيّ، دِيرِي بَالِك عَلَى حَالِك.",
             "Role-play 3: Short online chat. One person doesn’t want to talk about the problem now and uses: مَا بَدّي أَحْكِي عَن هَالمَوْضُوع هَلَّق. The other respects the boundary and answers with empathy and support.",
+        ],
+        translation: [
+            { id: "feel_t1", type: "enToAr", textEn: "I feel happy today.", textAr: "أنا مبسوط اليوم." },
+            { id: "feel_t2", type: "arToEn", textEn: "She feels stressed.", textAr: "هي متوترة." },
+            { id: "feel_t3", type: "enToAr", textEn: "We feel tired after work.", textAr: "إحنا تعبانين بعد الشغل." },
+            { id: "feel_t4", type: "arToEn", textEn: "He feels nervous.", textAr: "هو متوتر." },
+            { id: "feel_t5", type: "enToAr", textEn: "Are you okay?", textAr: "إنت منيح/منيحة؟" },
+            { id: "feel_t6", type: "arToEn", textEn: "I feel calm.", textAr: "أنا هادي." }
         ],
     },
 

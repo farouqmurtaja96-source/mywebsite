@@ -31,8 +31,8 @@ export const BASE_PROGRESS_TEMPLATE = {
     vocabulary: false,
     dialogue: false,
     grammar: false,
+    translation: false,
     practice: false,
     homework: false,
     review: false,
 };
-

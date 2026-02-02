@@ -207,6 +207,8 @@
                 </div>
                 <div class="section-header__actions">
                     <button id="btnSwitchProfile" class="btn btn--ghost">Switch Profile</button>
+                    <button id="btnContinueLesson" class="btn btn--primary btn--sm">Continue</button>
+                    <button id="btnArabicLetters" class="btn btn--outline btn--sm">Arabic Letters</button>
                     <button id="btnSyncLessonsNow" class="btn btn--ghost">↻ Sync lessons</button>
                     <button id="btnGoTeacherDashboard" class="btn btn--outline">Teacher Dashboard</button>
                 </div>
@@ -222,7 +224,39 @@
             <div id="dialogueOnlyContainer" class="levels-grid"></div>
 
 
-</section>
+        </section>
+
+        <!-- ============== ARABIC LETTERS SCREEN ============== -->
+        <section id="arabic-letters-screen" class="screen">
+            <div class="section-header section-header--with-actions">
+                <div>
+                    <h2>Arabic Letters</h2>
+                    <p class="section-header__subtitle">
+                        Tap any letter to see its shapes, sound, and example.
+                    </p>
+                </div>
+                <div class="section-header__actions">
+                    <button id="btnLettersBackToUnits" class="btn btn--ghost btn--sm">Back to Units</button>
+                    <button class="btn btn--outline btn--sm letters-tab-btn" data-letters-tab="letters">Letters</button>
+                    <button class="btn btn--outline btn--sm letters-tab-btn" data-letters-tab="exercises">Exercises</button>
+                </div>
+            </div>
+
+            <div class="letters-tabs">
+                <div id="lettersTabLetters" class="letters-tab letters-tab--active">
+                    <div id="lettersExtras" class="letters-extras"></div>
+                    <div class="letters-layout">
+                        <div>
+                            <div id="lettersGrid" class="letters-grid"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="lettersTabExercises" class="letters-tab">
+                    <div id="lettersExercises" class="letters-exercises"></div>
+                </div>
+            </div>
+        </section>
 
         <!-- ============== BRANCHING DIALOGUE SCREEN ============== -->
         <section id="branching-screen" class="screen">
@@ -303,7 +337,8 @@
                 <button class="lesson-tab lesson-tab--active" data-tab="overview">Overview</button>
                 <button class="lesson-tab" data-tab="vocabulary">Vocabulary</button>
                 <button class="lesson-tab" data-tab="dialogue">Dialogue</button>
-                <button class="lesson-tab" data-tab="grammar">Translation</button>
+                <button class="lesson-tab" data-tab="grammar">Grammar</button>
+                <button class="lesson-tab" data-tab="translation">Translation</button>
                 <button class="lesson-tab" data-tab="practice">Practice</button>
                 <button class="lesson-tab" data-tab="homework">Homework</button>
                 <button class="lesson-tab" data-tab="review">Quick Review</button>
@@ -454,6 +489,7 @@
                                         <option value="vocab">Vocabulary</option>
                                         <option value="dialogue">Dialogue</option>
                                         <option value="grammar">Grammar</option>
+                                        <option value="translation">Translation</option>
                                         <option value="practice">Practice</option>
                                         <option value="homework">Homework</option>
                                         <option value="notes">Teacher Notes</option>
@@ -494,15 +530,13 @@
             <p id="vocabModalArabeezy" class="modal__arabeezy"></p>
 
             <p id="vocabModalHint" class="modal__hint"></p>
+            <div id="vocabModalProgress" class="modal__progress"></div>
+            <div id="vocabModalStatus" class="modal__status"></div>
 
             <div class="modal__examples">
                 <p id="vocabModalExampleAr" class="modal__example--ar"></p>
+                <p id="vocabModalExampleArabeezy" class="modal__example--arabeezy"></p>
                 <p id="vocabModalExampleEn" class="modal__example--en"></p>
-            </div>
-
-            <div class="modal__controls">
-
-
             </div>
 
             <div class="modal__actions">
@@ -510,12 +544,80 @@
                 <button id="vocabToggleEnBtn" class="btn btn--outline btn--sm">
                     👁 Hide English
                 </button>
+                <button id="vocabToggleArabeezyBtn" class="btn btn--outline btn--sm">Hide </button>
 
                 <button id="vocabToggleExamplesBtn" class="btn btn--outline btn--sm">
-                    👁 Hide examples
+                    👁 Hide
                 </button>
                 <button id="vocabNextBtn" class="btn btn--ghost btn--sm">Next ➡</button>
 
+            </div>
+        </div>
+    </div>
+
+    <div id="letterModal" class="modal">
+        <div class="modal__backdrop" data-close-letter-modal></div>
+        <div class="modal__body letter-modal">
+            <button class="modal__close" data-close-letter-modal>&times;</button>
+            <div class="letter-modal__nav">
+                <button id="btnLetterModalPrev" class="btn btn--ghost btn--sm">Previous</button>
+                <button id="btnLetterModalNext" class="btn btn--ghost btn--sm">Next</button>
+            </div>
+            <div class="letter-detail__glyph" id="letterModalGlyph" lang="ar">ب</div>
+            <div class="letter-detail__name" id="letterModalName">Baa</div>
+            <div class="letter-detail__sound" id="letterModalSound">Sound: b</div>
+            <div class="letter-detail__sunmoon" id="letterModalSunMoon">Moon letter</div>
+
+            <div class="letter-forms">
+                <button class="letter-form letter-form--btn" data-letter-form="isolated">
+                    <span class="letter-form__label">Isolated</span>
+                    <span class="letter-form__value" id="letterModalFormIsolated" lang="ar">ب</span>
+                </button>
+                <button class="letter-form letter-form--btn" data-letter-form="initial">
+                    <span class="letter-form__label">Beginning</span>
+                    <span class="letter-form__value" id="letterModalFormInitial" lang="ar">بـ</span>
+                </button>
+                <button class="letter-form letter-form--btn" data-letter-form="medial">
+                    <span class="letter-form__label">Middle</span>
+                    <span class="letter-form__value" id="letterModalFormMedial" lang="ar">ـبـ</span>
+                </button>
+                <button class="letter-form letter-form--btn" data-letter-form="final">
+                    <span class="letter-form__label">End</span>
+                    <span class="letter-form__value" id="letterModalFormFinal" lang="ar">ـب</span>
+                </button>
+            </div>
+
+            <div class="letter-form-example">
+                <div class="letter-form-example__label" id="letterModalExampleLabel">Example (Beginning)</div>
+                <div class="letter-form-example__ar" id="letterModalExampleFormAr" lang="ar">بيت</div>
+                <div class="letter-form-example__ar" id="letterModalExampleFormArabeezy">bayt</div>
+            </div>
+
+            <div class="letter-note" id="letterModalNote">Connects on both sides.</div>
+
+            <div class="letter-writing">
+                <div class="letter-writing__title">How to write</div>
+                <ul id="letterModalWritingSteps" class="letter-writing__steps"></ul>
+                <div class="letter-writing__note">Tip: start with the isolated form, then connect it in a word.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =================== MICRO-CHECK MODAL =================== -->
+    <div id="microCheckModal" class="modal">
+        <div class="modal__backdrop"></div>
+        <div class="modal__body microcheck">
+            <button class="modal__close" id="microCheckCloseBtn">&times;</button>
+            <div class="microcheck__badge">Micro-Check</div>
+            <h3 id="microCheckTitle" class="microcheck__title"></h3>
+            <p id="microCheckPrompt" class="microcheck__prompt"></p>
+            <div id="microCheckOptions" class="microcheck__options"></div>
+            <div id="microCheckBuilder" class="microcheck__builder"></div>
+            <p id="microCheckFeedback" class="microcheck__feedback"></p>
+            <div class="microcheck__actions">
+                <button id="microCheckResetBtn" class="btn btn--ghost btn--sm">Reset</button>
+                <button id="microCheckCheckBtn" class="btn btn--outline btn--sm">Check</button>
+                <button id="microCheckContinueBtn" class="btn btn--primary btn--sm">Continue</button>
             </div>
         </div>
     </div>

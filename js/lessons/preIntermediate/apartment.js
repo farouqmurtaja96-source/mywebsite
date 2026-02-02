@@ -35,8 +35,9 @@ export const lesson = {
                 hint:
                     "Plural: شِقَق / شُقَق. ‘my apartment’ = شِقْتي. Used for rented or owned flats.",
                 exampleAr: "بِسْكُن بِشِقّة قَريب مِن الجامْعَة.",
+                exampleArabeezy: "bskn bshqa qryb mn eljam3a.",
                 exampleEn: "I live in an apartment near the university.",
-            },
+},
             {
                 id: "3imara",
                 ar: "عِمارَة",
@@ -45,8 +46,9 @@ export const lesson = {
                 hint:
                     "Also بِنَاية in some areas. عِمارَة تَلات طَوابِق = a three-floor building.",
                 exampleAr: "العِمارَة قَديمَة بَس نْضيفَة.",
+                exampleArabeezy: "el3mara qdyma bs ndyfa.",
                 exampleEn: "The building is old but clean.",
-            },
+},
             {
                 id: "taba2",
                 ar: "طابِق",
@@ -55,8 +57,9 @@ export const lesson = {
                 hint:
                     "Level in the building. أَوَّل طابِق / تاني طابِق / طابِق أَرْضي.",
                 exampleAr: "الشِّقّة عَالطّابِق التّالِت.",
+                exampleArabeezy: "elshqa 3altabq eltalt.",
                 exampleEn: "The apartment is on the third floor.",
-            },
+},
             {
                 id: "sellem",
                 ar: "دَرَج / سِلِّم",
@@ -65,8 +68,9 @@ export const lesson = {
                 hint:
                     "دَرَج = stairs in general, سِلِّم = staircase in a building.",
                 exampleAr: "لما يكون المصعد خربان، بنطلع عالدَّرَج.",
+                exampleArabeezy: "lma ykwn elms3d khrban, bntl3 3aldrj.",
                 exampleEn: "When the elevator is broken, we go up the stairs.",
-            },
+},
             {
                 id: "bab_el3imara",
                 ar: "باب العِمارَة",
@@ -74,8 +78,9 @@ export const lesson = {
                 enArabeezy: "bāb il-3imāra",
                 hint: "Main entrance of the building.",
                 exampleAr: "باب العِمارَة مِش مْسَكَّر مْنيح.",
+                exampleArabeezy: "bab el3mara msh mskr mny7.",
                 exampleEn: "The building door doesn’t close well.",
-            },
+},
 
             // ===== ROOMS =====
             {
@@ -85,8 +90,9 @@ export const lesson = {
                 enArabeezy: "ghurfet nōm",
                 hint: "Short: غُرْفِة = room. Plural: غُرَف.",
                 exampleAr: "الشِّقّة فيها غُرْفِة نَوْم واحْدِة.",
+                exampleArabeezy: "elshqa fyha ghrfa nwm wa7da.",
                 exampleEn: "The apartment has one bedroom.",
-            },
+},
             {
                 id: "salon",
                 ar: "صالون",
@@ -94,8 +100,9 @@ export const lesson = {
                 enArabeezy: "ṣālōn / salon",
                 hint: "Sitting room for guests and family.",
                 exampleAr: "بِنِقْعُد بِالصّالون نِتْفَرَّج عَالتِّلْفِزْيون.",
+                exampleArabeezy: "bnq3d belsalwn ntfrj 3altlfzywn.",
                 exampleEn: "We sit in the living room and watch TV.",
-            },
+},
             {
                 id: "matbakh",
                 ar: "مَطْبَخ",
@@ -103,8 +110,9 @@ export const lesson = {
                 enArabeezy: "maṭbakh",
                 hint: "Room for cooking. Plural: مَطابِخ.",
                 exampleAr: "مَطْبَخ الشِّقّة صْغير بَس مُرَتَّب.",
+                exampleArabeezy: "mtbkh elshqa sghyr bs mrtb.",
                 exampleEn: "The apartment’s kitchen is small but tidy.",
-            },
+},
             {
                 id: "7ammam",
                 ar: "حَمّام",
@@ -112,8 +120,9 @@ export const lesson = {
                 enArabeezy: "ḥammām / 7ammam",
                 hint: "Bathroom / toilet, depending on context.",
                 exampleAr: "الحَمّام في مَشْكِلَة بِالمَيّ.",
+                exampleArabeezy: "el7mam fy mshkla belmy.",
                 exampleEn: "There is a water problem in the bathroom.",
-            },
+},
             {
                 id: "balkon",
                 ar: "بَلكون / شُرْفَة",
@@ -121,8 +130,9 @@ export const lesson = {
                 enArabeezy: "balkōn / shurfa",
                 hint: "Outside space of the apartment (balcony).",
                 exampleAr: "بَحِبّ أَشْرَب قَهْوِة عَالبَلكون.",
+                exampleArabeezy: "b7b ashrb qhwa 3alblkwn.",
                 exampleEn: "I like to drink coffee on the balcony.",
-            },
+},
 
             // ===== PEOPLE & MONEY =====
             {
@@ -132,8 +142,9 @@ export const lesson = {
                 enArabeezy: "jār / jāra",
                 hint: "Someone who lives next door or nearby. Plural: جيران.",
                 exampleAr: "جيرانّا طَيِّبين بَس صَوْتهم عالي أَحْيانا.",
+                exampleArabeezy: "jyrana tybyn bs swthm 3aly a7yana.",
                 exampleEn: "Our neighbors are nice but sometimes loud.",
-            },
+},
             {
                 id: "sa7eb_elbeit",
                 ar: "صاحِب البَيْت",
@@ -141,8 +152,9 @@ export const lesson = {
                 enArabeezy: "ṣāḥeb il-bēt / sa7eb el-beit",
                 hint: "Owner of the apartment or house.",
                 exampleAr: "صاحِب البَيْت ساكِن في نَفْس العِمارَة.",
+                exampleArabeezy: "sa7b elbyt sakn fy nfs el3mara.",
                 exampleEn: "The landlord lives in the same building.",
-            },
+},
             {
                 id: "ijar",
                 ar: "إيجار",
@@ -150,8 +162,9 @@ export const lesson = {
                 enArabeezy: "ījār / ijar",
                 hint: "Money paid every month for the apartment.",
                 exampleAr: "إيجار الشِّقّة غالي شْوَي.",
+                exampleArabeezy: "iyjar elshqa ghaly shwy.",
                 exampleEn: "The apartment’s rent is a bit expensive.",
-            },
+},
             {
                 id: "fatora",
                 ar: "فاتورَة",
@@ -159,8 +172,9 @@ export const lesson = {
                 enArabeezy: "fātūra / fatora",
                 hint: "General word, often for utilities.",
                 exampleAr: "لازِم أَدْفَع فاتورَة الشَّهِر هادا.",
+                exampleArabeezy: "lazm adf3 fatwra elshhr hada.",
                 exampleEn: "I have to pay this month’s bill.",
-            },
+},
 
             {
                 id: "fatora_mayy",
@@ -169,8 +183,9 @@ export const lesson = {
                 enArabeezy: "fātūrat mayy",
                 hint: "Bill for water consumption.",
                 exampleAr: "فاتورَة المَيّ مِش مَشْمُولَة بِالإيجار.",
+                exampleArabeezy: "fatwra elmy msh mshmwla beliyjar.",
                 exampleEn: "The water bill is not included in the rent.",
-            },
+},
 
             // ===== DOORS, WINDOWS & KEYS =====
             {
@@ -180,8 +195,9 @@ export const lesson = {
                 enArabeezy: "miftaḥ / mifta7",
                 hint: "Key for the door, etc.",
                 exampleAr: "نِسيت المِفْتاح جُوّا الشِّقّة.",
+                exampleArabeezy: "nsyt elmfta7 jwa elshqa.",
                 exampleEn: "I forgot the key inside the apartment.",
-            },
+},
             {
                 id: "bab",
                 ar: "باب",
@@ -189,8 +205,9 @@ export const lesson = {
                 enArabeezy: "bāb",
                 hint: "Door of a room, apartment, or building.",
                 exampleAr: "باب البَلكون مِش مْسَكَّر مْنيح.",
+                exampleArabeezy: "bab elblkwn msh mskr mny7.",
                 exampleEn: "The balcony door doesn’t close well.",
-            },
+},
             {
                 id: "shubbak",
                 ar: "شُبّاك",
@@ -198,8 +215,9 @@ export const lesson = {
                 enArabeezy: "shubbāk / shubbak",
                 hint: "Window of a room.",
                 exampleAr: "الشُّبّاك مَكْسور وبدّه تَصْلِيح.",
+                exampleArabeezy: "elshbak mkswr wbdh tsly7.",
                 exampleEn: "The window is broken and needs repair.",
-            },
+},
 
             // ===== UTILITIES & APPLIANCES =====
             {
@@ -209,8 +227,9 @@ export const lesson = {
                 enArabeezy: "mayy",
                 hint: "Tap water / water in general.",
                 exampleAr: "المَيّ بِتِنْقِط مِن السَّقْف.",
+                exampleArabeezy: "elmy btnqt mn elsqf.",
                 exampleEn: "Water is dripping from the ceiling.",
-            },
+},
             {
                 id: "kahraba",
                 ar: "كَهْرَبا",
@@ -218,8 +237,9 @@ export const lesson = {
                 enArabeezy: "kahrabā / kahraba",
                 hint: "Power in the house. قَطْع كَهْرَبا = power cut.",
                 exampleAr: "الكَهْرَبا بِتِنْقِطِع كْثير بِهالْمَنطِقَة.",
+                exampleArabeezy: "elkhrba btnqt3 kthyr bhalmntqa.",
                 exampleEn: "The electricity cuts off a lot in this area.",
-            },
+},
             {
                 id: "daw",
                 ar: "ضَوّ",
@@ -227,8 +247,9 @@ export const lesson = {
                 enArabeezy: "ḍaww / daw",
                 hint: "Electric light / lamp.",
                 exampleAr: "في ضَوّ مِش شَغّال بِالْمَمَرّ.",
+                exampleArabeezy: "fy dw msh shghal belmmr.",
                 exampleEn: "There is a light not working in the hallway.",
-            },
+},
             {
                 id: "ghassaleh",
                 ar: "غَسّالِة",
@@ -236,8 +257,9 @@ export const lesson = {
                 enArabeezy: "ghassāle / ghassaleh",
                 hint: "Machine for washing clothes.",
                 exampleAr: "غَسّالِة الشِّقّة خَرْبانِة هالأَيام.",
+                exampleArabeezy: "ghsala elshqa khrbana halayam.",
                 exampleEn: "The apartment’s washing machine is broken these days.",
-            },
+},
             {
                 id: "tallajeh",
                 ar: "تَلّاجَة",
@@ -245,8 +267,9 @@ export const lesson = {
                 enArabeezy: "tallājeh",
                 hint: "Refrigerator.",
                 exampleAr: "التَّلّاجَة مَش مْبَرِّدَة مْنيح.",
+                exampleArabeezy: "eltlaja msh mbrda mny7.",
                 exampleEn: "The fridge is not cooling well.",
-            },
+},
             {
                 id: "ghaz",
                 ar: "غَاز",
@@ -254,8 +277,9 @@ export const lesson = {
                 enArabeezy: "ghāz / ghaz",
                 hint: "Gas cylinder or gas line.",
                 exampleAr: "جرة الغَاز فاضيِة، لازم نِغَيِّرْها.",
+                exampleArabeezy: "jra elghaz fadya, lazm nghyrha.",
                 exampleEn: "The gas cylinder is empty; we need to change it.",
-            },
+},
             {
                 id: "furn",
                 ar: "فُرْن",
@@ -263,8 +287,9 @@ export const lesson = {
                 enArabeezy: "furn",
                 hint: "For baking / cooking, gas or electric.",
                 exampleAr: "فرن الكَهْرَبا خَرْبان اليوم.",
+                exampleArabeezy: "frn elkhrba khrban elywm.",
                 exampleEn: "The electric oven is broken today.",
-            },
+},
             {
                 id: "sakhan_mayy",
                 ar: "سَخّان مَيّ",
@@ -272,8 +297,9 @@ export const lesson = {
                 enArabeezy: "sakkhān mayy",
                 hint: "Heater for shower water.",
                 exampleAr: "السَّخّان مَش شَغّال، المَيّ بارْدِة.",
+                exampleArabeezy: "elskhan msh shghal, elmy barda.",
                 exampleEn: "The water heater is not working; the water is cold.",
-            },
+},
             {
                 id: "makyyef",
                 ar: "مِكيّف",
@@ -281,8 +307,9 @@ export const lesson = {
                 enArabeezy: "mikayyef / makyyef",
                 hint: "AC unit.",
                 exampleAr: "المِكيّف بِطَفّي لَمّا نِشَغِّل غَسّالِة.",
+                exampleArabeezy: "elmkyf btfy lma nshghl ghsala.",
                 exampleEn: "The AC turns off when we turn on the washing machine.",
-            },
+},
             {
                 id: "maghsaleh",
                 ar: "مَغْسَلِة",
@@ -290,8 +317,9 @@ export const lesson = {
                 enArabeezy: "maghsaleh",
                 hint: "Basin for water.",
                 exampleAr: "المَغْسَلِة في الحَمّام مَسْدودَة.",
+                exampleArabeezy: "elmghsla fy el7mam msdwda.",
                 exampleEn: "The bathroom sink is blocked.",
-            },
+},
             {
                 id: "7anafiyeh",
                 ar: "حَنَفِيّة",
@@ -299,8 +327,9 @@ export const lesson = {
                 enArabeezy: "ḥanafyyeh / 7anafiyeh",
                 hint: "Water tap.",
                 exampleAr: "الحَنَفِيّة بتنقط مَيّ طول الليل.",
+                exampleArabeezy: "el7nfya btnqt my twl ellyl.",
                 exampleEn: "The tap drips water all night.",
-            },
+},
 
             {
                 id: "beykhar_mayy",
@@ -309,8 +338,9 @@ export const lesson = {
                 enArabeezy: "bikharr mayy / bey5ar mayy",
                 hint: "Used for tap, pipe, ceiling.",
                 exampleAr: "السَّقْف بنقط مَيّ لَمّا تشتي.",
+                exampleArabeezy: "elsqf bnqt my lma tshty.",
                 exampleEn: "The ceiling leaks when it rains.",
-            },
+},
 
             // ===== ELEVATOR, STAIRS & NOISE =====
             {
@@ -320,8 +350,9 @@ export const lesson = {
                 enArabeezy: "miṣʿad / asansēr",
                 hint: "Lift in the building.",
                 exampleAr: "المِصْعَد بْوِقَّف بِنُصّ الطّابِق أَحْيانًا.",
+                exampleArabeezy: "elms3d bwqf bns eltabq a7yana.",
                 exampleEn: "The elevator sometimes stops between floors.",
-            },
+},
             {
                 id: "sawt_3ali",
                 ar: "صَوْت عالي",
@@ -329,8 +360,9 @@ export const lesson = {
                 enArabeezy: "ṣōt ʿāli / sawt 3ali",
                 hint: "Used for neighbors, street, etc.",
                 exampleAr: "في صَوْت عالي مِن الجيران بِاللَّيْل.",
+                exampleArabeezy: "fy swt 3aly mn eljyran bellyl.",
                 exampleEn: "There is loud noise from the neighbors at night.",
-            },
+},
 
             // ===== STATE OF THINGS =====
             {
@@ -340,8 +372,9 @@ export const lesson = {
                 enArabeezy: "maksūr / maksour",
                 hint: "Physically broken (glass, door, window).",
                 exampleAr: "الشُّبّاك مَكْسور .",
+                exampleArabeezy: "elshbak mkswr.",
                 exampleEn: "The window is broken ",
-            },
+},
             {
                 id: "kharban",
                 ar: "خَرْبان",
@@ -349,8 +382,9 @@ export const lesson = {
                 enArabeezy: "kharbān / kharban",
                 hint: "Device that doesn’t work.",
                 exampleAr: "الأسانْسير خَرْبان من أُسْبوع.",
+                exampleArabeezy: "elasansyr khrban mn asbw3.",
                 exampleEn: "The elevator has been out of order for a week.",
-            },
+},
             {
                 id: "ma_bishtghil",
                 ar: "مَا بِشْتَغِل",
@@ -359,8 +393,9 @@ export const lesson = {
                 hint:
                     "Used for any device: الضَّوّ مَا بِشْتَغِل، الغَسّالِة مَا بِتِشْتَغِل.",
                 exampleAr: "السَّخّان مَا بِشْتَغِل، المَيّ بارْدِة.",
+                exampleArabeezy: "elskhan ma bshtghl, elmy barda.",
                 exampleEn: "The water heater doesn’t work; the water is cold.",
-            },
+},
 
             // ===== VERBS & USEFUL CHUNKS =====
             {
@@ -371,8 +406,9 @@ export const lesson = {
                 hint:
                     "From اِسْتَأْجَر = to rent. بَسْتَأْجِر شِقّة فِي غَزّة.",
                 exampleAr: "هَادي أَوَّل مَرّة بَسْتَأْجِر شِقّة لَحالي.",
+                exampleArabeezy: "hady awl mra bstajr shqa l7aly.",
                 exampleEn: "This is the first time I rent an apartment by myself.",
-            },
+},
             {
                 id: "badfa3_ijar",
                 ar: "بَدْفَع الإيجار",
@@ -380,8 +416,9 @@ export const lesson = {
                 enArabeezy: "badfaʿ il-ījār / badfa3 el-ijar",
                 hint: "Add time: كُلّ أَوَّل شَهِر / فِي نُصّ الشَّهِر.",
                 exampleAr: "بَدْفَع الإيجار أُونْلايْن.",
+                exampleArabeezy: "bdf3 eliyjar awnlayn.",
                 exampleEn: "I pay the rent online.",
-            },
+},
             {
                 id: "fi_mushkileh_fi",
                 ar: "في مُشْكِلَة في...",
@@ -390,8 +427,9 @@ export const lesson = {
                 hint:
                     "Template: في مُشْكِلَة في المَيّ / في الضَوّ / في البَلكون...",
                 exampleAr: "في مُشْكِلَة في الإِنْتَرْنِت مِن امْبارِح.",
+                exampleArabeezy: "fy mshkla fy elintrnt mn ambar7.",
                 exampleEn: "There has been a problem with the internet since yesterday.",
-            },
+},
             {
                 id: "batwasal_ma3",
                 ar: "بَتْواصَل مَع...",
@@ -399,8 +437,9 @@ export const lesson = {
                 enArabeezy: "batwāṣal maʿ...",
                 hint: "بَتْواصَل مَع صاحِب البَيْت / مَع الشِّرْكَة.",
                 exampleAr: "لَمّا يكون في مُشْكِلَة بَتْواصَل مَع صاحِب البَيْت.",
+                exampleArabeezy: "lma ykwn fy mshkla btwasl m3 sa7b elbyt.",
                 exampleEn: "When there is a problem, I contact the landlord.",
-            },
+},
         ],
 
         extra: [
@@ -411,8 +450,9 @@ export const lesson = {
                 enArabeezy: "ʿaʾd ījār / 3a2d ijār",
                 hint: "Paper that explains rules, rent, and conditions.",
                 exampleAr: "عَقْد الإيجار مَكْتوب فيه كُلّ الشُّروط.",
+                exampleArabeezy: "3qd eliyjar mktwb fyh kl elshrwt.",
                 exampleEn: "All the conditions are written in the rental contract.",
-            },
+},
 
             {
                 id: "7ares_el3imara",
@@ -421,8 +461,9 @@ export const lesson = {
                 enArabeezy: "ḥāres il-3imāra / 7ares el-3imara",
                 hint: "Person who looks after the building.",
                 exampleAr: "حارِس العِمارَة بِفَتِّح الباب وَبْيِنَظِّف الدَّرَج.",
+                exampleArabeezy: "7ars el3mara bft7 elbab wbynzf eldrj.",
                 exampleEn: "The building guard opens the door and cleans the stairs.",
-            },
+},
             {
                 id: "ratoobe",
                 ar: "رُطوبَة",
@@ -430,8 +471,9 @@ export const lesson = {
                 enArabeezy: "ruṭūba / ratoobe",
                 hint: "Moisture on walls or in the air.",
                 exampleAr: "في رُطوبَة عَالحِيط بِغُرْفِة النَّوْم.",
+                exampleArabeezy: "fy rtwba 3al7yt bghrfa elnwm.",
                 exampleEn: "There is damp on the wall in the bedroom.",
-            },
+},
             {
                 id: "tedfi2a",
                 ar: "تِدْفِئَة",
@@ -439,8 +481,9 @@ export const lesson = {
                 enArabeezy: "tidfiʾa / tedfi2a",
                 hint: "System for warming the house.",
                 exampleAr: "ما في تِدْفِئَة مْنيحَة بالشتا.",
+                exampleArabeezy: "ma fy tdfya mny7a belshta.",
                 exampleEn: "There is no good heating in winter.",
-            },
+},
 
             {
                 id: "sakan_jdid",
@@ -449,8 +492,9 @@ export const lesson = {
                 enArabeezy: "sakan jdid",
                 hint: "Used when someone has just moved.",
                 exampleAr: "رُوبَا نَقَلِت عَسَكَن جْديد قَريب مِن الجامْعَة.",
+                exampleArabeezy: "rwba nqlt 3skn jdyd qryb mn eljam3a.",
                 exampleEn: "Roba moved to a new place near the university.",
-            },
+},
             {
                 id: "mash7oun",
                 ar: "مَشْحون",
@@ -458,8 +502,9 @@ export const lesson = {
                 enArabeezy: "mashḥūn / mash7oun",
                 hint: "Used for prepaid electricity meters.",
                 exampleAr: "نَسِينَا نِشْحَن العَدّاد، قَطَعِت الكَهْرَبا.",
+                exampleArabeezy: "nsyna nsh7n el3dad, qt3t elkhrba.",
                 exampleEn: "We forgot to charge the meter, the electricity went off.",
-            },
+},
         ],
     }
     ,
@@ -472,191 +517,229 @@ export const lesson = {
             {
                 "speaker": "Rami",
                 "ar": "مَسّا الخير يا خالِد، نِقَلْت عَالشِّقّة الجْديدَة أَخِيرًا!",
+                "arArabeezy": "msa elkhyr ya khald, nqlt 3alshqa eljdyda akhyra!",
                 "en": "Good evening, Khaled, I finally moved to the new apartment!"
             },
             {
                 "speaker": "Khaled",
                 "ar": "مَبْروك! شُو أَخْبار الشِّقّة؟ كْبيرَة وِلّا صْغيرَة؟",
+                "arArabeezy": "mbrwk! shw akhbar elshqa?kbyra wla sghyra?",
                 "en": "Congratulations! How is the apartment? Big or small?"
             },
             {
                 "speaker": "Rami",
                 "ar": "مِش كْبيرَة بَس مْنيحَة، فيها غُرْفِة نَوْم واحْدِة، صالون، مَطْبَخ وَحَمّام.",
+                "arArabeezy": "msh kbyra bs mny7a, fyha ghrfa nwm wa7da, salwn, mtbkh w7mam.",
                 "en": "It’s not big but it’s nice; it has one bedroom, a living room, a kitchen and a bathroom."
             },
             {
                 "speaker": "Khaled",
                 "ar": "وعِندَك بَلكون كْمان وِلّا لا؟",
+                "arArabeezy": "w3ndk blkwn kman wla la?",
                 "en": "And do you also have a balcony or not?"
             },
             {
                 "speaker": "Rami",
                 "ar": "إي، في بَلكون صْغيرة عالشّارِع الرّئيسي.",
+                "arArabeezy": "iy, fy blkwn sghyra 3alshar3 elryysy.",
                 "en": "Yes, there is a small balcony on the main street."
             },
             {
                 "speaker": "Khaled",
                 "ar": "عَأيّ طابِق الشِّقّة؟ العِمارَة فيها أسانْسير؟",
+                "arArabeezy": "3ay tabq elshqa?el3mara fyha asansyr?",
                 "en": "On which floor is the apartment? Does the building have an elevator?"
             },
             {
                 "speaker": "Rami",
                 "ar": "عَالطّابِق الرّابِع، وفي مِصْعَد،بس احيانا بكون خربان.",
+                "arArabeezy": "3altabq elrab3, wfy ms3d, bs a7yana bkwn khrban.",
                 "en": "On the fourth floor, and there is an elevator, but it’s sometimes out of order."
             },
             {
                 "speaker": "Khaled",
                 "ar": "طَيِّب، قَدّيش الإيجار؟ شامِل فاتورَة مَيّ وَكَهْرَبا؟",
+                "arArabeezy": "tyb, qdysh eliyjar?shaml fatwra my wkhrba?",
                 "en": "Okay, how much is the rent? Does it include water and electricity bills?"
             },
             {
                 "speaker": "Rami",
                 "ar": "الإيجار خَمِس مِيّة شِيكِل، بَس فاتورَة المَيّ وَالكَهْرَبا عَلَيْنا.",
+                "arArabeezy": "eliyjar khms mya shykl, bs fatwra elmy welkhrba 3lyna.",
                 "en": "The rent is five hundred shekels, but the water and electricity bills are on us."
             },
             {
                 "speaker": "Khaled",
                 "ar": "والجيران؟ هاد السُّؤال المُهِم.",
+                "arArabeezy": "weljyran?had elswal elmhm.",
                 "en": "And the neighbors? That’s the important question."
             },
             {
                 "speaker": "Rami",
                 "ar": "جارتي اللّي قبالي طَيِّبَة، بَس الجار اللّي فَوقنا صَوْته عالي بِاللَّيْل.",
+                "arArabeezy": "jarty elly qbaly tyba, bs eljar elly fwqna swth 3aly bellyl.",
                 "en": "My neighbor next door is nice, but the neighbor above us is loud at night."
             },
             {
                 "speaker": "Khaled",
                 "ar": "مُمْكِن تِحْكوا مَعُه بِهُدُوء أَو تِحْكوا مَع صاحِب البَيْت.",
+                "arArabeezy": "mmkn t7kwa m3h bhdw aw t7kwa m3 sa7b elbyt.",
                 "en": "You can talk to him calmly or talk to the landlord."
             },
             {
                 "speaker": "Rami",
                 "ar": "بِصْراحَة في مَشاكِل تانِيَة جَوّا الشِّقّة.",
+                "arArabeezy": "bsra7a fy mshakl tanya jwa elshqa.",
                 "en": "Honestly, there are other problems inside the apartment."
             },
             {
                 "speaker": "Khaled",
                 "ar": "جَدّ؟ مِثْل إيش؟",
+                "arArabeezy": "jd?mthl iysh?",
                 "en": "Really? Like what?"
             },
             {
                 "speaker": "Rami",
                 "ar": "المَغْسَلِة في الحَمّام مَسْددَة، والمَيّ بْتِنْقِط مِن السَّقْف لَمّا أَفَتِّح الحَنَفِيّة.",
+                "arArabeezy": "elmghsla fy el7mam msdda, welmy btnqt mn elsqf lma aft7 el7nfya.",
                 "en": "The sink in the bathroom is blocked and water drips from the ceiling when I open the tap."
             },
             {
                 "speaker": "Khaled",
                 "ar": "وَلا مَرّة حَكَيت لِصاحِب البَيْت عَن هالمَشاكِل؟",
+                "arArabeezy": "wla mra 7kyt lsa7b elbyt 3n halmshakl?",
                 "en": "Have you never told the landlord about these problems?"
             },
             {
                 "speaker": "Rami",
                 "ar": "لِأ، كُنِت مَشْغول بِالنَّقْل وَالاِمْتِحانات، بَس لازم أِتِّصِل فيه.",
+                "arArabeezy": "la, knt mshghwl belnql welamt7anat, bs lazm atsl fyh.",
                 "en": "No, I was busy with moving and exams, but I must call him."
             },
             {
                 "speaker": "Khaled",
                 "ar": "يَلّا نتِّصِل هَلَّقيت، أَفْضَل مِن بُكْرَة.",
+                "arArabeezy": "yla ntsl hlqyt, afdl mn bkra.",
                 "en": "Let’s call him now; better than tomorrow."
             },
             {
                 "speaker": "Rami",
                 "ar": "تمام هَيْ بَتِّصِل... أَلو، مَسّا الخير يا أُسْتاذ سامِر، أنا المُسْتَأجِر الجْديد بالشِّقّة الرّابِعَة.",
+                "arArabeezy": "tmam hy btsl. . . alw, msa elkhyr ya astadh samr, ana elmstajr eljdyd belshqa elrab3a.",
                 "en": "Okay, I’m calling… Hello, good evening Mr. Samer, I’m the new tenant in the fourth-floor apartment."
             },
             {
                 "speaker": "Landlord",
                 "ar": "مَسّا النّور، أَهْلًا، أكِيد. شُو الأَخْبار؟ في مَشْكِلَة؟",
+                "arArabeezy": "msa elnwr, ahla, akyd. shw elakhbar?fy mshkla?",
                 "en": "Good evening, welcome. Sure. What’s up? Is there a problem?"
             },
             {
                 "speaker": "Rami",
                 "ar": "إي صَراحَةً، في كَم مَشْكِلَة صْغيرَة: المَغْسَلِة في الحَمّام مَسْددَة، والحَنَفِيّة بتنقط مَيّ طول الليل.",
+                "arArabeezy": "iy sra7a, fy km mshkla sghyra: elmghsla fy el7mam msdda, wel7nfya btnqt my twl ellyl.",
                 "en": "Yes honestly, there are a few small problems: the bathroom sink is blocked and the tap leaks water all night."
             },
             {
                 "speaker": "Landlord",
                 "ar": "الميّ بتقطع كليًّا ولا بس ضعيفة؟",
+                "arArabeezy": "elmy btqt3 klya wla bs d3yfa?",
                 "en": "Does the water stop completely or is it just weak?"
             },
             {
                 "speaker": "Rami",
                 "ar": "المَيّ مَوْجودَة بَس المَجْرى مَسْدود، والمَيّ بِتِجْمَع عَالأَرْض.",
+                "arArabeezy": "elmy mwjwda bs elmjra msdwd, welmy btjm3 3alard.",
                 "en": "The water is there but the drain is blocked, and the water gathers on the floor."
             },
             {
                 "speaker": "Landlord",
                 "ar": "طَيِّب، بَبْعَت سَبّاك يِشوف المَشْكِلَة بُكْرَة الصُّبِح.",
+                "arArabeezy": "tyb, bb3t sbak yshwf elmshkla bkra elsb7.",
                 "en": "Okay, I’ll send a plumber to check the problem tomorrow morning."
             },
             {
                 "speaker": "Rami",
                 "ar": "وكَمان في مَشْكِلَة بِالكَهْرَبا، لَمّا أَشَغِّل المِكيّف والغَسّالِة مَع بَعْض بِيِطْفي الضَّوّ.",
+                "arArabeezy": "wkman fy mshkla belkhrba, lma ashghl elmkyf welghsala m3 b3d bytfy eldw.",
                 "en": "And there’s also a problem with the electricity; when I turn on the AC and the washing machine together, the lights go off."
             },
             {
                 "speaker": "Landlord",
                 "ar": "مُمْكِن المُفَتِّح (القاطِع) ضَعيف، بَجي أَنا اليَوم عَالمَسَا أَتْأَكَّد.",
+                "arArabeezy": "mmkn elmft7 (elqat3) d3yf, bjy ana elywm 3almsa atakd.",
                 "en": "Maybe the breaker is weak; I’ll come this evening to make sure."
             },
             {
                 "speaker": "Khaled",
                 "ar": " اِسْأَلُه عَن الأسانْسير، ليش كْثير خَرْبان.",
+                "arArabeezy": "asalh 3n elasansyr, lysh kthyr khrban.",
                 "en": " Ask him about the elevator, why it’s often broken."
             },
             {
                 "speaker": "Rami",
                 "ar": "كمان حَضْرِتَك، الأسانْسير بِيوقَف بِنُصّ الطّابِق أَحْيانًا، ومَرّة خِفْنا نعْلق جُوّاه.",
+                "arArabeezy": "kman 7drtk, elasansyr bywqf bns eltabq a7yana, wmra khfna n3lq jwah.",
                 "en": "Also sir, the elevator sometimes stops between floors, and once we were afraid we’d get stuck inside."
             },
             {
                 "speaker": "Landlord",
                 "ar": "عارِف، العُمْارُه قَديم شْوَي، بَس في شِرْكَة صِيانَة حَتِجي هالأُسْبوع تِصَلِّحُه.",
+                "arArabeezy": "3arf, el3marh qdym shwy, bs fy shrka syana 7tjy halasbw3 tsl7h.",
                 "en": "I know, it’s a bit old, but a maintenance company is coming this week to fix it."
             },
             {
                 "speaker": "Rami",
                 "ar": "مِنِيح كْثير، شُكْرًا عَالاِهْتِمام.",
+                "arArabeezy": "mny7 kthyr, shkra 3alahtmam.",
                 "en": "That’s very good, thank you for the attention."
             },
             {
                 "speaker": "Landlord",
                 "ar": "إذا في أيّ مَشْكِلَة تانيِة، بَعْتِلِّي رِسالَة أَو اِتِّصِل فيّي مباشرة.",
+                "arArabeezy": "idha fy ay mshkla tanya, b3tly rsala aw atsl fyy mbashra.",
                 "en": "If there is any other problem, send me a message or call me immediately."
             },
             {
                 "speaker": "Rami",
                 "ar": "أَكِيد، مَع السَّلامَة.",
+                "arArabeezy": "akyd, m3 elslama.",
                 "en": "Of course, goodbye."
             },
             {
                 "speaker": "Khaled",
                 "ar": "طَيِّب، شُو حَكالَك صاحِب البَيْت؟",
+                "arArabeezy": "tyb, shw 7kalk sa7b elbyt?",
                 "en": "Okay, what did the landlord tell you?"
             },
             {
                 "speaker": "Rami",
                 "ar": "قال بَبْعَت سَبّاك لِلْمَغْسَلِة والحَنَفِيّة، وبَجي هُوّ يِشوف الكَهْرَبا، وَالأسانْسير حَيِصَلِّحوه هالأُسْبوع.",
+                "arArabeezy": "qal bb3t sbak lelmghsla wel7nfya, wbjy hw yshwf elkhrba, welasansyr 7ysl7wh halasbw3.",
                 "en": "He said he’ll send a plumber for the sink and tap, and he’ll come himself to check the electricity, and the elevator will be fixed this week."
             },
             {
                 "speaker": "Khaled",
                 "ar": "مْنيح. أَحْسَن إِنَّك تِكْتِب كُل المَشاكِل عَوَرَقَة، حَتى ما تِنْسى شِي.",
+                "arArabeezy": "mny7. a7sn ink tktb kl elmshakl 3wrqa, 7ta ma tnsa shy.",
                 "en": "Good. It’s better if you write all the problems on a paper so you don’t forget anything."
             },
             {
                 "speaker": "Rami",
                 "ar": "صَح، وعَندي عَقْد الإيجار مَكْتوب فيه إنّو هُمَّ مَسْؤولين يِصَلِّحوا الأَشْيَا الخَرْبانِة.",
+                "arArabeezy": "s7, w3ndy 3qd eliyjar mktwb fyh inw hm mswwlyn ysl7wa elashya elkhrbana.",
                 "en": "Right, and in my rental contract it’s written that they’re responsible for fixing broken things."
             },
             {
                 "speaker": "Khaled",
                 "ar": "إذا ما رَدّوا بَعْدين، مُمْكِن تِقَدِّم شَكْوَى لِلْمَكْتَب تبَع الإيجار.",
+                "arArabeezy": "idha ma rdwa b3dyn, mmkn tqdm shkwa lelmktb tb3 eliyjar.",
                 "en": "If they don’t respond later, you can file a complaint at the rental office."
             },
             {
                 "speaker": "Rami",
                 "ar": "إن شاء الله ما نوصل لهالمرحلة، بس هلّق صرت حاسس براحة أكتر بخصوص الشقة بعد الحكي.",
+                "arArabeezy": "in sha ellh ma nwsl lhalmr7la, bs hlq srt 7ass bra7a aktr bkhsws elshqa b3d el7ky.",
                 "en": "Inshallah we don’t reach that stage, but now I feel more comfortable about the apartment after talking."
             }
         ]
@@ -666,57 +749,162 @@ export const lesson = {
     // ====================================
     // GRAMMAR
     // ====================================
-    grammar: [
+
+  grammar: [
         {
-            id: "fi_mushkileh_pattern",
-            title: "Using «فِي مُشْكِلَة فِي…» for apartment problems",
+            id: "there_is",
+            title: "There is / There isn’t (في / ما في)",
+            short: "Use في to say something exists.",
             description:
-                "A very simple and useful pattern for problems:\n\n" +
-                "• فِي مُشْكِلَة فِي الْمَيّ. = There is a problem with the water.\n" +
-                "• فِي مُشْكِلَة فِي الضَّوّ. = There is a problem with the light.\n" +
-                "• فِي مُشْكِلَة فِي البَلكُون. = There is a problem with the balcony.\n\n" +
-                "You can add time:\n" +
-                "• فِي مُشْكِلَة فِي الإِنْتَرْنِت مِن امْبَارِح. = There has been a problem with the internet since yesterday.",
+                `In spoken Arabic, في means “there is/are.”
+For negation, use ما في.
+
+في = there is, ما في = there isn’t.`,
+            table: {
+                title: "Existence Patterns",
+                headers: ["Arabic", "Arabeezy", "English", "Usage Note"],
+                rows: [
+                    ["في + اسم", "fi + noun", "there is", "Existence"],
+                    ["ما في + اسم", "ma fi + noun", "there isn’t", "Negation"],
+                    ["في + رقم + اسم", "fi + number + noun", "there are", "Quantity"],
+                    ["ما في ولا + اسم", "ma fi wala + noun", "there isn’t any", "Emphasis"]
+                ]
+            },
+            examples: [
+                { ar: "في شباك كبير", arabeezy: "fi shubbaak kbeer", en: "There is a big window." },
+                { ar: "ما في مي", arabeezy: "ma fi may", en: "There isn’t water." },
+                { ar: "في غرفتين", arabeezy: "fi ghorfteen", en: "There are two rooms." },
+                { ar: "ما في ولا كرسي", arabeezy: "ma fi wala kursi", en: "There isn’t any chair." },
+                { ar: "في مطبخ صغير", arabeezy: "fi maTba5 zghir", en: "There is a small kitchen." }
+            ],
+            teacherNotes:
+                `Spoken uses في / ما في more than MSA يوجد/لا يوجد.
+Keep it practical with home items.
+Avoid formal structures early.
+Use negative forms often.`,
+            commonMistakes: [
+                "Using يوجد in spoken",
+                "Forgetting ما in negation",
+                "Placing في after the noun"
+            ],
+            functionalUse: "Use this to describe what exists or doesn’t exist in a place."
         },
         {
-            id: "ma_bishtghil_pattern",
-            title: "«مَا بِشْتَغِل» – saying something doesn’t work",
+            id: "prepositions_simple",
+            title: "Prepositions (في، على، من، جنب، فوق)",
+            short: "Use prepositions to show place and position.",
             description:
-                "The chunk «مَا بِشْتَغِل» is used for any device or system:\n\n" +
-                "• الضَّوّ مَا بِشْتَغِل. = The light doesn’t work.\n" +
-                "• السِّخَّان مَا بِشْتَغِل. = The heater doesn’t work.\n" +
-                "• الإِنْتَرْنِت مَا بِشْتَغِل مْنِيح. = The internet doesn’t work well.\n\n" +
-                "You don’t need a complicated structure – this simple chunk is enough to make people understand you.",
-        },
-        {
-            id: "maksoor_vs_bitzabbET",
-            title: "«مَكْسُور» vs «بِزَبِّط» – broken vs fixed",
-            description:
-                "Two important words for talking to a landlord or technician:\n\n" +
-                "• …مَكْسُور = … is broken (adjective)\n" +
-                "  – الشُّبَّاك مَكْسُور. = The window is broken.\n" +
-                "  – البَاب مَكْسُور. = The door is broken.\n\n" +
-                "• بِزَبِّط = he fixes (verb)\n" +
-                "  – حَدَا حَيِزَبِّط الْمُشْكِلَة. = Someone will fix the problem.\n" +
-                "  – مُمْكِن تِزَبِّط الضَّوّ؟ = Can you fix the light?\n\n" +
-                "You can combine them in one short story:\n" +
-                "«البَاب مَكْسُور، وَصَاحِب الْبَيْت حَكَى إِنُّه حَيِزَبِّط الْأُسْبُوع الْجَاي.»",
-        },
-        {
-            id: "polite_complaints",
-            title: "Polite complaints with «صَبَاح الْخِير» & «لَوْ سَمَحْت»",
-            description:
-                "When complaining, short polite chunks make a big difference:\n\n" +
-                "• صَبَاح الْخِير، فِي مُشْكِلَة فِي… = Good morning, there is a problem with…\n" +
-                "• لَوْ سَمَحْت، مُمْكِن حَدَا يِجِي الْيَوْم؟ = Please, can someone come today?\n" +
-                "• مَا بَدِّي أُزْعِل حَدَا، بَسّ… = I don’t want to upset anyone, but…\n\n" +
-                "These phrases help you complain clearly but still sound polite and friendly.",
-        },
+                `Prepositions show where something is.
+In spoken Arabic, we use very common prepositions for location.
+
+Focus on meaning, not case endings.`,
+            table: {
+                title: "Common Prepositions",
+                headers: ["Arabic", "Arabeezy", "English", "Usage"],
+                rows: [
+                    ["في البيت", "fi el-beit", "in the house", "Location"],
+                    ["على الطاولة", "3ala et-Taawle", "on the table", "Surface"],
+                    ["من الغرفة", "min el-ghorfe", "from the room", "Origin"],
+                    ["جنب الباب", "janb el-baab", "next to the door", "Position"],
+                    ["فوق", "foog", "above", "Position"]
+                ]
+            },
+            examples: [
+                { ar: "الكرسي جنب الباب", arabeezy: "el-kursi janb el-baab", en: "The chair is next to the door." },
+                { ar: "السرير في الغرفة", arabeezy: "es-sreer fi el-ghorfe", en: "The bed is in the room." },
+                { ar: "الشنطة عالطاولة", arabeezy: "esh-shanTa 3al-Taawle", en: "The bag is on the table." },
+                { ar: "الضو فوق", arabeezy: "eD-Daw foog", en: "The light is above." },
+                { ar: "أنا من رام الله", arabeezy: "ana min Ramallah", en: "I’m from Ramallah." }
+            ],
+            teacherNotes:
+                `MSA teaches مجرور after prepositions; spoken doesn’t mark it.
+Use everyday home objects.
+Repeat short location sentences.
+Keep prepositions minimal.`,
+            commonMistakes: [
+                "Adding case endings in speech",
+                "Mixing على and في",
+                "Using formal لدى instead of عند"
+            ],
+            functionalUse: "Use this to describe rooms, furniture, and locations."
+        }
     ],
+
+
 
     // ====================================
     // PRACTICE
     // ====================================
+    microChecks: {
+        enabled: true,
+        every: 5,
+        items: [
+            {
+                id: "mc_match_1",
+                type: "match",
+                prompt: "Match the English word to Arabic: apartment / flat",
+                options: ["شِقّة", "عِمارَة", "طابِق", "دَرَج / سِلِّم", "باب العِمارَة"],
+                correct: "شِقّة",
+            },
+            {
+                id: "mc_complete_2",
+                type: "complete",
+                prompt: "Complete the Arabic sentence for: The apartment has one bedroom.\nالشِّقّة فيها ___ واحْدِة.",
+                options: ["غُرْفِة نَوْم", "صالون", "مَطْبَخ", "حَمّام", "بَلكون / شُرْفَة"],
+                correct: "غُرْفِة نَوْم",
+            },
+            {
+                id: "mc_reorder_3",
+                type: "reorder",
+                prompt: "Reorder the Arabic words to match: Our neighbors are nice but sometimes loud.",
+                options: ["جيرانّا", "طَيِّبين", "بَس", "صَوْتهم", "عالي", "أَحْيانا"],
+                correct: ["جيرانّا", "طَيِّبين", "بَس", "صَوْتهم", "عالي", "أَحْيانا"],
+            },
+            {
+                id: "mc_choose_4",
+                type: "choose",
+                prompt: "Choose the correct Arabic word for: key",
+                options: ["مِفْتاح", "باب", "شُبّاك", "مَيّ", "كَهْرَبا"],
+                correct: "مِفْتاح",
+            },
+            {
+                id: "mc_match_5",
+                type: "match",
+                prompt: "Match the English word to Arabic: light",
+                options: ["ضَوّ", "غَسّالِة", "تَلّاجَة", "غَاز", "فُرْن"],
+                correct: "ضَوّ",
+            },
+            {
+                id: "mc_complete_6",
+                type: "complete",
+                prompt: "Complete the Arabic sentence for: The AC turns off when we turn on the washing machine.\nال___ بِطَفّي لَمّا نِشَغِّل غَسّالِة.",
+                options: ["سَخّان مَيّ", "مِكيّف", "مَغْسَلِة", "حَنَفِيّة", "بنقط مَيّ"],
+                correct: "مِكيّف",
+            },
+            {
+                id: "mc_reorder_7",
+                type: "reorder",
+                prompt: "Reorder the Arabic words to match: The elevator sometimes stops between floors.",
+                options: ["المِصْعَد", "بْوِقَّف", "بِنُصّ", "الطّابِق", "أَحْيانًا"],
+                correct: ["المِصْعَد", "بْوِقَّف", "بِنُصّ", "الطّابِق", "أَحْيانًا"],
+            },
+            {
+                id: "mc_choose_8",
+                type: "choose",
+                prompt: "Choose the correct Arabic word for: I rent (an apartment)",
+                options: ["بَسْتَأْجِر", "بَدْفَع الإيجار", "في مُشْكِلَة في...", "بَتْواصَل مَع...", "عَقْد إيجار"],
+                correct: "بَسْتَأْجِر",
+            },
+            {
+                id: "mc_match_9",
+                type: "match",
+                prompt: "Match the English word to Arabic: building guard / caretaker",
+                options: ["حارِس العِمارَة", "رُطوبَة", "تِدْفِئَة", "سَكَن جْديد", "مَشْحون"],
+                correct: "حارِس العِمارَة",
+            },
+        ],
+    },
+
     practice: {
         quiz: [
             {
@@ -775,6 +963,14 @@ export const lesson = {
             "Role-play 1: Viewing an apartment. Student A is the landlord; Student B is the new tenant. They talk about number of rooms, balcony, rent, electricity, water, and internet. The tenant asks: «فِي كَهْرَبَا كْوَيِّس؟» «وَقَدِّيش الإِيجَار؟».",
             "Role-play 2: Calling the landlord about a problem. Student A calls Student B and explains that there is a problem with water, electricity, or a broken window using chunks like «فِي مُشْكِلَة فِي…», «…مَا بِشْتَغِل», «التَّسَرُّب زَاد». The landlord promises to send someone.",
             "Role-play 3: Talking to a noisy neighbour. Student A is the neighbour; Student B politely complains about noise using «صَبَاح / مَسَا الْخِير», «بِصِرَاحَة فِي ضَجَّة…», «مَا بَدِّي أُزْعِل حَدَا، بَسّ…». Then they agree on a solution.",
+        ],
+        translation: [
+            { id: "apt_t1", type: "enToAr", textEn: "The water is not working.", textAr: "المي مش شغالة." },
+            { id: "apt_t2", type: "arToEn", textEn: "There is a problem with the heater.", textAr: "في مشكلة بالدفاية." },
+            { id: "apt_t3", type: "enToAr", textEn: "Can you fix it today?", textAr: "بتقدر تصلّحها اليوم؟" },
+            { id: "apt_t4", type: "arToEn", textEn: "The room is noisy.", textAr: "الغرفة مزعجة." },
+            { id: "apt_t5", type: "enToAr", textEn: "I need a new apartment.", textAr: "بدي شقة جديدة." },
+            { id: "apt_t6", type: "arToEn", textEn: "The electricity went out.", textAr: "الكهربا قطعت." }
         ],
     },
 
