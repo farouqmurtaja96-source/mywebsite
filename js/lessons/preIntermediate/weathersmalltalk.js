@@ -5,11 +5,11 @@ export const lesson = {
     meta: {
         level: "Pre-Intermediate",
         unit: "Weather & Small Talk",
-        lessonTitle: "Unit 10 – Weather & Small Talk",
+        lessonTitle: "Unit 9 – Weather & Small Talk",
     },
 
     overview: {
-        title: "Unit 10 – Weather & Small Talk",
+        title: "Unit 9 – Weather & Small Talk",
         description:
             "In this unit, students learn how to talk about the weather in the present, past, and future, and how to use weather as a natural way to start friendly small talk in Palestinian Arabic.",
         goals: [
@@ -36,7 +36,7 @@ export const lesson = {
                 exampleAr: "اليوم الجَوّ حِلُو.",
                 exampleArabeezy: "elywm eljw 7lw.",
                 exampleEn: "The weather is nice today.",
-},
+            },
 
             {
                 id: "bared",
@@ -47,7 +47,7 @@ export const lesson = {
                 exampleAr: "فِي بَرْد قَوِي بِاللَّيْل.",
                 exampleArabeezy: "fy brd qwy bellyl.",
                 exampleEn: "It’s very cold at night.",
-},
+            },
             {
                 id: "shawb",
                 ar: "شُوب",
@@ -57,7 +57,7 @@ export const lesson = {
                 exampleAr: "الدُّنْيا شُوب هالأَيام.",
                 exampleArabeezy: "eldnya shwb halayam.",
                 exampleEn: "It’s really hot these days.",
-},
+            },
             {
                 id: "daafi",
                 ar: "دَافِي",
@@ -67,7 +67,7 @@ export const lesson = {
                 exampleAr: "الجَوّ دَافِي وَمُرِيح اليوم.",
                 exampleArabeezy: "eljw dafy wmry7 elywm.",
                 exampleEn: "The weather is warm and comfortable today.",
-},
+            },
             {
                 id: "mureeh",
                 ar: "مُرِيح",
@@ -77,7 +77,7 @@ export const lesson = {
                 exampleAr: "الجَوّ مُرِيح، مْناسِب لِلْطِّلْعَة.",
                 exampleArabeezy: "eljw mry7, mnasb leltl3a.",
                 exampleEn: "The weather is comfortable, good for going out.",
-},
+            },
             {
                 id: "rtoubeh",
                 ar: "رُطُوبَة",
@@ -87,7 +87,7 @@ export const lesson = {
                 exampleAr: "الرطوبة بالصيف بتكون عالية كتير.",
                 exampleArabeezy: "elrtwba belsyf btkwn 3alya ktyr.",
                 exampleEn: "The humidity is extreme in summer.",
-},
+            },
 
             // ===== SUN / CLOUD / RAIN =====
             {
@@ -99,7 +99,7 @@ export const lesson = {
                 exampleAr: "الشمس قويّة، لابس نضّارة شمس؟",
                 exampleArabeezy: "elshms qwya, labs ndara shms?",
                 exampleEn: "The sun is strong, are you wearing sunglasses?",
-},
+            },
             {
                 id: "mshammes",
                 ar: "مْشَمَّس",
@@ -109,7 +109,7 @@ export const lesson = {
                 exampleAr: "بكرا الجو مشمس، نطلع نتمشّى؟",
                 exampleArabeezy: "bkra eljw mshms, ntl3 ntmsha?",
                 exampleEn: "Tomorrow is sunny, shall we go for a walk?",
-},
+            },
             {
                 id: "ghem",
                 ar: "غَيْم",
@@ -119,7 +119,7 @@ export const lesson = {
                 exampleAr: "في غَيْم كْتير بالسَّما.",
                 exampleArabeezy: "fy ghym ktyr belsma.",
                 exampleEn: "There are a lot of clouds in the sky.",
-},
+            },
             {
                 id: "mghayyam",
                 ar: "مْغَيَّم",
@@ -129,7 +129,7 @@ export const lesson = {
                 exampleAr: "السَّما مْغَيَّمَة اليوم.",
                 exampleArabeezy: "elsma mghyma elywm.",
                 exampleEn: "The sky is cloudy today.",
-},
+            },
             {
                 id: "matar",
                 ar: "مَطَر",
@@ -139,7 +139,7 @@ export const lesson = {
                 exampleAr: "أَحْلَى شِي لَمّا يِنْزِل مَطَر.",
                 exampleArabeezy: "a7la shy lma ynzl mtr.",
                 exampleEn: "The nicest thing is when it rains.",
-},
+            },
             {
                 id: "btemTor",
                 ar: "بْتِمْطِر",
@@ -149,7 +149,7 @@ export const lesson = {
                 exampleAr: "بَرّا بْتِمْطِر، خُد شَمْسِيّة.",
                 exampleArabeezy: "bra btmtr, khd shmsya.",
                 exampleEn: "It’s raining outside, take an umbrella.",
-},
+            },
 
             {
                 id: "ri7",
@@ -160,7 +160,7 @@ export const lesson = {
                 exampleAr: "الهوا قوي، سكّر الشباك.",
                 exampleArabeezy: "elhwa qwy, skr elshbak.",
                 exampleEn: "The wind is strong, close the window.",
-},
+            },
             {
                 id: "3asefeh",
                 ar: "عَاصْفَة",
@@ -170,7 +170,7 @@ export const lesson = {
                 exampleAr: "اللَّيْلِة في عَاصْفَة، مَنْضَلّ فِي الْبَيْت.",
                 exampleArabeezy: "ellyla fy 3asfa, mndl fy elbyt.",
                 exampleEn: "Tonight there’s a storm, we’ll stay home.",
-},
+            },
             {
                 id: "talj",
                 ar: "تَلْج",
@@ -180,7 +180,7 @@ export const lesson = {
                 exampleAr: "نَزَل تَلْج بِاللَّيْل.",
                 exampleArabeezy: "nzl tlj bellyl.",
                 exampleEn: "It snowed last night.",
-},
+            },
             {
                 id: "dababb",
                 ar: "ضَباب",
@@ -190,7 +190,7 @@ export const lesson = {
                 exampleAr: "في ضباب عالطريق، سوق على مهلك.",
                 exampleArabeezy: "fy dbab 3altryq, swq 3la mhlk.",
                 exampleEn: "There’s fog on the road, drive slowly.",
-},
+            },
 
             // ===== TEMPERATURE & SEASONS =====
             {
@@ -202,7 +202,7 @@ export const lesson = {
                 exampleAr: "دَرَجَة الحَرارَة اليوم حَوالَي عِشْرين.",
                 exampleArabeezy: "drja el7rara elywm 7waly 3shryn.",
                 exampleEn: "The temperature today is around twenty.",
-},
+            },
             {
                 id: "ta7t_el_sefr",
                 ar: "تَحْت الصِّفِر",
@@ -212,7 +212,7 @@ export const lesson = {
                 exampleAr: "بِهالْبَلَد الحَرارَة تَحْت الصِّفِر بِالشِّتَا.",
                 exampleArabeezy: "bhalbld el7rara t7t elsfr belshta.",
                 exampleEn: "In this country the temperature is below zero in winter.",
-},
+            },
             {
                 id: "abrad_min",
                 ar: "أَبْرَد مِن...",
@@ -222,7 +222,7 @@ export const lesson = {
                 exampleAr: "اليوم أَبْرَد مِن امْبارِح.",
                 exampleArabeezy: "elywm abrd mn ambar7.",
                 exampleEn: "Today is colder than yesterday.",
-},
+            },
             {
                 id: "fasl",
                 ar: "فَصِل",
@@ -232,7 +232,7 @@ export const lesson = {
                 exampleAr: "شُو أَحْلَى فَصِل عِنْدَك؟",
                 exampleArabeezy: "shw a7la fsl 3ndk?",
                 exampleEn: "What’s your favourite season?",
-},
+            },
             {
                 id: "seif",
                 ar: "صَيْف",
@@ -242,7 +242,7 @@ export const lesson = {
                 exampleAr: "مَا بَحِبّ الصَّيْف، الشُّوب بِجَنِّن.",
                 exampleArabeezy: "ma b7b elsyf, elshwb bjnn.",
                 exampleEn: "I don’t like summer, the heat is crazy.",
-},
+            },
             {
                 id: "sheta",
                 ar: "شِتَا",
@@ -252,7 +252,7 @@ export const lesson = {
                 exampleAr: "بِالشِّتَا بَلْبِس أَواعي ثَقِيلَة.",
                 exampleArabeezy: "belshta blbs awa3y thqyla.",
                 exampleEn: "In winter I wear heavy clothes.",
-},
+            },
             {
                 id: "rabee3",
                 ar: "رَبِيع",
@@ -262,7 +262,7 @@ export const lesson = {
                 exampleAr: "الرَّبِيع فَصِل مُناسِب لِلْمَشِي.",
                 exampleArabeezy: "elrby3 fsl mnasb lelmshy.",
                 exampleEn: "Spring is a good season for walking.",
-},
+            },
             {
                 id: "kharif",
                 ar: "خَرِيف",
@@ -272,7 +272,7 @@ export const lesson = {
                 exampleAr: "بِالخَرِيف الوَرَق بْيُوقَع مِن الشَّجَر.",
                 exampleArabeezy: "belkhryf elwrq bywq3 mn elshjr.",
                 exampleEn: "In autumn the leaves fall from the trees.",
-},
+            },
 
             // ===== CLOTHES & DAILY TALK =====
             {
@@ -284,7 +284,7 @@ export const lesson = {
                 exampleAr: "لا تِنْسى الجاكِت، بَرّا بَرْد.",
                 exampleArabeezy: "la tnsa eljakt, bra brd.",
                 exampleEn: "Don’t forget your jacket, it’s cold outside.",
-},
+            },
             {
                 id: "awa3i_2teeleh",
                 ar: "أَواعِي ثَقِيلَة",
@@ -294,7 +294,7 @@ export const lesson = {
                 exampleAr: "طَلَّعْنا الأَواعِي الثَّقِيلَة لِلشِّتَا.",
                 exampleArabeezy: "tl3na elawa3y elthqyla lelshta.",
                 exampleEn: "We took out the heavy clothes for winter.",
-},
+            },
 
             // ===== SMALL TALK CHUNKS =====
             {
@@ -306,7 +306,7 @@ export const lesson = {
                 exampleAr: "كِيف الجَوّ عِنْدَك اليَوْم؟",
                 exampleArabeezy: "kyf eljw 3ndk elywm?",
                 exampleEn: "How’s the weather where you are today?",
-},
+            },
             {
                 id: "el_jaww_mnasib",
                 ar: "الجَوّ مْناسِب لِلْطِّلْعَة.",
@@ -316,7 +316,7 @@ export const lesson = {
                 exampleAr: "اليوم الجَوّ مْناسِب لِلْطِّلْعَة عَالبَحِر.",
                 exampleArabeezy: "elywm eljw mnasb leltl3a 3alb7r.",
                 exampleEn: "Today the weather is good for going out to the beach.",
-},
+            },
             {
                 id: "ma_bastahmel_el_shob",
                 ar: "مَا بَسْتَحْمِل الشُّوب.",
@@ -326,7 +326,7 @@ export const lesson = {
                 exampleAr: "صَرَاحَةً، مَا بَسْتَحْمِل الشُّوب.",
                 exampleArabeezy: "sra7a, ma bst7ml elshwb.",
                 exampleEn: "Honestly, I can’t stand the heat.",
-},
+            },
             {
                 id: "b7eb_el_matar",
                 ar: "بَحِبّ المَطَر.",
@@ -336,7 +336,7 @@ export const lesson = {
                 exampleAr: "بَحِبّ المَطَر، بْحِسّ الجَوّ أَهْدَى.",
                 exampleArabeezy: "b7b elmtr, b7s eljw ahda.",
                 exampleEn: "I love the rain; I feel the weather is calmer.",
-},
+            },
 
         ],
 
@@ -350,7 +350,7 @@ export const lesson = {
                 exampleAr: "بِالْجَبَل الهَوا ناشِف أَكْثَر.",
                 exampleArabeezy: "beljbl elhwa nashf akthr.",
                 exampleEn: "In the mountains the air is drier.",
-},
+            },
             {
                 id: "hawa_m5noq",
                 ar: "هَوا مْخْنُوق",
@@ -360,7 +360,7 @@ export const lesson = {
                 exampleAr: "الجَوّ مْخْنُوق جُوّا، اِفْتَح الشُّبّاك شْوَيّ.",
                 exampleArabeezy: "eljw mkhnwq jwa, aft7 elshbak shwy.",
                 exampleEn: "The air inside feels stuffy, open the window a bit.",
-},
+            },
             {
                 id: "nashret_ta2s",
                 ar: "نَشْرَة طَقْس",
@@ -370,7 +370,7 @@ export const lesson = {
                 exampleAr: "شُفْت نَشْرَة الطَّقْس قَبِل ما تْسافِرِي؟",
                 exampleArabeezy: "shft nshra eltqs qbl ma tsafry?",
                 exampleEn: "Did you check the weather report before you travelled?",
-},
+            },
 
         ],
     }
@@ -517,7 +517,7 @@ export const lesson = {
     // GRAMMAR – NEW FOCUS
     // ====================================
 
-  grammar: [
+    grammar: [
         {
             id: "comparative",
             title: "Comparative (أكثر / أقل / أحسن)",

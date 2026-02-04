@@ -5,10 +5,10 @@ export const lesson = {
     meta: {
         level: "Intermediate",
         unit: "Complaints",
-        lessonTitle: "Unit 2 – Making Complaints Politely",
+        lessonTitle: "Unit 12 – Making Complaints Politely",
     },
     overview: {
-        title: "Unit 2 – Complaints",
+        title: "Unit 12 – Complaints",
         description:
             "In this lesson, students learn how to complain politely but clearly about problems (services, noise, delays), ask for a solution, and react to responses in Palestinian Arabic.",
         goals: [
@@ -31,7 +31,7 @@ export const lesson = {
                 exampleAr: "بِفَكِّر أَقَدِّم شَكْوَى رَسْمِيّة.",
                 exampleArabeezy: "bfkr aqdm shkwa rsmya.",
                 exampleEn: "I’m thinking of filing an official complaint.",
-},
+            },
             {
                 id: "co_core_2",
                 ar: "يِشْتِكي",
@@ -41,7 +41,7 @@ export const lesson = {
                 exampleAr: "ما بِحِبّ أِشْتِكي، بَس في مَشْكِلة جَدِّيّة.",
                 exampleArabeezy: "ma b7b ashtky, bs fy mshkla jdya.",
                 exampleEn: "I don’t like to complain, but there is a serious problem.",
-},
+            },
             {
                 id: "co_core_3",
                 ar: "مَشْكِلة",
@@ -51,7 +51,7 @@ export const lesson = {
                 exampleAr: "في مَشْكِلة بِالمَوَاصَلات.",
                 exampleArabeezy: "fy mshkla belmwaslat.",
                 exampleEn: "There is a problem with the transportation.",
-},
+            },
             {
                 id: "co_core_4",
                 ar: "مُزْعِج",
@@ -61,7 +61,7 @@ export const lesson = {
                 exampleAr: "الصَّوْت مُزْعِج كْثير.",
                 exampleArabeezy: "elswt mz3j kthyr.",
                 exampleEn: "The noise is very annoying.",
-},
+            },
             {
                 id: "co_core_5",
                 ar: "مِش مَعْقول",
@@ -71,7 +71,7 @@ export const lesson = {
                 exampleAr: "مِش مَعْقول كُل يوم نِسْتَنّى ساعة.",
                 exampleArabeezy: "msh m3qwl kl ywm nstna sa3a.",
                 exampleEn: "It’s not acceptable to wait an hour every day.",
-},
+            },
             {
                 id: "co_core_6",
                 ar: "عنْجَد",
@@ -81,7 +81,7 @@ export const lesson = {
                 exampleAr: "عنْجَد الوَضْع صار مُزْعِج.",
                 exampleArabeezy: "3njd elwd3 sar mz3j.",
                 exampleEn: "Seriously, the situation has become annoying.",
-},
+            },
             {
                 id: "co_core_7",
                 ar: "يِنْرْفِز",
@@ -91,7 +91,7 @@ export const lesson = {
                 exampleAr: "التَّأْخير بْيِنْرْفِزني.",
                 exampleArabeezy: "eltakhyr bynrfzny.",
                 exampleEn: "The delay makes me nervous.",
-},
+            },
             {
                 id: "co_core_8",
                 ar: "يِتْأَخَّر",
@@ -100,7 +100,7 @@ export const lesson = {
                 exampleAr: "الباص دايْمًا بْيِتْأَخَّر.",
                 exampleArabeezy: "elbas dayma bytakhr.",
                 exampleEn: "The bus is always late.",
-},
+            },
             {
                 id: "co_core_9",
                 ar: "بِضِلّ",
@@ -110,7 +110,7 @@ export const lesson = {
                 exampleAr: "المَشْكِلة بِتضِلّ تِتْكَرَّر.",
                 exampleArabeezy: "elmshkla btdl ttkrr.",
                 exampleEn: "The problem keeps repeating.",
-},
+            },
             {
                 id: "co_core_10",
                 ar: "مِن حَقّي",
@@ -120,7 +120,7 @@ export const lesson = {
                 exampleAr: "مِن حَقّي أوْصَل عَالوَقْت.",
                 exampleArabeezy: "mn 7qy awsl 3alwqt.",
                 exampleEn: "It’s my right to arrive on time.",
-},
+            },
             {
                 id: "co_core_11",
                 ar: "خِدْمَة",
@@ -129,7 +129,7 @@ export const lesson = {
                 exampleAr: "الخدمة هون مش بالمستوى المطلوب.",
                 exampleArabeezy: "elkhdma hwn msh belmstwa elmtlwb.",
                 exampleEn: "The service here is not at the right level.",
-},
+            },
             {
                 id: "co_core_12",
                 ar: "مُسْتَوى",
@@ -138,7 +138,7 @@ export const lesson = {
                 exampleAr: "مُسْتَوى النَّظافَة قليل.",
                 exampleArabeezy: "mstwa elnzafa qlyl.",
                 exampleEn: "The level of cleanliness is low.",
-},
+            },
             {
                 id: "co_core_13",
                 ar: "مَسؤول",
@@ -148,7 +148,7 @@ export const lesson = {
                 exampleAr: "بَحِبّ أحْكي مَع المَسؤول لو سَمَحْت.",
                 exampleArabeezy: "b7b a7ky m3 elmswwl lw sm7t.",
                 exampleEn: "I’d like to speak to the person in charge, please.",
-},
+            },
             {
                 id: "co_core_14",
                 ar: "مُوَظَّف الاسْتِقْبال",
@@ -157,7 +157,7 @@ export const lesson = {
                 exampleAr: "حَكِيت مَع مُوَظَّف الاسْتِقْبال عَن المَشْكِلة.",
                 exampleArabeezy: "7kyt m3 mwzf elastqbal 3n elmshkla.",
                 exampleEn: "I spoke with the receptionist about the problem.",
-},
+            },
             {
                 id: "co_core_15",
                 ar: "يِعالِج المَشْكِلة",
@@ -166,7 +166,7 @@ export const lesson = {
                 exampleAr: "لازِم حدا يِعالِج المَشْكِلة بسرعة.",
                 exampleArabeezy: "lazm 7da y3alj elmshkla bsr3a.",
                 exampleEn: "Someone must handle the problem quickly.",
-},
+            },
             {
                 id: "co_core_16",
                 ar: "يِحِلّ المَشْكِلة",
@@ -175,7 +175,7 @@ export const lesson = {
                 exampleAr: "إن شاء الله تِحِلّوا المَشْكِلة قَرِيب.",
                 exampleArabeezy: "in sha ellh t7lwa elmshkla qryb.",
                 exampleEn: "Hopefully you will solve the problem soon.",
-},
+            },
             {
                 id: "co_core_17",
                 ar: "يِوَعِد",
@@ -184,7 +184,7 @@ export const lesson = {
                 exampleAr: "وَعَدُونا يِحِلّوا المَشْكِلة.",
                 exampleArabeezy: "w3dwna y7lwa elmshkla.",
                 exampleEn: "They promised us they would solve the problem.",
-},
+            },
             {
                 id: "co_core_18",
                 ar: "يِرُدّ",
@@ -193,7 +193,7 @@ export const lesson = {
                 exampleAr: "المَكْتَب ما رَدّ عَالشَّكْوَى.",
                 exampleArabeezy: "elmktb ma rd 3alshkwa.",
                 exampleEn: "The office didn’t respond to the complaint.",
-},
+            },
             {
                 id: "co_core_19",
                 ar: "يِعْتِذِر",
@@ -202,7 +202,7 @@ export const lesson = {
                 exampleAr: "المُوَظَّف اِعْتَذَر عَالتَّأْخير.",
                 exampleArabeezy: "elmwzf a3tdhr 3altakhyr.",
                 exampleEn: "The employee apologized for the delay.",
-},
+            },
             {
                 id: "co_core_20",
                 ar: "عُذْر",
@@ -211,7 +211,7 @@ export const lesson = {
                 exampleAr: "العُذْر مَش مَقْنِع.",
                 exampleArabeezy: "el3dhr msh mqn3.",
                 exampleEn: "The excuse is not convincing.",
-},
+            },
             {
                 id: "co_core_21",
                 ar: "مَقْنِع",
@@ -220,7 +220,7 @@ export const lesson = {
                 exampleAr: "التَّبْرير ما كان مَقْنِع.",
                 exampleArabeezy: "eltbryr ma kan mqn3.",
                 exampleEn: "The explanation wasn’t convincing.",
-},
+            },
             {
                 id: "co_core_22",
                 ar: "يِتْجاهَل",
@@ -229,7 +229,7 @@ export const lesson = {
                 exampleAr: "حاسَّة إنّهم عَم يِتْجاهَلوا المَشْكِلة.",
                 exampleArabeezy: "7asa inhm 3m ytjahlwa elmshkla.",
                 exampleEn: "I feel they are ignoring the problem.",
-},
+            },
             {
                 id: "co_core_23",
                 ar: "مِسْتَمِرّ",
@@ -238,7 +238,7 @@ export const lesson = {
                 exampleAr: "الصَّوْت المُزْعِج مِسْتَمِرّ لَحد هَلَّق.",
                 exampleArabeezy: "elswt elmz3j mstmr l7d hlq.",
                 exampleEn: "The annoying noise is still ongoing.",
-},
+            },
             {
                 id: "co_core_24",
                 ar: "تِكْرار",
@@ -247,7 +247,7 @@ export const lesson = {
                 exampleAr: "تِكْرار المَشْكِلة خَلّاني أِشْتِكي.",
                 exampleArabeezy: "tkrar elmshkla khlany ashtky.",
                 exampleEn: "The repetition of the problem made me complain.",
-},
+            },
             {
                 id: "co_core_25",
                 ar: "مَرَّة واحْدَة / أوَّل مَرّة",
@@ -256,7 +256,7 @@ export const lesson = {
                 exampleAr: "لو كانت مرّة وحدة ماشي الحال، بس هاي بتتكرّر.",
                 exampleArabeezy: "lw kant mra w7da mashy el7al, bs hay bttkrr.",
                 exampleEn: "If it were one time it’s fine, but this is repeated.",
-},
+            },
             {
                 id: "co_core_26",
                 ar: "مَع إحْتِرامي",
@@ -266,7 +266,7 @@ export const lesson = {
                 exampleAr: "مَع إحْتِرامي، الخِدْمَة هون ضَعيفَة.",
                 exampleArabeezy: "m3 i7tramy, elkhdma hwn d3yfa.",
                 exampleEn: "With all respect, the service here is weak.",
-},
+            },
             {
                 id: "co_core_27",
                 ar: "ما قَصْدي أِزَعِّل حَدا",
@@ -275,7 +275,7 @@ export const lesson = {
                 exampleAr: "ما قَصْدي أِزَعِّل حَدا بَس الوَضْع مِش مَقْبول.",
                 exampleArabeezy: "ma qsdy az3l 7da bs elwd3 msh mqbwl.",
                 exampleEn: "I don’t mean to upset anyone, but the situation is not acceptable.",
-},
+            },
             {
                 id: "co_core_28",
                 ar: "مُمْكِن تِعْمِلوا شِي؟",
@@ -285,7 +285,7 @@ export const lesson = {
                 exampleAr: "المَشْكِلة مِسْتَمِرّة، مُمْكِن تِعْمِلوا شِي؟",
                 exampleArabeezy: "elmshkla mstmra, mmkn t3mlwa shy?",
                 exampleEn: "The problem is ongoing, can you do something?",
-},
+            },
             {
                 id: "co_core_29",
                 ar: "بِتْمَنّى تِلْقوا حَلّ",
@@ -294,7 +294,7 @@ export const lesson = {
                 exampleAr: "بِتْمَنّى تِلْقوا حَلّ قَبْل الاسْبوع الجّاي.",
                 exampleArabeezy: "btmna tlqwa 7l qbl elasbw3 eljay.",
                 exampleEn: "I hope you find a solution before next week.",
-},
+            },
             {
                 id: "co_core_30",
                 ar: "ما إلِي خِلِق",
@@ -304,7 +304,7 @@ export const lesson = {
                 exampleAr: "بصراحة ما عندي طاقة أتعامل مع هالموضوع أكتر.",
                 exampleArabeezy: "bsra7a ma 3ndy taqa at3aml m3 halmwdw3 aktr.",
                 exampleEn: "Honestly I have no energy to deal with this any more.",
-},
+            },
             {
                 id: "co_core_31",
                 ar: "يِصْبِر",
@@ -313,7 +313,7 @@ export const lesson = {
                 exampleAr: "تحمّلنا شهر كامل، بس المشكلة لسه موجودة.",
                 exampleArabeezy: "t7mlna shhr kaml, bs elmshkla lsh mwjwda.",
                 exampleEn: "We were patient for a whole month but the problem is still there.",
-},
+            },
             {
                 id: "co_core_32",
                 ar: "يِشَكِّر",
@@ -322,7 +322,7 @@ export const lesson = {
                 exampleAr: "بِدّي أِشَكِّرَك عَالتَّجاوُب.",
                 exampleArabeezy: "bdy ashkrk 3altjawb.",
                 exampleEn: "I want to thank you for responding.",
-},
+            },
             {
                 id: "co_core_33",
                 ar: "يِتْفاهَم",
@@ -331,7 +331,7 @@ export const lesson = {
                 exampleAr: "مهم نتّفق على حلّ وسط.",
                 exampleArabeezy: "mhm ntfq 3la 7l wst.",
                 exampleEn: "It’s important that we agree on a middle solution.",
-},
+            },
             {
                 id: "co_core_34",
                 ar: "حَلّ وَسَط",
@@ -340,7 +340,7 @@ export const lesson = {
                 exampleAr: "مُمْكِن نِلاقِي حَلّ وَسَط يِرْضي الجِهْتَيْن.",
                 exampleArabeezy: "mmkn nlaqy 7l wst yrdy eljhtyn.",
                 exampleEn: "We can find a compromise that satisfies both sides.",
-},
+            },
             {
                 id: "co_core_35",
                 ar: "مُعامَلَة",
@@ -349,7 +349,7 @@ export const lesson = {
                 exampleAr: "مُعامَلَة المُوَظَّفين إِلَنا كانِت مُحْتَرَمَة.",
                 exampleArabeezy: "m3amla elmwzfyn ilna kant m7trma.",
                 exampleEn: "The way the employees treated us was respectful.",
-},
+            },
         ],
 
         extra: [
@@ -361,7 +361,7 @@ export const lesson = {
                 exampleAr: "في قِسْم شَكَاوِي بِالإِدارَة.",
                 exampleArabeezy: "fy qsm shkawy belidara.",
                 exampleEn: "There is a complaints department in the administration.",
-},
+            },
             {
                 id: "co_extra_2",
                 ar: "رَدّ رَسْمِي",
@@ -370,7 +370,7 @@ export const lesson = {
                 exampleAr: "اسْتَنّينا رَدّ رَسْمِي ومَا إجا.",
                 exampleArabeezy: "astnyna rd rsmy wma ija.",
                 exampleEn: "We waited for an official reply and it didn’t come.",
-},
+            },
             {
                 id: "co_extra_3",
                 ar: "حِجّة",
@@ -379,7 +379,7 @@ export const lesson = {
                 exampleAr: "حاسِّة إنّه هادا كُلّه حِجّة.",
                 exampleArabeezy: "7asa inh hada klh 7ja.",
                 exampleEn: "I feel like this is all just an excuse.",
-},
+            },
             {
                 id: "co_extra_4",
                 ar: "مُتابَعَة",
@@ -388,7 +388,7 @@ export const lesson = {
                 exampleAr: "بِدّنا مُتابَعَة عَالمَشْكِلة مِش بَس وَعْد.",
                 exampleArabeezy: "bdna mtab3a 3almshkla msh bs w3d.",
                 exampleEn: "We want follow-up on the problem, not just a promise.",
-},
+            },
             {
                 id: "co_extra_5",
                 ar: "تَعْويض",
@@ -397,7 +397,7 @@ export const lesson = {
                 exampleAr: "طَلَبْنا تَعْويض بَسِيط عَالخَسارَة.",
                 exampleArabeezy: "tlbna t3wyd bsyt 3alkhsara.",
                 exampleEn: "We asked for a small compensation for the loss.",
-},
+            },
         ],
     }
     ,
@@ -590,7 +590,7 @@ export const lesson = {
     }
     ,
 
-  grammar: [
+    grammar: [
         {
             id: "past_tense",
             title: "Past Tense (Simple Conjugation)",
@@ -648,7 +648,7 @@ Pattern:
                     ["ما حكاش", "ma 7akish", "He didn’t speak", "Male"],
                     ["ما كتبتش", "ma katabtish", "I didn’t write", "-t"],
                     ["ما سمعتش", "ma simi3tish", "I didn’t hear", "Complaint"],
-                    ["ما كانش", "ma kaansh", "There wasn’t", "Existence" ]
+                    ["ما كانش", "ma kaansh", "There wasn’t", "Existence"]
                 ]
             },
             examples: [

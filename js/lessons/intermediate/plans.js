@@ -5,11 +5,11 @@ export const lesson = {
     meta: {
         level: "Intermediate",
         unit: "Plans & Future",
-        lessonTitle: "Unit 12 – Plans & Future",
+        lessonTitle: "Unit 13 – Plans & Future",
     },
 
     overview: {
-        title: "Unit 12 – Plans & Future",
+        title: "Unit 13 – Plans & Future",
         description:
             "In this unit, students learn how to talk about future plans, intentions, schedules, and dreams in Palestinian Arabic, using patterns like ‘I’m going to’, ‘I want to’, ‘I’m planning to’, and common time expressions.",
         goals: [
@@ -37,7 +37,7 @@ export const lesson = {
                 exampleAr: "بَدّي أَدْرُس بُكْرَا بَعْد الحصة.",
                 exampleArabeezy: "bdy adrs bkra b3d el7sa.",
                 exampleEn: "I’m going to study tomorrow after the lesson.",
-},
+            },
             {
                 id: "ra7",
                 ar: "رَح",
@@ -48,7 +48,7 @@ export const lesson = {
                 exampleAr: "بُكْرَا رَح أُصْحَى بدري.",
                 exampleArabeezy: "bkra r7 as7a bdry.",
                 exampleEn: "Tomorrow I will wake up early.",
-},
+            },
             {
                 id: "nawi",
                 ar: "نَاوِي",
@@ -59,7 +59,7 @@ export const lesson = {
                 exampleAr: "أَنَا نَاوْيَ  أُكَمِّل دِرَاسَة عَرَبِي.",
                 exampleArabeezy: "ana nawy akml drasa 3rby.",
                 exampleEn: "I intend to continue studying Arabic.",
-},
+            },
             {
                 id: "mukhattat",
                 ar: "مخَطِّط",
@@ -70,7 +70,7 @@ export const lesson = {
                 exampleAr: "مخَطِّط إِنِّي أُسَافِر بَعْد سَنَة.",
                 exampleArabeezy: "mkhtt iny asafr b3d sna.",
                 exampleEn: "I’m planning to travel in a year.",
-},
+            },
             {
                 id: "7abeb",
                 ar: "حَابِب",
@@ -81,7 +81,7 @@ export const lesson = {
                 exampleAr: "حَابْبَ أَجَرِّب شِي جْدِيد هَالسَّنَة.",
                 exampleArabeezy: "7abb ajrb shy jdyd halsna.",
                 exampleEn: "I’d like to try something new this year.",
-},
+            },
             {
                 id: "lazem",
                 ar: "لَازِم",
@@ -92,7 +92,7 @@ export const lesson = {
                 exampleAr: "لَازِم أُخَلِّص الوَاجِب قَبْل الجمعة.",
                 exampleArabeezy: "lazm akhls elwajb qbl eljm3a.",
                 exampleEn: "I have to finish the homework before Friday.",
-},
+            },
 
             // ===== TIME EXPRESSIONS =====
             {
@@ -104,7 +104,7 @@ export const lesson = {
                 exampleAr: "اليَوْم مَا عِنْدِي خُطَط كْتِير.",
                 exampleArabeezy: "elywm ma 3ndy khtt ktyr.",
                 exampleEn: "I don’t have many plans today.",
-},
+            },
             {
                 id: "bukra",
                 ar: "بُكْرَا",
@@ -114,7 +114,7 @@ export const lesson = {
                 exampleAr: "بُكْرَا رَح أَقَابِل صَدِيقْتِي.",
                 exampleArabeezy: "bkra r7 aqabl sdyqty.",
                 exampleEn: "Tomorrow I will meet my friend.",
-},
+            },
             {
                 id: "ba3d_bukra",
                 ar: "بَعْد بُكْرَا",
@@ -124,7 +124,7 @@ export const lesson = {
                 exampleAr: "بَعْد بُكْرَا بَدّي أُرَتِّب غُرْفْتِي.",
                 exampleArabeezy: "b3d bkra bdy artb ghrfty.",
                 exampleEn: "The day after tomorrow I’m going to tidy my room.",
-},
+            },
             {
                 id: "hal_usbou3",
                 ar: "هَالْأُسْبُوع",
@@ -134,7 +134,7 @@ export const lesson = {
                 exampleAr: "هَالْأُسْبُوع عِنْدِي مِشَارِيع كْتِير.",
                 exampleArabeezy: "halasbw3 3ndy mshary3 ktyr.",
                 exampleEn: "This week I have many projects.",
-},
+            },
             {
                 id: "jاي_ousbou3",
                 ar: "الأُسْبُوع الجَّاي",
@@ -144,7 +144,7 @@ export const lesson = {
                 exampleAr: "الأُسْبُوع الجَّاي رَح نِبْدَى وَحْدَة جْدِيدَة.",
                 exampleArabeezy: "elasbw3 eljay r7 nbda w7da jdyda.",
                 exampleEn: "Next week we will start a new unit.",
-},
+            },
             {
                 id: "shahr_jاي",
                 ar: "الشَّهِر الجَّاي",
@@ -154,7 +154,7 @@ export const lesson = {
                 exampleAr: "الشَّهِر الجَّاي نَاوِي أَبْلِش رِيَاضَة.",
                 exampleArabeezy: "elshhr eljay nawy ablsh ryada.",
                 exampleEn: "Next month I intend to start doing exercise.",
-},
+            },
             {
                 id: "hal_saneh",
                 ar: "هَالسَّنَة",
@@ -164,7 +164,7 @@ export const lesson = {
                 exampleAr: "هَالسَّنَة حَابِب أُسَافِر مَرَّة وَاحْدَة عَالأَقَلّ.",
                 exampleArabeezy: "halsna 7abb asafr mra wa7da 3alaql.",
                 exampleEn: "This year I’d like to travel at least once.",
-},
+            },
             {
                 id: "saneh_jayyeh",
                 ar: "السَّنَة الجَّاي",
@@ -174,7 +174,7 @@ export const lesson = {
                 exampleAr: "السَّنَة الجَّاي مُخَطِّط أَكْمِّل مُسْتَوَى أَعْلَى.",
                 exampleArabeezy: "elsna eljay mkhtt akml mstwa a3la.",
                 exampleEn: "Next year I’m planning to complete a higher level.",
-},
+            },
             {
                 id: "ba3deen",
                 ar: "بَعْدِين",
@@ -184,7 +184,7 @@ export const lesson = {
                 exampleAr: "بَدّي أَدْرُس شْوَيّ، بَعْدِين أَتْفَرَّج عَلَى فِلْم.",
                 exampleArabeezy: "bdy adrs shwy, b3dyn atfrj 3la flm.",
                 exampleEn: "I’m going to study a bit, then watch a movie.",
-},
+            },
 
             // ===== TYPES OF PLANS =====
             {
@@ -196,7 +196,7 @@ export const lesson = {
                 exampleAr: "عِنْدِي مَشْرُوع كْبِير لِلنِّهَاية السَّنَة.",
                 exampleArabeezy: "3ndy mshrw3 kbyr lelnhaya elsna.",
                 exampleEn: "I have a big project for the end of the year.",
-},
+            },
 
             {
                 id: "safar",
@@ -207,7 +207,7 @@ export const lesson = {
                 exampleAr: "حَابِب أَخَطِّط لِسَفَر قَصِير فِي الصَّيْف.",
                 exampleArabeezy: "7abb akhtt lsfr qsyr fy elsyf.",
                 exampleEn: "I’d like to plan a short trip in summer.",
-},
+            },
             {
                 id: "i3tlah",
                 ar: "عُطْلَة",
@@ -217,7 +217,7 @@ export const lesson = {
                 exampleAr: "بِالعُطْلَة بَدّي أَرِيح وَأَنَام كْتِير.",
                 exampleArabeezy: "bel3tla bdy ary7 wanam ktyr.",
                 exampleEn: "In the holiday I’m going to rest and sleep a lot.",
-},
+            },
 
             // ===== ASKING ABOUT PLANS =====
             {
@@ -230,7 +230,7 @@ export const lesson = {
                 exampleAr: "شُو مُخَطَّطَاتَك لِهَالسَّنَة؟",
                 exampleArabeezy: "shw mkhttatk lhalsna?",
                 exampleEn: "What are your plans for this year?",
-},
+            },
             {
                 id: "shoo_baddak_t3mel",
                 ar: "شُو بَدَّك تِعْمِل بُكْرَا؟",
@@ -241,7 +241,7 @@ export const lesson = {
                 exampleAr: "شُو بَدِّك تِعْمْلِي بُكْرَا بَعْد الدَّرْس؟",
                 exampleArabeezy: "shw bdk t3mly bkra b3d eldrs?",
                 exampleEn: "What do you want to do tomorrow after the lesson?",
-},
+            },
             {
                 id: "3indak_khatta",
                 ar: "عِنْدَك خُطَّة؟",
@@ -251,7 +251,7 @@ export const lesson = {
                 exampleAr: "لِوِيكِينْد، عِنْدَك خُطَّة أَو لِسَّه؟",
                 exampleArabeezy: "lwykynd, 3ndk khta aw lsh?",
                 exampleEn: "For the weekend, do you have a plan or not yet?",
-},
+            },
             {
                 id: "ma3_time",
                 ar: "لِبَعْدِين / لِبَعْد شْوَيّ",
@@ -261,7 +261,7 @@ export const lesson = {
                 exampleAr: "خَلِّينَا نِخَلِّي الدَّرْس لِبَعْدِين.",
                 exampleArabeezy: "khlyna nkhly eldrs lb3dyn.",
                 exampleEn: "Let’s leave the lesson for later.",
-},
+            },
         ],
 
         extra: [
@@ -274,7 +274,7 @@ export const lesson = {
                 exampleAr: "عِنْدِي أَهْدَاف لِهَالسَّنَة فِي الدِّرَاسَة وَاللُّغَة.",
                 exampleArabeezy: "3ndy ahdaf lhalsna fy eldrasa wellgha.",
                 exampleEn: "I have goals for this year in study and language.",
-},
+            },
             {
                 id: "tadreejan",
                 ar: "تَدْرِيجِيًّا",
@@ -284,7 +284,7 @@ export const lesson = {
                 exampleAr: "بَدّي أَتْقَدَّم تَدْرِيجِيًّا يَعْنِي شْوَيّ شْوَيّ.",
                 exampleArabeezy: "bdy atqdm tdryjya y3ny shwy shwy.",
                 exampleEn: "I want to progress gradually, step by step.",
-},
+            },
             {
                 id: "illa_iza",
                 ar: "إِلَّا إِذَا",
@@ -294,7 +294,7 @@ export const lesson = {
                 exampleAr: "رَح أِجِي عَالدَّرْس، إِلَّا إِذَا طَلَع شِي طَارِئ.",
                 exampleArabeezy: "r7 ajy 3aldrs, ila idha tl3 shy tary.",
                 exampleEn: "I will come to the lesson, unless something urgent comes up.",
-},
+            },
             {
                 id: "tanzim_wa2t",
                 ar: "تَنْظِيم وَقْت",
@@ -304,7 +304,7 @@ export const lesson = {
                 exampleAr: "هَدَفِي هَالسَّنَة أُحَسِّن تَنْظِيم الوَقْت عِنْدِي.",
                 exampleArabeezy: "hdfy halsna a7sn tnzym elwqt 3ndy.",
                 exampleEn: "My goal this year is to improve my time management.",
-},
+            },
         ],
     }
     ,
@@ -520,7 +520,7 @@ export const lesson = {
     // GRAMMAR
     // ====================================
 
-  grammar: [
+    grammar: [
         {
             id: "past_want_have",
             title: "Past of Want/Have (كان بدي / كان عندي)",
@@ -539,7 +539,7 @@ Pattern:
                     ["كان بدّو", "kaan bidd-o", "He wanted", "Male"],
                     ["كانت بدّها", "kaanit bidd-ha", "She wanted", "Female"],
                     ["كان عندي", "kaan 3indi", "I had", "Past have"],
-                    ["كان عندها", "kaanit 3inda", "She had", "Past have" ]
+                    ["كان عندها", "kaanit 3inda", "She had", "Past have"]
                 ]
             },
             examples: [
@@ -578,7 +578,7 @@ It goes before the verb.
                     ["رح تروح", "ra7 truu7", "You will go", "Second person"],
                     ["رح ييجي", "ra7 yiiji", "He will come", "Male"],
                     ["رح تيجي", "ra7 tiiji", "She will come", "Female"],
-                    ["رح نطلع", "ra7 niTla3", "We will go out", "Group" ]
+                    ["رح نطلع", "ra7 niTla3", "We will go out", "Group"]
                 ]
             },
             examples: [

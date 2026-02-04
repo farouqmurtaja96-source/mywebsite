@@ -37,7 +37,7 @@ export const lesson = {
                 "exampleAr": "كُل يَوْم بَصْحَى السَّاعَة سِتِّة.",
                 "exampleArabeezy": "kl ywm bs7a elsa3a sta.",
                 "exampleEn": "Every day I wake up at six o’clock.",
-},
+            },
             {
                 "id": "batghassal",
                 "ar": "بَغَسَّل",
@@ -48,7 +48,7 @@ export const lesson = {
                 "exampleAr": "أَوَّل إِشِي بَغَسَّل وَجْهِي.",
                 "exampleArabeezy": "awl ishy bghsl wjhy.",
                 "exampleEn": "The first thing I do is wash my face.",
-},
+            },
             {
                 "id": "bat7ammam",
                 "ar": "بَتْحَمَّم",
@@ -59,7 +59,7 @@ export const lesson = {
                 "exampleAr": "بَتْحَمَّم قَبِل مَا أَطْلَع.",
                 "exampleArabeezy": "bt7mm qbl ma atl3.",
                 "exampleEn": "I shower before I go out.",
-},
+            },
             {
                 "id": "bafTar",
                 "ar": "بَفْطَر",
@@ -70,7 +70,7 @@ export const lesson = {
                 "exampleAr": "بَعْد مَا بَصْحَى بَفْطَر.",
                 "exampleArabeezy": "b3d ma bs7a bftr.",
                 "exampleEn": "After I wake up, I have breakfast.",
-},
+            },
             {
                 "id": "baakul",
                 "ar": "بَاكُل",
@@ -81,7 +81,7 @@ export const lesson = {
                 "exampleAr": "بَاكُل الْغَدَا مَع أَهْلِي.",
                 "exampleArabeezy": "bakl elghda m3 ahly.",
                 "exampleEn": "I eat lunch with my family.",
-},
+            },
             {
                 "id": "bashrab_ahwe",
                 "ar": "بَشْرَب قَهْوَة",
@@ -92,7 +92,7 @@ export const lesson = {
                 "exampleAr": "  بَشْرَب قَهْوَةالصبح.",
                 "exampleArabeezy": "bshrb qhwaalsb7.",
                 "exampleEn": "I drink coffee in the morning.",
-},
+            },
             {
                 "id": "baruu7_alshoghl",
                 "ar": "بَرُوح عَلَى الشُّغُل",
@@ -103,7 +103,7 @@ export const lesson = {
                 "exampleAr": "بَرُوح عَلَى الشُّغُل السَّاعَة تَمَانْيَة.",
                 "exampleArabeezy": "brw7 3la elshghl elsa3a tmanya.",
                 "exampleEn": "I go to work at eight o’clock.",
-},
+            },
             {
                 "id": "baruu7_al_dars",
                 "ar": "بَرُوح عَلَى الدَّرْس",
@@ -114,7 +114,7 @@ export const lesson = {
                 "exampleAr": "بَرُوح عَلَى الدَّرْس بَعْد الضُّهُر.",
                 "exampleArabeezy": "brw7 3la eldrs b3d eldhr.",
                 "exampleEn": "I go to class in the afternoon.",
-},
+            },
             {
                 "id": "badros",
                 "ar": "بَدْرُس",
@@ -125,7 +125,7 @@ export const lesson = {
                 "exampleAr": "بَدْرُس عَرَبِي كُل لَيْلَة.",
                 "exampleArabeezy": "bdrs 3rby kl lyla.",
                 "exampleEn": "I study Arabic every night.",
-},
+            },
             {
                 "id": "bashtaghel",
                 "ar": "بَشْتِغِل",
@@ -136,7 +136,7 @@ export const lesson = {
                 "exampleAr": "بَشْتِغِل فِي مَكْتَب.",
                 "exampleArabeezy": "bshtghl fy mktb.",
                 "exampleEn": "I work in an office.",
-},
+            },
             {
                 "id": "barja3",
                 "ar": "بَرْجَع",
@@ -147,7 +147,7 @@ export const lesson = {
                 "exampleAr": "بَرْجَع عَلَى الْبَيْت السَّاعَة خَمْسَة.",
                 "exampleArabeezy": "brj3 3la elbyt elsa3a khmsa.",
                 "exampleEn": "I come back home at five.",
-},
+            },
             {
                 "id": "bartaa7",
                 "ar": "بَرْتَاح",
@@ -158,7 +158,7 @@ export const lesson = {
                 "exampleAr": "بَرْتَاح شَوَيّ بَعْد الشُّغُل.",
                 "exampleArabeezy": "brta7 shwy b3d elshghl.",
                 "exampleEn": "I rest a bit after work.",
-},
+            },
             {
                 "id": "batfarraj",
                 "ar": "بَتْفَرَّج عَلَى...",
@@ -169,7 +169,7 @@ export const lesson = {
                 "exampleAr": "بِالْمَسَا بَتْفَرَّج عَلَى مُسَلْسَل.",
                 "exampleArabeezy": "belmsa btfrj 3la mslsl.",
                 "exampleEn": "In the evening I watch a series.",
-},
+            },
             {
                 "id": "baqra",
                 "ar": "بَقْرَا",
@@ -180,7 +180,7 @@ export const lesson = {
                 "exampleAr": "أحيانًا بقرأ كتاب قبل ما أنام",
                 "exampleArabeezy": "a7yana bqra ktab qbl ma anam",
                 "exampleEn": "Sometimes I read a book before sleeping.",
-},
+            },
             {
                 "id": "banaam",
                 "ar": "بَنَام",
@@ -191,7 +191,7 @@ export const lesson = {
                 "exampleAr": "بَنَام مِتْأَخَّر فِي الْوِيكْإِنْد.",
                 "exampleArabeezy": "bnam mtakhr fy elwykind.",
                 "exampleEn": "I sleep late on the weekend.",
-},
+            },
             {
                 "id": "banzel",
                 "ar": "بَنْزِل",
@@ -202,7 +202,7 @@ export const lesson = {
                 "exampleAr": "بَنْزِل مِن الْبَيْت السَّاعَة تَمَانْيَة إِلَّا رُبِع.",
                 "exampleArabeezy": "bnzl mn elbyt elsa3a tmanya ila rb3.",
                 "exampleEn": "I leave the house at quarter to eight.",
-},
+            },
             {
                 "id": "bajli",
                 "ar": "بَجْلِي الصُّحُون",
@@ -213,7 +213,7 @@ export const lesson = {
                 "exampleAr": "بَعْد الْغَدَا بَجْلِي الصُّحُون.",
                 "exampleArabeezy": "b3d elghda bjly els7wn.",
                 "exampleEn": "After lunch I wash the dishes.",
-},
+            },
             {
                 "id": "banaddaf",
                 "ar": "بَنَضَّف",
@@ -224,7 +224,7 @@ export const lesson = {
                 "exampleAr": "يَوْم الْجُمْعَة بَنَضَّف الْبَيْت.",
                 "exampleArabeezy": "ywm eljm3a bndf elbyt.",
                 "exampleEn": "On Friday I clean the house.",
-},
+            },
             {
                 "id": "baSalli",
                 "ar": "بَصَلِّي",
@@ -235,7 +235,7 @@ export const lesson = {
                 "exampleAr": "بَصَلِّي قَبِل مَا أَطْلَع.",
                 "exampleArabeezy": "bsly qbl ma atl3.",
                 "exampleEn": "I pray before I go out.",
-},
+            },
             {
                 "id": "fi_elsob7",
                 "ar": "فِي الصُّبْح",
@@ -246,7 +246,7 @@ export const lesson = {
                 "exampleAr": "فِي الصُّبْح بَصْحَى وَبَفْطَر.",
                 "exampleArabeezy": "fy elsb7 bs7a wbftr.",
                 "exampleEn": "In the morning I wake up and have breakfast.",
-},
+            },
             {
                 "id": "ba3d_elDohr",
                 "ar": "بَعْد الضُّهُر",
@@ -257,7 +257,7 @@ export const lesson = {
                 "exampleAr": "بَعْد الضُّهُر بَرُوح عَلَى الدَّرْس.",
                 "exampleArabeezy": "b3d eldhr brw7 3la eldrs.",
                 "exampleEn": "In the afternoon I go to class.",
-},
+            },
             {
                 "id": "belmasa",
                 "ar": "بِالْمَسَا",
@@ -268,7 +268,7 @@ export const lesson = {
                 "exampleAr": "بِالْمَسَا بَرْتَاح وَبَتْفَرَّج عَلَى تِلِفِزْيُون.",
                 "exampleArabeezy": "belmsa brta7 wbtfrj 3la tlfzywn.",
                 "exampleEn": "In the evening I relax and watch TV.",
-},
+            },
             {
                 "id": "kull_yom",
                 "ar": "كُل يَوْم",
@@ -279,7 +279,7 @@ export const lesson = {
                 "exampleAr": "كُل يَوْم بَصْحَى السَّاعَة سِتِّة.",
                 "exampleArabeezy": "kl ywm bs7a elsa3a sta.",
                 "exampleEn": "Every day I wake up at six.",
-},
+            },
             {
                 "id": "ahyanan",
                 "ar": "أَحْيَانًا",
@@ -290,18 +290,27 @@ export const lesson = {
                 "exampleAr": "أَحْيَانًا بَقْرَا قَبِل مَا أَنَام.",
                 "exampleArabeezy": "a7yana bqra qbl ma anam.",
                 "exampleEn": "Sometimes I read before I sleep.",
-},
+            },
             {
-                "id": "ghaleban",
-                "ar": "غَالِبًا",
-                "arArabeezy": "ghalba",
-                "en": "Usually",
-                "enArabeezy": "ghaleban",
-                "hint": "Similar to ‘most of the time’.",
-                "exampleAr": "غَالِبًا بَشْرَب قَهْوَة بَعْد الْفْطُور.",
-                "exampleArabeezy": "ghalba bshrb qhwa b3d elftwr.",
-                "exampleEn": "Usually I drink coffee after breakfast.",
-},
+                id: "usually_words",
+                ar: "غَالِبًا / عَادَةً",
+                arArabeezy: "ghaaliban / 3aadatan",
+                en: "usually / most of the time",
+                hint: "Both mean 'usually', but عادةً is more about habit, while غالبًا = most of the time.",
+
+                examples: [
+                    {
+                        ar: "غالبًا بِشرب قهوة بعد الفطور.",
+                        arArabeezy: "ghaaliban bishrab ahwe ba3d el-fuToor.",
+                        en: "Usually (most of the time), I drink coffee after breakfast."
+                    },
+                    {
+                        ar: "عادةً بِروح عالشغل بكّير.",
+                        arArabeezy: "3aadatan بروo7 3al-shoghol bakkeer.",
+                        en: "I usually (as a habit) go to work early."
+                    }
+                ]
+            },
             {
                 "id": "abl_ma",
                 "ar": "قَبِل مَا...",
@@ -312,7 +321,7 @@ export const lesson = {
                 "exampleAr": "قَبِل مَا بَنْزِل بَفْطَر.",
                 "exampleArabeezy": "qbl ma bnzl bftr.",
                 "exampleEn": "Before I go out, I have breakfast.",
-},
+            },
             {
                 "id": "ba3d_ma",
                 "ar": "بَعْد مَا...",
@@ -323,7 +332,7 @@ export const lesson = {
                 "exampleAr": "بَعْد مَا بَرْجَع بَرْتَاح شَوَيّ.",
                 "exampleArabeezy": "b3d ma brj3 brta7 shwy.",
                 "exampleEn": "After I come back, I rest a bit.",
-},
+            },
             {
                 "id": "b3deen",
                 "ar": " بَعْدَيْن",
@@ -334,7 +343,7 @@ export const lesson = {
                 "exampleAr": "بَصْحَى، بَغَسَّل، بَعْدَيْن بَفْطَر.",
                 "exampleArabeezy": "bs7a, bghsl, b3dyn bftr.",
                 "exampleEn": "I wake up, wash, then have breakfast.",
-},
+            },
             {
                 "id": "bakir",
                 "ar": "بدري",
@@ -345,7 +354,7 @@ export const lesson = {
                 "exampleAr": "بَصْحَى بدري فِي أَيَّام الشُّغُل.",
                 "exampleArabeezy": "bs7a bdry fy ayam elshghl.",
                 "exampleEn": "I wake up early on work days.",
-},
+            },
             {
                 "id": "mita2kher",
                 "ar": "مِتْأَخَّر",
@@ -356,7 +365,7 @@ export const lesson = {
                 "exampleAr": "بَنَام مِتْأَخَّر فِي الْوِيكْإِنْد.",
                 "exampleArabeezy": "bnam mtakhr fy elwykind.",
                 "exampleEn": "I sleep late on the weekend.",
-},
+            },
             {
                 "id": "binam_badri",
                 "ar": "بَنَام بَدْرِي",
@@ -367,7 +376,7 @@ export const lesson = {
                 "exampleAr": "يَوْم الْإِمْتِحَان بَنَام بَدْرِي.",
                 "exampleArabeezy": "ywm elimt7an bnam bdry.",
                 "exampleEn": "On exam day I sleep early.",
-}
+            }
         ],
         "extra": [
             {
@@ -380,7 +389,7 @@ export const lesson = {
                 "exampleAr": "مَرَّة فِي الْأُسْبُوع بَطَبِّخ أَكْل فِلَسْطِينِي.",
                 "exampleArabeezy": "mra fy elasbw3 btbkh akl flstyny.",
                 "exampleEn": "Once a week I cook Palestinian food.",
-},
+            },
             {
                 "id": "bansa2",
                 "ar": "برتب الْغُرْفَة",
@@ -391,7 +400,7 @@ export const lesson = {
                 "exampleAr": "قَبِل مَا أَطْلَع برتب الْغُرْفَة.",
                 "exampleArabeezy": "qbl ma atl3 brtb elghrfa.",
                 "exampleEn": "Before I go out, I tidy the room.",
-},
+            },
             {
                 "id": "bistarih_shway",
                 "ar": "بِسْتَرِيح شَوَيّ",
@@ -402,7 +411,7 @@ export const lesson = {
                 "exampleAr": "بَعْد الشُّغُل بِسْتَرِيح شَوَيّ.",
                 "exampleArabeezy": "b3d elshghl bstry7 shwy.",
                 "exampleEn": "After work I take a little rest.",
-}
+            }
         ]
     },
 
@@ -761,7 +770,7 @@ Drill with everyday verbs only.`,
             },
             {
                 id: "daily_q3",
-                questionAr: "أَيّ كَلِمَة تِسْتَخْدِمْهَا لِـ ‘every day’؟",
+                questionAr: "أَيّ كَلِمَة تِسْتَخْدِمْهَا لِـ ‘كل يوم’؟",
                 optionsEn: [
                     "today",
                     "every day",

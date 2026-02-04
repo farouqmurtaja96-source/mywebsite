@@ -1658,25 +1658,25 @@ function renderArabicLettersMatch(exercise) {
             <div class="match-grid">
                 <div class="match-column">
                     ${exercise.pairs
-                        .map(
-                            (pair) => `
+            .map(
+                (pair) => `
                         <button class="match-item" data-match-left="${pair.left}">
                             ${pair.left}
                         </button>
                     `
-                        )
-                        .join("")}
+            )
+            .join("")}
                 </div>
                 <div class="match-column">
                     ${rightItems
-                        .map(
-                            (item) => `
+            .map(
+                (item) => `
                         <button class="match-item" data-match-right="${item}" lang="ar">
                             ${item}
                         </button>
                     `
-                        )
-                        .join("")}
+            )
+            .join("")}
                 </div>
             </div>
         </div>
@@ -1692,14 +1692,14 @@ function renderArabicLettersOrder(exercise) {
             <div class="order-answer" data-order-answer></div>
             <div class="order-pool">
                 ${pool
-                    .map(
-                        (item) => `
+            .map(
+                (item) => `
                     <button class="order-chip" data-order-item="${item}" lang="ar">
                         ${item}
                     </button>
                 `
-                    )
-                    .join("")}
+            )
+            .join("")}
             </div>
             <div class="order-status" data-order-status>Tap letters to build the word.</div>
             <div class="order-controls" style="margin-top:8px; display:flex; gap:8px;">
@@ -1717,12 +1717,12 @@ function renderArabicLettersMcq(exercise) {
             <div class="exercise-prompt">${exercise.prompt}</div>
             <div class="mcq-options">
                 ${exercise.options
-                    .map(
-                        (item) => `
+            .map(
+                (item) => `
                     <button class="mcq-option" data-mcq-option="${item}" lang="ar">${item}</button>
                 `
-                    )
-                    .join("")}
+            )
+            .join("")}
             </div>
         </div>
     `;
@@ -2236,15 +2236,15 @@ function buildLessonExportHtml(lesson, options) {
                     ? `<div class="grammar-examples">
                             <div class="grammar-examples__title">Examples</div>
                             ${examples
-                                .map(
-                                    (ex) => `
+                        .map(
+                            (ex) => `
                                 <div class="grammar-example">
                                     <div class="grammar-example__ar">${escapeHtml(ex.ar || "")}</div>
                                     <div class="grammar-example__arabeezy">${escapeHtml(ex.arabeezy || "")}</div>
                                     <div class="grammar-example__en">${escapeHtml(ex.en || "")}</div>
                                 </div>`
-                                )
-                                .join("")}
+                        )
+                        .join("")}
                         </div>`
                     : "";
 
@@ -2253,8 +2253,8 @@ function buildLessonExportHtml(lesson, options) {
                         ? `<div class="grammar-teacher">
                                 <div class="grammar-teacher__title">Teacher Notes</div>
                                 <div class="grammar-teacher__text">${escapeHtml(
-                                    g.teacherNotes || ""
-                                )}</div>
+                            g.teacherNotes || ""
+                        )}</div>
                            </div>`
                         : "";
 
@@ -2639,7 +2639,7 @@ function renderLevels() {
     const levelsDef = [
         {
             level: "Beginner",
-            units: ["Greetings", "Daily Routine", "Food & Drink", "Family", "trans"],
+            units: ["Greetings", "Family", "Daily Routine", "Food & Drink", "Transportation"],
         },
         {
             level: "Pre-Intermediate",

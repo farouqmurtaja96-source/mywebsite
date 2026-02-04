@@ -5,11 +5,11 @@ export const lesson = {
     meta: {
         level: "Pre-Intermediate",
         unit: "Apartment & Problems",
-        lessonTitle: "Unit 8 – Apartment, Neighbours & Problems",
+        lessonTitle: "Unit 10 – Apartment, Neighbours & Problems",
     },
 
     overview: {
-        title: "Unit 8 – Apartment & Problems",
+        title: "Unit 10 – Apartment & Problems",
         description:
             "In this unit, students learn how to describe their apartment, rooms, basic furniture, and common problems in a Palestinian building: water, electricity, internet, noise, humidity, and broken things. The focus is on real-life chunks for talking to a landlord, neighbours, and technicians.",
         goals: [
@@ -37,7 +37,7 @@ export const lesson = {
                 exampleAr: "بِسْكُن بِشِقّة قَريب مِن الجامْعَة.",
                 exampleArabeezy: "bskn bshqa qryb mn eljam3a.",
                 exampleEn: "I live in an apartment near the university.",
-},
+            },
             {
                 id: "3imara",
                 ar: "عِمارَة",
@@ -48,7 +48,7 @@ export const lesson = {
                 exampleAr: "العِمارَة قَديمَة بَس نْضيفَة.",
                 exampleArabeezy: "el3mara qdyma bs ndyfa.",
                 exampleEn: "The building is old but clean.",
-},
+            },
             {
                 id: "taba2",
                 ar: "طابِق",
@@ -59,7 +59,7 @@ export const lesson = {
                 exampleAr: "الشِّقّة عَالطّابِق التّالِت.",
                 exampleArabeezy: "elshqa 3altabq eltalt.",
                 exampleEn: "The apartment is on the third floor.",
-},
+            },
             {
                 id: "sellem",
                 ar: "دَرَج / سِلِّم",
@@ -70,7 +70,7 @@ export const lesson = {
                 exampleAr: "لما يكون المصعد خربان، بنطلع عالدَّرَج.",
                 exampleArabeezy: "lma ykwn elms3d khrban, bntl3 3aldrj.",
                 exampleEn: "When the elevator is broken, we go up the stairs.",
-},
+            },
             {
                 id: "bab_el3imara",
                 ar: "باب العِمارَة",
@@ -80,7 +80,7 @@ export const lesson = {
                 exampleAr: "باب العِمارَة مِش مْسَكَّر مْنيح.",
                 exampleArabeezy: "bab el3mara msh mskr mny7.",
                 exampleEn: "The building door doesn’t close well.",
-},
+            },
 
             // ===== ROOMS =====
             {
@@ -92,7 +92,7 @@ export const lesson = {
                 exampleAr: "الشِّقّة فيها غُرْفِة نَوْم واحْدِة.",
                 exampleArabeezy: "elshqa fyha ghrfa nwm wa7da.",
                 exampleEn: "The apartment has one bedroom.",
-},
+            },
             {
                 id: "salon",
                 ar: "صالون",
@@ -102,7 +102,7 @@ export const lesson = {
                 exampleAr: "بِنِقْعُد بِالصّالون نِتْفَرَّج عَالتِّلْفِزْيون.",
                 exampleArabeezy: "bnq3d belsalwn ntfrj 3altlfzywn.",
                 exampleEn: "We sit in the living room and watch TV.",
-},
+            },
             {
                 id: "matbakh",
                 ar: "مَطْبَخ",
@@ -112,7 +112,7 @@ export const lesson = {
                 exampleAr: "مَطْبَخ الشِّقّة صْغير بَس مُرَتَّب.",
                 exampleArabeezy: "mtbkh elshqa sghyr bs mrtb.",
                 exampleEn: "The apartment’s kitchen is small but tidy.",
-},
+            },
             {
                 id: "7ammam",
                 ar: "حَمّام",
@@ -122,7 +122,7 @@ export const lesson = {
                 exampleAr: "الحَمّام في مَشْكِلَة بِالمَيّ.",
                 exampleArabeezy: "el7mam fy mshkla belmy.",
                 exampleEn: "There is a water problem in the bathroom.",
-},
+            },
             {
                 id: "balkon",
                 ar: "بَلكون / شُرْفَة",
@@ -132,7 +132,7 @@ export const lesson = {
                 exampleAr: "بَحِبّ أَشْرَب قَهْوِة عَالبَلكون.",
                 exampleArabeezy: "b7b ashrb qhwa 3alblkwn.",
                 exampleEn: "I like to drink coffee on the balcony.",
-},
+            },
 
             // ===== PEOPLE & MONEY =====
             {
@@ -144,7 +144,7 @@ export const lesson = {
                 exampleAr: "جيرانّا طَيِّبين بَس صَوْتهم عالي أَحْيانا.",
                 exampleArabeezy: "jyrana tybyn bs swthm 3aly a7yana.",
                 exampleEn: "Our neighbors are nice but sometimes loud.",
-},
+            },
             {
                 id: "sa7eb_elbeit",
                 ar: "صاحِب البَيْت",
@@ -154,7 +154,7 @@ export const lesson = {
                 exampleAr: "صاحِب البَيْت ساكِن في نَفْس العِمارَة.",
                 exampleArabeezy: "sa7b elbyt sakn fy nfs el3mara.",
                 exampleEn: "The landlord lives in the same building.",
-},
+            },
             {
                 id: "ijar",
                 ar: "إيجار",
@@ -164,7 +164,7 @@ export const lesson = {
                 exampleAr: "إيجار الشِّقّة غالي شْوَي.",
                 exampleArabeezy: "iyjar elshqa ghaly shwy.",
                 exampleEn: "The apartment’s rent is a bit expensive.",
-},
+            },
             {
                 id: "fatora",
                 ar: "فاتورَة",
@@ -174,7 +174,7 @@ export const lesson = {
                 exampleAr: "لازِم أَدْفَع فاتورَة الشَّهِر هادا.",
                 exampleArabeezy: "lazm adf3 fatwra elshhr hada.",
                 exampleEn: "I have to pay this month’s bill.",
-},
+            },
 
             {
                 id: "fatora_mayy",
@@ -185,7 +185,7 @@ export const lesson = {
                 exampleAr: "فاتورَة المَيّ مِش مَشْمُولَة بِالإيجار.",
                 exampleArabeezy: "fatwra elmy msh mshmwla beliyjar.",
                 exampleEn: "The water bill is not included in the rent.",
-},
+            },
 
             // ===== DOORS, WINDOWS & KEYS =====
             {
@@ -197,7 +197,7 @@ export const lesson = {
                 exampleAr: "نِسيت المِفْتاح جُوّا الشِّقّة.",
                 exampleArabeezy: "nsyt elmfta7 jwa elshqa.",
                 exampleEn: "I forgot the key inside the apartment.",
-},
+            },
             {
                 id: "bab",
                 ar: "باب",
@@ -207,7 +207,7 @@ export const lesson = {
                 exampleAr: "باب البَلكون مِش مْسَكَّر مْنيح.",
                 exampleArabeezy: "bab elblkwn msh mskr mny7.",
                 exampleEn: "The balcony door doesn’t close well.",
-},
+            },
             {
                 id: "shubbak",
                 ar: "شُبّاك",
@@ -217,7 +217,7 @@ export const lesson = {
                 exampleAr: "الشُّبّاك مَكْسور وبدّه تَصْلِيح.",
                 exampleArabeezy: "elshbak mkswr wbdh tsly7.",
                 exampleEn: "The window is broken and needs repair.",
-},
+            },
 
             // ===== UTILITIES & APPLIANCES =====
             {
@@ -229,7 +229,7 @@ export const lesson = {
                 exampleAr: "المَيّ بِتِنْقِط مِن السَّقْف.",
                 exampleArabeezy: "elmy btnqt mn elsqf.",
                 exampleEn: "Water is dripping from the ceiling.",
-},
+            },
             {
                 id: "kahraba",
                 ar: "كَهْرَبا",
@@ -239,7 +239,7 @@ export const lesson = {
                 exampleAr: "الكَهْرَبا بِتِنْقِطِع كْثير بِهالْمَنطِقَة.",
                 exampleArabeezy: "elkhrba btnqt3 kthyr bhalmntqa.",
                 exampleEn: "The electricity cuts off a lot in this area.",
-},
+            },
             {
                 id: "daw",
                 ar: "ضَوّ",
@@ -249,7 +249,7 @@ export const lesson = {
                 exampleAr: "في ضَوّ مِش شَغّال بِالْمَمَرّ.",
                 exampleArabeezy: "fy dw msh shghal belmmr.",
                 exampleEn: "There is a light not working in the hallway.",
-},
+            },
             {
                 id: "ghassaleh",
                 ar: "غَسّالِة",
@@ -259,7 +259,7 @@ export const lesson = {
                 exampleAr: "غَسّالِة الشِّقّة خَرْبانِة هالأَيام.",
                 exampleArabeezy: "ghsala elshqa khrbana halayam.",
                 exampleEn: "The apartment’s washing machine is broken these days.",
-},
+            },
             {
                 id: "tallajeh",
                 ar: "تَلّاجَة",
@@ -269,7 +269,7 @@ export const lesson = {
                 exampleAr: "التَّلّاجَة مَش مْبَرِّدَة مْنيح.",
                 exampleArabeezy: "eltlaja msh mbrda mny7.",
                 exampleEn: "The fridge is not cooling well.",
-},
+            },
             {
                 id: "ghaz",
                 ar: "غَاز",
@@ -279,7 +279,7 @@ export const lesson = {
                 exampleAr: "جرة الغَاز فاضيِة، لازم نِغَيِّرْها.",
                 exampleArabeezy: "jra elghaz fadya, lazm nghyrha.",
                 exampleEn: "The gas cylinder is empty; we need to change it.",
-},
+            },
             {
                 id: "furn",
                 ar: "فُرْن",
@@ -289,7 +289,7 @@ export const lesson = {
                 exampleAr: "فرن الكَهْرَبا خَرْبان اليوم.",
                 exampleArabeezy: "frn elkhrba khrban elywm.",
                 exampleEn: "The electric oven is broken today.",
-},
+            },
             {
                 id: "sakhan_mayy",
                 ar: "سَخّان مَيّ",
@@ -299,7 +299,7 @@ export const lesson = {
                 exampleAr: "السَّخّان مَش شَغّال، المَيّ بارْدِة.",
                 exampleArabeezy: "elskhan msh shghal, elmy barda.",
                 exampleEn: "The water heater is not working; the water is cold.",
-},
+            },
             {
                 id: "makyyef",
                 ar: "مِكيّف",
@@ -309,7 +309,7 @@ export const lesson = {
                 exampleAr: "المِكيّف بِطَفّي لَمّا نِشَغِّل غَسّالِة.",
                 exampleArabeezy: "elmkyf btfy lma nshghl ghsala.",
                 exampleEn: "The AC turns off when we turn on the washing machine.",
-},
+            },
             {
                 id: "maghsaleh",
                 ar: "مَغْسَلِة",
@@ -319,7 +319,7 @@ export const lesson = {
                 exampleAr: "المَغْسَلِة في الحَمّام مَسْدودَة.",
                 exampleArabeezy: "elmghsla fy el7mam msdwda.",
                 exampleEn: "The bathroom sink is blocked.",
-},
+            },
             {
                 id: "7anafiyeh",
                 ar: "حَنَفِيّة",
@@ -329,7 +329,7 @@ export const lesson = {
                 exampleAr: "الحَنَفِيّة بتنقط مَيّ طول الليل.",
                 exampleArabeezy: "el7nfya btnqt my twl ellyl.",
                 exampleEn: "The tap drips water all night.",
-},
+            },
 
             {
                 id: "beykhar_mayy",
@@ -340,7 +340,7 @@ export const lesson = {
                 exampleAr: "السَّقْف بنقط مَيّ لَمّا تشتي.",
                 exampleArabeezy: "elsqf bnqt my lma tshty.",
                 exampleEn: "The ceiling leaks when it rains.",
-},
+            },
 
             // ===== ELEVATOR, STAIRS & NOISE =====
             {
@@ -352,7 +352,7 @@ export const lesson = {
                 exampleAr: "المِصْعَد بْوِقَّف بِنُصّ الطّابِق أَحْيانًا.",
                 exampleArabeezy: "elms3d bwqf bns eltabq a7yana.",
                 exampleEn: "The elevator sometimes stops between floors.",
-},
+            },
             {
                 id: "sawt_3ali",
                 ar: "صَوْت عالي",
@@ -362,7 +362,7 @@ export const lesson = {
                 exampleAr: "في صَوْت عالي مِن الجيران بِاللَّيْل.",
                 exampleArabeezy: "fy swt 3aly mn eljyran bellyl.",
                 exampleEn: "There is loud noise from the neighbors at night.",
-},
+            },
 
             // ===== STATE OF THINGS =====
             {
@@ -374,7 +374,7 @@ export const lesson = {
                 exampleAr: "الشُّبّاك مَكْسور .",
                 exampleArabeezy: "elshbak mkswr.",
                 exampleEn: "The window is broken ",
-},
+            },
             {
                 id: "kharban",
                 ar: "خَرْبان",
@@ -384,7 +384,7 @@ export const lesson = {
                 exampleAr: "الأسانْسير خَرْبان من أُسْبوع.",
                 exampleArabeezy: "elasansyr khrban mn asbw3.",
                 exampleEn: "The elevator has been out of order for a week.",
-},
+            },
             {
                 id: "ma_bishtghil",
                 ar: "مَا بِشْتَغِل",
@@ -395,7 +395,7 @@ export const lesson = {
                 exampleAr: "السَّخّان مَا بِشْتَغِل، المَيّ بارْدِة.",
                 exampleArabeezy: "elskhan ma bshtghl, elmy barda.",
                 exampleEn: "The water heater doesn’t work; the water is cold.",
-},
+            },
 
             // ===== VERBS & USEFUL CHUNKS =====
             {
@@ -408,7 +408,7 @@ export const lesson = {
                 exampleAr: "هَادي أَوَّل مَرّة بَسْتَأْجِر شِقّة لَحالي.",
                 exampleArabeezy: "hady awl mra bstajr shqa l7aly.",
                 exampleEn: "This is the first time I rent an apartment by myself.",
-},
+            },
             {
                 id: "badfa3_ijar",
                 ar: "بَدْفَع الإيجار",
@@ -418,7 +418,7 @@ export const lesson = {
                 exampleAr: "بَدْفَع الإيجار أُونْلايْن.",
                 exampleArabeezy: "bdf3 eliyjar awnlayn.",
                 exampleEn: "I pay the rent online.",
-},
+            },
             {
                 id: "fi_mushkileh_fi",
                 ar: "في مُشْكِلَة في...",
@@ -429,7 +429,7 @@ export const lesson = {
                 exampleAr: "في مُشْكِلَة في الإِنْتَرْنِت مِن امْبارِح.",
                 exampleArabeezy: "fy mshkla fy elintrnt mn ambar7.",
                 exampleEn: "There has been a problem with the internet since yesterday.",
-},
+            },
             {
                 id: "batwasal_ma3",
                 ar: "بَتْواصَل مَع...",
@@ -439,7 +439,7 @@ export const lesson = {
                 exampleAr: "لَمّا يكون في مُشْكِلَة بَتْواصَل مَع صاحِب البَيْت.",
                 exampleArabeezy: "lma ykwn fy mshkla btwasl m3 sa7b elbyt.",
                 exampleEn: "When there is a problem, I contact the landlord.",
-},
+            },
         ],
 
         extra: [
@@ -452,7 +452,7 @@ export const lesson = {
                 exampleAr: "عَقْد الإيجار مَكْتوب فيه كُلّ الشُّروط.",
                 exampleArabeezy: "3qd eliyjar mktwb fyh kl elshrwt.",
                 exampleEn: "All the conditions are written in the rental contract.",
-},
+            },
 
             {
                 id: "7ares_el3imara",
@@ -463,7 +463,7 @@ export const lesson = {
                 exampleAr: "حارِس العِمارَة بِفَتِّح الباب وَبْيِنَظِّف الدَّرَج.",
                 exampleArabeezy: "7ars el3mara bft7 elbab wbynzf eldrj.",
                 exampleEn: "The building guard opens the door and cleans the stairs.",
-},
+            },
             {
                 id: "ratoobe",
                 ar: "رُطوبَة",
@@ -473,7 +473,7 @@ export const lesson = {
                 exampleAr: "في رُطوبَة عَالحِيط بِغُرْفِة النَّوْم.",
                 exampleArabeezy: "fy rtwba 3al7yt bghrfa elnwm.",
                 exampleEn: "There is damp on the wall in the bedroom.",
-},
+            },
             {
                 id: "tedfi2a",
                 ar: "تِدْفِئَة",
@@ -483,7 +483,7 @@ export const lesson = {
                 exampleAr: "ما في تِدْفِئَة مْنيحَة بالشتا.",
                 exampleArabeezy: "ma fy tdfya mny7a belshta.",
                 exampleEn: "There is no good heating in winter.",
-},
+            },
 
             {
                 id: "sakan_jdid",
@@ -494,7 +494,7 @@ export const lesson = {
                 exampleAr: "رُوبَا نَقَلِت عَسَكَن جْديد قَريب مِن الجامْعَة.",
                 exampleArabeezy: "rwba nqlt 3skn jdyd qryb mn eljam3a.",
                 exampleEn: "Roba moved to a new place near the university.",
-},
+            },
             {
                 id: "mash7oun",
                 ar: "مَشْحون",
@@ -504,7 +504,7 @@ export const lesson = {
                 exampleAr: "نَسِينَا نِشْحَن العَدّاد، قَطَعِت الكَهْرَبا.",
                 exampleArabeezy: "nsyna nsh7n el3dad, qt3t elkhrba.",
                 exampleEn: "We forgot to charge the meter, the electricity went off.",
-},
+            },
         ],
     }
     ,
@@ -750,7 +750,7 @@ export const lesson = {
     // GRAMMAR
     // ====================================
 
-  grammar: [
+    grammar: [
         {
             id: "there_is",
             title: "There is / There isn’t (في / ما في)",

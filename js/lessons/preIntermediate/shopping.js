@@ -6,11 +6,11 @@ export const lesson = {
     meta: {
         level: "Pre-Intermediate",
         unit: "Shopping & Prices",
-        lessonTitle: "Unit 9 – Shopping, Markets & Prices",
+        lessonTitle: "Unit 8 – Shopping, Markets & Prices",
     },
 
     overview: {
-        title: "Unit 9 – Shopping & Prices",
+        title: "Unit 8 – Shopping & Prices",
         description:
             "In this unit, students learn how to shop, ask about prices, bargain, and pay in Palestinian Arabic. The focus is on useful chunks like asking how much, saying it’s expensive or cheap, counting items, and dealing with markets, small shops, and online buying.",
         goals: [
@@ -38,7 +38,7 @@ export const lesson = {
                 exampleAr: "رُحْت عَالدُّكّان أَشْتِري خُبِز وَحْلِيب.",
                 exampleArabeezy: "r7t 3aldkan ashtry khbz w7lyb.",
                 exampleEn: "I went to the corner shop to buy bread and milk.",
-},
+            },
             {
                 id: "ma7al",
                 ar: "مَحَلّ",
@@ -49,7 +49,7 @@ export const lesson = {
                 exampleAr: "هَادَا أَحْسَن مَحَلّ أَوَاعِي بِالحَارَة.",
                 exampleArabeezy: "hada a7sn m7l awa3y bel7ara.",
                 exampleEn: "This is the best clothes shop in the neighbourhood.",
-},
+            },
             {
                 id: "souk",
                 ar: "سُوق",
@@ -60,7 +60,7 @@ export const lesson = {
                 exampleAr: "بِنِنْزِل عَالسُّوق يَوْم الجُمعة.",
                 exampleArabeezy: "bnnzl 3alswq ywm eljm3a.",
                 exampleEn: "We go down to the market on Friday.",
-},
+            },
             {
                 id: "supermarket",
                 ar: "سوبِرماركِت",
@@ -71,7 +71,7 @@ export const lesson = {
                 exampleAr: "بنشتري الأغراض الكبيرة من السوبرماركت.",
                 exampleArabeezy: "bnshtry elaghrad elkbyra mn elswbrmarkt.",
                 exampleEn: "We buy the big supplies from the supermarket.",
-},
+            },
 
             // ===== MONEY & PRICE =====
             {
@@ -84,7 +84,7 @@ export const lesson = {
                 exampleAr: "مَعِي مَصاري شْوَيّ بَس.",
                 exampleArabeezy: "m3y msary shwy bs.",
                 exampleEn: "I only have a little money.",
-},
+            },
             {
                 id: "se3er",
                 ar: "سِعِر",
@@ -94,7 +94,7 @@ export const lesson = {
                 exampleAr: "شُو السِّعِر هُون؟",
                 exampleArabeezy: "shw els3r hwn?",
                 exampleEn: "What’s the price here?",
-},
+            },
             {
                 id: "addeish_hada",
                 ar: "قَدِّيش هَادَا؟",
@@ -105,7 +105,7 @@ export const lesson = {
                 exampleAr: "قَدِّيش هَادَا، لَو سَمَحِت؟",
                 exampleArabeezy: "qdysh hada, lw sm7t?",
                 exampleEn: "How much is this, please?",
-},
+            },
             {
                 id: "ghali",
                 ar: "غالي",
@@ -116,7 +116,7 @@ export const lesson = {
                 exampleAr: "صَرَاحَةً هَادَا غالي شْوَيّ.",
                 exampleArabeezy: "sra7a hada ghaly shwy.",
                 exampleEn: "Honestly, this is a bit expensive.",
-},
+            },
             {
                 id: "rakhis",
                 ar: "رخيص",
@@ -127,7 +127,7 @@ export const lesson = {
                 exampleAr: "السِّعِر رخيص بَس الجَوْدَة عادية.",
                 exampleArabeezy: "els3r rkhys bs eljwda 3adya.",
                 exampleEn: "The price is cheap but the quality is average.",
-},
+            },
             {
                 id: "tanzeel",
                 ar: "تَنْزيلات",
@@ -138,7 +138,7 @@ export const lesson = {
                 exampleAr: "فِي تَنْزيلات عَلَى الأَوَاعِي هالأَيام.",
                 exampleArabeezy: "fy tnzylat 3la elawa3y halayam.",
                 exampleEn: "There are sales on clothes these days.",
-},
+            },
             {
                 id: "khasm",
                 ar: "خَصْم",
@@ -148,7 +148,7 @@ export const lesson = {
                 exampleAr: "فِيه خَصْم لِلطُلّاب؟",
                 exampleArabeezy: "fyh khsm leltlab?",
                 exampleEn: "Is there a student discount?",
-},
+            },
 
             // ===== PAYMENT =====
             {
@@ -161,7 +161,7 @@ export const lesson = {
                 exampleAr: "بِفَضَّل أَدْفَع كاش.",
                 exampleArabeezy: "bfdl adf3 kash.",
                 exampleEn: "I prefer to pay in cash.",
-},
+            },
             {
                 id: "card",
                 ar: "كَرْت / كَرْد",
@@ -172,7 +172,7 @@ export const lesson = {
                 exampleAr: "مُمْكِن أَدْفَع بِالكَرْت؟",
                 exampleArabeezy: "mmkn adf3 belkrt?",
                 exampleEn: "Can I pay by card?",
-},
+            },
             {
                 id: "atm",
                 ar: "صَرّاف آلي",
@@ -183,7 +183,7 @@ export const lesson = {
                 exampleAr: "فِيه صَرّاف آلي قُدّام المَحَلّ.",
                 exampleArabeezy: "fyh sraf aaly qdam elm7l.",
                 exampleEn: "There is an ATM in front of the shop.",
-},
+            },
             {
                 id: "wasl",
                 ar: "وَصْل / بَوْن",
@@ -194,7 +194,7 @@ export const lesson = {
                 exampleAr: "خُد الوَصْل، يُمْكِن تْحْتَاجه بَعْدين.",
                 exampleArabeezy: "khd elwsl, ymkn t7tajh b3dyn.",
                 exampleEn: "Take the receipt, you might need it later.",
-},
+            },
             {
                 id: "fatora_shop",
                 ar: "فاتورَة",
@@ -205,7 +205,7 @@ export const lesson = {
                 exampleAr: "طَلَبْنَا فاتورَة رَسْمِيّة مِن الشِّرْكَة.",
                 exampleArabeezy: "tlbna fatwra rsmya mn elshrka.",
                 exampleEn: "We asked for an official invoice from the company.",
-},
+            },
 
             // ===== ITEM DETAILS =====
             {
@@ -218,7 +218,7 @@ export const lesson = {
                 exampleAr: "شُو نَوْع القِماش هَادَا؟",
                 exampleArabeezy: "shw nw3 elqmash hada?",
                 exampleEn: "What type of fabric is this?",
-},
+            },
             {
                 id: "lawn",
                 ar: "لَوْن",
@@ -229,7 +229,7 @@ export const lesson = {
                 exampleAr: "عِنْدو أَلْوان تَانِيَة مِن نَفْس الموديل.",
                 exampleArabeezy: "3ndw alwan tanya mn nfs elmwdyl.",
                 exampleEn: "They have other colors of the same model.",
-},
+            },
             {
                 id: "7ajm",
                 ar: "حَجِم / مَقاس",
@@ -240,7 +240,7 @@ export const lesson = {
                 exampleAr: "مَقاس الجزمة كْبِير عَلَيّ شْوَيّ.",
                 exampleArabeezy: "mqas eljzma kbyr 3ly shwy.",
                 exampleEn: "The shoe size is a bit big on me.",
-},
+            },
             {
                 id: "kilo",
                 ar: "كِيلو",
@@ -251,7 +251,7 @@ export const lesson = {
                 exampleAr: "بَدّي نُصّ كِيلو بندورة.",
                 exampleArabeezy: "bdy ns kylw bndwra.",
                 exampleEn: "I want half a kilo of tomatoes.",
-},
+            },
             {
                 id: "era",
                 ar: "قِطْعَة",
@@ -262,7 +262,7 @@ export const lesson = {
                 exampleAr: "بَدّي قِطْعَة كْمان مِن هَادَا النَّوْع.",
                 exampleArabeezy: "bdy qt3a kman mn hada elnw3.",
                 exampleEn: "I want one more piece of this type.",
-},
+            },
 
             // ===== VERBS & USEFUL CHUNKS =====
             {
@@ -275,7 +275,7 @@ export const lesson = {
                 exampleAr: "كْلّ مَرَّة بَطْلَع عَالسُّوق بَشْتِري اشياء زْيادَة.",
                 exampleArabeezy: "kl mra btl3 3alswq bshtry ashya zyada.",
                 exampleEn: "Every time I go to the market I buy extra things.",
-},
+            },
 
             {
                 id: "baddi_ashtiri",
@@ -287,7 +287,7 @@ export const lesson = {
                 exampleAr: "بَدّي أِشْتِري هَدِيّة لِصْحِبْتي.",
                 exampleArabeezy: "bdy ashtry hdya ls7bty.",
                 exampleEn: "I want to buy a gift for my friend.",
-},
+            },
             {
                 id: "ana_bas_batfarraj",
                 ar: "أَنا بَس بَتْفَرَّج",
@@ -298,7 +298,7 @@ export const lesson = {
                 exampleAr: "مِش مُجْبَرَة تِشْتِري، حَتّى لَو حَكِيتِيلُه: أَنا بَس بَتْفَرَّج.",
                 exampleArabeezy: "msh mjbra tshtry, 7ta lw 7kytylh: ana bs btfrj.",
                 exampleEn: "You’re not obliged to buy, even if you tell him: I’m just looking.",
-},
+            },
             {
                 id: "3indak_ishi_tani",
                 ar: "عِنْدَك إِشِي تَانِي؟",
@@ -309,7 +309,7 @@ export const lesson = {
                 exampleAr: "عِنْدَك إِشِي تَانِي نَفْس المَقاس بَس لَوْن تَانِي؟",
                 exampleArabeezy: "3ndk ishy tany nfs elmqas bs lwn tany?",
                 exampleEn: "Do you have something else in the same size but a different color?",
-},
+            },
             {
                 id: "mumkin_tnazzel_shway",
                 ar: "مُمْكِن تْنَزِّل شْوَيّ؟",
@@ -320,7 +320,7 @@ export const lesson = {
                 exampleAr: "السِّعِر عالي، مُمْكِن تْنَزِّل شْوَيّ؟",
                 exampleArabeezy: "els3r 3aly, mmkn tnzl shwy?",
                 exampleEn: "The price is high, can you lower it a bit?",
-},
+            },
             {
                 id: "akher_se3er",
                 ar: "آخِر سِعِر؟",
@@ -331,7 +331,7 @@ export const lesson = {
                 exampleAr: "يَعْنِي هَادَا آخِر سِعِر وَلّا فِيه نْقَاص كْمَان؟",
                 exampleArabeezy: "y3ny hada aakhr s3r wla fyh nqas kman?",
                 exampleEn: "So is this your final price or can you go lower?",
-},
+            },
         ],
 
         extra: [
@@ -345,7 +345,7 @@ export const lesson = {
                 exampleAr: "مِيزانِيّتي لِلشوبينغ هالشَّهِر مَحْدودَة.",
                 exampleArabeezy: "myzanyty lelshwbyngh halshhr m7dwda.",
                 exampleEn: "My shopping budget this month is limited.",
-},
+            },
             {
                 id: "safqa",
                 ar: "صَفْقَة / لُقْطَة",
@@ -356,7 +356,7 @@ export const lesson = {
                 exampleAr: "هَادِي لُقْطَة، السِّعِر كْتِير مْناسِب.",
                 exampleArabeezy: "hady lqta, els3r ktyr mnasb.",
                 exampleEn: "This is a steal, the price is very good.",
-},
+            },
             {
                 id: "istibdal",
                 ar: "اِسْتِبْدال",
@@ -367,7 +367,7 @@ export const lesson = {
                 exampleAr: "بقدر أبدّلها بنفس السعر بس بمقاس غير؟",
                 exampleArabeezy: "bqdr abdlha bnfs els3r bs bmqas ghyr?",
                 exampleEn: "Can I exchange it for the same price but a different size?",
-},
+            },
             {
                 id: "istirja3",
                 ar: "اِسْتِرْجاع",
@@ -378,7 +378,7 @@ export const lesson = {
                 exampleAr: "السِّياسَة عِنْدْهُم مَا فِيه اِسْتِرْجاع، بَس اِسْتِبْدال.",
                 exampleArabeezy: "elsyasa 3ndhm ma fyh astrja3, bs astbdal.",
                 exampleEn: "Their policy has no returns, only exchanges.",
-},
+            },
             {
                 id: "3ard_khas",
                 ar: "عَرْض خَاصّ",
@@ -389,7 +389,7 @@ export const lesson = {
                 exampleAr: "فِي عَرْض خَاصّ عَلَى الشَّمْبُو الْيَوْم.",
                 exampleArabeezy: "fy 3rd khas 3la elshmbw elywm.",
                 exampleEn: "There is a special offer on shampoo today.",
-},
+            },
             {
                 id: "khidmet_zaba2en",
                 ar: "خِدْمِة زَبائِن",
@@ -400,7 +400,7 @@ export const lesson = {
                 exampleAr: "خِدْمِة الزَّبائِن فِي هالمَحَلّ مُمْتازَة.",
                 exampleArabeezy: "khdma elzbayn fy halm7l mmtaza.",
                 exampleEn: "Customer service in this shop is excellent.",
-},
+            },
         ],
     }
     ,
@@ -622,7 +622,7 @@ export const lesson = {
     // GRAMMAR
     // ====================================
 
-  grammar: [
+    grammar: [
         {
             id: "numbers_basic",
             title: "Numbers (1–5)",

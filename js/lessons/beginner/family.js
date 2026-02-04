@@ -38,7 +38,7 @@ export const lesson = {
                 exampleAr: "عِيلْتِي مَو كْبِيرَة، بَسّ كْتِير قَرِيبِين مِن بَعْض.",
                 exampleArabeezy: "3ylty mw kbyra, bs ktyr qrybyn mn b3d.",
                 exampleEn: "My family is not big, but we are very close to each other.",
-},
+            },
             {
                 id: "ahl",
                 ar: "أَهْل",
@@ -49,7 +49,7 @@ export const lesson = {
                 exampleAr: "أَهْلِي سَاكْنِين فِي غَزَّة.",
                 exampleArabeezy: "ahly saknyn fy ghza.",
                 exampleEn: "My family lives in Gaza.",
-},
+            },
 
             // ===== PARENTS =====
             {
@@ -62,7 +62,7 @@ export const lesson = {
                 exampleAr: "أَبُوي بِيِشْتِغِل مُهَنْدِس.",
                 exampleArabeezy: "abwy byshtghl mhnds.",
                 exampleEn: "My father works as an engineer.",
-},
+            },
             {
                 id: "immi",
                 ar: "إِمّي",
@@ -73,7 +73,7 @@ export const lesson = {
                 exampleAr: "إمي بتشتغل مُعلِّمة",
                 exampleArabeezy: "imy btshtghl m3lma",
                 exampleEn: "My mother works as a teacher.",
-},
+            },
 
             // ===== SIBLINGS & CHILDREN =====
             {
@@ -86,7 +86,7 @@ export const lesson = {
                 exampleAr: "عِنْدي أَخ أَكبَر مِنّي بِسِنِين.",
                 exampleArabeezy: "3ndy akh akbr mny bsnyn.",
                 exampleEn: "I have a brother older than me by a few years.",
-},
+            },
             {
                 id: "okht",
                 ar: "أُخْت",
@@ -97,7 +97,7 @@ export const lesson = {
                 exampleAr: "أختي بتدرس بالجامعة",
                 exampleArabeezy: "akhty btdrs beljam3a",
                 exampleEn: "My sister studies at university.",
-},
+            },
             {
                 id: "walad",
                 ar: "ابن",
@@ -107,7 +107,7 @@ export const lesson = {
                 exampleAr: "عندهم ابن واحد وبنتين",
                 exampleArabeezy: "3ndhm abn wa7d wbntyn",
                 exampleEn: "They have one son and two daughters.",
-},
+            },
             {
                 id: "bint",
                 ar: "بِنْت",
@@ -117,7 +117,7 @@ export const lesson = {
                 exampleAr: "عِنْدُه بِنْت صْغيرَة كْتير.",
                 exampleArabeezy: "3ndh bnt sghyra ktyr.",
                 exampleEn: "He has a very young daughter.",
-},
+            },
             {
                 id: "walad_bint",
                 ar: "وَلَد / بِنْت",
@@ -128,7 +128,7 @@ export const lesson = {
                 exampleAr: "عندهم ولد صغير وبنت أكبر منه شوي",
                 exampleArabeezy: "3ndhm wld sghyr wbnt akbr mnh shwy",
                 exampleEn: "They have a little boy and a slightly older girl.",
-},
+            },
             {
                 id: "tifl_atfal",
                 ar: "طِفِل / أَطْفَال",
@@ -139,7 +139,7 @@ export const lesson = {
                 exampleAr: "الْأَطْفَال بِيِلْعَبُوا بَرَّا الْبَيْت.",
                 exampleArabeezy: "elatfal byl3bwa bra elbyt.",
                 exampleEn: "The children are playing outside the house.",
-},
+            },
 
             // ===== GRANDPARENTS =====
 
@@ -152,7 +152,7 @@ export const lesson = {
                 exampleAr: "سِيدِي لِسَّا عَايِش فِي الْقَرْيَة.",
                 exampleArabeezy: "sydy lsa 3aysh fy elqrya.",
                 exampleEn: "My grandfather still lives in the village.",
-},
+            },
             {
                 id: "sitti",
                 ar: "سِتّي",
@@ -162,7 +162,7 @@ export const lesson = {
                 exampleAr: "سِتّي تِسْكُن قَريب مِنّا.",
                 exampleArabeezy: "sty tskn qryb mna.",
                 exampleEn: "My grandmother lives near us.",
-},
+            },
 
             // ===== UNCLES, AUNTS & COUSINS =====
             {
@@ -174,7 +174,7 @@ export const lesson = {
                 exampleAr: "عَمّي عَندُه أَرْبَع وْلاد.",
                 exampleArabeezy: "3my 3ndh arb3 wlad.",
                 exampleEn: "My paternal uncle has four children.",
-},
+            },
             {
                 id: "3ammeh",
                 ar: "عَمِّة",
@@ -184,7 +184,7 @@ export const lesson = {
                 exampleAr: "عَمْتِي زَارَتْنَا فِي غَزَّة أُسْبُوع.",
                 exampleArabeezy: "3mty zartna fy ghza asbw3.",
                 exampleEn: "My aunt visited us in Gaza for a week.",
-},
+            },
             {
                 id: "khal",
                 ar: "خَال",
@@ -194,7 +194,7 @@ export const lesson = {
                 exampleAr: "خَالِي ساكِن بِرامَ الله.",
                 exampleArabeezy: "khaly sakn bram ellh.",
                 exampleEn: "My maternal uncle lives in Ramallah.",
-},
+            },
             {
                 id: "khalah",
                 ar: "خَالَة",
@@ -204,7 +204,7 @@ export const lesson = {
                 exampleAr: "خَالْتِي مِثْل إِمِّي تَقْرِيبًا.",
                 exampleArabeezy: "khalty mthl imy tqryba.",
                 exampleEn: "My aunt is almost like my mother.",
-},
+            },
             {
                 id: "walad_3ammi",
                 ar: "وَلاد عَمّي",
@@ -214,7 +214,7 @@ export const lesson = {
                 exampleAr: "وَلاد عَمّي كْمان بِدْرِسوا هُون.",
                 exampleArabeezy: "wlad 3my kman bdrswa hwn.",
                 exampleEn: "My cousins on my dad’s side also study here.",
-},
+            },
             {
                 id: "walad_khali",
                 ar: "وَلاد خالي",
@@ -224,7 +224,7 @@ export const lesson = {
                 exampleAr: "ولاد خالتي ساكنين برا البلد",
                 exampleArabeezy: "wlad khalty saknyn bra elbld",
                 exampleEn: "My maternal cousins live outside the town.",
-},
+            },
 
             // ===== RELATIVES & PEOPLE =====
             {
@@ -237,7 +237,7 @@ export const lesson = {
                 exampleAr: "عندنا قرايب بغزّة وقرايب برا البلد",
                 exampleArabeezy: "3ndna qrayb bghza wqrayb bra elbld",
                 exampleEn: "We have relatives in Gaza and relatives abroad.",
-},
+            },
             {
                 id: "3areeb",
                 ar: "قَريب / قَريبة",
@@ -247,7 +247,7 @@ export const lesson = {
                 exampleAr: "عندنا قرايب كتير برا البلد",
                 exampleArabeezy: "3ndna qrayb ktyr bra elbld",
                 exampleEn: "We have many relatives abroad.",
-},
+            },
             {
                 id: "nas",
                 ar: "نَاس",
@@ -257,7 +257,7 @@ export const lesson = {
                 exampleAr: "النَّاس هَان طَيِّبِين وَبِيِحِبُّوا الضُّيُوف.",
                 exampleArabeezy: "elnas han tybyn wby7bwa eldywf.",
                 exampleEn: "People here are kind and love guests.",
-},
+            },
             {
                 id: "jar_jiran",
                 ar: "جَار / جِيرَان",
@@ -268,7 +268,7 @@ export const lesson = {
                 exampleAr: "جِيرَانَّا مِثْل الْعِيلَة، كُلّ يَوْم مَع بَعْض.",
                 exampleArabeezy: "jyrana mthl el3yla, kl ywm m3 b3d.",
                 exampleEn: "Our neighbors are like family; we’re together every day.",
-},
+            },
 
             // ===== AGE & COMPARISONS =====
             {
@@ -280,7 +280,7 @@ export const lesson = {
                 exampleAr: "هُوَّ أَكبَر وَلَد بِالعيلِة.",
                 exampleArabeezy: "hw akbr wld bel3yla.",
                 exampleEn: "He is the oldest boy in the family.",
-},
+            },
             {
                 id: "asghar",
                 ar: "أَصغَر",
@@ -290,7 +290,7 @@ export const lesson = {
                 exampleAr: "أَنا أَصغَر واحِد بَيْن إِخْواني.",
                 exampleArabeezy: "ana asghr wa7d byn ikhwany.",
                 exampleEn: "I’m the youngest among my siblings.",
-},
+            },
             {
                 id: "akbar_asghar",
                 ar: "أَكْبَر / أَصْغَر",
@@ -301,7 +301,7 @@ export const lesson = {
                 exampleAr: "أُخْتِي أَكْبَر مِنِّي، وَأَخُوي أَصْغَر مِنِّي.",
                 exampleArabeezy: "akhty akbr mny, wakhwy asghr mny.",
                 exampleEn: "My sister is older than me, and my brother is younger than me.",
-},
+            },
 
             {
                 id: "2addi",
@@ -312,7 +312,7 @@ export const lesson = {
                 exampleAr: "أُختي تَقْريبًا قَدّي.",
                 exampleArabeezy: "akhty tqryba qdy.",
                 exampleEn: "My sister is almost the same age as me.",
-},
+            },
 
             // ===== MARITAL STATUS =====
             {
@@ -324,7 +324,7 @@ export const lesson = {
                 exampleAr: "أُختي مِتجَوِّزة جْديد.",
                 exampleArabeezy: "akhty mtjwza jdyd.",
                 exampleEn: "My sister recently got married.",
-},
+            },
             {
                 id: "3azzab",
                 ar: "عَزابي / عَزابيّة",
@@ -334,7 +334,7 @@ export const lesson = {
                 exampleAr: "أنا لِسّه عَزابي.",
                 exampleArabeezy: "ana lsh 3zaby.",
                 exampleEn: "I’m still single.",
-},
+            },
             {
                 id: "makhtub",
                 ar: "خاطِب / مَخطوبة",
@@ -344,7 +344,7 @@ export const lesson = {
                 exampleAr: "أُخوي خاطِب بِنْت مِن غَزّة.",
                 exampleArabeezy: "akhwy khatb bnt mn ghza.",
                 exampleEn: "My brother is engaged to a girl from Gaza.",
-},
+            },
             {
                 id: "maktub_ktabo",
                 ar: "مَكْتُوب كِتَابُه",
@@ -354,7 +354,7 @@ export const lesson = {
                 exampleAr: "بِنْت خَالْتِي مَكْتُوب كِتَابْهَا مِنْ سَنَة.",
                 exampleArabeezy: "bnt khalty mktwb ktabha mn sna.",
                 exampleEn: "My aunt’s daughter has been engaged for a year.",
-},
+            },
 
             // ===== HAVE & LIVE WITH =====
             {
@@ -366,7 +366,7 @@ export const lesson = {
                 exampleAr: "عِنْدي أُخ وَأُختَيْن.",
                 exampleArabeezy: "3ndy akh wakhtyn.",
                 exampleEn: "I have one brother and two sisters.",
-},
+            },
             {
                 id: "ma_3indi",
                 ar: "مَا عِنْدي",
@@ -376,7 +376,7 @@ export const lesson = {
                 exampleAr: "مَا عِنْدي أَطْفَال، بَسّ عِنْدي قِطَّة.",
                 exampleArabeezy: "ma 3ndy atfal, bs 3ndy qta.",
                 exampleEn: "I don’t have children, but I have a cat.",
-},
+            },
             {
                 id: "saken_ma3",
                 ar: "ساكِن / ساكْنة مَع ...",
@@ -386,7 +386,7 @@ export const lesson = {
                 exampleAr: "أنا ساكْنة مَع أَهلي.",
                 exampleArabeezy: "ana sakna m3 ahly.",
                 exampleEn: "I live with my family.",
-},
+            },
         ],
 
         extra: [
@@ -400,7 +400,7 @@ export const lesson = {
                 exampleAr: "خالتي مَطَلَّقَة مِن سَنِين.",
                 exampleArabeezy: "khalty mtlqa mn snyn.",
                 exampleEn: "My aunt has been divorced for years.",
-},
+            },
             {
                 id: "armal",
                 ar: "أَرْمَل / أَرْمَلَة",
@@ -410,7 +410,7 @@ export const lesson = {
                 exampleAr: "جارتنا أَرْمَلَة.",
                 exampleArabeezy: "jartna armla.",
                 exampleEn: "Our neighbor is a widow.",
-},
+            },
             {
                 id: "7amay",
                 ar: "حَماي / حَماتي",
@@ -420,7 +420,7 @@ export const lesson = {
                 exampleAr: "حَماي وَحَماتي بيسْكُنوا بِنَفْس البِنَايِة.",
                 exampleArabeezy: "7may w7maty bysknwa bnfs elbnaya.",
                 exampleEn: "My in-laws live in the same building.",
-},
+            },
 
         ],
     },
@@ -474,8 +474,8 @@ export const lesson = {
             },
             {
                 "speaker": "Layla",
-                "ar": "هو أكبر مني بحوالي أربع سنين",
-                "arArabeezy": "hw akbr mny b7waly arb3 snyn",
+                "ar": "هو أكبر منّي بحوالي أربع سنين.",
+                "arArabeezy": "huwwa akbar minni b7awali arba3 sneen",
                 "en": "He’s about four years older than me."
             },
             {
@@ -738,7 +738,7 @@ Avoid heavy grammar terms.`,
             },
             {
                 id: "fam_q3",
-                questionAr: "أَيّ كَلِمَة تِسْتَخْدِمْهَا لِـ ‘relatives’؟",
+                questionAr: "أَيّ كَلِمَة تِسْتَخْدِمْهَا لِـ قرايب",
                 optionsEn: [
                     "neighbors",
                     "people",
@@ -748,7 +748,7 @@ Avoid heavy grammar terms.`,
             },
             {
                 id: "fam_q4",
-                questionAr: "«هُوَّ عَزَّاب» مَعْنَاهَا:",
+                questionAr: "«هُوَّ عَزَّابي» مَعْنَاهَا:",
                 optionsEn: [
                     "He is married.",
                     "He is single (not married).",
@@ -769,7 +769,7 @@ Avoid heavy grammar terms.`,
         ],
 
         rolePlays: [
-            "Role-play 3: One student describes a big family gathering at grandma’s house (سِتِّي). Other students listen and then ask follow-up questions: «مَع مِين سَاكِن؟»، «مِنْ وِين قَرَايِبْكُمْ؟»، «النَّاس كْبِيرِين وَلَّا صْغَار؟».",
+            "Role-play 3:  student describes a big family gathering at grandma’s house (سِتِّي).",
         ],
         translation: [
             { id: "family_t1", type: "enToAr", textEn: "I have two brothers.", textAr: "عندي أخوين." },

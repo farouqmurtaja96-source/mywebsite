@@ -51,20 +51,23 @@ export const lesson = {
                 enArabeezy: "ahlan",
                 hint:
                     "Short, warm reply to مَرْحَبَا or to call someone’s attention. Often used with a name: أَهْلًا يَا لِين.",
-                exampleAr: "مَرْحَبَا لِين. ـ أَهْلًا أُسْتَاذ.",
-                exampleArabeezy: "marhaba leen. - ahlan ustaz.",
-                exampleEn: "Hi, Lynn. — Hey, teacher.",
+                exampleAr: "مَرْحَبَا لِين. ـ أَهْلًا سامر.",
+                exampleArabeezy: "marhaba leen. - ahlan samer.",
+                exampleEn: "Hello, Lynn. — Hi, samer.",
             },
             {
+
                 id: "ahlan_wa_sahlan",
                 ar: "أَهْلًا وَسَهْلًا",
                 en: "Welcome",
-                enArabeezy: "ahlan_wa_sahlan",
-                hint:
-                    "Very warm welcome for guests or new students. You can combine with فِيك / فِيكِي / فِيكُم to say ‘welcome to you’.",
-                exampleAr: "أَهْلًا وَسَهْلًا فِيكُم فِي كُورْس اللُّغَة الْعَرَبِيَّة.",
-                exampleArabeezy: "ahlan wa sahlan feekom fi kurs el-lugha el-3arabiyye.",
-                exampleEn: "Welcome to the Arabic language course.",
+                enArabeezy: "ahlan wa sahlan",
+                hint: "Very warm welcome for guests or new students. Often followed by فيك / فيكي / فيكم.",
+
+                exampleAr: "أهلًا وسهلًا فيك، نَوَّرِت المكان!",
+                exampleArabeezy: "ahlan wa sahlan feek, nawwarit el-makaan!",
+                exampleEn: "Welcome! You lit up the place! (You’re very welcome here.)"
+
+
             },
             {
                 id: "sabah_el_kheir",
@@ -728,7 +731,7 @@ Drill with substitutions: pronoun + adjective/noun.`,
             },
             {
                 id: "greet_q5",
-                questionAr: "لَمَّا حَدَا يِحْكِي «شُكْرًا كْتِير»، أَيّ رَدّ طَبِيعِي؟",
+                questionAr: "When someone says «شُكْرًا كْتِير» what’s a natural reply?",
                 optionsEn: [
                     "Good morning.",
                     "You’re welcome.",

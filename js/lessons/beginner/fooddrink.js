@@ -37,7 +37,7 @@ export const lesson = {
                 exampleAr: "فُطُورِي عَادَةً بَسِيط: خُبِز، لَبَن، وَشَاي.",
                 exampleArabeezy: "ftwry 3ada bsyt: khbz, lbn, wshay.",
                 exampleEn: "My breakfast is usually simple: bread, yogurt, and tea.",
-},
+            },
             {
                 id: "ghada",
                 ar: "غَدَا",
@@ -48,7 +48,7 @@ export const lesson = {
                 exampleAr: "أَهَمّ أَكْلَة فِي الْبَيْت هِيَّ الْغَدَا.",
                 exampleArabeezy: "ahm akla fy elbyt hy elghda.",
                 exampleEn: "The most important meal at home is lunch.",
-},
+            },
             {
                 id: "3asha",
                 ar: "عَشَا",
@@ -59,7 +59,7 @@ export const lesson = {
                 exampleAr: "بِالْمسا بِنِتْعَشَّى مَع بَعْض قُدَّام التِّلْفِزْيُون.",
                 exampleArabeezy: "belmsa bnt3sha m3 b3d qdam eltlfzywn.",
                 exampleEn: "In the evening we have dinner together in front of the TV.",
-},
+            },
 
             // ===== BASIC FOODS =====
             {
@@ -69,10 +69,11 @@ export const lesson = {
                 enArabeezy: "khobez",
                 hint:
                     "Very common. Singular as a mass: خُبِز. You can also hear: رغِيف خُبِز = a loaf of bread.",
-                exampleAr: "بكتير بيوت ما في فطور من دون خبز.",
-                exampleArabeezy: "bktyr bywt ma fy ftwr mn dwn khbz.",
-                exampleEn: "In many homes there is no breakfast without bread.",
-},
+                exampleAr: "اشتريت خبز طازة من الفرن الصبح.",
+                exampleArabeezy: "ishtareit khobez Taaze min el-forn el-Subu7.",
+                exampleEn: "I bought fresh bread from the bakery in the morning."
+
+            },
             {
                 id: "jibneh",
                 ar: "جُبْنَة",
@@ -83,18 +84,8 @@ export const lesson = {
                 exampleAr: "بِحِبّ جُبْنَة بَيْضَا مَع خُبِز سُخْن.",
                 exampleArabeezy: "b7b jbna byda m3 khbz skhn.",
                 exampleEn: "I like white cheese with warm bread.",
-},
-            {
-                id: "zaytoon",
-                ar: "زَيْتُون",
-                en: "olives",
-                enArabeezy: "zaytoon",
-                hint:
-                    "",
-                exampleAr: "فِلَسْطِين مَشْهُورَة بِالزَّيْتُون وَزَيْت الزَّيْتُون.",
-                exampleArabeezy: "flstyn mshhwra belzytwn wzyt elzytwn.",
-                exampleEn: "Palestine is famous for olives and olive oil.",
-},
+            },
+
             {
                 id: "zeit_zaytoon",
                 ar: "زَيْت زَيْتُون",
@@ -105,18 +96,8 @@ export const lesson = {
                 exampleAr: "خُبِز مَع زَيْت زَيْتُون وَزَعْتَر فُطُور فِلَسْطِينِي كْتِير مَشْهُور.",
                 exampleArabeezy: "khbz m3 zyt zytwn wz3tr ftwr flstyny ktyr mshhwr.",
                 exampleEn: "Bread with olive oil and zaatar is a very famous Palestinian breakfast.",
-},
-            {
-                id: "zeit_zaatar",
-                ar: "زَيْت وَزَعْتَر",
-                en: "olive oil & zaatar",
-                enArabeezy: "zeit_zaatar",
-                hint:
-                    "Typical Palestinian breakfast item: bread dipped in olive oil and zaatar.",
-                exampleAr: "زَيْت وَزَعْتَر شَيْء مَشْهُور فِي فِلَسْطِين.",
-                exampleArabeezy: "zyt wz3tr shy mshhwr fy flstyn.",
-                exampleEn: "Olive oil and zaatar is famous in Palestine.",
-},
+            },
+
             {
                 id: "za3tar",
                 ar: "زَعْتَر",
@@ -127,7 +108,7 @@ export const lesson = {
                 exampleAr: "مَنَاقِيش زَعْتَر مَع شَاي مِن أَحْلَى الْأَشْيَاء.",
                 exampleArabeezy: "mnaqysh z3tr m3 shay mn a7la elashya.",
                 exampleEn: "Zaatar manaqeesh with tea is one of the best things.",
-},
+            },
             {
                 id: "hummus",
                 ar: "حُمُّص",
@@ -138,7 +119,7 @@ export const lesson = {
                 exampleAr: "حُمُّص مَع طَحِينَة أَكْلَة مَشْهُورَة فِي فِلَسْطِين.",
                 exampleArabeezy: "7ms m3 t7yna akla mshhwra fy flstyn.",
                 exampleEn: "Hummus with tahini is a famous dish in Palestine.",
-},
+            },
             {
                 id: "falafel",
                 ar: "فَلَافِل",
@@ -149,7 +130,7 @@ export const lesson = {
                 exampleAr: "كْتِير نَّاس بِفْطَرُوا سَنْدْوِيش فَلَافِل.",
                 exampleArabeezy: "ktyr nas bftrwa sndwysh flafl.",
                 exampleEn: "Many people have a falafel sandwich for breakfast.",
-},
+            },
             {
                 id: "maqlubeh",
                 ar: "مَقْلُوبِة",
@@ -160,7 +141,7 @@ export const lesson = {
                 exampleAr: "مَقْلُوبِة جَاج مِن أَشْهَر أَكَلَات فِلَسْطِين.",
                 exampleArabeezy: "mqlwba jaj mn ashhr aklat flstyn.",
                 exampleEn: "Chicken maqlubeh is one of the most famous Palestinian dishes.",
-},
+            },
             {
                 id: "musakhan",
                 ar: "مُسَخَّن",
@@ -171,7 +152,7 @@ export const lesson = {
                 exampleAr: "فِي الْمَوَاسِم بيعملوا مُسَخَّن لِلْعِيلَة كُلَّهَا.",
                 exampleArabeezy: "fy elmwasm by3mlwa mskhn lel3yla klha.",
                 exampleEn: "During special seasons they make musakhan for the whole family.",
-},
+            },
             {
                 id: "salata",
                 ar: "سَلَطَة",
@@ -182,7 +163,7 @@ export const lesson = {
                 exampleAr: "دايمًا في سلطة مع الغدا.",
                 exampleArabeezy: "dayma fy slta m3 elghda.",
                 exampleEn: "There is always salad with lunch.",
-},
+            },
             {
                 id: "khodar",
                 ar: "خْضَار",
@@ -193,7 +174,7 @@ export const lesson = {
                 exampleAr: "إِمِّي دَايْمًا بِتِسَوِّي سلطة خضَار طَازَة مَع الْغَدَا.",
                 exampleArabeezy: "imy dayma btswy slta khdar taza m3 elghda.",
                 exampleEn: "My mom always prepares fresh vegetables salad with lunch.",
-},
+            },
             {
                 id: "fawakeh",
                 ar: "فَوَاكِه",
@@ -204,7 +185,7 @@ export const lesson = {
                 exampleAr: "بَاكُل فَوَاكِه بَعْد الْغَدَا.",
                 exampleArabeezy: "bakl fwakh b3d elghda.",
                 exampleEn: "I eat fruits after lunch.",
-},
+            },
             {
                 id: "tuffaHa",
                 ar: "تُفَّاحَة",
@@ -215,7 +196,7 @@ export const lesson = {
                 exampleAr: "بَحِبّ آكُل تُفَّاحَة الصُّبِح.",
                 exampleArabeezy: "b7b aakl tfa7a elsb7.",
                 exampleEn: "I like to eat an apple in the morning.",
-},
+            },
             {
                 id: "mozeh",
                 ar: "مَوْزَة",
@@ -226,7 +207,7 @@ export const lesson = {
                 exampleAr: "مَوْزَة صْغِيرَة أَحْسَن مِن حْلُو بَعْد الْأَكْل.",
                 exampleArabeezy: "mwza sghyra a7sn mn 7lw b3d elakl.",
                 exampleEn: "A small banana is better than dessert after food.",
-},
+            },
             {
                 id: "la7me",
                 ar: "لَحِم / لَحْمِة",
@@ -237,7 +218,7 @@ export const lesson = {
                 exampleAr: "مَا بَاكُل لَحِم كْتِير، أَكْثَر إِشِي جَاج.",
                 exampleArabeezy: "ma bakl l7m ktyr, akthr ishy jaj.",
                 exampleEn: "I don’t eat a lot of meat, mostly chicken.",
-},
+            },
             {
                 id: "dajaj",
                 ar: "جَاج",
@@ -248,7 +229,7 @@ export const lesson = {
                 exampleAr: "المقلوبة بالجاج أكلة مفضّلة عند كتير ناس",
                 exampleArabeezy: "elmqlwba beljaj akla mfdla 3nd ktyr nas",
                 exampleEn: "Chicken maqlubeh is a favorite dish for many people.",
-},
+            },
             {
                 id: "samak",
                 ar: "سَمَك",
@@ -259,7 +240,7 @@ export const lesson = {
                 exampleAr: "فِي غَزَّة السَّمَك طَازَة وِكْتِير طَيِّب.",
                 exampleArabeezy: "fy ghza elsmk taza wktyr tyb.",
                 exampleEn: "In Gaza, the fish is fresh and very tasty.",
-},
+            },
             {
                 id: "ruz",
                 ar: "رُزّ",
@@ -270,7 +251,7 @@ export const lesson = {
                 exampleAr: "بَاكُل رُزّ مَع خُضَار.",
                 exampleArabeezy: "bakl rz m3 khdar.",
                 exampleEn: "I eat rice with vegetables.",
-},
+            },
             {
                 id: "batata",
                 ar: "بَطَاطَا",
@@ -281,7 +262,7 @@ export const lesson = {
                 exampleAr: "بَحِبّ بَطَاطَا مَقْلِيِّة.",
                 exampleArabeezy: "b7b btata mqlya.",
                 exampleEn: "I like fried potatoes.",
-},
+            },
 
             // ===== DRINKS =====
             {
@@ -294,7 +275,7 @@ export const lesson = {
                 exampleAr: "لَازِم تِشْرَب مَيّ كْتِير خِلَال النَّهَار.",
                 exampleArabeezy: "lazm tshrb my ktyr khlal elnhar.",
                 exampleEn: "You need to drink a lot of water during the day.",
-},
+            },
             {
                 id: "ahweh",
                 ar: "قَهْوَة",
@@ -305,7 +286,7 @@ export const lesson = {
                 exampleAr: "بَشْرَب قَهْوَة سَادَة الصُّبِح.",
                 exampleArabeezy: "bshrb qhwa sada elsb7.",
                 exampleEn: "I drink black coffee in the morning.",
-},
+            },
             {
                 id: "shay",
                 ar: "شَاي",
@@ -316,7 +297,7 @@ export const lesson = {
                 exampleAr: "ستي بِتِحِبّ شَاي مَع نَعْنَاع.",
                 exampleArabeezy: "sty bt7b shay m3 n3na3.",
                 exampleEn: "My grandmother loves tea with mint.",
-},
+            },
             {
                 id: "3asir",
                 ar: "عَصِير",
@@ -327,7 +308,7 @@ export const lesson = {
                 exampleAr: "بِفَضَّل عَصِير بُرْتُقَال عَنْ كُولا.",
                 exampleArabeezy: "bfdl 3syr brtqal 3n kwla.",
                 exampleEn: "I prefer orange juice over cola.",
-},
+            },
 
             // ===== SWEETS & DESSERTS =====
             {
@@ -340,7 +321,7 @@ export const lesson = {
                 exampleAr: "بِحِبّ حَلَوِيَّات عَرَبِيَّة زَيّ كُنَافَة.",
                 exampleArabeezy: "b7b 7lwyat 3rbya zy knafa.",
                 exampleEn: "I like Arabic sweets like kunafa.",
-},
+            },
             {
                 id: "kunafeh",
                 ar: "كُنَافَة",
@@ -351,7 +332,7 @@ export const lesson = {
                 exampleAr: "كُنَافَة نَابُلْسِيَّة مَعْرُوفَة فِي كُلّ الدُّنْيَا.",
                 exampleArabeezy: "knafa nablsya m3rwfa fy kl eldnya.",
                 exampleEn: "Nabulsi kunafa is famous all over the world.",
-},
+            },
 
             // ===== GENERAL FOOD WORDS =====
             {
@@ -363,7 +344,7 @@ export const lesson = {
                 exampleAr: "الْأَكِل الْفِلَسْطِينِي طَيِّب كْتِير.",
                 exampleArabeezy: "elakl elflstyny tyb ktyr.",
                 exampleEn: "Palestinian food is very tasty.",
-},
+            },
             {
                 id: "t3am",
                 ar: "طَعِم",
@@ -373,7 +354,7 @@ export const lesson = {
                 exampleAr: "طَعِم الْأَكِل هُنَا مُمْتَاز.",
                 exampleArabeezy: "t3m elakl hna mmtaz.",
                 exampleEn: "The taste of the food here is excellent.",
-},
+            },
 
             // ===== FEELINGS & TASTE =====
             {
@@ -385,7 +366,7 @@ export const lesson = {
                 exampleAr: "أَنَا جُوعَان، بَدِّي آكُل.",
                 exampleArabeezy: "ana jw3an, bdy aakl.",
                 exampleEn: "I’m hungry, I want to eat.",
-},
+            },
             {
                 id: "3atshan",
                 ar: "عَطْشَان",
@@ -395,7 +376,7 @@ export const lesson = {
                 exampleAr: "أَنَا عَطْشَان، بَدِّي مَيِّة.",
                 exampleArabeezy: "ana 3tshan, bdy mya.",
                 exampleEn: "I’m thirsty, I want water.",
-},
+            },
             {
                 id: "zaki",
                 ar: "زَكِي",
@@ -405,7 +386,7 @@ export const lesson = {
                 exampleAr: "الْأَكِل هُونَا زَكِي كْتِير.",
                 exampleArabeezy: "elakl hwna zky ktyr.",
                 exampleEn: "The food here is very tasty.",
-},
+            },
             {
                 id: "msh_zaki",
                 ar: "مِش زَكِي",
@@ -415,7 +396,7 @@ export const lesson = {
                 exampleAr: "بصراحة اكِل الْيَوْم مِش زَكِي.",
                 exampleArabeezy: "bsra7a akl elywm msh zky.",
                 exampleEn: "Honestly, today the food is not tasty.",
-},
+            },
             {
                 id: "bisho3or_juu3",
                 ar: "بِجُوع",
@@ -426,7 +407,7 @@ export const lesson = {
                 exampleAr: "بِجُوع بَعْد الْمُحَاضَرَة الطَّوِيلَة.",
                 exampleArabeezy: "bjw3 b3d elm7adra eltwyla.",
                 exampleEn: "I get hungry after the long lecture.",
-},
+            },
             {
                 id: "bisho3or 3aTash",
                 ar: "بِعْطَش",
@@ -437,7 +418,7 @@ export const lesson = {
                 exampleAr: "فِي الصَّيْف بِعْطَش كْتِير، فَبَشْرَب مَيّ أَكْثَر.",
                 exampleArabeezy: "fy elsyf b3tsh ktyr, fbshrb my akthr.",
                 exampleEn: "In summer I get very thirsty, so I drink more water.",
-},
+            },
 
             // ===== VERBS ABOUT FOOD =====
             {
@@ -450,7 +431,7 @@ export const lesson = {
                 exampleAr: "بَحِبّ الأَكْل الْفِلَسْطِينِي كْتِير.",
                 exampleArabeezy: "b7b elakl elflstyny ktyr.",
                 exampleEn: "I really like Palestinian food.",
-},
+            },
             {
                 id: "ma_ba7ebb",
                 ar: "مَا بَحِبّ",
@@ -460,7 +441,7 @@ export const lesson = {
                 exampleAr: "مَا بَحِبّ قَهْوَة تقيلة.",
                 exampleArabeezy: "ma b7b qhwa tqyla.",
                 exampleEn: "I don’t like strong coffee.",
-},
+            },
             {
                 id: "ba7ebb_aktar",
                 ar: "بَحِبّ ... أَكْثَر",
@@ -470,7 +451,7 @@ export const lesson = {
                 exampleAr: "بَحِبّ شَاي أَكْثَر مِن قَهْوَة.",
                 exampleArabeezy: "b7b shay akthr mn qhwa.",
                 exampleEn: "I like tea more than coffee.",
-},
+            },
             {
                 id: "bifaDDil",
                 ar: "بِفَضَّل",
@@ -481,7 +462,7 @@ export const lesson = {
                 exampleAr: "بِفَضَّل السَّمَك عَنْ اللَّحِم.",
                 exampleArabeezy: "bfdl elsmk 3n ell7m.",
                 exampleEn: "I prefer fish over meat.",
-},
+            },
             {
                 id: "baTbokh",
                 ar: "بَطْبُخ",
@@ -492,7 +473,7 @@ export const lesson = {
                 exampleAr: "أَحْيَانًا بَطْبُخ أَنَا، مَش دَايْمًا إِمِّي.",
                 exampleArabeezy: "a7yana btbkh ana, msh dayma imy.",
                 exampleEn: "Sometimes I cook, not always my mom.",
-},
+            },
             {
                 id: "ba2mor",
                 ar: "بَطْلُب",
@@ -503,7 +484,7 @@ export const lesson = {
                 exampleAr: "فِي الكافي بَطْلُب قَهْوَة وَعَصِير.",
                 exampleArabeezy: "fy elkafy btlb qhwa w3syr.",
                 exampleEn: "At the café I order coffee and juice.",
-},
+            },
             {
                 id: "bajarrib",
                 ar: "بَجَرِّب",
@@ -514,7 +495,7 @@ export const lesson = {
                 exampleAr: "لَمَّا أَسَافِر بَجَرِّب أَكْلَات مَحَلِّيَّة.",
                 exampleArabeezy: "lma asafr bjrb aklat m7lya.",
                 exampleEn: "When I travel I try local dishes.",
-},
+            },
             {
                 id: "baddi",
                 ar: "بَدِّي",
@@ -524,7 +505,7 @@ export const lesson = {
                 exampleAr: "بَدِّي فَلَافِل وَعَصِير.",
                 exampleArabeezy: "bdy flafl w3syr.",
                 exampleEn: "I want falafel and juice.",
-},
+            },
             {
                 id: "sho_bte7ebb",
                 ar: "شُو بْتِحِبّ تَاكُل؟",
@@ -534,7 +515,7 @@ export const lesson = {
                 exampleAr: "شُو بْتِحِبّ تَاكُل عَلَى الْغَدَا؟",
                 exampleArabeezy: "shw bt7b takl 3la elghda?",
                 exampleEn: "What do you like to eat for lunch?",
-},
+            },
 
             // ===== CONTEXT EXPRESSIONS =====
             {
@@ -546,7 +527,7 @@ export const lesson = {
                 exampleAr: "بِنْقَعُد فِي مَطْعَم صَغِير قُرْيب من الْبَحَر.",
                 exampleArabeezy: "bnq3d fy mt3m sghyr qryb mn elb7r.",
                 exampleEn: "We sit in a small restaurant near the sea.",
-},
+            },
             {
                 id: "3ala_el_bayt",
                 ar: "فِي الْبَيْت",
@@ -556,7 +537,7 @@ export const lesson = {
                 exampleAr: "غَالِبًا بَنَاكُل فِي الْبَيْت.",
                 exampleArabeezy: "ghalba bnakl fy elbyt.",
                 exampleEn: "We usually eat at home.",
-},
+            },
         ],
 
         extra: [
@@ -570,7 +551,7 @@ export const lesson = {
                 exampleAr: "فِي مَحَلّ فَلَافِل قَرِيب مِن بَيْتْنَا.",
                 exampleArabeezy: "fy m7l flafl qryb mn bytna.",
                 exampleEn: "There is a falafel shop near our house.",
-},
+            },
             {
                 id: "mat3am",
                 ar: "مَطْعَم",
@@ -581,7 +562,7 @@ export const lesson = {
                 exampleAr: "رُحْنَا عَلَى مَطْعَم فِلَسْطِينِي فِي الْمَدِينَة.",
                 exampleArabeezy: "r7na 3la mt3m flstyny fy elmdyna.",
                 exampleEn: "We went to a Palestinian restaurant in the city.",
-},
+            },
             {
                 id: "ma2le",
                 ar: "مَقْلِي",
@@ -592,7 +573,7 @@ export const lesson = {
                 exampleAr: "فَلَافِل أَكْثَرُه أَكْلَة مَقْلِيَّة.",
                 exampleArabeezy: "flafl akthrh akla mqlya.",
                 exampleEn: "Falafel is mostly a fried food.",
-},
+            },
             {
                 id: "maTbukh",
                 ar: "مَطْبُوخ",
@@ -603,7 +584,7 @@ export const lesson = {
                 exampleAr: "بِفَضَّل خْضَار مَطْبُوخَة عَنْ المَقْلِيَّة.",
                 exampleArabeezy: "bfdl khdar mtbwkha 3n elmqlya.",
                 exampleEn: "I prefer cooked vegetables over fried ones.",
-},
+            },
 
             {
                 id: "m7ar",
@@ -614,7 +595,7 @@ export const lesson = {
                 exampleAr: "بَحِبّ الاكل الحارّ.",
                 exampleArabeezy: "b7b elakl el7ar.",
                 exampleEn: "I like spicy food.",
-},
+            },
             {
                 id: "mal7",
                 ar: "مِلِح",
@@ -624,7 +605,7 @@ export const lesson = {
                 exampleAr: "هَادَا الطَّبَق مِلِح كْتِير.",
                 exampleArabeezy: "hada eltbq ml7 ktyr.",
                 exampleEn: "This dish is too salty.",
-},
+            },
             {
                 id: "S7i",
                 ar: "صِحِّي",
@@ -634,7 +615,7 @@ export const lesson = {
                 exampleAr: "بِحَاوِل آكُل أَكِل صِحِّي.",
                 exampleArabeezy: "b7awl aakl akl s7y.",
                 exampleEn: "I try to eat healthy food.",
-},
+            },
         ],
     },
 
@@ -657,8 +638,8 @@ export const lesson = {
             },
             {
                 "speaker": "رامي",
-                "ar": "شو شربتي كمان قهوة ولا شاي",
-                "arArabeezy": "shw shrbty kman qhwa wla shay",
+                "ar": "شربتي كمان قهوة ولا شاي؟",
+                "arArabeezy": "shirbti kamaan ahwe walla shay?",
                 "en": "Did you also drink coffee or tea?"
             },
             {
@@ -699,7 +680,7 @@ export const lesson = {
             },
             {
                 "speaker": "مَرْيَم",
-                "ar": "بَحِبّ الَحْمِة بَسّ مِش كْتِير، أَكْثَر شِي بَحِبّ جاج.",
+                "ar": "بَحِبّ الَلحْمِة بَسّ مِش كْتِير، أَكْثَر شِي بَحِبّ جاج.",
                 "arArabeezy": "b7b el7ma bs msh ktyr, akthr shy b7b jaj.",
                 "en": "I like meat but not a lot; I like vegetables and fruit the most."
             },
@@ -771,7 +752,7 @@ export const lesson = {
             },
             {
                 "speaker": "رامي",
-                "ar": "الْفَلَافِل هُونَا زَكِي كْتِير.",
+                "ar": "الْفَلَافِل هُونَ زَكِي كْتِير.",
                 "arArabeezy": "elflafl hwna zky ktyr.",
                 "en": "The falafel here is very tasty."
             },
@@ -1039,16 +1020,8 @@ Use real-life food situations.`,
                 ],
                 correctIndex: 1,
             },
-            {
-                id: "food_q5",
-                questionAr: "«مَوْزَة» جَمْعْهَا الطَّبِيعِي:",
-                optionsEn: [
-                    "مَوْز",
-                    "مَوْزَات",
-                    "مَيّ",
-                ],
-                correctIndex: 0,
-            },
+
+
         ],
 
         rolePlays: [

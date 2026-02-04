@@ -4,7 +4,7 @@ export const lessonId = LESSON_ID_TRANSPORT;
 export const lesson = {
     meta: {
         level: "Beginner",
-        unit: "trans",
+        unit: "Transportation",
         lessonTitle: "Unit 5 – Transportation & Getting Around",
     },
 
@@ -648,9 +648,9 @@ Use transport scenarios only.`,
             {
                 id: "mc_match_5",
                 type: "match",
-                prompt: "Match the English word to Arabic: to enter / go into ...",
+                prompt: "Match the English word to Arabic: I cross the street ...",
                 options: ["يِفوت عَـ...", "بِتْأَخَّر", "بَسْتَنَّى", "بَمْشِي", "بَقَطِّع الشَّارِع"],
-                correct: "يِفوت عَـ...",
+                correct: "بَقَطِّع الشَّارِع",
             },
             {
                 id: "mc_complete_6",
@@ -666,13 +666,13 @@ Use transport scenarios only.`,
         quiz: [
             {
                 id: "trans_q1",
-                questionAr: "«بَرْكَب سِرْفِيس مِن الْحَارَة لِلْوَسَط» مَعْنَاهَا:",
+                questionAr: "«بِمشي مِن الحارَة لِلمَرْكَز.» مَعْنَاهَا:",
                 optionsEn: [
                     "I walk from the neighborhood to the center.",
                     "I take a shared taxi from the neighborhood to the center.",
                     "I drive my car from the neighborhood to the center.",
                 ],
-                correctIndex: 1,
+                correctIndex: 0,
             },
             {
                 id: "trans_q2",
@@ -708,7 +708,7 @@ Use transport scenarios only.`,
                 id: "trans_q5",
                 questionAr: "أَيّ كَلِمَة مَعْنَاهَا ‘bus’ فِي اللّهْجَة الْفِلَسْطِينِيَّة؟",
                 optionsEn: [
-                    "بُصّ",
+                    "باصّ",
                     "سِرْفِيس",
                     "مَطْعَم",
                 ],
@@ -717,9 +717,8 @@ Use transport scenarios only.`,
         ],
 
         rolePlays: [
-            "Role-play 1: Student A is a visitor in Gaza; Student B is a local friend. The visitor asks how to go from their house to the university using public transport. Use questions like «كِيف بَقْدَر أَرُوح عَلَى…؟», «قَدِّيش بِيِأَخُد وَقْت؟», «فِي خَطّ مُبَاشِر؟».",
+            "Role-play 1: Student  is a visitor in Gaza; teacher is a local friend. The visitor asks how to go from their house to the university using public transport. Use questions like «كِيف بَقْدَر أَرُوح عَلَى…؟», «قَدِّيش بِيِأَخُد وَقْت؟», «فِي خَطّ مُبَاشِر؟».",
             "Role-play 2: Café conversation about traffic. Two friends complain about «زَحْمَة» in the morning, who is often late, and which is better: walking or taking a bus/ service. They should use «بِتْأَخَّر»، «بَمْشِي»، «بَرْكَب»، and time words from the Daily Routine unit.",
-            "Role-play 3: Service / taxi scene. Student A is the driver, Student B and C are passengers. They ask about price, place to get off, and time: «بِكَم التَّكْسِي؟», «بَنْزِل قُدَّام…», «قَدِّيش بِيِأَخُد وَقْت؟». Then switch roles.",
         ],
         translation: [
             { id: "trans_t1", type: "enToAr", textEn: "How can I go to the university?", textAr: "كيف بقدر أروح عالجامعة؟" },
